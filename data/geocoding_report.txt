@@ -1,0 +1,318 @@
+============================================================
+REPORTE DE GEOCODING — Calleando CABA
+============================================================
+Total entradas:               2964
+Geocodificadas (acumulado):   2639  (89.0%)
+  Match local calles:         0
+  Match local áreas:          0
+  Match Nominatim fallback:   2639
+No encontradas:               325
+
+Fuentes en el cache:
+  overpass-bulk        2121
+  nominatim            518
+
+------------------------------------------------------------
+NO ENCONTRADAS (325):
+------------------------------------------------------------
+  [sendero     ] 1° de Agosto. Día de la Pachamama
+  [espacio verd] 18 de Diciembre de 1872 “creación de la Estación Liniers”
+  [plazoleta   ] 28 de Junio 1645
+  [espacio verd] 29 de Diciembre de 2001
+  [espacio verd] Adelia María Harilaos de Olmos
+  [plazoleta   ] Alberto Lagos
+  [espacio verd] Alcira de Al Peña
+  [plazoleta   ] Alejandra Pizarnik
+  [calle       ] Alerce
+  [calle       ] Alférez de Navío Francisco Pareja
+  [plazoleta   ] Alfonso R. Castelao
+  [paseo       ] Alfredo Zitarrosa
+  [calle       ] Aljaba Magallánica
+  [calle       ] Almirante F. J. Seguí
+  [sendero     ] Amalia Celia Figueredo
+  [calle       ] Ángel M. Giménez
+  [espacio verd] Ángela M. Aieta de Gullo
+  [patio de rec] Antoine de Saint-exupéry
+  [cantero cent] Antonia Mercé “la Argentina”
+  [plazoleta   ] Antonio Cambiasso
+  [plazoleta   ] Antonio Maceo
+  [plaza       ] Arquitecto Alberto Prebisch
+  [plaza       ] Arquitecto Alejandro Bustillo
+  [plaza       ] Arquitecto Amancio Williams
+  [cantero     ] Arquitecto Arturo J. Dubourg
+  [plazoleta   ] Arquitecto Héctor Greslebin
+  [plaza       ] Arquitecto Juan Kurchan
+  [plaza       ] Arquitecto René Karman
+  [plaza       ] Arquitecto Wladimiro Acosta
+  [cantero cent] Arturo Enrique Sampay
+  [calle       ] Aviador Enrique Adrián Roger
+  [plazoleta   ] Aviso A.r.a. Alférez Sobral
+  [plazoleta   ] Barón Mauricio de Hirsch
+  [pasaje peato] Beniamino Semiza
+  [calle       ] Benjamín J. Lavaysse
+  [plaza       ] Benjamín Vicuña Mackena
+  [calle       ] Bergantín Vigilante
+  [plazoleta   ] Bernardo B. Delom
+  [paseo       ] Brigadier General Ángel María Zuloaga
+  [parque      ] Brigadier General Cornelio de Saavedra
+  [plazoleta   ] Brigadier General Don Enrique Martínez
+  [plazoleta   ] Brigadier General Don Manuel Oribe
+  [plaza       ] Brigadier General José Matías Zapiola
+  [plazoleta   ] Brigadier General Tomás de Iriarte
+  [calle       ] Cabo 1° Julio Omar Benítez
+  [calle       ] Cabo 2° Jorge Eduardo López
+  [plazoleta   ] Cabo de Patricios Orencio Pío Rodríguez
+  [calle       ] Cadete Carlos Larguía
+  [calle       ] Cadete Jorge Güemes Torino
+  [plazoleta   ] Canciller Miguel Ángel Zavala Ortiz
+  [avenida     ] Canónigo Miguel Calixto del Corro
+  [plazoleta   ] Capitán Aviador Vicente Almandos Almonacid
+  [calle       ] Capitán Claudio H. Rosales
+  [calle       ] Capitán de Fragata Pedro Edgardo Giachino
+  [plazoleta   ] Capitán Domingo Alejo Millán
+  [plaza       ] Capitán Domingo Fidel Sarmiento
+  [plaza       ] Capitán General Justo José de Urquiza Urquiza
+  [cantero cent] Carlos Carboni
+  [calle       ] Carlos E. Pellegrini
+  [calle       ] Carlos H. Perette
+  [calle       ] Carlos María Della Paolera
+  [calle       ] Carolina Muzzili
+  [calle       ] Cayetano A. Silva
+  [calle       ] César H. Bacle
+  [plazoleta   ] Cesáreo Bernaldo de Quirós
+  [cantero cent] Cesário Onzari
+  [calle       ] Chilca
+  [plazoleta   ] Ciro el Grande
+  [plazoleta   ] Ciudad de Guadix
+  [calle       ] Clemente Diez de Medina
+  [plazoleta   ] Clubes del Barrio
+  [calle       ] Coihue
+  [plazoleta   ] Comandante Andrés Guacurari Artigas
+  [calle       ] Comisario Joaquín Valentín Pérez
+  [calle       ] Comodoro Pedro L. Zanni
+  [puente peato] Comunidad Organizada
+  [plaza       ] Concepción del Alto de San Pedro
+  [plazoleta   ] Cooperadoras Escolares
+  [calle       ] Coronel Carlos Tomás Sourigues
+  [plaza       ] Coronel de Ingenieros Jordán Czeslaw Wysocki
+  [calle       ] Coronel José Olegario Gordillo
+  [plazoleta   ] Coronel Juan F. Czetz
+  [calle       ] Coronel Luis Jorge Fontana
+  [calle       ] Coronel Pedro Andrés García
+  [calle       ] Coronel Rohde
+  [calle       ] Cristianía
+  [calle       ] Dama de Monte
+  [plazoleta   ] Darío Broggi
+  [parque      ] De Flora Nativa Benito Quinquela Martín
+  [paseo       ] De la Ciencia y la Cultura Árabes
+  [cantero cent] De la Lealtad
+  [plaza       ] De la Repúbllca
+  [plaza       ] De las Armas Ejército Argentino
+  [plazoleta   ] De las Madres
+  [paseo       ] De los Médicos
+  [plazoleta   ] De los Molfetteses
+  [plaza       ] De los Viveros
+  [plazoleta   ] Del Kiosco de la Floresta
+  [calle       ] Delfo Cabrerar
+  [espacio verd] Delia Avilés de Elizalde
+  [jardín      ] Derico A. J.
+  [espacio verd] Día Internacional de la Mujer 8 de Marzo
+  [cantero cent] Diego Rivera
+  [canteros cen] Diputada Emar Acosta
+  [cantero cent] Diputado Nacional Jorge Mariano Almada
+  [calle       ] Diputado Nacional Osvaldo Ernesto Benedetti
+  [calle       ] Doctor Adolfo Dickmann
+  [plaza       ] Doctor Alfredo Nobel
+  [plazoleta   ] Doctor Alfredo Rivas
+  [calle       ] Doctor Ángel H. Roffo
+  [plazoleta   ] Doctor Avelino Gutiérrez
+  [plaza       ] Doctor Benjamín A. Gould
+  [plaza       ] Doctor Bernardo Alberto Houssay
+  [plazoleta   ] Doctor Carlos Alberto Erro
+  [plazoleta   ] Doctor Carlos Alberto Pueyrredón
+  [cantero cent] Doctor Emir Eduardo Mercader
+  [plazoleta   ] Doctor Enrique T. Susini
+  [calle       ] Doctor Enzo Bordabehere
+  [plazoleta   ] Doctor Esteban Laureano Maradona
+  [patio de rec] Doctor Félix Liceaga
+  [espacio públ] Doctor Gabriel Ocampo
+  [calle       ] Doctor Gerardo Armauer Hansen
+  [calle       ] Doctor Hilario de Almeira
+  [cantero cent] Doctor Isidoro Ruiz Moreno
+  [plaza       ] Doctor José C. Paz
+  [calle       ] Doctor José de Paula y Rodríguez Alves
+  [calle       ] Doctor José Ignacio de la Roza
+  [plazoleta   ] Doctor José Luis Romero
+  [espacio verd] Doctor José María Velazco Ibarra
+  [calle       ] Doctor José Modesto Giuffra
+  [paseo       ] Doctor Luciano Florencio Molinas
+  [espacio verd] Doctor Luis Federico Leloir
+  [calle       ] Doctor Marcelo J. Fitte
+  [plazoleta   ] Doctor Mariano R. Castex
+  [calle       ] Doctor Norberto Quirno Costa
+  [calle       ] Doctor Osvaldo Eguía
+  [plazoleta   ] Doctor Roberto Koch
+  [calle       ] Doctor Roberto Levillier
+  [plazoleta   ] Doctor Rodolfo Erausquin
+  [calle       ] Doctor Tomás Manuel de Anchorena
+  [plaza       ] Doctor Vicente Solano Lima
+  [plaza       ] Doctora Cecilia Grierson
+  [espacio verd] Doña Petrona C. de Gandulfo
+  [cantero cent] Dora del Grande
+  [plazoleta   ] Dr. Arturo Oñativia
+  [calle       ] Dr. Emilio J. Hardoy
+  [calle       ] Eduardo Juan Couture
+  [plazoleta   ] El Alma Que Canta
+  [cantero cent] El Invencible de Forli
+  [plazoleta   ] Embajada de Israel “en Memoria del Atentado”
+  [calle       ] Emeric E. Vidal
+  [calle       ] Emilio Becher
+  [calle       ] Emilio Pettoruti
+  [cantero cent] Enrique Delfino
+  [plazoleta   ] Enrique Mario Francini
+  [plazoleta   ] Escuela la Banderita
+  [calle       ] Estanislao S. Zeballos
+  [espacio públ] Esther Ballestrino de Careaga
+  [cantero cent] Ezequiel Martínez Estrada
+  [calle       ] Félix O. Fouiller
+  [espacio verd] Fenia Chertkoff
+  [plaza       ] Francisco A. Sicardi
+  [calle       ] Francisco Antonio Maciel
+  [plazoleta   ] Francisco Antonio Rizzuto
+  [plazoleta   ] Francisco de Caro
+  [calle       ] Francisco J. Ortiz
+  [plazoleta   ] Francisco López Torres
+  [plazoleta   ] Francisco “paco” Urondo
+  [cantero cent] Francisco Pracánico
+  [plazoleta   ] Fray Pedro Agustín Cueli
+  [canteros cen] Gabriela Laperriere de Coni
+  [calle       ] Gaspar Melchor de Jovellanos
+  [espacio verd] General Agustín P. Justo
+  [plazoleta   ] General Antonio José de Sucre
+  [calle       ] General Conrado Excelso Villegas
+  [plazoleta   ] General José Antonio Páez
+  [calle       ] General José María Bustillo
+  [calle       ] General Julio Ruiz Moreno
+  [plazoleta   ] General Rafael de Riego y Nuñez
+  [cantero cent] Gerardo Matos Rodríguez
+  [plaza       ] Glorias del Automovilismo Argentino
+  [calle       ] Guabirá
+  [paseo       ] Guardavidas Argentinos
+  [calle       ] Guatambú
+  [calle       ] Guayaba
+  [calle       ] Guayaibí
+  [plazoleta   ] Guillermo Divito
+  [cantero cent] Héctor Félix Arata
+  [plazoleta   ] Héctor Gagliardi
+  [plazoleta   ] Hermana Alice Domon y Hermana Léonie Duquet
+  [cantero cent] Hidroavión Buenos Aires
+  [cantero cent] Higinio Cazón
+  [plaza       ] Homenaje A las Víctimas del Holocausto-shoá
+  [cantero cent] Homero Expósito
+  [plazoleta   ] Horacio Rega Molina
+  [plaza       ] Ildefonso Félix Cavagna Martínez
+  [plazoleta   ] Infante Don Enrique “el Navegante”
+  [parque      ] Ingeniero Agrónomo Benito J. Carrasco
+  [plaza       ] Ingeniero Antonio Vilar
+  [cantero cent] Ingeniero Arquitecto Jorge Bunge
+  [plazoleta   ] Ingeniero Carlos María Della Paolera
+  [plazoleta   ] Ingeniero César Manuel Polledo
+  [cantero cent] Ingeniero Germán Ave Lallemant
+  [calle       ] Ingeniero Julio Krause
+  [plazoleta   ] Ingeniero Otto Krause
+  [calle       ] Intendente Guerrico
+  [plazoleta   ] Intendente Joaquín S. de Anchorena
+  [plaza       ] Intendente Torcuato de Alvear
+  [calle       ] Isla de Galápagos
+  [plaza       ] Israeñ
+  [plazoleta   ] Ítalo Masuelli
+  [plazoleta   ] Itzhak Rabin
+  [calle       ] J. F. Bateman
+  [plazoleta   ] Jacinto Oddone
+  [calle       ] Jarilla
+  [calle       ] Jazmín del Paraguay
+  [plazoleta   ] John Malcolm
+  [calle       ] José E. Carballido
+  [plazoleta   ] José Eusebio Agüero
+  [calle       ] Jose J. Podestá
+  [calle       ] José Julián Pérez
+  [plazoleta   ] José María Gatica
+  [cantero cent] José Neglia
+  [calle       ] José Ortega y Gasset
+  [calle       ] José P. Tamborini
+  [pasaje peato] José Penelón
+  [calle       ] José R. Baltoré
+  [plazoleta   ] José Razzano
+  [espacio verd] Josefina Marpons
+  [plazoleta   ] Joseph Kessel
+  [calle       ] Juan Antonio Bibiloni
+  [espacio verd] Juan Carlos Castagnino
+  [plazoleta   ] Juan Carlos Cobián
+  [calle       ] Juan Francisco de la Robla
+  [calle       ] Juan M. Thome
+  [calle       ] Juan P. Calou
+  [calle       ] Juan Ramírez de Velazco
+  [plazoleta   ] Juana Rouco Buela
+  [cantero cent] Julio Cruciani
+  [plazoleta   ] Julio Sosa
+  [calle       ] Kolla
+  [calle       ] La Garza
+  [cantero cent] Leonie Mathis
+  [plazoleta   ] Luca Prodan
+  [cantero cent] Lucio V. Mansilla
+  [calle       ] Luis Alberto Herrera
+  [plazoleta   ] Manuel Gómez Carrillo
+  [plazoleta   ] María Esther de Miguel
+  [espacio verd] María Ponce de Bianco
+  [canteros cen] María Robotti de Bulzani
+  [cantero cent] María Ruanova
+  [calle       ] Marie Langer
+  [espacio públ] Mario Jorge de Lellis
+  [plazoleta   ] Mariscal José Pilsudski
+  [calle       ] Martín A. Malharro
+  [cantero cent] Martín Boneo y Villalonga
+  [espacio verd] Máximo Mena
+  [calle       ] Mayor Arturo Pedro Luisoni
+  [calle       ] Mecánico Militar Leopoldo Atenzo
+  [plazoleta   ] Melchor Pérez de Holguín
+  [plazoleta   ] Mencia Calderón
+  [cantero cent] Michel Borowsky
+  [calle       ] Miguel A. Camino
+  [plazoleta   ] Miguel Caló
+  [calle       ] Mochica
+  [plazoleta   ] Monseñor Hermenegildo Fazio
+  [calle       ] Ñandubay
+  [plazoleta   ] Niní Marshall
+  [calle       ] Norma Colombatto
+  [cantero cent] Norma Fontenla
+  [cantero cent] Pacífico Víctor Lambertucci
+  [calle       ] Padre Juan Bautista Neumann
+  [calle       ] Paico
+  [canteros cen] Paseo de la Historieta
+  [plaza       ] Paseo de la Victoria
+  [paseo       ] Paseo de los Granaderos
+  [paseo       ] Paseo de los Ombúes
+  [cantero cent] Paseo del Ballet Argentino
+  [paseo       ] Paseo Marcela Brenda Iglesias
+  [patio       ] Patio de la Identidad y la Memoria
+  [cantero cent] Patoruzú
+  [plaza       ] Patrono de Buenos Aires San Martín de Tours
+  [plazoleta   ] Paul Percy Harris
+  [cantero cent] Pedro Maffia
+  [plazoleta   ] Pelagio B. Luna
+  [plaza       ] Pioneros de la Antártida Argentina
+  [plaza       ] Plaza del Jacarandá
+  [plazoleta   ] Policía Federal Argentina, Superintendencia de Bomberos
+  [calle       ] Pontederia
+  [plazoleta   ] Presbítero Doctor Antonio Sáenz
+  [cantero cent] Presbítero Virgilio Filipo
+  [autopista   ] Presidente Doctor Arturo Umberto Illia
+  [autopista   ] Presidente Héctor J. Cámpora
+  [barrio      ] Presidente Nicolás Avellaneda
+  [cantero cent] Profesora Marina Margarita Ravioli
+  [cantero cent] Ramón Vázquez
+  [espacio verd] Ramona Esther Gastiazoro de Brontes
+  [plazoleta   ] Regimiento 10 de Caballería Húsares de Pueyrredón
+  [cantero cent] Región Basilicata
+  [plazoleta   ] República de Paraguay
+  ... y 25 más

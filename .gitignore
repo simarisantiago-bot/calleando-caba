@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Vercel
+.vercel
+
+# OSM bulk dump (cache intermedio del geocoder, ~20 MB)
+# No es necesario en git: se regenera corriendo geocode_all.py
+data/_osm_bulk.json
+
