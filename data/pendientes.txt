@@ -1,0 +1,239 @@
+118 calles/avenidas pendientes de coordenadas manuales
+======================================================================
+
+  1. [calle   ] Alerce
+      clave: alerce
+  2. [paseo   ] Alfredo Zitarrosa
+      clave: alfredo zitarrosa
+  3. [calle   ] Alférez de Navío Francisco Pareja
+      clave: alferez de navio francisco pareja
+  4. [calle   ] Aljaba Magallánica
+      clave: aljaba magallanica
+  5. [calle   ] Almirante F. J. Seguí
+      clave: almirante f j segui
+  6. [calle   ] Aviador Enrique Adrián Roger
+      clave: aviador enrique adrian roger
+  7. [pasaje peatonal] Beniamino Semiza
+      clave: beniamino semiza
+  8. [calle   ] Benjamín J. Lavaysse
+      clave: benjamin j lavaysse
+  9. [calle   ] Bergantín Vigilante
+      clave: bergantin vigilante
+ 10. [paseo   ] Brigadier General Ángel María Zuloaga
+      clave: brigadier general angel maria zuloaga
+ 11. [calle   ] Cabo 1° Julio Omar Benítez
+      clave: cabo 1 julio omar benitez
+ 12. [calle   ] Cabo 2° Jorge Eduardo López
+      clave: cabo 2 jorge eduardo lopez
+ 13. [calle   ] Cadete Carlos Larguía
+      clave: cadete carlos larguia
+ 14. [calle   ] Cadete Jorge Güemes Torino
+      clave: cadete jorge guemes torino
+ 15. [avenida ] Canónigo Miguel Calixto del Corro
+      clave: canonigo miguel calixto del corro
+ 16. [calle   ] Capitán Claudio H. Rosales
+      clave: capitan claudio h rosales
+ 17. [calle   ] Capitán de Fragata Pedro Edgardo Giachino
+      clave: capitan de fragata pedro edgardo giachino
+ 18. [calle   ] Carlos E. Pellegrini
+      clave: carlos e pellegrini
+ 19. [calle   ] Carlos H. Perette
+      clave: carlos h perette
+ 20. [calle   ] Carlos María Della Paolera
+      clave: carlos maria della paolera
+ 21. [calle   ] Carolina Muzzili
+      clave: carolina muzzili
+ 22. [calle   ] Cayetano A. Silva
+      clave: cayetano a silva
+ 23. [calle   ] Chilca
+      clave: chilca
+ 24. [calle   ] Clemente Diez de Medina
+      clave: clemente diez de medina
+ 25. [calle   ] Coihue
+      clave: coihue
+ 26. [calle   ] Comisario Joaquín Valentín Pérez
+      clave: comisario joaquin valentin perez
+ 27. [calle   ] Comodoro Pedro L. Zanni
+      clave: comodoro pedro l zanni
+ 28. [calle   ] Coronel Carlos Tomás Sourigues
+      clave: coronel carlos tomas sourigues
+ 29. [calle   ] Coronel José Olegario Gordillo
+      clave: coronel jose olegario gordillo
+ 30. [calle   ] Coronel Luis Jorge Fontana
+      clave: coronel luis jorge fontana
+ 31. [calle   ] Coronel Pedro Andrés García
+      clave: coronel pedro andres garcia
+ 32. [calle   ] Coronel Rohde
+      clave: coronel rohde
+ 33. [calle   ] Cristianía
+      clave: cristiania
+ 34. [calle   ] César H. Bacle
+      clave: cesar h bacle
+ 35. [calle   ] Dama de Monte
+      clave: dama de monte
+ 36. [paseo   ] De la Ciencia y la Cultura Árabes
+      clave: de la ciencia y la cultura arabes
+ 37. [paseo   ] De los Médicos
+      clave: de los medicos
+ 38. [calle   ] Delfo Cabrerar
+      clave: delfo cabrerar
+ 39. [calle   ] Diputado Nacional Osvaldo Ernesto Benedetti
+      clave: diputado nacional osvaldo ernesto benedetti
+ 40. [calle   ] Doctor Adolfo Dickmann
+      clave: doctor adolfo dickmann
+ 41. [calle   ] Doctor Enzo Bordabehere
+      clave: doctor enzo bordabehere
+ 42. [calle   ] Doctor Gerardo Armauer Hansen
+      clave: doctor gerardo armauer hansen
+ 43. [calle   ] Doctor Hilario de Almeira
+      clave: doctor hilario de almeira
+ 44. [calle   ] Doctor José Ignacio de la Roza
+      clave: doctor jose ignacio de la roza
+ 45. [calle   ] Doctor José Modesto Giuffra
+      clave: doctor jose modesto giuffra
+ 46. [calle   ] Doctor José de Paula y Rodríguez Alves
+      clave: doctor jose de paula y rodriguez alves
+ 47. [paseo   ] Doctor Luciano Florencio Molinas
+      clave: doctor luciano florencio molinas
+ 48. [calle   ] Doctor Marcelo J. Fitte
+      clave: doctor marcelo j fitte
+ 49. [calle   ] Doctor Norberto Quirno Costa
+      clave: doctor norberto quirno costa
+ 50. [calle   ] Doctor Osvaldo Eguía
+      clave: doctor osvaldo eguia
+ 51. [calle   ] Doctor Roberto Levillier
+      clave: doctor roberto levillier
+ 52. [calle   ] Doctor Tomás Manuel de Anchorena
+      clave: doctor tomas manuel de anchorena
+ 53. [calle   ] Doctor Ángel H. Roffo
+      clave: doctor angel h roffo
+ 54. [calle   ] Dr. Emilio J. Hardoy
+      clave: dr emilio j hardoy
+ 55. [calle   ] Eduardo Juan Couture
+      clave: eduardo juan couture
+ 56. [calle   ] Emeric E. Vidal
+      clave: emeric e vidal
+ 57. [calle   ] Emilio Becher
+      clave: emilio becher
+ 58. [calle   ] Emilio Pettoruti
+      clave: emilio pettoruti
+ 59. [calle   ] Estanislao S. Zeballos
+      clave: estanislao s zeballos
+ 60. [calle   ] Francisco Antonio Maciel
+      clave: francisco antonio maciel
+ 61. [calle   ] Francisco J. Ortiz
+      clave: francisco j ortiz
+ 62. [calle   ] Félix O. Fouiller
+      clave: felix o fouiller
+ 63. [calle   ] Gaspar Melchor de Jovellanos
+      clave: gaspar melchor de jovellanos
+ 64. [calle   ] General Conrado Excelso Villegas
+      clave: general conrado excelso villegas
+ 65. [calle   ] General José María Bustillo
+      clave: general jose maria bustillo
+ 66. [calle   ] General Julio Ruiz Moreno
+      clave: general julio ruiz moreno
+ 67. [calle   ] Guabirá
+      clave: guabira
+ 68. [paseo   ] Guardavidas Argentinos
+      clave: guardavidas argentinos
+ 69. [calle   ] Guatambú
+      clave: guatambu
+ 70. [calle   ] Guayaba
+      clave: guayaba
+ 71. [calle   ] Guayaibí
+      clave: guayaibi
+ 72. [calle   ] Ingeniero Julio Krause
+      clave: ingeniero julio krause
+ 73. [calle   ] Intendente Guerrico
+      clave: intendente guerrico
+ 74. [calle   ] Isla de Galápagos
+      clave: isla de galapagos
+ 75. [calle   ] J. F. Bateman
+      clave: j f bateman
+ 76. [calle   ] Jarilla
+      clave: jarilla
+ 77. [calle   ] Jazmín del Paraguay
+      clave: jazmin del paraguay
+ 78. [calle   ] Jose J. Podestá
+      clave: jose j podesta
+ 79. [calle   ] José E. Carballido
+      clave: jose e carballido
+ 80. [calle   ] José Julián Pérez
+      clave: jose julian perez
+ 81. [calle   ] José Ortega y Gasset
+      clave: jose ortega y gasset
+ 82. [calle   ] José P. Tamborini
+      clave: jose p tamborini
+ 83. [pasaje peatonal] José Penelón
+      clave: jose penelon
+ 84. [calle   ] José R. Baltoré
+      clave: jose r baltore
+ 85. [calle   ] Juan Antonio Bibiloni
+      clave: juan antonio bibiloni
+ 86. [calle   ] Juan Francisco de la Robla
+      clave: juan francisco de la robla
+ 87. [calle   ] Juan M. Thome
+      clave: juan m thome
+ 88. [calle   ] Juan P. Calou
+      clave: juan p calou
+ 89. [calle   ] Juan Ramírez de Velazco
+      clave: juan ramirez de velazco
+ 90. [calle   ] Kolla
+      clave: kolla
+ 91. [calle   ] La Garza
+      clave: la garza
+ 92. [calle   ] Luis Alberto Herrera
+      clave: luis alberto herrera
+ 93. [calle   ] Marie Langer
+      clave: marie langer
+ 94. [calle   ] Martín A. Malharro
+      clave: martin a malharro
+ 95. [calle   ] Mayor Arturo Pedro Luisoni
+      clave: mayor arturo pedro luisoni
+ 96. [calle   ] Mecánico Militar Leopoldo Atenzo
+      clave: mecanico militar leopoldo atenzo
+ 97. [calle   ] Miguel A. Camino
+      clave: miguel a camino
+ 98. [calle   ] Mochica
+      clave: mochica
+ 99. [calle   ] Norma Colombatto
+      clave: norma colombatto
+100. [calle   ] Padre Juan Bautista Neumann
+      clave: padre juan bautista neumann
+101. [calle   ] Paico
+      clave: paico
+102. [paseo   ] Paseo Marcela Brenda Iglesias
+      clave: paseo marcela brenda iglesias
+103. [paseo   ] Paseo de los Granaderos
+      clave: paseo de los granaderos
+104. [paseo   ] Paseo de los Ombúes
+      clave: paseo de los ombues
+105. [calle   ] Pontederia
+      clave: pontederia
+106. [autopista] Presidente Doctor Arturo Umberto Illia
+      clave: presidente doctor arturo umberto illia
+107. [autopista] Presidente Héctor J. Cámpora
+      clave: presidente hector j campora
+108. [calle   ] Repúbllca
+      clave: republlca
+109. [calle   ] Santiago Costamagna
+      clave: santiago costamagna
+110. [calle   ] Sauco
+      clave: sauco
+111. [calle   ] Soldado Archivista Miguel Santi
+      clave: soldado archivista miguel santi
+112. [calle   ] Teniente General Eustoquio Frías
+      clave: teniente general eustoquio frias
+113. [calle   ] Teniente General Pablo Riccheri
+      clave: teniente general pablo riccheri
+114. [calle   ] Teniente de Navío Cándido de Lasala
+      clave: teniente de navio candido de lasala
+115. [calle   ] Vicente Anastasio de Echevarría
+      clave: vicente anastasio de echevarria
+116. [calle   ] Victoriano E. Montes
+      clave: victoriano e montes
+117. [calle   ] Ángel M. Giménez
+      clave: angel m gimenez
+118. [calle   ] Ñandubay
+      clave: nandubay

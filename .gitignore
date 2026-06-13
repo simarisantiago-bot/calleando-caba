@@ -23,3 +23,14 @@ Thumbs.db
 # No es necesario en git: se regenera corriendo geocode_all.py
 data/_osm_bulk.json
 
+# Backups del cache (no van a producción, son snapshots locales)
+data/*.bak
+data/*.bak2
+
+# Mappings auxiliares internos
+data/_pendientes_map.json
+
+# Scripts de diagnóstico temporal
+_diag_*.py
+
+

@@ -114,16 +114,20 @@ def procesar():
 
             nombre_geocoding = normalizar_nombre_busqueda(nombre_raw)
             clave = clave_busqueda(nombre_geocoding)
+            # id único = clave + tipo (permite homónimos con tipos distintos:
+            # "Almagro|barrio", "Almagro|calle", "Almagro|plaza")
+            id_unico = f"{clave}|{tipo}"
 
-            # Evitar duplicados exactos
-            if clave in nombres_vistos:
+            # Dedup ahora por (clave, tipo) — solo descarta filas idénticas
+            if id_unico in nombres_vistos:
                 continue
-            nombres_vistos.add(clave)
+            nombres_vistos.add(id_unico)
 
             registros.append({
                 "nombre_original": nombre_raw,
                 "nombre_busqueda": nombre_geocoding,
                 "clave": clave,
+                "id": id_unico,
                 "categoria": categoria,
                 "tipo": tipo,
                 "descripcion": descripcion,

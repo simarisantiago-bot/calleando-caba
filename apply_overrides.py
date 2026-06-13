@@ -1,0 +1,257 @@
+"""
+apply_overrides.py — Mergea data/overrides.json a data/geo_cache.json.
+
+overrides.json tiene la forma:
+    {
+        "clave normalizada": {"lat": -34.xxx, "lon": -58.xxx}
+    }
+
+Para cada override, intenta resolver la GEOMETRÍA COMPLETA de la calle:
+  1. Pregunta a Overpass qué ways highway hay en un radio de 50m del punto.
+  2. Toma el way más cercano y extrae su `name` de OSM.
+  3. Segunda query: trae TODOS los ways de CABA con ese mismo `name`.
+  4. Los combina como MultiLineString -> la calle entera se dibuja como línea azul.
+  5. Si algo falla, fallback a marker (punto) en las coords originales.
+
+Uso:
+    python apply_overrides.py
+"""
+
+import json
+import time
+import unicodedata
+from difflib import SequenceMatcher
+from pathlib import Path
+
+import requests
+
+BASE = Path(__file__).parent
+CALLES_JSON = BASE / "data" / "calles.json"
+GEO_CACHE = BASE / "data" / "geo_cache.json"
+OVERRIDES = BASE / "data" / "overrides.json"
+
+OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+USER_AGENT = "calleando-caba/1.0 (simarisantiago@gmail.com)"
+RADIO_METROS = 50
+CABA_BBOX = (-34.706, -58.531, -34.527, -58.335)  # S, W, N, E
+
+# Mínima similitud entre el nombre del Excel y el nombre OSM del way más cercano
+# para aceptar el match automático. Si no llega al threshold, fallback a pin.
+SIMILITUD_MIN = 0.5
+
+
+def _norm(s):
+    if not isinstance(s, str):
+        return ""
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return s.lower().strip()
+
+
+def overpass(query):
+    try:
+        r = requests.post(
+            OVERPASS_URL,
+            data={"data": query},
+            timeout=45,
+            headers={"User-Agent": USER_AGENT},
+        )
+        if r.status_code != 200:
+            return None
+        return r.json()
+    except (requests.RequestException, ValueError):
+        return None
+
+
+def way_mas_cercano(lat, lon, radio_m=RADIO_METROS):
+    """Busca ways highway en un radio. Devuelve el más cercano (con tags)."""
+    deg = radio_m / 111320.0  # 1 grado ≈ 111 km
+    s, w = lat - deg, lon - deg
+    n, e = lat + deg, lon + deg
+    query = (
+        '[out:json][timeout:25];'
+        f'(way["highway"]({s},{w},{n},{e}););'
+        'out geom tags;'
+    )
+    data = overpass(query)
+    if not data:
+        return None
+    ways = [el for el in data.get("elements", [])
+            if el.get("type") == "way" and el.get("geometry")]
+    if not ways:
+        return None
+
+    def dist2_min(way):
+        return min(
+            (pt["lat"] - lat) ** 2 + (pt["lon"] - lon) ** 2
+            for pt in way["geometry"]
+        )
+
+    ways.sort(key=dist2_min)
+    return ways[0]
+
+
+def todos_los_ways_con_nombre(name):
+    """Trae TODOS los ways highway en CABA con el name exacto dado."""
+    if not name:
+        return None
+    name_safe = name.replace('\\', '\\\\').replace('"', '\\"')
+    s, w, n, e = CABA_BBOX
+    query = (
+        '[out:json][timeout:30];'
+        f'(way["highway"]["name"="{name_safe}"]({s},{w},{n},{e}););'
+        'out geom;'
+    )
+    data = overpass(query)
+    if not data:
+        return None
+    ways = [el for el in data.get("elements", [])
+            if el.get("type") == "way" and el.get("geometry")]
+    return ways or None
+
+
+def ways_a_linea(ways):
+    """Combina varios ways en estructura de cache tipo 'line'."""
+    lineas = []
+    for w in ways:
+        coords = [[pt["lon"], pt["lat"]] for pt in w["geometry"]]
+        if len(coords) >= 2:
+            lineas.append(coords)
+    if not lineas:
+        return None
+
+    todos = [pt for ln in lineas for pt in ln]
+    lons = [p[0] for p in todos]
+    lats = [p[1] for p in todos]
+    if len(lineas) == 1:
+        geometry = {"type": "LineString", "coordinates": lineas[0]}
+    else:
+        geometry = {"type": "MultiLineString", "coordinates": lineas}
+    return {
+        "tipo": "line",
+        "geometry": geometry,
+        "bbox": [min(lats), max(lats), min(lons), max(lons)],
+        "source": "override-resolved",
+        "ways": len(lineas),
+    }
+
+
+def punto_fallback(lat, lon):
+    return {
+        "tipo": "point",
+        "center": [lat, lon],
+        "bbox": [lat - 0.001, lat + 0.001, lon - 0.001, lon + 0.001],
+        "source": "override",
+    }
+
+
+def resolver_override(clave_excel, lat, lon):
+    """
+    Intenta resolver geometría completa. Aplica check de similitud entre
+    nombre del Excel y nombre OSM del way más cercano. Si no se parece,
+    devuelve pin + sugerencia del nombre OSM encontrado para revisión manual.
+    """
+    near = way_mas_cercano(lat, lon)
+    time.sleep(1.1)
+    if not near:
+        return punto_fallback(lat, lon), "pin (sin way cerca)", None
+
+    tags = near.get("tags") or {}
+    name = tags.get("name", "")
+
+    if not name:
+        # Way sin nombre: no podemos verificar similitud -> pin con nota
+        return punto_fallback(lat, lon), "pin (way OSM sin nombre cerca)", None
+
+    sim = SequenceMatcher(None, _norm(clave_excel), _norm(name)).ratio()
+
+    if sim < SIMILITUD_MIN:
+        # El way cercano es OTRA calle. Pin + reportar el candidato.
+        return punto_fallback(lat, lon), f"pin (way cerca: '{name}', similitud {sim:.2f})", name
+
+    # Similitud suficiente: traer toda la calle con ese nombre OSM
+    todos = todos_los_ways_con_nombre(name)
+    time.sleep(1.1)
+    if not todos:
+        geo = ways_a_linea([near])
+        return (geo or punto_fallback(lat, lon)), f"línea local (sim {sim:.2f}, name '{name}')", None
+
+    geo = ways_a_linea(todos)
+    if not geo:
+        return punto_fallback(lat, lon), "fallo combinar geometrías", None
+    return geo, f"línea completa: '{name}' ({geo['ways']} ways, sim {sim:.2f})", None
+
+
+def main():
+    if not OVERRIDES.exists():
+        raise SystemExit("No existe data/overrides.json")
+
+    with CALLES_JSON.open(encoding="utf-8") as f:
+        calles = json.load(f)
+    with GEO_CACHE.open(encoding="utf-8") as f:
+        cache = json.load(f)
+    with OVERRIDES.open(encoding="utf-8") as f:
+        overrides = json.load(f)
+
+    claves_validas = {c["clave"] for c in calles}
+
+    aplicados = 0
+    fallback_punto = 0
+    sugerencias = []  # [(clave_excel, nombre_osm_cercano)]
+    invalidos = []
+
+    print(f"Resolviendo {len(overrides)} overrides via Overpass...")
+    print(f"(threshold similitud nombre Excel <-> nombre OSM: {SIMILITUD_MIN})")
+    print()
+
+    for i, (clave, coords) in enumerate(overrides.items(), 1):
+        if clave not in claves_validas:
+            invalidos.append(clave)
+            continue
+        try:
+            lat = float(coords["lat"])
+            lon = float(coords["lon"])
+        except (KeyError, TypeError, ValueError):
+            invalidos.append(clave)
+            continue
+
+        # Para comparar similitud uso el nombre legible del Excel, no la clave
+        nombre_excel = next((c["nombre_busqueda"] for c in calles if c["clave"] == clave), clave)
+
+        geo, mensaje, sugerencia = resolver_override(nombre_excel, lat, lon)
+        cache[clave] = geo
+        if geo["tipo"] == "point":
+            fallback_punto += 1
+            if sugerencia:
+                sugerencias.append((nombre_excel, sugerencia))
+        aplicados += 1
+
+        marca = "LIN" if geo["tipo"] == "line" else "PIN"
+        print(f"  [{i:2d}/{len(overrides)}] {marca} {nombre_excel[:38]:38s} | {mensaje}")
+
+    # Guardar
+    tmp = GEO_CACHE.with_suffix(".json.tmp")
+    with tmp.open("w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False)
+    tmp.replace(GEO_CACHE)
+
+    print()
+    print(f"Total overrides aplicados: {aplicados}")
+    print(f"  Con línea completa: {aplicados - fallback_punto}")
+    print(f"  Como pin (fallback): {fallback_punto}")
+    if sugerencias:
+        print()
+        print(f"CANDIDATOS DE OSM (calles cercanas al pin, distinto nombre):")
+        print(f"  -> Si reconocés alguno como nombre alternativo, decímelo")
+        print(f"    y reemplazo el pin por la línea real de esa calle.")
+        for excel, osm in sugerencias:
+            print(f"  - '{excel}'  ->  candidato OSM: '{osm}'")
+    if invalidos:
+        print(f"Inválidos: {len(invalidos)}")
+        for k in invalidos[:10]:
+            print(f"  - {k}")
+    print(f"Cache total: {len(cache)} / {len(calles)} ({100*len(cache)/len(calles):.1f}%)")
+
+
+if __name__ == "__main__":
+    main()
