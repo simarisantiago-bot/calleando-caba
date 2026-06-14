@@ -9,6 +9,12 @@
     padding: 0;
 }
 
+/* Asegurar que el atributo `hidden` siempre oculte, incluso si la clase
+   tiene display:flex/block/grid. Sin esto el modal aparece SIEMPRE visible. */
+[hidden] {
+    display: none !important;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -437,6 +443,34 @@ body.tema-oscuro .credits {
     color: #5f6368;
 }
 
+.suggestions .suggestion-snippet {
+    font-size: 12px;
+    color: #5f6368;
+    font-style: italic;
+    line-height: 1.4;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.suggestions .suggestion-snippet mark {
+    background: #fff3cd;
+    color: #5c4d00;
+    font-style: normal;
+    font-weight: 600;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+body.tema-oscuro .suggestions .suggestion-snippet mark {
+    background: #5c4d00;
+    color: #fff3cd;
+}
+
 .suggestions .suggestion-empty {
     padding: 14px;
     color: #5f6368;
@@ -447,6 +481,215 @@ body.tema-oscuro .credits {
 
 .suggestions .suggestion-empty:hover {
     background: transparent;
+}
+
+/* -------- Botón "Estadísticas" arriba a la derecha -------- */
+.stats-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    height: 48px;
+    padding: 0 18px 0 14px;
+    border: 0;
+    border-radius: 24px;
+    background: #fff;
+    color: #1a73e8;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background 0.15s, box-shadow 0.15s;
+}
+
+.stats-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.16),
+        0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.stats-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* -------- Modal de estadísticas -------- */
+.stats-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.stats-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(32, 33, 36, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.stats-panel {
+    position: relative;
+    background: #fff;
+    border-radius: 14px;
+    width: min(680px, 100%);
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 28px 28px 32px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+}
+
+.stats-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+
+.stats-close:hover {
+    background: rgba(60, 64, 67, 0.08);
+}
+
+.stats-close svg {
+    width: 22px;
+    height: 22px;
+    fill: #5f6368;
+}
+
+.stats-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #202124;
+}
+
+.stats-summary {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 22px;
+}
+
+.stats-section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.stats-bars {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats-bar {
+    display: grid;
+    grid-template-columns: 130px 1fr 90px;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.stats-bar-label {
+    color: #202124;
+    font-weight: 500;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stats-bar-track {
+    background: #f1f3f4;
+    height: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;        /* siempre el 100% del espacio disponible */
+}
+
+.stats-bar-fill {
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.6s ease-out;
+}
+
+.stats-bar-value {
+    text-align: right;
+    color: #5f6368;
+    font-variant-numeric: tabular-nums;
+    font-size: 12px;
+}
+
+/* Modo oscuro del modal */
+body.tema-oscuro .stats-panel {
+    background: #2a2d34;
+    color: #e8eaed;
+}
+
+body.tema-oscuro .stats-header h2 {
+    color: #e8eaed;
+}
+
+body.tema-oscuro .stats-bar-label {
+    color: #e8eaed;
+}
+
+body.tema-oscuro .stats-bar-track {
+    background: #3c4043;
+}
+
+body.tema-oscuro .stats-close svg {
+    fill: #9aa0a6;
+}
+
+body.tema-oscuro .stats-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .stats-btn {
+        top: 70px;  /* debajo del search box en mobile */
+        right: 8px;
+        height: 40px;
+        padding: 0 14px 0 10px;
+        font-size: 13px;
+    }
+
+    .stats-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .stats-bar {
+        grid-template-columns: 100px 1fr 60px;
+        font-size: 12px;
+    }
 }
 
 /* -------- Toast de estado -------- */

@@ -79,6 +79,12 @@
     const $btnRandom = document.getElementById("random-btn");
     const $btnTheme = document.getElementById("theme-toggle-btn");
     const $themeMenu = document.getElementById("theme-menu");
+    const $btnStats = document.getElementById("stats-btn");
+    const $statsModal = document.getElementById("stats-modal");
+    const $statsClose = document.getElementById("stats-close");
+    const $statsOverlay = document.getElementById("stats-overlay");
+    const $statsSummary = document.getElementById("stats-summary");
+    const $statsCategorias = document.getElementById("stats-categorias");
     const $btnLimpiar = document.getElementById("clear-btn");
     const $suggestions = document.getElementById("suggestions");
     const $toast = document.getElementById("status-toast");
@@ -239,6 +245,14 @@
         calles = await respCalles.json();
         console.log(`Datos cargados: ${calles.length} entradas`);
 
+        // Pre-computar versión normalizada de la descripción para búsqueda
+        // por contenido. Hacerlo una sola vez al cargar (no en cada keystroke).
+        for (const c of calles) {
+            if (c.descripcion) {
+                c.desc_clave = normalizar(c.descripcion);
+            }
+        }
+
         if (respCache && respCache.ok) {
             try {
                 geoCache = await respCache.json();
@@ -347,6 +361,13 @@
             const opt = document.createElement("option");
             opt.value = cat;
             opt.textContent = `${cat.charAt(0) + cat.slice(1).toLowerCase()} (${n})`;
+            const color = COLORES_CATEGORIA[cat];
+            if (color) {
+                // Texto del color de la categoría + fondo tenue (hex + alpha)
+                opt.style.color = color;
+                opt.style.backgroundColor = color + "1a";
+                opt.style.fontWeight = "600";
+            }
             $categoriaSelect.appendChild(opt);
         }
     }
@@ -354,6 +375,16 @@
     function aplicarFiltroCategoria(valor) {
         categoriaActiva = (valor || "").trim().toUpperCase();
         $categoriaSelect.classList.toggle("active-filter", !!categoriaActiva);
+
+        // El texto del select muestra el color de la categoría elegida
+        const colorCat = COLORES_CATEGORIA[categoriaActiva];
+        if (colorCat) {
+            $categoriaSelect.style.color = colorCat;
+            $categoriaSelect.style.backgroundColor = colorCat + "1a";
+        } else {
+            $categoriaSelect.style.color = "";
+            $categoriaSelect.style.backgroundColor = "";
+        }
 
         // Limpiar overlay previo de categoría
         if (capaCategoria) {
@@ -444,9 +475,11 @@
         const q = normalizar(consulta);
         if (q.length < 2) return [];
 
-        // Prioridad: coincidencias al inicio, luego "contiene".
+        // Prioridad: nombre que empieza con q > nombre que contiene > descripción.
         const empiezan = [];
         const contienen = [];
+        const enDescripcion = [];
+
         for (const c of calles) {
             if (!c.clave) continue;
             if (!entradaCoincideFiltro(c)) continue;
@@ -454,11 +487,47 @@
                 empiezan.push(c);
             } else if (c.clave.includes(q)) {
                 contienen.push(c);
+            } else if (c.desc_clave && c.desc_clave.includes(q)) {
+                // Match en historia/descripción. Marcamos con flag para que
+                // el render muestre el snippet.
+                enDescripcion.push({ ...c, _matchDesc: q });
             }
+            // Cortamos temprano si ya hay muchos por nombre
             if (empiezan.length >= MAX_SUGGESTIONS) break;
         }
 
-        return empiezan.concat(contienen).slice(0, MAX_SUGGESTIONS);
+        // Combinamos manteniendo prioridad
+        return empiezan
+            .concat(contienen)
+            .concat(enDescripcion)
+            .slice(0, MAX_SUGGESTIONS);
+    }
+
+    /**
+     * Devuelve un snippet de la descripción con el término resaltado.
+     * Para resaltar correctamente ignorando tildes, usamos la posición del
+     * match en el texto normalizado y la aplicamos sobre el texto original
+     * (que tiene la misma longitud porque normalizar() no cambia el nro de chars).
+     */
+    function snippetMatch(descripcion, q) {
+        if (!descripcion || !q) return "";
+        const descNorm = normalizar(descripcion);
+        const idx = descNorm.indexOf(q);
+        if (idx < 0) return "";
+
+        const ventana = 50;
+        const ini = Math.max(0, idx - ventana);
+        const fin = Math.min(descripcion.length, idx + q.length + ventana);
+
+        // Recortar usando posiciones del texto original
+        const antes = descripcion.slice(ini, idx);
+        const match = descripcion.slice(idx, idx + q.length);
+        const despues = descripcion.slice(idx + q.length, fin);
+
+        let texto = `${escapeHtml(antes)}<mark>${escapeHtml(match)}</mark>${escapeHtml(despues)}`;
+        if (ini > 0) texto = "…" + texto;
+        if (fin < descripcion.length) texto = texto + "…";
+        return texto;
     }
 
     function renderSugerencias(items) {
@@ -475,9 +544,17 @@
             li.setAttribute("role", "option");
             // Usamos id (clave|tipo) para identificar la entrada unívocamente
             li.dataset.id = item.id || item.clave;
+
+            // Si el match es por descripción, mostramos un snippet con
+            // el término resaltado para que se entienda por qué aparece.
+            const snippet = item._matchDesc
+                ? snippetMatch(item.descripcion, item._matchDesc)
+                : "";
+
             li.innerHTML = `
                 <span class="suggestion-title">${escapeHtml(item.nombre_busqueda)}</span>
                 <span class="suggestion-sub">${escapeHtml(item.tipo || "")}${item.categoria ? " · " + escapeHtml(item.categoria.toLowerCase()) : ""}</span>
+                ${snippet ? `<span class="suggestion-snippet">${snippet}</span>` : ""}
             `;
             li.addEventListener("click", () => seleccionarEntrada(item));
             $suggestions.appendChild(li);
@@ -949,6 +1026,67 @@
     // 8. EVENTOS DE UI
     // =================================================================
 
+    // =================================================================
+    //   ESTADÍSTICAS — modal con distribución por categoría
+    // =================================================================
+
+    function abrirEstadisticas() {
+        if (!$statsModal) return;
+        construirEstadisticas();
+        $statsModal.hidden = false;
+    }
+
+    function cerrarEstadisticas() {
+        if (!$statsModal) return;
+        $statsModal.hidden = true;
+    }
+
+    function construirEstadisticas() {
+        if (!Array.isArray(calles) || calles.length === 0) return;
+
+        const total = calles.length;
+        const counts = new Map();
+        for (const c of calles) {
+            const cat = (c.categoria || "").trim().toUpperCase() || "(SIN CATEGORÍA)";
+            counts.set(cat, (counts.get(cat) || 0) + 1);
+        }
+
+        // Cuántas tienen geometría cacheada
+        const cacheadas = calles.reduce((n, c) => {
+            const k = c.id || c.clave;
+            return geoCache[k] ? n + 1 : n;
+        }, 0);
+
+        if ($statsSummary) {
+            const pctCache = ((cacheadas / total) * 100).toFixed(1);
+            $statsSummary.textContent =
+                `${total.toLocaleString("es-AR")} odónimos en el callejero · ` +
+                `${cacheadas.toLocaleString("es-AR")} con ubicación en el mapa (${pctCache}%)`;
+        }
+
+        // Ordenadas de mayor a menor
+        const ordenadas = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+
+        if (!$statsCategorias) return;
+        $statsCategorias.innerHTML = "";
+        for (const [cat, n] of ordenadas) {
+            const pct = (n / total) * 100;
+            const color = COLORES_CATEGORIA[cat] || "#6b7280";
+            const li = document.createElement("li");
+            li.className = "stats-bar";
+            // El track ocupa el 100% del ancho disponible (representa el total).
+            // El fill marca el porcentaje correspondiente, en un tono más oscuro.
+            li.innerHTML = `
+                <span class="stats-bar-label" style="color: ${color};">${escapeHtml(cat.toLowerCase())}</span>
+                <span class="stats-bar-track" style="background-color: ${color}40;">
+                    <span class="stats-bar-fill" style="width: ${pct}%; background-color: ${color};"></span>
+                </span>
+                <span class="stats-bar-value" style="color: ${color};">${pct.toFixed(1)}% · ${n.toLocaleString("es-AR")}</span>
+            `;
+            $statsCategorias.appendChild(li);
+        }
+    }
+
     function conectarEventos() {
         // Tipeo en el input -> autocomplete
         $input.addEventListener("input", () => {
@@ -1052,6 +1190,23 @@
                 aplicarFiltroCategoria(e.target.value);
             });
         }
+
+        // Modal de estadísticas
+        if ($btnStats) {
+            $btnStats.addEventListener("click", abrirEstadisticas);
+        }
+        if ($statsClose) {
+            $statsClose.addEventListener("click", cerrarEstadisticas);
+        }
+        if ($statsOverlay) {
+            $statsOverlay.addEventListener("click", cerrarEstadisticas);
+        }
+        // Cerrar con Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && $statsModal && !$statsModal.hidden) {
+                cerrarEstadisticas();
+            }
+        });
     }
 
     // =================================================================

@@ -100,6 +100,45 @@
         </ul>
     </div>
 
+    <!-- Botón "estadísticas" arriba a la derecha -->
+    <button
+        id="stats-btn"
+        class="stats-btn"
+        type="button"
+        aria-label="Ver estadísticas del callejero"
+        title="Estadísticas"
+    >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+        </svg>
+        <span>Estadísticas</span>
+    </button>
+
+    <!-- Modal de estadísticas -->
+    <div id="stats-modal" class="stats-modal" hidden>
+        <div class="stats-overlay" id="stats-overlay"></div>
+        <div class="stats-panel" role="dialog" aria-labelledby="stats-title">
+            <button
+                class="stats-close"
+                id="stats-close"
+                type="button"
+                aria-label="Cerrar estadísticas"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                </svg>
+            </button>
+            <header class="stats-header">
+                <h2 id="stats-title">Estadísticas del callejero de CABA</h2>
+                <p id="stats-summary" class="stats-summary"></p>
+            </header>
+            <section class="stats-section">
+                <h3>Distribución por categoría</h3>
+                <ul id="stats-categorias" class="stats-bars"></ul>
+            </section>
+        </div>
+    </div>
+
     <!-- Mensaje de estado (cargando, error, no encontrado) -->
     <div id="status-toast" class="status-toast" hidden></div>
 
