@@ -22,6 +22,33 @@
     const MAX_SUGGESTIONS = 8;
     const LINE_COLOR = "#1a73e8";
 
+    // Paleta de colores por categoría del Excel. Los colores fueron elegidos
+    // para que sean distinguibles entre sí y mantengan buen contraste sobre
+    // el mapa Voyager (claro) y Dark Matter (oscuro).
+    const COLORES_CATEGORIA = {
+        "PERSONA":            "#1a73e8", // azul (default Google)
+        "LUGAR":              "#0d9488", // verde turquesa
+        "NATURALEZA":         "#16a34a", // verde
+        "ACCIÓN MILITAR":     "#dc2626", // rojo
+        "CONCEPTO":           "#7c3aed", // violeta
+        "OTROS":              "#6b7280", // gris medio
+        "ARTE":               "#ea580c", // naranja
+        "BARCO":              "#1e3a8a", // azul marino
+        "FECHA":              "#ca8a04", // amarillo dorado
+        "CUERPO MILITAR":     "#991b1b", // rojo oscuro
+        "PUEBLOS ORIGINARIOS":"#a16207", // marrón terracota
+        "RELIGIÓN":           "#9333ea", // violeta lavanda
+        "RÍO":                "#0891b2", // cian
+        "INSTITUCIÓN":        "#475569", // gris azulado
+        "LITERATURA":         "#db2777", // rosa
+    };
+
+    function colorParaEntrada(entrada) {
+        if (!entrada) return LINE_COLOR;
+        const cat = (entrada.categoria || "").trim().toUpperCase();
+        return COLORES_CATEGORIA[cat] || LINE_COLOR;
+    }
+
     // Tipos que se dibujan como línea (calles); el resto como marcador.
     const TIPOS_LINEA = new Set([
         "calle", "avenida", "pasaje peatonal", "autopista",
@@ -375,11 +402,12 @@
                 continue;
             }
 
+            const color = colorParaEntrada(c);
             const marker = L.circleMarker(latlng, {
                 radius: 4,
-                color: "#1a73e8",
+                color: color,
                 weight: 1.5,
-                fillColor: "#1a73e8",
+                fillColor: color,
                 fillOpacity: 0.6,
             });
             marker.bindTooltip(c.nombre_busqueda, {
@@ -814,15 +842,16 @@
 
     function dibujarResultado(entrada, resultado) {
         const popupHtml = construirPopup(entrada);
+        const color = colorParaEntrada(entrada);
 
         if (resultado.tipo === "area") {
             // Polígono (barrio entero, plaza grande)
             capaActual = L.geoJSON(resultado.geometry, {
                 style: {
-                    color: LINE_COLOR,
+                    color: color,
                     weight: 3,
                     opacity: 0.95,
-                    fillColor: LINE_COLOR,
+                    fillColor: color,
                     fillOpacity: 0.15,
                 },
             }).addTo(mapa);
@@ -848,7 +877,7 @@
             // GeoJSON LineString/MultiLineString -> Polyline
             capaActual = L.geoJSON(resultado.geometry, {
                 style: {
-                    color: LINE_COLOR,
+                    color: color,
                     weight: 8,
                     opacity: 0.9,
                     lineCap: "round",
@@ -897,14 +926,21 @@
     function construirPopup(entrada) {
         const partes = [
             entrada.tipo,
-            entrada.categoria && entrada.categoria.toLowerCase(),
             entrada.barrio && `barrio: ${entrada.barrio}`,
         ].filter(Boolean);
         const subtitulo = partes.join(" · ");
+        const color = colorParaEntrada(entrada);
+        const cat = (entrada.categoria || "").trim();
+
+        // Chip de categoría con su color
+        const chip = cat
+            ? `<span class="popup-cat" style="background-color: ${color}1a; color: ${color};">${escapeHtml(cat.toLowerCase())}</span>`
+            : "";
 
         return `
-            <div class="popup-title">${escapeHtml(entrada.nombre_busqueda)}</div>
+            <div class="popup-title" style="color: ${color};">${escapeHtml(entrada.nombre_busqueda)}</div>
             ${subtitulo ? `<div class="popup-sub">${escapeHtml(subtitulo)}</div>` : ""}
+            ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
         `;
     }
