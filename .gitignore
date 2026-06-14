@@ -22,6 +22,7 @@ Thumbs.db
 # OSM bulk dump (cache intermedio del geocoder, ~20 MB)
 # No es necesario en git: se regenera corriendo geocode_all.py
 data/_osm_bulk.json
+data/_osm_bulk_calles.json
 
 # Backups del cache (no van a producción, son snapshots locales)
 data/*.bak

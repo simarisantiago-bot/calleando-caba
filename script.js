@@ -69,6 +69,9 @@
     let capaOverlayTodos = null;   // overlay con los 48 barrios simultáneos
     let capaOverlayComunas = null; // overlay con las 15 comunas simultáneas
     let capaCategoria = null;      // overlay con todas las calles de la categoría
+    let capaHeatmap = null;        // heatmap de barrios por densidad de categoría
+    let capaCercaMio = null;       // overlay con las calles cercanas al usuario
+    let marcadorUsuario = null;    // marcador de la ubicación del usuario
     let mapa;                      // instancia Leaflet
     let capaActual = null;         // polyline o marker dibujado por la última búsqueda
     let popupActual = null;        // popup actual
@@ -78,6 +81,7 @@
     const $input = document.getElementById("search-input");
     const $btnBuscar = document.getElementById("search-btn");
     const $btnRandom = document.getElementById("random-btn");
+    const $btnNearme = document.getElementById("nearme-btn");
     const $btnTheme = document.getElementById("theme-toggle-btn");
     const $themeMenu = document.getElementById("theme-menu");
     const $btnStats = document.getElementById("stats-btn");
@@ -400,10 +404,14 @@
             $categoriaSelect.style.backgroundColor = "";
         }
 
-        // Limpiar overlay previo de categoría
+        // Limpiar overlays previos (círculos + heatmap de la última categoría)
         if (capaCategoria) {
             mapa.removeLayer(capaCategoria);
             capaCategoria = null;
+        }
+        if (capaHeatmap) {
+            mapa.removeLayer(capaHeatmap);
+            capaHeatmap = null;
         }
 
         if (!categoriaActiva) {
@@ -415,11 +423,72 @@
             return;
         }
 
+        // Heatmap de barrios según densidad de la categoría
+        dibujarHeatmapBarrios();
+
         dibujarOverlayCategoria();
 
         if ($input.value.length >= 2) {
             renderSugerencias(buscarSugerencias($input.value));
         }
+    }
+
+    /**
+     * Heatmap por barrio: pinta cada uno de los 48 barrios con un tono del
+     * color de la categoría activa, según cuántas calles de esa categoría
+     * existen en cada barrio. Más calles = más oscuro. Combinable con los
+     * círculos individuales que dibuja dibujarOverlayCategoria().
+     */
+    function dibujarHeatmapBarrios() {
+        if (!barriosGeo || !categoriaActiva) return;
+
+        // Conteo de calles por barrio para la categoría activa.
+        // Solo contamos las que tengan barrio asignado (mapeo previo).
+        const conteo = new Map();
+        for (const c of calles) {
+            const cat = (c.categoria || "").trim().toUpperCase();
+            if (cat !== categoriaActiva) continue;
+            if (!c.barrio) continue;
+            conteo.set(c.barrio, (conteo.get(c.barrio) || 0) + 1);
+        }
+
+        if (conteo.size === 0) return;
+        const max = Math.max(...conteo.values());
+        const color = COLORES_CATEGORIA[categoriaActiva] || LINE_COLOR;
+
+        capaHeatmap = L.geoJSON(barriosGeo, {
+            style: (feature) => {
+                const n = conteo.get(feature.properties.nombre) || 0;
+                // Opacidad relativa al máximo (mínimo 0.05 para que siempre se vea
+                // que el barrio existe, máximo 0.55 para que no tape demasiado el mapa).
+                const alpha = n === 0 ? 0.02 : 0.05 + (n / max) * 0.50;
+                return {
+                    color: color,
+                    weight: 0.8,
+                    opacity: 0.5,
+                    fillColor: color,
+                    fillOpacity: alpha,
+                };
+            },
+            onEachFeature: (feature, layer) => {
+                const nombre = feature.properties.nombre;
+                const n = conteo.get(nombre) || 0;
+                const sufijo = n === 1 ? "calle" : "calles";
+                layer.bindTooltip(
+                    `<strong>${nombre}</strong><br>${n} ${sufijo} de "${categoriaActiva.toLowerCase()}"`,
+                    {
+                        sticky: true,
+                        direction: "top",
+                        className: "barrio-tooltip",
+                    }
+                );
+                layer.on("mouseover", () => layer.setStyle({ weight: 2.2 }));
+                layer.on("mouseout", () => capaHeatmap.resetStyle(layer));
+            },
+        }).addTo(mapa);
+
+        // El heatmap va POR DEBAJO de los círculos individuales
+        capaHeatmap.bringToBack();
     }
 
     /**
@@ -597,6 +666,167 @@
         $suggestions.hidden = true;
         $btnLimpiar.hidden = false;
         ubicarEnMapa(entrada);
+    }
+
+    // =================================================================
+    //   GEOLOCALIZACIÓN — "Cerca mío"
+    // =================================================================
+
+    const RADIO_CERCA_METROS = 200;
+
+    /** Distancia en metros entre dos puntos (lat, lon) usando Haversine. */
+    function distanciaMetros(lat1, lon1, lat2, lon2) {
+        const R = 6371000; // radio Tierra en metros
+        const toRad = (d) => (d * Math.PI) / 180;
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a =
+            Math.sin(dLat / 2) ** 2 +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+        return 2 * R * Math.asin(Math.min(1, Math.sqrt(a)));
+    }
+
+    /** Devuelve [lat, lon] del centroide aproximado de una entrada del cache. */
+    function centroideDeGeo(geo) {
+        if (!geo) return null;
+        if (geo.tipo === "point" && geo.center) return geo.center;
+        if (geo.bbox && geo.bbox.length === 4) {
+            const [latMin, latMax, lonMin, lonMax] = geo.bbox.map(parseFloat);
+            return [(latMin + latMax) / 2, (lonMin + lonMax) / 2];
+        }
+        return null;
+    }
+
+    function limpiarCercaMio() {
+        if (capaCercaMio) {
+            mapa.removeLayer(capaCercaMio);
+            capaCercaMio = null;
+        }
+        if (marcadorUsuario) {
+            mapa.removeLayer(marcadorUsuario);
+            marcadorUsuario = null;
+        }
+    }
+
+    function buscarCercaMio() {
+        if (!navigator.geolocation) {
+            mostrarToast("Tu navegador no soporta geolocalización.", 3000);
+            return;
+        }
+        $btnNearme.classList.add("localizando");
+        mostrarToast("Buscando tu ubicación…", 8000);
+
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                $btnNearme.classList.remove("localizando");
+                manejarUbicacionUsuario(pos.coords.latitude, pos.coords.longitude);
+            },
+            (err) => {
+                $btnNearme.classList.remove("localizando");
+                if (err.code === err.PERMISSION_DENIED) {
+                    mostrarToast("Para usar 'Cerca mío' tenés que dar permiso de ubicación.", 4500);
+                } else {
+                    mostrarToast("No pudimos acceder a tu ubicación. Reintenta.", 4000);
+                }
+            },
+            { timeout: 10000, maximumAge: 60000, enableHighAccuracy: true }
+        );
+    }
+
+    function manejarUbicacionUsuario(lat, lon) {
+        // Chequear que esté dentro de CABA
+        const dentroCaba = lat >= -34.706 && lat <= -34.527 &&
+                           lon >= -58.531 && lon <= -58.335;
+        if (!dentroCaba) {
+            mostrarToast(
+                "Estás fuera de CABA. Esta función sólo funciona dentro de Ciudad de Buenos Aires.",
+                5000
+            );
+            return;
+        }
+
+        limpiarCercaMio();
+
+        // Marcador del usuario: círculo azul con pulso visual
+        marcadorUsuario = L.circleMarker([lat, lon], {
+            radius: 9,
+            color: "#fff",
+            weight: 3,
+            fillColor: "#1a73e8",
+            fillOpacity: 1,
+        }).addTo(mapa);
+        marcadorUsuario.bindTooltip("Estás acá", {
+            permanent: true,
+            direction: "top",
+            offset: [0, -8],
+            className: "barrio-tooltip",
+        });
+
+        // Buscar calles cacheadas dentro del radio
+        const cercanas = [];
+        for (const c of calles) {
+            const key = c.id || c.clave;
+            const geo = geoCache[key];
+            if (!geo) continue;
+            const centro = centroideDeGeo(geo);
+            if (!centro) continue;
+            const dist = distanciaMetros(lat, lon, centro[0], centro[1]);
+            if (dist <= RADIO_CERCA_METROS) {
+                cercanas.push({ entrada: c, dist, centro });
+            }
+        }
+
+        if (cercanas.length === 0) {
+            mostrarToast(`No hay calles cacheadas a menos de ${RADIO_CERCA_METROS} m. Probá zoom y hacé click en alguna.`, 5000);
+            mapa.setView([lat, lon], 16);
+            return;
+        }
+
+        cercanas.sort((a, b) => a.dist - b.dist);
+
+        // Círculo de radio (área de búsqueda)
+        const circuloRadio = L.circle([lat, lon], {
+            radius: RADIO_CERCA_METROS,
+            color: "#1a73e8",
+            weight: 1.5,
+            opacity: 0.5,
+            fillColor: "#1a73e8",
+            fillOpacity: 0.06,
+            interactive: false,
+        });
+
+        // Un círculo chico por cada calle cercana
+        const markers = [];
+        for (const item of cercanas) {
+            const color = colorParaCategoria(item.entrada.categoria);
+            const distTxt = item.dist < 100
+                ? `${Math.round(item.dist)} m`
+                : `${(item.dist / 1).toFixed(0)} m`;
+            const m = L.circleMarker(item.centro, {
+                radius: 6,
+                color: color,
+                weight: 2,
+                fillColor: "#fff",
+                fillOpacity: 0.95,
+            });
+            m.bindTooltip(
+                `<strong>${escapeHtml(item.entrada.nombre_busqueda)}</strong> · ${distTxt}`,
+                { direction: "top", className: "barrio-tooltip", offset: [0, -4] }
+            );
+            m.on("click", () => seleccionarEntrada(item.entrada));
+            markers.push(m);
+        }
+
+        capaCercaMio = L.layerGroup([circuloRadio, ...markers]).addTo(mapa);
+
+        mostrarToast(
+            `${cercanas.length} calle${cercanas.length === 1 ? "" : "s"} cerca tuyo. ` +
+            `La más cercana: ${cercanas[0].entrada.nombre_busqueda} a ${Math.round(cercanas[0].dist)} m.`,
+            5500
+        );
+
+        // Centrar en el usuario
+        mapa.flyTo([lat, lon], 17, { duration: 0.8 });
     }
 
     /**
@@ -869,6 +1099,10 @@
             mapa.removeLayer(capaCategoria);
             capaCategoria = null;
         }
+        if (capaHeatmap) {
+            mapa.removeLayer(capaHeatmap);
+            capaHeatmap = null;
+        }
         barrioActivo = "";
 
         const isOverlay = valor === "__overlay_barrios__" || valor === "__overlay_comunas__";
@@ -1096,19 +1330,101 @@
 
     /**
      * Construye las "curiosidades" tipo "Sabías qué" sobre el dataset.
-     * Por ahora: año de nacimiento más común. Futuro: top apellidos,
-     * persona más homenajeada (en varios odónimos), categoría más rara, etc.
+     * Datos calculados en vivo desde calles.json para que reflejen siempre
+     * el estado actual.
      */
     function dibujarCuriosidades() {
         if (!$statsCuriosidades) return;
         const items = [];
 
-        // Curiosidad 1: año de nacimiento más común
-        const { topAnio, topCount } = calcularAniosNacimiento();
+        // === Año de nacimiento más común ===
+        const { topAnio, topCount, decadas } = calcularAniosNacimiento();
         if (topAnio) {
             items.push(
                 `El año de nacimiento con más homenajeados es <strong>${topAnio}</strong>, ` +
                 `con <strong>${topCount}</strong> personas.`
+            );
+        }
+
+        // === Década más común ===
+        if (decadas && decadas.size > 0) {
+            const [d, n] = [...decadas.entries()].sort((a, b) => b[1] - a[1])[0];
+            items.push(
+                `La década con más nacimientos de homenajeados es la de <strong>${d}s</strong>, ` +
+                `con <strong>${n}</strong> personas — la generación de la Revolución de Mayo.`
+            );
+        }
+
+        // === Personas / cosas presentes en varios tipos de odónimo ===
+        const porClave = new Map();
+        for (const c of calles) {
+            if (!porClave.has(c.clave)) porClave.set(c.clave, new Set());
+            porClave.get(c.clave).add(c.tipo);
+        }
+        const multi = [...porClave.entries()]
+            .filter(([, t]) => t.size >= 3)
+            .map(([clave, tipos]) => {
+                const ent = calles.find((c) => c.clave === clave);
+                return { nombre: ent ? ent.nombre_busqueda : clave, tipos: [...tipos] };
+            });
+        if (multi.length > 0) {
+            const ejemplo = multi[Math.floor(Math.random() * multi.length)];
+            items.push(
+                `Hay <strong>${multi.length}</strong> personas o lugares con tres tipos distintos ` +
+                `de odónimo. Por ejemplo, <strong>${escapeHtml(ejemplo.nombre)}</strong> es ` +
+                `${ejemplo.tipos.join(", ")}.`
+            );
+        }
+
+        // === Top apellido recurrente (solo categoría PERSONA) ===
+        const preps = new Set([
+            "de", "del", "la", "las", "los", "y", "el", "en",
+            "san", "santo", "santa", "don", "dona",
+        ]);
+        const apellidos = new Map();
+        for (const c of calles) {
+            if ((c.categoria || "").trim().toUpperCase() !== "PERSONA") continue;
+            const palabras = (c.nombre_busqueda || "").split(/\s+/);
+            if (palabras.length === 0) continue;
+            const ultima = palabras[palabras.length - 1].toLowerCase();
+            if (preps.has(ultima) || /^\d/.test(ultima)) continue;
+            apellidos.set(ultima, (apellidos.get(ultima) || 0) + 1);
+        }
+        const apellidosTop = [...apellidos.entries()].sort((a, b) => b[1] - a[1]);
+        if (apellidosTop.length >= 3) {
+            const top3 = apellidosTop.slice(0, 3)
+                .map(([a, n]) => `<strong>${a.charAt(0).toUpperCase() + a.slice(1)}</strong> (${n})`)
+                .join(", ");
+            items.push(`Los apellidos más recurrentes del callejero son ${top3}.`);
+        }
+
+        // === Tipo de odónimo más común ===
+        const tipos = new Map();
+        for (const c of calles) {
+            const t = (c.tipo || "").trim();
+            if (t) tipos.set(t, (tipos.get(t) || 0) + 1);
+        }
+        const tiposTop = [...tipos.entries()].sort((a, b) => b[1] - a[1]);
+        if (tiposTop.length > 0) {
+            const [t, n] = tiposTop[0];
+            items.push(
+                `El tipo de odónimo más frecuente son las <strong>${t}s</strong>, ` +
+                `con <strong>${n.toLocaleString("es-AR")}</strong> entradas.`
+            );
+        }
+
+        // === Categoría más rara ===
+        const cats = new Map();
+        for (const c of calles) {
+            const cat = (c.categoria || "").trim().toUpperCase();
+            if (cat) cats.set(cat, (cats.get(cat) || 0) + 1);
+        }
+        const catsTop = [...cats.entries()].sort((a, b) => a[1] - b[1]);
+        if (catsTop.length > 0) {
+            const [cat, n] = catsTop[0];
+            items.push(
+                `La categoría con menos entradas es <strong>${cat.toLowerCase()}</strong>, ` +
+                `con solo <strong>${n}</strong> odónimos.`
             );
         }
 
@@ -1274,6 +1590,11 @@
             $btnRandom.addEventListener("click", calleAlAzar);
         }
 
+        // Botón "Cerca mío" (geolocalización)
+        if ($btnNearme) {
+            $btnNearme.addEventListener("click", buscarCercaMio);
+        }
+
         // Botón de tema (abre menú con opciones)
         if ($btnTheme && $themeMenu) {
             $btnTheme.addEventListener("click", (e) => {
@@ -1325,6 +1646,7 @@
             aplicarFiltroBarrio(e.target.value);
             // Si hay categoría activa, redibujarla con el nuevo filtro de barrio aplicado
             if (categoriaActiva) {
+                dibujarHeatmapBarrios();
                 dibujarOverlayCategoria();
             }
         });

@@ -277,6 +277,61 @@ body.tema-oscuro .credits {
     color: #9aa0a6;
 }
 
+/* -------- Botón "Cerca mío" (geolocalización) -------- */
+.nearme-btn {
+    position: absolute;
+    bottom: 224px;
+    right: 60px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+    padding: 0;
+}
+
+.nearme-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nearme-btn:active {
+    transform: scale(0.92);
+}
+
+.nearme-btn.localizando svg {
+    animation: pulso-localizar 1.2s ease-in-out infinite;
+}
+
+.nearme-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+@keyframes pulso-localizar {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.9); }
+}
+
+body.tema-oscuro .nearme-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .nearme-btn svg {
+    fill: #8ab4f8;
+}
+
 /* -------- Botón "calle al azar" (arriba del filtro de barrios) -------- */
 .random-btn {
     position: absolute;
@@ -1086,6 +1141,18 @@ body.tema-oscuro .stats-btn {
     }
 
     .random-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nearme-btn {
+        bottom: 196px;
+        right: 56px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nearme-btn svg {
         width: 20px;
         height: 20px;
     }
