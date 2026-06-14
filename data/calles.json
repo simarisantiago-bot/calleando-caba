@@ -3050,16 +3050,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "AVENIDA VÉLEZ SARSFIELD",
-    "nombre_busqueda": "Avenida Vélez Sarsfield",
-    "clave": "avenida velez sarsfield",
-    "id": "avenida velez sarsfield|avenida",
-    "categoria": "PERSONA",
-    "tipo": "avenida",
-    "descripcion": "Dalmacio Vélez Sarsfield (1800-1875), jurista y político argentino, autor del Código Civil argentino vigente desde 1871.",
-    "letra": "V"
-  },
-  {
     "nombre_original": "ROGER, AVIADOR ENRIQUE ADRIÁN",
     "nombre_busqueda": "Aviador Enrique Adrián Roger",
     "clave": "aviador enrique adrian roger",
@@ -21256,7 +21246,7 @@
     "id": "martinez rosas|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Juan Martínez de Rosas (1758-1886), jurisconsulto y funcionario; trabaja en Chile por la emancipación desde 1810; segundo vocal de la Primera Junta de Gobierno el 18 de septiembre; redactor del Despertador Americano; presidente de la Junta Regional de Gobierno de Concepción en 1811, domina el sur chileno.",
+    "descripcion": "Juan Martínez de Rosas (1759-1813), jurisconsulto y funcionario; trabaja en Chile por la emancipación desde 1810; segundo vocal de la Primera Junta de Gobierno el 18 de septiembre; redactor del Despertador Americano; presidente de la Junta Regional de Gobierno de Concepción en 1811, domina el sur chileno.",
     "letra": "M"
   },
   {

@@ -62,6 +62,7 @@
     let calleBarrios = {};         // {clave: nombreBarrio} mapping
     let barriosGeo = null;         // FeatureCollection de los 48 barrios
     let comunasGeo = null;         // FeatureCollection de las 15 comunas
+    let curiosidades = null;       // datos de curiosidades.json (5 secciones temáticas)
     let barrioActivo = "";         // filtro activo: "" = todos
     let categoriaActiva = "";      // filtro de categoría: "" = todas
     let capaBarrio = null;         // overlay del contorno del barrio activo
@@ -85,6 +86,12 @@
     const $statsOverlay = document.getElementById("stats-overlay");
     const $statsSummary = document.getElementById("stats-summary");
     const $statsCategorias = document.getElementById("stats-categorias");
+    const $statsCuriosidades = document.getElementById("stats-curiosidades");
+    const $curiosidadesSecciones = document.getElementById("curiosidades-secciones");
+    const $aboutLink = document.getElementById("about-link");
+    const $aboutModal = document.getElementById("about-modal");
+    const $aboutClose = document.getElementById("about-close");
+    const $aboutOverlay = document.getElementById("about-overlay");
     const $btnLimpiar = document.getElementById("clear-btn");
     const $suggestions = document.getElementById("suggestions");
     const $toast = document.getElementById("status-toast");
@@ -228,13 +235,14 @@
     // =================================================================
 
     async function cargarDatos() {
-        // Carga en paralelo: dataset, cache geo, barrios, comunas y mapping calle->barrio.
-        const [respCalles, respCache, respBarrios, respComunas, respMap] = await Promise.all([
+        // Carga en paralelo: dataset, cache geo, barrios, comunas, mapping y curiosidades.
+        const [respCalles, respCache, respBarrios, respComunas, respMap, respCuri] = await Promise.all([
             fetch("data/calles.json"),
             fetch("data/geo_cache.json").catch(() => null),
             fetch("data/barrios.geojson").catch(() => null),
             fetch("data/comunas.geojson").catch(() => null),
             fetch("data/calle_barrios.json").catch(() => null),
+            fetch("data/curiosidades.json").catch(() => null),
         ]);
 
         if (!respCalles || !respCalles.ok) {
@@ -281,6 +289,12 @@
                 calleBarrios = await respMap.json();
                 console.log(`Mapeo calle->barrio: ${Object.keys(calleBarrios).length}`);
             } catch (_) { calleBarrios = {}; }
+        }
+        if (respCuri && respCuri.ok) {
+            try {
+                curiosidades = await respCuri.json();
+                console.log(`Curiosidades cargadas: ${curiosidades.secciones.length} secciones`);
+            } catch (_) { curiosidades = null; }
         }
 
         // Vincular cada entrada a su barrio para uso en autocomplete
@@ -1041,6 +1055,131 @@
         $statsModal.hidden = true;
     }
 
+    /**
+     * Recorre las descripciones de entradas tipo PERSONA buscando el año
+     * de nacimiento entre paréntesis. Soporta variantes con guión normal y
+     * em-dash (–), interrogantes y prefijos como ?o c.
+     * Devuelve {topAnio, totalConFecha, decadas: Map}.
+     */
+    function calcularAniosNacimiento() {
+        // Captura: "(1791-1850)", "(c. 1791-?)", "(?1791?-?)", "(1791–1850)"
+        const patron = /\(\s*[^\d]?(\d{4})[^\d]?\s*[-–]\s*[^\d]?(\d{4})?[^\d]?\s*\)/;
+        const years = new Map();
+        const decadas = new Map();
+        let totalConFecha = 0;
+
+        for (const c of calles) {
+            const cat = (c.categoria || "").trim().toUpperCase();
+            if (cat !== "PERSONA") continue;
+            if (!c.descripcion) continue;
+            const m = c.descripcion.match(patron);
+            if (!m) continue;
+            const anio = parseInt(m[1], 10);
+            if (anio < 1300 || anio > 2025) continue;
+            years.set(anio, (years.get(anio) || 0) + 1);
+            const dec = Math.floor(anio / 10) * 10;
+            decadas.set(dec, (decadas.get(dec) || 0) + 1);
+            totalConFecha++;
+        }
+
+        // Año con más homenajeados
+        let topAnio = null;
+        let topCount = 0;
+        for (const [anio, n] of years) {
+            if (n > topCount) {
+                topCount = n;
+                topAnio = anio;
+            }
+        }
+        return { topAnio, topCount, totalConFecha, decadas };
+    }
+
+    /**
+     * Construye las "curiosidades" tipo "Sabías qué" sobre el dataset.
+     * Por ahora: año de nacimiento más común. Futuro: top apellidos,
+     * persona más homenajeada (en varios odónimos), categoría más rara, etc.
+     */
+    function dibujarCuriosidades() {
+        if (!$statsCuriosidades) return;
+        const items = [];
+
+        // Curiosidad 1: año de nacimiento más común
+        const { topAnio, topCount } = calcularAniosNacimiento();
+        if (topAnio) {
+            items.push(
+                `El año de nacimiento con más homenajeados es <strong>${topAnio}</strong>, ` +
+                `con <strong>${topCount}</strong> personas.`
+            );
+        }
+
+        $statsCuriosidades.innerHTML = "";
+        for (const html of items) {
+            const li = document.createElement("li");
+            li.className = "curiosidad-item";
+            li.innerHTML = html;
+            $statsCuriosidades.appendChild(li);
+        }
+    }
+
+    /**
+     * Renderiza las 5 secciones temáticas de curiosidades en el modal.
+     * Cada sección es colapsable (la primera abierta, el resto cerradas).
+     * Cada item es clickeable y abre la calle en el mapa.
+     */
+    function dibujarSeccionesCuriosidades() {
+        if (!$curiosidadesSecciones) return;
+        $curiosidadesSecciones.innerHTML = "";
+        if (!curiosidades || !Array.isArray(curiosidades.secciones)) return;
+
+        for (let idx = 0; idx < curiosidades.secciones.length; idx++) {
+            const seccion = curiosidades.secciones[idx];
+            if (!seccion.items || seccion.items.length === 0) continue;
+
+            const details = document.createElement("details");
+            details.className = "curiosidad-grupo";
+            if (idx === 0) details.open = true;
+
+            const summary = document.createElement("summary");
+            summary.innerHTML = `
+                <span class="curiosidad-grupo-titulo">${escapeHtml(seccion.titulo)}</span>
+                <span class="curiosidad-grupo-cuenta">${seccion.items.length}</span>
+            `;
+            details.appendChild(summary);
+
+            if (seccion.descripcion) {
+                const desc = document.createElement("p");
+                desc.className = "curiosidad-grupo-desc";
+                desc.textContent = seccion.descripcion;
+                details.appendChild(desc);
+            }
+
+            const lista = document.createElement("ul");
+            lista.className = "curiosidad-lista";
+            for (const item of seccion.items) {
+                const li = document.createElement("li");
+                li.className = "curiosidad-card";
+                li.innerHTML = `
+                    <div class="curiosidad-card-head">
+                        <span class="curiosidad-card-nombre">${escapeHtml(item.nombre)}</span>
+                        <span class="curiosidad-card-tipo">${escapeHtml(item.tipo)}</span>
+                    </div>
+                    <div class="curiosidad-card-identidad">${escapeHtml(item.identidad)}</div>
+                    <div class="curiosidad-card-texto">${escapeHtml(item.curiosidad)}</div>
+                `;
+                li.addEventListener("click", () => {
+                    const entrada = calles.find((c) => c.id === item.id);
+                    if (entrada) {
+                        cerrarEstadisticas();
+                        seleccionarEntrada(entrada);
+                    }
+                });
+                lista.appendChild(li);
+            }
+            details.appendChild(lista);
+            $curiosidadesSecciones.appendChild(details);
+        }
+    }
+
     function construirEstadisticas() {
         if (!Array.isArray(calles) || calles.length === 0) return;
 
@@ -1085,6 +1224,12 @@
             `;
             $statsCategorias.appendChild(li);
         }
+
+        // Sección "¿Sabías que…?"
+        dibujarCuriosidades();
+
+        // Secciones temáticas de curiosidades (cargadas desde curiosidades.json)
+        dibujarSeccionesCuriosidades();
     }
 
     function conectarEventos() {
@@ -1201,11 +1346,23 @@
         if ($statsOverlay) {
             $statsOverlay.addEventListener("click", cerrarEstadisticas);
         }
-        // Cerrar con Escape
+
+        // Modal "Acerca de"
+        if ($aboutLink) {
+            $aboutLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                if ($aboutModal) $aboutModal.hidden = false;
+            });
+        }
+        const cerrarAbout = () => { if ($aboutModal) $aboutModal.hidden = true; };
+        if ($aboutClose) $aboutClose.addEventListener("click", cerrarAbout);
+        if ($aboutOverlay) $aboutOverlay.addEventListener("click", cerrarAbout);
+
+        // Cerrar cualquier modal con Escape
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && $statsModal && !$statsModal.hidden) {
-                cerrarEstadisticas();
-            }
+            if (e.key !== "Escape") return;
+            if ($statsModal && !$statsModal.hidden) cerrarEstadisticas();
+            if ($aboutModal && !$aboutModal.hidden) cerrarAbout();
         });
     }
 

@@ -1,0 +1,326 @@
+{
+  "secciones": [
+    {
+      "id": "apodos",
+      "titulo": "Nombres bajo apodo o seudónimo",
+      "descripcion": "Calles dedicadas a personalidades bajo sus nombres artísticos.",
+      "items": [
+        {
+          "id": "azucena maizani|calle",
+          "nombre": "Azucena Maizani",
+          "tipo": "calle",
+          "identidad": "La Ñata Gaucha",
+          "curiosidad": "Célebre cantautora de tangos. Hacía sus presentaciones vestida con trajes masculinos o atuendos de gaucho, ganándose ese apodo popular."
+        },
+        {
+          "id": "roberto sanchez|calle",
+          "nombre": "Roberto Sánchez",
+          "tipo": "calle",
+          "identidad": "Sandro de América",
+          "curiosidad": "Icónico cantautor y pionero del rock en español. No figura en el callejero como “Sandro”, sino bajo su nombre real de nacimiento."
+        },
+        {
+          "id": "almafuerte|avenida",
+          "nombre": "Almafuerte",
+          "tipo": "avenida",
+          "identidad": "Pedro Bonifacio Palacios",
+          "curiosidad": "No es un apellido real: es el seudónimo literario del poeta y escritor argentino."
+        },
+        {
+          "id": "gabriela mistral|calle",
+          "nombre": "Gabriela Mistral",
+          "tipo": "calle",
+          "identidad": "Lucila Godoy Alcayaga",
+          "curiosidad": "Homenajeada bajo el seudónimo con el que ganó el Premio Nobel de Literatura en 1945."
+        },
+        {
+          "id": "pola|calle",
+          "nombre": "Pola",
+          "tipo": "calle",
+          "identidad": "Policarpa Salavarrieta",
+          "curiosidad": "El nombre minimalista corresponde al sobrenombre de la heroína y patriota colombiana fusilada en Bogotá."
+        }
+      ]
+    },
+    {
+      "id": "mujeres-pioneras",
+      "titulo": "Pioneras y mujeres con historia",
+      "descripcion": "Hitos del trazado urbano dedicados a mujeres pioneras en distintos campos.",
+      "items": [
+        {
+          "id": "ana diaz|calle",
+          "nombre": "Ana Díaz",
+          "tipo": "calle",
+          "identidad": "Primera propietaria",
+          "curiosidad": "Primera mujer propietaria de un solar en Buenos Aires (1580). Su lote estaba en la esquina sudoeste de las actuales Florida y Corrientes."
+        },
+        {
+          "id": "amalia celia figueredo|sendero",
+          "nombre": "Amalia Celia Figueredo",
+          "tipo": "sendero",
+          "identidad": "Primera aviadora",
+          "curiosidad": "Primera mujer aviadora de Argentina y Latinoamérica. Obtuvo su licencia de piloto en 1895."
+        },
+        {
+          "id": "paquita bernardo|plazoleta",
+          "nombre": "Paquita Bernardo",
+          "tipo": "plazoleta",
+          "identidad": "Primera bandoneonista",
+          "curiosidad": "Primera mujer bandoneonista destacada profesionalmente, en una época en que el instrumento era casi exclusivo de hombres."
+        },
+        {
+          "id": "virginia bolten|parque",
+          "nombre": "Virginia Bolten",
+          "tipo": "parque",
+          "identidad": "Primera oradora obrera",
+          "curiosidad": "Primera oradora mujer en una concentración obrera en Argentina (1890). Militante anarquista y feminista. Lideró la primera publicación feminista del país, La Voz de la Mujer."
+        }
+      ]
+    },
+    {
+      "id": "literatura",
+      "titulo": "Calles literarias",
+      "descripcion": "Arterias que no homenajean a una persona ni a un lugar real, sino a obras de ficción.",
+      "items": [
+        {
+          "id": "adan buenosayres|puente",
+          "nombre": "Adán Buenosayres",
+          "tipo": "puente",
+          "identidad": "Novela de Marechal",
+          "curiosidad": "Lleva el nombre de la famosa novela vanguardista del escritor argentino Leopoldo Marechal."
+        },
+        {
+          "id": "amalia|calle",
+          "nombre": "Amalia",
+          "tipo": "calle",
+          "identidad": "Novela de José Mármol",
+          "curiosidad": "Inspirada directamente en Amalia, la célebre novela de José Mármol publicada en 1851."
+        },
+        {
+          "id": "el alma que canta|plazoleta",
+          "nombre": "El Alma Que Canta",
+          "tipo": "plazoleta",
+          "identidad": "Revista de tangos",
+          "curiosidad": "Nombrada en honor a la mítica revista de música popular fundada en 1916 por Vicente Buchieri, cuna de las letras de tango de la época."
+        }
+      ]
+    },
+    {
+      "id": "cronologicos",
+      "titulo": "Extremos del callejero",
+      "descripcion": "Las vidas más largas y las más cortas que el callejero conmemora.",
+      "items": [
+        {
+          "id": "alicia moreau de justo|avenida",
+          "nombre": "Alicia Moreau de Justo",
+          "tipo": "avenida",
+          "identidad": "Más longeva: 101 años (1885-1986)",
+          "curiosidad": "Pionera de la medicina y los derechos cívicos femeninos. Cruzó tres siglos de historia argentina."
+        },
+        {
+          "id": "doctor esteban laureano maradona|plazoleta",
+          "nombre": "Doctor Esteban Laureano Maradona",
+          "tipo": "plazoleta",
+          "identidad": "Centenaria: 100 años (1895-1995)",
+          "curiosidad": "Conocido como el “médico de los pobres”, dedicado a la medicina comunitaria y rural."
+        },
+        {
+          "id": "paseo marcela brenda iglesias|paseo",
+          "nombre": "Paseo Marcela Brenda Iglesias",
+          "tipo": "paseo",
+          "identidad": "La más joven: 6 años (1990-1996)",
+          "curiosidad": "Niña fallecida tras la caída de una escultura en el Paseo de la Infanta. Su historia redefinió los controles de seguridad en CABA."
+        },
+        {
+          "id": "candela sol rodriguez|sendero",
+          "nombre": "Candela Sol Rodríguez",
+          "tipo": "sendero",
+          "identidad": "11 años (1999-2011)",
+          "curiosidad": "Homenaje a la niña cuyo caso causó conmoción nacional en 2011."
+        }
+      ]
+    },
+    {
+      "id": "presidentes",
+      "titulo": "Presidentes de la Nación en el callejero",
+      "descripcion": "Eje cronológico de mandatarios con calles asignadas en CABA.",
+      "items": [
+        {
+          "id": "rivadavia|avenida",
+          "nombre": "Rivadavia",
+          "tipo": "avenida",
+          "identidad": "1826-1827",
+          "curiosidad": "Bernardino Rivadavia, primer presidente."
+        },
+        {
+          "id": "general urquiza|calle",
+          "nombre": "General Urquiza",
+          "tipo": "calle",
+          "identidad": "1854-1860",
+          "curiosidad": "Justo José de Urquiza, primer presidente de la Confederación."
+        },
+        {
+          "id": "pedernera|calle",
+          "nombre": "Pedernera",
+          "tipo": "calle",
+          "identidad": "1860",
+          "curiosidad": "Juan Esteban Pedernera, presidente interino."
+        },
+        {
+          "id": "derqui|avenida",
+          "nombre": "Derqui",
+          "tipo": "avenida",
+          "identidad": "1860-1861",
+          "curiosidad": "Santiago Derqui, mandatario constitucional de la Confederación."
+        },
+        {
+          "id": "bartolome mitre|calle",
+          "nombre": "Bartolomé Mitre",
+          "tipo": "calle",
+          "identidad": "1862-1868",
+          "curiosidad": "Primer presidente de la nación unificada."
+        },
+        {
+          "id": "sarmiento|calle",
+          "nombre": "Sarmiento",
+          "tipo": "calle",
+          "identidad": "1868-1874",
+          "curiosidad": "Domingo Faustino Sarmiento, impulsor de la educación pública."
+        },
+        {
+          "id": "presidente nicolas avellaneda|barrio",
+          "nombre": "Presidente Nicolás Avellaneda",
+          "tipo": "barrio",
+          "identidad": "1874-1880",
+          "curiosidad": "Presidente entre 1874 y 1880."
+        },
+        {
+          "id": "presidente julio a roca|parque",
+          "nombre": "Presidente Julio A. Roca",
+          "tipo": "parque",
+          "identidad": "1880-1886 / 1898-1904",
+          "curiosidad": "Presidente en dos períodos. Sobre la Diagonal Sur."
+        },
+        {
+          "id": "carlos pellegrini|calle",
+          "nombre": "Carlos Pellegrini",
+          "tipo": "calle",
+          "identidad": "1890-1892",
+          "curiosidad": "Asumió tras la renuncia de Juárez Celman."
+        },
+        {
+          "id": "presidente luis saenz pena|calle",
+          "nombre": "Presidente Luis Sáenz Peña",
+          "tipo": "calle",
+          "identidad": "1892-1895",
+          "curiosidad": "Ejerció la presidencia entre 1892 y 1895."
+        },
+        {
+          "id": "presidente jose evaristo uriburu|calle",
+          "nombre": "Presidente José Evaristo Uriburu",
+          "tipo": "calle",
+          "identidad": "1895-1898",
+          "curiosidad": "Mandatario entre 1895 y 1898."
+        },
+        {
+          "id": "presidente quintana|avenida",
+          "nombre": "Presidente Quintana",
+          "tipo": "avenida",
+          "identidad": "1904-1906",
+          "curiosidad": "Falleció en el ejercicio del cargo."
+        },
+        {
+          "id": "presidente figueroa alcorta|avenida",
+          "nombre": "Presidente Figueroa Alcorta",
+          "tipo": "avenida",
+          "identidad": "1906-1910",
+          "curiosidad": "Completó el mandato tras la muerte de Quintana."
+        },
+        {
+          "id": "diagonal norte presidente roque saenz pena|avenida",
+          "nombre": "Diagonal Norte Presidente Roque Sáenz Peña",
+          "tipo": "avenida",
+          "identidad": "1910-1914",
+          "curiosidad": "Autor de la ley de voto universal, secreto y obligatorio. Sobre la Diagonal Norte."
+        },
+        {
+          "id": "doctor victorino de la plaza|calle",
+          "nombre": "Doctor Victorino de la Plaza",
+          "tipo": "calle",
+          "identidad": "1914-1916",
+          "curiosidad": "Sucedió a Roque Sáenz Peña."
+        },
+        {
+          "id": "hipolito yrigoyen|calle",
+          "nombre": "Hipólito Yrigoyen",
+          "tipo": "calle",
+          "identidad": "1916-1922 / 1928-1930",
+          "curiosidad": "Primer presidente electo por voto secreto y obligatorio."
+        },
+        {
+          "id": "marcelo t de alvear|calle",
+          "nombre": "Marcelo T. de Alvear",
+          "tipo": "calle",
+          "identidad": "1922-1928",
+          "curiosidad": "Presidente de la Nación entre 1922 y 1928."
+        },
+        {
+          "id": "general agustin p justo|espacio verde",
+          "nombre": "General Agustín P. Justo",
+          "tipo": "espacio verde",
+          "identidad": "1932-1938",
+          "curiosidad": "Mandatario en el período 1932-1938."
+        },
+        {
+          "id": "presidente roberto m ortiz|calle",
+          "nombre": "Presidente Roberto M. Ortiz",
+          "tipo": "calle",
+          "identidad": "1938-1940",
+          "curiosidad": "Ejerció entre 1938 y 1940. Renunció por enfermedad."
+        },
+        {
+          "id": "presidente ramon s castillo|avenida",
+          "nombre": "Presidente Ramón S. Castillo",
+          "tipo": "avenida",
+          "identidad": "1940-1943",
+          "curiosidad": "Completó el mandato de Ortiz."
+        },
+        {
+          "id": "teniente general juan domingo peron|calle",
+          "nombre": "Teniente General Juan Domingo Perón",
+          "tipo": "calle",
+          "identidad": "1946-1955 / 1973-1974",
+          "curiosidad": "Tres veces presidente constitucional."
+        },
+        {
+          "id": "arturo frondizi|autopista",
+          "nombre": "Arturo Frondizi",
+          "tipo": "autopista",
+          "identidad": "1958-1962",
+          "curiosidad": "Mandatario constitucional desarrollista."
+        },
+        {
+          "id": "presidente doctor arturo umberto illia|autopista",
+          "nombre": "Presidente Doctor Arturo Umberto Illia",
+          "tipo": "autopista",
+          "identidad": "1963-1966",
+          "curiosidad": "Presidente constitucional."
+        },
+        {
+          "id": "presidente hector j campora|autopista",
+          "nombre": "Presidente Héctor J. Cámpora",
+          "tipo": "autopista",
+          "identidad": "1973",
+          "curiosidad": "Breve presidencia constitucional en 1973."
+        },
+        {
+          "id": "paseo del bajo raul alfonsin|autopista",
+          "nombre": "Paseo del Bajo Raúl Alfonsín",
+          "tipo": "autopista",
+          "identidad": "1983-1989",
+          "curiosidad": "Primer presidente del retorno definitivo de la democracia."
+        }
+      ]
+    }
+  ]
+}

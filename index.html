@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calleando CABA · Mapa interactivo</title>
 
+    <meta name="description" content="Mapa interactivo del callejero de Buenos Aires: calles, plazas y avenidas con la historia de a quién o qué homenajean. 2.964 odónimos con filtros por barrio, comuna y categoría." />
+    <meta name="theme-color" content="#1a73e8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="alternate icon" href="favicon.svg" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Calleando CABA — Mapa interactivo del callejero porteño" />
+    <meta property="og:description" content="Buscá cualquier calle, plaza o avenida de CABA y conocé a quién o qué homenajea. Con filtros por barrio, comuna y categoría." />
+    <meta property="og:image" content="favicon.svg" />
+    <meta property="og:site_name" content="Calleando CABA" />
+    <meta property="og:locale" content="es_AR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Calleando CABA — Mapa interactivo" />
+    <meta name="twitter:description" content="Mapa del callejero porteño con la historia de cada calle. 2.964 odónimos, filtros por barrio y categoría." />
+    <meta name="twitter:image" content="favicon.svg" />
+
     <!-- Leaflet (mapa) -->
     <link
         rel="stylesheet"
@@ -136,6 +155,16 @@
                 <h3>Distribución por categoría</h3>
                 <ul id="stats-categorias" class="stats-bars"></ul>
             </section>
+
+            <section class="stats-section">
+                <h3>¿Sabías que…?</h3>
+                <ul id="stats-curiosidades" class="curiosidades"></ul>
+            </section>
+
+            <section class="stats-section" id="curiosidades-secciones">
+                <!-- Las secciones temáticas (apodos, pioneras, literatura,
+                     cronológicos, presidentes) se renderizan dinámicamente -->
+            </section>
         </div>
     </div>
 
@@ -144,7 +173,78 @@
 
     <!-- Atribuciones y créditos discretos -->
     <div id="credits" class="credits">
-        <span>Datos: calleando.xlsx · Mapa base © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
+        <span>Datos: calleando.xlsx · Mapa base © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="#" id="about-link">Acerca de</a></span>
+    </div>
+
+    <!-- Modal "Acerca de" -->
+    <div id="about-modal" class="stats-modal" hidden>
+        <div class="stats-overlay" id="about-overlay"></div>
+        <div class="stats-panel" role="dialog" aria-labelledby="about-title">
+            <button class="stats-close" id="about-close" type="button" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                </svg>
+            </button>
+            <header class="stats-header">
+                <h2 id="about-title">Acerca de Calleando CABA</h2>
+                <p class="stats-summary">Mapa interactivo del callejero porteño con la historia de cada calle.</p>
+            </header>
+
+            <section class="stats-section">
+                <h3>¿Qué es?</h3>
+                <p class="about-parrafo">
+                    Calleando CABA es un mapa interactivo que reúne las
+                    <strong>2.964 calles, avenidas, plazas y demás odónimos</strong>
+                    de la Ciudad Autónoma de Buenos Aires, junto con la historia
+                    de a quién o qué homenajean. Buscá cualquier calle por su
+                    nombre o tema (por ejemplo "Malvinas" o "tango") y descubrí
+                    su origen.
+                </p>
+            </section>
+
+            <section class="stats-section">
+                <h3>Funciones</h3>
+                <ul class="about-lista">
+                    <li>Búsqueda con autocompletado por nombre o por palabras dentro de la historia.</li>
+                    <li>Filtros por barrio, comuna y categoría (Persona, Lugar, Fecha…).</li>
+                    <li>Overlay con las divisiones de los 48 barrios o 15 comunas.</li>
+                    <li>Calles dibujadas con el color de su categoría.</li>
+                    <li>Botón "calle al azar" para explorar.</li>
+                    <li>Tema claro / oscuro / Voyager (colorido).</li>
+                    <li>Estadísticas y curiosidades del callejero.</li>
+                </ul>
+            </section>
+
+            <section class="stats-section">
+                <h3>Fuentes</h3>
+                <ul class="about-lista">
+                    <li><strong>Datos del callejero</strong>: Excel propio (calleando.xlsx) con normalización y deduplicación por nombre + tipo.</li>
+                    <li><strong>Geometría de las calles</strong>: <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> via <a href="https://overpass-turbo.eu/" target="_blank" rel="noopener">Overpass API</a> y <a href="https://nominatim.org/" target="_blank" rel="noopener">Nominatim</a>.</li>
+                    <li><strong>Polígonos de barrios</strong>: Gobierno de la Ciudad de Buenos Aires (GeoJSON oficial).</li>
+                    <li><strong>Mapa base</strong>: <a href="https://carto.com/attributions" target="_blank" rel="noopener">CartoDB</a> (Voyager / Positron / Dark Matter).</li>
+                </ul>
+            </section>
+
+            <section class="stats-section">
+                <h3>Tecnología</h3>
+                <p class="about-parrafo">
+                    Sitio estático sin frameworks: HTML, CSS y JavaScript puros.
+                    Mapa con <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>.
+                    Pre-procesamiento de datos en Python.
+                    Hosting en <a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>.
+                </p>
+            </section>
+
+            <section class="stats-section">
+                <h3>Código</h3>
+                <p class="about-parrafo">
+                    Código abierto en
+                    <a href="https://github.com/simarisantiago-bot/calleando-caba" target="_blank" rel="noopener">GitHub</a>.
+                    Si encontrás un error en los datos o querés sugerir mejoras,
+                    abrí un issue en el repositorio.
+                </p>
+            </section>
+        </div>
     </div>
 
     <!-- Leaflet JS -->
