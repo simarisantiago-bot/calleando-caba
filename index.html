@@ -164,20 +164,44 @@
                 <h2 id="stats-title">Estadísticas del callejero de CABA</h2>
                 <p id="stats-summary" class="stats-summary"></p>
             </header>
-            <section class="stats-section">
-                <h3>Distribución por categoría</h3>
-                <ul id="stats-categorias" class="stats-bars"></ul>
-            </section>
 
-            <section class="stats-section">
-                <h3>¿Sabías que…?</h3>
-                <ul id="stats-curiosidades" class="curiosidades"></ul>
-            </section>
+            <!-- Pestañas: Estadísticas | Curiosidades -->
+            <nav class="stats-tabs" role="tablist">
+                <button
+                    type="button"
+                    class="stats-tab activa"
+                    role="tab"
+                    aria-selected="true"
+                    data-tab="estadisticas"
+                >Estadísticas</button>
+                <button
+                    type="button"
+                    class="stats-tab"
+                    role="tab"
+                    aria-selected="false"
+                    data-tab="curiosidades"
+                >Curiosidades</button>
+            </nav>
 
-            <section class="stats-section" id="curiosidades-secciones">
-                <!-- Las secciones temáticas (apodos, pioneras, literatura,
-                     cronológicos, presidentes) se renderizan dinámicamente -->
-            </section>
+            <!-- Panel: Estadísticas (se filtran por barrio/comuna si hay) -->
+            <div class="stats-tabpanel" data-panel="estadisticas">
+                <section class="stats-section">
+                    <h3>Distribución por categoría</h3>
+                    <ul id="stats-categorias" class="stats-bars"></ul>
+                </section>
+
+                <section class="stats-section">
+                    <h3>¿Sabías que…?</h3>
+                    <ul id="stats-curiosidades" class="curiosidades"></ul>
+                </section>
+            </div>
+
+            <!-- Panel: Curiosidades (curaduría editorial, no cambia por barrio) -->
+            <div class="stats-tabpanel" data-panel="curiosidades" hidden>
+                <section class="stats-section" id="curiosidades-secciones">
+                    <!-- Las 5 secciones temáticas se renderizan dinámicamente -->
+                </section>
+            </div>
         </div>
     </div>
 

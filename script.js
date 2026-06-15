@@ -89,6 +89,7 @@
     const $statsClose = document.getElementById("stats-close");
     const $statsOverlay = document.getElementById("stats-overlay");
     const $statsSummary = document.getElementById("stats-summary");
+    const $statsTitle = document.getElementById("stats-title");
     const $statsCategorias = document.getElementById("stats-categorias");
     const $statsCuriosidades = document.getElementById("stats-curiosidades");
     const $curiosidadesSecciones = document.getElementById("curiosidades-secciones");
@@ -1249,11 +1250,7 @@
     }
 
     function construirPopup(entrada) {
-        const partes = [
-            entrada.tipo,
-            entrada.barrio && `barrio: ${entrada.barrio}`,
-        ].filter(Boolean);
-        const subtitulo = partes.join(" · ");
+        const subtitulo = (entrada.tipo || "").trim();
         const color = colorParaEntrada(entrada);
         const cat = (entrada.categoria || "").trim();
 
@@ -1282,6 +1279,22 @@
         if (!$statsModal) return;
         construirEstadisticas();
         $statsModal.hidden = false;
+        // Volver siempre a la pestaña Estadísticas al abrir
+        cambiarTabEstadisticas("estadisticas");
+    }
+
+    function cambiarTabEstadisticas(tab) {
+        const tabs = $statsModal && $statsModal.querySelectorAll(".stats-tab");
+        const paneles = $statsModal && $statsModal.querySelectorAll(".stats-tabpanel");
+        if (!tabs || !paneles) return;
+        tabs.forEach((b) => {
+            const activa = b.dataset.tab === tab;
+            b.classList.toggle("activa", activa);
+            b.setAttribute("aria-selected", activa ? "true" : "false");
+        });
+        paneles.forEach((p) => {
+            p.hidden = p.dataset.panel !== tab;
+        });
     }
 
     function cerrarEstadisticas() {
@@ -1295,14 +1308,15 @@
      * em-dash (–), interrogantes y prefijos como ?o c.
      * Devuelve {topAnio, totalConFecha, decadas: Map}.
      */
-    function calcularAniosNacimiento() {
+    function calcularAniosNacimiento(subset) {
         // Captura: "(1791-1850)", "(c. 1791-?)", "(?1791?-?)", "(1791–1850)"
         const patron = /\(\s*[^\d]?(\d{4})[^\d]?\s*[-–]\s*[^\d]?(\d{4})?[^\d]?\s*\)/;
         const years = new Map();
         const decadas = new Map();
         let totalConFecha = 0;
+        const fuente = Array.isArray(subset) ? subset : calles;
 
-        for (const c of calles) {
+        for (const c of fuente) {
             const cat = (c.categoria || "").trim().toUpperCase();
             if (cat !== "PERSONA") continue;
             if (!c.descripcion) continue;
@@ -1333,46 +1347,50 @@
      * Datos calculados en vivo desde calles.json para que reflejen siempre
      * el estado actual.
      */
-    function dibujarCuriosidades() {
+    function dibujarCuriosidades(subset, ambito) {
         if (!$statsCuriosidades) return;
+        const fuente = Array.isArray(subset) ? subset : calles;
+        const lugar = ambito && ambito !== "CABA" ? ambito : null;
         const items = [];
 
         // === Año de nacimiento más común ===
-        const { topAnio, topCount, decadas } = calcularAniosNacimiento();
-        if (topAnio) {
+        const { topAnio, topCount, decadas } = calcularAniosNacimiento(fuente);
+        if (topAnio && topCount >= 2) {
             items.push(
-                `El año de nacimiento con más homenajeados es <strong>${topAnio}</strong>, ` +
-                `con <strong>${topCount}</strong> personas.`
+                `El año de nacimiento con más homenajeados${lugar ? ` en ${lugar}` : ""} es ` +
+                `<strong>${topAnio}</strong>, con <strong>${topCount}</strong> personas.`
             );
         }
 
         // === Década más común ===
         if (decadas && decadas.size > 0) {
             const [d, n] = [...decadas.entries()].sort((a, b) => b[1] - a[1])[0];
-            items.push(
-                `La década con más nacimientos de homenajeados es la de <strong>${d}s</strong>, ` +
-                `con <strong>${n}</strong> personas — la generación de la Revolución de Mayo.`
-            );
+            if (n >= 3) {
+                items.push(
+                    `La década con más nacimientos de homenajeados${lugar ? ` en ${lugar}` : ""} ` +
+                    `es la de <strong>${d}s</strong>, con <strong>${n}</strong> personas.`
+                );
+            }
         }
 
         // === Personas / cosas presentes en varios tipos de odónimo ===
         const porClave = new Map();
-        for (const c of calles) {
+        for (const c of fuente) {
             if (!porClave.has(c.clave)) porClave.set(c.clave, new Set());
             porClave.get(c.clave).add(c.tipo);
         }
         const multi = [...porClave.entries()]
             .filter(([, t]) => t.size >= 3)
             .map(([clave, tipos]) => {
-                const ent = calles.find((c) => c.clave === clave);
+                const ent = fuente.find((c) => c.clave === clave);
                 return { nombre: ent ? ent.nombre_busqueda : clave, tipos: [...tipos] };
             });
         if (multi.length > 0) {
             const ejemplo = multi[Math.floor(Math.random() * multi.length)];
             items.push(
                 `Hay <strong>${multi.length}</strong> personas o lugares con tres tipos distintos ` +
-                `de odónimo. Por ejemplo, <strong>${escapeHtml(ejemplo.nombre)}</strong> es ` +
-                `${ejemplo.tipos.join(", ")}.`
+                `de odónimo${lugar ? ` en ${lugar}` : ""}. Por ejemplo, ` +
+                `<strong>${escapeHtml(ejemplo.nombre)}</strong> es ${ejemplo.tipos.join(", ")}.`
             );
         }
 
@@ -1382,7 +1400,7 @@
             "san", "santo", "santa", "don", "dona",
         ]);
         const apellidos = new Map();
-        for (const c of calles) {
+        for (const c of fuente) {
             if ((c.categoria || "").trim().toUpperCase() !== "PERSONA") continue;
             const palabras = (c.nombre_busqueda || "").split(/\s+/);
             if (palabras.length === 0) continue;
@@ -1390,17 +1408,19 @@
             if (preps.has(ultima) || /^\d/.test(ultima)) continue;
             apellidos.set(ultima, (apellidos.get(ultima) || 0) + 1);
         }
-        const apellidosTop = [...apellidos.entries()].sort((a, b) => b[1] - a[1]);
+        const apellidosTop = [...apellidos.entries()]
+            .filter(([, n]) => n >= 2)
+            .sort((a, b) => b[1] - a[1]);
         if (apellidosTop.length >= 3) {
             const top3 = apellidosTop.slice(0, 3)
                 .map(([a, n]) => `<strong>${a.charAt(0).toUpperCase() + a.slice(1)}</strong> (${n})`)
                 .join(", ");
-            items.push(`Los apellidos más recurrentes del callejero son ${top3}.`);
+            items.push(`Los apellidos más recurrentes${lugar ? ` en ${lugar}` : " del callejero"} son ${top3}.`);
         }
 
         // === Tipo de odónimo más común ===
         const tipos = new Map();
-        for (const c of calles) {
+        for (const c of fuente) {
             const t = (c.tipo || "").trim();
             if (t) tipos.set(t, (tipos.get(t) || 0) + 1);
         }
@@ -1408,23 +1428,23 @@
         if (tiposTop.length > 0) {
             const [t, n] = tiposTop[0];
             items.push(
-                `El tipo de odónimo más frecuente son las <strong>${t}s</strong>, ` +
-                `con <strong>${n.toLocaleString("es-AR")}</strong> entradas.`
+                `El tipo de odónimo más frecuente${lugar ? ` en ${lugar}` : ""} son las ` +
+                `<strong>${t}s</strong>, con <strong>${n.toLocaleString("es-AR")}</strong> entradas.`
             );
         }
 
         // === Categoría más rara ===
         const cats = new Map();
-        for (const c of calles) {
+        for (const c of fuente) {
             const cat = (c.categoria || "").trim().toUpperCase();
             if (cat) cats.set(cat, (cats.get(cat) || 0) + 1);
         }
         const catsTop = [...cats.entries()].sort((a, b) => a[1] - b[1]);
-        if (catsTop.length > 0) {
+        if (catsTop.length > 0 && fuente.length >= 30) {
             const [cat, n] = catsTop[0];
             items.push(
-                `La categoría con menos entradas es <strong>${cat.toLowerCase()}</strong>, ` +
-                `con solo <strong>${n}</strong> odónimos.`
+                `La categoría con menos entradas${lugar ? ` en ${lugar}` : ""} es ` +
+                `<strong>${cat.toLowerCase()}</strong>, con solo <strong>${n}</strong> odónimos.`
             );
         }
 
@@ -1496,26 +1516,68 @@
         }
     }
 
+    /**
+     * Subconjunto de `calles` que aplica según el filtro de barrio activo.
+     * - Sin filtro: devuelve `calles` completo.
+     * - Barrio individual (string): solo calles de ese barrio.
+     * - Comuna (Set): solo calles cuyo barrio está en el Set.
+     */
+    function callesActivasParaStats() {
+        if (!barrioActivo) return calles;
+        if (typeof barrioActivo === "string") {
+            return calles.filter((c) => c.barrio === barrioActivo);
+        }
+        if (barrioActivo instanceof Set) {
+            return calles.filter((c) => barrioActivo.has(c.barrio));
+        }
+        return calles;
+    }
+
+    /** Etiqueta amigable del ámbito activo: "CABA", "Palermo", "Comuna 1" */
+    function etiquetaAmbito() {
+        if (!barrioActivo) return "CABA";
+        if (typeof barrioActivo === "string") return barrioActivo;
+        // Set de barrios = comuna. Identificamos el número buscándolo.
+        if (comunasGeo) {
+            const match = comunasGeo.features.find((f) =>
+                f.properties.barrios && barrioActivo.has(f.properties.barrios[0])
+            );
+            if (match) return match.properties.nombre;
+        }
+        return "selección";
+    }
+
     function construirEstadisticas() {
         if (!Array.isArray(calles) || calles.length === 0) return;
 
-        const total = calles.length;
+        const sub = callesActivasParaStats();
+        const ambito = etiquetaAmbito();
+        const total = sub.length;
+
+        // Título dinámico
+        if ($statsTitle) {
+            $statsTitle.textContent = ambito === "CABA"
+                ? "Estadísticas del callejero de CABA"
+                : `Estadísticas — ${ambito}`;
+        }
+
         const counts = new Map();
-        for (const c of calles) {
+        for (const c of sub) {
             const cat = (c.categoria || "").trim().toUpperCase() || "(SIN CATEGORÍA)";
             counts.set(cat, (counts.get(cat) || 0) + 1);
         }
 
         // Cuántas tienen geometría cacheada
-        const cacheadas = calles.reduce((n, c) => {
+        const cacheadas = sub.reduce((n, c) => {
             const k = c.id || c.clave;
             return geoCache[k] ? n + 1 : n;
         }, 0);
 
         if ($statsSummary) {
-            const pctCache = ((cacheadas / total) * 100).toFixed(1);
+            const pctCache = total > 0 ? ((cacheadas / total) * 100).toFixed(1) : "0";
+            const lugar = ambito === "CABA" ? "el callejero" : ambito;
             $statsSummary.textContent =
-                `${total.toLocaleString("es-AR")} odónimos en el callejero · ` +
+                `${total.toLocaleString("es-AR")} odónimos en ${lugar} · ` +
                 `${cacheadas.toLocaleString("es-AR")} con ubicación en el mapa (${pctCache}%)`;
         }
 
@@ -1525,12 +1587,10 @@
         if (!$statsCategorias) return;
         $statsCategorias.innerHTML = "";
         for (const [cat, n] of ordenadas) {
-            const pct = (n / total) * 100;
+            const pct = total > 0 ? (n / total) * 100 : 0;
             const color = COLORES_CATEGORIA[cat] || "#6b7280";
             const li = document.createElement("li");
             li.className = "stats-bar";
-            // El track ocupa el 100% del ancho disponible (representa el total).
-            // El fill marca el porcentaje correspondiente, en un tono más oscuro.
             li.innerHTML = `
                 <span class="stats-bar-label" style="color: ${color};">${escapeHtml(cat.toLowerCase())}</span>
                 <span class="stats-bar-track" style="background-color: ${color}40;">
@@ -1541,10 +1601,10 @@
             $statsCategorias.appendChild(li);
         }
 
-        // Sección "¿Sabías que…?"
-        dibujarCuriosidades();
+        // Sección "¿Sabías que…?" recibe el subset filtrado
+        dibujarCuriosidades(sub, ambito);
 
-        // Secciones temáticas de curiosidades (cargadas desde curiosidades.json)
+        // Secciones temáticas se mantienen globales (son curaduría editorial)
         dibujarSeccionesCuriosidades();
     }
 
@@ -1667,6 +1727,14 @@
         }
         if ($statsOverlay) {
             $statsOverlay.addEventListener("click", cerrarEstadisticas);
+        }
+        // Click en las pestañas del modal de estadísticas
+        if ($statsModal) {
+            $statsModal.addEventListener("click", (e) => {
+                const btn = e.target.closest(".stats-tab");
+                if (!btn || !btn.dataset.tab) return;
+                cambiarTabEstadisticas(btn.dataset.tab);
+            });
         }
 
         // Modal "Acerca de"
