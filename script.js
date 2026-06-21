@@ -93,7 +93,7 @@
     const $statsCategorias = document.getElementById("stats-categorias");
     const $statsCuriosidades = document.getElementById("stats-curiosidades");
     const $curiosidadesSecciones = document.getElementById("curiosidades-secciones");
-    const $aboutLink = document.getElementById("about-link");
+    const $aboutBtn = document.getElementById("about-btn");
     const $aboutModal = document.getElementById("about-modal");
     const $aboutClose = document.getElementById("about-close");
     const $aboutOverlay = document.getElementById("about-overlay");
@@ -1738,8 +1738,8 @@
         }
 
         // Modal "Acerca de"
-        if ($aboutLink) {
-            $aboutLink.addEventListener("click", (e) => {
+        if ($aboutBtn) {
+            $aboutBtn.addEventListener("click", (e) => {
                 e.preventDefault();
                 if ($aboutModal) $aboutModal.hidden = false;
             });

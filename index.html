@@ -210,8 +210,21 @@
 
     <!-- Atribuciones y créditos discretos -->
     <div id="credits" class="credits">
-        <span>Datos: calleando.xlsx · Mapa base © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="#" id="about-link">Acerca de</a></span>
+        <span>Datos: calleando.xlsx · Mapa base © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
     </div>
+
+    <!-- Botón "Acerca de" en la esquina inferior derecha -->
+    <button
+        id="about-btn"
+        class="about-btn"
+        type="button"
+        aria-label="Acerca de Calleando CABA"
+        title="Acerca de"
+    >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+    </button>
 
     <!-- Modal "Acerca de" -->
     <div id="about-modal" class="stats-modal" hidden>

@@ -576,6 +576,42 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     fill: currentColor;
 }
 
+/* -------- Botón "Acerca de" abajo a la derecha -------- */
+.about-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, box-shadow 0.15s;
+    padding: 0;
+    color: #1a73e8;
+}
+
+.about-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.16),
+        0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.about-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
 /* -------- Modal de estadísticas -------- */
 .stats-modal {
     position: fixed;
