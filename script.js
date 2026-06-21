@@ -100,7 +100,6 @@
     const $btnLimpiar = document.getElementById("clear-btn");
     const $suggestions = document.getElementById("suggestions");
     const $toast = document.getElementById("status-toast");
-    const $barrioSelect = document.getElementById("barrio-select");
     const $categoriaSelect = document.getElementById("categoria-select");
 
     // =================================================================
@@ -307,45 +306,7 @@
             c.barrio = calleBarrios[c.clave] || null;
         }
 
-        poblarDropdownBarrios();
         poblarDropdownCategorias();
-    }
-
-    function poblarDropdownBarrios() {
-        // Separador después de las opciones de overlay
-        if (barriosGeo) {
-            const sepBarrios = document.createElement("option");
-            sepBarrios.disabled = true;
-            sepBarrios.textContent = "── Barrios ──";
-            $barrioSelect.appendChild(sepBarrios);
-
-            const nombres = barriosGeo.features
-                .map((f) => f.properties.nombre)
-                .sort((a, b) => a.localeCompare(b, "es"));
-            for (const n of nombres) {
-                const opt = document.createElement("option");
-                opt.value = `barrio:${n}`;
-                opt.textContent = n;
-                $barrioSelect.appendChild(opt);
-            }
-        }
-        // Comunas al final
-        if (comunasGeo) {
-            const sepComunas = document.createElement("option");
-            sepComunas.disabled = true;
-            sepComunas.textContent = "── Comunas ──";
-            $barrioSelect.appendChild(sepComunas);
-
-            const comunas = comunasGeo.features
-                .slice()
-                .sort((a, b) => a.properties.comuna - b.properties.comuna);
-            for (const c of comunas) {
-                const opt = document.createElement("option");
-                opt.value = `comuna:${c.properties.comuna}`;
-                opt.textContent = c.properties.nombre;
-                $barrioSelect.appendChild(opt);
-            }
-        }
     }
 
     // =================================================================
@@ -1054,7 +1015,6 @@
                 });
                 layer.on("click", () => {
                     const valor = onClickValor(feature);
-                    $barrioSelect.value = valor;
                     aplicarFiltroBarrio(valor);
                 });
             },
@@ -1109,11 +1069,6 @@
         const isOverlay = valor === "__overlay_barrios__" || valor === "__overlay_comunas__";
         const isBarrio = valor && valor.startsWith("barrio:");
         const isComuna = valor && valor.startsWith("comuna:");
-
-        $barrioSelect.classList.toggle(
-            "active-filter",
-            !!valor && valor !== ""
-        );
 
         // Vista general
         if (!valor) {
@@ -1698,16 +1653,6 @@
             if ($input.value.length >= 2) {
                 const sugerencias = buscarSugerencias($input.value);
                 renderSugerencias(sugerencias);
-            }
-        });
-
-        // Filtro por barrio
-        $barrioSelect.addEventListener("change", (e) => {
-            aplicarFiltroBarrio(e.target.value);
-            // Si hay categoría activa, redibujarla con el nuevo filtro de barrio aplicado
-            if (categoriaActiva) {
-                dibujarHeatmapBarrios();
-                dibujarOverlayCategoria();
             }
         });
 
