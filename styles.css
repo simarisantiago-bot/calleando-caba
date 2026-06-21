@@ -576,11 +576,11 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     fill: currentColor;
 }
 
-/* -------- Botón "Acerca de" abajo a la derecha -------- */
+/* -------- Botón "Acerca de" abajo a la izquierda -------- */
 .about-btn {
     position: absolute;
     bottom: 16px;
-    right: 16px;
+    left: 16px;
     z-index: 1000;
     width: 44px;
     height: 44px;
