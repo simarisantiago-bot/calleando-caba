@@ -632,10 +632,11 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
 }
 
 .stats-header h2 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    color: #202124;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a73e8;
+    letter-spacing: -0.3px;
 }
 
 .stats-summary {
@@ -695,13 +696,49 @@ body.tema-oscuro .stats-tab.activa {
     border-bottom-color: #8ab4f8;
 }
 
+.stats-section {
+    margin-bottom: 24px;
+}
+
 .stats-section h3 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #5f6368;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a73e8;
     margin-bottom: 14px;
+    text-transform: none;
+    letter-spacing: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f4ff;
+}
+
+.about-parrafo {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202124;
+    margin-bottom: 12px;
+}
+
+.about-lista {
+    list-style: none;
+    margin: 12px 0;
+    padding: 0;
+}
+
+.about-lista li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202124;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-lista li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #1a73e8;
+    font-weight: 600;
 }
 
 .stats-bars {
