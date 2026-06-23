@@ -525,7 +525,7 @@
         }
 
         capaCategoria = L.layerGroup(elementos).addTo(mapa);
-        mostrarToast(`${cantidadCalles} calles de "${categoriaActiva.toLowerCase()}"`, 2500);
+        mostrarToast(`${cantidadCalles} odónimos de "${categoriaActiva.toLowerCase()}"`, 2500);
 
         // Ajustar la vista para que se vean todos los elementos
         const group = L.featureGroup(elementos);
