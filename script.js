@@ -1057,8 +1057,8 @@
                 color: "#1a73e8",
                 weight: 3,
                 opacity: 1,
-                fillColor: "#1a73e8",
-                fillOpacity: 0.08,
+                fillColor: "transparent",
+                fillOpacity: 0,
             },
             interactive: false,
         }).addTo(mapa);
