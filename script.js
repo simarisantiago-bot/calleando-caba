@@ -1054,9 +1054,10 @@
         const capa = L.geoJSON(feature, {
             style: {
                 color: "#1a73e8",
-                weight: 3,
-                opacity: 1,
-                fillColor: "transparent",
+                weight: 2,
+                opacity: 0.7,
+                dashArray: "5, 3",
+                fillColor: "none",
                 fillOpacity: 0,
             },
             interactive: false,
@@ -1094,6 +1095,7 @@
 
     function aplicarFiltroBarrio(valor) {
         quitarOverlays();
+        limpiarCapa();
         if (capaCategoria) {
             mapa.removeLayer(capaCategoria);
             capaCategoria = null;
