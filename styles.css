@@ -136,8 +136,8 @@ html, body {
 /* -------- Botón de cambio de tema del mapa -------- */
 .theme-toggle {
     position: absolute;
-    bottom: 170px;
-    right: 60px;
+    bottom: 124px;
+    right: 16px;
     z-index: 1000;
 }
 
@@ -280,8 +280,8 @@ body.tema-oscuro .credits {
 /* -------- Botón "Cerca mío" (geolocalización) -------- */
 .nearme-btn {
     position: absolute;
-    bottom: 224px;
-    right: 60px;
+    bottom: 178px;
+    right: 16px;
     z-index: 1000;
     width: 44px;
     height: 44px;
@@ -335,8 +335,8 @@ body.tema-oscuro .nearme-btn svg {
 /* -------- Botón "calle al azar" (arriba del filtro de barrios) -------- */
 .random-btn {
     position: absolute;
-    bottom: 116px;
-    right: 60px;
+    bottom: 70px;
+    right: 16px;
     z-index: 1000;
     width: 44px;
     height: 44px;
@@ -1258,8 +1258,8 @@ body.tema-oscuro .stats-btn {
     }
 
     .random-btn {
-        bottom: 100px;
-        right: 56px;
+        bottom: 70px;
+        right: 12px;
         width: 40px;
         height: 40px;
     }
@@ -1270,8 +1270,8 @@ body.tema-oscuro .stats-btn {
     }
 
     .nearme-btn {
-        bottom: 196px;
-        right: 56px;
+        bottom: 124px;
+        right: 12px;
         width: 40px;
         height: 40px;
     }
@@ -1282,8 +1282,8 @@ body.tema-oscuro .stats-btn {
     }
 
     .theme-toggle {
-        bottom: 148px;
-        right: 56px;
+        bottom: 178px;
+        right: 12px;
     }
 
     .theme-toggle-btn {
