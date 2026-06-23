@@ -1031,18 +1031,20 @@
         const capa = L.geoJSON(feature, {
             style: {
                 color: "#1a73e8",
-                weight: 2.5,
-                opacity: 0.9,
+                weight: 3,
+                opacity: 1,
                 fillColor: "#1a73e8",
-                fillOpacity: 0.08,
-                dashArray: "6 4",
+                fillOpacity: 0.1,
             },
             interactive: false,
         }).addTo(mapa);
-        mapa.flyToBounds(capa.getBounds(), {
-            padding: [40, 40],
+
+        const bounds = capa.getBounds();
+        const center = bounds.getCenter();
+        const zoom = Math.min(maxZoom, mapa.getBoundsZoom(bounds, false, [50, 50]));
+
+        mapa.flyTo(center, zoom, {
             duration: 0.7,
-            maxZoom,
         });
         return capa;
     }
