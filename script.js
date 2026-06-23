@@ -1058,14 +1058,27 @@
                 weight: 3,
                 opacity: 1,
                 fillColor: "#1a73e8",
-                fillOpacity: 0.1,
+                fillOpacity: 0.08,
             },
             interactive: false,
         }).addTo(mapa);
 
         const bounds = capa.getBounds();
         const center = bounds.getCenter();
-        const zoom = Math.min(maxZoom, mapa.getBoundsZoom(bounds, false, [50, 50]));
+
+        // Calcular zoom basado en el área del bounds
+        const latDiff = bounds.getNorth() - bounds.getSouth();
+        const lngDiff = bounds.getEast() - bounds.getWest();
+        const maxDiff = Math.max(latDiff, lngDiff);
+
+        let zoom = 13;
+        if (maxDiff < 0.02) zoom = 16;
+        else if (maxDiff < 0.05) zoom = 15;
+        else if (maxDiff < 0.1) zoom = 14;
+        else if (maxDiff < 0.2) zoom = 13;
+        else zoom = 12;
+
+        zoom = Math.min(zoom, maxZoom);
 
         mapa.flyTo(center, zoom, {
             duration: 0.7,
