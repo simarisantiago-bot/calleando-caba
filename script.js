@@ -1043,10 +1043,9 @@
                 });
             },
         }).addTo(mapa);
-        mapa.flyToBounds(capa.getBounds(), {
-            padding: [20, 20],
+        const bounds = capa.getBounds();
+        mapa.flyTo(bounds.getCenter(), 12, {
             duration: 0.6,
-            maxZoom: 13,
         });
         return capa;
     }
