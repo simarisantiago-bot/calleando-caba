@@ -454,57 +454,81 @@
     }
 
     /**
-     * Dibuja en el mapa un punto chico por cada calle CACHEADA de la
+     * Dibuja en el mapa el trazado completo de cada calle CACHEADA de la
      * categoría activa (combinado con filtro de barrio/comuna si hay).
-     * Permite ver de un vistazo dónde se concentran las calles del Excel.
+     * Dibuja líneas para calles y puntos para plazas/espacios.
      */
     function dibujarOverlayCategoria() {
-        const puntos = [];
+        const elementos = [];
+        let cantidadCalles = 0;
+
         for (const c of calles) {
             if (!entradaCoincideFiltro(c)) continue;
             const key = c.id || c.clave;
             const geo = geoCache[key];
             if (!geo) continue;
 
-            // Para línea: usar el centro del bbox
-            // Para punto: el center
-            let latlng;
-            if (geo.tipo === "point" && geo.center) {
-                latlng = [geo.center[0], geo.center[1]];
-            } else if (geo.bbox && geo.bbox.length === 4) {
-                const [latMin, latMax, lonMin, lonMax] = geo.bbox.map(parseFloat);
-                latlng = [(latMin + latMax) / 2, (lonMin + lonMax) / 2];
-            } else {
-                continue;
-            }
-
             const color = colorParaEntrada(c);
-            const marker = L.circleMarker(latlng, {
-                radius: 4,
-                color: color,
-                weight: 1.5,
-                fillColor: color,
-                fillOpacity: 0.6,
-            });
-            marker.bindTooltip(c.nombre_busqueda, {
-                direction: "top",
-                offset: [0, -4],
-                className: "barrio-tooltip",
-            });
-            marker.on("click", () => seleccionarEntrada(c));
-            puntos.push(marker);
+
+            // Dibujar línea completa para calles/avenidas/pasajes
+            if (geo.tipo === "line" && geo.geometry) {
+                const lineLayer = L.geoJSON(geo.geometry, {
+                    style: {
+                        color: color,
+                        weight: 2.5,
+                        opacity: 0.8,
+                        lineCap: "round",
+                        lineJoin: "round",
+                    },
+                });
+                lineLayer.bindTooltip(c.nombre_busqueda, {
+                    permanent: false,
+                    direction: "top",
+                    className: "barrio-tooltip",
+                });
+                lineLayer.on("click", () => seleccionarEntrada(c));
+                elementos.push(lineLayer);
+                cantidadCalles++;
+            } else {
+                // Para puntos (plazas, espacios verdes): marcador circular
+                let latlng;
+                if (geo.geometry && geo.geometry.type === "Point") {
+                    latlng = [geo.geometry.coordinates[1], geo.geometry.coordinates[0]];
+                } else if (geo.bbox && geo.bbox.length === 4) {
+                    const [latMin, latMax, lonMin, lonMax] = geo.bbox.map(parseFloat);
+                    latlng = [(latMin + latMax) / 2, (lonMin + lonMax) / 2];
+                } else {
+                    continue;
+                }
+
+                const marker = L.circleMarker(latlng, {
+                    radius: 5,
+                    color: color,
+                    weight: 2,
+                    fillColor: color,
+                    fillOpacity: 0.7,
+                });
+                marker.bindTooltip(c.nombre_busqueda, {
+                    direction: "top",
+                    offset: [0, -4],
+                    className: "barrio-tooltip",
+                });
+                marker.on("click", () => seleccionarEntrada(c));
+                elementos.push(marker);
+                cantidadCalles++;
+            }
         }
 
-        if (puntos.length === 0) {
+        if (elementos.length === 0) {
             mostrarToast("No hay calles cacheadas en esa categoría todavía.", 3000);
             return;
         }
 
-        capaCategoria = L.layerGroup(puntos).addTo(mapa);
-        mostrarToast(`${puntos.length} calles de "${categoriaActiva.toLowerCase()}"`, 2500);
+        capaCategoria = L.layerGroup(elementos).addTo(mapa);
+        mostrarToast(`${cantidadCalles} calles de "${categoriaActiva.toLowerCase()}"`, 2500);
 
-        // Ajustar la vista para que se vean todos los puntos
-        const group = L.featureGroup(puntos);
+        // Ajustar la vista para que se vean todos los elementos
+        const group = L.featureGroup(elementos);
         try {
             mapa.flyToBounds(group.getBounds(), {
                 padding: [40, 40],
