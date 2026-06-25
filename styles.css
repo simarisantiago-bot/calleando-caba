@@ -1175,6 +1175,18 @@ body.tema-oscuro .stats-btn {
     text-decoration: underline;
 }
 
+/* -------- Quitar el rectángulo de foco del navegador sobre los SVG -------- */
+/* Al hacer click en un barrio/comuna (un <path> SVG de Leaflet), el navegador
+   dibuja un outline rectangular alrededor del bounding box del elemento. Eso
+   se veía como una "bounding box" sobre el barrio. Lo eliminamos para que solo
+   quede el contorno real del polígono. */
+.leaflet-interactive:focus,
+.leaflet-container svg:focus,
+.leaflet-container svg path:focus,
+path.leaflet-interactive:focus {
+    outline: none !important;
+}
+
 /* -------- Popup elegante -------- */
 .leaflet-popup-content-wrapper {
     border-radius: 10px;
