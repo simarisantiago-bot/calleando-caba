@@ -1068,8 +1068,8 @@
                 weight: 3.5,
                 opacity: 0.95,
                 dashArray: "",
-                fillColor: "#1a73e8",
-                fillOpacity: 0.08,
+                fillColor: "none",
+                fillOpacity: 0,
             },
             interactive: false,
         }).addTo(mapa);
