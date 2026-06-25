@@ -421,13 +421,13 @@
         capaHeatmap = L.geoJSON(barriosGeo, {
             style: (feature) => {
                 const n = conteo.get(feature.properties.nombre) || 0;
-                // Opacidad relativa al máximo (mínimo 0.05 para que siempre se vea
-                // que el barrio existe, máximo 0.55 para que no tape demasiado el mapa).
-                const alpha = n === 0 ? 0.02 : 0.05 + (n / max) * 0.50;
+                // Opacidad muy baja: casi invisible de fondo, solo para contexto.
+                // El overlay de categoría (círculos/líneas) es lo principal.
+                const alpha = n === 0 ? 0.008 : 0.012 + (n / max) * 0.018;
                 return {
                     color: color,
-                    weight: 0.8,
-                    opacity: 0.5,
+                    weight: 0.4,
+                    opacity: 0.25,
                     fillColor: color,
                     fillOpacity: alpha,
                 };
