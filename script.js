@@ -60,14 +60,9 @@
     let calles = [];               // array cargado desde calles.json
     let geoCache = {};             // {clave: {tipo, geometry, bbox, ...}} pre-geocodificado
     let calleBarrios = {};         // {clave: nombreBarrio} mapping
-    let barriosGeo = null;         // FeatureCollection de los 48 barrios
-    let comunasGeo = null;         // FeatureCollection de las 15 comunas
+    let barriosGeo = null;         // FeatureCollection de los 48 barrios (heatmap)
     let curiosidades = null;       // datos de curiosidades.json (5 secciones temáticas)
-    let barrioActivo = "";         // filtro activo: "" = todos
     let categoriaActiva = "";      // filtro de categoría: "" = todas
-    let capaBarrio = null;         // overlay del contorno del barrio activo
-    let capaOverlayTodos = null;   // overlay con los 48 barrios simultáneos
-    let capaOverlayComunas = null; // overlay con las 15 comunas simultáneas
     let capaCategoria = null;      // overlay con todas las calles de la categoría
     let capaHeatmap = null;        // heatmap de barrios por densidad de categoría
     let capaCercaMio = null;       // overlay con las calles cercanas al usuario
@@ -239,12 +234,11 @@
     // =================================================================
 
     async function cargarDatos() {
-        // Carga en paralelo: dataset, cache geo, barrios, comunas, mapping y curiosidades.
-        const [respCalles, respCache, respBarrios, respComunas, respMap, respCuri] = await Promise.all([
+        // Carga en paralelo: dataset, cache geo, barrios (heatmap), mapping y curiosidades.
+        const [respCalles, respCache, respBarrios, respMap, respCuri] = await Promise.all([
             fetch("data/calles.json"),
             fetch("data/geo_cache.json").catch(() => null),
             fetch("data/barrios.geojson").catch(() => null),
-            fetch("data/comunas.geojson").catch(() => null),
             fetch("data/calle_barrios.json").catch(() => null),
             fetch("data/curiosidades.json").catch(() => null),
         ]);
@@ -282,12 +276,6 @@
                 console.log(`Barrios cargados: ${barriosGeo.features.length}`);
             } catch (_) { barriosGeo = null; }
         }
-        if (respComunas && respComunas.ok) {
-            try {
-                comunasGeo = await respComunas.json();
-                console.log(`Comunas cargadas: ${comunasGeo.features.length}`);
-            } catch (_) { comunasGeo = null; }
-        }
         if (respMap && respMap.ok) {
             try {
                 calleBarrios = await respMap.json();
@@ -314,16 +302,11 @@
     // =================================================================
 
     function entradaCoincideFiltro(entrada) {
-        // Filtro de categoría (combinable con el de barrio)
+        // Filtro de categoría activo
         if (categoriaActiva) {
             const cat = (entrada.categoria || "").trim().toUpperCase();
             if (cat !== categoriaActiva) return false;
         }
-        // barrioActivo puede ser: "" (sin filtro), un string (barrio único)
-        // o un Set (todos los barrios de una comuna).
-        if (!barrioActivo) return true;
-        if (typeof barrioActivo === "string") return entrada.barrio === barrioActivo;
-        if (barrioActivo instanceof Set) return barrioActivo.has(entrada.barrio);
         return true;
     }
 
@@ -1010,160 +993,6 @@
         popupActual = null;
     }
 
-    // =================================================================
-    // 7b. FILTRO POR BARRIO
-    // =================================================================
-
-    function quitarOverlays() {
-        for (const capa of [capaBarrio, capaOverlayTodos, capaOverlayComunas, capaCategoria, capaHeatmap]) {
-            if (capa) mapa.removeLayer(capa);
-        }
-        capaBarrio = null;
-        capaOverlayTodos = null;
-        capaOverlayComunas = null;
-        capaCategoria = null;
-        capaHeatmap = null;
-    }
-
-    /** Dibuja una FeatureCollection como overlay con tooltips y click->filtrar. */
-    function dibujarOverlay(featureCollection, onClickValor) {
-        const capa = L.geoJSON(featureCollection, {
-            style: {
-                color: "#1a73e8",
-                weight: 1.3,
-                opacity: 0.75,
-                fillColor: "#1a73e8",
-                fillOpacity: 0.05,
-            },
-            onEachFeature: (feature, layer) => {
-                const nombre = feature.properties.nombre;
-                layer.bindTooltip(nombre, {
-                    sticky: true,
-                    direction: "top",
-                    className: "barrio-tooltip",
-                });
-                layer.on("mouseover", () => {
-                    layer.setStyle({ weight: 2.8, fillOpacity: 0.18 });
-                });
-                layer.on("mouseout", () => {
-                    capa.resetStyle(layer);
-                });
-                layer.on("click", () => {
-                    const valor = onClickValor(feature);
-                    aplicarFiltroBarrio(valor);
-                });
-            },
-        }).addTo(mapa);
-        const bounds = capa.getBounds();
-        mapa.flyTo(bounds.getCenter(), 12, {
-            duration: 0.6,
-        });
-        return capa;
-    }
-
-    function dibujarContornoUnico(feature, maxZoom = 15) {
-        const capa = L.geoJSON(feature, {
-            style: {
-                color: "#1a73e8",
-                weight: 3.5,
-                opacity: 0.95,
-                dashArray: "",
-                fillColor: "none",
-                fillOpacity: 0,
-            },
-            interactive: false,
-        }).addTo(mapa);
-
-        const bounds = capa.getBounds();
-        const center = bounds.getCenter();
-
-        // Calcular zoom basado en el área del bounds
-        const latDiff = bounds.getNorth() - bounds.getSouth();
-        const lngDiff = bounds.getEast() - bounds.getWest();
-        const maxDiff = Math.max(latDiff, lngDiff);
-
-        let zoom = 13;
-        if (maxDiff < 0.02) zoom = 16;
-        else if (maxDiff < 0.05) zoom = 15;
-        else if (maxDiff < 0.1) zoom = 14;
-        else if (maxDiff < 0.2) zoom = 13;
-        else zoom = 12;
-
-        zoom = Math.min(zoom, maxZoom);
-
-        mapa.flyTo(center, zoom, {
-            duration: 0.7,
-        });
-        return capa;
-    }
-
-    /** Devuelve el conjunto de barrios pertenecientes a una comuna. */
-    function barriosDeComuna(numero) {
-        if (!comunasGeo) return new Set();
-        const f = comunasGeo.features.find((x) => x.properties.comuna === numero);
-        return new Set((f && f.properties.barrios) || []);
-    }
-
-    function aplicarFiltroBarrio(valor) {
-        quitarOverlays();
-        limpiarCapa();
-        barrioActivo = "";
-
-        const isOverlay = valor === "__overlay_barrios__" || valor === "__overlay_comunas__";
-        const isBarrio = valor && valor.startsWith("barrio:");
-        const isComuna = valor && valor.startsWith("comuna:");
-
-        // Vista general
-        if (!valor) {
-            mapa.flyTo(CABA_CENTER, 13, { duration: 0.6 });
-            return;
-        }
-
-        // Overlay: todos los barrios
-        if (valor === "__overlay_barrios__") {
-            capaOverlayTodos = dibujarOverlay(barriosGeo, (f) => `barrio:${f.properties.nombre}`);
-            return;
-        }
-
-        // Overlay: todas las comunas
-        if (valor === "__overlay_comunas__") {
-            capaOverlayComunas = dibujarOverlay(comunasGeo, (f) => `comuna:${f.properties.comuna}`);
-            return;
-        }
-
-        // Filtro por barrio individual
-        if (isBarrio) {
-            const nombre = valor.slice("barrio:".length);
-            const feature = barriosGeo && barriosGeo.features.find(
-                (f) => f.properties.nombre === nombre
-            );
-            if (!feature) return;
-            barrioActivo = nombre;
-            capaBarrio = dibujarContornoUnico(feature, 15);
-            if ($input.value.length >= 2) {
-                renderSugerencias(buscarSugerencias($input.value));
-            }
-            return;
-        }
-
-        // Filtro por comuna individual
-        if (isComuna) {
-            const numero = parseInt(valor.slice("comuna:".length), 10);
-            const feature = comunasGeo && comunasGeo.features.find(
-                (f) => f.properties.comuna === numero
-            );
-            if (!feature) return;
-            // Marcamos barrioActivo como un SET de barrios para que el filtro
-            // del autocomplete pueda usarlo.
-            barrioActivo = barriosDeComuna(numero);
-            capaBarrio = dibujarContornoUnico(feature, 14);
-            if ($input.value.length >= 2) {
-                renderSugerencias(buscarSugerencias($input.value));
-            }
-            return;
-        }
-    }
-
     function dibujarResultado(entrada, resultado) {
         const popupHtml = construirPopup(entrada);
         const color = colorParaEntrada(entrada);
@@ -1514,42 +1343,11 @@
         }
     }
 
-    /**
-     * Subconjunto de `calles` que aplica según el filtro de barrio activo.
-     * - Sin filtro: devuelve `calles` completo.
-     * - Barrio individual (string): solo calles de ese barrio.
-     * - Comuna (Set): solo calles cuyo barrio está en el Set.
-     */
-    function callesActivasParaStats() {
-        if (!barrioActivo) return calles;
-        if (typeof barrioActivo === "string") {
-            return calles.filter((c) => c.barrio === barrioActivo);
-        }
-        if (barrioActivo instanceof Set) {
-            return calles.filter((c) => barrioActivo.has(c.barrio));
-        }
-        return calles;
-    }
-
-    /** Etiqueta amigable del ámbito activo: "CABA", "Palermo", "Comuna 1" */
-    function etiquetaAmbito() {
-        if (!barrioActivo) return "CABA";
-        if (typeof barrioActivo === "string") return barrioActivo;
-        // Set de barrios = comuna. Identificamos el número buscándolo.
-        if (comunasGeo) {
-            const match = comunasGeo.features.find((f) =>
-                f.properties.barrios && barrioActivo.has(f.properties.barrios[0])
-            );
-            if (match) return match.properties.nombre;
-        }
-        return "selección";
-    }
-
     function construirEstadisticas() {
         if (!Array.isArray(calles) || calles.length === 0) return;
 
-        const sub = callesActivasParaStats();
-        const ambito = etiquetaAmbito();
+        const sub = calles;
+        const ambito = "CABA";
         const total = sub.length;
 
         // Título dinámico
