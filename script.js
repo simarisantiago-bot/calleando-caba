@@ -1006,12 +1006,14 @@
     // =================================================================
 
     function quitarOverlays() {
-        for (const capa of [capaBarrio, capaOverlayTodos, capaOverlayComunas]) {
+        for (const capa of [capaBarrio, capaOverlayTodos, capaOverlayComunas, capaCategoria, capaHeatmap]) {
             if (capa) mapa.removeLayer(capa);
         }
         capaBarrio = null;
         capaOverlayTodos = null;
         capaOverlayComunas = null;
+        capaCategoria = null;
+        capaHeatmap = null;
     }
 
     /** Dibuja una FeatureCollection como overlay con tooltips y click->filtrar. */
@@ -1054,11 +1056,11 @@
         const capa = L.geoJSON(feature, {
             style: {
                 color: "#1a73e8",
-                weight: 2,
-                opacity: 0.7,
-                dashArray: "5, 3",
-                fillColor: "none",
-                fillOpacity: 0,
+                weight: 3.5,
+                opacity: 0.95,
+                dashArray: "",
+                fillColor: "#1a73e8",
+                fillOpacity: 0.08,
             },
             interactive: false,
         }).addTo(mapa);
@@ -1096,14 +1098,6 @@
     function aplicarFiltroBarrio(valor) {
         quitarOverlays();
         limpiarCapa();
-        if (capaCategoria) {
-            mapa.removeLayer(capaCategoria);
-            capaCategoria = null;
-        }
-        if (capaHeatmap) {
-            mapa.removeLayer(capaHeatmap);
-            capaHeatmap = null;
-        }
         barrioActivo = "";
 
         const isOverlay = valor === "__overlay_barrios__" || valor === "__overlay_comunas__";
