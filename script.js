@@ -995,6 +995,15 @@
             mapa.removeLayer(capaActual);
             capaActual = null;
         }
+        // Limpiar categoría y heatmap cuando se selecciona una calle
+        if (capaCategoria) {
+            mapa.removeLayer(capaCategoria);
+            capaCategoria = null;
+        }
+        if (capaHeatmap) {
+            mapa.removeLayer(capaHeatmap);
+            capaHeatmap = null;
+        }
         // closePopup() sin argumentos cierra cualquier popup abierto; evita
         // pasarle un objeto que podría ser un marker (no un popup) y crashear.
         mapa.closePopup();
