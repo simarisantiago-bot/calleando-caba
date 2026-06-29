@@ -133,6 +133,123 @@
     }
 
     // =================================================================
+    // 1b. IMÁGENES DE WIKIPEDIA (pageimages) + cache en sessionStorage
+    // =================================================================
+    //
+    // Para no almacenar imágenes localmente, pedimos en vivo la imagen
+    // principal del artículo de Wikipedia que mejor matchea el nombre de
+    // la calle. La respuesta (URL del thumbnail + autor/licencia) se cachea
+    // por término en memoria y en sessionStorage para no repetir requests.
+
+    const WIKI_API = "https://es.wikipedia.org/w/api.php";
+    const WIKI_CACHE_KEY = "calleando_wikimg_v1";
+    const wikiMem = {}; // cache en memoria de la sesión
+
+    function leerWikiCache() {
+        try {
+            return JSON.parse(sessionStorage.getItem(WIKI_CACHE_KEY) || "{}");
+        } catch (_) {
+            return {};
+        }
+    }
+
+    function guardarWikiCache(key, data) {
+        wikiMem[key] = data;
+        try {
+            const c = leerWikiCache();
+            c[key] = data;
+            sessionStorage.setItem(WIKI_CACHE_KEY, JSON.stringify(c));
+        } catch (_) {
+            /* sessionStorage lleno o no disponible: seguimos solo en memoria */
+        }
+    }
+
+    // Convierte un fragmento HTML (como el campo Artist de Commons) en texto plano.
+    // Commons suele incluir texto oculto (display:none) que no queremos mostrar.
+    function quitarHtml(s) {
+        const tmp = document.createElement("div");
+        tmp.innerHTML = String(s || "");
+        tmp.querySelectorAll('[style*="display:none"], [style*="display: none"]')
+            .forEach((el) => el.remove());
+        return (tmp.textContent || tmp.innerText || "").replace(/\s+/g, " ").trim();
+    }
+
+    // Segunda llamada (best-effort): autor + licencia del archivo en Commons.
+    async function obtenerAtribucion(fileTitle) {
+        try {
+            const params = new URLSearchParams({
+                action: "query", format: "json", origin: "*",
+                prop: "imageinfo", iiprop: "extmetadata",
+                titles: "File:" + fileTitle,
+            });
+            const resp = await fetch(`${WIKI_API}?${params.toString()}`);
+            if (!resp.ok) return null;
+            const json = await resp.json();
+            const pages = (json && json.query && json.query.pages) || {};
+            const page = Object.values(pages)[0];
+            const meta = (page && page.imageinfo && page.imageinfo[0] &&
+                          page.imageinfo[0].extmetadata) || {};
+            return {
+                autor: meta.Artist ? quitarHtml(meta.Artist.value) : "",
+                licencia: meta.LicenseShortName ? quitarHtml(meta.LicenseShortName.value) : "",
+            };
+        } catch (_) {
+            return null;
+        }
+    }
+
+    // Busca la imagen principal de Wikipedia para un término de búsqueda.
+    // Devuelve {thumbUrl, pageUrl, titulo, autor, licencia} o null si no hay.
+    async function fetchStreetImage(searchTerm) {
+        const term = (searchTerm || "").trim();
+        if (!term) return null;
+        const key = term.toLowerCase();
+
+        // Cache: memoria -> sessionStorage (incluye misses para no repetir).
+        if (key in wikiMem) return wikiMem[key];
+        const disk = leerWikiCache();
+        if (key in disk) { wikiMem[key] = disk[key]; return disk[key]; }
+
+        try {
+            const params = new URLSearchParams({
+                action: "query", format: "json", origin: "*",
+                generator: "search", gsrsearch: term, gsrlimit: "1",
+                gsrnamespace: "0",
+                prop: "pageimages|info|pageprops", piprop: "thumbnail|name",
+                pithumbsize: "480", ppprop: "disambiguation", inprop: "url",
+            });
+            const resp = await fetch(`${WIKI_API}?${params.toString()}`);
+            if (!resp.ok) { guardarWikiCache(key, null); return null; }
+            const json = await resp.json();
+            const pages = json && json.query && json.query.pages;
+            const page = pages && Object.values(pages)[0];
+            const thumb = page && page.thumbnail && page.thumbnail.source;
+            // Páginas de desambiguación: no son la entidad buscada -> tratamos
+            // como miss para que el llamador pruebe el término de fallback.
+            const esDesambiguacion = page && page.pageprops &&
+                "disambiguation" in page.pageprops;
+            if (!thumb || esDesambiguacion) { guardarWikiCache(key, null); return null; }
+
+            const data = {
+                thumbUrl: thumb,
+                pageUrl: page.fullurl || `https://es.wikipedia.org/?curid=${page.pageid}`,
+                titulo: page.title || term,
+                autor: "",
+                licencia: "",
+            };
+            // Atribución (best-effort: si falla, mostramos igual con crédito genérico).
+            if (page.pageimage) {
+                const atr = await obtenerAtribucion(page.pageimage);
+                if (atr) { data.autor = atr.autor; data.licencia = atr.licencia; }
+            }
+            guardarWikiCache(key, data);
+            return data;
+        } catch (_) {
+            return null; // error de red: no cacheamos para poder reintentar
+        }
+    }
+
+    // =================================================================
     // 2. CACHE DE GEOCODING (localStorage)
     // =================================================================
 
@@ -994,7 +1111,8 @@
     }
 
     function dibujarResultado(entrada, resultado) {
-        const popupHtml = construirPopup(entrada);
+        const mediaId = "popup-media-" + (++mediaSeq);
+        const popupHtml = construirPopup(entrada, mediaId);
         const color = colorParaEntrada(entrada);
 
         if (resultado.tipo === "area") {
@@ -1074,9 +1192,14 @@
                 className: "calleando-popup",
             }).openPopup();
         }
+
+        // El popup ya está en el DOM: cargamos la imagen de Wikipedia de forma
+        // asíncrona. El contenedor tiene altura fija, así que mutamos su DOM sin
+        // tocar popup.update() (eso re-renderiza el string y borraría la imagen).
+        montarMediaPopup(mediaId, entrada);
     }
 
-    function construirPopup(entrada) {
+    function construirPopup(entrada, mediaId) {
         const subtitulo = (entrada.tipo || "").trim();
         const color = colorParaEntrada(entrada);
         const cat = (entrada.categoria || "").trim();
@@ -1086,12 +1209,159 @@
             ? `<span class="popup-cat" style="background-color: ${color}1a; color: ${color};">${escapeHtml(cat.toLowerCase())}</span>`
             : "";
 
+        // Contenedor de imagen con skeleton; se rellena en montarMediaPopup().
+        const media = mediaId
+            ? `<div class="popup-media" id="${mediaId}"><div class="popup-media-skeleton"></div></div>`
+            : "";
+
         return `
+            ${media}
             <div class="popup-title" style="color: ${color};">${escapeHtml(entrada.nombre_busqueda)}</div>
             ${subtitulo ? `<div class="popup-sub">${escapeHtml(subtitulo)}</div>` : ""}
             ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
         `;
+    }
+
+    // ---------- Imagen del popup (Wikipedia) ----------
+    let mediaSeq = 0;
+
+    // Ícono SVG genérico (pin de mapa) para el fallback, teñido con el color
+    // de la categoría vía la variable CSS --cat-color.
+    function iconoFallback() {
+        return `<svg viewBox="0 0 24 24" width="40" height="40" fill="none"
+            stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-7-6.6-7-11a7 7 0 0 1 14 0c0 4.4-7 11-7 11z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+        </svg>`;
+    }
+
+    function mostrarFallbackMedia(mediaId, color) {
+        const c = document.getElementById(mediaId);
+        if (!c) return;
+        c.classList.add("cargada", "es-fallback");
+        c.style.setProperty("--cat-color", color);
+        c.innerHTML = `<div class="popup-media-fallback">${iconoFallback()}</div>`;
+    }
+
+    function construirCredito(data) {
+        const partes = [];
+        // El campo Artist de Commons a veces es un párrafo entero; lo acotamos.
+        if (data.autor) {
+            const autor = data.autor.length > 55
+                ? data.autor.slice(0, 55).trimEnd() + "…"
+                : data.autor;
+            partes.push(escapeHtml(autor));
+        }
+        if (data.licencia) partes.push(escapeHtml(data.licencia));
+        const meta = partes.join(" · ");
+        const link = `<a href="${escapeHtml(data.pageUrl)}" target="_blank" rel="noopener noreferrer">Wikipedia ↗</a>`;
+        return `<div class="popup-media-credit">${meta ? meta + " · " : ""}${link}</div>`;
+    }
+
+    // Overrides manuales del término de búsqueda, por id de entrada. Útil cuando
+    // el odónimo es ambiguo y Wikipedia trae una imagen incorrecta. Reusa todo el
+    // pipeline (incluida la atribución). Ej.: "Independencia" traía la Declaración
+    // de EE.UU.; la redirigimos al Congreso de Tucumán de 1816.
+    const BUSQUEDA_OVERRIDES = {
+        "independencia|avenida": "Congreso de Tucumán",
+
+        // Provincias argentinas: el odónimo solo ("Córdoba", "Santa Fe", "La
+        // Rioja") es ambiguo en Wikipedia (provincia española, ciudad o página
+        // de desambiguación), así que apuntamos al artículo de la provincia.
+        "catamarca|calle": "Provincia de Catamarca",
+        "chaco|calle": "Provincia del Chaco",
+        "chubut|calle": "Provincia del Chubut",
+        "cordoba|avenida": "Provincia de Córdoba (Argentina)",
+        "corrientes|avenida": "Provincia de Corrientes",
+        "entre rios|avenida": "Provincia de Entre Ríos",
+        "formosa|calle": "Provincia de Formosa",
+        "jujuy|calle": "Provincia de Jujuy",
+        "la pampa|calle": "Provincia de La Pampa",
+        "la rioja|calle": "Provincia de La Rioja (Argentina)",
+        "mendoza|calle": "Provincia de Mendoza",
+        "misiones|calle": "Provincia de Misiones",
+        "neuquen|calle": "Provincia del Neuquén",
+        "rio negro|calle": "Provincia de Río Negro",
+        "salta|calle": "Provincia de Salta",
+        "san juan|avenida": "Provincia de San Juan",
+        "san luis|calle": "Provincia de San Luis",
+        "santa cruz|calle": "Provincia de Santa Cruz",
+        "santa fe|avenida": "Provincia de Santa Fe",
+        "santiago del estero|calle": "Provincia de Santiago del Estero",
+        "tierra del fuego|calle": "Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "tucuman|calle": "Provincia de Tucumán",
+    };
+
+    // Extrae el nombre completo del comienzo de la descripción. Las entradas de
+    // PERSONA arrancan con "Nombre Completo (años), rol...", y buscar ese nombre
+    // completo en Wikipedia acierta mucho más que el odónimo corto (que suele
+    // caer en páginas de desambiguación). Medido: PERSONA pasa de ~52% a ~84%.
+    function nombreDesdeDescripcion(desc) {
+        if (!desc) return "";
+        let n = desc.split("(")[0];           // corta en las fechas "(1770-1820)"
+        if (n === desc) n = desc.split(/[:;,]/)[0]; // sin paréntesis: corta en : ; ,
+        return n.replace(/\s+/g, " ").replace(/[\s:;,]+$/, "").trim();
+    }
+
+    // Términos de búsqueda ordenados por probabilidad de acierto, con fallback.
+    function terminosBusqueda(entrada) {
+        const nombre = (entrada.nombre_busqueda || entrada.nombre_original || "").trim();
+        const cat = (entrada.categoria || "").trim().toUpperCase();
+        const desc = nombreDesdeDescripcion(entrada.descripcion);
+        const override = BUSQUEDA_OVERRIDES[entrada.id];
+        // El override (si existe) manda; después caen los términos automáticos.
+        // Para PERSONA priorizamos el nombre completo; para el resto el odónimo.
+        const orden = override
+            ? [override, nombre]
+            : cat.startsWith("PERSONA") ? [desc, nombre] : [nombre, desc];
+        const vistos = new Set();
+        return orden.filter((t) => {
+            const k = (t || "").toLowerCase();
+            if (!k || vistos.has(k)) return false;
+            vistos.add(k);
+            return true;
+        });
+    }
+
+    async function montarMediaPopup(mediaId, entrada) {
+        if (!document.getElementById(mediaId)) return;
+        const color = colorParaEntrada(entrada);
+        const terminos = terminosBusqueda(entrada);
+
+        // Probamos los términos en orden hasta encontrar una imagen.
+        let data = null;
+        for (const t of terminos) {
+            data = await fetchStreetImage(t);
+            if (!document.getElementById(mediaId)) return; // popup cerrado
+            if (data && data.thumbUrl) break;
+        }
+
+        if (data && data.thumbUrl) {
+            const img = new Image();
+            img.className = "popup-media-img";
+            img.alt = data.titulo || entrada.nombre_busqueda || "";
+            img.referrerPolicy = "no-referrer";
+            img.onload = () => {
+                const c = document.getElementById(mediaId);
+                if (!c) return;
+                c.innerHTML = "";
+                // Fondo borroso de la misma imagen para rellenar el box sin
+                // recortar al sujeto (la imagen va por delante con object-fit:contain).
+                const bg = document.createElement("div");
+                bg.className = "popup-media-bg";
+                bg.style.backgroundImage = `url("${data.thumbUrl}")`;
+                c.appendChild(bg);
+                c.appendChild(img);
+                c.insertAdjacentHTML("beforeend", construirCredito(data));
+                c.classList.add("cargada");
+            };
+            img.onerror = () => mostrarFallbackMedia(mediaId, color);
+            img.src = data.thumbUrl;
+        } else {
+            mostrarFallbackMedia(mediaId, color);
+        }
     }
 
     // =================================================================
