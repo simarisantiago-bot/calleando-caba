@@ -13,6 +13,14 @@ Para cada override, intenta resolver la GEOMETRÍA COMPLETA de la calle:
   4. Los combina como MultiLineString -> la calle entera se dibuja como línea azul.
   5. Si algo falla, fallback a marker (punto) en las coords originales.
 
+El resultado se escribe en el cache bajo el `id` de cada entrada (clave|tipo),
+que es como lo indexa la app (geoCache[entrada.id]). Una clave puede mapear a
+varias entradas (distintos tipos): se escriben todas.
+
+Seguridad: si la resolución cae a pin (p. ej. por un error de red) pero ya
+existía una LÍNEA en el cache para ese id, se conserva la línea previa en vez
+de degradarla. Así re-correr el script es idempotente y no destructivo.
+
 Uso:
     python apply_overrides.py
 """
@@ -193,10 +201,15 @@ def main():
     with OVERRIDES.open(encoding="utf-8") as f:
         overrides = json.load(f)
 
-    claves_validas = {c["clave"] for c in calles}
+    # Mapa clave -> [(id, tipo, nombre_busqueda)]. La app indexa por id (clave|tipo),
+    # así que una clave puede corresponder a varias entradas (distintos tipos).
+    clave_a_entradas = {}
+    for c in calles:
+        clave_a_entradas.setdefault(c["clave"], []).append(c)
 
     aplicados = 0
     fallback_punto = 0
+    conservados = 0
     sugerencias = []  # [(clave_excel, nombre_osm_cercano)]
     invalidos = []
 
@@ -205,7 +218,8 @@ def main():
     print()
 
     for i, (clave, coords) in enumerate(overrides.items(), 1):
-        if clave not in claves_validas:
+        entradas = clave_a_entradas.get(clave)
+        if not entradas:
             invalidos.append(clave)
             continue
         try:
@@ -216,10 +230,20 @@ def main():
             continue
 
         # Para comparar similitud uso el nombre legible del Excel, no la clave
-        nombre_excel = next((c["nombre_busqueda"] for c in calles if c["clave"] == clave), clave)
+        nombre_excel = entradas[0]["nombre_busqueda"]
 
         geo, mensaje, sugerencia = resolver_override(nombre_excel, lat, lon)
-        cache[clave] = geo
+
+        # Escribir bajo el id de cada entrada con esa clave.
+        for c in entradas:
+            id_ = c["id"]
+            previo = cache.get(id_)
+            # No degradar una línea existente a pin por un fallo de red.
+            if geo["tipo"] == "point" and previo and previo.get("tipo") == "line":
+                conservados += 1
+                continue
+            cache[id_] = geo
+
         if geo["tipo"] == "point":
             fallback_punto += 1
             if sugerencia:
@@ -227,7 +251,8 @@ def main():
         aplicados += 1
 
         marca = "LIN" if geo["tipo"] == "line" else "PIN"
-        print(f"  [{i:2d}/{len(overrides)}] {marca} {nombre_excel[:38]:38s} | {mensaje}")
+        ids_txt = ", ".join(c["id"] for c in entradas)
+        print(f"  [{i:2d}/{len(overrides)}] {marca} {nombre_excel[:34]:34s} -> {ids_txt} | {mensaje}")
 
     # Guardar
     tmp = GEO_CACHE.with_suffix(".json.tmp")
@@ -239,6 +264,8 @@ def main():
     print(f"Total overrides aplicados: {aplicados}")
     print(f"  Con línea completa: {aplicados - fallback_punto}")
     print(f"  Como pin (fallback): {fallback_punto}")
+    if conservados:
+        print(f"  Líneas previas conservadas (no degradadas a pin): {conservados}")
     if sugerencias:
         print()
         print(f"CANDIDATOS DE OSM (calles cercanas al pin, distinto nombre):")

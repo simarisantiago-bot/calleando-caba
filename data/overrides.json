@@ -14,5 +14,6 @@
     "cayetano a silva":                    {"lat": -34.65575253096101, "lon": -58.52502505104651},
     "chilca":                              {"lat": -34.580535624948496, "lon": -58.38390157221059},
     "clemente diez de medina":             {"lat": -34.6427529192167, "lon": -58.434423577983246},
-    "carlos e pellegrini":                 {"lat": -34.564440, "lon": -58.504912}
+    "carlos e pellegrini":                 {"lat": -34.564440, "lon": -58.504912},
+    "jujuy":                               {"lat": -34.6232936, "lon": -58.4022904}
 }
