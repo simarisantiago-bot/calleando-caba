@@ -4750,24 +4750,14 @@
     "letra": "C"
   },
   {
-    "nombre_original": "LARGUÍA, CADETE CARLOS",
-    "nombre_busqueda": "Cadete Carlos Larguía",
-    "clave": "cadete carlos larguia",
-    "id": "cadete carlos larguia|calle",
+    "nombre_original": "VIGIL, CONSTANCIO CECILIO",
+    "nombre_busqueda": "Constancio Cecilio Vigil",
+    "clave": "constancio cecilio vigil",
+    "id": "constancio cecilio vigil|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Carlos Larguía (1910-1930), militar; cursaba el tercer año en el Colegio Militar cuando muere en un enfrentamiento en la zona de Congreso durante la revolución del 6 de septiembre de 1930.",
-    "letra": "L"
-  },
-  {
-    "nombre_original": "GÜEMES TORINO, CADETE JORGE",
-    "nombre_busqueda": "Cadete Jorge Güemes Torino",
-    "clave": "cadete jorge guemes torino",
-    "id": "cadete jorge guemes torino|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Jorge Güemes Torino (?-1930), militar; cursa el tercer año en el Colegio Militar y participa en la revolución del 6 de septiembre de 1930, donde muere en un enfrentamiento en la zona de Congreso.",
-    "letra": "G"
+    "descripcion": "Constancio C. Vigil (1876-1954), escritor y periodista; fundador en Montevideo de la revista Alborada; en Buenos Aires de Mundo Argentino con Alberto Haynes, y de la editorial Atlántida, donde nacen Billiken, Para Ti y La Chacra; autor de El Erial, Upa y Mangacha.",
+    "letra": "V"
   },
   {
     "nombre_original": "CÁDIZ",
@@ -9150,10 +9140,10 @@
     "letra": "G"
   },
   {
-    "nombre_original": "CABRERAR, DELFO",
-    "nombre_busqueda": "Delfo Cabrerar",
-    "clave": "delfo cabrerar",
-    "id": "delfo cabrerar|calle",
+    "nombre_original": "CABRERA, DELFO",
+    "nombre_busqueda": "Delfo Cabrera",
+    "clave": "delfo cabrera",
+    "id": "delfo cabrera|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Delfo Cabrera (1919-1981), atleta argentino especializado en pruebas de larga distancia. Su mayor logro lo consiguió en la prueba de maratón, ganando la medalla de oro en los Juegos Olímpicos de Londres 1948. Cuatro años después, fue el abanderado de la delegación argentina en la ceremonia de inauguración de los Juegos Olímpicos de Helsinki 1952. Además, fue campeón panamericano al obtener la medalla de oro en los Juegos Panamericanos de 1951 que se realizaron en Buenos Aires",
@@ -26530,10 +26520,10 @@
     "letra": "V"
   },
   {
-    "nombre_original": "REPÚBLlCA",
-    "nombre_busqueda": "Repúbllca",
-    "clave": "republlca",
-    "id": "republlca|calle",
+    "nombre_original": "REPÚBLICA",
+    "nombre_busqueda": "República",
+    "clave": "republica",
+    "id": "republica|calle",
     "categoria": "CONCEPTO",
     "tipo": "calle",
     "descripcion": "República: forma de gobierno representativo en la que el poder reside en el pueblo, personificado éste en un presidente no hereditario. Se refiere a la forma de gobierno de nuestro país.",

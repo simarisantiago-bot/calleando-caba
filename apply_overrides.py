@@ -56,19 +56,33 @@ def _norm(s):
     return s.lower().strip()
 
 
-def overpass(query):
-    try:
-        r = requests.post(
-            OVERPASS_URL,
-            data={"data": query},
-            timeout=45,
-            headers={"User-Agent": USER_AGENT},
-        )
-        if r.status_code != 200:
+def overpass(query, reintentos=3):
+    """POST a Overpass con reintentos y backoff ante rate limit (429/504) o
+    errores transitorios de red. Devuelve dict o None."""
+    espera = 5
+    for intento in range(reintentos):
+        try:
+            r = requests.post(
+                OVERPASS_URL,
+                data={"data": query},
+                timeout=60,
+                headers={"User-Agent": USER_AGENT},
+            )
+            if r.status_code == 200:
+                return r.json()
+            # 429 (Too Many Requests) / 504 (timeout del servidor): reintentar.
+            if r.status_code in (429, 504) and intento < reintentos - 1:
+                time.sleep(espera)
+                espera *= 2
+                continue
             return None
-        return r.json()
-    except (requests.RequestException, ValueError):
-        return None
+        except (requests.RequestException, ValueError):
+            if intento < reintentos - 1:
+                time.sleep(espera)
+                espera *= 2
+                continue
+            return None
+    return None
 
 
 def way_mas_cercano(lat, lon, radio_m=RADIO_METROS):
@@ -153,12 +167,25 @@ def punto_fallback(lat, lon):
     }
 
 
-def resolver_override(clave_excel, lat, lon):
+def resolver_override(clave_excel, lat, lon, osm_name=None):
     """
     Intenta resolver geometría completa. Aplica check de similitud entre
     nombre del Excel y nombre OSM del way más cercano. Si no se parece,
     devuelve pin + sugerencia del nombre OSM encontrado para revisión manual.
+
+    Si se pasa `osm_name` (p. ej. calles renombradas, cuyo nombre OSM no se
+    parece al del Excel), se saltea el chequeo de similitud y se trae la línea
+    completa directamente por ese nombre.
     """
+    if osm_name:
+        todos = todos_los_ways_con_nombre(osm_name)
+        time.sleep(1.1)
+        if todos:
+            geo = ways_a_linea(todos)
+            if geo:
+                return geo, f"línea por osm_name: '{osm_name}' ({geo['ways']} ways)", None
+        # No encontró nada con ese nombre: cae al flujo normal por punto.
+
     near = way_mas_cercano(lat, lon)
     time.sleep(1.1)
     if not near:
@@ -231,8 +258,9 @@ def main():
 
         # Para comparar similitud uso el nombre legible del Excel, no la clave
         nombre_excel = entradas[0]["nombre_busqueda"]
+        osm_name = coords.get("osm_name") if isinstance(coords, dict) else None
 
-        geo, mensaje, sugerencia = resolver_override(nombre_excel, lat, lon)
+        geo, mensaje, sugerencia = resolver_override(nombre_excel, lat, lon, osm_name)
 
         # Escribir bajo el id de cada entrada con esa clave.
         for c in entradas:

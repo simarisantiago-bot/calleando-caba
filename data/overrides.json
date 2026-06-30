@@ -1,19 +1,137 @@
 {
-    "alerce":                              {"lat": -34.58226421126572, "lon": -58.38160943246296},
-    "alferez de navio francisco pareja":   {"lat": -34.62224007823923, "lon": -58.35588024914821},
-    "aljaba magallanica":                  {"lat": -34.58203190454091, "lon": -58.38225872892398},
-    "almirante f j segui":                 {"lat": -34.60989242204391, "lon": -58.45918453567554},
-    "benjamin j lavaysse":                 {"lat": -34.62449442751439, "lon": -58.35359167799332},
-    "bergantin vigilante":                 {"lat": -34.687823735436076, "lon": -58.46688190680871},
-    "cabo 1 julio omar benitez":           {"lat": -34.66254241971467, "lon": -58.468435249160315},
-    "cabo 2 jorge eduardo lopez":          {"lat": -34.66282332029614, "lon": -58.469168533786345},
-    "canonigo miguel calixto del corro":   {"lat": -34.63384554316769, "lon": -58.49717830680418},
-    "capitan claudio h rosales":           {"lat": -34.64463229338206, "lon": -58.52532087030425},
-    "carlos h perette":                    {"lat": -34.58249388506487, "lon": -58.37852862214186},
-    "carlos maria della paolera":          {"lat": -34.595194238920136, "lon": -58.37169289515871},
-    "cayetano a silva":                    {"lat": -34.6553867, "lon": -58.5257398},
-    "chilca":                              {"lat": -34.580535624948496, "lon": -58.38390157221059},
-    "clemente diez de medina":             {"lat": -34.6428558, "lon": -58.4344479},
-    "carlos e pellegrini":                 {"lat": -34.5636772, "lon": -58.5033658},
-    "jujuy":                               {"lat": -34.6232936, "lon": -58.4022904}
+    "alerce": {
+        "lat": -34.58226421126572,
+        "lon": -58.38160943246296
+    },
+    "alferez de navio francisco pareja": {
+        "lat": -34.62224007823923,
+        "lon": -58.35588024914821
+    },
+    "aljaba magallanica": {
+        "lat": -34.58203190454091,
+        "lon": -58.38225872892398
+    },
+    "almirante f j segui": {
+        "lat": -34.60989242204391,
+        "lon": -58.45918453567554
+    },
+    "benjamin j lavaysse": {
+        "lat": -34.62449442751439,
+        "lon": -58.35359167799332
+    },
+    "bergantin vigilante": {
+        "lat": -34.687823735436076,
+        "lon": -58.46688190680871
+    },
+    "cabo 1 julio omar benitez": {
+        "lat": -34.66254241971467,
+        "lon": -58.468435249160315
+    },
+    "cabo 2 jorge eduardo lopez": {
+        "lat": -34.66282332029614,
+        "lon": -58.469168533786345
+    },
+    "canonigo miguel calixto del corro": {
+        "lat": -34.63384554316769,
+        "lon": -58.49717830680418
+    },
+    "capitan claudio h rosales": {
+        "lat": -34.64463229338206,
+        "lon": -58.52532087030425
+    },
+    "carlos h perette": {
+        "lat": -34.58249388506487,
+        "lon": -58.37852862214186
+    },
+    "carlos maria della paolera": {
+        "lat": -34.595194238920136,
+        "lon": -58.37169289515871
+    },
+    "cayetano a silva": {
+        "lat": -34.6553867,
+        "lon": -58.5257398
+    },
+    "chilca": {
+        "lat": -34.580535624948496,
+        "lon": -58.38390157221059
+    },
+    "clemente diez de medina": {
+        "lat": -34.6428558,
+        "lon": -58.4344479
+    },
+    "carlos e pellegrini": {
+        "lat": -34.5636772,
+        "lon": -58.5033658
+    },
+    "jujuy": {
+        "lat": -34.6232936,
+        "lon": -58.4022904
+    },
+    "capitan de fragata pedro edgardo giachino": {
+        "lat": -34.6481581218881,
+        "lon": -58.434863176348536
+    },
+    "carolina muzzili": {
+        "lat": -34.64818521357323,
+        "lon": -58.502027990240016
+    },
+    "comodoro pedro l zanni": {
+        "lat": -34.58349455483456,
+        "lon": -58.37162416055853
+    },
+    "coronel carlos tomas sourigues": {
+        "lat": -34.55062376300445,
+        "lon": -58.449734210287694,
+        "osm_name": "Coronel Carlos Sourigues"
+    },
+    "constancio cecilio vigil": {
+        "lat": -34.64520040862716,
+        "lon": -58.5264108170929,
+        "osm_name": "Constancio Cecilio Vigil"
+    },
+    "comisario joaquin valentin perez": {
+        "lat": -34.66232046137851,
+        "lon": -58.44760827874202,
+        "osm_name": "Comisario J. V. Pérez"
+    },
+    "coronel luis jorge fontana": {
+        "lat": -34.612148942981,
+        "lon": -58.506582161581214,
+        "osm_name": "Coronel Jorge Luis Fontana"
+    },
+    "coronel pedro andres garcia": {
+        "lat": -34.68343505921627,
+        "lon": -58.46805590396712,
+        "osm_name": "Coronel Pedro A. García"
+    },
+    "coronel rohde": {
+        "lat": -34.61044227332985,
+        "lon": -58.49285813148816,
+        "osm_name": "Pasaje Coronel Rhode"
+    },
+    "cesar h bacle": {
+        "lat": -34.63680140582328,
+        "lon": -58.48006403147165,
+        "osm_name": "César Bacle"
+    },
+    "diputado nacional osvaldo ernesto benedetti": {
+        "lat": -34.63491826616558,
+        "lon": -58.48315202052146,
+        "osm_name": "Diputado Osvaldo Benedetti"
+    },
+    "doctor adolfo dickmann": {
+        "lat": -34.59790021549319,
+        "lon": -58.46277123169503,
+        "osm_name": "Doctor Adolfo Dickman"
+    },
+    "coronel jose olegario gordillo": {
+        "lat": -34.63984895198831,
+        "lon": -58.51620815054623,
+        "osm_name": "José Carballido"
+    },
+    "doctor enzo bordabehere": {
+        "lat": -34.60000971574166,
+        "lon": -58.480771314096096,
+        "osm_name": "Enzo Bordabehere"
+    }
 }

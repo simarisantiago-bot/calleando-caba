@@ -655,15 +655,28 @@
             if (c.clave.startsWith(q)) {
                 empiezan.push(c);
             } else if (c.clave.includes(q)) {
-                contienen.push(c);
+                if (contienen.length < MAX_SUGGESTIONS) contienen.push(c);
             } else if (c.desc_clave && c.desc_clave.includes(q)) {
                 // Match en historia/descripción. Marcamos con flag para que
                 // el render muestre el snippet.
-                enDescripcion.push({ ...c, _matchDesc: q });
+                if (enDescripcion.length < MAX_SUGGESTIONS) {
+                    enDescripcion.push({ ...c, _matchDesc: q });
+                }
             }
-            // Cortamos temprano si ya hay muchos por nombre
-            if (empiezan.length >= MAX_SUGGESTIONS) break;
         }
+
+        // Dentro de "empiezan con": el match EXACTO va primero, luego los
+        // nombres más cortos (más cercanos a la consulta) y alfabético. Así
+        // "República" gana a "República Árabe Siria" al tipear "republica".
+        empiezan.sort((a, b) => {
+            const exA = a.clave === q ? 0 : 1;
+            const exB = b.clave === q ? 0 : 1;
+            if (exA !== exB) return exA - exB;
+            if (a.clave.length !== b.clave.length) {
+                return a.clave.length - b.clave.length;
+            }
+            return a.clave.localeCompare(b.clave);
+        });
 
         // Combinamos manteniendo prioridad
         return empiezan

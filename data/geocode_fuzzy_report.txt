@@ -1,0 +1,638 @@
+Auto-aceptados (geometría agregada): 22
+Para revisar (banda media, NO aplicados): 44
+Rechazados (baja similitud / sin candidato): 248
+Sin ancla utilizable: 0
+
+=== AUTO-ACEPTADOS (auditar: Excel <- nombre OSM) ===
+  [plazoleta         ] point sim 0.87  Escuela la Banderita
+       OSM: 'Plazoleta Esc. La Banderita'
+  [calle             ] line  sim 0.94  Doctor José Ignacio de la Roza
+       OSM: 'Doctor José Ignacio de la Rosa'
+  [espacio público   ] point sim 0.94  Esther Ballestrino de Careaga
+       OSM: 'Plazoleta Esther Ballestrino de Corega'
+  [calle             ] line  sim 0.95  Doctor Gerardo Armauer Hansen
+       OSM: 'Doctor Gerardo Arnauer Hansen'
+  [plaza             ] point sim 0.96  De las Armas Ejército Argentino
+       OSM: 'Plaza de las Armas "Ejército Argentino"'
+  [plazoleta         ] point sim 0.97  Regimiento 10 de Caballería Húsares de Pueyrredón
+       OSM: 'Plazoleta Regimiento 10º de Caballería "Husares de Pueyrredón"'
+  [plazoleta         ] point sim 0.97  Alfonso R. Castelao
+       OSM: 'Plazoleta Afonso R. Castelao'
+  [plaza             ] point sim 1.00  Arquitecto Amancio Williams
+       OSM: 'Plaza Arq. Amancio Williams'
+  [plazoleta         ] point sim 1.00  Arquitecto Héctor Greslebin
+       OSM: 'Plazoleta Héctor Greslebin'
+  [plaza             ] point sim 1.00  Arquitecto Juan Kurchan
+       OSM: 'Plaza Arq. Juan Kurchan'
+  [plaza             ] point sim 1.00  Arquitecto René Karman
+       OSM: 'Plaza Arq. René Karman'
+  [plaza             ] point sim 1.00  Arquitecto Wladimiro Acosta
+       OSM: 'Plaza Arq. Wladimiro Acosta'
+  [plaza             ] point sim 1.00  Capitán Domingo Fidel Sarmiento
+       OSM: 'Plaza Capitán Domingo Fidel Sarmiento'
+  [plazoleta         ] point sim 1.00  Comodoro Pedro L. Zanni
+       OSM: 'Plazoleta Comodoro Pedro Zanni'
+  [parque            ] point sim 1.00  De Flora Nativa Benito Quinquela Martín
+       OSM: 'Parque de Flora Nativa Benito Quinquela Martín'
+  [plazoleta         ] point sim 1.00  Doctor Alfredo Rivas
+       OSM: 'Plazoleta Dr. Alfredo Rivas'
+  [plazoleta         ] point sim 1.00  Doctor José Luis Romero
+       OSM: 'José Luis Romero'
+  [espacio verde     ] point sim 1.00  Doctor Luis Federico Leloir
+       OSM: 'Plaza Luis Federico Leloir'
+  [plazoleta         ] point sim 1.00  Doctor Roberto Koch
+       OSM: 'Plazoleta Roberto Koch'
+  [plaza             ] point sim 1.00  Doctor Vicente Solano Lima
+       OSM: 'Plaza Doctor Vicente Solano Lima'
+  [plazoleta         ] point sim 1.00  Ingeniero Carlos María Della Paolera
+       OSM: 'Plazoleta Carlos María Della Paolera'
+  [plazoleta         ] point sim 1.00  Pelagio B. Luna
+       OSM: 'Plazoleta Pelagio Luna'
+
+=== PARA REVISAR (candidato plausible, confirmá vos) ===
+  [calle             ] sim 1.00  Doctor Enzo Bordabehere
+       candidato OSM: 'Enzo Bordabehere'
+  [calle             ] sim 1.00  Doctor Marcelo J. Fitte
+       candidato OSM: 'Doctor Marcelo Fitte'
+  [calle             ] sim 1.00  Enrique del Valle Iberlucea
+       candidato OSM: 'Enrique Del Valle Iberlucea'
+  [calle             ] sim 1.00  Francisco J. Ortiz
+       candidato OSM: 'Francisco Ortiz'
+  [calle             ] sim 1.00  Gaspar Melchor de Jovellanos
+       candidato OSM: 'Gaspar Melchor Jovellanos'
+  [calle             ] sim 1.00  José R. Baltoré
+       candidato OSM: 'José Baltore'
+  [calle             ] sim 1.00  Juan M. Thome
+       candidato OSM: 'Juan Thome'
+  [autopista         ] sim 1.00  Presidente Doctor Arturo Umberto Illia
+       candidato OSM: 'Presidente Arturo Umberto Illia'
+  [calle             ] sim 0.94  Carolina Muzzili
+       candidato OSM: 'Carolina Muzilli'
+  [calle             ] sim 0.92  Emilio Becher
+       candidato OSM: 'Emilio Escher'
+  [calle             ] sim 0.86  Eduardo Juan Couture
+       candidato OSM: 'Eduardo J. Couture'
+  [plazoleta         ] sim 0.86  Aviso A.r.a. Alférez Sobral
+       candidato OSM: 'Plazoleta Aviso ARA Alférez Sobral'
+  [calle             ] sim 0.85  Juan Francisco de la Robla
+       candidato OSM: 'Juan Francisco Olmos'
+  [plazoleta         ] sim 0.84  Brigadier General Tomás de Iriarte
+       candidato OSM: 'Plazoleta Brig. General Tomás de Iriarte'
+  [calle             ] sim 0.83  Miguel A. Camino
+       candidato OSM: 'Miguel Cané'
+  [plazoleta         ] sim 0.82  Francisco “paco” Urondo
+       candidato OSM: 'Plazoleta Francisco Urondo'
+  [calle             ] sim 0.81  General José María Bustillo
+       candidato OSM: 'General José M. Bustillo'
+  [espacio verde     ] sim 0.81  Juan Carlos Castagnino
+       candidato OSM: 'Plazoleta Juan C. Castagnino'
+  [calle             ] sim 0.80  General Conrado Excelso Villegas
+       candidato OSM: 'General Conrado Villegas'
+  [plazoleta         ] sim 0.80  Ciudad de Guadix
+       candidato OSM: 'Plaza Ciudad de Udine'
+  [plaza             ] sim 0.80  Doctor Bernardo Alberto Houssay
+       candidato OSM: 'Plaza Doctor Bernardo Houssay'
+  [cantero central   ] sim 0.80  Francisco Pracánico
+       candidato OSM: 'Francisco Canaro'
+  [espacio verde     ] sim 0.79  Día Internacional de la Mujer 8 de Marzo
+       candidato OSM: 'Plazoleta 8 de Marzo - Día Internacional de la Mujer'
+  [cantero central   ] sim 0.79  Ingeniero Germán Ave Lallemant
+       candidato OSM: 'Plaza Ingeniero Ave Lallemant'
+  [plazoleta         ] sim 0.79  Antonio Maceo
+       candidato OSM: 'Plaza Antonio Malaver'
+  [plaza             ] sim 0.79  Doctor Alfredo Nobel
+       candidato OSM: 'Alfredo De Angelis'
+  [calle             ] sim 0.78  José P. Tamborini
+       candidato OSM: 'José Pascual Tamborini'
+  [paseo             ] sim 0.77  Paseo de los Granaderos
+       candidato OSM: 'Granaderos'
+  [plaza             ] sim 0.76  Arquitecto Alejandro Bustillo
+       candidato OSM: 'Plazoleta Alejandro Petion'
+  [cantero central   ] sim 0.76  Doctor Emir Eduardo Mercader
+       candidato OSM: 'Doctor Emir E. Mercader'
+  [plazoleta         ] sim 0.76  Doctor Enrique T. Susini
+       candidato OSM: 'Plazoleta General Enrique Mosconi'
+  [cantero central   ] sim 0.73  Enrique Delfino
+       candidato OSM: 'Plazoleta Enrique Udaondo'
+  [plazoleta         ] sim 0.73  Villa de las Catalinas
+       candidato OSM: 'Canchita Catalinas'
+  [calle             ] sim 0.72  Coronel Luis Jorge Fontana
+       candidato OSM: 'Coronel Jorge Luis Fontana'
+  [plazoleta         ] sim 0.70  Julio Sosa
+       candidato OSM: 'Plazoleta Julio de Caro'
+  [calle             ] sim 0.70  Intendente Guerrico
+       candidato OSM: 'Contraalmirante Martín Guerrico'
+  [plaza             ] sim 0.70  Paseo de la Victoria
+       candidato OSM: 'Parque de las Victorias'
+  [calle             ] sim 0.69  Manuel Estévez
+       candidato OSM: 'Ingeniero José Estevez'
+  [plazoleta         ] sim 0.69  Del Kiosco de la Floresta
+       candidato OSM: 'El Corralón de Floresta'
+  [calle             ] sim 0.67  Dama de Monte
+       candidato OSM: 'Viamonte'
+  [plazoleta         ] sim 0.67  28 de Junio 1645
+       candidato OSM: 'Plaza 20 de Junio'
+  [plazoleta         ] sim 0.67  Brigadier General Don Manuel Oribe
+       candidato OSM: 'Plaza General Manuel Belgrano'
+  [plazoleta         ] sim 0.63  Manuel Gómez Carrillo
+       candidato OSM: 'Barrio Ramón Carrillo'
+  [plazoleta         ] sim 0.62  Policía Federal Argentina, Superintendencia de Bomberos
+       candidato OSM: 'Plazoleta Superintendencia de Bomberos PFA'
+
+=== RECHAZADOS (sin candidato razonable) ===
+  [calle             ] Luis Alberto Herrera
+       mejor OSM: 'Calle 9 - Alberto Chejolán'  (sim 0.62)
+  [calle             ] José Julián Pérez
+       mejor OSM: 'Julian Agüero'  (sim 0.60)
+  [cantero central   ] Diputado Nacional Jorge Mariano Almada
+       mejor OSM: 'Taller Mariano Acosta'  (sim 0.59)
+  [plazoleta         ] Juan Carlos Cobián
+       mejor OSM: 'Espacio Educativo Padre Carlos Mugica'  (sim 0.59)
+  [calle             ] Comisario Joaquín Valentín Pérez
+       mejor OSM: 'Lomas Valentinas'  (sim 0.58)
+  [calle             ] Coronel José Olegario Gordillo
+       mejor OSM: 'Olegario V. Andrade'  (sim 0.58)
+  [cantero central   ] Presbítero Virgilio Filipo
+       mejor OSM: 'Plazoleta Doctor Presbitero Antonio Saenz'  (sim 0.56)
+  [cantero central   ] Dora del Grande
+       mejor OSM: 'Canchita Patria Grande'  (sim 0.55)
+  [calle             ] Doctor Ángel H. Roffo
+       mejor OSM: 'Angelina Pagano'  (sim 0.54)
+  [paseo             ] De la Ciencia y la Cultura Árabes
+       mejor OSM: 'De las Ciencias'  (sim 0.53)
+  [calle             ] Doctor José Modesto Giuffra
+       mejor OSM: 'Modesto Sánchez'  (sim 0.51)
+  [plazoleta         ] Doctor Carlos Alberto Erro
+       mejor OSM: 'Plazoleta Alberto Castillo'  (sim 0.51)
+  [calle             ] Doctor Norberto Quirno Costa
+       mejor OSM: 'General Lucio Norberto Mansilla'  (sim 0.50)
+  [paseo             ] Paseo Marcela Brenda Iglesias
+       mejor OSM: 'Intendente Herminio Iglesias'  (sim 0.48)
+  [plazoleta         ] De las Madres
+       mejor OSM: 'Plaza Madres del Pañuelo Blanco'  (sim 0.44)
+  [plaza             ] Doctor José C. Paz
+       mejor OSM: 'Cancha de San Jose'  (sim 0.42)
+  [plazoleta         ] María Esther de Miguel
+       mejor OSM: 'Plazoleta Esther Ballestrino de Corega'  (sim 0.41)
+  [sendero           ] 1° de Agosto. Día de la Pachamama
+       mejor OSM: '-'  (sim 0.00)
+  [paseo             ] Alfredo Zitarrosa
+       mejor OSM: '-'  (sim 0.00)
+  [sendero           ] Amalia Celia Figueredo
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Ángel M. Giménez
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Aviador Enrique Adrián Roger
+       mejor OSM: '-'  (sim 0.00)
+  [pasaje peatonal   ] Beniamino Semiza
+       mejor OSM: '-'  (sim 0.00)
+  [paseo             ] Brigadier General Ángel María Zuloaga
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Cadete Carlos Larguía
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Cadete Jorge Güemes Torino
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Capitán de Fragata Pedro Edgardo Giachino
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] César H. Bacle
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Chañar
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Coihue
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Comodoro Pedro L. Zanni
+       mejor OSM: '-'  (sim 0.00)
+  [puente peatonal   ] Comunidad Organizada
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Coronel Carlos Tomás Sourigues
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Coronel Pedro Andrés García
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Coronel Rohde
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Cristianía
+       mejor OSM: '-'  (sim 0.00)
+  [paseo             ] De los Médicos
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Delfo Cabrerar
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Diputado Nacional Osvaldo Ernesto Benedetti
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Doctor Adolfo Dickmann
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Doctor Hilario de Almeira
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Doctor José de Paula y Rodríguez Alves
+       mejor OSM: '-'  (sim 0.00)
+  [paseo             ] Doctor Luciano Florencio Molinas
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Doctor Osvaldo Eguía
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Doctor Roberto Levillier
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Doctor Tomás Manuel de Anchorena
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Dr. Emilio J. Hardoy
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Emeric E. Vidal
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Emilio Pettoruti
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Estanislao S. Zeballos
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Félix O. Fouiller
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Francisco Antonio Maciel
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] General Julio Ruiz Moreno
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Guabirá
+       mejor OSM: '-'  (sim 0.00)
+  [paseo             ] Guardavidas Argentinos
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Guatambú
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Guayaba
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Guayaibí
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Ingeniero Julio Krause
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Isla de Galápagos
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] J. F. Bateman
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Jarilla
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Jazmín del Paraguay
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] José E. Carballido
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Jose J. Podestá
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] José Ortega y Gasset
+       mejor OSM: '-'  (sim 0.00)
+  [pasaje peatonal   ] José Penelón
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Juan Antonio Bibiloni
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Juan P. Calou
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Juan Ramírez de Velazco
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Kolla
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] La Garza
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Marie Langer
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Martín A. Malharro
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Mayor Arturo Pedro Luisoni
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Mecánico Militar Leopoldo Atenzo
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Mochica
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Ñandubay
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Norma Colombatto
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Padre Juan Bautista Neumann
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Paico
+       mejor OSM: '-'  (sim 0.00)
+  [paseo             ] Paseo de los Ombúes
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Pontederia
+       mejor OSM: '-'  (sim 0.00)
+  [autopista         ] Presidente Héctor J. Cámpora
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Repúbllca
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Santiago Costamagna
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Sauco
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Soldado Archivista Miguel Santi
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Teniente de Navío Cándido de Lasala
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Teniente General Eustoquio Frías
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Teniente General Pablo Riccheri
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Vicente Anastasio de Echevarría
+       mejor OSM: '-'  (sim 0.00)
+  [calle             ] Victoriano E. Montes
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] 18 de Diciembre de 1872 “creación de la Estación Liniers”
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] 29 de Diciembre de 2001
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Adelia María Harilaos de Olmos
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Alberto Lagos
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Alcira de Al Peña
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Alejandra Pizarnik
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Ángela M. Aieta de Gullo
+       mejor OSM: '-'  (sim 0.00)
+  [patio de recreación] Antoine de Saint-exupéry
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Antonia Mercé “la Argentina”
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Antonio Cambiasso
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Arquitecto Alberto Prebisch
+       mejor OSM: '-'  (sim 0.00)
+  [cantero           ] Arquitecto Arturo J. Dubourg
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Arturo Enrique Sampay
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Barón Mauricio de Hirsch
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Benjamín Vicuña Mackena
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Bernardo B. Delom
+       mejor OSM: '-'  (sim 0.00)
+  [parque            ] Brigadier General Cornelio de Saavedra
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Brigadier General Don Enrique Martínez
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Brigadier General José Matías Zapiola
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Cabo de Patricios Orencio Pío Rodríguez
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Canciller Miguel Ángel Zavala Ortiz
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Capitán Aviador Vicente Almandos Almonacid
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Capitán Domingo Alejo Millán
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Capitán General Justo José de Urquiza Urquiza
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Carlos Carboni
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Cesáreo Bernaldo de Quirós
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Cesário Onzari
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Ciro el Grande
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Clubes del Barrio
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Comandante Andrés Guacurari Artigas
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Concepción del Alto de San Pedro
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Cooperadoras Escolares
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Coronel de Ingenieros Jordán Czeslaw Wysocki
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Coronel Juan F. Czetz
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Darío Broggi
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] De la Lealtad
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] De la Repúbllca
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] De los Molfetteses
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] De los Viveros
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Delia Avilés de Elizalde
+       mejor OSM: '-'  (sim 0.00)
+  [jardín            ] Derico A. J.
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Diego Rivera
+       mejor OSM: '-'  (sim 0.00)
+  [canteros centrales] Diputada Emar Acosta
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Doctor Avelino Gutiérrez
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Doctor Benjamín A. Gould
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Doctor Carlos Alberto Pueyrredón
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Doctor Esteban Laureano Maradona
+       mejor OSM: '-'  (sim 0.00)
+  [patio de recreación] Doctor Félix Liceaga
+       mejor OSM: '-'  (sim 0.00)
+  [espacio público   ] Doctor Gabriel Ocampo
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Doctor Isidoro Ruiz Moreno
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Doctor José María Velazco Ibarra
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Doctor Mariano R. Castex
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Doctor Rodolfo Erausquin
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Doctora Cecilia Grierson
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Doña Petrona C. de Gandulfo
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Dr. Arturo Oñativia
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] El Alma Que Canta
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] El Invencible de Forli
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Embajada de Israel “en Memoria del Atentado”
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Enrique Mario Francini
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Ezequiel Martínez Estrada
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Fenia Chertkoff
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Francisco A. Sicardi
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Francisco Antonio Rizzuto
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Francisco de Caro
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Francisco López Torres
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Fray Pedro Agustín Cueli
+       mejor OSM: '-'  (sim 0.00)
+  [canteros centrales] Gabriela Laperriere de Coni
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] General Agustín P. Justo
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] General Antonio José de Sucre
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] General José Antonio Páez
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] General Rafael de Riego y Nuñez
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Gerardo Matos Rodríguez
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Glorias del Automovilismo Argentino
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Guillermo Divito
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Héctor Félix Arata
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Héctor Gagliardi
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Hermana Alice Domon y Hermana Léonie Duquet
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Hidroavión Buenos Aires
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Higinio Cazón
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Homenaje A las Víctimas del Holocausto-shoá
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Homero Expósito
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Horacio Rega Molina
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Ildefonso Félix Cavagna Martínez
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Infante Don Enrique “el Navegante”
+       mejor OSM: '-'  (sim 0.00)
+  [parque            ] Ingeniero Agrónomo Benito J. Carrasco
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Ingeniero Antonio Vilar
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Ingeniero Arquitecto Jorge Bunge
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Ingeniero César Manuel Polledo
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Ingeniero Otto Krause
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Intendente Joaquín S. de Anchorena
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Intendente Torcuato de Alvear
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Israeñ
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Ítalo Masuelli
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Itzhak Rabin
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Jacinto Oddone
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] John Malcolm
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] José Eusebio Agüero
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] José María Gatica
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] José Neglia
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] José Razzano
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Josefina Marpons
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Joseph Kessel
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Juana Rouco Buela
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Julio Cruciani
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Leonie Mathis
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Luca Prodan
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Lucio V. Mansilla
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] María Ponce de Bianco
+       mejor OSM: '-'  (sim 0.00)
+  [canteros centrales] María Robotti de Bulzani
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] María Ruanova
+       mejor OSM: '-'  (sim 0.00)
+  [espacio público   ] Mario Jorge de Lellis
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Mariscal José Pilsudski
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Martín Boneo y Villalonga
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Máximo Mena
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Melchor Pérez de Holguín
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Mencia Calderón
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Michel Borowsky
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Miguel Caló
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Monseñor Hermenegildo Fazio
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Niní Marshall
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Norma Fontenla
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Pacífico Víctor Lambertucci
+       mejor OSM: '-'  (sim 0.00)
+  [canteros centrales] Paseo de la Historieta
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Paseo del Ballet Argentino
+       mejor OSM: '-'  (sim 0.00)
+  [patio             ] Patio de la Identidad y la Memoria
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Patoruzú
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Patrono de Buenos Aires San Martín de Tours
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Paul Percy Harris
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Pedro Maffia
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Pioneros de la Antártida Argentina
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Plaza del Jacarandá
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Presbítero Doctor Antonio Sáenz
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Profesora Marina Margarita Ravioli
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Ramón Vázquez
+       mejor OSM: '-'  (sim 0.00)
+  [espacio verde     ] Ramona Esther Gastiazoro de Brontes
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Región Basilicata
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] República de Paraguay
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] República Federativa del Brasil
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] República Islámica del Irán
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Romeo Raffo Bontá
+       mejor OSM: '-'  (sim 0.00)
+  [jardín            ] Rosa H. Cirullo de Carnaghi
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Rosa Pavlovsky
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Simón Lázara
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Simón Wiesenthal
+       mejor OSM: '-'  (sim 0.00)
+  [espacio público   ] Skanderberg “jorge Castriota”
+       mejor OSM: '-'  (sim 0.00)
+  [espacio público   ] Tato Bores
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Tbilisi
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Teniente Coronel Don Héctor Varela
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Teniente de Navío Cándido de Lasala
+       mejor OSM: '-'  (sim 0.00)
+  [plazoleta         ] Teniente General Adolfo A. Arana
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Teniente General Eduardo Lonardi
+       mejor OSM: '-'  (sim 0.00)
+  [plaza             ] Teniente General Pablo Riccheri
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Tric y Trake
+       mejor OSM: '-'  (sim 0.00)
+  [cantero central   ] Vinicius de Moraes
+       mejor OSM: '-'  (sim 0.00)
