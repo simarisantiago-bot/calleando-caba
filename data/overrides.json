@@ -133,5 +133,120 @@
         "lat": -34.60000971574166,
         "lon": -58.480771314096096,
         "osm_name": "Enzo Bordabehere"
+    },
+    "doctor jose de paula y rodriguez alves": {
+        "lat": -34.64820793335812,
+        "lon": -58.52652140464768,
+        "osm_name": "José de Paula y Rodríguez Alves"
+    },
+    "doctor jose modesto giuffra": {
+        "lat": -34.617832149350036,
+        "lon": -58.37101959547911,
+        "osm_name": "Doctor José M. Giuffra"
+    },
+    "doctor norberto quirno costa": {
+        "lat": -34.59507630036976,
+        "lon": -58.40547582116379
+    },
+    "doctor roberto levillier": {
+        "lat": -34.57027082128633,
+        "lon": -58.41314336589813,
+        "osm_name": "Roberto Leviller"
+    },
+    "doctor tomas manuel de anchorena": {
+        "lat": -34.600088098351186,
+        "lon": -58.40902714205449,
+        "osm_name": "Tomás Manuel de Anchorena"
+    },
+    "doctor hilario de almeira": {
+        "lat": -34.62028537602555,
+        "lon": -58.50979710036093,
+        "osm_name": "Hilario de Almeira"
+    },
+    "doctor marcelo j fitte": {
+        "lat": -34.56865054019497,
+        "lon": -58.45983224080558,
+        "osm_name": "Doctor Marcelo Fitte"
+    },
+    "doctor angel h roffo": {
+        "lat": -34.6388645272577,
+        "lon": -58.52852295729052,
+        "osm_name": "Doctor Ángel Honorio Roffo"
+    },
+    "doctor osvaldo eguia": {
+        "lat": -34.6733779620585,
+        "lon": -58.49772845307801,
+        "way_id": 22569630
+    },
+    "eduardo juan couture": {
+        "lat": -34.581831707174246,
+        "lon": -58.39176446164377,
+        "osm_name": "Eduardo J. Couture"
+    },
+    "emilio becher": {
+        "lat": -34.6598053787533,
+        "lon": -58.48507697459184,
+        "osm_name": "Emilio Escher"
+    },
+    "enrique del valle iberlucea": {
+        "lat": -34.63569064237606,
+        "lon": -58.36391506719018
+    },
+    "estanislao s zeballos": {
+        "lat": -34.587885340612196,
+        "lon": -58.50808544659927,
+        "osm_name": "Estanislao Zeballos"
+    },
+    "francisco antonio maciel": {
+        "lat": -34.61080338142315,
+        "lon": -58.444565305148714,
+        "osm_name": "Francisco A. Maciel"
+    },
+    "felix o fouiller": {
+        "lat": -34.581177530574024,
+        "lon": -58.4918472512506,
+        "osm_name": "Félix O. Foullier"
+    },
+    "emeric e vidal": {
+        "lat": -34.62028825870936,
+        "lon": -58.52955123412996,
+        "osm_name": "Emeric Vidal"
+    },
+    "francisco j ortiz": {
+        "lat": -34.64877018808847,
+        "lon": -58.52152673279558,
+        "osm_name": "Francisco Ortiz"
+    },
+    "general conrado excelso villegas": {
+        "lat": -34.681556443421655,
+        "lon": -58.46569335793971,
+        "osm_name": "General Conrado Villegas"
+    },
+    "general jose maria bustillo": {
+        "lat": -34.64109431655824,
+        "lon": -58.4647123346072
+    },
+    "ingeniero julio krause": {
+        "lat": -34.666163065014146,
+        "lon": -58.48376150537753
+    },
+    "j f bateman": {
+        "lat": -34.606714613241614,
+        "lon": -58.50341381191594
+    },
+    "gaspar melchor de jovellanos": {
+        "lat": -34.639816072868506,
+        "lon": -58.372044842574084,
+        "osm_name": "Gaspar Melchor Jovellanos"
+    },
+    "isla de galapagos": {
+        "lat": -34.58242487471019,
+        "lon": -58.37939126029395,
+        "osm_name": "Islas Galápagos"
+    },
+    "jarilla": {
+        "lat": -34.581852039731444,
+        "lon": -58.38514565979427,
+        "osm_name": "Jarillo"
     }
 }

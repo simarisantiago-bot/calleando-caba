@@ -1,6 +1,5 @@
-100 calles de tipo linea pendientes de coordenadas
-Formato: N. [tipo] Nombre  ->  clave
-======================================================================
+89 calles de tipo linea pendientes
+============================================================
   1. [sendero] 1° de Agosto. Día de la Pachamama
        clave: 1 de agosto dia de la pachamama
   2. [paseo] Alfredo Zitarrosa
@@ -17,187 +16,165 @@ Formato: N. [tipo] Nombre  ->  clave
        clave: chanar
   8. [calle] Coihue
        clave: coihue
-  9. [calle] Comisario Joaquín Valentín Pérez
-       clave: comisario joaquin valentin perez
- 10. [puente peatonal] Comunidad Organizada
+  9. [puente peatonal] Comunidad Organizada
        clave: comunidad organizada
- 11. [calle] Coronel José Olegario Gordillo
-       clave: coronel jose olegario gordillo
- 12. [calle] Coronel Luis Jorge Fontana
-       clave: coronel luis jorge fontana
- 13. [calle] Coronel Pedro Andrés García
-       clave: coronel pedro andres garcia
- 14. [calle] Coronel Rohde
-       clave: coronel rohde
- 15. [calle] Cristianía
+ 10. [calle] Cristianía
        clave: cristiania
- 16. [calle] César H. Bacle
-       clave: cesar h bacle
- 17. [calle] Dama de Monte
+ 11. [calle] Dama de Monte
        clave: dama de monte
- 18. [paseo] De la Ciencia y la Cultura Árabes
+ 12. [paseo] De la Ciencia y la Cultura Árabes
        clave: de la ciencia y la cultura arabes
- 19. [paseo] De los Médicos
+ 13. [paseo] De los Médicos
        clave: de los medicos
- 20. [calle] Delfo Cabrerar
-       clave: delfo cabrerar
- 21. [calle] Diputado Nacional Osvaldo Ernesto Benedetti
-       clave: diputado nacional osvaldo ernesto benedetti
- 22. [calle] Doctor Adolfo Dickmann
-       clave: doctor adolfo dickmann
- 23. [calle] Doctor Enzo Bordabehere
-       clave: doctor enzo bordabehere
- 24. [calle] Doctor Hilario de Almeira
+ 14. [calle] Doctor Hilario de Almeira
        clave: doctor hilario de almeira
- 25. [calle] Doctor José de Paula y Rodríguez Alves
+ 15. [calle] Doctor José de Paula y Rodríguez Alves
        clave: doctor jose de paula y rodriguez alves
- 26. [calle] Doctor José Modesto Giuffra
+ 16. [calle] Doctor José Modesto Giuffra
        clave: doctor jose modesto giuffra
- 27. [paseo] Doctor Luciano Florencio Molinas
+ 17. [paseo] Doctor Luciano Florencio Molinas
        clave: doctor luciano florencio molinas
- 28. [calle] Doctor Marcelo J. Fitte
+ 18. [calle] Doctor Marcelo J. Fitte
        clave: doctor marcelo j fitte
- 29. [calle] Doctor Norberto Quirno Costa
+ 19. [calle] Doctor Norberto Quirno Costa
        clave: doctor norberto quirno costa
- 30. [calle] Doctor Osvaldo Eguía
+ 20. [calle] Doctor Osvaldo Eguía
        clave: doctor osvaldo eguia
- 31. [calle] Doctor Roberto Levillier
+ 21. [calle] Doctor Roberto Levillier
        clave: doctor roberto levillier
- 32. [calle] Doctor Tomás Manuel de Anchorena
+ 22. [calle] Doctor Tomás Manuel de Anchorena
        clave: doctor tomas manuel de anchorena
- 33. [calle] Doctor Ángel H. Roffo
+ 23. [calle] Doctor Ángel H. Roffo
        clave: doctor angel h roffo
- 34. [calle] Dr. Emilio J. Hardoy
+ 24. [calle] Dr. Emilio J. Hardoy
        clave: dr emilio j hardoy
- 35. [calle] Eduardo Juan Couture
+ 25. [calle] Eduardo Juan Couture
        clave: eduardo juan couture
- 36. [calle] Emeric E. Vidal
+ 26. [calle] Emeric E. Vidal
        clave: emeric e vidal
- 37. [calle] Emilio Becher
+ 27. [calle] Emilio Becher
        clave: emilio becher
- 38. [calle] Emilio Pettoruti
+ 28. [calle] Emilio Pettoruti
        clave: emilio pettoruti
- 39. [calle] Enrique del Valle Iberlucea
+ 29. [calle] Enrique del Valle Iberlucea
        clave: enrique del valle iberlucea
- 40. [calle] Estanislao S. Zeballos
+ 30. [calle] Estanislao S. Zeballos
        clave: estanislao s zeballos
- 41. [calle] Francisco Antonio Maciel
+ 31. [calle] Francisco Antonio Maciel
        clave: francisco antonio maciel
- 42. [calle] Francisco J. Ortiz
+ 32. [calle] Francisco J. Ortiz
        clave: francisco j ortiz
- 43. [calle] Félix O. Fouiller
+ 33. [calle] Félix O. Fouiller
        clave: felix o fouiller
- 44. [calle] Gaspar Melchor de Jovellanos
+ 34. [calle] Gaspar Melchor de Jovellanos
        clave: gaspar melchor de jovellanos
- 45. [calle] General Conrado Excelso Villegas
+ 35. [calle] General Conrado Excelso Villegas
        clave: general conrado excelso villegas
- 46. [calle] General José María Bustillo
+ 36. [calle] General José María Bustillo
        clave: general jose maria bustillo
- 47. [calle] General Julio Ruiz Moreno
+ 37. [calle] General Julio Ruiz Moreno
        clave: general julio ruiz moreno
- 48. [calle] Guabirá
+ 38. [calle] Guabirá
        clave: guabira
- 49. [paseo] Guardavidas Argentinos
+ 39. [paseo] Guardavidas Argentinos
        clave: guardavidas argentinos
- 50. [calle] Guatambú
+ 40. [calle] Guatambú
        clave: guatambu
- 51. [calle] Guayaba
+ 41. [calle] Guayaba
        clave: guayaba
- 52. [calle] Guayaibí
+ 42. [calle] Guayaibí
        clave: guayaibi
- 53. [calle] Ingeniero Julio Krause
+ 43. [calle] Ingeniero Julio Krause
        clave: ingeniero julio krause
- 54. [calle] Intendente Guerrico
+ 44. [calle] Intendente Guerrico
        clave: intendente guerrico
- 55. [calle] Isla de Galápagos
+ 45. [calle] Isla de Galápagos
        clave: isla de galapagos
- 56. [calle] J. F. Bateman
+ 46. [calle] J. F. Bateman
        clave: j f bateman
- 57. [calle] Jarilla
+ 47. [calle] Jarilla
        clave: jarilla
- 58. [calle] Jazmín del Paraguay
+ 48. [calle] Jazmín del Paraguay
        clave: jazmin del paraguay
- 59. [calle] Jose J. Podestá
+ 49. [calle] Jose J. Podestá
        clave: jose j podesta
- 60. [calle] José E. Carballido
+ 50. [calle] José E. Carballido
        clave: jose e carballido
- 61. [calle] José Julián Pérez
+ 51. [calle] José Julián Pérez
        clave: jose julian perez
- 62. [calle] José Ortega y Gasset
+ 52. [calle] José Ortega y Gasset
        clave: jose ortega y gasset
- 63. [calle] José P. Tamborini
+ 53. [calle] José P. Tamborini
        clave: jose p tamborini
- 64. [pasaje peatonal] José Penelón
+ 54. [pasaje peatonal] José Penelón
        clave: jose penelon
- 65. [calle] José R. Baltoré
+ 55. [calle] José R. Baltoré
        clave: jose r baltore
- 66. [calle] Juan Antonio Bibiloni
+ 56. [calle] Juan Antonio Bibiloni
        clave: juan antonio bibiloni
- 67. [calle] Juan Francisco de la Robla
+ 57. [calle] Juan Francisco de la Robla
        clave: juan francisco de la robla
- 68. [calle] Juan M. Thome
+ 58. [calle] Juan M. Thome
        clave: juan m thome
- 69. [calle] Juan P. Calou
+ 59. [calle] Juan P. Calou
        clave: juan p calou
- 70. [calle] Juan Ramírez de Velazco
+ 60. [calle] Juan Ramírez de Velazco
        clave: juan ramirez de velazco
- 71. [calle] Kolla
+ 61. [calle] Kolla
        clave: kolla
- 72. [calle] La Garza
+ 62. [calle] La Garza
        clave: la garza
- 73. [calle] Luis Alberto Herrera
+ 63. [calle] Luis Alberto Herrera
        clave: luis alberto herrera
- 74. [calle] Manuel Estévez
+ 64. [calle] Manuel Estévez
        clave: manuel estevez
- 75. [calle] Marie Langer
+ 65. [calle] Marie Langer
        clave: marie langer
- 76. [calle] Martín A. Malharro
+ 66. [calle] Martín A. Malharro
        clave: martin a malharro
- 77. [calle] Mayor Arturo Pedro Luisoni
+ 67. [calle] Mayor Arturo Pedro Luisoni
        clave: mayor arturo pedro luisoni
- 78. [calle] Mecánico Militar Leopoldo Atenzo
+ 68. [calle] Mecánico Militar Leopoldo Atenzo
        clave: mecanico militar leopoldo atenzo
- 79. [calle] Miguel A. Camino
+ 69. [calle] Miguel A. Camino
        clave: miguel a camino
- 80. [calle] Mochica
+ 70. [calle] Mochica
        clave: mochica
- 81. [calle] Norma Colombatto
+ 71. [calle] Norma Colombatto
        clave: norma colombatto
- 82. [calle] Padre Juan Bautista Neumann
+ 72. [calle] Padre Juan Bautista Neumann
        clave: padre juan bautista neumann
- 83. [calle] Paico
+ 73. [calle] Paico
        clave: paico
- 84. [paseo] Paseo de los Granaderos
+ 74. [paseo] Paseo de los Granaderos
        clave: paseo de los granaderos
- 85. [paseo] Paseo de los Ombúes
+ 75. [paseo] Paseo de los Ombúes
        clave: paseo de los ombues
- 86. [paseo] Paseo Marcela Brenda Iglesias
+ 76. [paseo] Paseo Marcela Brenda Iglesias
        clave: paseo marcela brenda iglesias
- 87. [calle] Pontederia
+ 77. [calle] Pontederia
        clave: pontederia
- 88. [autopista] Presidente Doctor Arturo Umberto Illia
+ 78. [autopista] Presidente Doctor Arturo Umberto Illia
        clave: presidente doctor arturo umberto illia
- 89. [autopista] Presidente Héctor J. Cámpora
+ 79. [autopista] Presidente Héctor J. Cámpora
        clave: presidente hector j campora
- 90. [calle] Repúbllca
-       clave: republlca
- 91. [calle] Santiago Costamagna
+ 80. [calle] Santiago Costamagna
        clave: santiago costamagna
- 92. [calle] Sauco
+ 81. [calle] Sauco
        clave: sauco
- 93. [calle] Soldado Archivista Miguel Santi
+ 82. [calle] Soldado Archivista Miguel Santi
        clave: soldado archivista miguel santi
- 94. [calle] Teniente de Navío Cándido de Lasala
+ 83. [calle] Teniente de Navío Cándido de Lasala
        clave: teniente de navio candido de lasala
- 95. [calle] Teniente General Eustoquio Frías
+ 84. [calle] Teniente General Eustoquio Frías
        clave: teniente general eustoquio frias
- 96. [calle] Teniente General Pablo Riccheri
+ 85. [calle] Teniente General Pablo Riccheri
        clave: teniente general pablo riccheri
- 97. [calle] Vicente Anastasio de Echevarría
+ 86. [calle] Vicente Anastasio de Echevarría
        clave: vicente anastasio de echevarria
- 98. [calle] Victoriano E. Montes
+ 87. [calle] Victoriano E. Montes
        clave: victoriano e montes
- 99. [calle] Ángel M. Giménez
+ 88. [calle] Ángel M. Giménez
        clave: angel m gimenez
-100. [calle] Ñandubay
+ 89. [calle] Ñandubay
        clave: nandubay

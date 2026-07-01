@@ -113,6 +113,17 @@ def way_mas_cercano(lat, lon, radio_m=RADIO_METROS):
     return ways[0]
 
 
+def way_por_id(way_id):
+    """Trae un way específico por su OSM id (para calles sin nombre o mal
+    etiquetadas en OSM). Devuelve el elemento way o None."""
+    data = overpass(f'[out:json][timeout:25];way({int(way_id)});out geom;')
+    if not data:
+        return None
+    ways = [el for el in data.get("elements", [])
+            if el.get("type") == "way" and el.get("geometry")]
+    return ways[0] if ways else None
+
+
 def todos_los_ways_con_nombre(name):
     """Trae TODOS los ways highway en CABA con el name exacto dado."""
     if not name:
@@ -167,16 +178,26 @@ def punto_fallback(lat, lon):
     }
 
 
-def resolver_override(clave_excel, lat, lon, osm_name=None):
+def resolver_override(clave_excel, lat, lon, osm_name=None, way_id=None):
     """
     Intenta resolver geometría completa. Aplica check de similitud entre
     nombre del Excel y nombre OSM del way más cercano. Si no se parece,
     devuelve pin + sugerencia del nombre OSM encontrado para revisión manual.
 
-    Si se pasa `osm_name` (p. ej. calles renombradas, cuyo nombre OSM no se
-    parece al del Excel), se saltea el chequeo de similitud y se trae la línea
-    completa directamente por ese nombre.
+    Si se pasa `way_id`, se usa ese way de OSM directamente (para calles que
+    OSM tiene SIN nombre o mal etiquetadas, donde ni el punto ni el nombre
+    alcanzan). Si se pasa `osm_name` (calles renombradas), se saltea el
+    chequeo de similitud y se trae la línea completa por ese nombre.
     """
+    if way_id:
+        w = way_por_id(way_id)
+        time.sleep(1.1)
+        if w:
+            geo = ways_a_linea([w])
+            if geo:
+                return geo, f"línea por way_id: {way_id} ({geo['ways']} ways)", None
+        # No se pudo traer el way: cae al flujo normal.
+
     if osm_name:
         todos = todos_los_ways_con_nombre(osm_name)
         time.sleep(1.1)
@@ -259,8 +280,10 @@ def main():
         # Para comparar similitud uso el nombre legible del Excel, no la clave
         nombre_excel = entradas[0]["nombre_busqueda"]
         osm_name = coords.get("osm_name") if isinstance(coords, dict) else None
+        way_id = coords.get("way_id") if isinstance(coords, dict) else None
 
-        geo, mensaje, sugerencia = resolver_override(nombre_excel, lat, lon, osm_name)
+        geo, mensaje, sugerencia = resolver_override(
+            nombre_excel, lat, lon, osm_name, way_id)
 
         # Escribir bajo el id de cada entrada con esa clave.
         for c in entradas:
