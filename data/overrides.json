@@ -248,5 +248,78 @@
         "lat": -34.581852039731444,
         "lon": -58.38514565979427,
         "osm_name": "Jarillo"
+    },
+    "jose j podesta": {
+        "lat": -34.614714293629646,
+        "lon": -58.52747520272873,
+        "osm_name": "José Podestá"
+    },
+    "jose ortega y gasset": {
+        "lat": -34.56956215741046,
+        "lon": -58.43213378590926,
+        "osm_name": "Ortega y Gasset"
+    },
+    "jose p tamborini": {
+        "lat": -34.56015826162201,
+        "lon": -58.47918723280395
+    },
+    "juan antonio bibiloni": {
+        "lat": -34.58201662273818,
+        "lon": -58.39257046324129,
+        "osm_name": "Juan A. Bibiloni"
+    },
+    "juan m thome": {
+        "lat": -34.656573986975715,
+        "lon": -58.417624304484356,
+        "osm_name": "Juan Thome"
+    },
+    "juan ramirez de velazco": {
+        "lat": -34.59531164962616,
+        "lon": -58.43942368354808,
+        "osm_name": "Juan Ramírez de Velasco"
+    },
+    "luis alberto herrera": {
+        "lat": -34.671951955757514,
+        "lon": -58.48909569150584
+    },
+    "martin a malharro": {
+        "lat": -34.54158231720911,
+        "lon": -58.47547250197251,
+        "osm_name": "Martín Malharro"
+    },
+    "mayor arturo pedro luisoni": {
+        "lat": -34.58433233668173,
+        "lon": -58.37110558595415,
+        "osm_name": "Mayor Arturo Luisoni"
+    },
+    "jose julian perez": {
+        "lat": -34.61814490790109,
+        "lon": -58.41908322404725,
+        "osm_name": "José J. Pérez"
+    },
+    "jose r baltore": {
+        "lat": -34.648482400424754,
+        "lon": -58.52181190196567,
+        "osm_name": "José Baltore"
+    },
+    "juan francisco de la robla": {
+        "lat": -34.621877106973145,
+        "lon": -58.47458929214033,
+        "osm_name": "Pasaje Juan F. De La Robla"
+    },
+    "juan p calou": {
+        "lat": -34.675739141751265,
+        "lon": -58.4714069449447,
+        "osm_name": "Juan Calou"
+    },
+    "miguel a camino": {
+        "lat": -34.5647283593259,
+        "lon": -58.50121694255809,
+        "osm_name": "Miguel Andrés Camino"
+    },
+    "padre juan bautista neumann": {
+        "lat": -34.55013368845073,
+        "lon": -58.45248978421747,
+        "osm_name": "Padre Juan B. Neumann"
     }
 }
