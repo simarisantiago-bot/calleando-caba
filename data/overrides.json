@@ -321,5 +321,43 @@
         "lat": -34.55013368845073,
         "lon": -58.45248978421747,
         "osm_name": "Padre Juan B. Neumann"
+    },
+    "teniente general eustoquio frias": {
+        "lat": -34.60271344281108,
+        "lon": -58.43508829278962
+    },
+    "teniente general pablo riccheri": {
+        "lat": -34.548485343754095,
+        "lon": -58.452462014266914,
+        "osm_name": "Teniente General Pablo Ricchieri"
+    },
+    "victoriano e montes": {
+        "lat": -34.548738548039054,
+        "lon": -58.49376192382632
+    },
+    "presidente doctor arturo umberto illia": {
+        "lat": -34.57416430099331,
+        "lon": -58.39265681589334,
+        "osm_name": "Autopista Arturo Illia"
+    },
+    "santiago costamagna": {
+        "lat": -34.687342057640606,
+        "lon": -58.46327519749437,
+        "osm_name": "Santiago Costamanga"
+    },
+    "vicente anastasio de echevarria": {
+        "lat": -34.61410731157485,
+        "lon": -58.528738882246856,
+        "osm_name": "Vicente A. de Echevarría"
+    },
+    "angel m gimenez": {
+        "lat": -34.61928296242782,
+        "lon": -58.4375963902925,
+        "osm_name": "Ángel María Giménez"
+    },
+    "presidente hector j campora": {
+        "lat": -34.663306978296475,
+        "lon": -58.45203326163955,
+        "osm_name": "Autopista Presidente Héctor José Cámpora"
     }
 }
