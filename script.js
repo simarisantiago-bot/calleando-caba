@@ -63,6 +63,7 @@
     let barriosGeo = null;         // FeatureCollection de los 48 barrios (heatmap)
     let curiosidades = null;       // datos de curiosidades.json (5 secciones temáticas)
     let categoriaActiva = "";      // filtro de categoría: "" = todas
+    let capaBase = null;           // capa base: TODAS las calles clickeables (canvas)
     let capaCategoria = null;      // overlay con todas las calles de la categoría
     let capaHeatmap = null;        // heatmap de barrios por densidad de categoría
     let capaCercaMio = null;       // overlay con las calles cercanas al usuario
@@ -551,6 +552,79 @@
 
         // El heatmap va POR DEBAJO de los círculos individuales
         capaHeatmap.bringToBack();
+    }
+
+    /**
+     * Capa base: dibuja TODAS las calles/plazas cacheadas, tenues y siempre
+     * visibles, para que se pueda hacer click en cualquiera y ver su popup
+     * (sin depender de la búsqueda ni del filtro de categoría).
+     *
+     * Se renderiza con canvas (L.canvas) en un pane inferior propio para que
+     * aguante ~2.900 geometrías sin lag y quede por debajo de la selección,
+     * el overlay de categoría y el heatmap. limpiarCapa() NO la toca.
+     */
+    function dibujarCapaBase() {
+        if (capaBase) {
+            mapa.removeLayer(capaBase);
+            capaBase = null;
+        }
+        if (!mapa.getPane("baseCalles")) {
+            mapa.createPane("baseCalles");
+            // overlayPane usa zIndex 400; dejamos la base por debajo.
+            mapa.getPane("baseCalles").style.zIndex = 350;
+        }
+        const renderer = L.canvas({ pane: "baseCalles" });
+        const capas = [];
+
+        // La capa es INVISIBLE (opacity 0): el mapa se ve igual que antes.
+        // Solo sirve para captar el click. El `weight`/`radius` define el área
+        // de click alrededor de cada calle (no se dibuja nada visible).
+        for (const c of calles) {
+            const geo = geoCache[c.id || c.clave];
+            if (!geo) continue;
+
+            if (geo.tipo === "line" && geo.geometry) {
+                const layer = L.geoJSON(geo.geometry, {
+                    renderer,
+                    pane: "baseCalles",
+                    interactive: true,
+                    style: {
+                        stroke: true,
+                        weight: 7,     // área de click generosa
+                        opacity: 0,    // invisible
+                    },
+                });
+                layer.bindTooltip(c.nombre_busqueda, {
+                    sticky: true,
+                    direction: "top",
+                    className: "barrio-tooltip",
+                });
+                layer.on("click", () => seleccionarEntrada(c));
+                capas.push(layer);
+            } else {
+                const latlng = centroideDeGeo(geo);
+                if (!latlng) continue;
+                const marker = L.circleMarker(latlng, {
+                    renderer,
+                    pane: "baseCalles",
+                    interactive: true,
+                    radius: 8,         // área de click
+                    stroke: false,
+                    opacity: 0,        // invisible
+                    fillOpacity: 0,
+                });
+                marker.bindTooltip(c.nombre_busqueda, {
+                    direction: "top",
+                    offset: [0, -4],
+                    className: "barrio-tooltip",
+                });
+                marker.on("click", () => seleccionarEntrada(c));
+                capas.push(marker);
+            }
+        }
+
+        capaBase = L.layerGroup(capas).addTo(mapa);
+        console.log(`Capa base clickeable: ${capas.length} odónimos`);
     }
 
     /**
@@ -1832,6 +1906,7 @@
     async function main() {
         inicializarMapa();
         await cargarDatos();
+        dibujarCapaBase();
         conectarEventos();
     }
 
