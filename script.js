@@ -62,6 +62,7 @@
     let calleBarrios = {};         // {clave: nombreBarrio} mapping
     let barriosGeo = null;         // FeatureCollection de los 48 barrios (heatmap)
     let curiosidades = null;       // datos de curiosidades.json (5 secciones temáticas)
+    let fotosManual = {};          // {clave: {thumbUrl, pageUrl, autor, licencia}} precomputado
     let categoriaActiva = "";      // filtro de categoría: "" = todas
     let capaBase = null;           // capa base: TODAS las calles clickeables (canvas)
     let capaCategoria = null;      // overlay con todas las calles de la categoría
@@ -353,12 +354,13 @@
 
     async function cargarDatos() {
         // Carga en paralelo: dataset, cache geo, barrios (heatmap), mapping y curiosidades.
-        const [respCalles, respCache, respBarrios, respMap, respCuri] = await Promise.all([
+        const [respCalles, respCache, respBarrios, respMap, respCuri, respFotos] = await Promise.all([
             fetch("data/calles.json"),
             fetch("data/geo_cache.json").catch(() => null),
             fetch("data/barrios.geojson").catch(() => null),
             fetch("data/calle_barrios.json").catch(() => null),
             fetch("data/curiosidades.json").catch(() => null),
+            fetch("data/fotos.json").catch(() => null),
         ]);
 
         if (!respCalles || !respCalles.ok) {
@@ -405,6 +407,12 @@
                 curiosidades = await respCuri.json();
                 console.log(`Curiosidades cargadas: ${curiosidades.secciones.length} secciones`);
             } catch (_) { curiosidades = null; }
+        }
+        if (respFotos && respFotos.ok) {
+            try {
+                fotosManual = await respFotos.json();
+                console.log(`Fotos precomputadas: ${Object.keys(fotosManual).length}`);
+            } catch (_) { fotosManual = {}; }
         }
 
         // Vincular cada entrada a su barrio para uso en autocomplete
@@ -1415,14 +1423,19 @@
     async function montarMediaPopup(mediaId, entrada) {
         if (!document.getElementById(mediaId)) return;
         const color = colorParaEntrada(entrada);
-        const terminos = terminosBusqueda(entrada);
 
-        // Probamos los términos en orden hasta encontrar una imagen.
-        let data = null;
-        for (const t of terminos) {
-            data = await fetchStreetImage(t);
-            if (!document.getElementById(mediaId)) return; // popup cerrado
-            if (data && data.thumbUrl) break;
+        // 1) Foto precomputada (data/fotos.json — recuperadas vía Wikidata/Commons
+        //    o curadas a mano). Tiene prioridad sobre la búsqueda en vivo.
+        let data = fotosManual[entrada.clave] || null;
+
+        // 2) Si no hay precomputada, probamos los términos en Wikipedia en vivo.
+        if (!data || !data.thumbUrl) {
+            const terminos = terminosBusqueda(entrada);
+            for (const t of terminos) {
+                data = await fetchStreetImage(t);
+                if (!document.getElementById(mediaId)) return; // popup cerrado
+                if (data && data.thumbUrl) break;
+            }
         }
 
         if (data && data.thumbUrl) {

@@ -1,0 +1,23 @@
+PASO 2 — Wikidata sobre las sin foto
+Sin foto (baseline): 1007
+Recuperadas vía Wikidata: 427
+
+Cobertura ANTES:   1954/2961 (66.0%)
+Cobertura DESPUÉS: 2381/2961 (80.4%)
+Salto: +427 (14.4 puntos)
+
+Recuperadas por categoría:
+  PERSONA                +221
+  LUGAR                  +110
+  NATURALEZA             +22
+  ACCIÓN MILITAR         +15
+  CONCEPTO               +12
+  OTROS                  +10
+  PUEBLOS ORIGINARIOS    +8
+  RÍO                    +6
+  CUERPO MILITAR         +6
+  ARTE                   +6
+  INSTITUCIÓN            +4
+  RELIGIÓN               +4
+  FECHA                  +2
+  LITERATURA             +1
