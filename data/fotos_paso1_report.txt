@@ -1,0 +1,22 @@
+PASO 1 — en.wikipedia sobre las que aún no tienen foto
+Sin foto (tras es.wiki + Wikidata): 580
+Recuperadas vía en.wikipedia: 291
+
+Cobertura ANTES:   2381/2961 (80.4%)
+Cobertura DESPUÉS: 2672/2961 (90.2%)
+Salto: +291 (9.8 puntos)
+
+Recuperadas por categoría:
+  PERSONA                +183
+  LUGAR                  +29
+  FECHA                  +14
+  BARCO                  +12
+  ACCIÓN MILITAR         +12
+  CONCEPTO               +11
+  OTROS                  +8
+  NATURALEZA             +7
+  ARTE                   +6
+  RÍO                    +3
+  RELIGIÓN               +3
+  CUERPO MILITAR         +2
+  LITERATURA             +1
