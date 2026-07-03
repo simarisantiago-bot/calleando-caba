@@ -1,0 +1,24 @@
+AVENIDAS con geometría posiblemente incompleta: 11
+
+  falta ~4625m | Suárez  [suarez|calle]
+      cache: 13 ways, 2357m (overpass-bulk)   OSM local: 32 ways, 6982m
+  falta ~3569m | Chorroarín  [chorroarin|avenida]
+      cache: 5 ways, 178m (overpass-bulk)   OSM local: 37 ways, 3747m
+  falta ~1973m | Congreso  [congreso|avenida]
+      cache: 55 ways, 5280m (fix-avenidas-v2)   OSM local: 73 ways, 7253m
+  falta ~1658m | Avellaneda  [avellaneda|avenida]
+      cache: 27 ways, 4551m (fix-avenidas-v2)   OSM local: 38 ways, 6209m
+  falta ~1443m | Raúl Scalabrini Ortiz  [raul scalabrini ortiz|avenida]
+      cache: 9 ways, 1327m (overpass-bulk)   OSM local: 24 ways, 2770m
+  falta ~1407m | San Pedrito  [san pedrito|avenida]
+      cache: 25 ways, 4011m (overpass-bulk)   OSM local: 36 ways, 5418m
+  falta ~1221m | Asamblea  [asamblea|avenida]
+      cache: 24 ways, 2344m (fix-avenidas-v2)   OSM local: 31 ways, 3565m
+  falta ~1153m | Teniente General Donato Álvarez  [teniente general donato alvarez|avenida]
+      cache: 18 ways, 2467m (overpass-bulk)   OSM local: 24 ways, 3619m
+  falta ~1075m | García del Río  [garcia del rio|avenida]
+      cache: 25 ways, 2694m (fix-avenidas)   OSM local: 28 ways, 3769m
+  falta ~967m | Comodoro Martín Rivadavia  [comodoro martin rivadavia|avenida]
+      cache: 13 ways, 1918m (overpass-bulk)   OSM local: 20 ways, 2885m
+  falta ~778m | Cerviño  [cervino|avenida]
+      cache: 7 ways, 1657m (overpass-bulk)   OSM local: 11 ways, 2435m
