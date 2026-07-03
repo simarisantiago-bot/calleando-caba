@@ -1,0 +1,36 @@
+CALLES/pasajes con geometría posiblemente incompleta: 17
+
+  falta ~2511m | Marcelo T. de Alvear  [marcelo t de alvear|calle]
+      cache: Nonew 316m (nominatim)   OSM cerca: 13w 2827m
+  falta ~2444m | Agrelo  [agrelo|calle]
+      cache: 8w 2189m (overpass-bulk)   OSM cerca: 17w 4633m
+  falta ~2296m | Larrazábal  [larrazabal|calle]
+      cache: 34w 5591m (overpass-bulk)   OSM cerca: 43w 7887m
+  falta ~2264m | Unanué  [unanue|calle]
+      cache: 8w 2517m (overpass-bulk)   OSM cerca: 17w 4780m
+  falta ~2095m | Doctor Ramón Carrillo  [doctor ramon carrillo|calle]
+      cache: 9w 1143m (overpass-bulk)   OSM cerca: 9w 3237m
+  falta ~2006m | Irala  [irala|calle]
+      cache: 12w 2299m (overpass-bulk)   OSM cerca: 21w 4305m
+  falta ~1794m | General Manuel A. Rodríguez  [general manuel a rodriguez|calle]
+      cache: Nonew 671m (nominatim)   OSM cerca: 8w 2465m
+  falta ~1520m | Olavarría  [olavarria|calle]
+      cache: 22w 4033m (overpass-bulk)   OSM cerca: 25w 5553m
+  falta ~1371m | Adolfo P. Carranza  [adolfo p carranza|calle]
+      cache: Nonew 495m (nominatim)   OSM cerca: 7w 1866m
+  falta ~1309m | Avelino Díaz  [avelino diaz|calle]
+      cache: 15w 3344m (overpass-bulk)   OSM cerca: 17w 4653m
+  falta ~1240m | Alfredo R. Bufano  [alfredo r bufano|calle]
+      cache: Nonew 1693m (nominatim)   OSM cerca: 6w 2933m
+  falta ~931m | Abraham J. Luppi  [abraham j luppi|calle]
+      cache: Nonew 448m (nominatim)   OSM cerca: 9w 1379m
+  falta ~898m | José A. Cortejarena  [jose a cortejarena|calle]
+      cache: Nonew 698m (nominatim)   OSM cerca: 5w 1596m
+  falta ~824m | Carlos F. Melo  [carlos f melo|calle]
+      cache: Nonew 197m (nominatim)   OSM cerca: 7w 1021m
+  falta ~549m | Polonia  [polonia|calle]
+      cache: 1w 114m (overpass-bulk)   OSM cerca: 3w 663m
+  falta ~480m | Calle 9 - Alberto Chejolán  [calle 9 alberto chejolan|calle]
+      cache: Nonew 162m (nominatim)   OSM cerca: 8w 642m
+  falta ~454m | Federico García Lorca  [federico garcia lorca|calle]
+      cache: 7w 665m (overpass-bulk)   OSM cerca: 12w 1119m
