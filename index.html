@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calleando CABA · Mapa interactivo</title>
 
-    <meta name="description" content="Mapa interactivo del callejero de Buenos Aires: calles, plazas y avenidas con la historia de a quién o qué homenajean. 2.964 odónimos con filtros por barrio, comuna y categoría." />
+    <meta name="description" content="Mapa interactivo del callejero de Buenos Aires: calles, plazas y avenidas con la historia de a quién o qué homenajean. 2.961 odónimos, con búsqueda instantánea y filtro por categoría." />
     <meta name="theme-color" content="#1a73e8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="alternate icon" href="favicon.svg" />
@@ -13,7 +13,7 @@
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Calleando CABA — Mapa interactivo del callejero porteño" />
-    <meta property="og:description" content="Buscá cualquier calle, plaza o avenida de CABA y conocé a quién o qué homenajea. Con filtros por barrio, comuna y categoría." />
+    <meta property="og:description" content="Buscá cualquier calle, plaza o avenida de CABA y conocé a quién o qué homenajea. Con búsqueda instantánea y filtro por categoría." />
     <meta property="og:image" content="favicon.svg" />
     <meta property="og:site_name" content="Calleando CABA" />
     <meta property="og:locale" content="es_AR" />
@@ -21,7 +21,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Calleando CABA — Mapa interactivo" />
-    <meta name="twitter:description" content="Mapa del callejero porteño con la historia de cada calle. 2.964 odónimos, filtros por barrio y categoría." />
+    <meta name="twitter:description" content="Mapa del callejero porteño con la historia de cada calle. 2.961 odónimos, con búsqueda y filtro por categoría." />
     <meta name="twitter:image" content="favicon.svg" />
 
     <!-- Leaflet (mapa) -->
@@ -237,13 +237,13 @@
                     <strong>Calleando CABA</strong> es una herramienta digital de datos abiertos que centraliza y visualiza de forma accesible el <strong>nomenclátor oficial de la Ciudad de Buenos Aires</strong>. Incluye:
                 </p>
                 <ul class="about-lista">
-                    <li><strong>2.964 odónimos</strong> (calles, avenidas, plazas, pasajes, puentes y espacios públicos)</li>
+                    <li><strong>2.961 odónimos</strong> (calles, avenidas, plazas, pasajes, puentes y espacios públicos)</li>
                     <li><strong>Historia completa</strong> de a quién o qué homenajea cada lugar</li>
                     <li><strong>Clasificación por categoría</strong>: personas, lugares, fechas y otros</li>
                     <li><strong>Georreferenciación precisa</strong> en los 48 barrios y 15 comunas</li>
                 </ul>
                 <p class="about-parrafo">
-                    Permite búsqueda avanzada, filtrado por zona, análisis estadístico y exploración temática del patrimonio urbano de la ciudad.
+                    Permite búsqueda instantánea, filtro por categoría, análisis estadístico y exploración temática del patrimonio urbano, con click directo en el mapa para ver la ficha de cada odónimo.
                 </p>
             </section>
 
@@ -251,10 +251,10 @@
                 <h3>Capacidades principales</h3>
                 <ul class="about-lista">
                     <li><strong>Búsqueda inteligente</strong>: Por nombre, descripción o tema (ej: "Malvinas", "tango", "científicos").</li>
-                    <li><strong>Filtrado multidimensional</strong>: Por barrio, comuna y categoría para análisis temático.</li>
-                    <li><strong>Visualización geográfica</strong>: Mapa interactivo con codificación por color según tipo de odónimo.</li>
-                    <li><strong>Overlays administrativos</strong>: Divisiones de 48 barrios y 15 comunas para contexto geopolítico.</li>
-                    <li><strong>Análisis estadístico</strong>: Distribución de odónimos por barrio, categoría y año.</li>
+                    <li><strong>Filtro por categoría</strong>: personas, lugares, fechas, naturaleza y más.</li>
+                    <li><strong>Trazado real en el mapa</strong>: Click en cualquier calle para ver su ficha, con foto e historia.</li>
+                    <li><strong>Mapa de calor por barrio</strong>: Densidad de odónimos de una categoría sobre los 48 barrios.</li>
+                    <li><strong>Análisis estadístico</strong>: Distribución por categoría y curiosidades del callejero.</li>
                     <li><strong>Exploración guiada</strong>: Modo aleatorio y búsqueda por geolocalización ("Cerca mío").</li>
                     <li><strong>Múltiples temas visuales</strong>: Claro, oscuro y Voyager para diferentes contextos.</li>
                 </ul>
@@ -265,11 +265,11 @@
                 <ul class="about-lista">
                     <li><strong>Nomenclátor oficial</strong>: Datos del callejero de CABA con validación y deduplicación por nombre + tipo.</li>
                     <li><strong>Georreferenciación precisa</strong>: Integración con OpenStreetMap (Nominatim y Overpass API) para geometría de calles y ubicación exacta.</li>
-                    <li><strong>Límites administrativos</strong>: Polígonos oficiales de los 48 barrios y 15 comunas del Gobierno de la Ciudad.</li>
+                    <li><strong>Límites administrativos</strong>: Polígonos oficiales de los 48 barrios del Gobierno de la Ciudad (usados para el mapa de calor).</li>
                     <li><strong>Cartografía base</strong>: CartoDB (Positron / Voyager / Dark Matter) con tiles de OpenStreetMap, bajo licencia abierta.</li>
                 </ul>
                 <p class="about-parrafo" style="margin-top: 12px; font-size: 13px; color: #5f6368;">
-                    <em>Cobertura esperada: ~70% del nomenclátor con geometría. Los odónimos restantes se encuentran listados pero sin localización de geometría debido a variaciones de nombres o referencias históricas.</em>
+                    <em>Cobertura actual: ~92% del nomenclátor con geometría. Los odónimos restantes se encuentran listados pero sin localización, por variaciones de nombres o referencias históricas no presentes en OpenStreetMap.</em>
                 </p>
             </section>
 
@@ -281,7 +281,7 @@
                     <li><strong>Datos abiertos</strong>: Exposición del nomenclátor de la ciudad en formato accesible y descargable.</li>
                     <li><strong>Patrimonio cultural</strong>: Registro visual de homenajes, personajes y lugares significativos.</li>
                     <li><strong>Turismo</strong>: Herramienta de exploración temática para visitantes.</li>
-                    <li><strong>Investigación académica</strong>: API de datos y análisis estadístico de nomenclatura urbana.</li>
+                    <li><strong>Investigación académica</strong>: Dataset abierto y análisis estadístico de la nomenclatura urbana.</li>
                 </ul>
             </section>
 
@@ -307,7 +307,7 @@
                 <ul class="about-lista">
                     <li><strong>Datos de nomenclátor</strong>: Disponibles para descarga y reutilización en sistemas municipales.</li>
                     <li><strong>Código fuente</strong>: Completamente replicable y personalizable para diferentes jurisdicciones.</li>
-                    <li><strong>Integración</strong>: API de datos JSON para integración en sistemas municipales existentes.</li>
+                    <li><strong>Datos abiertos</strong>: Dataset en formato JSON, descargable y reutilizable.</li>
                 </ul>
                 <p class="about-parrafo" style="margin-top: 12px;">
                     Para reportar errores o sugerir mejoras, visitá el <a href="https://github.com/simarisantiago-bot/calleando-caba/issues" target="_blank" rel="noopener">repositorio del proyecto</a>.
