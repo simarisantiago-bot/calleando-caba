@@ -270,6 +270,28 @@ def main():
         if not entradas:
             invalidos.append(clave)
             continue
+
+        # Línea manual: lista de puntos [[lat, lon], ...] dibujados a mano
+        # (calles que OSM no tiene, p. ej. Villa 31 / barrio Padre Mugica).
+        if isinstance(coords, dict) and coords.get("line"):
+            pts = coords["line"]
+            lats = [p[0] for p in pts]
+            lons = [p[1] for p in pts]
+            geo = {
+                "tipo": "line",
+                "geometry": {"type": "LineString",
+                             "coordinates": [[lon, lat] for lat, lon in pts]},
+                "bbox": [min(lats), max(lats), min(lons), max(lons)],
+                "source": "manual-line",
+                "ways": 1,
+            }
+            for c in entradas:
+                cache[c["id"]] = geo
+            aplicados += 1
+            print(f"  [{i:2d}/{len(overrides)}] LIN {entradas[0]['nombre_busqueda'][:34]:34s}"
+                  f" -> {len(pts)} puntos manuales")
+            continue
+
         try:
             lat = float(coords["lat"])
             lon = float(coords["lon"])
