@@ -4592,11 +4592,11 @@
 "titulo": "Administración de Parques Nacionales"
 },
 "pavon": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Carlos_Pavon_Plummer_02.JPG",
-"pageUrl": "https://en.wikipedia.org/wiki/Carlos_Pav%C3%B3n",
-"autor": "JVC3ETA",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Carlos Pavón"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Batalla_de_Pavon.jpg/500px-Batalla_de_Pavon.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Pav%C3%B3n",
+"autor": "Ignacio Manzoni",
+"licencia": "Public domain",
+"titulo": "Batalla de Pavón"
 },
 "pedro echague": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Echague%2C_Isabela_%282022-present%29.png/500px-Flag_of_Echague%2C_Isabela_%282022-present%29.png",
@@ -4914,11 +4914,11 @@
 "titulo": "Totoral Department"
 },
 "uspallata": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Delegation_municipal%2C_Uspallata.jpg/500px-Delegation_municipal%2C_Uspallata.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Uspallata",
-"autor": "Bernard Gagnon",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Uspallata"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pasouspallata.JPG/500px-Pasouspallata.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Paso_de_Uspallata",
+"autor": "",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Paso de Uspallata"
 },
 "timoteo gordillo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Chacho_Coudet_en_San_Luis.jpg/500px-Chacho_Coudet_en_San_Luis.jpg",
@@ -5034,5 +5034,29 @@
 "autor": "Parallelepiped09",
 "licencia": "CC BY-SA 4.0",
 "titulo": "Cochabamba"
+},
+"constitucion": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Museo_del_Bicentenario_-_Constituci%C3%B3n_de_la_Confederaci%C3%B3n_Argentina.jpg/500px-Museo_del_Bicentenario_-_Constituci%C3%B3n_de_la_Confederaci%C3%B3n_Argentina.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Constituci%C3%B3n_argentina_de_1853",
+"autor": "Museo del Bicentenario",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Constitución argentina de 1853"
+},
+"caseros": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Batalla_de_Caseros%2C_Litografia_de_Carlo_Penuti%2C_ca._1852.jpg/500px-Batalla_de_Caseros%2C_Litografia_de_Carlo_Penuti%2C_ca._1852.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Caseros",
+"autor": "Carlo Penuti",
+"licencia": "Public domain",
+"titulo": "Batalla de Caseros"
+},
+"suarez": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Isidoro_suarez.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Manuel_Isidoro_Su%C3%A1rez",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Manuel Isidoro Suárez"
+},
+"rocha": {
+"sinFoto": true
 }
 }
