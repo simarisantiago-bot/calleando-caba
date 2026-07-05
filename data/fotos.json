@@ -1365,11 +1365,11 @@
 "titulo": "Humberto Selvetti"
 },
 "humberto i": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%ADnea_H%2C_entrepiso_de_la_estaci%C3%B3n_Humberto_1%C2%BA_04_%28Buenos_Aires%2C_noviembre_2008%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:L%C3%ADnea_H%2C_entrepiso_de_la_estaci%C3%B3n_Humberto_1%C2%BA_04_%28Buenos_Aires%2C_noviembre_2008%29.jpg",
-"autor": "Cristian O. Arone",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Humberto I"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Fratelli_Vianelli_%28Giuseppe_e_Luigi%2C_flor._1860-1890_ca%29_-_VE_-_Umberto_I_di_Savoia_1.jpg/500px-Fratelli_Vianelli_%28Giuseppe_e_Luigi%2C_flor._1860-1890_ca%29_-_VE_-_Umberto_I_di_Savoia_1.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Humberto_I_de_Italia",
+"autor": "Fratelli Vianelli",
+"licencia": "Public domain",
+"titulo": "Humberto I de Italia"
 },
 "iguazu": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Iguazu_ulmeri.jpg?width=480",
@@ -5020,5 +5020,19 @@
 },
 "doblas": {
 "sinFoto": true
+},
+"carlos calvo": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Carlos_calvo_Palais_de_la_Paix_Peace_Palace_Den_Haag_The_Hague_La_Haye.jpg/500px-Carlos_calvo_Palais_de_la_Paix_Peace_Palace_Den_Haag_The_Hague_La_Haye.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Carlos_Calvo_(jurista_argentino)",
+"autor": "Lybil",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Carlos Calvo (jurista argentino)"
+},
+"cochabamba": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo%20El%20Hospicio%20en%20Cochabamba.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Templo%20El%20Hospicio%20en%20Cochabamba.jpg",
+"autor": "Parallelepiped09",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Cochabamba"
 }
 }
