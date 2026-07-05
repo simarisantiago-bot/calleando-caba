@@ -1428,6 +1428,13 @@
         //    o curadas a mano). Tiene prioridad sobre la búsqueda en vivo.
         let data = fotosManual[entrada.clave] || null;
 
+        // 1b) Marca "sinFoto": el odónimo no tiene retrato adecuado y la búsqueda
+        //     en vivo traía una imagen incorrecta -> forzamos el ícono de categoría.
+        if (data && data.sinFoto) {
+            mostrarFallbackMedia(mediaId, color);
+            return;
+        }
+
         // 2) Si no hay precomputada, probamos los términos en Wikipedia en vivo.
         if (!data || !data.thumbUrl) {
             const terminos = terminosBusqueda(entrada);
