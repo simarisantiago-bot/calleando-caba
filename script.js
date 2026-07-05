@@ -1340,16 +1340,26 @@
         c.innerHTML = `<div class="popup-media-fallback">${iconoFallback()}</div>`;
     }
 
+    // Commons a veces devuelve el campo Artist/Licencia con el texto repetido
+    // dos veces seguidas ("Unknown authorUnknown author"): lo colapsamos.
+    function sinDuplicado(s) {
+        s = String(s || "").trim();
+        const n = s.length;
+        if (n >= 4 && n % 2 === 0 && s.slice(0, n / 2) === s.slice(n / 2)) {
+            return s.slice(0, n / 2).trim();
+        }
+        return s;
+    }
+
     function construirCredito(data) {
         const partes = [];
         // El campo Artist de Commons a veces es un párrafo entero; lo acotamos.
         if (data.autor) {
-            const autor = data.autor.length > 55
-                ? data.autor.slice(0, 55).trimEnd() + "…"
-                : data.autor;
+            let autor = sinDuplicado(data.autor);
+            if (autor.length > 55) autor = autor.slice(0, 55).trimEnd() + "…";
             partes.push(escapeHtml(autor));
         }
-        if (data.licencia) partes.push(escapeHtml(data.licencia));
+        if (data.licencia) partes.push(escapeHtml(sinDuplicado(data.licencia)));
         const meta = partes.join(" · ");
         const link = `<a href="${escapeHtml(data.pageUrl)}" target="_blank" rel="noopener noreferrer">Wikipedia ↗</a>`;
         return `<div class="popup-media-credit">${meta ? meta + " · " : ""}${link}</div>`;
