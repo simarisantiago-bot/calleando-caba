@@ -1,0 +1,10 @@
+AVENIDAS con geometría posiblemente incompleta (tilde/prefijo): 4
+
+  falta ~2987m | Nazca  [nazca|avenida]
+      cache: 59w 5911m (fix-avenidas-v2)   OSM cerca: 8897m
+  falta ~2887m | Mariano Acosta  [mariano acosta|avenida]
+      cache: 26w 5219m (fix-avenidas-v2)   OSM cerca: 8106m
+  falta ~1100m | Cerviño  [cervino|avenida]
+      cache: 7w 1657m (overpass-bulk)   OSM cerca: 2757m
+  falta ~1010m | Valentín Alsina  [valentin alsina|avenida]
+      cache: 6w 2660m (overpass-bulk)   OSM cerca: 3669m
