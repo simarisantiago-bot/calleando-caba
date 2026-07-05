@@ -441,5 +441,10 @@
         "lat": -34.63073341361836,
         "lon": -58.381479267641836,
         "osm_name": "15 de Noviembre de 1889"
+    },
+    "velez sarsfield": {
+        "lat": -34.63428625804655,
+        "lon": -58.3903739353765,
+        "osm_name": "Avenida Vélez Sársfield"
     }
 }
