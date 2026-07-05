@@ -1,0 +1,612 @@
+CALLES PERSONA con foto que NO es de una persona: 305
+
+  Achega
+       foto de: Minde, Portugal  ->  Wikidata: NO es persona (es: freguesía)
+  Adolfo Gonzáles Chaves
+       foto de: Adolfo Gonzales Chaves  ->  Wikidata: NO es persona (es: asentamiento)
+  Aguilar
+       foto de: Saint Joseph the Patriarch Parish Church (Aguilar)  ->  Wikidata: NO es persona (es: iglesia parroquial católica)
+  Agustín Comastri
+       foto de: Vicario general de la Ciudad del Vaticano  ->  Wikidata: NO es persona (es: cargo)
+  Agustín R. Caffarena
+       foto de: República de La Boca  ->  Wikidata: NO es persona (es: micronación)
+  Aizpurúa
+       foto de: Cannabinoid  ->  Wikidata: NO es persona (es: group of chemical entities)
+  Albariño
+       foto de: Albariño  ->  Wikidata: NO es persona (es: variedad vinífera)
+  Albarracín
+       foto de: Frías de Albarracín  ->  Wikidata: NO es persona (es: enclave, municipio de Aragón)
+  Alberto Mortz
+       foto de: Signo de interrogación  ->  Wikidata: NO es persona (es: ?)
+  Alcaraz
+       foto de: QQ559140  ->  Wikidata: NO es persona (es: municipio de España)
+  Alejandro Petion
+       foto de: Alejandro Petión  ->  Wikidata: NO es persona (es: asentamiento)
+  Alfredo Gramajo Gutiérrez
+       foto de: Argentina  ->  Wikidata: NO es persona (es: Estado confesional, Estado soberano, país, nación)
+  Almagro
+       foto de: Corral de comedias de Almagro  ->  Wikidata: NO es persona (es: teatro, corral de comedias)
+  Ana María Janer
+       foto de: Ana María Janer (premetro de Buenos Aires)  ->  Wikidata: NO es persona (es: parada de tranvía)
+  Anasagasti
+       foto de: Anasagasti  ->  Wikidata: NO es persona (es: negocio, empresa)
+  Anchoris
+       foto de: Assembly of the Year XIII  ->  Wikidata: NO es persona (es: asamblea constituyente)
+  Antonio Cambiasso
+       foto de: Villa del Parque (Buenos Aires)  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Antonio L. Zolezzi
+       foto de: La guerra gaucha (película)  ->  Wikidata: NO es persona (es: película)
+  Aníbal Pedro Arbeletche
+       foto de: Elecciones legislativas de Argentina de 1936  ->  Wikidata: NO es persona (es: elección legislativa)
+  Aquino
+       foto de: Aquino  ->  Wikidata: NO es persona (es: comuna de Italia)
+  Arce
+       foto de: Acer (planta)  ->  Wikidata: NO es persona (es: taxón)
+  Arquitecto Arturo J. Dubourg
+       foto de: List of music students by teacher: G to J  ->  Wikidata: NO es persona (es: lista de Wikimedia relacionada con la música)
+  Arroyo
+       foto de: Arroyo  ->  Wikidata: NO es persona (es: ?)
+  Avalle
+       foto de: Condado de Chacón  ->  Wikidata: NO es persona (es: condado jurisdiccional)
+  Añasco
+       foto de: QQ2390910  ->  Wikidata: NO es persona (es: municipio de Puerto Rico)
+  Baigorri
+       foto de: Baigorri  ->  Wikidata: NO es persona (es: comuna francesa)
+  Balbastro
+       foto de: QQ5841032  ->  Wikidata: NO es persona (es: parada de tranvía)
+  Baragaña
+       foto de: Segundo gobierno de Adrián Barbón  ->  Wikidata: NO es persona (es: Consejo de Gobierno del Principado de Asturias)
+  Barraca Peña
+       foto de: Buenos Aires and Ensenada Port Railway  ->  Wikidata: NO es persona (es: empresa ferroviaria, línea férrea)
+  Barrientos
+       foto de: Barrientos de la Vega  ->  Wikidata: NO es persona (es: entidad singular de población)
+  Barzana
+       foto de: Barzana  ->  Wikidata: NO es persona (es: comuna de Italia)
+  Bathurst
+       foto de: Bathurst (Australia)  ->  Wikidata: NO es persona (es: ciudad)
+  Beade
+       foto de: Beade  ->  Wikidata: NO es persona (es: municipio de Galicia)
+  Beazley
+       foto de: Beazley  ->  Wikidata: NO es persona (es: municipio, localidad, asentamiento)
+  Beniamino Semiza
+       foto de: Elecciones presidenciales de Argentina de 1951  ->  Wikidata: NO es persona (es: elección legislativa de Argentina)
+  Bermúdez
+       foto de: Bermúdez  ->  Wikidata: NO es persona (es: apellido, apellido patronímico)
+  Bernal
+       foto de: Bernal  ->  Wikidata: NO es persona (es: gran ciudad, ciudad)
+  Bernaldes
+       foto de: Elmina Castle  ->  Wikidata: NO es persona (es: factoría, fuerte, patrimonio cultural, castillo)
+  Berthelot
+       foto de: Euphorbia regis-jubae  ->  Wikidata: NO es persona (es: taxón)
+  Bertrés
+       foto de: QQ130411453  ->  Wikidata: NO es persona (es: calle)
+  Besares
+       foto de: Metrotranvía Mendoza  ->  Wikidata: NO es persona (es: metro, línea férrea)
+  Bialet Massé
+       foto de: QQ48291  ->  Wikidata: NO es persona (es: municipio)
+  Butteler
+       foto de: Barrio Azucena Butteler  ->  Wikidata: NO es persona (es: ?)
+  Cabello
+       foto de: Pelo  ->  Wikidata: NO es persona (es: tipo de clase de estructura anatómica, clase de entidad anatómica)
+  Cabo de Patricios Orencio Pío Rodríguez
+       foto de: Asesinato de Calvo Sotelo  ->  Wikidata: NO es persona (es: asesinato político, homicidio doloso, magnicidio)
+  Campillo
+       foto de: Seminario Mayor de San Pelagio  ->  Wikidata: NO es persona (es: seminario católico, edificio)
+  Candela Sol Rodríguez
+       foto de: Cuernavaca  ->  Wikidata: NO es persona (es: localidad de México)
+  Capitán Claudio H. Rosales
+       foto de: Partido de Coronel Rosales  ->  Wikidata: NO es persona (es: partido de la provincia de Buenos Aires, municipio)
+  Cardoso
+       foto de: Cardoso  ->  Wikidata: NO es persona (es: municipio de Brasil)
+  Carlos Molina Arrotea
+       foto de: Hussars of Pueyrredón  ->  Wikidata: NO es persona (es: regimiento de húsares)
+  Carlos Norberto Vergara
+       foto de: Club Atlético Banfield  ->  Wikidata: NO es persona (es: club de fútbol, club deportivo)
+  Casco
+       foto de: Casco  ->  Wikidata: NO es persona (es: ?)
+  Castañón
+       foto de: Conopodium majus  ->  Wikidata: NO es persona (es: taxón)
+  Chorroarín
+       foto de: Telégrafo Mercantil  ->  Wikidata: NO es persona (es: publicación periódica)
+  Cipolletti
+       foto de: Cipolletti  ->  Wikidata: NO es persona (es: municipio, ciudad)
+  Coghlan
+       foto de: Estación Coghlan  ->  Wikidata: NO es persona (es: estación de ferrocarril)
+  Comandante Francisco Carbonari
+       foto de: Carbonarios  ->  Wikidata: NO es persona (es: sociedad secreta, organización)
+  Conde
+       foto de: Conde  ->  Wikidata: NO es persona (es: título nobiliario, cargo, título hereditario)
+  Conscripto Bernardi
+       foto de: Conscripto Bernardi  ->  Wikidata: NO es persona (es: municipio)
+  Coronel Apolinario Figueroa
+       foto de: Línea 24 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de autobús)
+  Coronel Cabrer
+       foto de: Estadio Coronel Félix Cabrera  ->  Wikidata: NO es persona (es: estadio)
+  Coronel Esteban Bonorino
+       foto de: Villa Soldati  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Coronel Juan F. Czetz
+       foto de: Colegio Militar de la Nación  ->  Wikidata: NO es persona (es: complejo de edificios, escuela militar, academia militar)
+  Coronel Manuel José Olascoaga
+       foto de: Villa Regina  ->  Wikidata: NO es persona (es: municipio, ciudad de Argentina)
+  Coronel Marcelino E. Freyre
+       foto de: Progressistas  ->  Wikidata: NO es persona (es: partido político)
+  Coronel Pagola
+       foto de: Regimiento de Infantería de Monte 9  ->  Wikidata: NO es persona (es: regimiento de infantería, unidad de selva)
+  Coronel Rico
+       foto de: Coronel Manuel Leoncio Rico  ->  Wikidata: NO es persona (es: localidad)
+  Coronel Rohde
+       foto de: Hyperpalatable food  ->  Wikidata: NO es persona (es: alimento)
+  Coronel Toribio Tedín
+       foto de: Plaza Fray Mocho (Retiro)  ->  Wikidata: NO es persona (es: plaza)
+  Correa
+       foto de: QQ2493931  ->  Wikidata: NO es persona (es: taxón)
+  Cortina
+       foto de: Cortina  ->  Wikidata: NO es persona (es: ?)
+  Cálcena
+       foto de: Calcena  ->  Wikidata: NO es persona (es: municipio de Aragón)
+  Darwin Passaponti
+       foto de: Línea 501 (Moreno)  ->  Wikidata: NO es persona (es: línea de colectivo de Buenos Aires)
+  Darío Broggi
+       foto de: Santuario Nuestra Señora del Rosario de Pompeya  ->  Wikidata: NO es persona (es: iglesia parroquial católica, santuario mariano)
+  Dekay
+       foto de: Isotelus  ->  Wikidata: NO es persona (es: taxón paleontológico)
+  Del Libertador
+       foto de: Libertador  ->  Wikidata: NO es persona (es: grupo de humanos)
+  Diego Fernández Espiro
+       foto de: Pronunciamiento (Argentina)  ->  Wikidata: NO es persona (es: municipio)
+  Diputado Nacional Jorge Mariano Almada
+       foto de: Cámara de Diputados de Entre Ríos  ->  Wikidata: NO es persona (es: poder legislativo, cámara de diputados)
+  Diputado Nacional Osvaldo Ernesto Benedetti
+       foto de: Elecciones provinciales de Entre Ríos de 2019  ->  Wikidata: NO es persona (es: elección)
+  Doctor Alfredo Rivas
+       foto de: Rolando Rivas, taxista  ->  Wikidata: NO es persona (es: serie de televisión)
+  Doctor Honorio Pueyrredón
+       foto de: Avenida Doctor Honorio Pueyrredón  ->  Wikidata: NO es persona (es: avenida)
+  Doctor Horacio Casco
+       foto de: La Pepa (1826)  ->  Wikidata: NO es persona (es: goleta)
+  Doctor José Ignacio de la Roza
+       foto de: Línea 27 (San Juan)  ->  Wikidata: NO es persona (es: línea de autobús)
+  Doctor Juan Felipe Aranguren
+       foto de: Góngora (Aranguren)  ->  Wikidata: NO es persona (es: despoblado)
+  Doctor Luis Beláustegui
+       foto de: Condado de Lences  ->  Wikidata: NO es persona (es: condado jurisdiccional)
+  Doctor Nicolás Repetto
+       foto de: Línea 24 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de autobús)
+  Doctor Osvaldo Eguía
+       foto de: National Socialist Movement of Chile  ->  Wikidata: NO es persona (es: partido político)
+  Doctor Ricardo Finochietto
+       foto de: Embassy of the Philippines, Buenos Aires  ->  Wikidata: NO es persona (es: embajada)
+  Doctor Rodolfo Rivarola
+       foto de: Tango Argentino (musical)  ->  Wikidata: NO es persona (es: spectacle)
+  Domingo Olivera
+       foto de: Olivera  ->  Wikidata: NO es persona (es: localidad)
+  Don Pepe
+       foto de: Elecciones provinciales de Buenos Aires de 2023  ->  Wikidata: NO es persona (es: elección)
+  Dora del Grande
+       foto de: Ojos del Salado  ->  Wikidata: NO es persona (es: montaña)
+  Echauri
+       foto de: Echauri  ->  Wikidata: NO es persona (es: municipio de España)
+  Echeverría
+       foto de: 1837 generation  ->  Wikidata: NO es persona (es: movimiento intelectual)
+  Elena Larroque de Roffo
+       foto de: Elecciones legislativas de Argentina de 2009  ->  Wikidata: NO es persona (es: elección legislativa de Argentina)
+  Elía
+       foto de: Elía  ->  Wikidata: NO es persona (es: concejo de Navarra, localidad)
+  Elías Bedoya
+       foto de: List of mayors of Lima  ->  Wikidata: NO es persona (es: artículo de lista de personas de Wikimedia por cargo ocupado)
+  Enrique Ochoa
+       foto de: Casa de Loyola  ->  Wikidata: NO es persona (es: linaje, familia)
+  Enrique Udaondo
+       foto de: Luján, Buenos Aires  ->  Wikidata: NO es persona (es: sede de gobierno, localidad, ciudad de Argentina)
+  Erézcano
+       foto de: Erézcano  ->  Wikidata: NO es persona (es: localidad)
+  Espinosa
+       foto de: Battle of Martín García (1814)  ->  Wikidata: NO es persona (es: combate naval)
+  Esteban Crovara
+       foto de: Línea 126 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de autobús)
+  Ezeiza
+       foto de: Ezeiza  ->  Wikidata: NO es persona (es: gran ciudad, ciudad)
+  Fabre
+       foto de: Eusebio (name)  ->  Wikidata: NO es persona (es: nombre masculino)
+  Falucho
+       foto de: Falucho  ->  Wikidata: NO es persona (es: localidad)
+  Faraday
+       foto de: Miguel Hidalgo (Ciudad de México)  ->  Wikidata: NO es persona (es: demarcación territorial de la Ciudad de México)
+  Fernando Ghio
+       foto de: Fernando Poe Jr. station  ->  Wikidata: NO es persona (es: estación elevada, final de trayecto, parada de tranvía, estación de ferrocarril)
+  Ferrari
+       foto de: QQ5842884  ->  Wikidata: NO es persona (es: estación de ferrocarril antigua)
+  Fitz Roy
+       foto de: QQ5455568  ->  Wikidata: NO es persona (es: municipio, asentamiento, pueblo)
+  Florencio Balcarce
+       foto de: QQ126287008  ->  Wikidata: NO es persona (es: callejón)
+  Forest
+       foto de: QQ72946  ->  Wikidata: NO es persona (es: municipio de Bélgica)
+  Fortunato Devoto
+       foto de: Devoto (Córdoba)  ->  Wikidata: NO es persona (es: municipio)
+  Fournier
+       foto de: ARA Fournier  ->  Wikidata: NO es persona (es: dragaminas)
+  Francisco Antonio Rizzuto
+       foto de: Lluvia de peces  ->  Wikidata: NO es persona (es: lluvia de animales)
+  Francisco Pracánico
+       foto de: Avenida Corrientes  ->  Wikidata: NO es persona (es: calle peatonal, avenida)
+  Francisco de Uzal
+       foto de: C.F. Monterrey  ->  Wikidata: NO es persona (es: club de fútbol)
+  Francisco de Viedma
+       foto de: Viedma, Río Negro  ->  Wikidata: NO es persona (es: municipio, ciudad de Argentina)
+  Fray Luis Beltrán
+       foto de: QQ5493943  ->  Wikidata: NO es persona (es: municipio)
+  Fray Pedro Agustín Cueli
+       foto de: Regimiento de Patricios  ->  Wikidata: NO es persona (es: regimiento de infantería, regimiento)
+  Félix Lima
+       foto de: Plaza Félix Lima  ->  Wikidata: NO es persona (es: plaza)
+  Félix Lynch Arribálzaga
+       foto de: Academia Nacional de Ciencias de Córdoba  ->  Wikidata: NO es persona (es: academia de ciencias)
+  Gabriel Lafond
+       foto de: Historia de la nobleza en Ecuador  ->  Wikidata: NO es persona (es: ?)
+  Gabriela Mistral
+       foto de: Casa de Gabriela Mistral (Las Compañías)  ->  Wikidata: NO es persona (es: bien cultural)
+  Gallardo
+       foto de: Candaba  ->  Wikidata: NO es persona (es: municipio de Filipinas)
+  Gallo
+       foto de: Gallus gallus domesticus  ->  Wikidata: NO es persona (es: taxón, organismo modelo, clase de organismos conocidos por un nombre común particular)
+  Gana
+       foto de: QQ117  ->  Wikidata: NO es persona (es: Estado soberano, país)
+  Gaona
+       foto de: Gaona  ->  Wikidata: NO es persona (es: asentamiento)
+  Gastón Riva
+       foto de: Masacre de la plaza de Mayo del 20 de diciembre de 2001  ->  Wikidata: NO es persona (es: masacre)
+  General Enrique Martínez
+       foto de: General Enrique Martínez  ->  Wikidata: NO es persona (es: pueblo)
+  General Enrique Mosconi
+       foto de: Aeropuerto Internacional General Enrique Mosconi  ->  Wikidata: NO es persona (es: aeropuerto, aeropuerto internacional, aeródromo de tráfico comercial)
+  General Enrique Spika
+       foto de: Enrique V (teatro)  ->  Wikidata: NO es persona (es: obra dramática)
+  General Francisco Ramírez
+       foto de: Republic of Entre Ríos  ->  Wikidata: NO es persona (es: Estado desaparecido, Estado soberano)
+  General Mosconi
+       foto de: Aeropuerto Internacional General Enrique Mosconi  ->  Wikidata: NO es persona (es: aeropuerto, aeropuerto internacional, aeródromo de tráfico comercial)
+  Germán Abdala
+       foto de: Abdala (vaccine)  ->  Wikidata: NO es persona (es: medicamento)
+  Girardot
+       foto de: Girardot  ->  Wikidata: NO es persona (es: municipio de Colombia)
+  Godoy Cruz
+       foto de: Godoy Cruz  ->  Wikidata: NO es persona (es: gran ciudad, ciudad)
+  González Catán
+       foto de: González Catán  ->  Wikidata: NO es persona (es: gran ciudad, localidad, ciudad de Argentina)
+  Gregoria Pérez
+       foto de: Nueve de Julio Department, Santa Fe  ->  Wikidata: NO es persona (es: departamento de Argentina)
+  Guevara
+       foto de: Guevara  ->  Wikidata: NO es persona (es: concejo de Álava, entidad singular de población)
+  Guillermo Enrique Granville
+       foto de: ARA Granville (P-33)  ->  Wikidata: NO es persona (es: corbeta)
+  Gándara
+       foto de: QQ816160  ->  Wikidata: NO es persona (es: municipio de Filipinas)
+  Gómez de Fonseca
+       foto de: Koldo Case  ->  Wikidata: NO es persona (es: escándalo de corrupción, litigio, escándalo político)
+  Hermanas Mirabal
+       foto de: Mirabal sisters  ->  Wikidata: NO es persona (es: grupo de hermanas, sibling trio)
+  Hidalgo
+       foto de: QQ80903  ->  Wikidata: NO es persona (es: estado de México)
+  Hortiguera
+       foto de: Battle of Cerrito  ->  Wikidata: NO es persona (es: batalla)
+  Hudson
+       foto de: Santiago del Estero Province  ->  Wikidata: NO es persona (es: provincia de Argentina)
+  Humberto I
+       foto de: QQ8876899  ->  Wikidata: NO es persona (es: estación subterránea, estación de metro)
+  Humboldt
+       foto de: QQ152087  ->  Wikidata: NO es persona (es: University of Excellence, comprehensive university, editor de acceso abierto, universidad pública de investigación)
+  Inclán
+       foto de: Inclán-Mezquita Al Ahmad (subte de Buenos Aires)  ->  Wikidata: NO es persona (es: estación subterránea, estación de metro)
+  Ingeniero Antonio Vilar
+       foto de: Casa Matriz del Banco Popular Argentino  ->  Wikidata: NO es persona (es: edificio)
+  Ingeniero Arquitecto Jorge Bunge
+       foto de: Bunge & Born  ->  Wikidata: NO es persona (es: negocio, empresa)
+  Ingeniero César Manuel Polledo
+       foto de: Organización de Arquitectura Moderna  ->  Wikidata: NO es persona (es: organización)
+  Intendente Bunge
+       foto de: Emilio V. Bunge  ->  Wikidata: NO es persona (es: localidad)
+  Intendente Pinedo
+       foto de: Palacio Pineda  ->  Wikidata: NO es persona (es: palacio)
+  Iraola
+       foto de: Tolosa (La Plata)  ->  Wikidata: NO es persona (es: villa)
+  Irene Orlando
+       foto de: Huracán Irene  ->  Wikidata: NO es persona (es: huracán, ciclón tropical)
+  Isidro Lorea
+       foto de: Plaza del Congreso  ->  Wikidata: NO es persona (es: plaza)
+  Iturri
+       foto de: QQ483453  ->  Wikidata: NO es persona (es: type of architectural structure)
+  Itzhak Rabin
+       foto de: Centro de Estudios Judíos en Shanghái  ->  Wikidata: NO es persona (es: facultad universitaria)
+  J. F. Bateman
+       foto de: Fiebre amarilla en Buenos Aires  ->  Wikidata: NO es persona (es: epidemia)
+  Jacinto Oddone
+       foto de: Guildism  ->  Wikidata: NO es persona (es: ideología política, ideología económica)
+  Joaquín Gómez Somavilla
+       foto de: Tercio de Cántabros Montañeses  ->  Wikidata: NO es persona (es: batallón (España), batallón de infantería)
+  Jorge N. Williams
+       foto de: Plazoleta Jorge Williams  ->  Wikidata: NO es persona (es: plaza)
+  José A. Cortejarena
+       foto de: El Siglo Médico  ->  Wikidata: NO es persona (es: revista)
+  José Aarón Salmún Feijóo
+       foto de: Línea 100 (Buenos Aires)  ->  Wikidata: NO es persona (es: ruta de transporte)
+  José Barros Pazos
+       foto de: Villa Lugano  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  José Celedonio Balbín
+       foto de: Cantabria  ->  Wikidata: NO es persona (es: comunidad autónoma)
+  José Dames
+       foto de: Notre Dame High School (San Jose, California)  ->  Wikidata: NO es persona (es: escuela secundaria superior)
+  José E. Carballido
+       foto de: Patagotitan  ->  Wikidata: NO es persona (es: taxón paleontológico)
+  José Eusebio Agüero
+       foto de: Eusebio (name)  ->  Wikidata: NO es persona (es: nombre masculino)
+  José Ingenieros
+       foto de: QQ5842891  ->  Wikidata: NO es persona (es: estación de ferrocarril)
+  José Soldati
+       foto de: Villa Lugano  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Juan Bautista Prímoli
+       foto de: Basilica of Our Lady of the Pillar, Buenos Aires  ->  Wikidata: NO es persona (es: basílica menor, iglesia parroquial católica)
+  Juan Darquier
+       foto de: Cámara de Diputados de la Provincia de Buenos Aires  ->  Wikidata: NO es persona (es: poder legislativo, cámara de diputados)
+  Juan M. Coghlan
+       foto de: Estación Coghlan  ->  Wikidata: NO es persona (es: estación de ferrocarril)
+  Juan Maffioli
+       foto de: Premio LericiPea  ->  Wikidata: NO es persona (es: premio literario)
+  Juan Tronconi
+       foto de: Juan Tronconi  ->  Wikidata: NO es persona (es: localidad)
+  Juan de Castro
+       foto de: Carreño  ->  Wikidata: NO es persona (es: concejo)
+  Juana María de Lara
+       foto de: Mestizo  ->  Wikidata: NO es persona (es: Casta, etnia)
+  Juez Tedín
+       foto de: List of mayors and chiefs of government of Buenos Aires City  ->  Wikidata: NO es persona (es: artículo de lista de Wikimedia)
+  Julio Argentino Noble
+       foto de: Argentine National Anthem  ->  Wikidata: NO es persona (es: himno nacional)
+  Julio Víctor González
+       foto de: González (surname)  ->  Wikidata: NO es persona (es: apellido, apellido patronímico)
+  La Mar
+       foto de: Mar del Plata  ->  Wikidata: NO es persona (es: gran ciudad, sede de gobierno, localidad, ciudad de Argentina)
+  Lacarra
+       foto de: List of people from the Basque Country  ->  Wikidata: NO es persona (es: artículo de lista de Wikimedia)
+  Lafayette
+       foto de: II milenio  ->  Wikidata: NO es persona (es: milenio)
+  Laguna
+       foto de: Laguna  ->  Wikidata: NO es persona (es: ?)
+  Larraya
+       foto de: Línea D9 (Montevideo)  ->  Wikidata: NO es persona (es: línea de autobús)
+  Larrea
+       foto de: Larrea  ->  Wikidata: NO es persona (es: taxón)
+  Lascano
+       foto de: Lascano (Uruguay)  ->  Wikidata: NO es persona (es: villa)
+  Lavardén
+       foto de: Plataforma Lavardén  ->  Wikidata: NO es persona (es: centro cultural, teatro)
+  Liborio Pupillo
+       foto de: Elecciones legislativas de Argentina de 1983  ->  Wikidata: NO es persona (es: elección legislativa de Argentina)
+  Llorente
+       foto de: QQ314070  ->  Wikidata: NO es persona (es: municipio de Filipinas)
+  Lorea
+       foto de: Plaza del Congreso  ->  Wikidata: NO es persona (es: plaza)
+  Luchter
+       foto de: Avenida Rivadavia  ->  Wikidata: NO es persona (es: avenida, calle)
+  Luis Alberto Herrera
+       foto de: Avenida Doctor Luis Alberto de Herrera  ->  Wikidata: NO es persona (es: avenida)
+  Luján
+       foto de: QQ54107  ->  Wikidata: NO es persona (es: sede de gobierno, localidad, ciudad de Argentina)
+  Malabia
+       foto de: QQ5244756  ->  Wikidata: NO es persona (es: estación subterránea, estación de metro)
+  Manuel J. Samperio
+       foto de: El Bienamado (telenovela mexicana)  ->  Wikidata: NO es persona (es: serie de televisión)
+  Manzanares
+       foto de: Río Manzanares  ->  Wikidata: NO es persona (es: río)
+  Marcelo Gamboa
+       foto de: La usurpadora (telenovela mexicana)  ->  Wikidata: NO es persona (es: serie de televisión)
+  Martiniano Bonorino
+       foto de: Cámara de Diputados de la Provincia de Buenos Aires  ->  Wikidata: NO es persona (es: poder legislativo, cámara de diputados)
+  Martín Coronado
+       foto de: Teatro General San Martín  ->  Wikidata: NO es persona (es: centro artístico, teatro, cine)
+  María Robotti de Bulzani
+       foto de: Grito de Alcorta  ->  Wikidata: NO es persona (es: rebelión)
+  Mayor Arturo Pedro Luisoni
+       foto de: Línea 75 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de colectivo de Buenos Aires)
+  Medina
+       foto de: Medina  ->  Wikidata: NO es persona (es: holy city of Islam, gran ciudad)
+  Miguel A. Camino
+       foto de: Camino de Santiago  ->  Wikidata: NO es persona (es: red de sendas)
+  Miguel Couto
+       foto de: São Miguel do Couto  ->  Wikidata: NO es persona (es: antigua freguesia de Portugal)
+  Ministro Brin
+       foto de: Estadio de Ministro Brin y Sengüel  ->  Wikidata: NO es persona (es: estadio de fútbol, estructura arquitectónica desaparecida)
+  Miró
+       foto de: La Unión (Montevideo)  ->  Wikidata: NO es persona (es: barrio)
+  Mom
+       foto de: QQ188740  ->  Wikidata: NO es persona (es: empresa productora, organización sin fines de lucro, museo de arte, edificio de museo, museo, museo de arte moderno)
+  Mompox
+       foto de: Santa Cruz de Mompox  ->  Wikidata: NO es persona (es: municipio de Colombia, ciudad de Colombia)
+  Monroe
+       foto de: QQ995533  ->  Wikidata: NO es persona (es: ciudad de Estados Unidos, sede de condado)
+  Monte Castro
+       foto de: Monte Castro  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Montenegro
+       foto de: Distrito de Huanuhuanu  ->  Wikidata: NO es persona (es: distrito de Perú)
+  Morlote
+       foto de: Ninth Legislature of the National Assembly of People's Power of Cuba  ->  Wikidata: NO es persona (es: poder legislativo)
+  Muñecas
+       foto de: QQ6034940  ->  Wikidata: NO es persona (es: entidad singular de población)
+  Mártires Palotinos
+       foto de: Echeverría-Mártires Palotinos (subte de Buenos Aires)  ->  Wikidata: NO es persona (es: estación subterránea, estación de metro)
+  Méndez
+       foto de: Mendez  ->  Wikidata: NO es persona (es: apellido)
+  Méndez de Andés
+       foto de: Villa Excélsior  ->  Wikidata: NO es persona (es: vivienda)
+  Necochea
+       foto de: Necochea  ->  Wikidata: NO es persona (es: sede de gobierno, localidad, ciudad de Argentina)
+  Nicolás Descalzi
+       foto de: QQ5843918  ->  Wikidata: NO es persona (es: parada de tranvía)
+  Nicolás Granada
+       foto de: Granada  ->  Wikidata: NO es persona (es: municipio de España)
+  Núñez
+       foto de: Núñez (Buenos Aires)  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Obrero Roberto Núñez
+       foto de: Movimiento obrero argentino  ->  Wikidata: NO es persona (es: ?)
+  Ohm
+       foto de: Gastronomía de la provincia de Lugo  ->  Wikidata: NO es persona (es: gastronomía regional de España)
+  Olivera
+       foto de: Olivera  ->  Wikidata: NO es persona (es: localidad)
+  Orma
+       foto de: United Provinces of the Río de la Plata  ->  Wikidata: NO es persona (es: Estado desaparecido, Estado soberano)
+  Osvaldo Cruz
+       foto de: QQ1761462  ->  Wikidata: NO es persona (es: municipio de Brasil)
+  Otamendi
+       foto de: Palacio Belgrano Otamendi  ->  Wikidata: NO es persona (es: palacio, museo)
+  Otero
+       foto de: Otero  ->  Wikidata: NO es persona (es: municipio de España)
+  O´brien
+       foto de: Ua Briain  ->  Wikidata: NO es persona (es: dinastía)
+  Pacífico Víctor Lambertucci
+       foto de: Portuguese Brazilians  ->  Wikidata: NO es persona (es: etnia)
+  Padre Enrique Contardi
+       foto de: Cucurbita maxima var. zapallito  ->  Wikidata: NO es persona (es: taxón)
+  Padre Mario Luis Migone
+       foto de: Cándida (película de 1939)  ->  Wikidata: NO es persona (es: película)
+  Patrón
+       foto de: Patrón  ->  Wikidata: NO es persona (es: marca registrada, marca, negocio, marca de alcohol)
+  Paul Groussac
+       foto de: Biblioteca Nacional (Argentina)  ->  Wikidata: NO es persona (es: biblioteca nacional)
+  Paula Albarracín de Sarmiento
+       foto de: Villa Paula Albarracín de Sarmiento  ->  Wikidata: NO es persona (es: asentamiento)
+  Pedro Echagüe
+       foto de: Echague  ->  Wikidata: NO es persona (es: municipio de Filipinas)
+  Pedro de Jerez
+       foto de: Iglesia de San Pedro (Jerez de la Frontera)  ->  Wikidata: NO es persona (es: iglesia)
+  Pereyra
+       foto de: Pereyra  ->  Wikidata: NO es persona (es: localidad)
+  Pillado
+       foto de: Tercer Gobierno Fraga  ->  Wikidata: NO es persona (es: Gobierno)
+  Pirán
+       foto de: Piran  ->  Wikidata: NO es persona (es: villa, ciudad)
+  Pizzurno
+       foto de: Carcarañá (ciudad)  ->  Wikidata: NO es persona (es: municipio)
+  Plaza
+       foto de: Plaza  ->  Wikidata: NO es persona (es: ?)
+  Plaza de Isidora
+       foto de: Plaza Perú (Santiago de Chile)  ->  Wikidata: NO es persona (es: ?)
+  Presidente Quintana
+       foto de: QQ5844303  ->  Wikidata: NO es persona (es: estación de ferrocarril)
+  Profesor Doctor Pedro Chutro
+       foto de: Línea 118 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de autobús)
+  Profesora Marina Margarita Ravioli
+       foto de: Gastronomía de Italia  ->  Wikidata: NO es persona (es: cocina nacional)
+  Puerto Madero
+       foto de: Puerto Madero  ->  Wikidata: NO es persona (es: rambla, puerto, barrios de la ciudad de Buenos Aires)
+  Quirós
+       foto de: Quirós  ->  Wikidata: NO es persona (es: concejo)
+  Ramallo
+       foto de: QQ2227170  ->  Wikidata: NO es persona (es: código postal, ciudad de Argentina)
+  Raulet
+       foto de: Copper indium gallium selenide solar cell  ->  Wikidata: NO es persona (es: ?)
+  Regís Martínez
+       foto de: Argentine Constitution of 1853  ->  Wikidata: NO es persona (es: constitución)
+  Renque Curá
+       foto de: Moquehue  ->  Wikidata: NO es persona (es: localidad)
+  Ricardo Llanes
+       foto de: Llanes  ->  Wikidata: NO es persona (es: concejo)
+  Riglos
+       foto de: Riglos  ->  Wikidata: NO es persona (es: entidad singular de población)
+  Roberto Sánchez
+       foto de: Municipio de Melchor Ocampo (Estado de México)  ->  Wikidata: NO es persona (es: municipio de México)
+  Robertson
+       foto de: Cementerio Británico  ->  Wikidata: NO es persona (es: cementerio)
+  Rocamora
+       foto de: Rocamora  ->  Wikidata: NO es persona (es: localidad)
+  Rodney
+       foto de: Medalla Franklin  ->  Wikidata: NO es persona (es: premio científico, medalla)
+  Roentgen
+       foto de: Rayos X  ->  Wikidata: NO es persona (es: radiación electromagnética)
+  Romero
+       foto de: Florencio Varela (ciudad)  ->  Wikidata: NO es persona (es: gran ciudad, sede de gobierno, localidad, ciudad de Argentina)
+  Rosa H. Cirullo de Carnaghi
+       foto de: Montoneros  ->  Wikidata: NO es persona (es: organización armada, movimiento guerrillero, partido político)
+  Salvigny
+       foto de: Línea 115 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de autobús)
+  San Cayetano de Liniers
+       foto de: Liniers  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  San Cristóbal
+       foto de: QQ820235  ->  Wikidata: NO es persona (es: gran ciudad, ciudad)
+  San Francisco Javier
+       foto de: QQ1016611  ->  Wikidata: NO es persona (es: capital de municipio, entidad singular de población)
+  San Miguel Garicoits
+       foto de: QQ15274894  ->  Wikidata: NO es persona (es: iglesia)
+  San Ricardo
+       foto de: San Ricardo  ->  Wikidata: NO es persona (es: municipio de Filipinas)
+  San Roque González de Santa Cruz
+       foto de: San Roque González de Santa Cruz Bridge  ->  Wikidata: NO es persona (es: puente ferroviario, puente internacional, puente carretero, puente rodoferroviario)
+  Sanabria
+       foto de: Sanabria  ->  Wikidata: NO es persona (es: comarca de España)
+  Santojanni
+       foto de: Hospital General de Agudos Donación Francisco Santojanni  ->  Wikidata: NO es persona (es: hospital, organización sanitaria)
+  Saravia
+       foto de: Governor of Veracruz  ->  Wikidata: NO es persona (es: cargo público)
+  Saraza
+       foto de: Saraza  ->  Wikidata: NO es persona (es: Q61878)
+  Saráchaga
+       foto de: Unitarian League  ->  Wikidata: NO es persona (es: confederación)
+  Severo García Grande de Zequeira
+       foto de: Línea 63 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de colectivo de Buenos Aires)
+  Simbrón
+       foto de: Acassuso (Buenos Aires)  ->  Wikidata: NO es persona (es: entidad territorial administrativa, ciudad de Argentina)
+  Soldado de la Frontera
+       foto de: Frontera (Tabasco)  ->  Wikidata: NO es persona (es: localidad de México)
+  Soldado de la Independencia
+       foto de: Tumba del soldado desconocido  ->  Wikidata: NO es persona (es: ?)
+  Subcomisario Severino José Cirigliano
+       foto de: Italian Argentines  ->  Wikidata: NO es persona (es: diáspora o inmigración según país de origen y destino)
+  Superí
+       foto de: Battle of Tucumán  ->  Wikidata: NO es persona (es: batalla)
+  Sánchez
+       foto de: Sánchez  ->  Wikidata: NO es persona (es: apellido, apellido patronímico)
+  Temperley
+       foto de: Temperley  ->  Wikidata: NO es persona (es: gran ciudad, ciudad)
+  Teniente Coronel Casimiro Recuero
+       foto de: Línea 46 (Buenos Aires)  ->  Wikidata: NO es persona (es: línea de colectivo de Buenos Aires)
+  Teniente General Emilio Mitre
+       foto de: Teniente General Emilio Mitre  ->  Wikidata: NO es persona (es: pueblo)
+  Teniente General Eustoquio Frías
+       foto de: Flag of Argentina  ->  Wikidata: NO es persona (es: bandera nacional)
+  Teniente General Luis J. Dellepiane
+       foto de: QQ5714110  ->  Wikidata: NO es persona (es: carretera)
+  Thames
+       foto de: QQ19686  ->  Wikidata: NO es persona (es: río)
+  Timoteo Gordillo
+       foto de: List of Club Atlético River Plate managers  ->  Wikidata: NO es persona (es: artículo de lista de Wikimedia)
+  Toll
+       foto de: Receptor de tipo Toll  ->  Wikidata: NO es persona (es: grupo o clase de proteínas)
+  Tomás Liberti
+       foto de: Bomberos Voluntarios de La Boca  ->  Wikidata: NO es persona (es: cuerpo de bomberos voluntarios)
+  Tomás Valencia
+       foto de: Iglesia de Santo Tomás y San Felipe Neri  ->  Wikidata: NO es persona (es: iglesia)
+  Trolé
+       foto de: Trol  ->  Wikidata: NO es persona (es: pueblo mítico)
+  Valdenegro
+       foto de: Eusebio (name)  ->  Wikidata: NO es persona (es: nombre masculino)
+  Valle
+       foto de: Valle  ->  Wikidata: NO es persona (es: tipo de característica)
+  Varela
+       foto de: QQ2359107  ->  Wikidata: NO es persona (es: gran ciudad, sede de gobierno, localidad, ciudad de Argentina)
+  Ventura Bosch
+       foto de: List of mayors of Madrid  ->  Wikidata: NO es persona (es: artículo de lista de personas de Wikimedia por cargo ocupado)
+  Videla Castillo
+       foto de: QQ124731772  ->  Wikidata: NO es persona (es: calle)
+  Villa General Mitre
+       foto de: Villa General Mitre  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Villa Ortúzar
+       foto de: Villa Ortúzar  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Villa Soldati
+       foto de: Villa Lugano  ->  Wikidata: NO es persona (es: barrios de la ciudad de Buenos Aires)
+  Zamudio
+       foto de: Zamudio  ->  Wikidata: NO es persona (es: municipio de España)
+  Zavaleta
+       foto de: Argentine Constitution of 1819  ->  Wikidata: NO es persona (es: constitución)
+  Zárraga
+       foto de: Museo Nacional de Arte (México)  ->  Wikidata: NO es persona (es: museo nacional, museo de arte, museo)
+  Ángela M. Aieta de Gullo
+       foto de: Megacausa ESMA  ->  Wikidata: NO es persona (es: proceso judicial, juicios por delitos de lesa humanidad en Argentina)

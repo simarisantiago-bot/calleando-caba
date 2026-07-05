@@ -105,11 +105,7 @@
 "titulo": "Algarrobo"
 },
 "alcaraz": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alcaraz_desde_lo_alto.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Alcaraz_desde_lo_alto.jpg",
-"autor": "JJ Merelo",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Alcaraz"
+"sinFoto": true
 },
 "amancio alcorta": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Amancio_Alcorta_02.jpg?width=480",
@@ -3080,32 +3076,16 @@
 "titulo": "Schinus molle"
 },
 "aguilar": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Facade_of_Saint_Joseph_the_Patriarch_Parish_Church%2C_Aguilar%2C_Pangasinan.jpg/500px-Facade_of_Saint_Joseph_the_Patriarch_Parish_Church%2C_Aguilar%2C_Pangasinan.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Saint_Joseph_the_Patriarch_Parish_Church_(Aguilar)",
-"autor": "Ramon FVelasquez",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Saint Joseph the Patriarch Parish Church (Aguilar)"
+"sinFoto": true
 },
 "aizpurua": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cannabis_leaf.svg/500px-Cannabis_leaf.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Cannabinoid",
-"autor": "Oren neu dag",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Cannabinoid"
+"sinFoto": true
 },
 "achega": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Minde_-_Portugal_%284998857888%29.jpg/500px-Minde_-_Portugal_%284998857888%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Minde,_Portugal",
-"autor": "Vitor Oliveira from Torres Vedras, PORTUGAL",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Minde, Portugal"
+"sinFoto": true
 },
 "alfredo gramajo gutierrez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/500px-Flag_of_Argentina.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Argentina",
-"autor": "Manuel Belgrano",
-"licencia": "Public domain",
-"titulo": "Argentina"
+"sinFoto": true
 },
 "amancay": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Amancay_Urbani.png/500px-Amancay_Urbani.png",
@@ -3115,11 +3095,7 @@
 "titulo": "Amancay Urbani"
 },
 "anasagasti": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Anasagasti01.jpg/500px-Anasagasti01.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Anasagasti",
-"autor": "Piero71",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Anasagasti"
+"sinFoto": true
 },
 "amigos de las artes": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Canteras_EM1B2907_%2840642755393%29.jpg/500px-Canteras_EM1B2907_%2840642755393%29.jpg",
@@ -3129,11 +3105,7 @@
 "titulo": "Las Palmas"
 },
 "anchoris": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Asamblea_del_a%C3%B1o_XIII.jpg/500px-Asamblea_del_a%C3%B1o_XIII.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Assembly_of_the_Year_XIII",
-"autor": "Unknown authorUnknown author",
-"licencia": "Public domain",
-"titulo": "Assembly of the Year XIII"
+"sinFoto": true
 },
 "antonio millan": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/AMPuelles1994.jpg/500px-AMPuelles1994.jpg",
@@ -5065,5 +5037,53 @@
 "autor": "Benedito Calixto",
 "licencia": "Public domain",
 "titulo": "Proclamación de la República (Brasil)"
+},
+"adolfo gonzales chaves": {
+"sinFoto": true
+},
+"agustin comastri": {
+"sinFoto": true
+},
+"agustin r caffarena": {
+"sinFoto": true
+},
+"albarino": {
+"sinFoto": true
+},
+"albarracin": {
+"sinFoto": true
+},
+"alberto mortz": {
+"sinFoto": true
+},
+"almagro": {
+"sinFoto": true
+},
+"anibal pedro arbeletche": {
+"sinFoto": true
+},
+"aquino": {
+"sinFoto": true
+},
+"alejandro petion": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Portrait_du_pr%C3%A9sident_Alexandre_P%C3%A9tion.jpg/500px-Portrait_du_pr%C3%A9sident_Alexandre_P%C3%A9tion.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Alexandre_P%C3%A9tion",
+"autor": "Unknown authorUnknown author",
+"licencia": "Public domain",
+"titulo": "Alexandre Pétion"
+},
+"ana maria janer": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/AMJaner1886.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Anna_Maria_Janer_Anglarill",
+"autor": "Unidentified photographer",
+"licencia": "Public domain",
+"titulo": "Anna Maria Janer Anglarill"
+},
+"antonio l zolezzi": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Club_Atl%C3%A9tico_River_Plate_logo.svg/500px-Club_Atl%C3%A9tico_River_Plate_logo.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Club_Atl%C3%A9tico_River_Plate",
+"autor": "Club Atlético River Plate",
+"licencia": "Public domain",
+"titulo": "Club Atlético River Plate"
 }
 }
