@@ -129,11 +129,7 @@
 "titulo": "Andalgalá"
 },
 "anasco": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_del_R%C3%ADo_Grande_de_A%C3%B1asco.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Puente_del_R%C3%ADo_Grande_de_A%C3%B1asco.jpg",
-"autor": "cavenaghi9",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Añasco"
+"sinFoto": true
 },
 "andalucia": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_whole_Alhambra_Granada_Spain.jpg?width=480",
@@ -241,11 +237,7 @@
 "titulo": "Avelino Díaz"
 },
 "balbastro": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Balbastro.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Balbastro.jpg",
-"autor": "Gobonobo",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Balbastro"
+"sinFoto": true
 },
 "baron mauricio de hirsch": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurice_de_Hirsch_-_Tableau.jpg?width=480",
@@ -3122,11 +3114,11 @@
 "titulo": "Rodrigo Paz"
 },
 "arquitecto arturo j dubourg": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Jean-Marc_Nattier%2C_La_Le%C3%A7on_de_musique_%281710%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_music_students_by_teacher:_G_to_J",
-"autor": "Jean-Marc Nattier",
-"licencia": "CC BY-SA 3.0",
-"titulo": "List of music students by teacher: G to J"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Edificio_Sudam%C3%A9rica_%281%29.JPG/500px-Edificio_Sudam%C3%A9rica_%281%29.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Edificio_Sudam%C3%A9rica",
+"autor": "Elsapucai",
+"licencia": "Public domain",
+"titulo": "Edificio Sudamérica"
 },
 "atuel": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Atuel_River_Mendoza_Argentina_by_PabloBD.jpg/500px-Atuel_River_Mendoza_Argentina_by_PabloBD.jpg",
@@ -3164,11 +3156,7 @@
 "titulo": "Bariloche"
 },
 "barraca pena": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Estacion_central_ba.jpg/500px-Estacion_central_ba.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Buenos_Aires_and_Ensenada_Port_Railway",
-"autor": "Unknown authorUnknown author",
-"licencia": "Public domain",
-"titulo": "Buenos Aires and Ensenada Port Railway"
+"sinFoto": true
 },
 "bauness": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Joaquin_Bau.png",
@@ -5085,5 +5073,33 @@
 "autor": "Club Atlético River Plate",
 "licencia": "Public domain",
 "titulo": "Club Atlético River Plate"
+},
+"arce": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Esteban_Arze_stamp.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Esteban_Arze",
+"autor": "Correos de Bolivia, escaneado por colnect",
+"licencia": "Public domain",
+"titulo": "Esteban Arze"
+},
+"arroyo": {
+"sinFoto": true
+},
+"avalle": {
+"sinFoto": true
+},
+"baigorri": {
+"sinFoto": true
+},
+"baragana": {
+"sinFoto": true
+},
+"barrientos": {
+"sinFoto": true
+},
+"barzana": {
+"sinFoto": true
+},
+"bathurst": {
+"sinFoto": true
 }
 }
