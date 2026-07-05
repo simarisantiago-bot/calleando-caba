@@ -31378,5 +31378,15 @@
     "tipo": "calle",
     "descripcion": "Facundo de Zuviría (1793-1861), jurisconsulto; gobernador de Salta; diputado y presidente del Congreso Constituyente de 1853; ministro de Justicia, Culto e Instrucción Pública de 1853 a 1855.",
     "letra": "Z"
+  },
+  {
+    "nombre_original": "15 DE NOVIEMBRE DE 1889",
+    "nombre_busqueda": "15 de Noviembre de 1889",
+    "clave": "15 de noviembre de 1889",
+    "id": "15 de noviembre de 1889|calle",
+    "categoria": "FECHA",
+    "tipo": "calle",
+    "descripcion": "15 de noviembre de 1889: fecha en que fue proclamada la República del Brasil, constituyéndose un gobierno provisorio presidido por el mariscal Deodoro da Fonseca, acompañado por Quintino Bocayuva, Floriano Peixoto y Ruy Barbosa.",
+    "letra": "V"
   }
 ]
