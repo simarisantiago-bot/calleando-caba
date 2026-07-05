@@ -345,11 +345,7 @@
 "titulo": "Boca"
 },
 "bertres": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasaje_Bertres%2C_Buenos_Aires.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Pasaje_Bertres%2C_Buenos_Aires.jpg",
-"autor": "Banfield",
-"licencia": "CC BY-SA 2.5 ar",
-"titulo": "Bertrés"
+"sinFoto": true
 },
 "boedo": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mariano_Boedo.jpg?width=480",
@@ -373,11 +369,7 @@
 "titulo": "Bolivia"
 },
 "bialet masse": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_San_Mart%C3%ADn_Bialet_Mass%C3%A9.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Plaza_San_Mart%C3%ADn_Bialet_Mass%C3%A9.jpg",
-"autor": "Miguel Alberto Cuello",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Bialet Massé"
+"sinFoto": true
 },
 "bombay": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Taj_Palace_Hotel_and_Taj_Tower_with_the_iconic_Gateway_of_India_in_the_background_%28cropped%29.jpg?width=480",
@@ -730,11 +722,7 @@
 "titulo": "Luis Jorge Fontana"
 },
 "correa": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Fleur_de_Correa_reflexa.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Fleur_de_Correa_reflexa.jpg",
-"autor": "David Midgley (en:User:MidgleyDJ)",
-"licencia": "CC BY-SA 2.5",
-"titulo": "Correa"
+"sinFoto": true
 },
 "de la amistad": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/3_barefoot_females_smiling_and_sitting_on_a_bench.jpg?width=480",
@@ -1066,11 +1054,7 @@
 "titulo": "Flor de Otoño"
 },
 "ferrari": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Estacion_jose_ferrari_nomenclador.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Estacion_jose_ferrari_nomenclador.jpg",
-"autor": "Fma12",
-"licencia": "CC BY 4.0",
-"titulo": "José Ferrari"
+"sinFoto": true
 },
 "flor de irupe": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Libertad_Leblanc_en_La_flor_de_Irup%C3%A9_%28cropped%29.jpg?width=480",
@@ -1108,11 +1092,7 @@
 "titulo": "Floresta"
 },
 "fitz roy": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Fitz_pueblo.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Fitz_pueblo.JPG",
-"autor": "Gonce",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Fitz Roy"
+"sinFoto": true
 },
 "francisco a sicardi": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1902-12-06%2C_Caras_y_Caretas%2C_Caricaturas_contempor%C3%A1neas%2C_Dr._Francisco_A._Sicardi%2C_Cao_%28cropped%29.jpeg?width=480",
@@ -1129,18 +1109,10 @@
 "titulo": "Francisco Antonio Maciel"
 },
 "florencio balcarce": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasaje_Florencio_Balcarce%2C_Buenos_Aires.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Pasaje_Florencio_Balcarce%2C_Buenos_Aires.jpg",
-"autor": "Banfield",
-"licencia": "CC BY-SA 2.5 ar",
-"titulo": "Florencio Balcarce"
+"sinFoto": true
 },
 "forest": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/VorstGemeentehuis.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:VorstGemeentehuis.JPG",
-"autor": "",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Forest"
+"sinFoto": true
 },
 "francisco bauza": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_Bauz%C3%A1.jpg?width=480",
@@ -1234,25 +1206,13 @@
 "titulo": "Futaleufú"
 },
 "fray luis beltran": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hospital_Dr._Alfredo_M%C3%A9traux_%28Antiguo%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Hospital_Dr._Alfredo_M%C3%A9traux_%28Antiguo%29.jpg",
-"autor": "Josuebeningazza",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Fray Luis Beltrán"
+"sinFoto": true
 },
 "gana": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Beach_with_palms_Ghana.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Beach_with_palms_Ghana.jpg",
-"autor": "Erik Kristensen",
-"licencia": "CC BY 2.0",
-"titulo": "Gana"
+"sinFoto": true
 },
 "gandara": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gandara_Poblacion.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Gandara_Poblacion.jpg",
-"autor": "Lauro Branigan",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Gándara"
+"sinFoto": true
 },
 "guarani": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Libros_en_guarani.JPG?width=480",
@@ -1318,11 +1278,7 @@
 "titulo": "Huemul"
 },
 "hidalgo": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_en_Real_del_Monte%2C_Hidalgo%2C_M%C3%A9xico%2C_2013-10-10%2C_DD_01.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Casa_en_Real_del_Monte%2C_Hidalgo%2C_M%C3%A9xico%2C_2013-10-10%2C_DD_01.JPG",
-"autor": "Diego Delso",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Hidalgo"
+"sinFoto": true
 },
 "hualfin": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Capilla_de_Hualf%C3%ADn.JPG?width=480",
@@ -1402,11 +1358,7 @@
 "titulo": "Quebrada de Humahuaca"
 },
 "humboldt": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Berl%C3%ADn_Humboldtova_univerzita_3.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Berl%C3%ADn_Humboldtova_univerzita_3.jpg",
-"autor": "VitVit",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Humboldt"
+"sinFoto": true
 },
 "husares": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HusaresPueyrredon.jpg?width=480",
@@ -1423,11 +1375,7 @@
 "titulo": "Jorge Bermúdez"
 },
 "iturri": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Schlossplatzspringbrunnen_Schlossplatz_Stuttgart_2015_03.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Schlossplatzspringbrunnen_Schlossplatz_Stuttgart_2015_03.jpg",
-"autor": "Julian Herzog (Website)",
-"licencia": "CC BY 4.0",
-"titulo": "Iturri"
+"sinFoto": true
 },
 "jose amalfitani": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Amalfitani_retrato.jpg?width=480",
@@ -1444,11 +1392,7 @@
 "titulo": "José Fagnano"
 },
 "jose ingenieros": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/J31_497_Hp_Jos%C3%A9_Ingenieros%2C_CMF_1010.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:J31_497_Hp_Jos%C3%A9_Ingenieros%2C_CMF_1010.jpg",
-"autor": "Falk2",
-"licencia": "CC BY-SA 4.0",
-"titulo": "José Ingenieros"
+"sinFoto": true
 },
 "jose evaristo uriburu": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_uriburu_retrato.jpg?width=480",
@@ -1710,11 +1654,7 @@
 "titulo": "Juan Madariaga"
 },
 "llorente": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Llorente%2C_Eastern_Samar.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Llorente%2C_Eastern_Samar.jpg",
-"autor": "Joelaldor",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Llorente"
+"sinFoto": true
 },
 "los amigos": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/3_barefoot_females_smiling_and_sitting_on_a_bench.jpg?width=480",
@@ -1731,11 +1671,7 @@
 "titulo": "Macacha Güemes"
 },
 "lujan": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_de_Lujan-_132.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Lujan-_132.JPG",
-"autor": "Beaudroit",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Luján"
+"sinFoto": true
 },
 "machu picchu": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg?width=480",
@@ -1794,11 +1730,7 @@
 "titulo": "Manuel Álvarez Prado"
 },
 "malabia": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Estacionmalabia-osvaldopugliese.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Estacionmalabia-osvaldopugliese.jpg",
-"autor": "Tomasmi1996",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Malabia"
+"sinFoto": true
 },
 "managua": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenida_Bolivar_A_Chavez.jpg?width=480",
@@ -2011,11 +1943,7 @@
 "titulo": "Munich"
 },
 "mom": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/MoMa_NY_USA_1.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:MoMa_NY_USA_1.jpg",
-"autor": "hibino",
-"licencia": "CC BY 2.0",
-"titulo": "Mom"
+"sinFoto": true
 },
 "mutualismo": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Impala_mutualism_with_birds_wide.jpg?width=480",
@@ -2039,11 +1967,7 @@
 "titulo": "Francisco Javier Muñiz"
 },
 "munecas": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mu%C3%B1ecas%2C_Soria%2C_Espa%C3%B1a%2C_2017-05-26%2C_DD_59.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Mu%C3%B1ecas%2C_Soria%2C_Espa%C3%B1a%2C_2017-05-26%2C_DD_59.jpg",
-"autor": "Diego Delso",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Muñecas"
+"sinFoto": true
 },
 "mozart": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang-amadeus-mozart_1.jpg?width=480",
@@ -2074,11 +1998,7 @@
 "titulo": "Nicaragua"
 },
 "nicolas descalzi": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicol%C3%A1s_Descalzi_%28Buenos_Aires_Premetro%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Descalzi_%28Buenos_Aires_Premetro%29.jpg",
-"autor": "Gobonobo",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Nicolás Descalzi"
+"sinFoto": true
 },
 "nicolas vila": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas_Vilant.png?width=480",
@@ -2172,11 +2092,7 @@
 "titulo": "Neuquén"
 },
 "osvaldo cruz": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Osvaldo_Cruz.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Osvaldo_Cruz.JPG",
-"autor": "LTS LTS",
-"licencia": "Public domain",
-"titulo": "Osvaldo Cruz"
+"sinFoto": true
 },
 "nueva york": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD_%28cropped%29.jpg?width=480",
@@ -2466,11 +2382,7 @@
 "titulo": "Rafael Hernández"
 },
 "presidente quintana": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n_Presidente_Quintana.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Presidente_Quintana.jpg",
-"autor": "Facu.Morando",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Presidente Quintana"
+"sinFoto": true
 },
 "recoleta": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/J25_327_Recoleta.jpg?width=480",
@@ -2487,11 +2399,7 @@
 "titulo": "Regaliz"
 },
 "ramallo": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramallo_centro.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Ramallo_centro.jpg",
-"autor": "Mushii",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Ramallo"
+"sinFoto": true
 },
 "republica del libano": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Beirut_skyline%2C_Beirut%2C_Lebanon.jpg?width=480",
@@ -2620,18 +2528,10 @@
 "titulo": "San Antonio"
 },
 "san cristobal": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Stairway_in_San_Crist%C3%B3bal.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Stairway_in_San_Crist%C3%B3bal.jpg",
-"autor": "Rufino from Caracas, Venezuela",
-"licencia": "CC BY-SA 2.0",
-"titulo": "San Cristóbal"
+"sinFoto": true
 },
 "san francisco javier": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Centrum_formentery.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Centrum_formentery.jpg",
-"autor": "Marcin Janeczek",
-"licencia": "CC BY 3.0",
-"titulo": "San Francisco Javier"
+"sinFoto": true
 },
 "san isidro": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Vernet_Quinta_La_Porte%C3%B1a_San_Isidro.JPG?width=480",
@@ -2683,11 +2583,7 @@
 "titulo": "San Francisco de Asís"
 },
 "san miguel garicoits": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Miguel_Garicoits%2C_Montevideo.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:San_Miguel_Garicoits%2C_Montevideo.jpg",
-"autor": "Hoverfish",
-"licencia": "CC BY-SA 3.0",
-"titulo": "San Miguel Garicoits"
+"sinFoto": true
 },
 "san nicolas": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Nicholas_Icon_Sinai_13th_century.jpg?width=480",
@@ -2746,11 +2642,7 @@
 "titulo": "Tacuara"
 },
 "teniente general luis j dellepiane": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Autopista_Dellepiane.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Autopista_Dellepiane.jpg",
-"autor": "Gobierno de la Ciudad de Buenos Aires",
-"licencia": "CC BY 2.5 ar",
-"titulo": "Teniente General Luis J. Dellepiane"
+"sinFoto": true
 },
 "terrero": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Obispo_Juan_Nepomuceno.jpg?width=480",
@@ -2781,11 +2673,7 @@
 "titulo": "Trujillo"
 },
 "thames": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/River_thames_oxford.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:River_thames_oxford.jpg",
-"autor": "Zxb",
-"licencia": "CC BY-SA 2.0 at",
-"titulo": "Thames"
+"sinFoto": true
 },
 "tuyu": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mummy_mask_of_Thuya.jpg?width=480",
@@ -2844,11 +2732,7 @@
 "titulo": "Valentín Virasoro"
 },
 "varela": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Peatonal_Florencio_Varela_1.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Peatonal_Florencio_Varela_1.jpg",
-"autor": "Dario Alpern",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Florencio Varela"
+"sinFoto": true
 },
 "veracruz": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/15-07-14-Landschaft-zwischen-Mexico-und-Golfk%C3%BCste-RalfR-WMA_0473.jpg?width=480",
@@ -2963,11 +2847,7 @@
 "titulo": "Vuelta de Obligado"
 },
 "videla castillo": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasaje_Videla_Castillo%2C_Buenos_Aires.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Pasaje_Videla_Castillo%2C_Buenos_Aires.jpg",
-"autor": "Banfield",
-"licencia": "CC BY-SA 2.5 ar",
-"titulo": "Videla Castillo"
+"sinFoto": true
 },
 "yerbal": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/C09f089._Mercado_Central._Calle_Yerbal.jpg?width=480",
@@ -3180,11 +3060,7 @@
 "titulo": "Mapuche"
 },
 "besares": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/%28Parador_9_de_Julio%29_Siemens%E2%80%93Duewag_U2_rumbo_a_Gutierrez_%285%29.JPG/500px-%28Parador_9_de_Julio%29_Siemens%E2%80%93Duewag_U2_rumbo_a_Gutierrez_%285%29.JPG",
-"pageUrl": "https://en.wikipedia.org/wiki/Metrotranv%C3%ADa_Mendoza",
-"autor": "Mauricio V. Genta",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Metrotranvía Mendoza"
+"sinFoto": true
 },
 "billinghurst": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Susana_ferrari_billinghurst.jpg",
@@ -3215,11 +3091,7 @@
 "titulo": "Étienne Eustache Bruix"
 },
 "bernaldes": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Elmina_Castle_-_Ghana.jpg/500px-Elmina_Castle_-_Ghana.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Elmina_Castle",
-"autor": "Damien Halleux Radermecker",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Elmina Castle"
+"sinFoto": true
 },
 "bonpland": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bonpland_Aim%C3%A9_1773-1858.jpg/500px-Bonpland_Aim%C3%A9_1773-1858.jpg",
@@ -3243,11 +3115,7 @@
 "titulo": "Bermejo River"
 },
 "candela sol rodriguez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Montaje_de_Cuernavaca.jpg/500px-Montaje_de_Cuernavaca.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Cuernavaca",
-"autor": "self.",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Cuernavaca"
+"sinFoto": true
 },
 "carbajal": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Execution_of_Mariana_de_Carabajal.jpg",
@@ -3257,11 +3125,7 @@
 "titulo": "Francisca Nuñez de Carabajal"
 },
 "carlos molina arrotea": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Juan_Martin_de_Pueyrredon.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Hussars_of_Pueyrred%C3%B3n",
-"autor": "AnonymousUnknown author",
-"licencia": "Public domain",
-"titulo": "Hussars of Pueyrredón"
+"sinFoto": true
 },
 "capdevila": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Joan_Capdevila_2013_Catalonia.jpg/500px-Joan_Capdevila_2013_Catalonia.jpg",
@@ -3285,11 +3149,7 @@
 "titulo": "Thomas Ian Griffith"
 },
 "carlos norberto vergara": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/CA_Banfield_%282014%29.svg/500px-CA_Banfield_%282014%29.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Club_Atl%C3%A9tico_Banfield",
-"autor": "Unknown authorUnknown author",
-"licencia": "Public domain",
-"titulo": "Club Atlético Banfield"
+"sinFoto": true
 },
 "carrasco": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pedro_Santana_Dominican_Republic_president_1800s.jpg/500px-Pedro_Santana_Dominican_Republic_president_1800s.jpg",
@@ -3348,11 +3208,7 @@
 "titulo": "Chespirito"
 },
 "chorroarin": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/N%C2%BA_19_del_tel%C3%A9grafo_mercantil.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Tel%C3%A9grafo_Mercantil",
-"autor": "Francisco Cabello y Mesa",
-"licencia": "Public domain",
-"titulo": "Telégrafo Mercantil"
+"sinFoto": true
 },
 "chubut": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Villa_Lago_Rivadavia_y_cordillera_de_los_Andes.JPG/500px-Villa_Lago_Rivadavia_y_cordillera_de_los_Andes.JPG",
@@ -3369,11 +3225,7 @@
 "titulo": "Oxalis gigantea"
 },
 "coronel esteban bonorino": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Parque_Roca_Villa_Soldati.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Villa_Soldati",
-"autor": "Francisco Chaves",
-"licencia": "CC BY 2.0",
-"titulo": "Villa Soldati"
+"sinFoto": true
 },
 "coronel juan amadeo de baldrich": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Julio_Meinvielle.jpg",
@@ -3383,32 +3235,16 @@
 "titulo": "Julio Meinvielle"
 },
 "coronel juan f czetz": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Colegio_militar_de_la_naci%C3%B3n_Argentina_logo.svg/500px-Colegio_militar_de_la_naci%C3%B3n_Argentina_logo.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Colegio_Militar_de_la_Naci%C3%B3n",
-"autor": "Unknown",
-"licencia": "Public domain",
-"titulo": "Colegio Militar de la Nación"
+"sinFoto": true
 },
 "coronel manuel jose olascoaga": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Villa_Regina_Montage.jpg/500px-Villa_Regina_Montage.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Villa_Regina",
-"autor": "Derivative Work, (Editor: GDuwen",
-"licencia": "CC BY 3.0",
-"titulo": "Villa Regina"
+"sinFoto": true
 },
 "coronel marcelino e freyre": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Progressistas_%28Brazil%29_logo.svg/500px-Progressistas_%28Brazil%29_logo.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Progressistas",
-"autor": "Progressistas",
-"licencia": "Public domain",
-"titulo": "Progressistas"
+"sinFoto": true
 },
 "coronel rohde": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/500px-Cheeseburger.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Hyperpalatable_food",
-"autor": "Renee Comet (photographer)",
-"licencia": "Public domain",
-"titulo": "Hyperpalatable food"
+"sinFoto": true
 },
 "corrales viejos": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Gauchos_en_la_Feria_de_Mataderos.jpg/500px-Gauchos_en_la_Feria_de_Mataderos.jpg",
@@ -3558,11 +3394,7 @@
 "titulo": "Molfetta"
 },
 "dekay": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Isotelus_rex_%28TMP_2009.003.0003%29%2C_Royal_Tyrrell_Museum%2C_Drumheller%2C_Alberta%2C_2025-07-13.jpg/500px-Isotelus_rex_%28TMP_2009.003.0003%29%2C_Royal_Tyrrell_Museum%2C_Drumheller%2C_Alberta%2C_2025-07-13.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Isotelus",
-"autor": "Chris Woodrich",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Isotelus"
+"sinFoto": true
 },
 "de los ombues": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Umbu_%28do_tupi_umbu%2C_com_outro_significado%29%2C_Phytolacca_dioica%2C_em_Bag%C3%A9%2C_RS%2C_Brasil.jpg/500px-Umbu_%28do_tupi_umbu%2C_com_outro_significado%29%2C_Phytolacca_dioica%2C_em_Bag%C3%A9%2C_RS%2C_Brasil.jpg",
@@ -3579,18 +3411,10 @@
 "titulo": "Casita del Príncipe (El Escorial)"
 },
 "doctor osvaldo eguia": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Movimiento_Nacional_Socialista_de_Chile.png",
-"pageUrl": "https://en.wikipedia.org/wiki/National_Socialist_Movement_of_Chile",
-"autor": "Sfs90",
-"licencia": "CC BY-SA 3.0",
-"titulo": "National Socialist Movement of Chile"
+"sinFoto": true
 },
 "doctor ricardo finochietto": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Embajada_de_Filipinas_Buenos_Aires_3.jpg/500px-Embajada_de_Filipinas_Buenos_Aires_3.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Embassy_of_the_Philippines,_Buenos_Aires",
-"autor": "Jjanasarias",
-"licencia": "Public domain",
-"titulo": "Embassy of the Philippines, Buenos Aires"
+"sinFoto": true
 },
 "domingo romero": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Espantaho_2024_Metro_Manila_Film_Festival_Chanda_Romero7.jpg/500px-Espantaho_2024_Metro_Manila_Film_Festival_Chanda_Romero7.jpg",
@@ -3607,11 +3431,7 @@
 "titulo": "Miguel de Azcuénaga"
 },
 "doctor rodolfo rivarola": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/TangoArgentino-Dani%26SilvinaValz-Obelisco2011.jpg/500px-TangoArgentino-Dani%26SilvinaValz-Obelisco2011.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Tango_Argentino_(musical)",
-"autor": "Gobierno de la Ciudad de Buenos Aires from Ciudad Autónoma de Buenos Aires, Argentina (Foto: Estrella Herrera)",
-"licencia": "CC BY 2.0",
-"titulo": "Tango Argentino (musical)"
+"sinFoto": true
 },
 "dora acosta": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Valentina_Acosta_in_20_April_2017.png",
@@ -3621,18 +3441,10 @@
 "titulo": "Valentina Acosta"
 },
 "dora del grande": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ojos_del_Salado_looming_big_on_the_horizon.jpg/500px-Ojos_del_Salado_looming_big_on_the_horizon.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Ojos_del_Salado",
-"autor": "sergejf",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Ojos del Salado"
+"sinFoto": true
 },
 "echeverria": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Salon_literario.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/1837_generation",
-"autor": "Alberto Rossi (Life time: 1858-1936)",
-"licencia": "Public domain",
-"titulo": "1837 generation"
+"sinFoto": true
 },
 "drumond": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/PhotoofThePioneerWomen.jpg",
@@ -3677,11 +3489,7 @@
 "titulo": "Nestor El Maestro"
 },
 "elias bedoya": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Renzo_Reggiardo_2.jpg/500px-Renzo_Reggiardo_2.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_mayors_of_Lima",
-"autor": "Renzo_Reggiardo.jpg: Congreso de la República del Perú derivative work: Athenchen (talk)",
-"licencia": "CC BY 2.0",
-"titulo": "List of mayors of Lima"
+"sinFoto": true
 },
 "enrique de vedia": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/George_Ticknor.jpg",
@@ -3691,11 +3499,7 @@
 "titulo": "George Ticknor"
 },
 "enrique udaondo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Plaza_Belgrano_frente_a_la_Bas%C3%ADlica_de_Luj%C3%A1n_%28Argentina%29.jpg/500px-Plaza_Belgrano_frente_a_la_Bas%C3%ADlica_de_Luj%C3%A1n_%28Argentina%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Luj%C3%A1n,_Buenos_Aires",
-"autor": "Betina Jones",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Luján, Buenos Aires"
+"sinFoto": true
 },
 "el peregrino": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Alejo_Carpentier_c._1955.jpg/500px-Alejo_Carpentier_c._1955.jpg",
@@ -3712,11 +3516,7 @@
 "titulo": "Spartacus"
 },
 "espinosa": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/JoseMurature_1865_Martin_Garcia_MNN.jpg/500px-JoseMurature_1865_Martin_Garcia_MNN.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Battle_of_Mart%C3%ADn_Garc%C3%ADa_(1814)",
-"autor": "Jose Murature",
-"licencia": "Public domain",
-"titulo": "Battle of Martín García (1814)"
+"sinFoto": true
 },
 "escuela la banderita": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Francisco_Alonso.JPG",
@@ -3761,18 +3561,10 @@
 "titulo": "Dejan Zlatičanin"
 },
 "fabre": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Eusebio_Ollo_Miranda_%282%29.jpg/500px-Eusebio_Ollo_Miranda_%282%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Eusebio_(name)",
-"autor": "Irujo Family",
-"licencia": "CC0",
-"titulo": "Eusebio (name)"
+"sinFoto": true
 },
 "fernando ghio": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Fernando_Poe_Jr_LRT_station_platform_in_March_2026.jpg/500px-Fernando_Poe_Jr_LRT_station_platform_in_March_2026.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Fernando_Poe_Jr._station",
-"autor": "Sean Ronquillo (Ubediplomacy)",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Fernando Poe Jr. station"
+"sinFoto": true
 },
 "fernando de montalvo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bartolom%C3%A9_Montalvo_-_Besugo.jpg/500px-Bartolom%C3%A9_Montalvo_-_Besugo.jpg",
@@ -3817,11 +3609,7 @@
 "titulo": "List of historic Spanish Navy ships"
 },
 "fournier": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/ARA_Fournier.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/ARA_Fournier",
-"autor": "Unknown authorUnknown author",
-"licencia": "Public domain",
-"titulo": "ARA Fournier"
+"sinFoto": true
 },
 "fragata hercules": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Q2ARALibertad.jpg/500px-Q2ARALibertad.jpg",
@@ -3831,18 +3619,10 @@
 "titulo": "ARA Libertad (Q-2)"
 },
 "francisco antonio rizzuto": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Yoro_in_Honduras.svg/500px-Yoro_in_Honduras.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Lluvia_de_peces",
-"autor": "TUBS",
-"licencia": "CC BY 2.0",
-"titulo": "Lluvia de peces"
+"sinFoto": true
 },
 "francisco de viedma": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Vista_a%C3%A9rea_Viedma_-_Carmen_de_Patagones.jpg/500px-Vista_a%C3%A9rea_Viedma_-_Carmen_de_Patagones.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Viedma,_R%C3%ADo_Negro",
-"autor": "Rdrinero",
-"licencia": "Public domain",
-"titulo": "Viedma, Río Negro"
+"sinFoto": true
 },
 "francisco de vittoria": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Franciscodevictoria.jpg/500px-Franciscodevictoria.jpg",
@@ -3859,18 +3639,10 @@
 "titulo": "Francisco Serrano, 1st Duke of la Torre"
 },
 "francisco de uzal": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Club_de_F%C3%BAtbol_Monterrey_logo.svg/500px-Club_de_F%C3%BAtbol_Monterrey_logo.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/C.F._Monterrey",
-"autor": "Club Deportivo Monterrey A.C. (Club de Fútbol Monterrey)",
-"licencia": "Public domain",
-"titulo": "C.F. Monterrey"
+"sinFoto": true
 },
 "francisco pracanico": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Mapa_Avenida_Corrientes.JPG",
-"pageUrl": "https://en.wikipedia.org/wiki/Avenida_Corrientes",
-"autor": "Made by the uploader, w:es:Usuario:Roberto Fiadone",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Avenida Corrientes"
+"sinFoto": true
 },
 "francisco mura": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Cabrera.png/500px-Cabrera.png",
@@ -3887,11 +3659,7 @@
 "titulo": "Pedro Franco"
 },
 "gallardo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Candaba_Municipal_Hall%2C_Pampanga%2C_July_2025.jpg/500px-Candaba_Municipal_Hall%2C_Pampanga%2C_July_2025.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Candaba",
-"autor": "Ralff Nestor Nacor",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Candaba"
+"sinFoto": true
 },
 "garmendia": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Luisa_Garmendia_Alurralde.jpg/500px-Luisa_Garmendia_Alurralde.jpg",
@@ -3901,11 +3669,7 @@
 "titulo": "Luisa Garmendia"
 },
 "german abdala": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Coronavirus._SARS-CoV-2.png/500px-Coronavirus._SARS-CoV-2.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Abdala_(vaccine)",
-"autor": "Alexey Solodovnikov (Idea, Producer, CG, Editor), Valeria Arkhipova (Scientific Сonsultant)",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Abdala (vaccine)"
+"sinFoto": true
 },
 "garcia de cossio": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Manuel_belgrano_by_carbonier_retouched.jpg/500px-Manuel_belgrano_by_carbonier_retouched.jpg",
@@ -3950,11 +3714,7 @@
 "titulo": "Giordano Bruno"
 },
 "general francisco ramirez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Artigas.svg/500px-Flag_of_Artigas.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Republic_of_Entre_R%C3%ADos",
-"autor": "José Gervasio Artigas",
-"licencia": "Public domain",
-"titulo": "Republic of Entre Ríos"
+"sinFoto": true
 },
 "goleta invencible": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Capture_of_the_El_Mosquito.jpg/500px-Capture_of_the_El_Mosquito.jpg",
@@ -3999,11 +3759,7 @@
 "titulo": "Gerónimo de Aguilar"
 },
 "gomez de fonseca": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/17_March_2020_Virtual_Council_of_Ministers_of_Spain_03.jpg/500px-17_March_2020_Virtual_Council_of_Ministers_of_Spain_03.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Koldo_Case",
-"autor": "Pool Moncloa/J. M. Cuadrado",
-"licencia": "Attribution",
-"titulo": "Koldo Case"
+"sinFoto": true
 },
 "gregoria matorras de san martin": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Jos%C3%A9_de_San_Mart%C3%ADn_%28retrato%2C_c.1828%29.jpg/500px-Jos%C3%A9_de_San_Mart%C3%ADn_%28retrato%2C_c.1828%29.jpg",
@@ -4020,18 +3776,10 @@
 "titulo": "Agustín Bardi"
 },
 "guillermo enrique granville": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/P33ARAGranville.jpg/500px-P33ARAGranville.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/ARA_Granville_(P-33)",
-"autor": "No machine-readable author provided. Martin.Otero assumed (based on copyright claims).",
-"licencia": "CC BY 2.5",
-"titulo": "ARA Granville (P-33)"
+"sinFoto": true
 },
 "gregoria perez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Departamento_9_de_Julio_%28Santa_Fe_-_Argentina%29.png/500px-Departamento_9_de_Julio_%28Santa_Fe_-_Argentina%29.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Nueve_de_Julio_Department,_Santa_Fe",
-"autor": "",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Nueve de Julio Department, Santa Fe"
+"sinFoto": true
 },
 "gustavo riccio": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Sancha_de_Arag%C3%B3n_y_Gazela.jpg",
@@ -4062,11 +3810,7 @@
 "titulo": "Luis González de Guzmán"
 },
 "hermanas mirabal": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Hermanas_Mirabal.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Mirabal_sisters",
-"autor": "Unknown authorUnknown author",
-"licencia": "Public domain",
-"titulo": "Mirabal sisters"
+"sinFoto": true
 },
 "hidroavion buenos aires": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Balair_Douglas_DC-6_Basle_Airport_-_1976.jpg/500px-Balair_Douglas_DC-6_Basle_Airport_-_1976.jpg",
@@ -4076,11 +3820,7 @@
 "titulo": "List of accidents and incidents involving the Douglas DC-6"
 },
 "hortiguera": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Batalla_del_Cerrito.jpg/500px-Batalla_del_Cerrito.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Battle_of_Cerrito",
-"autor": "Dibujo de un testigo. Colección AssunÇao, Montevideo)",
-"licencia": "Public domain",
-"titulo": "Battle of Cerrito"
+"sinFoto": true
 },
 "huaura": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Huaura_Balcony_Liberty.jpg/500px-Huaura_Balcony_Liberty.jpg",
@@ -4097,11 +3837,7 @@
 "titulo": "Iván Helguera"
 },
 "hudson": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Nuevo_puente_a_inaugurar_-_panoramio.jpg/500px-Nuevo_puente_a_inaugurar_-_panoramio.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Santiago_del_Estero_Province",
-"autor": "gustavochavez",
-"licencia": "CC BY 3.0",
-"titulo": "Santiago del Estero Province"
+"sinFoto": true
 },
 "ibera": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flying_Over_Esteros_del_Iber%C3%A1_The_kingdom_of_water%2C_North-eastern_Argentina.jpg/500px-Flying_Over_Esteros_del_Iber%C3%A1_The_kingdom_of_water%2C_North-eastern_Argentina.jpg",
@@ -4118,11 +3854,7 @@
 "titulo": "Ignacio Agramonte"
 },
 "jacinto oddone": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Gremialismo.png/500px-Gremialismo.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Guildism",
-"autor": "Luzarnik",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Guildism"
+"sinFoto": true
 },
 "joaquin sanchez": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Joaquin_2022_%28cropped%29.jpg/500px-Joaquin_2022_%28cropped%29.jpg",
@@ -4132,25 +3864,13 @@
 "titulo": "Joaquín (footballer, born 1981)"
 },
 "jose barros pazos": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Villa_Lugano%2C_estaci%C3%B3n_%22Centro_c%C3%ADvico_Lugano%22_de_Premetro_%28septiembre_2008%29.jpg/500px-Villa_Lugano%2C_estaci%C3%B3n_%22Centro_c%C3%ADvico_Lugano%22_de_Premetro_%28septiembre_2008%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Villa_Lugano",
-"autor": "Cristian O. Arone",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Villa Lugano"
+"sinFoto": true
 },
 "jose dames": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Notre_Dame_High_School_%28San_Jose%2C_California%29_4125.jpg/500px-Notre_Dame_High_School_%28San_Jose%2C_California%29_4125.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Notre_Dame_High_School_(San_Jose,_California)",
-"autor": "Cristiano Tomás",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Notre Dame High School (San Jose, California)"
+"sinFoto": true
 },
 "jose celedonio balbin": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Cantabria_%28Official%29.svg/500px-Flag_of_Cantabria_%28Official%29.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Cantabria",
-"autor": "Miguillen",
-"licencia": "CC BY-SA 2.5",
-"titulo": "Cantabria"
+"sinFoto": true
 },
 "jose cubas": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Jos%C3%A9_Mart%C3%AD_retrato_m%C3%A1s_conocido_Jamaica_1892.jpg/500px-Jos%C3%A9_Mart%C3%AD_retrato_m%C3%A1s_conocido_Jamaica_1892.jpg",
@@ -4167,11 +3887,7 @@
 "titulo": "José Enrique Rodó"
 },
 "jose eusebio aguero": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Eusebio_Ollo_Miranda_%282%29.jpg/500px-Eusebio_Ollo_Miranda_%282%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Eusebio_(name)",
-"autor": "Irujo Family",
-"licencia": "CC0",
-"titulo": "Eusebio (name)"
+"sinFoto": true
 },
 "jose de la quintana": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Jos%C3%A9_Luis_Quintana%2C_candidato_a_la_Alcald%C3%ADa_%285669812415%29_%28cropped%29.jpg/500px-Jos%C3%A9_Luis_Quintana%2C_candidato_a_la_Alcald%C3%ADa_%285669812415%29_%28cropped%29.jpg",
@@ -4195,11 +3911,7 @@
 "titulo": "José María Rosa"
 },
 "jose e carballido": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/FMNH_Patagotitan.jpg/500px-FMNH_Patagotitan.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Patagotitan",
-"autor": "Zissoudisctrucker",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Patagotitan"
+"sinFoto": true
 },
 "jose varas": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Varas%2C_Jose_Miguel_diciembre_2010.jpg",
@@ -4216,11 +3928,7 @@
 "titulo": "Alcira de la Peña"
 },
 "juan bautista primoli": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Buenos_Aires_-_Recoleta_-_Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora_del_Pilar_-_1.jpg/500px-Buenos_Aires_-_Recoleta_-_Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora_del_Pilar_-_1.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Basilica_of_Our_Lady_of_the_Pillar,_Buenos_Aires",
-"autor": "Starus",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Basilica of Our Lady of the Pillar, Buenos Aires"
+"sinFoto": true
 },
 "juan francisco olmos": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Edward_James_Olmos_at_the_2026_Sundance_Film_Festival.jpg/500px-Edward_James_Olmos_at_the_2026_Sundance_Film_Festival.jpg",
@@ -4237,25 +3945,13 @@
 "titulo": "Juan Bautista Alvarado"
 },
 "juana maria de lara": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Castas_01mestiza_max.jpg/500px-Castas_01mestiza_max.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Mestizo",
-"autor": "Miguel Cabrera",
-"licencia": "Public domain",
-"titulo": "Mestizo"
+"sinFoto": true
 },
 "juez tedin": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Jorge_Macri%2C_Teatro_Col%C3%B3n_%28cropped%29.jpg/500px-Jorge_Macri%2C_Teatro_Col%C3%B3n_%28cropped%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_mayors_and_chiefs_of_government_of_Buenos_Aires_City",
-"autor": "GCBA",
-"licencia": "CC BY-SA 2.5",
-"titulo": "List of mayors and chiefs of government of Buenos Aires City"
+"sinFoto": true
 },
 "julio argentino noble": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Versi%C3%B3n_francesa_del_Himno_argentino.jpg/500px-Versi%C3%B3n_francesa_del_Himno_argentino.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Argentine_National_Anthem",
-"autor": "Unknown (Illustration)",
-"licencia": "Public domain",
-"titulo": "Argentine National Anthem"
+"sinFoto": true
 },
 "juramento": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/MinasGerais_Municip_Juramento.svg/500px-MinasGerais_Municip_Juramento.svg.png",
@@ -4265,11 +3961,7 @@
 "titulo": "Juramento"
 },
 "julio victor gonzalez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Spanish_surnames_by_province_of_residence.png/500px-Spanish_surnames_by_province_of_residence.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Gonz%C3%A1lez_(surname)",
-"autor": "Alfanje~commonswiki",
-"licencia": "Public domain",
-"titulo": "González (surname)"
+"sinFoto": true
 },
 "justo antonio suarez": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Justo_suarez_retrato.jpg/500px-Justo_suarez_retrato.jpg",
@@ -4300,11 +3992,7 @@
 "titulo": "Puente La Milagrosa"
 },
 "lacarra": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Euskal_Herria_Europa.png/500px-Euskal_Herria_Europa.png",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_people_from_the_Basque_Country",
-"autor": "This image has been made by Zorion (User:Zorion) and released under the licenses stated above. You are free to use this image for any purpose without restriction as long as you credit me as author, follow the terms of license and cite Wikimedia Commons as site. If you alter, transform, or build upon this work, would you mind leaving me a message on this page in English. Thank you.",
-"licencia": "CC BY-SA 4.0",
-"titulo": "List of people from the Basque Country"
+"sinFoto": true
 },
 "mahatma gandhi": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg/500px-Mahatma-Gandhi%2C_studio%2C_1931.jpg",
@@ -4349,11 +4037,7 @@
 "titulo": "Jamie Marchi"
 },
 "martin coronado": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Teatro_san_martin_en_av_corrientes.jpg/500px-Teatro_san_martin_en_av_corrientes.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Teatro_General_San_Mart%C3%ADn",
-"autor": "Unknown authorUnknown author",
-"licencia": "CC BY 2.5 ar",
-"titulo": "Teatro General San Martín"
+"sinFoto": true
 },
 "mayor bernardo alberte": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Juan_Domingo_Per%C3%B3n_%28cropped%29.jpg/500px-Juan_Domingo_Per%C3%B3n_%28cropped%29.jpg",
@@ -4405,18 +4089,10 @@
 "titulo": "Susana Agüero"
 },
 "mendez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Blason_Armas_de_M%C3%A9ndez.png/500px-Blason_Armas_de_M%C3%A9ndez.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Mendez",
-"autor": "ShadowFox01",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Mendez"
+"sinFoto": true
 },
 "miguel a camino": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Ways_of_St._James_in_Europe.png/500px-Ways_of_St._James_in_Europe.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Camino_de_Santiago",
-"autor": "Manfred Zentgraf, Volkach, Germany",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Camino de Santiago"
+"sinFoto": true
 },
 "minones": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Jos%C3%A9_Manuel_Mi%C3%B1ones_Conde_2023_%28cropped%29.jpg/500px-Jos%C3%A9_Manuel_Mi%C3%B1ones_Conde_2023_%28cropped%29.jpg",
@@ -4454,11 +4130,7 @@
 "titulo": "Míchel (footballer, born 1975)"
 },
 "morlote": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Logo_%E2%80%93_Asamblea_Nacional_del_Poder_Popular.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Ninth_Legislature_of_the_National_Assembly_of_People%27s_Power_of_Cuba",
-"autor": "Asamblea Nacional del Poder Popular",
-"licencia": "Public domain",
-"titulo": "Ninth Legislature of the National Assembly of People's Power of Cuba"
+"sinFoto": true
 },
 "murguiondo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Juan_%C3%81ngel_Michelena.png",
@@ -4503,18 +4175,10 @@
 "titulo": "Jorge Rafael Videla"
 },
 "nicolas granada": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Granada_%2825987961022%29.jpg/500px-Granada_%2825987961022%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Granada",
-"autor": "Brett Hodnett",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Granada"
+"sinFoto": true
 },
 "orma": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Flag_of_Argentina_%28civil%29.svg/500px-Flag_of_Argentina_%28civil%29.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/United_Provinces_of_the_R%C3%ADo_de_la_Plata",
-"autor": "Manuel Belgrano (1770-1820)",
-"licencia": "Public domain",
-"titulo": "United Provinces of the Río de la Plata"
+"sinFoto": true
 },
 "pablo podesta": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Pablo_podest%C3%A1.jpg",
@@ -4524,11 +4188,7 @@
 "titulo": "Pablo Podestá"
 },
 "pacifico victor lambertucci": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Comemora%C3%A7%C3%A3o_do_anivers%C3%A1rio_do_Rancho_Folcl%C3%B3rico_Portuguesa_Santista%2C_realizada_no_dia_14_de_julho_de_2018_%2842529794855%29.jpg/500px-Comemora%C3%A7%C3%A3o_do_anivers%C3%A1rio_do_Rancho_Folcl%C3%B3rico_Portuguesa_Santista%2C_realizada_no_dia_14_de_julho_de_2018_%2842529794855%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Portuguese_Brazilians",
-"autor": "Agência Briosa from Santos, Brasil",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Portuguese Brazilians"
+"sinFoto": true
 },
 "parana": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/500px-Bandeira_do_Paran%C3%A1.svg.png",
@@ -4559,11 +4219,7 @@
 "titulo": "Batalla de Pavón"
 },
 "pedro echague": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Echague%2C_Isabela_%282022-present%29.png/500px-Flag_of_Echague%2C_Isabela_%282022-present%29.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Echague",
-"autor": "Municipal Government of Echague",
-"licencia": "Public domain",
-"titulo": "Echague"
+"sinFoto": true
 },
 "pehuajo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Cas0jugodahgudaijf.png",
@@ -4580,11 +4236,7 @@
 "titulo": "Charles Trudeau (politician)"
 },
 "patron": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/PatronGoldBottle.jpg/500px-PatronGoldBottle.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Patr%C3%B3n",
-"autor": "Broncinbuck at English Wikipedia",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Patrón"
+"sinFoto": true
 },
 "pila": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fontanna_w_Pile5.JPG/500px-Fontanna_w_Pile5.JPG",
@@ -4657,25 +4309,13 @@
 "titulo": "Che Guevara"
 },
 "raulet": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Cigsep.jpg/500px-Cigsep.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Copper_indium_gallium_selenide_solar_cell",
-"autor": "Dantor",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Copper indium gallium selenide solar cell"
+"sinFoto": true
 },
 "regis martinez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Constituci%C3%B3n_Nacional_Argentina_1853_-_p%C3%A1gina_1.jpeg/500px-Constituci%C3%B3n_Nacional_Argentina_1853_-_p%C3%A1gina_1.jpeg",
-"pageUrl": "https://en.wikipedia.org/wiki/Argentine_Constitution_of_1853",
-"autor": "Asamblea Constituyente, based on Juan B. Alberdi (1810-1884) book Bases y puntos de partida para la organización política de la República Argentina that served as inspiration",
-"licencia": "Public domain",
-"titulo": "Argentine Constitution of 1853"
+"sinFoto": true
 },
 "renque cura": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cauquen_en_Lago_Moquehue.jpg/500px-Cauquen_en_Lago_Moquehue.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Moquehue",
-"autor": "Dangelin5",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Moquehue"
+"sinFoto": true
 },
 "republica democratica del congo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Democratic_Republic_of_the_Congo_Uruguay_Locator.svg/500px-Democratic_Republic_of_the_Congo_Uruguay_Locator.svg.png",
@@ -4713,11 +4353,7 @@
 "titulo": "Ricardo Güiraldes"
 },
 "robertson": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Cementerio_Brit%C3%A1nico_Buenos_Aires.jpg/500px-Cementerio_Brit%C3%A1nico_Buenos_Aires.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Cementerio_Brit%C3%A1nico",
-"autor": "Johnbue",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Cementerio Británico"
+"sinFoto": true
 },
 "san benito de palermo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Capela_do_Divino_Esp%C3%ADrito_Santo_em_Porto_Alegre_011-aa.JPG/500px-Capela_do_Divino_Esp%C3%ADrito_Santo_em_Porto_Alegre_011-aa.JPG",
@@ -4741,11 +4377,7 @@
 "titulo": "San Lorenzo de Almagro"
 },
 "san cayetano de liniers": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Avenida_Rivadavia_Liniers.jpg/500px-Avenida_Rivadavia_Liniers.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Liniers",
-"autor": "El xeneixe12",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Liniers"
+"sinFoto": true
 },
 "san pedro": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Club_Campestre_de_Monterrey_A.C.jpg/500px-Club_Campestre_de_Monterrey_A.C.jpg",
@@ -4769,18 +4401,10 @@
 "titulo": "San Mateo, California"
 },
 "san ricardo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Flag_of_San_Ricardo%2C_Southern_Leyte.png/500px-Flag_of_San_Ricardo%2C_Southern_Leyte.png",
-"pageUrl": "https://en.wikipedia.org/wiki/San_Ricardo",
-"autor": "Municipal Government of San Ricardo",
-"licencia": "Public domain",
-"titulo": "San Ricardo"
+"sinFoto": true
 },
 "san roque gonzalez de santa cruz": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/San_Roque_Gonz%C3%A1lez_de_Santa_Cruz_Bridge_2.jpg/500px-San_Roque_Gonz%C3%A1lez_de_Santa_Cruz_Bridge_2.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/San_Roque_Gonz%C3%A1lez_de_Santa_Cruz_Bridge",
-"autor": "cecito",
-"licencia": "CC BY-SA 2.0",
-"titulo": "San Roque González de Santa Cruz Bridge"
+"sinFoto": true
 },
 "santa catalina": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg/500px-Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg",
@@ -4797,18 +4421,10 @@
 "titulo": "Gigi Fernández"
 },
 "sarachaga": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ligas-1830-31.png/500px-Ligas-1830-31.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Unitarian_League",
-"autor": "Rafunken",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Unitarian League"
+"sinFoto": true
 },
 "saravia": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Portrait_of_Roc%C3%ADo_Nahle_Garc%C3%ADa.png/500px-Portrait_of_Roc%C3%ADo_Nahle_Garc%C3%ADa.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Governor_of_Veracruz",
-"autor": "Azraelrock",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Governor of Veracruz"
+"sinFoto": true
 },
 "sargento eduardo romero": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/EduardoRomero.jpg/500px-EduardoRomero.jpg",
@@ -4825,25 +4441,13 @@
 "titulo": "Iñigo Pérez"
 },
 "subcomisario severino jose cirigliano": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/XXXIV_Fiesta_Nacional_del_Inmigrante_-_desfile_-_colectividad_italiana.JPG/500px-XXXIV_Fiesta_Nacional_del_Inmigrante_-_desfile_-_colectividad_italiana.JPG",
-"pageUrl": "https://en.wikipedia.org/wiki/Italian_Argentines",
-"autor": "Leandro Kibisz/Wikimedia Argentina",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Italian Argentines"
+"sinFoto": true
 },
 "superi": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Batalla_de_Tucum%C3%A1n.jpg/500px-Batalla_de_Tucum%C3%A1n.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Battle_of_Tucum%C3%A1n",
-"autor": "Francisco Fortuny",
-"licencia": "Public domain",
-"titulo": "Battle of Tucumán"
+"sinFoto": true
 },
 "teniente general eustoquio frias": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/500px-Flag_of_Argentina.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Flag_of_Argentina",
-"autor": "Manuel Belgrano",
-"licencia": "Public domain",
-"titulo": "Flag of Argentina"
+"sinFoto": true
 },
 "teniente general nicolas levalle": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/General_Nicolas_Levalle.jpg/500px-General_Nicolas_Levalle.jpg",
@@ -4881,11 +4485,7 @@
 "titulo": "Paso de Uspallata"
 },
 "timoteo gordillo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Chacho_Coudet_en_San_Luis.jpg/500px-Chacho_Coudet_en_San_Luis.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_Club_Atl%C3%A9tico_River_Plate_managers",
-"autor": "Alihf Esparza from San Luis Potosí, México",
-"licencia": "CC BY 2.0",
-"titulo": "List of Club Atlético River Plate managers"
+"sinFoto": true
 },
 "valderrama": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Pibe_Valderrama_2022.jpg",
@@ -4902,11 +4502,7 @@
 "titulo": "Julio de Vedia"
 },
 "valdenegro": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Eusebio_Ollo_Miranda_%282%29.jpg/500px-Eusebio_Ollo_Miranda_%282%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Eusebio_(name)",
-"autor": "Irujo Family",
-"licencia": "CC0",
-"titulo": "Eusebio (name)"
+"sinFoto": true
 },
 "urien": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Agustina_Cherri_01.jpg/500px-Agustina_Cherri_01.jpg",
@@ -4923,11 +4519,7 @@
 "titulo": "Zoilo Versalles"
 },
 "ventura bosch": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Desayuno_Nueva_Econom%C3%ADa_con_Jos%C3%A9_Luis_Mart%C3%ADnez_Almeida_%2834311473114%29.jpg/500px-Desayuno_Nueva_Econom%C3%ADa_con_Jos%C3%A9_Luis_Mart%C3%ADnez_Almeida_%2834311473114%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_mayors_of_Madrid",
-"autor": "PP Comunidad de Madrid",
-"licencia": "CC BY 2.0",
-"titulo": "List of mayors of Madrid"
+"sinFoto": true
 },
 "vicente anastasio de echevarria": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/VicenteAnastasioEcheverria.png/500px-VicenteAnastasioEcheverria.png",
@@ -4937,11 +4529,7 @@
 "titulo": "Vicente Anastasio Echevarría"
 },
 "zavaleta": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Constituci%C3%B3n_Argentina_de_1819.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Argentine_Constitution_of_1819",
-"autor": "Congreso de Tucumán",
-"licencia": "Public domain",
-"titulo": "Argentine Constitution of 1819"
+"sinFoto": true
 },
 "zapata": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Emiliano_Zapata4.jpg/500px-Emiliano_Zapata4.jpg",
@@ -5100,6 +4688,513 @@
 "sinFoto": true
 },
 "bathurst": {
+"sinFoto": true
+},
+"antonio cambiasso": {
+"sinFoto": true
+},
+"beade": {
+"sinFoto": true
+},
+"beazley": {
+"sinFoto": true
+},
+"beniamino semiza": {
+"sinFoto": true
+},
+"bermudez": {
+"sinFoto": true
+},
+"bernal": {
+"sinFoto": true
+},
+"berthelot": {
+"sinFoto": true
+},
+"butteler": {
+"sinFoto": true
+},
+"cabello": {
+"sinFoto": true
+},
+"cabo de patricios orencio pio rodriguez": {
+"sinFoto": true
+},
+"campillo": {
+"sinFoto": true
+},
+"capitan claudio h rosales": {
+"sinFoto": true
+},
+"cardoso": {
+"sinFoto": true
+},
+"casco": {
+"sinFoto": true
+},
+"castanon": {
+"sinFoto": true
+},
+"cipolletti": {
+"sinFoto": true
+},
+"coghlan": {
+"sinFoto": true
+},
+"comandante francisco carbonari": {
+"sinFoto": true
+},
+"conde": {
+"sinFoto": true
+},
+"conscripto bernardi": {
+"sinFoto": true
+},
+"coronel apolinario figueroa": {
+"sinFoto": true
+},
+"coronel cabrer": {
+"sinFoto": true
+},
+"coronel pagola": {
+"sinFoto": true
+},
+"coronel rico": {
+"sinFoto": true
+},
+"coronel toribio tedin": {
+"sinFoto": true
+},
+"cortina": {
+"sinFoto": true
+},
+"calcena": {
+"sinFoto": true
+},
+"darwin passaponti": {
+"sinFoto": true
+},
+"dario broggi": {
+"sinFoto": true
+},
+"del libertador": {
+"sinFoto": true
+},
+"diego fernandez espiro": {
+"sinFoto": true
+},
+"diputado nacional jorge mariano almada": {
+"sinFoto": true
+},
+"diputado nacional osvaldo ernesto benedetti": {
+"sinFoto": true
+},
+"doctor alfredo rivas": {
+"sinFoto": true
+},
+"doctor honorio pueyrredon": {
+"sinFoto": true
+},
+"doctor horacio casco": {
+"sinFoto": true
+},
+"doctor jose ignacio de la roza": {
+"sinFoto": true
+},
+"doctor juan felipe aranguren": {
+"sinFoto": true
+},
+"doctor luis belaustegui": {
+"sinFoto": true
+},
+"doctor nicolas repetto": {
+"sinFoto": true
+},
+"domingo olivera": {
+"sinFoto": true
+},
+"don pepe": {
+"sinFoto": true
+},
+"echauri": {
+"sinFoto": true
+},
+"elena larroque de roffo": {
+"sinFoto": true
+},
+"elia": {
+"sinFoto": true
+},
+"enrique ochoa": {
+"sinFoto": true
+},
+"erezcano": {
+"sinFoto": true
+},
+"esteban crovara": {
+"sinFoto": true
+},
+"ezeiza": {
+"sinFoto": true
+},
+"falucho": {
+"sinFoto": true
+},
+"faraday": {
+"sinFoto": true
+},
+"fortunato devoto": {
+"sinFoto": true
+},
+"fray pedro agustin cueli": {
+"sinFoto": true
+},
+"felix lima": {
+"sinFoto": true
+},
+"felix lynch arribalzaga": {
+"sinFoto": true
+},
+"gabriel lafond": {
+"sinFoto": true
+},
+"gabriela mistral": {
+"sinFoto": true
+},
+"gallo": {
+"sinFoto": true
+},
+"gaona": {
+"sinFoto": true
+},
+"gaston riva": {
+"sinFoto": true
+},
+"general enrique martinez": {
+"sinFoto": true
+},
+"general enrique mosconi": {
+"sinFoto": true
+},
+"general enrique spika": {
+"sinFoto": true
+},
+"general mosconi": {
+"sinFoto": true
+},
+"girardot": {
+"sinFoto": true
+},
+"godoy cruz": {
+"sinFoto": true
+},
+"gonzalez catan": {
+"sinFoto": true
+},
+"guevara": {
+"sinFoto": true
+},
+"inclan": {
+"sinFoto": true
+},
+"ingeniero antonio vilar": {
+"sinFoto": true
+},
+"ingeniero arquitecto jorge bunge": {
+"sinFoto": true
+},
+"ingeniero cesar manuel polledo": {
+"sinFoto": true
+},
+"intendente bunge": {
+"sinFoto": true
+},
+"intendente pinedo": {
+"sinFoto": true
+},
+"iraola": {
+"sinFoto": true
+},
+"irene orlando": {
+"sinFoto": true
+},
+"isidro lorea": {
+"sinFoto": true
+},
+"itzhak rabin": {
+"sinFoto": true
+},
+"j f bateman": {
+"sinFoto": true
+},
+"joaquin gomez somavilla": {
+"sinFoto": true
+},
+"jorge n williams": {
+"sinFoto": true
+},
+"jose a cortejarena": {
+"sinFoto": true
+},
+"jose aaron salmun feijoo": {
+"sinFoto": true
+},
+"jose soldati": {
+"sinFoto": true
+},
+"juan darquier": {
+"sinFoto": true
+},
+"juan m coghlan": {
+"sinFoto": true
+},
+"juan maffioli": {
+"sinFoto": true
+},
+"juan tronconi": {
+"sinFoto": true
+},
+"juan de castro": {
+"sinFoto": true
+},
+"la mar": {
+"sinFoto": true
+},
+"lafayette": {
+"sinFoto": true
+},
+"laguna": {
+"sinFoto": true
+},
+"larraya": {
+"sinFoto": true
+},
+"larrea": {
+"sinFoto": true
+},
+"lascano": {
+"sinFoto": true
+},
+"lavarden": {
+"sinFoto": true
+},
+"liborio pupillo": {
+"sinFoto": true
+},
+"lorea": {
+"sinFoto": true
+},
+"luchter": {
+"sinFoto": true
+},
+"luis alberto herrera": {
+"sinFoto": true
+},
+"manuel j samperio": {
+"sinFoto": true
+},
+"manzanares": {
+"sinFoto": true
+},
+"marcelo gamboa": {
+"sinFoto": true
+},
+"martiniano bonorino": {
+"sinFoto": true
+},
+"maria robotti de bulzani": {
+"sinFoto": true
+},
+"mayor arturo pedro luisoni": {
+"sinFoto": true
+},
+"medina": {
+"sinFoto": true
+},
+"miguel couto": {
+"sinFoto": true
+},
+"ministro brin": {
+"sinFoto": true
+},
+"miro": {
+"sinFoto": true
+},
+"mompox": {
+"sinFoto": true
+},
+"monte castro": {
+"sinFoto": true
+},
+"montenegro": {
+"sinFoto": true
+},
+"martires palotinos": {
+"sinFoto": true
+},
+"mendez de andes": {
+"sinFoto": true
+},
+"necochea": {
+"sinFoto": true
+},
+"nunez": {
+"sinFoto": true
+},
+"obrero roberto nunez": {
+"sinFoto": true
+},
+"ohm": {
+"sinFoto": true
+},
+"olivera": {
+"sinFoto": true
+},
+"otamendi": {
+"sinFoto": true
+},
+"otero": {
+"sinFoto": true
+},
+"o brien": {
+"sinFoto": true
+},
+"padre enrique contardi": {
+"sinFoto": true
+},
+"padre mario luis migone": {
+"sinFoto": true
+},
+"paul groussac": {
+"sinFoto": true
+},
+"paula albarracin de sarmiento": {
+"sinFoto": true
+},
+"pedro de jerez": {
+"sinFoto": true
+},
+"pereyra": {
+"sinFoto": true
+},
+"pillado": {
+"sinFoto": true
+},
+"piran": {
+"sinFoto": true
+},
+"pizzurno": {
+"sinFoto": true
+},
+"plaza": {
+"sinFoto": true
+},
+"plaza de isidora": {
+"sinFoto": true
+},
+"profesor doctor pedro chutro": {
+"sinFoto": true
+},
+"profesora marina margarita ravioli": {
+"sinFoto": true
+},
+"puerto madero": {
+"sinFoto": true
+},
+"quiros": {
+"sinFoto": true
+},
+"ricardo llanes": {
+"sinFoto": true
+},
+"riglos": {
+"sinFoto": true
+},
+"roberto sanchez": {
+"sinFoto": true
+},
+"rocamora": {
+"sinFoto": true
+},
+"rodney": {
+"sinFoto": true
+},
+"roentgen": {
+"sinFoto": true
+},
+"romero": {
+"sinFoto": true
+},
+"rosa h cirullo de carnaghi": {
+"sinFoto": true
+},
+"salvigny": {
+"sinFoto": true
+},
+"sanabria": {
+"sinFoto": true
+},
+"santojanni": {
+"sinFoto": true
+},
+"saraza": {
+"sinFoto": true
+},
+"severo garcia grande de zequeira": {
+"sinFoto": true
+},
+"simbron": {
+"sinFoto": true
+},
+"soldado de la frontera": {
+"sinFoto": true
+},
+"soldado de la independencia": {
+"sinFoto": true
+},
+"sanchez": {
+"sinFoto": true
+},
+"temperley": {
+"sinFoto": true
+},
+"teniente coronel casimiro recuero": {
+"sinFoto": true
+},
+"teniente general emilio mitre": {
+"sinFoto": true
+},
+"toll": {
+"sinFoto": true
+},
+"tomas liberti": {
+"sinFoto": true
+},
+"tomas valencia": {
+"sinFoto": true
+},
+"trole": {
+"sinFoto": true
+},
+"valle": {
+"sinFoto": true
+},
+"villa general mitre": {
+"sinFoto": true
+},
+"villa ortuzar": {
+"sinFoto": true
+},
+"villa soldati": {
+"sinFoto": true
+},
+"zamudio": {
+"sinFoto": true
+},
+"zarraga": {
+"sinFoto": true
+},
+"angela m aieta de gullo": {
 "sinFoto": true
 }
 }
