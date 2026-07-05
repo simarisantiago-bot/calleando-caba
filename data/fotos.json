@@ -1533,11 +1533,11 @@
 "titulo": "Juana de Arco"
 },
 "jujuy": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jujuy_Montage.png?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Jujuy_Montage.png",
-"autor": "Marianocecowski, Coquena, Abuelodelanada, montage by Bleff",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jujuy-Purmamarca-P3120100.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Jujuy-Purmamarca-P3120100.JPG",
+"autor": "Marianocecowski",
 "licencia": "CC BY-SA 3.0",
-"titulo": "Provincia de Jujuy"
+"titulo": "Jujuy"
 },
 "julio cortazar": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cort%C3%A1zar.jpg?width=480",
@@ -1995,11 +1995,11 @@
 "titulo": "Moscú"
 },
 "monroe": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/MonroeDowntown.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:MonroeDowntown.jpg",
-"autor": "Notorious4life at en.wikipedia",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/James_Monroe_White_House_portrait_1819.jpg/500px-James_Monroe_White_House_portrait_1819.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/James_Monroe",
+"autor": "Samuel Finley Breese Morse",
 "licencia": "Public domain",
-"titulo": "Monroe"
+"titulo": "James Monroe"
 },
 "moreto": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Agust%C3%ADn_Moreto_por_Juan_Pareja.jpg?width=480",
@@ -2282,11 +2282,11 @@
 "titulo": "Plaza del Ángel Gris"
 },
 "pichincha": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%ADnea_E%2C_mural_de_la_estaci%C3%B3n_Pichincha_%28Buenos_Aires%2C_septiembre_2008%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:L%C3%ADnea_E%2C_mural_de_la_estaci%C3%B3n_Pichincha_%28Buenos_Aires%2C_septiembre_2008%29.jpg",
-"autor": "Cristian O. Arone",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Pichincha"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Batalladepichincha.jpg/500px-Batalladepichincha.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Pichincha",
+"autor": "AnonymousUnknown author",
+"licencia": "CC0",
+"titulo": "Batalla de Pichincha"
 },
 "potosi": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alrededores_de_la_Laguna_Colorada_-_Bolivia.jpg?width=480",
@@ -4989,5 +4989,33 @@
 "autor": "Agustín Casasola",
 "licencia": "Public domain",
 "titulo": "Emiliano Zapata"
+},
+"olazabal": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Firma_del_Coronel_F%C3%A9lix_Olazabal.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/F%C3%A9lix_de_Olaz%C3%A1bal",
+"autor": "Félix de Olazabal",
+"licencia": "Public domain",
+"titulo": "Félix de Olazábal"
+},
+"sarandi": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Battle_of_Sarandi%2C_Juan_Manuel_Blanes.jpg/500px-Battle_of_Sarandi%2C_Juan_Manuel_Blanes.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Sarand%C3%AD",
+"autor": "Juan Manuel Blanes",
+"licencia": "Public domain",
+"titulo": "Batalla de Sarandí"
+},
+"rincon": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Batalla_del_Rinc%C3%B3n_%28Di%C3%B3genes_Hequet%29.jpg/500px-Batalla_del_Rinc%C3%B3n_%28Di%C3%B3genes_Hequet%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_del_Rinc%C3%B3n",
+"autor": "Diógenes Hequet",
+"licencia": "Public domain",
+"titulo": "Batalla del Rincón"
+},
+"pasco": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Cabildo_Salta_234.JPG/500px-Cabildo_Salta_234.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Cerro_de_Pasco",
+"autor": "Claudio Elias",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Batalla de Cerro de Pasco"
 }
 }
