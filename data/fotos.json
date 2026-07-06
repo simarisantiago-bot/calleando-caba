@@ -3305,18 +3305,10 @@
 "titulo": "Adán Cárdenas"
 },
 "curapaligue": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Barrio_Ingl%C3%A9s%2C_Caballito%2C_Buenos_Aires%2C_Argentina_%282%29.jpg/500px-Barrio_Ingl%C3%A9s%2C_Caballito%2C_Buenos_Aires%2C_Argentina_%282%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Caballito,_Buenos_Aires",
-"autor": "OneEuropeanHeart",
-"licencia": "CC BY 4.0",
-"titulo": "Caballito, Buenos Aires"
+"sinFoto": true
 },
 "cucha cucha": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Izquierda_Unida_%28logo%29.svg/500px-Izquierda_Unida_%28logo%29.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/United_Left_of_Aragon",
-"autor": "Tyk",
-"licencia": "Public domain",
-"titulo": "United Left of Aragon"
+"sinFoto": true
 },
 "de la ciencia y la cultura arabes": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/500px-Flag_of_Argentina.svg.png",
@@ -3347,11 +3339,11 @@
 "titulo": "Loyalty Day (Argentina)"
 },
 "de la defensa": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sedena_logo.jpg/500px-Sedena_logo.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Secretariat_of_National_Defense",
-"autor": "Unknown author",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Museo_del_Bicentenario_-_%22Ataque_por_los_ingleses_a_Buenos_Aires%22.jpg/500px-Museo_del_Bicentenario_-_%22Ataque_por_los_ingleses_a_Buenos_Aires%22.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Segunda_invasi%C3%B3n_inglesa_al_R%C3%ADo_de_la_Plata",
+"autor": "Madrid Martínez",
 "licencia": "Public domain",
-"titulo": "Secretariat of National Defense"
+"titulo": "Segunda invasión inglesa al Río de la Plata"
 },
 "darregueyra": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Charly_Garc%C3%ADa_%26_the_Prostitution_at_Cosqu%C3%ADn_Rock_12.02.2011_%285449800300%29.jpg/500px-Charly_Garc%C3%ADa_%26_the_Prostitution_at_Cosqu%C3%ADn_Rock_12.02.2011_%285449800300%29.jpg",
@@ -3424,11 +3416,11 @@
 "titulo": "Teacher Retirement System of Texas"
 },
 "defensa": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Escudo_del_Club_Social_y_Deportivo_Defensa_y_Justicia.svg/500px-Escudo_del_Club_Social_y_Deportivo_Defensa_y_Justicia.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Defensa_y_Justicia",
-"autor": "Defensa y Justicia",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Museo_del_Bicentenario_-_%22Ataque_por_los_ingleses_a_Buenos_Aires%22.jpg/500px-Museo_del_Bicentenario_-_%22Ataque_por_los_ingleses_a_Buenos_Aires%22.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Segunda_invasi%C3%B3n_inglesa_al_R%C3%ADo_de_la_Plata",
+"autor": "Madrid Martínez",
 "licencia": "Public domain",
-"titulo": "Defensa y Justicia"
+"titulo": "Segunda invasión inglesa al Río de la Plata"
 },
 "de los molfetteses": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Porto_di_Molfetta.jpg/500px-Porto_di_Molfetta.jpg",
@@ -3633,11 +3625,7 @@
 "titulo": "Finlandia"
 },
 "filiberto": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Emanuele_Filiberto_di_Savoia_-_Capitolo_Generale_degli_Ordini_Dinastici_di_Casa_Savoia_2025.jpg/500px-Emanuele_Filiberto_di_Savoia_-_Capitolo_Generale_degli_Ordini_Dinastici_di_Casa_Savoia_2025.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Emanuele_Filiberto_of_Savoy,_Prince_of_Venice",
-"autor": "Jilligate",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Emanuele Filiberto of Savoy, Prince of Venice"
+"sinFoto": true
 },
 "flor del aire": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Gabriela_Mistral_1945.jpg",
@@ -3825,11 +3813,7 @@
 "titulo": "José de San Martín"
 },
 "guardia vieja": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Agust%C3%ADn_Bardi.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Agust%C3%ADn_Bardi",
-"autor": "Unknown author",
-"licencia": "Public domain",
-"titulo": "Agustín Bardi"
+"sinFoto": true
 },
 "guillermo enrique granville": {
 "sinFoto": true
@@ -4217,11 +4201,7 @@
 "titulo": "Nicasio Oroño"
 },
 "ombu": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Umbu_%28do_tupi_umbu%2C_com_outro_significado%29%2C_Phytolacca_dioica%2C_em_Bag%C3%A9%2C_RS%2C_Brasil.jpg/500px-Umbu_%28do_tupi_umbu%2C_com_outro_significado%29%2C_Phytolacca_dioica%2C_em_Bag%C3%A9%2C_RS%2C_Brasil.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Phytolacca_dioica",
-"autor": "Gabriel Collares",
-"licencia": "CC BY 4.0",
-"titulo": "Phytolacca dioica"
+"sinFoto": true
 },
 "nicolas e videla": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Retrato_Oficial_Jorge_Rafael_Videla_1976_%28cropped%29_%28b%29.jpg",
@@ -4426,11 +4406,11 @@
 "titulo": "Joseph Calasanz"
 },
 "san lorenzo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Sanlorenzo_almagro_logo2026.png",
-"pageUrl": "https://en.wikipedia.org/wiki/San_Lorenzo_de_Almagro",
-"autor": "Unknown author",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/San_Lorenzo.jpg/500px-San_Lorenzo.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Combate_de_San_Lorenzo",
+"autor": "Ángel della Valle († 1903)",
 "licencia": "Public domain",
-"titulo": "San Lorenzo de Almagro"
+"titulo": "Combate de San Lorenzo"
 },
 "san cayetano de liniers": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Francesco_Solimena_-_Estasi_di_San_Gaetano_da_Thiene.jpg",
@@ -4454,11 +4434,11 @@
 "titulo": "San Pedro de Jujuy"
 },
 "san mateo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/MCB-san-mateo-aerial_%28cropped%29.jpg/500px-MCB-san-mateo-aerial_%28cropped%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/San_Mateo,_California",
-"autor": "The original uploader was MCB at English Wikipedia.",
-"licencia": "CC BY-SA 2.5",
-"titulo": "San Mateo, California"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Antonio_Herrera_Toro_2012_001.jpg/500px-Antonio_Herrera_Toro_2012_001.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_San_Mateo_(Venezuela)",
+"autor": "Antonio Herrera Toro",
+"licencia": "Public domain",
+"titulo": "Batalla de San Mateo (Venezuela)"
 },
 "san ricardo": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Waldburg_Pfarrkirche_Hochaltar_Richard.jpg",
@@ -5596,5 +5576,12 @@
 "autor": "Guillermo Da Re",
 "licencia": "Public domain",
 "titulo": "Combate de Tacuarí"
+},
+"reconquista": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Rio_de_la_Plata_1806.svg/500px-Rio_de_la_Plata_1806.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Invasiones_inglesas",
+"autor": "Leandro Palacios derivative work: Argentino (talk)",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Invasiones inglesas"
 }
 }
