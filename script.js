@@ -1376,10 +1376,14 @@
         c.innerHTML = `<div class="popup-media-fallback">${iconoFallback()}</div>`;
     }
 
-    // Commons a veces devuelve el campo Artist/Licencia con el texto repetido
-    // dos veces seguidas ("Unknown authorUnknown author"): lo colapsamos.
+    // Commons a veces devuelve el campo Artist desprolijo: con prefijo de nombre
+    // de archivo ("Foo.jpg: ..."), o con el texto repetido ("Unknown authorUnknown
+    // author"). Lo normalizamos para que el crédito se vea limpio.
     function sinDuplicado(s) {
         s = String(s || "").trim();
+        s = s.replace(/^[^:]{1,80}\.(jpg|jpeg|png|gif|svg|tif|tiff|webp):\s*/i, "").trim();
+        s = s.replace(/(Unknown author)\s*(?:\1\s*)+/gi, "Unknown author").trim();
+        if (/^unknown author/i.test(s) && s.length > 18) s = "Unknown author";
         const n = s.length;
         if (n >= 4 && n % 2 === 0 && s.slice(0, n / 2) === s.slice(n / 2)) {
             return s.slice(0, n / 2).trim();

@@ -1852,7 +1852,7 @@
 "miguel cane": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Miguel_Can%C3%A9_%281892%29.jpg?width=480",
 "pageUrl": "https://commons.wikimedia.org/wiki/File:Miguel_Can%C3%A9_%281892%29.jpg",
-"autor": "Unknown authorUnknown author.",
+"autor": "Unknown author.",
 "licencia": "Public domain",
 "titulo": "Miguel Cané"
 },
@@ -3750,7 +3750,11 @@
 "titulo": "Giordano Bruno"
 },
 "general francisco ramirez": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Francisco_Ramirez_2_%28cropped%29.JPG/500px-Francisco_Ramirez_2_%28cropped%29.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Francisco_Ram%C3%ADrez",
+"autor": "43K2Mühle",
+"licencia": "Public domain",
+"titulo": "Francisco Ramírez"
 },
 "goleta invencible": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Capture_of_the_El_Mosquito.jpg/500px-Capture_of_the_El_Mosquito.jpg",
@@ -4916,19 +4920,35 @@
 "sinFoto": true
 },
 "gabriel lafond": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gabriel-lafond.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Gabriel-Pierre_Lafond",
+"autor": "Gustave Levy (1819-1894)",
+"licencia": "Public domain",
+"titulo": "Gabriel-Pierre Lafond"
 },
 "gabriela mistral": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Gabriela_Mistral_3.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Gabriela_Mistral",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Gabriela Mistral"
 },
 "gallo": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Pedro_Leon_Gallo.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Pedro_Le%C3%B3n_D%C3%ADaz_Gallo",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Pedro León Díaz Gallo"
 },
 "gaona": {
 "sinFoto": true
 },
 "gaston riva": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gaston_Riva_-_Placa_Av_Mayo.jpg/500px-Gaston_Riva_-_Placa_Av_Mayo.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Masacre_de_la_plaza_de_Mayo_del_20_de_diciembre_de_2001",
+"autor": "Roblespepe",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Masacre de la plaza de Mayo del 20 de diciembre de 2001"
 },
 "general enrique martinez": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/GeneralEnriqueMart%C3%ADnez.2.jpg/500px-GeneralEnriqueMart%C3%ADnez.2.jpg",
@@ -4938,16 +4958,28 @@
 "titulo": "Enrique Martínez (militar)"
 },
 "general enrique mosconi": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Retrato_de_Enrique_Mosconi_%28cropped%29.jpg/500px-Retrato_de_Enrique_Mosconi_%28cropped%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Enrique_Mosconi",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Enrique Mosconi"
 },
 "general enrique spika": {
 "sinFoto": true
 },
 "general mosconi": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Retrato_de_Enrique_Mosconi_%28cropped%29.jpg/500px-Retrato_de_Enrique_Mosconi_%28cropped%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Enrique_Mosconi",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Enrique Mosconi"
 },
 "girardot": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Atanasio_Girardot_por_Jos%C3%A9_Mar%C3%ADa_Espinosa.jpg/500px-Atanasio_Girardot_por_Jos%C3%A9_Mar%C3%ADa_Espinosa.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Atanasio_Girardot",
+"autor": "José María Espinosa Prieto",
+"licencia": "Public domain",
+"titulo": "Atanasio Girardot"
 },
 "godoy cruz": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Tomasgodoycruz.jpg",
