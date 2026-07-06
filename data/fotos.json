@@ -4797,7 +4797,11 @@
 "sinFoto": true
 },
 "campillo": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Juan_del_Campillo.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Juan_del_Campillo",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Juan del Campillo"
 },
 "capitan claudio h rosales": {
 "sinFoto": true
@@ -4812,7 +4816,11 @@
 "sinFoto": true
 },
 "cipolletti": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/C%C3%A9sar_Cipolletti.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/C%C3%A9sar_Cipolletti",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "César Cipolletti"
 },
 "coghlan": {
 "sinFoto": true
