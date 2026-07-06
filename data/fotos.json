@@ -5535,5 +5535,12 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "ARA Fournier (M-5)"
+},
+"cuba": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/500px-Flag_of_Cuba.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Cuba",
+"autor": "Miguel Teurbe Tolón and Narciso López",
+"licencia": "Public domain",
+"titulo": "Cuba"
 }
 }
