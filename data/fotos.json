@@ -1521,11 +1521,11 @@
 "titulo": "La Blanqueada"
 },
 "junin": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/JUNIN_Centro_004.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:JUNIN_Centro_004.jpg",
-"autor": "Germanramos",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Batalla_de_Jun%C3%ADn.jpg/500px-Batalla_de_Jun%C3%ADn.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Jun%C3%ADn",
+"autor": "Martin Tovar y Tovar",
 "licencia": "Public domain",
-"titulo": "Junín"
+"titulo": "Batalla de Junín"
 },
 "justo suarez": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Justo_suarez_retrato.jpg?width=480",
@@ -1542,11 +1542,7 @@
 "titulo": "La Constancia"
 },
 "la fronda": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Episode_of_the_Fronde_at_the_Faubourg_Saint-Antoine_by_the_Walls_of_the_Bastille.png?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Episode_of_the_Fronde_at_the_Faubourg_Saint-Antoine_by_the_Walls_of_the_Bastille.png",
-"autor": "AnonymousUnknown author",
-"licencia": "Public domain",
-"titulo": "La Fronda"
+"sinFoto": true
 },
 "la espiga": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Espiga%2C_escultura_de_Rufino_Tamayo.jpg?width=480",
@@ -1688,11 +1684,11 @@
 "titulo": "Francisco Bernabé Madero"
 },
 "maipu": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Montaje_Maip%C3%BA.png?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Montaje_Maip%C3%BA.png",
-"autor": "Jorgebarrios",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Maipú"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/BatallaDeMaipu.jpg/500px-BatallaDeMaipu.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Maip%C3%BA",
+"autor": "Johann Moritz Rugendas",
+"licencia": "Public domain",
+"titulo": "Batalla de Maipú"
 },
 "maiten": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mait%C3%A9n.JPG?width=480",
@@ -2166,11 +2162,7 @@
 "titulo": "Luis José de la Peña"
 },
 "pescadores": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pescadores%2C_de_Mariano_Salvador_Maella_%28Museo_del_Prado%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Pescadores%2C_de_Mariano_Salvador_Maella_%28Museo_del_Prado%29.jpg",
-"autor": "",
-"licencia": "Public domain",
-"titulo": "Pescadores"
+"sinFoto": true
 },
 "peiping": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Beijing_CBD_with_B-5906_approaching_%2820211016171955%29.jpg?width=480",
@@ -2180,11 +2172,7 @@
 "titulo": "Peiping"
 },
 "piedras": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Linea_A_del_Subterraneo_de_Buenos_Aires.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Linea_A_del_Subterraneo_de_Buenos_Aires.JPG",
-"autor": "Jddios26",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Piedras"
+"sinFoto": true
 },
 "plaza del angel gris": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_del_%C3%81ngel_Gris%2C_Buenos_Aires.jpg?width=480",
@@ -2582,18 +2570,14 @@
 "titulo": "San Ireneo"
 },
 "san jose": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SanJose_Infobox_Pic_Montage.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:SanJose_Infobox_Pic_Montage.jpg",
-"autor": "Sanjosecalifornia, EugeneZelenko, Luiz Eduardo, David Sawyer, Michael",
-"licencia": "CC BY-SA 3.0",
-"titulo": "San José"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Di%C3%B3genes_Hecquet_-_Combate_de_San_Jos%C3%A9.jpg/500px-Di%C3%B3genes_Hecquet_-_Combate_de_San_Jos%C3%A9.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Combate_de_San_Jos%C3%A9",
+"autor": "Diógenes Hecquet",
+"licencia": "Public domain",
+"titulo": "Combate de San José"
 },
 "san pedrito": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Pedrito_%28GCBA%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:San_Pedrito_%28GCBA%29.jpg",
-"autor": "Gobierno de la Ciudad de Buenos Aires",
-"licencia": "CC BY 2.5 ar",
-"titulo": "San Pedrito"
+"sinFoto": true
 },
 "san francisco de asis": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/StFrancis_part.jpg?width=480",
@@ -5630,5 +5614,84 @@
 "autor": "Durand Brager",
 "licencia": "Public domain",
 "titulo": "Batalla de Caaguazú"
+},
+"culpina": {
+"sinFoto": true
+},
+"del banado": {
+"sinFoto": true
+},
+"del tigre": {
+"sinFoto": true
+},
+"don cristobal": {
+"sinFoto": true
+},
+"florida": {
+"sinFoto": true
+},
+"membrillar": {
+"sinFoto": true
+},
+"oncativo": {
+"sinFoto": true
+},
+"palpa": {
+"sinFoto": true
+},
+"riobamba": {
+"sinFoto": true
+},
+"salala": {
+"sinFoto": true
+},
+"famailla": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Famaill%C3%A1.jpg/500px-Famaill%C3%A1.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Famaill%C3%A1",
+"autor": "Anonymous",
+"licencia": "Public domain",
+"titulo": "Batalla de Famaillá"
+},
+"gavilan": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Batalla_del_Cerro_Gavilan_-_Independencia_de_Chile-2.jpg/500px-Batalla_del_Cerro_Gavilan_-_Independencia_de_Chile-2.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_del_Cerro_Gavil%C3%A1n",
+"autor": "Basado en croquis del General Las Heras derivative work: Rec79 (talk)",
+"licencia": "Public domain",
+"titulo": "Batalla del Cerro Gavilán"
+},
+"juncal": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Juncal_MuratureJose_1865.png/500px-Juncal_MuratureJose_1865.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Juncal",
+"autor": "José Murature",
+"licencia": "Public domain",
+"titulo": "Batalla de Juncal"
+},
+"libres del sud": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Iniciadores_de_la_revoluci%C3%B3n_del_39_en_el_sur_de_Buenos-Aires.jpg/500px-Iniciadores_de_la_revoluci%C3%B3n_del_39_en_el_sur_de_Buenos-Aires.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Libres_del_Sur",
+"autor": "Ángel Justiniano Carranza",
+"licencia": "Public domain",
+"titulo": "Libres del Sur"
+},
+"libres del sur": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Iniciadores_de_la_revoluci%C3%B3n_del_39_en_el_sur_de_Buenos-Aires.jpg/500px-Iniciadores_de_la_revoluci%C3%B3n_del_39_en_el_sur_de_Buenos-Aires.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Libres_del_Sur",
+"autor": "Ángel Justiniano Carranza",
+"licencia": "Public domain",
+"titulo": "Libres del Sur"
+},
+"parque chacabuco": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Batalla_de_Chacabuco_-_Pedro_Subercaseaux_%28cropped%29.jpg/500px-Batalla_de_Chacabuco_-_Pedro_Subercaseaux_%28cropped%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Chacabuco",
+"autor": "Pedro Subercaseaux",
+"licencia": "Public domain",
+"titulo": "Batalla de Chacabuco"
+},
+"talcahuano": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Asalto_de_Talcahuano_%287_de_diciembre_de_1817%29.jpg/500px-Asalto_de_Talcahuano_%287_de_diciembre_de_1817%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Sitio_de_Talcahuano",
+"autor": "Bacler d'Albe, Joseph Albert, 1789-1824",
+"licencia": "Public domain",
+"titulo": "Sitio de Talcahuano"
 }
 }
