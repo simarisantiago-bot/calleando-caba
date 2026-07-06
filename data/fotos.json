@@ -2866,11 +2866,7 @@
 "sinFoto": true
 },
 "yerbal": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/C09f089._Mercado_Central._Calle_Yerbal.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:C09f089._Mercado_Central._Calle_Yerbal.jpg",
-"autor": "Jesús Cubela",
-"licencia": "Public domain",
-"titulo": "Yerbal"
+"sinFoto": true
 },
 "12 de octubre": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Primer_homenaje_a_Col%C3%B3n_%28Garnelo%29.jpg/500px-Primer_homenaje_a_Col%C3%B3n_%28Garnelo%29.jpg",
@@ -5693,5 +5689,45 @@
 "autor": "Bacler d'Albe, Joseph Albert, 1789-1824",
 "licencia": "Public domain",
 "titulo": "Sitio de Talcahuano"
+},
+"tres sargentos": {
+"sinFoto": true
+},
+"tupiza": {
+"sinFoto": true
+},
+"yerua": {
+"sinFoto": true
+},
+"zepita": {
+"sinFoto": true
+},
+"tonelero": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Passagem_de_Tonelero_%281851%29_%2852322130726%29.jpg/500px-Passagem_de_Tonelero_%281851%29_%2852322130726%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_del_Paso_del_Tonelero",
+"autor": "Trajano Augusto de Carvalho, 1876–1942",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Batalla del Paso del Tonelero"
+},
+"treinta y tres orientales": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Juan_Manuel_Blanes_-_El_Juramento_de_los_Treinta_y_Tres_Orientales.jpg/500px-Juan_Manuel_Blanes_-_El_Juramento_de_los_Treinta_y_Tres_Orientales.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Treinta_y_Tres_Orientales",
+"autor": "Juan Manuel Blanes",
+"licencia": "Public domain",
+"titulo": "Treinta y Tres Orientales"
+},
+"villa juncal": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Juncal_MuratureJose_1865.png/500px-Juncal_MuratureJose_1865.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Juncal",
+"autor": "José Murature",
+"licencia": "Public domain",
+"titulo": "Batalla de Juncal"
+},
+"exodo jujeno": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/%C3%89xodo_Juje%C3%B1o.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/%C3%89xodo_Juje%C3%B1o",
+"autor": "Anonymous",
+"licencia": "Public domain",
+"titulo": "Éxodo Jujeño"
 }
 }
