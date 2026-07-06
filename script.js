@@ -1895,16 +1895,33 @@
             });
         }
 
-        // Botón limpiar (cruz)
-        $btnLimpiar.addEventListener("click", () => {
+        // Volver al inicio (limpia búsqueda, capa y URL, y recentra el mapa).
+        function volverAlInicio() {
             $input.value = "";
             $btnLimpiar.hidden = true;
             $suggestions.hidden = true;
             limpiarCapa();
             limpiarURL();
             mapa.flyTo(CABA_CENTER, 13, { duration: 0.6 });
+        }
+
+        // Botón limpiar (cruz)
+        $btnLimpiar.addEventListener("click", () => {
+            volverAlInicio();
             $input.focus();
         });
+
+        // Marca "Calleando CABA": vuelve al inicio.
+        const $brandHome = document.getElementById("brand-home");
+        if ($brandHome) {
+            $brandHome.addEventListener("click", volverAlInicio);
+            $brandHome.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    volverAlInicio();
+                }
+            });
+        }
 
         // Botón "compartir" del popup: copia el link directo a la calle.
         document.addEventListener("click", (e) => {
