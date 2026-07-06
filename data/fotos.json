@@ -1274,7 +1274,11 @@
 "titulo": "Huemul"
 },
 "hidalgo": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/General%C3%ADsimo_Miguel_Hidalgo_y_Costilla.png/500px-General%C3%ADsimo_Miguel_Hidalgo_y_Costilla.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Miguel_Hidalgo_y_Costilla",
+"autor": "Joaquín Ramírez",
+"licencia": "Public domain",
+"titulo": "Miguel Hidalgo y Costilla"
 },
 "hualfin": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Capilla_de_Hualf%C3%ADn.JPG?width=480",
@@ -1354,7 +1358,11 @@
 "titulo": "Quebrada de Humahuaca"
 },
 "humboldt": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Stieler%2C_Joseph_Karl_-_Alexander_von_Humboldt_-_1843.jpg/500px-Stieler%2C_Joseph_Karl_-_Alexander_von_Humboldt_-_1843.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Alexander_von_Humboldt",
+"autor": "Joseph Karl Stieler",
+"licencia": "Public domain",
+"titulo": "Alexander von Humboldt"
 },
 "husares": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HusaresPueyrredon.jpg?width=480",
@@ -1388,7 +1396,11 @@
 "titulo": "José Fagnano"
 },
 "jose ingenieros": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Jos%C3%A9_Ingenieros.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Jos%C3%A9_Ingenieros",
+"autor": "McLovin2511",
+"licencia": "CC BY-SA 4.0",
+"titulo": "José Ingenieros"
 },
 "jose evaristo uriburu": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_uriburu_retrato.jpg?width=480",
@@ -2913,11 +2925,11 @@
 "titulo": "Keiko Fujimori"
 },
 "27 de febrero": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tunnel27feb.jpg/500px-Tunnel27feb.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/DR-3_(Dominican_Republic_highway)",
-"autor": "EdwinCasadoBaez (talk)",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/500px-Flag_of_Argentina.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Bandera_de_la_Argentina",
+"autor": "Manuel Belgrano",
 "licencia": "Public domain",
-"titulo": "DR-3 (Dominican Republic highway)"
+"titulo": "Bandera de la Argentina"
 },
 "20 de junio": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Veinte_de_Junio_Railway_Station_02.jpg/500px-Veinte_de_Junio_Railway_Station_02.jpg",
@@ -3834,7 +3846,11 @@
 "titulo": "Luis González de Guzmán"
 },
 "hermanas mirabal": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Hermanas_Mirabal.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Hermanas_Mirabal",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Hermanas Mirabal"
 },
 "hidroavion buenos aires": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Balair_Douglas_DC-6_Basle_Airport_-_1976.jpg/500px-Balair_Douglas_DC-6_Basle_Airport_-_1976.jpg",
@@ -4078,11 +4094,11 @@
 "titulo": "Mencía Calderón"
 },
 "manuel garcia": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Manuel_Garcia-Rulfo_at_the_2024_Toronto_International_Film_Festival_%28Cropped%29.jpg/500px-Manuel_Garcia-Rulfo_at_the_2024_Toronto_International_Film_Festival_%28Cropped%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Manuel_Garcia-Rulfo",
-"autor": "Kevin Payravi",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Manuel Garcia-Rulfo"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Manuel_Jos%C3%A9_Garc%C3%ADa._Narcisse_Edmond_Joseph_Desmadryl..jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Manuel_Jos%C3%A9_Garc%C3%ADa",
+"autor": "Manuelrgm",
+"licencia": "Public domain",
+"titulo": "Manuel José García"
 },
 "metan": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/San_Jos%C3%A9_de_Met%C3%A1n_town_hall.jpg/500px-San_Jos%C3%A9_de_Met%C3%A1n_town_hall.jpg",
@@ -4157,11 +4173,7 @@
 "sinFoto": true
 },
 "murguiondo": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Juan_%C3%81ngel_Michelena.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Juan_%C3%81ngel_Michelena",
-"autor": "Juan Ángel Michelena",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Juan Ángel Michelena"
+"sinFoto": true
 },
 "navarro": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Juli%C3%A1n_Arango.jpg/500px-Juli%C3%A1n_Arango.jpg",
@@ -4963,10 +4975,18 @@
 "sinFoto": true
 },
 "intendente bunge": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emilio_Vicente_Bunge.jpg/500px-Emilio_Vicente_Bunge.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Emilio_Bunge",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Emilio Bunge"
 },
 "intendente pinedo": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Federico_Guillermo_Pinedo_Rubio.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Federico_Pinedo_(padre)",
+"autor": "GGGASS",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Federico Pinedo (padre)"
 },
 "iraola": {
 "sinFoto": true
@@ -4978,7 +4998,11 @@
 "sinFoto": true
 },
 "itzhak rabin": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flickr_-_Israel_Defense_Forces_-_Life_of_Lt._Gen._Yitzhak_Rabin%2C_7th_IDF_Chief_of_Staff_in_photos_%2811%29.jpg/500px-Flickr_-_Israel_Defense_Forces_-_Life_of_Lt._Gen._Yitzhak_Rabin%2C_7th_IDF_Chief_of_Staff_in_photos_%2811%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Isaac_Rabin",
+"autor": "Yaakov Saar",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Isaac Rabin"
 },
 "j f bateman": {
 "sinFoto": true
@@ -5014,10 +5038,18 @@
 "sinFoto": true
 },
 "la mar": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Gran_Mariscal_Jos%C3%A9_de_La_Mar.jpg/500px-Gran_Mariscal_Jos%C3%A9_de_La_Mar.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Jos%C3%A9_de_la_Mar",
+"autor": "anonymous / Unidentified painter",
+"licencia": "Public domain",
+"titulo": "José de la Mar"
 },
 "lafayette": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Gilbert_du_Motier_Marquis_de_Lafayette.PNG/500px-Gilbert_du_Motier_Marquis_de_Lafayette.PNG",
+"pageUrl": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+"autor": "Joseph-Désiré Court",
+"licencia": "Public domain",
+"titulo": "Marquis de Lafayette"
 },
 "laguna": {
 "sinFoto": true
@@ -5409,5 +5441,12 @@
 },
 "altolaguirre": {
 "sinFoto": true
+},
+"emilio aubrun": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Aviateurs_-_Aubrun%2C_sur_Voisin_-_%28photographie_de_presse%29_-_Agence_Meurisse.png/500px-Aviateurs_-_Aubrun%2C_sur_Voisin_-_%28photographie_de_presse%29_-_Agence_Meurisse.png",
+"pageUrl": "https://es.wikipedia.org/wiki/%C3%89mile_Aubrun",
+"autor": "Agence Meurisse",
+"licencia": "Public domain",
+"titulo": "Émile Aubrun"
 }
 }
