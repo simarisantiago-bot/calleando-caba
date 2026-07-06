@@ -1236,6 +1236,32 @@ path.leaflet-interactive:focus {
     padding-right: 4px;
 }
 
+/* -------- Botón "compartir" del popup -------- */
+.popup-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 999px;
+    background: #fff;
+    color: #1a73e8;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.popup-share-btn:hover {
+    background: #f1f6ff;
+    border-color: #1a73e8;
+}
+.popup-share-btn.copiado {
+    color: #188038;
+    border-color: #188038;
+    background: #f0faf2;
+}
+
 /* -------- Imagen del popup (Wikipedia) -------- */
 .popup-media {
     position: relative;

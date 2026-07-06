@@ -846,7 +846,35 @@
         $input.value = entrada.nombre_busqueda;
         $suggestions.hidden = true;
         $btnLimpiar.hidden = false;
+        actualizarURL(entrada);
         ubicarEnMapa(entrada);
+    }
+
+    // ---------- Links compartibles a una calle ----------
+    // Refleja la calle seleccionada en la URL (?c=<id>) sin recargar, para
+    // poder compartir un link directo. La app la abre al cargar (ver main()).
+    function actualizarURL(entrada) {
+        try {
+            history.replaceState(null, "",
+                location.pathname + "?c=" + encodeURIComponent(entrada.id));
+        } catch (_) { /* history no disponible: ignorar */ }
+    }
+
+    function limpiarURL() {
+        try { history.replaceState(null, "", location.pathname); } catch (_) {}
+    }
+
+    function linkDeEntrada(id) {
+        return location.origin + location.pathname + "?c=" + encodeURIComponent(id);
+    }
+
+    // Al cargar: si la URL trae ?c=<id o clave>, seleccionar esa calle.
+    function seleccionarDesdeURL() {
+        const c = new URLSearchParams(location.search).get("c");
+        if (!c) return;
+        const entrada = calles.find((x) => x.id === c)
+            || calles.find((x) => x.clave === c);
+        if (entrada) seleccionarEntrada(entrada);
     }
 
     // =================================================================
@@ -1315,6 +1343,14 @@
             ${subtitulo ? `<div class="popup-sub">${escapeHtml(subtitulo)}</div>` : ""}
             ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
+            <button class="popup-share-btn" type="button" data-id="${escapeHtml(entrada.id)}">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                    <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>
+                </svg>
+                <span>Compartir</span>
+            </button>
         `;
     }
 
@@ -1865,8 +1901,32 @@
             $btnLimpiar.hidden = true;
             $suggestions.hidden = true;
             limpiarCapa();
+            limpiarURL();
             mapa.flyTo(CABA_CENTER, 13, { duration: 0.6 });
             $input.focus();
+        });
+
+        // Botón "compartir" del popup: copia el link directo a la calle.
+        document.addEventListener("click", (e) => {
+            const btn = e.target.closest(".popup-share-btn");
+            if (!btn) return;
+            const url = linkDeEntrada(btn.dataset.id);
+            const ok = () => {
+                const span = btn.querySelector("span");
+                const prev = span ? span.textContent : "";
+                if (span) span.textContent = "¡Link copiado!";
+                btn.classList.add("copiado");
+                setTimeout(() => {
+                    if (span) span.textContent = prev || "Compartir";
+                    btn.classList.remove("copiado");
+                }, 1800);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(ok).catch(
+                    () => mostrarToast("Copiá el link: " + url, 6000));
+            } else {
+                mostrarToast("Copiá el link: " + url, 6000);
+            }
         });
 
         // Cerrar sugerencias al click fuera
@@ -1938,6 +1998,7 @@
         await cargarDatos();
         dibujarCapaBase();
         conectarEventos();
+        seleccionarDesdeURL();
     }
 
     document.addEventListener("DOMContentLoaded", main);
