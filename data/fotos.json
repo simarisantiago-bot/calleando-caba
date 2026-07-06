@@ -3480,7 +3480,11 @@
 "sinFoto": true
 },
 "echeverria": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/EstebanEcheverria.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Esteban_Echeverr%C3%ADa",
+"autor": "Ernest Charton",
+"licencia": "Public domain",
+"titulo": "Esteban Echeverría"
 },
 "drumond": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/PhotoofThePioneerWomen.jpg",
