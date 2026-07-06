@@ -5542,5 +5542,59 @@
 "autor": "Miguel Teurbe Tolón and Narciso López",
 "licencia": "Public domain",
 "titulo": "Cuba"
+},
+"cochico": {
+"sinFoto": true
+},
+"leones": {
+"sinFoto": true
+},
+"palmar": {
+"sinFoto": true
+},
+"parral": {
+"sinFoto": true
+},
+"curupayti": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Batalhacurupaiti.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Curupayt%C3%AD",
+"autor": "Cándido López",
+"licencia": "Public domain",
+"titulo": "Batalla de Curupaytí"
+},
+"ituzaingo": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Brandsen_en_Ituzaingo.JPG/500px-Brandsen_en_Ituzaingo.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Ituzaing%C3%B3",
+"autor": "Augusto Ballerini (1857-1897)",
+"licencia": "Public domain",
+"titulo": "Batalla de Ituzaingó"
+},
+"martin garcia": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/JoseMurature_1865_Martin_Garcia_MNN.jpg/500px-JoseMurature_1865_Martin_Garcia_MNN.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Combate_de_Mart%C3%ADn_Garc%C3%ADa_(1814)",
+"autor": "Jose Murature",
+"licencia": "Public domain",
+"titulo": "Combate de Martín García (1814)"
+},
+"suipacha": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Suipacha.jpg/500px-Suipacha.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Battle_of_Suipacha",
+"autor": "Engineer Nicolás Grondona (died 26 August 1878)",
+"licencia": "Public domain",
+"titulo": "Battle of Suipacha"
+},
+"yatay": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Combat_Du_Yatay_%28rive_droit_de_l%27Uruguay%29.jpg/500px-Combat_Du_Yatay_%28rive_droit_de_l%27Uruguay%29.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Battle_of_Yatay",
+"autor": "J. Caildrau",
+"licencia": "Public domain",
+"titulo": "Battle of Yatay"
+},
+"tacuari": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Batalla_de_Tacuari.jpg/500px-Batalla_de_Tacuari.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Battle_of_Tacuar%C3%AD",
+"autor": "Guillermo Da Re",
+"licencia": "Public domain",
+"titulo": "Combate de Tacuarí"
 }
 }
