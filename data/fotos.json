@@ -115,11 +115,7 @@
 "titulo": "Amancio Alcorta"
 },
 "allende": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg",
-"autor": "Bernard Gotfryd",
-"licencia": "Public domain",
-"titulo": "Allende"
+"sinFoto": true
 },
 "andalgala": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Catamarca_Andalgala.JPG?width=480",
@@ -830,11 +826,7 @@
 "titulo": "Emilio Julio Hardoy"
 },
 "dragones": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_Warriors_vs_Newport_Gwent_Dragons_-_January_9%2C_2009_-_2.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_Warriors_vs_Newport_Gwent_Dragons_-_January_9%2C_2009_-_2.jpg",
-"autor": "Bruce Cowan from Glasgow, UK",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Dragones"
+"sinFoto": true
 },
 "dublin": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_-_aerial_-_2025-07-07_01.jpg?width=480",
@@ -4778,7 +4770,11 @@
 "sinFoto": true
 },
 "del libertador": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Retrato_m%C3%A1s_can%C3%B3nico_de_Jos%C3%A9_de_San_Mart%C3%ADn.jpg/500px-Retrato_m%C3%A1s_can%C3%B3nico_de_Jos%C3%A9_de_San_Mart%C3%ADn.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Jos%C3%A9_de_San_Mart%C3%ADn",
+"autor": "anonymous",
+"licencia": "Public domain",
+"titulo": "José de San Martín"
 },
 "diego fernandez espiro": {
 "sinFoto": true
@@ -4871,7 +4867,11 @@
 "sinFoto": true
 },
 "general enrique martinez": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/GeneralEnriqueMart%C3%ADnez.2.jpg/500px-GeneralEnriqueMart%C3%ADnez.2.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Enrique_Mart%C3%ADnez_(militar)",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Enrique Martínez (militar)"
 },
 "general enrique mosconi": {
 "sinFoto": true
@@ -5087,7 +5087,11 @@
 "sinFoto": true
 },
 "plaza": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/General_Jos%C3%A9_Mar%C3%ADa_Plaza_y_Moncada.jpg/500px-General_Jos%C3%A9_Mar%C3%ADa_Plaza_y_Moncada.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Plaza_(militar)",
+"autor": "Gutiérrez de Otero",
+"licencia": "CC BY-SA 4.0",
+"titulo": "José María Plaza (militar)"
 },
 "plaza de isidora": {
 "sinFoto": true
@@ -5203,5 +5207,19 @@
 "autor": "PomaDeAyala",
 "licencia": "CC BY-SA 4.0",
 "titulo": "Batalla de Nasca"
+},
+"del arbol": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Eiche_bei_Graditz.jpg/500px-Eiche_bei_Graditz.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/%C3%81rbol",
+"autor": "Rainer Lippert",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Árbol"
+},
+"jose antonio cabrera": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Diputado_Jos%C3%A9_Antonio_Cabrera_%28C%C3%B3rdoba%29.jpg/500px-Diputado_Jos%C3%A9_Antonio_Cabrera_%28C%C3%B3rdoba%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_Cabrera_(pol%C3%ADtico)",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "José Antonio Cabrera (político)"
 }
 }
