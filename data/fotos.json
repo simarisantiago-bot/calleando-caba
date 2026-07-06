@@ -4902,10 +4902,18 @@
 "sinFoto": true
 },
 "falucho": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/NegroFalucho.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Antonio_Ruiz_(Falucho)",
+"autor": "Ivobasay",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Antonio Ruiz (Falucho)"
 },
 "faraday": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/M_Faraday_Th_Phillips_oil_1842.jpg/500px-M_Faraday_Th_Phillips_oil_1842.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Michael_Faraday",
+"autor": "Thomas Phillips",
+"licencia": "Public domain",
+"titulo": "Michael Faraday"
 },
 "fortunato devoto": {
 "sinFoto": true
@@ -5480,5 +5488,12 @@
 "autor": "Agence Meurisse",
 "licencia": "Public domain",
 "titulo": "Émile Aubrun"
+},
+"rastreador fournier": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/ARA_Fournier.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/ARA_Fournier_(M-5)",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "ARA Fournier (M-5)"
 }
 }
