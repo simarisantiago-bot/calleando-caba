@@ -1084,7 +1084,11 @@
 "titulo": "Floresta"
 },
 "fitz roy": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Robert_Fitzroy.jpg/500px-Robert_Fitzroy.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Robert_FitzRoy",
+"autor": "Hemus, Charles 1849?-1925",
+"licencia": "Public domain",
+"titulo": "Robert FitzRoy"
 },
 "francisco a sicardi": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1902-12-06%2C_Caras_y_Caretas%2C_Caricaturas_contempor%C3%A1neas%2C_Dr._Francisco_A._Sicardi%2C_Cao_%28cropped%29.jpeg?width=480",
@@ -1722,7 +1726,11 @@
 "titulo": "Manuel Álvarez Prado"
 },
 "malabia": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/MalabiaJoseSevero.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Jos%C3%A9_Severo_Malabia",
+"autor": "not denoted",
+"licencia": "Public domain",
+"titulo": "José Severo Malabia"
 },
 "managua": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenida_Bolivar_A_Chavez.jpg?width=480",
@@ -2084,7 +2092,11 @@
 "titulo": "Neuquén"
 },
 "osvaldo cruz": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Oswcruz.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Oswaldo_Cruz",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Oswaldo Cruz"
 },
 "nueva york": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD_%28cropped%29.jpg?width=480",
@@ -2227,11 +2239,11 @@
 "titulo": "Portugal"
 },
 "posta": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Einbrief.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Einbrief.jpg",
-"autor": "Anneke Wolf",
-"licencia": "CC BY-SA 2.5",
-"titulo": "Posta"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Posta_de_Yatasto_-_Provincia_de_Salta.jpg/500px-Posta_de_Yatasto_-_Provincia_de_Salta.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Posta_de_Yatasto",
+"autor": "Pepe Martínez",
+"licencia": "CC BY 2.0",
+"titulo": "Posta de Yatasto"
 },
 "praga": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pet%C5%99%C3%ADn_Tower_View_IMG_3020.JPG?width=480",
@@ -2374,7 +2386,11 @@
 "titulo": "Rafael Hernández"
 },
 "presidente quintana": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Manuel_Quintana.png/500px-Manuel_Quintana.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Manuel_Quintana",
+"autor": "Witcomb",
+"licencia": "Public domain",
+"titulo": "Manuel Quintana"
 },
 "recoleta": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/J25_327_Recoleta.jpg?width=480",
@@ -2520,10 +2536,18 @@
 "titulo": "San Antonio"
 },
 "san cristobal": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ribera_-_San_Crist%C3%B3bal%2C_P001111.jpg/500px-Ribera_-_San_Crist%C3%B3bal%2C_P001111.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Crist%C3%B3bal_de_Licia",
+"autor": "Jusepe de Ribera",
+"licencia": "Public domain",
+"titulo": "Cristóbal de Licia"
 },
 "san francisco javier": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Franciscus_de_Xabier.jpg/500px-Franciscus_de_Xabier.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Francisco_Javier",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Francisco Javier"
 },
 "san isidro": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Vernet_Quinta_La_Porte%C3%B1a_San_Isidro.JPG?width=480",
@@ -2575,7 +2599,11 @@
 "titulo": "San Francisco de Asís"
 },
 "san miguel garicoits": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Michele_Garicoits_-_disegno.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Miguel_Garicoits",
+"autor": "Original uploader was Croberto68 at it.wikipedia",
+"licencia": "Public domain",
+"titulo": "Miguel Garicoits"
 },
 "san nicolas": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Nicholas_Icon_Sinai_13th_century.jpg?width=480",
@@ -2634,7 +2662,11 @@
 "titulo": "Tacuara"
 },
 "teniente general luis j dellepiane": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/General_Luis_Dellepiane.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Luis_Dellepiane",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Luis Dellepiane"
 },
 "terrero": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Obispo_Juan_Nepomuceno.jpg?width=480",
@@ -2724,7 +2756,11 @@
 "titulo": "Valentín Virasoro"
 },
 "varela": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Florencio_Varela.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Florencio_Varela_(escritor)",
+"autor": "Lebeaud, Edmond",
+"licencia": "Public domain",
+"titulo": "Florencio Varela (escritor)"
 },
 "veracruz": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/15-07-14-Landschaft-zwischen-Mexico-und-Golfk%C3%BCste-RalfR-WMA_0473.jpg?width=480",
@@ -2832,11 +2868,11 @@
 "titulo": "Víctor Hugo"
 },
 "vuelta de obligado": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Parana_Obligado_5.JPG?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Parana_Obligado_5.JPG",
-"autor": "Thialfi",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Batalla_de_la_Vuelta_de_Obligado.jpg/500px-Batalla_de_la_Vuelta_de_Obligado.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_la_Vuelta_de_Obligado",
+"autor": "Manuel Larravide",
 "licencia": "Public domain",
-"titulo": "Vuelta de Obligado"
+"titulo": "Batalla de la Vuelta de Obligado"
 },
 "videla castillo": {
 "sinFoto": true
@@ -3031,11 +3067,7 @@
 "sinFoto": true
 },
 "bauness": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Joaquin_Bau.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Bau_Nolla",
-"autor": "Unknown author",
-"licencia": "Public domain",
-"titulo": "Joaquín Bau Nolla"
+"sinFoto": true
 },
 "bergantin nancy": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/LuisPiedrabuena.jpg",
@@ -4369,7 +4401,11 @@
 "titulo": "San Lorenzo de Almagro"
 },
 "san cayetano de liniers": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Francesco_Solimena_-_Estasi_di_San_Gaetano_da_Thiene.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Cayetano_de_Thiene",
+"autor": "Francesco Solimena",
+"licencia": "Public domain",
+"titulo": "Cayetano de Thiene"
 },
 "san pedro": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Club_Campestre_de_Monterrey_A.C.jpg/500px-Club_Campestre_de_Monterrey_A.C.jpg",
@@ -4393,10 +4429,18 @@
 "titulo": "San Mateo, California"
 },
 "san ricardo": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Waldburg_Pfarrkirche_Hochaltar_Richard.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Ricardo_el_Peregrino",
+"autor": "Photo: Andreas Praefcke",
+"licencia": "CC BY 3.0",
+"titulo": "Ricardo el Peregrino"
 },
 "san roque gonzalez de santa cruz": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Roque_Gonz%C3%A1lez_de_Santa_Cruz.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Roque_Gonz%C3%A1lez_de_Santa_Cruz",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Roque González de Santa Cruz"
 },
 "santa catalina": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg/500px-Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg",
@@ -4439,7 +4483,11 @@
 "sinFoto": true
 },
 "teniente general eustoquio frias": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Eustoquio_Fr%C3%ADas.jpg/500px-Eustoquio_Fr%C3%ADas.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Eustoquio_Fr%C3%ADas",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Eustoquio Frías"
 },
 "teniente general nicolas levalle": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/General_Nicolas_Levalle.jpg/500px-General_Nicolas_Levalle.jpg",
@@ -4531,11 +4579,11 @@
 "titulo": "Emiliano Zapata"
 },
 "olazabal": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Firma_del_Coronel_F%C3%A9lix_Olazabal.jpg",
-"pageUrl": "https://es.wikipedia.org/wiki/F%C3%A9lix_de_Olaz%C3%A1bal",
-"autor": "Félix de Olazabal",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Manuel_Olaz%C3%A1bal.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Manuel_Olaz%C3%A1bal",
+"autor": "Unknown author",
 "licencia": "Public domain",
-"titulo": "Félix de Olazábal"
+"titulo": "Manuel Olazábal"
 },
 "sarandi": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Battle_of_Sarandi%2C_Juan_Manuel_Blanes.jpg/500px-Battle_of_Sarandi%2C_Juan_Manuel_Blanes.jpg",
@@ -4701,7 +4749,11 @@
 "sinFoto": true
 },
 "berthelot": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Marcellin_Berthelot.jpg/500px-Marcellin_Berthelot.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Marcellin_Berthelot",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Marcellin Berthelot"
 },
 "butteler": {
 "sinFoto": true
@@ -4886,7 +4938,11 @@
 "sinFoto": true
 },
 "godoy cruz": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Tomasgodoycruz.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Tom%C3%A1s_Godoy_Cruz",
+"autor": "Atribuido a Charles Henry Pellegrini",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Tomás Godoy Cruz"
 },
 "gonzalez catan": {
 "sinFoto": true
@@ -4970,7 +5026,11 @@
 "sinFoto": true
 },
 "larrea": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Juanlarrea_%28cropped%29.png",
+"pageUrl": "https://en.wikipedia.org/wiki/Juan_Larrea_(politician)",
+"autor": "AnonymousUnknown author",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Juan Larrea (politician)"
 },
 "lascano": {
 "sinFoto": true
@@ -4988,7 +5048,11 @@
 "sinFoto": true
 },
 "luis alberto herrera": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Luis_Alberto_de_Herrera.jpg/500px-Luis_Alberto_de_Herrera.jpg",
+"pageUrl": "https://en.wikipedia.org/wiki/Luis_Alberto_de_Herrera",
+"autor": "Gerocaro",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Luis Alberto de Herrera"
 },
 "manuel j samperio": {
 "sinFoto": true
@@ -5012,25 +5076,45 @@
 "sinFoto": true
 },
 "miguel couto": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Miguel_Couto.png",
+"pageUrl": "https://en.wikipedia.org/wiki/Miguel_Couto",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Miguel Couto"
 },
 "ministro brin": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Benedetto_Brin_2.png/500px-Benedetto_Brin_2.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Benedetto_Brin",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Benedetto Brin"
 },
 "miro": {
 "sinFoto": true
 },
 "mompox": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Mestizo.jpg/500px-Mestizo.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Revoluci%C3%B3n_comunera_de_1721-1735_(Paraguay)",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Revolución comunera de 1721-1735 (Paraguay)"
 },
 "monte castro": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Buenos_Aires_Monte_Castro.svg/500px-Buenos_Aires_Monte_Castro.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Monte_Castro",
+"autor": "NordNordWest and OpenStreetMap contributors",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Monte Castro"
 },
 "montenegro": {
 "sinFoto": true
 },
 "martires palotinos": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Dijimos_Nunca_M%C3%A1s_-_Graffitti-_Buenos_Aires_Oct_06.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Nunca_m%C3%A1s",
+"autor": "Pepe Robles",
+"licencia": "Public domain",
+"titulo": "Nunca más"
 },
 "mendez de andes": {
 "sinFoto": true
@@ -5045,7 +5129,11 @@
 "sinFoto": true
 },
 "ohm": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Georg_Simon_Ohm3.jpg/500px-Georg_Simon_Ohm3.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Georg_Simon_Ohm",
+"autor": "The original uploader was BerndGehrmann at German Wikipedia.",
+"licencia": "Public domain",
+"titulo": "Georg Simon Ohm"
 },
 "olivera": {
 "sinFoto": true
@@ -5057,7 +5145,11 @@
 "sinFoto": true
 },
 "o brien": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/John_Thomond_O%27Brien_O%27Connor_%28cropped%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/John_Thomond_O%27Brien",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "John Thomond O'Brien"
 },
 "padre enrique contardi": {
 "sinFoto": true
@@ -5066,7 +5158,11 @@
 "sinFoto": true
 },
 "paul groussac": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Estudios_de_historia_Argentina_-_Paul_Groussac_%28page_3_crop%29.jpg/500px-Estudios_de_historia_Argentina_-_Paul_Groussac_%28page_3_crop%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Paul_Groussac",
+"autor": "AnonymousUnknown author",
+"licencia": "Public domain",
+"titulo": "Paul Groussac"
 },
 "paula albarracin de sarmiento": {
 "sinFoto": true
@@ -5084,7 +5180,11 @@
 "sinFoto": true
 },
 "pizzurno": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Pablo_A_Pizzurno.jpg/500px-Pablo_A_Pizzurno.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Pablo_Pizzurno",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Pablo Pizzurno"
 },
 "plaza": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/General_Jos%C3%A9_Mar%C3%ADa_Plaza_y_Moncada.jpg/500px-General_Jos%C3%A9_Mar%C3%ADa_Plaza_y_Moncada.jpg",
@@ -5103,7 +5203,11 @@
 "sinFoto": true
 },
 "puerto madero": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Eduardo_Madero.jpg/500px-Eduardo_Madero.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Eduardo_Madero",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Eduardo Madero"
 },
 "quiros": {
 "sinFoto": true
@@ -5115,16 +5219,28 @@
 "sinFoto": true
 },
 "roberto sanchez": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Sandro_retrato.jpg/500px-Sandro_retrato.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Sandro",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Sandro"
 },
 "rocamora": {
 "sinFoto": true
 },
 "rodney": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Rodneycaesara3.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Caesar_Augustus_Rodney",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Caesar Augustus Rodney"
 },
 "roentgen": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Wilhelm_R%C3%B6ntgen_by_Nicola_Perscheid_1915b.jpg/500px-Wilhelm_R%C3%B6ntgen_by_Nicola_Perscheid_1915b.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen",
+"autor": "Nicola Perscheid",
+"licencia": "Public domain",
+"titulo": "Wilhelm Röntgen"
 },
 "romero": {
 "sinFoto": true
@@ -5136,7 +5252,11 @@
 "sinFoto": true
 },
 "sanabria": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Estatua_fray_Fernando_Trejo_y_Sanabria_2009-03-23.jpg/500px-Estatua_fray_Fernando_Trejo_y_Sanabria_2009-03-23.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Hernando_de_Trejo_y_Sanabria",
+"autor": "Alakasam.",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Hernando de Trejo y Sanabria"
 },
 "santojanni": {
 "sinFoto": true
@@ -5160,19 +5280,31 @@
 "sinFoto": true
 },
 "temperley": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/George_Temperley.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/George_Temperley",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "George Temperley"
 },
 "teniente coronel casimiro recuero": {
 "sinFoto": true
 },
 "teniente general emilio mitre": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Emilio_Mitre_Mart%C3%ADnez_1.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Emilio_Mitre_(militar)",
+"autor": "GGGASS",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Emilio Mitre (militar)"
 },
 "toll": {
 "sinFoto": true
 },
 "tomas liberti": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Brandsen_567_Bomberos_de_La_Boca.jpg/500px-Brandsen_567_Bomberos_de_La_Boca.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Bomberos_Voluntarios_de_La_Boca",
+"autor": "RumboSurOrg",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Bomberos Voluntarios de La Boca"
 },
 "tomas valencia": {
 "sinFoto": true
@@ -5184,13 +5316,25 @@
 "sinFoto": true
 },
 "villa general mitre": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Bartolom%C3%A9_Mitre_01.jpg/500px-Bartolom%C3%A9_Mitre_01.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Bartolom%C3%A9_Mitre",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Bartolomé Mitre"
 },
 "villa ortuzar": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Casa_Avenida_Forest_y_Virrey_del_Pino.jpg/500px-Casa_Avenida_Forest_y_Virrey_del_Pino.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Villa_Ort%C3%BAzar",
+"autor": "Roberto Fiadone",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Villa Ortúzar"
 },
 "villa soldati": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/PARADA_METROBUS_PERGAMINO_Y_CRUZ_-_panoramio.jpg/500px-PARADA_METROBUS_PERGAMINO_Y_CRUZ_-_panoramio.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Villa_Soldati_(Buenos_Aires)",
+"autor": "monobingo",
+"licencia": "CC BY 3.0",
+"titulo": "Villa Soldati (Buenos Aires)"
 },
 "zamudio": {
 "sinFoto": true
@@ -5221,5 +5365,49 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "José Antonio Cabrera (político)"
+},
+"cabildo": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/El_Cabildo_por_Emerix_Vidal.jpg/500px-El_Cabildo_por_Emerix_Vidal.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Cabildo_de_Buenos_Aires_(instituci%C3%B3n)",
+"autor": "Alberico Isola",
+"licencia": "Public domain",
+"titulo": "Cabildo de Buenos Aires (institución)"
+},
+"quesada": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Isidro_Quesada.jpg/500px-Isidro_Quesada.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Isidro_Quesada",
+"autor": "Cesarfontanarrosa",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Isidro Quesada"
+},
+"congreso": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/El-Congreso-de-Tucum%C3%A1n-1816-Francisco-Fortuny.jpg/500px-El-Congreso-de-Tucum%C3%A1n-1816-Francisco-Fortuny.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Congreso_de_Tucum%C3%A1n",
+"autor": "Francisco Fortuny",
+"licencia": "Public domain",
+"titulo": "Congreso de Tucumán"
+},
+"atenas": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/500px-The_Parthenon_in_Athens.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Parten%C3%B3n",
+"autor": "Steve Swayne",
+"licencia": "CC BY 2.0",
+"titulo": "Partenón"
+},
+"boqueron": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/ATAQUE_de_la_3%C2%AA_DIVISION_del_2%C2%BA_CUERPO_de_EJERCITO_%C3%A1_las_%C3%B3rdenes_del_Coronel_D._CES%C3%81REO_DOMINGUEZ_%C3%A0_la_TRINCHERA_PARAGUAYA_del_BOQUERON_DE_PIRIS_%28Batalle_del_%22Sauce%22_de_los_Paraguayos%29.jpg/500px-thumbnail.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Boquer%C3%B3n_(1866)",
+"autor": "Francisco Fortuny",
+"licencia": "Public domain",
+"titulo": "Batalla de Boquerón (1866)"
+},
+"triunvirato": {
+"sinFoto": true
+},
+"maure": {
+"sinFoto": true
+},
+"altolaguirre": {
+"sinFoto": true
 }
 }
