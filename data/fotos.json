@@ -21,18 +21,10 @@
 "titulo": "Achira"
 },
 "acoyte": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/AcoyteGCBA%281%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:AcoyteGCBA%281%29.jpg",
-"autor": "Gobierno de la Ciudad de Buenos Aires",
-"licencia": "CC BY 2.5 ar",
-"titulo": "Acoyte"
+"sinFoto": true
 },
 "achupallas": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Achupallas_railstation.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Achupallas_railstation.jpg",
-"autor": "Diegows",
-"licencia": "Public domain",
-"titulo": "Achupallas"
+"sinFoto": true
 },
 "alberto williams": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alberto_Williams_%28Almanaque_Sud-americano_1898%29.jpg?width=480",
@@ -177,11 +169,11 @@
 "titulo": "Andrés Ferreyra"
 },
 "angaco": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Las_puertas_de_angaco.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Las_puertas_de_angaco.jpg",
-"autor": "Gonce",
-"licencia": "CC BY 3.0",
-"titulo": "Angaco"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Coraceros_-_Buenos_Aires%2C_seg%C3%BAn_Durand_Brager_1841_%281%29.jpg/500px-Coraceros_-_Buenos_Aires%2C_seg%C3%BAn_Durand_Brager_1841_%281%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Angaco",
+"autor": "Durand Brager",
+"licencia": "Public domain",
+"titulo": "Batalla de Angaco"
 },
 "aromo": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/0731jfRiver_Aroma_farnesiana_Tortugas_Rivas_Balanga_City_Bataanfvf_08.JPG?width=480",
@@ -459,11 +451,11 @@
 "titulo": "Carhué"
 },
 "carabobo": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/CaraboboGCBA%283%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:CaraboboGCBA%283%29.jpg",
-"autor": "Gobierno de la Ciudad de Buenos Aires",
-"licencia": "CC BY 2.5 ar",
-"titulo": "Carabobo"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/BatallaCarabobo02.JPG/500px-BatallaCarabobo02.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Carabobo_(1821)",
+"autor": "Martin Tovar y Tovar",
+"licencia": "Public domain",
+"titulo": "Batalla de Carabobo (1821)"
 },
 "caranday": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Trithrinax_campestris_2.jpg?width=480",
@@ -508,11 +500,11 @@
 "titulo": "Cerrillos"
 },
 "cerrito": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerrito%2C_Santander_01.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Cerrito%2C_Santander_01.jpg",
-"autor": "Juan Gómez",
-"licencia": "CC BY 2.0",
-"titulo": "Cerrito"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Batalla_del_Cerrito.jpg/500px-Batalla_del_Cerrito.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Cerrito",
+"autor": "Dibujo de un testigo. Colección AssunÇao, Montevideo)",
+"licencia": "Public domain",
+"titulo": "Batalla de Cerrito"
 },
 "cesareo bernaldo de quiros": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cesareo_quiros_retrato.jpg?width=480",
@@ -3209,11 +3201,11 @@
 "titulo": "Pablo Casacuberta"
 },
 "chacabuco": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Salitrera_de_Chacabuco_%281%29.JPG/500px-Salitrera_de_Chacabuco_%281%29.JPG",
-"pageUrl": "https://en.wikipedia.org/wiki/Chacabuco",
-"autor": "Lorna-Lorna",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Chacabuco"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Batalla_de_Chacabuco_-_Pedro_Subercaseaux_%28cropped%29.jpg/500px-Batalla_de_Chacabuco_-_Pedro_Subercaseaux_%28cropped%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Chacabuco",
+"autor": "Pedro Subercaseaux",
+"licencia": "Public domain",
+"titulo": "Batalla de Chacabuco"
 },
 "ceretti": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Vittoria_Ceretti_for_Chaos.jpg/500px-Vittoria_Ceretti_for_Chaos.jpg",
@@ -5583,5 +5575,60 @@
 "autor": "Leandro Palacios derivative work: Argentino (talk)",
 "licencia": "CC BY-SA 3.0",
 "titulo": "Invasiones inglesas"
+},
+"apule": {
+"sinFoto": true
+},
+"arjonilla": {
+"sinFoto": true
+},
+"bacacay": {
+"sinFoto": true
+},
+"cachimayo": {
+"sinFoto": true
+},
+"camacua": {
+"sinFoto": true
+},
+"campana del chaco": {
+"sinFoto": true
+},
+"campichuelo": {
+"sinFoto": true
+},
+"colpayo": {
+"sinFoto": true
+},
+"cotagaita": {
+"sinFoto": true
+},
+"aroma": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Batalla_de_Aroma.jpg/500px-Batalla_de_Aroma.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Aroma",
+"autor": "Anónimo - Prensa Senado",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Batalla de Aroma"
+},
+"ayacucho": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Batalla_de_Ayacucho_by_Mart%C3%ADn_Tovar_y_Tovar_%281827_-_1902%29.jpg/500px-Batalla_de_Ayacucho_by_Mart%C3%ADn_Tovar_y_Tovar_%281827_-_1902%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Ayacucho",
+"autor": "Martín Tovar y Tovar",
+"licencia": "Public domain",
+"titulo": "Batalla de Ayacucho"
+},
+"boyaca": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Batalla_de_Boyaca_de_Martin_Tovar_y_Tovar.jpg/500px-Batalla_de_Boyaca_de_Martin_Tovar_y_Tovar.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Boyac%C3%A1",
+"autor": "Martin Tovar y Tovar",
+"licencia": "Public domain",
+"titulo": "Batalla de Boyacá"
+},
+"caaguazu": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Cuartel_general_de_uno_de_los_campamentos_del_ej%C3%A9rcito_de_Juan_Manuel_de_Rosas%2C_Argentina%2C_a_partir_de_un_dibujo_de_Jean-Baptiste_Henri_Durand-Brager_%281814-1879%29.jpg/500px-thumbnail.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Caaguaz%C3%BA",
+"autor": "Durand Brager",
+"licencia": "Public domain",
+"titulo": "Batalla de Caaguazú"
 }
 }
