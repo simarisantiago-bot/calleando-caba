@@ -3271,10 +3271,18 @@
 "titulo": "Julio Meinvielle"
 },
 "coronel juan f czetz": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Czetz_J%C3%A1nos.jpg/500px-Czetz_J%C3%A1nos.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Juan_Czetz",
+"autor": "Károly Rusz",
+"licencia": "Public domain",
+"titulo": "Juan Czetz"
 },
 "coronel manuel jose olascoaga": {
-"sinFoto": true
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/CoronelOlascoaga.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Manuel_Jos%C3%A9_Olascoaga",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Manuel José Olascoaga"
 },
 "coronel marcelino e freyre": {
 "sinFoto": true
