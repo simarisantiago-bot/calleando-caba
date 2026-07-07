@@ -1013,10 +1013,10 @@
 "titulo": "Juan Pedro Esnaola"
 },
 "esperanza": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gawas_beach%2C_Esperanza%2C_Masbate%2C_Philippines.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Gawas_beach%2C_Esperanza%2C_Masbate%2C_Philippines.jpg",
-"autor": "Reygel Perales",
-"licencia": "CC BY-SA 3.0",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Jacques_Du_Br%C5%93ucq_-_L%27Esp%C3%A9rance.JPG/500px-Jacques_Du_Br%C5%93ucq_-_L%27Esp%C3%A9rance.JPG",
+"pageUrl": "https://es.wikipedia.org/wiki/Esperanza",
+"autor": "Jean-Pol GRANDMONT",
+"licencia": "CC BY 3.0",
 "titulo": "Esperanza"
 },
 "espinillo": {
@@ -1510,11 +1510,11 @@
 "titulo": "Juvenilia"
 },
 "la blanqueada": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Military_Hospital_Montevideo.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Military_Hospital_Montevideo.jpg",
-"autor": "Hoverfish",
-"licencia": "CC BY-SA 3.0",
-"titulo": "La Blanqueada"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pulperia_%281820%29.jpg/500px-Pulperia_%281820%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Pulper%C3%ADa",
+"autor": "Pancho Fierro",
+"licencia": "Public domain",
+"titulo": "Pulpería"
 },
 "junin": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Batalla_de_Jun%C3%ADn.jpg/500px-Batalla_de_Jun%C3%ADn.jpg",
@@ -5923,5 +5923,33 @@
 "autor": "Guaman Poma de Ayala",
 "licencia": "Public domain",
 "titulo": "Criollo"
+},
+"el sereno": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Sereno.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Sereno_(oficio)",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Sereno (oficio)"
+},
+"fraternidad": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Liberte-egalite-fraternite-tympanum-church-saint-pancrace-aups-var.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Fraternidad_(filosof%C3%ADa)",
+"autor": "Greudin",
+"licencia": "Public domain",
+"titulo": "Fraternidad (filosofía)"
+},
+"igualdad": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Liberte-egalite-fraternite-tympanum-church-saint-pancrace-aups-var.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Fraternidad_(filosof%C3%ADa)",
+"autor": "Greudin",
+"licencia": "Public domain",
+"titulo": "Fraternidad (filosofía)"
+},
+"la conquista": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Desembarco_de_Col%C3%B3n_de_Di%C3%B3scoro_Puebla.jpg/500px-Desembarco_de_Col%C3%B3n_de_Di%C3%B3scoro_Puebla.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Descubrimiento_de_Am%C3%A9rica",
+"autor": "Dióscoro Puebla",
+"licencia": "Public domain",
+"titulo": "Descubrimiento de América"
 }
 }
