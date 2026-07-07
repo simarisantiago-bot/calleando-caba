@@ -5729,5 +5729,22 @@
 "autor": "Anonymous",
 "licencia": "Public domain",
 "titulo": "Éxodo Jujeño"
+},
+"gallegos": {
+"sinFoto": true
+},
+"arribenos": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Arribe%C3%B1os.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Batall%C3%B3n_de_Arribe%C3%B1os",
+"autor": "Justo Doldan",
+"licencia": "Public domain",
+"titulo": "Batallón de Arribeños"
+},
+"cazadores": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Cazador_correntino%2C_an%C3%B3nimo.tif/lossy-page1-500px-Cazador_correntino%2C_an%C3%B3nimo.tif.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Compa%C3%B1%C3%ADa_de_Cazadores_Correntinos",
+"autor": "Anonymous",
+"licencia": "Public domain",
+"titulo": "Compañía de Cazadores Correntinos"
 }
 }
