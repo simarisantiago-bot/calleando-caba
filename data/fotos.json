@@ -1649,11 +1649,11 @@
 "sinFoto": true
 },
 "los amigos": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/3_barefoot_females_smiling_and_sitting_on_a_bench.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:3_barefoot_females_smiling_and_sitting_on_a_bench.jpg",
-"autor": "JLS Media",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Amigos"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Dartagnan-musketeers.jpg/500px-Dartagnan-musketeers.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Amistad",
+"autor": "Jules Huyot / After Maurice Leloir",
+"licencia": "Public domain",
+"titulo": "Amistad"
 },
 "macacha guemes": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Magdalena_G%C3%BCemes_de_Tejada.jpg?width=480",
@@ -1942,11 +1942,7 @@
 "sinFoto": true
 },
 "mutualismo": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Impala_mutualism_with_birds_wide.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Impala_mutualism_with_birds_wide.jpg",
-"autor": "Muhammad Mahdi Karim",
-"licencia": "GFDL 1.2",
-"titulo": "Mutualismo"
+"sinFoto": true
 },
 "natal": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Natal%2C_capital_do_Rio_Grande_do_Norte%2C_Brasil.jpg?width=480",
@@ -4024,11 +4020,11 @@
 "titulo": "Juan Seguín"
 },
 "mar dulce": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Lake_Nicaragua.jpg/500px-Lake_Nicaragua.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Lake_Nicaragua",
-"autor": "Zach Klein",
-"licencia": "CC BY 2.0",
-"titulo": "Lake Nicaragua"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/River_Plate.jpg/500px-River_Plate.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/R%C3%ADo_de_la_Plata",
+"autor": "Jacques Descloitres, MODISRapid Response Team, NASA/GSFC",
+"licencia": "Public domain",
+"titulo": "Río de la Plata"
 },
 "manuel artigas": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Manuel_Artigas.png",
@@ -5951,5 +5947,94 @@
 "autor": "Dióscoro Puebla",
 "licencia": "Public domain",
 "titulo": "Descubrimiento de América"
+},
+"plaza de todos": {
+"sinFoto": true
+},
+"republica": {
+"sinFoto": true
+},
+"rincon verde kasu mapun": {
+"sinFoto": true
+},
+"unidad nacional": {
+"sinFoto": true
+},
+"la diligencia": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Grabill_-_The_Deadwood_Coach-2.jpg/500px-Grabill_-_The_Deadwood_Coach-2.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Diligencia_(carruaje)",
+"autor": "John Grabill",
+"licencia": "Public domain",
+"titulo": "Diligencia (carruaje)"
+},
+"la facultad": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Facultad_de_Ingenier%C3%ADa_de_la_Universidad_de_Buenos_Aires_%2827547142228%29.jpg/500px-Facultad_de_Ingenier%C3%ADa_de_la_Universidad_de_Buenos_Aires_%2827547142228%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Universidad",
+"autor": "Deensel",
+"licencia": "CC BY 2.0",
+"titulo": "Universidad"
+},
+"la trilla": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Various_grains.jpg/500px-Various_grains.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Cereal",
+"autor": "Peggy Greb, USDA ARS",
+"licencia": "Public domain",
+"titulo": "Cereal"
+},
+"las bases": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Juan-bautista-alberdi-bases.jpg/500px-Juan-bautista-alberdi-bases.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Bases_y_puntos_de_partida_para_la_organizaci%C3%B3n_pol%C3%ADtica_de_la_Rep%C3%BAblica_Argentina",
+"autor": "Juan Bautista Alberdi (1810-1884)",
+"licencia": "Public domain",
+"titulo": "Bases y puntos de partida para la organización política de la República Argentina"
+},
+"las indias": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Moll_-_A_Map_of_the_West-Indies.png/500px-Moll_-_A_Map_of_the_West-Indies.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Indias_Occidentales",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Indias Occidentales"
+},
+"latinoamerica": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Latin_America_%28orthographic_projection%29.svg/500px-Latin_America_%28orthographic_projection%29.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Am%C3%A9rica_Latina",
+"autor": "Heraldry",
+"licencia": "CC BY-SA 3.0",
+"titulo": "América Latina"
+},
+"libertad": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Genius_of_Liberty_Dumont_July_Column.jpg/500px-Genius_of_Liberty_Dumont_July_Column.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Libertad",
+"autor": "Augustin-Alexandre Dumont",
+"licencia": "Public domain",
+"titulo": "Libertad"
+},
+"los territorios": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Mapa_de_Argentina_-_Aprox._1940.jpg/500px-Mapa_de_Argentina_-_Aprox._1940.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Territorio_nacional_(Argentina)",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Territorio nacional (Argentina)"
+},
+"paseo de la paz": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Peace_dove.svg/500px-Peace_dove.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Paz",
+"autor": "Elembis, Sammy pompon and Mark Miller (Previouly Amadscientist)",
+"licencia": "Public domain",
+"titulo": "Paz"
+},
+"unidad latinoamericana": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Latin_America_%28orthographic_projection%29.svg/500px-Latin_America_%28orthographic_projection%29.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Am%C3%A9rica_Latina",
+"autor": "Heraldry",
+"licencia": "CC BY-SA 3.0",
+"titulo": "América Latina"
+},
+"paseo de la victoria": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Guerra_de_la_Independencia_Argentina_%28Recopilaci%C3%B3n%29.png/500px-Guerra_de_la_Independencia_Argentina_%28Recopilaci%C3%B3n%29.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Guerra_de_la_Independencia_Argentina",
+"autor": "Recopilación",
+"licencia": "CC0",
+"titulo": "Guerra de la Independencia Argentina"
 }
 }
