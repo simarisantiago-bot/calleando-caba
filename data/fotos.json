@@ -5769,5 +5769,18 @@
 "autor": "Diego Alexis 93",
 "licencia": "CC BY-SA 4.0",
 "titulo": "Guerra de las Malvinas"
+},
+"artilleros": {
+"sinFoto": true
+},
+"guardia nacional": {
+"sinFoto": true
+},
+"regimiento 10 de caballeria husares de pueyrredon": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/HusaresPueyrredon.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Regimiento_de_Caballer%C3%ADa_de_Tanques_10",
+"autor": "Justo Doldan",
+"licencia": "Public domain",
+"titulo": "Regimiento de Caballería de Tanques 10"
 }
 }
