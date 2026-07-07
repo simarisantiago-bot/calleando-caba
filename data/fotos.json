@@ -4111,11 +4111,7 @@
 "sinFoto": true
 },
 "minones": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Jos%C3%A9_Manuel_Mi%C3%B1ones_Conde_2023_%28cropped%29.jpg/500px-Jos%C3%A9_Manuel_Mi%C3%B1ones_Conde_2023_%28cropped%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Jos%C3%A9_Mi%C3%B1ones",
-"autor": "La Moncloa - Gobierno de España",
-"licencia": "Attribution",
-"titulo": "José Miñones"
+"sinFoto": true
 },
 "miralla": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Antonio_Valero_Bernabe.gif",
@@ -5746,5 +5742,32 @@
 "autor": "Anonymous",
 "licencia": "Public domain",
 "titulo": "Compañía de Cazadores Correntinos"
+},
+"numancia": {
+"sinFoto": true
+},
+"reservistas argentinos": {
+"sinFoto": true
+},
+"montaneses": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Unif1807-Liniers-Monta%C3%B1eses1.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/José_de_la_Oyuela",
+"autor": "Justo Doldan",
+"licencia": "Public domain",
+"titulo": "José de la Oyuela"
+},
+"parque patricios": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/1806patricios01.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Regimiento_de_Patricios",
+"autor": "Huinchulef",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Regimiento de Patricios"
+},
+"combatientes de malvinas": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Posici%C3%B3n_de_la_3ra_bater%C3%ADa_en_el_dispositivo_de_Puerto_Argentino.jpg/500px-Posici%C3%B3n_de_la_3ra_bater%C3%ADa_en_el_dispositivo_de_Puerto_Argentino.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Guerra_de_las_Malvinas",
+"autor": "Diego Alexis 93",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Guerra de las Malvinas"
 }
 }
