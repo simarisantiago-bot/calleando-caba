@@ -769,11 +769,7 @@
 "titulo": "Guerra de la Independencia Argentina"
 },
 "de los medicos": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Auscultation_of_a_women.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Auscultation_of_a_women.jpg",
-"autor": "Wesley Carter, U.S. Air Force",
-"licencia": "Public domain",
-"titulo": "Médicos"
+"sinFoto": true
 },
 "de los patricios": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/PATRICIOS_4.JPG?width=480",
@@ -905,11 +901,11 @@
 "titulo": "Eduardo Faustino Wilde"
 },
 "el artesano": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasaje_El_Artesano%2C_Buenos_Aires.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Pasaje_El_Artesano%2C_Buenos_Aires.jpg",
-"autor": "Banfield",
-"licencia": "CC BY-SA 2.5 ar",
-"titulo": "El Artesano"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Artesano_en_Cantabria.jpg/500px-Artesano_en_Cantabria.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Artesano",
+"autor": "Pablo LaVegui",
+"licencia": "CC BY 2.0",
+"titulo": "Artesano"
 },
 "eduardo schiaffino": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduardo_Schiaffino.JPG?width=480",
@@ -919,11 +915,11 @@
 "titulo": "Eduardo Schiaffino"
 },
 "el cardenal": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1917-04-01%2C_La_Novela_Teatral%2C_Manuel_Linares_Rivas%2C_Tovar.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:1917-04-01%2C_La_Novela_Teatral%2C_Manuel_Linares_Rivas%2C_Tovar.jpg",
-"autor": "Manuel Tovar Siles",
-"licencia": "Public domain",
-"titulo": "El Cardenal"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Paroaria_coronata_-Koke%27e_State_Park%2C_Hawaii%2C_USA-8.jpg/500px-Paroaria_coronata_-Koke%27e_State_Park%2C_Hawaii%2C_USA-8.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Paroaria_coronata",
+"autor": "რობერტ (Robert)",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Paroaria coronata"
 },
 "el cerro": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_El_Cerro_%28Salamanca%29.JPG?width=480",
@@ -947,11 +943,11 @@
 "titulo": "El Nene"
 },
 "el alfabeto": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Abecedarium.svg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Abecedarium.svg",
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Abecedarium.svg/500px-Abecedarium.svg.png",
+"pageUrl": "https://es.wikipedia.org/wiki/Alfabeto_latino",
 "autor": "MS Sakib",
 "licencia": "Public domain",
-"titulo": "Alfabeto"
+"titulo": "Alfabeto latino"
 },
 "empedrado": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Barrancas_de_Empedrado.jpg?width=480",
@@ -3363,25 +3359,25 @@
 "titulo": "Virtus, Spain"
 },
 "de los poetas": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/MX_MM_ALFONSO_HERRERA.jpg/500px-MX_MM_ALFONSO_HERRERA.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Alfonso_Herrera",
-"autor": "Secretaría de Cultura de la Ciudad de México https://www.flickr.com/photos/culturacdmx/",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Alfonso Herrera"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Carl_Spitzweg_-_Der_arme_Poet_%28Neue_Pinakothek%29.jpg/500px-Carl_Spitzweg_-_Der_arme_Poet_%28Neue_Pinakothek%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Poeta",
+"autor": "Carl Spitzweg",
+"licencia": "Public domain",
+"titulo": "Poeta"
 },
 "de los suspiros": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Delossuspiros.webp/500px-Delossuspiros.webp.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Calle_de_los_Suspiros",
-"autor": "Olivergilesgoldfish",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Calle de los Suspiros"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1928-10-13%2C_La_Esfera%2C_Escenas_madrile%C3%B1as%2C_Cotilleo%2C_Sancha.jpg/500px-1928-10-13%2C_La_Esfera%2C_Escenas_madrile%C3%B1as%2C_Cotilleo%2C_Sancha.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Murmuración",
+"autor": "Francisco Sancha",
+"licencia": "Public domain",
+"titulo": "Murmuración"
 },
 "de los maestros": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRS_of_Texas_headquarters_building%2C_Austin%2C_TX_%282025%29.jpg/500px-TRS_of_Texas_headquarters_building%2C_Austin%2C_TX_%282025%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Teacher_Retirement_System_of_Texas",
-"autor": "Rob.maxwell4655",
-"licencia": "CC BY 4.0",
-"titulo": "Teacher Retirement System of Texas"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Domingo_Faustino_Sarmiento_%28c._1884%29_-_Eugenia_Bel%C3%ADn_Sarmiento_-_Google_Arts_%26_Culture.jpg/500px-Domingo_Faustino_Sarmiento_%28c._1884%29_-_Eugenia_Bel%C3%ADn_Sarmiento_-_Google_Arts_%26_Culture.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Domingo_Faustino_Sarmiento",
+"autor": "Eugenia Belín Sarmiento",
+"licencia": "Public domain",
+"titulo": "Domingo Faustino Sarmiento"
 },
 "defensa": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Museo_del_Bicentenario_-_%22Ataque_por_los_ingleses_a_Buenos_Aires%22.jpg/500px-Museo_del_Bicentenario_-_%22Ataque_por_los_ingleses_a_Buenos_Aires%22.jpg",
@@ -3412,11 +3408,11 @@
 "titulo": "Phytolacca dioica"
 },
 "del buen orden": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Casa_del_pr%C3%ADncipe_D._Carlos_%C3%B3_Casa_de_Abajo.jpg/500px-Casa_del_pr%C3%ADncipe_D._Carlos_%C3%B3_Casa_de_Abajo.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Casita_del_Pr%C3%ADncipe_(El_Escorial)",
-"autor": "Elena F D",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Casita del Príncipe (El Escorial)"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Juan_Manuel_de_Rosas.jpg/500px-Juan_Manuel_de_Rosas.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Juan_Manuel_de_Rosas",
+"autor": "Cayetano Descalzi",
+"licencia": "Public domain",
+"titulo": "Juan Manuel de Rosas"
 },
 "doctor osvaldo eguia": {
 "sinFoto": true
@@ -3494,11 +3490,11 @@
 "titulo": "El Litoral"
 },
 "el maestro": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Nestor_el_maestro.jpg/500px-Nestor_el_maestro.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Nestor_El_Maestro",
-"autor": "Biser Todorov",
-"licencia": "CC BY 4.0",
-"titulo": "Nestor El Maestro"
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Domingo_Faustino_Sarmiento_%28c._1884%29_-_Eugenia_Bel%C3%ADn_Sarmiento_-_Google_Arts_%26_Culture.jpg/500px-Domingo_Faustino_Sarmiento_%28c._1884%29_-_Eugenia_Bel%C3%ADn_Sarmiento_-_Google_Arts_%26_Culture.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Domingo_Faustino_Sarmiento",
+"autor": "Eugenia Belín Sarmiento",
+"licencia": "Public domain",
+"titulo": "Domingo Faustino Sarmiento"
 },
 "elias bedoya": {
 "sinFoto": true
@@ -5889,5 +5885,43 @@
 "autor": "Luis Argerich",
 "licencia": "CC BY 2.0",
 "titulo": "Economía de Argentina"
+},
+"del fomentista": {
+"sinFoto": true
+},
+"de los periodistas": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/CBC_journalists_in_Montreal.jpg/500px-CBC_journalists_in_Montreal.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Periodismo",
+"autor": "Conrad Poirier",
+"licencia": "Public domain",
+"titulo": "Periodismo"
+},
+"del comercio": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Caduceus_large.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Comercio",
+"autor": "Rama",
+"licencia": "Public domain",
+"titulo": "Comercio"
+},
+"derechos del hombre": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Declaration_of_the_Rights_of_Man_and_of_the_Citizen_in_1789.jpg/500px-Declaration_of_the_Rights_of_Man_and_of_the_Citizen_in_1789.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_los_Derechos_del_Hombre_y_del_Ciudadano",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Declaración de los Derechos del Hombre y del Ciudadano"
+},
+"el domador": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Jineteada_gaucha-22952825_%286%29.jpg/500px-Jineteada_gaucha-22952825_%286%29.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Jinete",
+"autor": "tucul_photo",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Jinete"
+},
+"el criollo": {
+"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Criollos-Espa%C3%B1oles_Per%C3%ACodo_Colonial_en_Am%C3%A9rica.jpg/500px-Criollos-Espa%C3%B1oles_Per%C3%ACodo_Colonial_en_Am%C3%A9rica.jpg",
+"pageUrl": "https://es.wikipedia.org/wiki/Criollo",
+"autor": "Guaman Poma de Ayala",
+"licencia": "Public domain",
+"titulo": "Criollo"
 }
 }
