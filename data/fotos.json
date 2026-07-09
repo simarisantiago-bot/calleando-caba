@@ -6057,5 +6057,60 @@
 "autor": "Ángel Della Valle",
 "licencia": "Public domain",
 "titulo": "La vuelta del malón"
+},
+"asamblea": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_Provinces_of_the_Rio_de_la_Plata_%28Assembly%29.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_United_Provinces_of_the_Rio_de_la_Plata_(Assembly).svg",
+"autor": "Samhanin",
+"licencia": "CC0",
+"titulo": "Sello de la Asamblea del Año XIII"
+},
+"cacique": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cacique_Lloncon_%28cropped%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cacique_Lloncon_(cropped).jpg",
+"autor": "Gustavo Milet Ramírez",
+"licencia": "Public domain",
+"titulo": "Cacique Lloncón"
+},
+"corregidores": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Retrato_Eustaquio_Galavis_Hurtado_Siglo_XVIII.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Retrato_Eustaquio_Galavis_Hurtado_Siglo_XVIII.png",
+"autor": "Atribuido a Joaquín Gutiérrez",
+"licencia": "CC0",
+"titulo": "Retrato de un corregidor (S. XVIII)"
+},
+"de los virreyes": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Toledo_Virrey.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Toledo_Virrey.jpg",
+"autor": "Pintor no identificado",
+"licencia": "Public domain",
+"titulo": "Retrato de un virrey"
+},
+"virreyes": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Toledo_Virrey.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Toledo_Virrey.jpg",
+"autor": "Pintor no identificado",
+"licencia": "Public domain",
+"titulo": "Retrato de un virrey"
+},
+"del congreso": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Congreso_Nacional_Buenos_Aires.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Congreso_Nacional_Buenos_Aires.jpg",
+"autor": "Jacobo Tarrío",
+"licencia": "CC BY 2.0",
+"titulo": "Palacio del Congreso de la Nación Argentina"
+},
+"virreinato del rio de la plata": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mapa_del_plan_de_operaciones_propuesto_para_recuperar_las_tierras_ocupadas_por_los_portugueses_del_Brasil_en_el_Virreinato_de_Buenos_Aires_durante_la_Guerra_de_las_Naranjas_%281801%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Mapa_del_plan_de_operaciones_propuesto_para_recuperar_las_tierras_ocupadas_por_los_portugueses_del_Brasil_en_el_Virreinato_de_Buenos_Aires_durante_la_Guerra_de_las_Naranjas_(1801).jpg",
+"autor": "Agustín Ibáñez y Bojons",
+"licencia": "Public domain",
+"titulo": "Mapa del Virreinato del Río de la Plata (1801)"
+},
+"directorio": {
+"sinFoto": true
+},
+"las colonias": {
+"sinFoto": true
 }
 }
