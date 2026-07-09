@@ -6181,5 +6181,92 @@
 },
 "guayquiraro": {
 "sinFoto": true
+},
+"balvanera": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Virgen_de_Valvanera.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Virgen_de_Valvanera.jpg",
+"autor": "Muro de Aguas",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Nuestra Señora de Valvanera"
+},
+"de la misericordia": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazimirowski_Eugeniusz%2C_Divine_Mercy%2C_1934.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Kazimirowski_Eugeniusz,_Divine_Mercy,_1934.jpg",
+"autor": "Eugeniusz Kazimirowski",
+"licencia": "Public domain",
+"titulo": "Jesús de la Divina Misericordia"
+},
+"de san benito": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Benito_III.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:San_Benito_III.jpg",
+"autor": "Rjcastillo",
+"licencia": "CC BY-SA 3.0",
+"titulo": "San Benito de Palermo"
+},
+"del carmen": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Virgen_del_Carmen_-_Parroquia_de_San_Jose_-_Madrid_01.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Virgen_del_Carmen_-_Parroquia_de_San_Jose_-_Madrid_01.jpg",
+"autor": "Javier Pérez Montes",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Virgen del Carmen"
+},
+"montserrat": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Virgem_de_Mont_Serrat.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:A_Virgem_de_Mont_Serrat.jpg",
+"autor": "Enrique López-Tamayo Biosca",
+"licencia": "CC BY 2.0",
+"titulo": "Virgen de Montserrat"
+},
+"nueva pompeya": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Matka_Bo%C5%BCa_Pompeja%C5%84ska%2C_Beata_Vergine_del_Santo_Rosario_di_Pompei%2C_Blessed_Virgin_of_the_Rosary_of_Pompei.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Matka_Boża_Pompejańska,_Beata_Vergine_del_Santo_Rosario_di_Pompei,_Blessed_Virgin_of_the_Rosary_of_Pompei.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Nuestra Señora del Rosario de Pompeya"
+},
+"paseo de la recoleta": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Escultura_de_la_Virgen_del_Pilar%2C_en_la_Bas%C3%ADlica_del_Pilar_de_Zaragoza%2C_Espa%C3%B1a%2C_Spain.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Escultura_de_la_Virgen_del_Pilar,_en_la_Basílica_del_Pilar_de_Zaragoza,_España,_Spain.jpg",
+"autor": "Carlos Teixidor Cadenas",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Virgen del Pilar"
+},
+"punta corral": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/R%C3%A9plica_de_la_Virgen_de_Copacabana_en_un_altar_cercano_al_templo%2C_Bolivia.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Réplica_de_la_Virgen_de_Copacabana_en_un_altar_cercano_al_templo,_Bolivia.jpg",
+"autor": "Carlillasa",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Virgen de Copacabana"
+},
+"remedios": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/VIRGENR1.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:VIRGENR1.JPG",
+"autor": "Fregenal01",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Virgen de los Remedios"
+},
+"resurreccion": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bartolom%C3%A9_Esteban_Murillo_-_Resurrecci%C3%B3n_del_Se%C3%B1or_-_Google_Art_Project.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Bartolomé_Esteban_Murillo_-_Resurrección_del_Señor_-_Google_Art_Project.jpg",
+"autor": "Bartolomé Esteban Murillo",
+"licencia": "Public domain",
+"titulo": "Resurrección del Señor"
+},
+"santa maria de los buenos aires": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Metropolitana_de_Buenos_Aires_-_20130309_145928.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_Buenos_Aires_-_20130309_145928.jpg",
+"autor": "Barcex",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Nuestra Señora del Buen Aire"
+},
+"santa maria del buen aire": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Metropolitana_de_Buenos_Aires_-_20130309_145928.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_Buenos_Aires_-_20130309_145928.jpg",
+"autor": "Barcex",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Nuestra Señora del Buen Aire"
+},
+"concepcion del alto de san pedro": {
+"sinFoto": true
 }
 }
