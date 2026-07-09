@@ -3472,11 +3472,11 @@
 "titulo": "Andrés Cepeda"
 },
 "el chacho": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Argentina_celebrando_copa_%28cropped%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Diego_Maradona",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Angel_penaloza_portrait.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Angel_penaloza_portrait.jpg",
 "autor": "Unknown author",
 "licencia": "Public domain",
-"titulo": "Diego Maradona"
+"titulo": "Ángel Vicente \"Chacho\" Peñaloza"
 },
 "el litoral": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Salvador_y_pedro.jpg/500px-Salvador_y_pedro.jpg",
@@ -6036,5 +6036,26 @@
 "autor": "Recopilación",
 "licencia": "CC0",
 "titulo": "Guerra de la Independencia Argentina"
+},
+"crainqueville": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Anatole_France_young_years.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Anatole_France_young_years.jpg",
+"autor": "Wilhelm Benque",
+"licencia": "Public domain",
+"titulo": "Anatole France"
+},
+"don fulgencio": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lino_Palacio.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Lino_Palacio.png",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Lino Palacio"
+},
+"la cautiva": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La_vuelta_del_mal%C3%B3n_-_%C3%81ngel_Della_Valle_%28frag%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:La_vuelta_del_mal%C3%B3n_-_%C3%81ngel_Della_Valle_(frag).jpg",
+"autor": "Ángel Della Valle",
+"licencia": "Public domain",
+"titulo": "La vuelta del malón"
 }
 }
