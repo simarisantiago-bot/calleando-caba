@@ -6268,5 +6268,57 @@
 },
 "concepcion del alto de san pedro": {
 "sinFoto": true
+},
+"calchaquies": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Lp_061_Valles_Calchaqu%C3%ADes.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Museo_Lp_061_Valles_Calchaquíes.JPG",
+"autor": "Claudio Elías",
+"licencia": "Public domain",
+"titulo": "Valles Calchaquíes"
+},
+"diaguitas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_del_Limar%C3%AD%2C_en_la_ciudad_de_Ovalle%2C_recipiente_ceremonial_en_forma_de_cabeza%2C_imperio_inca%2C_Chile.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Museo_del_Limarí,_en_la_ciudad_de_Ovalle,_recipiente_ceremonial_en_forma_de_cabeza,_imperio_inca,_Chile.jpg",
+"autor": "Carlos Teixidor Cadenas",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Recipiente ceremonial diaguita-inca"
+},
+"huari": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Huari_-_Head_Pot_with_Painted_Design_-_Walters_482849.jpg",
+"autor": "Anónimo (cultura huari)",
+"licencia": "Public domain",
+"titulo": "Cerámica de la cultura huari"
+},
+"mataco": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Archivo_General_de_la_Naci%C3%B3n_Argentina_1890_aprox_poblaci%C3%B3n_de_wichis.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Archivo_General_de_la_Nación_Argentina_1890_aprox_población_de_wichis.jpg",
+"autor": "Autor desconocido",
+"licencia": "Public domain",
+"titulo": "Población wichí, c. 1890"
+},
+"wichi": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Archivo_General_de_la_Naci%C3%B3n_Argentina_1890_aprox_poblaci%C3%B3n_de_wichis.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Archivo_General_de_la_Nación_Argentina_1890_aprox_población_de_wichis.jpg",
+"autor": "Autor desconocido",
+"licencia": "Public domain",
+"titulo": "Población wichí, c. 1890"
+},
+"quichua": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexicon_o_Vocabulario_de_la_lengua_general_del_Peru_1560_first_page_of_vocabulary_list.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Lexicon_o_Vocabulario_de_la_lengua_general_del_Peru_1560_first_page_of_vocabulary_list.jpg",
+"autor": "Domingo de Santo Tomás",
+"licencia": "Public domain",
+"titulo": "Vocabulario de la lengua quechua (1560)"
+},
+"ranqueles": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toldo_Ranquel.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Toldo_Ranquel.jpg",
+"autor": "Sampachero",
+"licencia": "CC0",
+"titulo": "Toldo ranquel"
+},
+"timbues": {
+"sinFoto": true
 }
 }
