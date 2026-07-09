@@ -6112,5 +6112,74 @@
 },
 "las colonias": {
 "sinFoto": true
+},
+"desaguadero": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/R%C3%ADo_Desaguadero_Argentina.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Río_Desaguadero_Argentina.jpg",
+"autor": "Franz Xaver",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Río Desaguadero"
+},
+"deseado": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Meandros_en_la_r%C3%ADa_Deseado.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Meandros_en_la_ría_Deseado.jpg",
+"autor": "Mikelzubi",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Río Deseado"
+},
+"diamante": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/R%C3%ADo_Diamante_San_Rafael_Mendoza.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Río_Diamante_San_Rafael_Mendoza.jpg",
+"autor": "Roberto Fiadone",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Río Diamante"
+},
+"gualeguay": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/RioGualeguay.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:RioGualeguay.JPG",
+"autor": "Juan Andrés Bentancour",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Río Gualeguay"
+},
+"las palmas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Parana_de_las_Palmas.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Parana_de_las_Palmas.jpg",
+"autor": "Subjetividad",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Río Paraná de las Palmas"
+},
+"mirinay": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Foto_desde_el_puente.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Foto_desde_el_puente.jpg",
+"autor": "Facundo Esquibel",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Río Miriñay"
+},
+"pilcomayo": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/In_Bol%C3%ADvia.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:In_Bolívia.jpg",
+"autor": "Coordenação-Geral de Observação da Terra/INPE",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Río Pilcomayo"
+},
+"rio colorado": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tour24.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Tour24.jpg",
+"autor": "Hotel Rincón",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Río Colorado"
+},
+"rio limay": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Atardecelimay.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Atardecelimay.JPG",
+"autor": "Aleposta",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Río Limay"
+},
+"amambay": {
+"sinFoto": true
+},
+"guayquiraro": {
+"sinFoto": true
 }
 }
