@@ -6675,5 +6675,62 @@
 },
 "tric y trake": {
 "sinFoto": true
+},
+"ayui": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nectandra_saligna.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Nectandra_saligna.jpg",
+"autor": "Jorge Vallmitjana",
+"licencia": "Public domain",
+"titulo": "Ayuí (Nectandra megapotamica)"
+},
+"cruz del sur": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Southern_Cross_-New_Zealand-.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Southern_Cross_-New_Zealand-.jpg",
+"autor": "Antonio Ferretti",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Cruz del Sur"
+},
+"del palo santo": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulnesia_sarmientoi_%28_Palo_Santo%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Bulnesia_sarmientoi_(_Palo_Santo).jpg",
+"autor": "Roberto Fiadone",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Palo Santo (Bulnesia sarmientoi)"
+},
+"el hornero": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HORNERO_Furnarius_rufus.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:HORNERO_Furnarius_rufus.jpg",
+"autor": "Dario Niz",
+"licencia": "CC BY 3.0",
+"titulo": "Hornero (Furnarius rufus)"
+},
+"el tala": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_ehrenbergiana_arbol.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Celtis_ehrenbergiana_arbol.jpg",
+"autor": "Arianza1",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Tala (Celtis ehrenbergiana)"
+},
+"el trebol": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Four-leaf_Clover_Trifolium_repens_2.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Four-leaf_Clover_Trifolium_repens_2.jpg",
+"autor": "KEBman",
+"licencia": "Public domain",
+"titulo": "Trébol"
+},
+"aljaba magallanica": {
+"sinFoto": true
+},
+"chanar": {
+"sinFoto": true
+},
+"coihue": {
+"sinFoto": true
+},
+"dama de monte": {
+"sinFoto": true
+},
+"de los viveros": {
+"sinFoto": true
 }
 }
