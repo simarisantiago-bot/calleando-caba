@@ -6448,5 +6448,149 @@
 },
 "29 de diciembre de 2001": {
 "sinFoto": true
+},
+"aviso a r a alferez sobral": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ARA_Alf%C3%A9rez_Sobral_%28A-9%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:ARA_Alférez_Sobral_(A-9).jpg",
+"autor": "Matias Cosso",
+"licencia": "CC BY-SA 3.0",
+"titulo": "ARA Alférez Sobral"
+},
+"bergantin general balcarce": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lara-Quilmes-30-7-26-Roullet-AcervoSDM.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Lara-Quilmes-30-7-26-Roullet-AcervoSDM.png",
+"autor": "Gastón Roullet",
+"licencia": "Public domain",
+"titulo": "Bergantín General Balcarce"
+},
+"bergantin general belgrano": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/PuntaColares_MuratureJose_1865.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:PuntaColares_MuratureJose_1865.png",
+"autor": "José Murature",
+"licencia": "Public domain",
+"titulo": "Bergantín General Belgrano"
+},
+"buque principessa mafalda": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Principessa_Mafalda.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Principessa_Mafalda.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Buque Principessa Mafalda"
+},
+"carabelas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Caravela_Vera_Cruz_no_rio_Tejo.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Caravela_Vera_Cruz_no_rio_Tejo.jpg",
+"autor": "Lopo Pizarro",
+"licencia": "CC BY 2.5",
+"titulo": "Carabela"
+},
+"corbeta uruguay": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Corbeta_Uruguay_%28A.R.A.%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Corbeta_Uruguay_(A.R.A.).jpg",
+"autor": "José María Pérez Núñez",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Corbeta ARA Uruguay"
+},
+"crucero general belgrano": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Crucero_ligero_ARA_General_Belgrano.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Crucero_ligero_ARA_General_Belgrano.jpg",
+"autor": "Gobierno de Argentina",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Crucero ARA General Belgrano"
+},
+"cuter luisito": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cutter_Shona.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cutter_Shona.jpg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Cúter"
+},
+"fragata presidente sarmiento": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Buque_Museo_Fragata_Presidente_Sarmiento.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Buque_Museo_Fragata_Presidente_Sarmiento.jpg",
+"autor": "MacAllenBrothers",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Fragata Presidente Sarmiento"
+},
+"goleta sarandi": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/GoletaSarandi-Biggen1.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:GoletaSarandi-Biggen1.png",
+"autor": "Biggen",
+"licencia": "Public domain",
+"titulo": "Goleta Sarandí"
+},
+"la nave": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sailboat_in_the_Puerto_Ayora_on_the_Island_of_Santa_Cruz_Galapagos_photo_by_Alvaro_Sevilla_Design.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Sailboat_in_the_Puerto_Ayora_on_the_Island_of_Santa_Cruz_Galapagos_photo_by_Alvaro_Sevilla_Design.JPG",
+"autor": "David Adam Kess",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Barco"
+},
+"la nina": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/LaNi%C3%B1a.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:LaNiña.jpg",
+"autor": "Miguel Ángel \"fotógrafo\"",
+"licencia": "CC BY-SA 4.0",
+"titulo": "La Niña"
+},
+"la pinta": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Pinta._Muelle_de_las_Carabelas._Palos_de_la_Frontera_%28Huelva%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:La_Pinta._Muelle_de_las_Carabelas._Palos_de_la_Frontera_(Huelva).jpg",
+"autor": "MiguelAngel fotografo",
+"licencia": "CC BY-SA 4.0",
+"titulo": "La Pinta"
+},
+"la santa maria": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SantaMariaPalos1.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:SantaMariaPalos1.jpg",
+"autor": "Miguel Ángel \"fotógrafo\"",
+"licencia": "CC BY-SA 4.0",
+"titulo": "La Santa María"
+},
+"pailebot davison": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pailebot_Santa_Eulalia.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Pailebot_Santa_Eulalia.jpg",
+"autor": "Jmcasals",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Pailebot"
+},
+"balandra carmen": {
+"sinFoto": true
+},
+"bergantin echague": {
+"sinFoto": true
+},
+"bergantin goleta espora": {
+"sinFoto": true
+},
+"canonera america": {
+"sinFoto": true
+},
+"corbeta agreable": {
+"sinFoto": true
+},
+"corbeta belfast": {
+"sinFoto": true
+},
+"fragata cefiro": {
+"sinFoto": true
+},
+"fragata la argentina": {
+"sinFoto": true
+},
+"fragata trinidad": {
+"sinFoto": true
+},
+"goleta manuelita": {
+"sinFoto": true
+},
+"goleta santa cruz": {
+"sinFoto": true
+},
+"sumaca itati": {
+"sinFoto": true
+},
+"sumaca santisima trinidad": {
+"sinFoto": true
 }
 }
