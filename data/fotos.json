@@ -6592,5 +6592,88 @@
 },
 "sumaca santisima trinidad": {
 "sinFoto": true
+},
+"amalia": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Amalia-Portada_de_la_novela.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Amalia-Portada_de_la_novela.jpg",
+"autor": "Héctor Guido Calvo",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Amalia, novela de José Mármol"
+},
+"caminito": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Caminito_%28tango%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Caminito_(tango).jpg",
+"autor": "JohnMizuki",
+"licencia": "CC0",
+"titulo": "Caminito"
+},
+"del tango": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/An%C3%ADbal_Troilo%2C_Francisco_Canaro%2C_Jos%C3%A9_Razzano%2C_Enrique_Santos_Disc%C3%A9polo_y_Osvaldo_Fresedo_1944.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Aníbal_Troilo,_Francisco_Canaro,_José_Razzano,_Enrique_Santos_Discépolo_y_Osvaldo_Fresedo_1944.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Figuras del tango, 1944"
+},
+"el trovador": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pulper%C3%ADa_de_campa%C3%B1a_-_Buenos_Aires%2C_seg%C3%BAn_Palli%C3%A8re.tif?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Pulpería_de_campaña_-_Buenos_Aires,_según_Pallière.tif",
+"autor": "Juan León Pallière",
+"licencia": "Public domain",
+"titulo": "Pulpería de campaña, según Pallière"
+},
+"facundo": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Facundo.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Facundo.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Facundo, de Domingo F. Sarmiento"
+},
+"los recuerdos": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Recuerdos_de_provincia.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Recuerdos_de_provincia.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Recuerdos de provincia"
+},
+"paseo del cine": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nobleza_gaucha.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Nobleza_gaucha.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Nobleza gaucha (1915)"
+},
+"patoruzu": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Rep%C3%BAblica_de_los_Ni%C3%B1os_22_Patoruz%C3%BA_%28cropped%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:La_República_de_los_Niños_22_Patoruzú_(cropped).jpg",
+"autor": "Roberto Fiadone",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Patoruzú"
+},
+"adan buenosayres": {
+"sinFoto": true
+},
+"ariel": {
+"sinFoto": true
+},
+"clemente": {
+"sinFoto": true
+},
+"el misionero": {
+"sinFoto": true
+},
+"el profeta de la pampa": {
+"sinFoto": true
+},
+"paseo de la historieta": {
+"sinFoto": true
+},
+"sur": {
+"sinFoto": true
+},
+"tabare": {
+"sinFoto": true
+},
+"tric y trake": {
+"sinFoto": true
 }
 }
