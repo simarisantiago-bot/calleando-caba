@@ -343,11 +343,11 @@
 "titulo": "José Félix Bogado"
 },
 "bolivia": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/LagunaChiarKhota2013.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:LagunaChiarKhota2013.jpg",
-"autor": "Albert Backer",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Bolivia"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Bolivia.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bolivia.svg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Bandera de Bolivia"
 },
 "bialet masse": {
 "sinFoto": true
@@ -985,11 +985,11 @@
 "titulo": "Espadaña"
 },
 "espana": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Spain_-_Location_Map_%282013%29_-_ESP_-_UNOCHA.svg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Spain_-_Location_Map_%282013%29_-_ESP_-_UNOCHA.svg",
-"autor": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-"licencia": "CC BY 3.0",
-"titulo": "España"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Kingdom_of_Spain.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Kingdom_of_Spain.svg",
+"autor": "Antonio Valdés y Fernández Bazán",
+"licencia": "Public domain",
+"titulo": "Bandera de España"
 },
 "eslovaquia": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/000_Sllovakia_harta.PNG?width=480",
@@ -2213,11 +2213,11 @@
 "titulo": "José Evaristo Uriburu"
 },
 "portugal": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carte_du_Portugal.png?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Carte_du_Portugal.png",
-"autor": "CIA",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Portugal_%28official%29.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Portugal_(official).svg",
+"autor": "Columbano Bordalo Pinheiro / Vítor Luís Rodrigues",
 "licencia": "Public domain",
-"titulo": "Portugal"
+"titulo": "Bandera de Portugal"
 },
 "posta": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Posta_de_Yatasto_-_Provincia_de_Salta.jpg/500px-Posta_de_Yatasto_-_Provincia_de_Salta.jpg",
@@ -2660,11 +2660,11 @@
 "titulo": "Traful"
 },
 "uruguay": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Uruguay_-_Location_Map_%282013%29_-_URY_-_UNOCHA.svg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Uruguay_-_Location_Map_%282013%29_-_URY_-_UNOCHA.svg",
-"autor": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-"licencia": "CC BY 3.0",
-"titulo": "Uruguay"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Represa_Salto_Grande_-_satellite_image.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Represa_Salto_Grande_-_satellite_image.JPG",
+"autor": "NASA astronauts",
+"licencia": "Public domain",
+"titulo": "Río Uruguay, represa de Salto Grande"
 },
 "trujillo": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Trujillo_Peru_Collage.png?width=480",
@@ -2754,11 +2754,11 @@
 "titulo": "Ventura de la Vega"
 },
 "venezuela": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Embalse_la_Vueltosa_2022.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Embalse_la_Vueltosa_2022.jpg",
-"autor": "Davevzla",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Venezuela"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Venezuela.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela.svg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Bandera de Venezuela"
 },
 "vera": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Juantorresdeverayaragon.jpg?width=480",
