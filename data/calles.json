@@ -31328,5 +31328,15 @@
     "tipo": "calle",
     "descripcion": "15 de noviembre de 1889: fecha en que fue proclamada la República del Brasil, constituyéndose un gobierno provisorio presidido por el mariscal Deodoro da Fonseca, acompañado por Quintino Bocayuva, Floriano Peixoto y Ruy Barbosa.",
     "letra": "V"
+  },
+  {
+    "nombre_original": "SERRANO",
+    "nombre_busqueda": "Serrano",
+    "clave": "serrano",
+    "id": "serrano|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "José Mariano Serrano (1788-1851), jurisconsulto; diputado por Chuquisaca en la Asamblea de 1813 y por Charcas en el Congreso de Tucumán.",
+    "letra": "S"
   }
 ]
