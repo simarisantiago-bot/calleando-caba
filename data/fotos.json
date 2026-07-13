@@ -6766,5 +6766,39 @@
 },
 "jarilla": {
 "sinFoto": true
+},
+"la calandria": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mimus_saturninus_-Piraju%2C_Brasil-8.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Mimus_saturninus_-Piraju,_Brasil-8.jpg",
+"autor": "Dario Sanches",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Calandria (Mimus saturninus)"
+},
+"la kantuta": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Flor_Cantuta.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:La_Flor_Cantuta.jpg",
+"autor": "Edgar Amador Espinoza M.",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Kantuta (Cantua buxifolia)"
+},
+"la madreselva": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jel%C3%A4ngerjelieber%2C_Gei%C3%9Fblatt%2C_Lonicera_caprifolium_IMG_5355.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Jelängerjelieber,_Geißblatt,_Lonicera_caprifolium_IMG_5355.JPG",
+"autor": "Hedwig Storch",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Madreselva (Lonicera)"
+},
+"la selva": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosquenublado_yungas_sanandres_salta.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Bosquenublado_yungas_sanandres_salta.jpg",
+"autor": "Yungueña",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Selva de las Yungas"
+},
+"la garza": {
+"sinFoto": true
+},
+"la huerta": {
+"sinFoto": true
 }
 }
