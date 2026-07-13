@@ -584,11 +584,11 @@
 "titulo": "Chilca"
 },
 "checoslovaquia": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Czechoslovakia1920-38.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Czechoslovakia1920-38.jpg",
-"autor": "Mariusz Pazdziora",
-"licencia": "CC BY 3.0",
-"titulo": "Checoslovaquia"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Czech_Republic.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic.svg",
+"autor": "Jaroslav Kursa",
+"licencia": "Public domain",
+"titulo": "Bandera de la República Checa"
 },
 "charlone": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Juan_Bautista_Charlone.JPG?width=480",
@@ -3575,11 +3575,11 @@
 "titulo": "Bartolomé Montalvo"
 },
 "finlandia": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/JeanSibelius_circa1898-1900.jpg/500px-JeanSibelius_circa1898-1900.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Finlandia",
-"autor": "Photographerː Daniel Nyblin",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Finland.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland.svg",
+"autor": "Unknown",
 "licencia": "Public domain",
-"titulo": "Finlandia"
+"titulo": "Bandera de Finlandia"
 },
 "filiberto": {
 "sinFoto": true
@@ -7102,5 +7102,26 @@
 },
 "doctor jose modesto giuffra": {
 "sinFoto": true
+},
+"holanda": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Netherlands.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg",
+"autor": "Zscout370",
+"licencia": "Public domain",
+"titulo": "Bandera de los Países Bajos"
+},
+"yugoslavia": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Yugoslavia_%281918%E2%80%931941%29.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Yugoslavia_(1918–1941).svg",
+"autor": "Fibonacci",
+"licencia": "Public domain",
+"titulo": "Bandera de Yugoslavia (1918-1941)"
+},
+"dinamarca": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Denmark.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg",
+"autor": "Madden and others",
+"licencia": "Public domain",
+"titulo": "Bandera de Dinamarca"
 }
 }

@@ -31358,5 +31358,15 @@
     "tipo": "plaza",
     "descripcion": "España: país europeo. Capital: Madrid.",
     "letra": "E"
+  },
+  {
+    "nombre_original": "ISRAEL, ESTADO DE",
+    "nombre_busqueda": "Estado de Israel",
+    "clave": "estado de israel",
+    "id": "estado de israel|plaza",
+    "categoria": "LUGAR",
+    "tipo": "plaza",
+    "descripcion": "Israel: país asiático. Capital: Jerusalén.",
+    "letra": "I"
   }
 ]
