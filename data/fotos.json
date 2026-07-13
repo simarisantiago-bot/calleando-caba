@@ -6732,5 +6732,19 @@
 },
 "de los viveros": {
 "sinFoto": true
+},
+"el pampero|calle": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dust_Plume_over_the_Bahia_Blanca_-_NASA_Earth_Observatory.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Dust_Plume_over_the_Bahia_Blanca_-_NASA_Earth_Observatory.jpg",
+"autor": "NASA's Earth Observatory",
+"licencia": "CC BY 2.0",
+"titulo": "Pampero"
+},
+"el pampero|cantero central": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pampero.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Pampero.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Globo aerostático Pampero"
 }
 }

@@ -1476,7 +1476,10 @@
 
         // 1) Foto precomputada (data/fotos.json — recuperadas vía Wikidata/Commons
         //    o curadas a mano). Tiene prioridad sobre la búsqueda en vivo.
-        let data = fotosManual[entrada.clave] || null;
+        //    Se busca primero por id completo (clave|tipo), para permitir fotos
+        //    distintas cuando dos odónimos distintos comparten la misma clave
+        //    (ej. "El Pampero" calle = viento, cantero = globo aerostático).
+        let data = fotosManual[entrada.id] || fotosManual[entrada.clave] || null;
 
         // 1b) Marca "sinFoto": el odónimo no tiene retrato adecuado y la búsqueda
         //     en vivo traía una imagen incorrecta -> forzamos el ícono de categoría.
