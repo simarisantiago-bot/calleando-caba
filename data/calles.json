@@ -31348,5 +31348,15 @@
     "tipo": "plaza",
     "descripcion": "José María Velasco Ibarra (1893-1979), abogado y político ecuatoriano; ejerció la presidencia de Ecuador en cinco ocasiones.",
     "letra": "V"
+  },
+  {
+    "nombre_original": "ESPAÑA",
+    "nombre_busqueda": "España",
+    "clave": "espana",
+    "id": "espana|plaza",
+    "categoria": "LUGAR",
+    "tipo": "plaza",
+    "descripcion": "España: país europeo. Capital: Madrid.",
+    "letra": "E"
   }
 ]
