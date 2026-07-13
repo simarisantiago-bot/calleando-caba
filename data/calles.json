@@ -6240,16 +6240,6 @@
     "letra": "C"
   },
   {
-    "nombre_original": "GRANDA, CHABUCA",
-    "nombre_busqueda": "Chabuca Granda",
-    "clave": "chabuca granda",
-    "id": "chabuca granda|paseo",
-    "categoria": "PERSONA",
-    "tipo": "paseo",
-    "descripcion": "Isabel Granda y Larco (1920-1983), poetisa y cantante peruana; autora de La flor de canela y Misa criolla.",
-    "letra": "G"
-  },
-  {
     "nombre_original": "CHACABUCO",
     "nombre_busqueda": "Chacabuco",
     "clave": "chacabuco",
@@ -27386,16 +27376,6 @@
     "id": "saavedra|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Cornelio de Saavedra (1759-1829), militar; presidente de la Primera Junta de Gobierno de 1810.",
-    "letra": "S"
-  },
-  {
-    "nombre_original": "SAAVEDRA",
-    "nombre_busqueda": "Saavedra",
-    "clave": "saavedra",
-    "id": "saavedra|puente",
-    "categoria": "PERSONA",
-    "tipo": "puente",
     "descripcion": "Cornelio de Saavedra (1759-1829), militar; presidente de la Primera Junta de Gobierno de 1810.",
     "letra": "S"
   },
