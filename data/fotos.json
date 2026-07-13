@@ -6807,5 +6807,54 @@
 "autor": "Dendroica cerulea",
 "licencia": "CC BY 2.0",
 "titulo": "Cachila / ratona (Troglodytes aedon)"
+},
+"lapacho": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabebuia_avellanedae.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Tabebuia_avellanedae.jpg",
+"autor": "Ilosuna",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Lapacho (Handroanthus)"
+},
+"las acacias": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Acacia_dealbata.jpg",
+"autor": "",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Acacia"
+},
+"las tunas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cactus_%28Opuntia_ficus-indica%29%2C_Acatl%C3%A1n%2C_Hidalgo%2C_M%C3%A9xico%2C_2013-10-11%2C_DD_01.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cactus_(Opuntia_ficus-indica),_Acatlán,_Hidalgo,_México,_2013-10-11,_DD_01.JPG",
+"autor": "Diego Delso",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Tuna (Opuntia ficus-indica)"
+},
+"los cedros": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cedrus_atlantica2.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cedrus_atlantica2.jpg",
+"autor": "",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Cedro (Cedrus)"
+},
+"los eucaliptos": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eucalipto_%28Eucalyptus_sp.%29_na_zona_rural_de_Bag%C3%A9.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Eucalipto_(Eucalyptus_sp.)_na_zona_rural_de_Bagé.jpg",
+"autor": "Gabriel Collares",
+"licencia": "CC BY 4.0",
+"titulo": "Eucalipto (Eucalyptus)"
+},
+"los olmos": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mature_Ulmus_rubra_in_graveyard.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Mature_Ulmus_rubra_in_graveyard.jpg",
+"autor": "",
+"licencia": "Attribution",
+"titulo": "Olmo (Ulmus)"
+},
+"los tilos": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tilia_insularis_JPG1FeFl.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Tilia_insularis_JPG1FeFl.jpg",
+"autor": "Jean-Pol Grandmont",
+"licencia": "CC BY 3.0",
+"titulo": "Tilo (Tilia)"
 }
 }
