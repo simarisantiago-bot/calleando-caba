@@ -23630,10 +23630,10 @@
     "letra": "P"
   },
   {
-    "nombre_original": "PALESTINA",
-    "nombre_busqueda": "Palestina",
-    "clave": "palestina",
-    "id": "palestina|calle",
+    "nombre_original": "ESTADO DE PALESTINA",
+    "nombre_busqueda": "Estado de Palestina",
+    "clave": "estado de palestina",
+    "id": "estado de palestina|calle",
     "categoria": "LUGAR",
     "tipo": "calle",
     "descripcion": "Palestina: país de Asia, en el extremo Oriental del Mediterráneo.",
@@ -31368,5 +31368,25 @@
     "tipo": "plaza",
     "descripcion": "Israel: país asiático. Capital: Jerusalén.",
     "letra": "I"
+  },
+  {
+    "nombre_original": "SAAVEDRA",
+    "nombre_busqueda": "Saavedra",
+    "clave": "saavedra",
+    "id": "saavedra|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Cornelio de Saavedra (1759-1829), militar; presidente de la Primera Junta de Gobierno de 1810.",
+    "letra": "S"
+  },
+  {
+    "nombre_original": "REPÚBLICA",
+    "nombre_busqueda": "República",
+    "clave": "republica",
+    "id": "republica|plaza",
+    "categoria": "CONCEPTO",
+    "tipo": "plaza",
+    "descripcion": "República: forma de gobierno representativo en la que el poder reside en el pueblo, personificado éste en un presidente no hereditario. Se refiere a la forma de gobierno de nuestro país.",
+    "letra": "R"
   }
 ]

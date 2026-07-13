@@ -654,11 +654,11 @@
 "titulo": "Ciervo de las Pampas"
 },
 "china": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Night_Skyline_from_Hongludi_20240113.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Taipei_Night_Skyline_from_Hongludi_20240113.jpg",
-"autor": "xiangyang17",
-"licencia": "CC BY-SA 2.0",
-"titulo": "China"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_People%27s_Republic_of_China.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People's_Republic_of_China.svg",
+"autor": "Zeng Liansong",
+"licencia": "Public domain",
+"titulo": "Bandera de la República Popular China"
 },
 "cina cina": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ParkinsoniaAculeata.jpg?width=480",
@@ -7123,5 +7123,12 @@
 "autor": "Madden and others",
 "licencia": "Public domain",
 "titulo": "Bandera de Dinamarca"
+},
+"rio de janeiro": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Christ_the_Redeemer_-_Cristo_Redentor.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_-_Cristo_Redentor.jpg",
+"autor": "Arne Müseler",
+"licencia": "CC BY-SA 3.0 de",
+"titulo": "Cristo Redentor, Río de Janeiro"
 }
 }
