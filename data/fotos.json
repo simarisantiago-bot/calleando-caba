@@ -6746,5 +6746,25 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Globo aerostático Pampero"
+},
+"guayaba": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ARS_HPSI41.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:ARS_HPSI41.jpg",
+"autor": "US Pacific Basin Agricultural Research Center",
+"licencia": "Public domain",
+"titulo": "Guayaba (Psidium guajava)"
+},
+"guayaibi": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Guajuvira_%28nome_do_tupi%2C_de_%C3%A9timo_indeterminado%29%2C_Cordia_americana%2C_em_Bag%C3%A9%2C_RS%2C_Brasil.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Guajuvira_(nome_do_tupi,_de_étimo_indeterminado),_Cordia_americana,_em_Bagé,_RS,_Brasil.jpg",
+"autor": "O Tupinólogo",
+"licencia": "CC BY 4.0",
+"titulo": "Guayaibí (Patagonula americana)"
+},
+"guabira": {
+"sinFoto": true
+},
+"jarilla": {
+"sinFoto": true
 }
 }
