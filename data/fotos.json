@@ -626,11 +626,11 @@
 "titulo": "Chiriguanos"
 },
 "chile": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Macizo_Paine_al_Amanecer_Torres_del_Paine.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Macizo_Paine_al_Amanecer_Torres_del_Paine.jpg",
-"autor": "Natalia Reyes Escobar",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Chile"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Chile.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Bandera de Chile"
 },
 "chivilcoy": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_25_de_Mayo_Chivilcoy_Argentina.JPG?width=480",
@@ -2157,7 +2157,11 @@
 "titulo": "Peiping"
 },
 "piedras": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Batalla_de_Las_Piedras_%2817381935558%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Batalla_de_Las_Piedras_(17381935558).jpg",
+"autor": "Bicentenario Uruguay",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Batalla de Las Piedras (1811)"
 },
 "plaza del angel gris": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_del_%C3%81ngel_Gris%2C_Buenos_Aires.jpg?width=480",
@@ -4245,11 +4249,11 @@
 "titulo": "Plácido Domingo"
 },
 "plus ultra": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Espa%C3%B1a_%28variant%29.svg/500px-Escudo_de_Espa%C3%B1a_%28variant%29.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/Plus_ultra",
-"autor": "",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/PlusUtraPalos.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:PlusUtraPalos.jpg",
+"autor": "Unknown author",
 "licencia": "Public domain",
-"titulo": "Plus ultra"
+"titulo": "Monumento al Plus Ultra, Palos de la Frontera"
 },
 "prefectura naval argentina": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Logo_de_la_Prefectura_Naval_Argentina.svg/500px-Logo_de_la_Prefectura_Naval_Argentina.svg.png",
@@ -7081,5 +7085,22 @@
 "autor": "Unknown author",
 "licencia": "CC BY-SA 3.0",
 "titulo": "José María Velasco Ibarra"
+},
+"palos": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Palos.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Palos.jpg",
+"autor": "MiguelAngel fotografo",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Palos de la Frontera"
+},
+"pinzon": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HermanosPinzon.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:HermanosPinzon.jpg",
+"autor": "Miguel Ángel \"fotógrafo\"",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Monumento a los Hermanos Pinzón"
+},
+"doctor jose modesto giuffra": {
+"sinFoto": true
 }
 }
