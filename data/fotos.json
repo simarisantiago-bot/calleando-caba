@@ -6800,5 +6800,12 @@
 },
 "la huerta": {
 "sinFoto": true
+},
+"la cachila": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Troglodytes_aedon%2C_Rutgers_1_%28cropped%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Troglodytes_aedon,_Rutgers_1_(cropped).jpg",
+"autor": "Dendroica cerulea",
+"licencia": "CC BY 2.0",
+"titulo": "Cachila / ratona (Troglodytes aedon)"
 }
 }
