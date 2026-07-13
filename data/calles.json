@@ -23210,16 +23210,6 @@
     "letra": "O"
   },
   {
-    "nombre_original": "ORQUÍDEAS",
-    "nombre_busqueda": "Orquídeas",
-    "clave": "orquideas",
-    "id": "orquideas|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Orquídeas: plantas monocotiledóneas, distinguidas por la complejidad de sus flores y por sus interacciones ecológicas con los agentes polinizadores y con los hongos; con flor abundante, destacando por su uso ornamental, símbolo de elegancia y, en tiempos históricos, medicinal.",
-    "letra": "O"
-  },
-  {
     "nombre_original": "ORTEGA",
     "nombre_busqueda": "Ortega",
     "clave": "ortega",
@@ -23958,16 +23948,6 @@
     "tipo": "paseo",
     "descripcion": "Granaderos: escuadrón de Granaderos a Caballo creado por el Triunvirato por despacho del 16 de marzo de 1812 y destinado al mando del entonces teniente coronel don José de San Martín. En lo que respecta a la calle, cabe señalar que si bien con el nombre de Granaderos de Fernando VII existió una fuerza militar que se creó durante la Segunda Invasión Inglesa, la nomenclatura de esta arteria recuerda al regimiento sanmartiniano, ya que así lo establece el informe de la Comisión Especial que redacta la Ordenanza del 27-11-1893, cuando dice: “al proyectar los nombres hemos tenido en vista armonizarlos en lo posible, entre sí y con los nombres antiguos”. Es necesario aclarar por ello, que el nombre anterior de esta calle era “San Martín”, lo que aclara el sentido de la actual denominación.",
     "letra": "G"
-  },
-  {
-    "nombre_original": "OMBÚES, PASEO DE LOS",
-    "nombre_busqueda": "Paseo de los Ombúes",
-    "clave": "paseo de los ombues",
-    "id": "paseo de los ombues|paseo",
-    "categoria": "NATURALEZA",
-    "tipo": "paseo",
-    "descripcion": "Ombú: arbusto de América meridional de la familia de las Fitolacáceas.",
-    "letra": "O"
   },
   {
     "nombre_original": "ALFONSÍN, PASEO DEL BAJO RAÚL",
@@ -24830,16 +24810,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "JACARANDÁ, PLAZA DEL",
-    "nombre_busqueda": "Plaza del Jacarandá",
-    "clave": "plaza del jacaranda",
-    "id": "plaza del jacaranda|plaza",
-    "categoria": "NATURALEZA",
-    "tipo": "plaza",
-    "descripcion": "Jacarandá: árbol de la familia de las bignoniáceas que crece en el Chaco y Formosa y cuyos ejemplares adornan muchas calles y plazas de la ciudad de Buenos Aires.",
-    "letra": "J"
-  },
-  {
     "nombre_original": "PLUMERILLO",
     "nombre_busqueda": "Plumerillo",
     "clave": "plumerillo",
@@ -24937,16 +24907,6 @@
     "categoria": "LUGAR",
     "tipo": "calle",
     "descripcion": "Polonia: país europeo. Capital: Varsovia.",
-    "letra": "P"
-  },
-  {
-    "nombre_original": "PONTEDERIA",
-    "nombre_busqueda": "Pontederia",
-    "clave": "pontederia",
-    "id": "pontederia|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Pontederia: género de plantas acuáticas perennes, nativas de América (desde Canadá hasta Argentina), caracterizadas por sus hojas en forma de corazón y espigas de flores violetas o azuladas.",
     "letra": "P"
   },
   {
