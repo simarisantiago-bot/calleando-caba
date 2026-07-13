@@ -1339,7 +1339,7 @@
 
         return `
             ${media}
-            <div class="popup-title" style="color: ${color};">${escapeHtml(entrada.nombre_busqueda)}</div>
+            <div class="popup-title">${escapeHtml(entrada.nombre_busqueda)}</div>
             ${subtitulo ? `<div class="popup-sub">${escapeHtml(subtitulo)}</div>` : ""}
             ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
