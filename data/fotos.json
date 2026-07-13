@@ -6870,5 +6870,40 @@
 "autor": "",
 "licencia": "Public domain",
 "titulo": "Paico (Dysphania ambrosioides)"
+},
+"quebracho": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Schinopsis_balansae.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Schinopsis_balansae.jpg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Quebracho colorado (Schinopsis balansae)"
+},
+"tajy": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ip%C3%AA_Amarelo%2C_Blumenau_SC%2C_Brazil.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Ipê_Amarelo,_Blumenau_SC,_Brazil.jpg",
+"autor": "Diegocadorin",
+"licencia": "CC BY 3.0",
+"titulo": "Tajy (Handroanthus albus)"
+},
+"totora": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Scirpus_californicus_flowers_2005-03-24.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Scirpus_californicus_flowers_2005-03-24.jpg",
+"autor": "Curtis Clark",
+"licencia": "CC BY-SA 2.5",
+"titulo": "Totora (Schoenoplectus californicus)"
+},
+"vinal": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Prosopis_caldenia.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Prosopis_caldenia.jpg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Vinal (Prosopis)"
+},
+"yacare": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Caiman_on_a_log.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Caiman_on_a_log.JPG",
+"autor": "Juan Carlos Dominguez M",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Yacaré (Caiman)"
 }
 }
