@@ -4110,10 +4110,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "BOCA",
-    "nombre_busqueda": "Boca",
-    "clave": "boca",
-    "id": "boca|barrio",
+    "nombre_original": "LA BOCA",
+    "nombre_busqueda": "La Boca",
+    "clave": "la boca",
+    "id": "la boca|barrio",
     "categoria": "LUGAR",
     "tipo": "barrio",
     "descripcion": "Boca del Riachuelo: denominación usual proveniente de la boca mediante la cual desembocan en el Río de la Plata las aguas del Riachuelo, y con la cual se conoce a esta zona desde los orígenes de la ciudad.",

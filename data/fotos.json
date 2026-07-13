@@ -325,13 +325,6 @@
 "licencia": "Public domain",
 "titulo": "Manuel Blanco Encalada"
 },
-"boca": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Desembocadura_del_Ebro.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Desembocadura_del_Ebro.jpg",
-"autor": "AerisPixel",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Boca"
-},
 "bertres": {
 "sinFoto": true
 },
@@ -7069,6 +7062,17 @@
 "sinFoto": true
 },
 "villa riachuelo": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ACUMAR-WMAR_Riachuelo_19-04-22_%28135%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:ACUMAR-WMAR_Riachuelo_19-04-22_(135).jpg",
+"autor": "Mauricio V. Genta",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Río Matanza-Riachuelo"
+},
+"la boca": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Buenos_Aires-La_Boca-P2070003.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Buenos_Aires-La_Boca-P2070003.JPG",
+"autor": "Marianocecowski",
+"licencia": "CC BY-SA 3.0",
+"titulo": "La Boca"
 }
 }
