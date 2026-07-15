@@ -31428,5 +31428,15 @@
     "tipo": "plazoleta",
     "descripcion": "Ricardo Balbín (1904-1981), político; diputado nacional de 1946 a 1949; candidato presidencial en 1952, 1958, 1973; presidente de la Unión Cívica Radical.",
     "letra": "B"
+  },
+  {
+    "nombre_original": "VERA PEÑALOZA, ROSARIO",
+    "nombre_busqueda": "Rosario Vera Peñaloza",
+    "clave": "rosario vera penaloza",
+    "id": "rosario vera penaloza|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Rosario Vera Peñaloza (1873-1950), educadora y escritora; directora de la Escuela Normal Provincial Alberdi, de Córdoba; de la Escuela Normal de Profesores N° 1 de Buenos Aires; fundadora y directora de la Escuela Argentina Modelo, junto con Carlos María Biedma; autora de La enseñanza práctica de la geometría y La casa histórica de Tucumán.",
+    "letra": "V"
   }
 ]
