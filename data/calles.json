@@ -31408,5 +31408,15 @@
     "tipo": "plaza",
     "descripcion": "María Ana Mogas Fontcuberta (1827-1886), religiosa; fundadora de las Franciscanas Misioneras de la Madre del Divino Pastor; se la venera como beata por la Iglesia católica.",
     "letra": "M"
+  },
+  {
+    "nombre_original": "MORA, LOLA",
+    "nombre_busqueda": "Lola Mora",
+    "clave": "lola mora",
+    "id": "lola mora|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Lola Mora: seudónimo de Dolores Mora de la Vega (1866-1936), escultora; autora de la Fuente de las Nereidas, los bajorrelieves de la Casa de Tucumán\ny del monumento a Nicolás Avellaneda en la ciudad del mismo nombre.",
+    "letra": "M"
   }
 ]
