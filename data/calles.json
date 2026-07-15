@@ -31388,5 +31388,25 @@
     "tipo": "plaza",
     "descripcion": "República: forma de gobierno representativo en la que el poder reside en el pueblo, personificado éste en un presidente no hereditario. Se refiere a la forma de gobierno de nuestro país.",
     "letra": "R"
+  },
+  {
+    "nombre_original": "REAL, VILLA",
+    "nombre_busqueda": "Villa Real",
+    "clave": "villa real",
+    "id": "villa real|plaza",
+    "categoria": "LUGAR",
+    "tipo": "plaza",
+    "descripcion": "Villa Real: esta denominación es impuesta por el ferrocarril Buenos Aires al Pacífico (luego San Martín), por Decreto del 18 de marzo de 1909, a la estación ubicada en Irigoyen y Tinogasta, demolida en 1995. Sobre el motivo por el cual se elige el nombre de Real, la Dirección General de Vías de Comunicación del Ministerio de Obras Públicas señala que es “el de una conocida quinta existente en sus cercanías”. Se trata de “la casa del Virrey”, como se denominaba a la propiedad de Juan Pedro de Córdova donde se albergó el virrey Sobremonte al producirse la Invasión Inglesa de 1806, antes de dirigirse hacia Córdoba. La casa es la misma que poseyera anteriormente don Pedro Fernández de Castro, cuyo nombre se perpetúa en el vecino barrio de Monte Castro. En la edición anterior de este libro mencionamos una nueva hipótesis relacionada con la fábrica de cigarrillos Amministrazione Autónoma del Monopolio di Tabacchi que debe ser descartada por anacrónica.",
+    "letra": "R"
+  },
+  {
+    "nombre_original": "MOGAS, MADRE MARÍA ANA",
+    "nombre_busqueda": "Madre María Ana Mogas",
+    "clave": "madre maria ana mogas",
+    "id": "madre maria ana mogas|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "María Ana Mogas Fontcuberta (1827-1886), religiosa; fundadora de las Franciscanas Misioneras de la Madre del Divino Pastor; se la venera como beata por la Iglesia católica.",
+    "letra": "M"
   }
 ]
