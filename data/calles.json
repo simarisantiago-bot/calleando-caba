@@ -5463,9 +5463,9 @@
     "nombre_original": "DI SARLI, CARLOS",
     "nombre_busqueda": "Carlos Di Sarli",
     "clave": "carlos di sarli",
-    "id": "carlos di sarli|plazoleta",
+    "id": "carlos di sarli|vereda",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "vereda",
     "descripcion": "Cayetano Di Sarli (1903-1960), pianista; director y compositor de Milonguero viejo, Bahía Blanca y Nido gaucho.",
     "letra": "D"
   },
@@ -31448,5 +31448,15 @@
     "tipo": "parque",
     "descripcion": "Juan Bautista Alberdi (1810-1884), jurisconsulto y escritor; autor de Bases y puntos de partida para la organización política de la República Argentina.",
     "letra": "A"
+  },
+  {
+    "nombre_original": "GARCÍA, CHARLY",
+    "nombre_busqueda": "Charly García",
+    "clave": "charly garcia",
+    "id": "charly garcia|esquina",
+    "categoria": "PERSONA",
+    "tipo": "esquina",
+    "descripcion": "Carlos Alberto García Moreno (1951- act.), conocido por su nombre artístico Charly García, músico, cantautor, multinstrumentista, compositor y productor discográfico argentino; considerado una de las figuras más importantes de la música popular argentina, latinoamericana y del rock en español.",
+    "letra": "G"
   }
 ]
