@@ -134,11 +134,7 @@
 "titulo": "Andorra"
 },
 "andres bianchi": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Andr%C3%A9s_Bianchi_1990.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Andr%C3%A9s_Bianchi_1990.jpg",
-"autor": "Banco Central de Chile",
-"licencia": "CC0",
-"titulo": "Andrés Bianchi"
+"sinFoto": true
 },
 "andonaegui": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Andonaegui.jpg?width=480",
