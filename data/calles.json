@@ -31438,5 +31438,15 @@
     "tipo": "calle",
     "descripcion": "Rosario Vera Peñaloza (1873-1950), educadora y escritora; directora de la Escuela Normal Provincial Alberdi, de Córdoba; de la Escuela Normal de Profesores N° 1 de Buenos Aires; fundadora y directora de la Escuela Argentina Modelo, junto con Carlos María Biedma; autora de La enseñanza práctica de la geometría y La casa histórica de Tucumán.",
     "letra": "V"
+  },
+  {
+    "nombre_original": "ALBERDI",
+    "nombre_busqueda": "Alberdi",
+    "clave": "alberdi",
+    "id": "alberdi|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Juan Bautista Alberdi (1810-1884), jurisconsulto y escritor; autor de Bases y puntos de partida para la organización política de la República Argentina.",
+    "letra": "A"
   }
 ]
