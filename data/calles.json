@@ -31448,5 +31448,15 @@
     "tipo": "esquina",
     "descripcion": "Carlos Alberto García Moreno (1951- act.), conocido por su nombre artístico Charly García, músico, cantautor, multinstrumentista, compositor y productor discográfico argentino; considerado una de las figuras más importantes de la música popular argentina, latinoamericana y del rock en español.",
     "letra": "G"
+  },
+  {
+    "nombre_original": "MATADEROS, DE LOS",
+    "nombre_busqueda": "De los Mataderos",
+    "clave": "de los mataderos",
+    "id": "de los mataderos|parque",
+    "categoria": "OTROS",
+    "tipo": "parque",
+    "descripcion": "Mataderos: el barrio comienza a denominarse así desde 1889 cuando el 14 de abril se coloca la piedra fundamental de los nuevos mataderos que se inauguran en 1901. La plaza perpetúa también este nombre tradicional.",
+    "letra": "M"
   }
 ]
