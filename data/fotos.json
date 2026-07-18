@@ -7158,5 +7158,26 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Celedonio Flores"
+},
+"ciro el grande": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyrus_II_%28The_Great%29_%28cropped%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cyrus_II_(The_Great)_(cropped).jpg",
+"autor": "Surenae",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Ciro el Grande"
+},
+"ciudad de guadix": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_-_Guadix_-_Spain_-_20110808.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_-_Guadix_-_Spain_-_20110808.jpg",
+"autor": "Paul Taylor",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Guadix, España"
+},
+"comandante andres guacurari artigas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ANDRESITO_2.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:ANDRESITO_2.jpg",
+"autor": "Lucas Braulio Areco",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Andresito Guacurarí"
 }
 }
