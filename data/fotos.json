@@ -2896,11 +2896,11 @@
 "titulo": "Veinte de Junio"
 },
 "28 de junio 1645": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/FACHADA_ASAMBLEA_NACIONAL._QUITO%2C_20_DE_FEBRERO_2020._01.jpg/500px-FACHADA_ASAMBLEA_NACIONAL._QUITO%2C_20_DE_FEBRERO_2020._01.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Quito",
-"autor": "Asamblea Nacional del Ecuador",
-"licencia": "CC BY-SA 2.0",
-"titulo": "Quito"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chacarita_ca_1910_%28AGN%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Chacarita_ca_1910_(AGN).jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Chacarita, circa 1910"
 },
 "3 de diciembre de 2009": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/500px-Flag_of_Colombia.svg.png",
@@ -6903,7 +6903,11 @@
 "sinFoto": true
 },
 "aeronautica argentina": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plazoleta_Aeron%C3%A1utica_Argentina.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Plazoleta_Aeronáutica_Argentina.jpg",
+"autor": "Mava888",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Plazoleta Aeronáutica Argentina"
 },
 "casa cuna": {
 "sinFoto": true
@@ -7133,5 +7137,12 @@
 "autor": "Franciscanas Misioneras de la Madre del Divino Pastor",
 "licencia": "CC BY 3.0",
 "titulo": "María Ana Mogas Fontcuberta"
+},
+"alberto lagos": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alberto_Lagos.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Alberto_Lagos.jpg",
+"autor": "Ruwette 2",
+"licencia": "Public domain",
+"titulo": "Alberto Lagos"
 }
 }
