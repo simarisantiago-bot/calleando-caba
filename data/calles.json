@@ -8810,20 +8810,20 @@
     "letra": "M"
   },
   {
-    "nombre_original": "PAKISTÁN, DE",
-    "nombre_busqueda": "De Pakistán",
-    "clave": "de pakistan",
-    "id": "de pakistan|plaza",
+    "nombre_original": "PAKISTÁN, REPÚBLICA DE",
+    "nombre_busqueda": "República de Pakistán",
+    "clave": "republica de pakistan",
+    "id": "republica de pakistan|plaza",
     "categoria": "LUGAR",
     "tipo": "plaza",
     "descripcion": "Pakistán: estado del Asia. Capital: Islamabad.",
     "letra": "P"
   },
   {
-    "nombre_original": "SAN BENITO, DE",
-    "nombre_busqueda": "De San Benito",
-    "clave": "de san benito",
-    "id": "de san benito|parque",
+    "nombre_original": "SAN BENITO",
+    "nombre_busqueda": "San Benito",
+    "clave": "san benito",
+    "id": "san benito|parque",
     "categoria": "RELIGIÓN",
     "tipo": "parque",
     "descripcion": "San Benito de Palermo: nombre tradicional con que se conocía al barrio de Palermo y que se origina en la existencia de un oratorio en el que se veneraba la imagen de San Benito.",

@@ -6189,13 +6189,6 @@
 "licencia": "Public domain",
 "titulo": "Jesús de la Divina Misericordia"
 },
-"de san benito": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Benito_III.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:San_Benito_III.jpg",
-"autor": "Rjcastillo",
-"licencia": "CC BY-SA 3.0",
-"titulo": "San Benito de Palermo"
-},
 "del carmen": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Virgen_del_Carmen_-_Parroquia_de_San_Jose_-_Madrid_01.jpg?width=480",
 "pageUrl": "https://commons.wikimedia.org/wiki/File:Virgen_del_Carmen_-_Parroquia_de_San_Jose_-_Madrid_01.jpg",
@@ -7232,5 +7225,12 @@
 "autor": "Juan Vicente Ribera",
 "licencia": "Public domain",
 "titulo": "Asunción de la Virgen"
+},
+"san benito": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Benito_III.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:San_Benito_III.jpg",
+"autor": "Rjcastillo",
+"licencia": "CC BY-SA 3.0",
+"titulo": "San Benito de Palermo"
 }
 }
