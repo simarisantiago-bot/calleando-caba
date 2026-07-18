@@ -532,7 +532,7 @@
 },
 "cesar tiempo": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A9sar_Tiempo.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:C%C3%A9sar_Tiempo.jpg",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:César_Tiempo.jpg",
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "César Tiempo"
@@ -7151,5 +7151,12 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Antonio Maceo"
+},
+"celedonio esteban flores": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/CeledonioFlores.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:CeledonioFlores.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Celedonio Flores"
 }
 }
