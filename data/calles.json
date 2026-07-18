@@ -8310,10 +8310,10 @@
     "letra": "A"
   },
   {
-    "nombre_original": "ASUNCIÓN, DE LA",
-    "nombre_busqueda": "De la Asunción",
-    "clave": "de la asuncion",
-    "id": "de la asuncion|plaza",
+    "nombre_original": "ASUNCIÓN, NUESTRA SEÑORA DE LA",
+    "nombre_busqueda": "Nuestra Señora de la Asunción",
+    "clave": "nuestra senora de la asuncion",
+    "id": "nuestra senora de la asuncion|plaza",
     "categoria": "RELIGIÓN",
     "tipo": "plaza",
     "descripcion": "Asunción de la Virgen: solemnidad de la Iglesia católica que conmemora la elevación de la Santísima Virgen a los cielos. Este misterio se celebra el 15 de agosto por disposición del emperador Mauricio (539-602).",
@@ -8350,10 +8350,10 @@
     "letra": "A"
   },
   {
-    "nombre_original": "CONSTITUCIÓN, DE LA",
-    "nombre_busqueda": "De la Constitución",
-    "clave": "de la constitucion",
-    "id": "de la constitucion|plaza",
+    "nombre_original": "CONSTITUCIÓN",
+    "nombre_busqueda": "Constitución",
+    "clave": "constitucion",
+    "id": "constitucion|plaza",
     "categoria": "CONCEPTO",
     "tipo": "plaza",
     "descripcion": "Constitución: si bien por la fecha de aparición de este nombre en lo que\nhace a la plaza y al barrio, es presumible que el mismo rindiera homenaje a la\nConstitución del segregado Estado de Buenos Aires, sancionada en abril de\n1854; en la actualidad esta nomenclatura recuerda a la Carta Fundamental\nque rige a la República, aprobada por el Congreso Constituyente de Santa Fe\nel 1° de mayo de 1853 y promulgada el 25 del mismo mes.",

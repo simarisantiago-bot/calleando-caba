@@ -716,11 +716,11 @@
 "titulo": "De la Cárcova"
 },
 "de la bandera": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_des_Nations_unies%2C_%C3%A0_Gen%C3%A8ve_%28cropped%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Palais_des_Nations_unies%2C_%C3%A0_Gen%C3%A8ve_%28cropped%29.jpg",
-"autor": "Groov3",
-"licencia": "CC0",
-"titulo": "Bandera"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Argentina.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg",
+"autor": "Manuel Belgrano",
+"licencia": "Public domain",
+"titulo": "Bandera de Argentina"
 },
 "de la tecnica": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/OLIN_MOSS%2C_INSTRUMENT_TECHNICIAN_ON_AIR_SANITATION_CALIBRATING_HYDROCARBON_ANALYZERS._SMOG_-_NARA_-_542765.tif?width=480",
@@ -7214,5 +7214,19 @@
 "autor": "Sandro Botticelli",
 "licencia": "Public domain",
 "titulo": "Dante Alighieri"
+},
+"de cataluna": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Catalonia.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Catalonia.svg",
+"autor": "Motoroil",
+"licencia": "Public domain",
+"titulo": "Bandera de Cataluña"
+},
+"nuestra senora de la asuncion": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruiz_de_la_iglesia-asuncion.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Ruiz_de_la_iglesia-asuncion.jpg",
+"autor": "Juan Vicente Ribera",
+"licencia": "Public domain",
+"titulo": "Asunción de la Virgen"
 }
 }
