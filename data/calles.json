@@ -8360,10 +8360,10 @@
     "letra": "C"
   },
   {
-    "nombre_original": "DEFENSA, DE LA",
-    "nombre_busqueda": "De la Defensa",
-    "clave": "de la defensa",
-    "id": "de la defensa|plaza",
+    "nombre_original": "DEFENSA",
+    "nombre_busqueda": "Defensa",
+    "clave": "defensa",
+    "id": "defensa|plaza",
     "categoria": "ACCIÓN MILITAR",
     "tipo": "plaza",
     "descripcion": "Defensa: en recuerdo de la heroica Defensa de la ciudad de Buenos Aires en julio de 1807 contra la segunda invasión inglesa.",
@@ -8450,10 +8450,10 @@
     "letra": "N"
   },
   {
-    "nombre_original": "REPÚBLlCA, DE LA",
-    "nombre_busqueda": "De la Repúbllca",
-    "clave": "de la republlca",
-    "id": "de la republlca|plaza",
+    "nombre_original": "REPÚBLICA, DE LA",
+    "nombre_busqueda": "De la República",
+    "clave": "de la republica",
+    "id": "de la republica|plaza",
     "categoria": "CONCEPTO",
     "tipo": "plaza",
     "descripcion": "República: en conmemoración de la unidad de la República consagrada con la federalización de Buenos Aires el 21 de septiembre de 1880.",
