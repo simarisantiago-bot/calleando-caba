@@ -2492,7 +2492,7 @@
 "pageUrl": "https://commons.wikimedia.org/wiki/File:Salvadorbenedit.jpg",
 "autor": "Hugo Tornese",
 "licencia": "CC BY-SA 4.0",
-"titulo": "Salvador Benedit Eyherabide"
+"titulo": "Salvador Benedit"
 },
 "san antonio de areco": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Ruiz_de_Arellano%2C_San_Antonio_de_Areco%2C_Buenos_Aires.jpg?width=480",
@@ -2516,11 +2516,11 @@
 "titulo": "Cristóbal de Licia"
 },
 "san francisco javier": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Franciscus_de_Xabier.jpg/500px-Franciscus_de_Xabier.jpg",
-"pageUrl": "https://es.wikipedia.org/wiki/Francisco_Javier",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Franciscus_de_Xabier.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Franciscus_de_Xabier.jpg",
 "autor": "",
 "licencia": "Public domain",
-"titulo": "Francisco Javier"
+"titulo": "San Francisco Javier"
 },
 "san isidro": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Vernet_Quinta_La_Porte%C3%B1a_San_Isidro.JPG?width=480",
@@ -2598,9 +2598,9 @@
 "san vicente de paul": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Vincent_de_Paul.jpg?width=480",
 "pageUrl": "https://commons.wikimedia.org/wiki/File:Saint_Vincent_de_Paul.jpg",
-"autor": "Oxxo (photo)",
+"autor": "Oxxo (foto)",
 "licencia": "CC BY-SA 3.0",
-"titulo": "San Vicente de Paul"
+"titulo": "San Vicente de Paúl"
 },
 "sanchez de bustamante": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Teodoro_S%C3%A1nchez_de_Bustamante.jpg?width=480",
@@ -5327,11 +5327,11 @@
 "sinFoto": true
 },
 "teniente general emilio mitre": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Emilio_Mitre_Mart%C3%ADnez_1.jpg",
-"pageUrl": "https://es.wikipedia.org/wiki/Emilio_Mitre_(militar)",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Emilio_Mitre_Mart%C3%ADnez_1.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Emilio_Mitre_Martínez_1.jpg",
 "autor": "GGGASS",
 "licencia": "CC BY-SA 4.0",
-"titulo": "Emilio Mitre (militar)"
+"titulo": "Emilio Mitre"
 },
 "toll": {
 "sinFoto": true
@@ -7547,5 +7547,26 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "María Esther de Miguel"
+},
+"virginia bolten": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Virginia_Bolten.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Virginia_Bolten.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Virginia Bolten"
+},
+"teniente general eduardo racedo": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduardo_Racedo_1.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Eduardo_Racedo_1.jpg",
+"autor": "Historia Militar Arg",
+"licencia": "CC0",
+"titulo": "Eduardo Racedo"
+},
+"scholem aleijem": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SholemAleichem.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:SholemAleichem.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Sholem Aleijem"
 }
 }

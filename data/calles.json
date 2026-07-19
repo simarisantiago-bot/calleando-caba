@@ -31468,5 +31468,15 @@
     "tipo": "plaza",
     "descripcion": "Leonel Edmundo Rivero (1911-1986), cantor, guitarrista y compositor argentino de tango.",
     "letra": "R"
+  },
+  {
+    "nombre_original": "SARMIENTO",
+    "nombre_busqueda": "Sarmiento",
+    "clave": "sarmiento",
+    "id": "sarmiento|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Domingo Faustino Sarmiento (1811-1888), político y escritor; fundador de El Zonda; presidente de la República de 1868 a 1874; autor de Civilización y barbarie, Vida de Juan Facundo Quiroga y Recuerdos de provincia.",
+    "letra": "S"
   }
 ]
