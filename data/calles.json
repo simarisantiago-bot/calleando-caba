@@ -11193,9 +11193,9 @@
     "nombre_original": "ROSEDAL, EL",
     "nombre_busqueda": "El Rosedal",
     "clave": "el rosedal",
-    "id": "el rosedal|plaza",
+    "id": "el rosedal|parque",
     "categoria": "OTROS",
-    "tipo": "plaza",
+    "tipo": "parque",
     "descripcion": "El Rosedal: nombre popular del Jardín de las Rosas en los lagos de Palermo; es diagramado por el paisajista Benito Carrasco e inaugurado el 2 de noviembre de 1914; allí se encuentran el Patio Andaluz, la Glorieta y el Puente Blanco.",
     "letra": "R"
   },
@@ -11213,9 +11213,9 @@
     "nombre_original": "EL SALVADOR",
     "nombre_busqueda": "El Salvador",
     "clave": "el salvador",
-    "id": "el salvador|plazoleta",
+    "id": "el salvador|parque",
     "categoria": "LUGAR",
-    "tipo": "plazoleta",
+    "tipo": "parque",
     "descripcion": "El Salvador: país centroamericano. Capital: San Salvador.",
     "letra": "E"
   },
