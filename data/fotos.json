@@ -5003,11 +5003,11 @@
 "sinFoto": true
 },
 "itzhak rabin": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flickr_-_Israel_Defense_Forces_-_Life_of_Lt._Gen._Yitzhak_Rabin%2C_7th_IDF_Chief_of_Staff_in_photos_%2811%29.jpg/500px-Flickr_-_Israel_Defense_Forces_-_Life_of_Lt._Gen._Yitzhak_Rabin%2C_7th_IDF_Chief_of_Staff_in_photos_%2811%29.jpg",
-"pageUrl": "https://es.wikipedia.org/wiki/Isaac_Rabin",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Israel_Defense_Forces_-_Life_of_Lt._Gen._Yitzhak_Rabin%2C_7th_IDF_Chief_of_Staff_in_photos_%2811%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_Israel_Defense_Forces_-_Life_of_Lt._Gen._Yitzhak_Rabin,_7th_IDF_Chief_of_Staff_in_photos_(11).jpg",
 "autor": "Yaakov Saar",
 "licencia": "CC BY-SA 3.0",
-"titulo": "Isaac Rabin"
+"titulo": "Yitzhak Rabin"
 },
 "j f bateman": {
 "sinFoto": true
@@ -7425,5 +7425,40 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Ignacio Corsini"
+},
+"ildefonso felix cavagna martinez": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jura_Ildefonso_Cavagna_Mart%C3%ADnez.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Jura_Ildefonso_Cavagna_Martínez.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Ildefonso Félix Cavagna Martínez"
+},
+"infante don enrique el navegante": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry_the_Navigator1.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Henry_the_Navigator1.jpg",
+"autor": "Nuno Gonçalves",
+"licencia": "Public domain",
+"titulo": "Infante Don Enrique el Navegante"
+},
+"ingeniero jose estevez": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_Estevez_Goldar.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Jose_Estevez_Goldar.jpg",
+"autor": "Felipegonzalezvergara",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Ingeniero José Estévez"
+},
+"ingeniero otto krause": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Otto_Krause.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Otto_Krause.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Ingeniero Otto Krause"
+},
+"intendente joaquin s de anchorena": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Joaquin_de_Anchorena_por_Cao.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Joaquin_de_Anchorena_por_Cao.jpg",
+"autor": "José María Cao Luaces",
+"licencia": "Public domain",
+"titulo": "Joaquín Samuel de Anchorena"
 }
 }
