@@ -13833,9 +13833,9 @@
     "nombre_original": "GENDARMERÍA NACIONAL",
     "nombre_busqueda": "Gendarmería Nacional",
     "clave": "gendarmeria nacional",
-    "id": "gendarmeria nacional|plazoleta",
+    "id": "gendarmeria nacional|boulevard",
     "categoria": "CUERPO MILITAR",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "Gendarmería Nacional: cuerpo policiaco militarizado creado por Ley N° 12.367 promulgada el 28 de julio de 1938, cuyas misiones fundamentales son el velar por el mantenimiento y el resguardo de las fronteras y el mantenimiento del orden y de la seguridad pública.",
     "letra": "G"
   },
@@ -13983,9 +13983,9 @@
     "nombre_original": "RAMÍREZ, GENERAL FRANCISCO",
     "nombre_busqueda": "General Francisco Ramírez",
     "clave": "general francisco ramirez",
-    "id": "general francisco ramirez|plazoleta",
+    "id": "general francisco ramirez|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "José Francisco Ramírez (1786-1821), militar y político; vencedor en Cepeda; jefe supremo de la República de Entre Ríos desde 1820.",
     "letra": "R"
   },
@@ -31438,5 +31438,15 @@
     "tipo": "parque",
     "descripcion": "Mataderos: el barrio comienza a denominarse así desde 1889 cuando el 14 de abril se coloca la piedra fundamental de los nuevos mataderos que se inauguran en 1901. La plaza perpetúa también este nombre tradicional.",
     "letra": "M"
+  },
+  {
+    "nombre_original": "LAVALLE",
+    "nombre_busqueda": "Lavalle",
+    "clave": "lavalle",
+    "id": "lavalle|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "Juan Galo de Lavalle (1797-1841), militar; combate en Chacabuco, Cancha Rayada, Maipú, Pisco, Nazca, Cangallo, Jauja, Pasco, Riobamba y durante la guerra contra el Brasil; gobernador de Buenos Aires de 1828 a 1829; comanda la expedición que pretende derrocar a Rosas siendo vencido en Quebracho Herrado y Famaillá.",
+    "letra": "L"
   }
 ]

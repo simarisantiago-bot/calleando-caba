@@ -4935,11 +4935,11 @@
 "titulo": "Enrique Martínez (militar)"
 },
 "general enrique mosconi": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Retrato_de_Enrique_Mosconi_%28cropped%29.jpg/500px-Retrato_de_Enrique_Mosconi_%28cropped%29.jpg",
-"pageUrl": "https://es.wikipedia.org/wiki/Enrique_Mosconi",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Retrato_de_Enrique_Mosconi_%28cropped%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Enrique_Mosconi_(cropped).jpg",
 "autor": "Unknown author",
 "licencia": "Public domain",
-"titulo": "Enrique Mosconi"
+"titulo": "General Enrique Mosconi"
 },
 "general enrique spika": {
 "sinFoto": true
@@ -7362,5 +7362,40 @@
 "autor": "C.W. Bardeen, publisher",
 "licencia": "Public domain",
 "titulo": "Friedrich Fröbel"
+},
+"fuerza aerea argentina": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentine_airforce_wings_emblem_%28color%29.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Argentine_airforce_wings_emblem_(color).svg",
+"autor": "Unknown author",
+"licencia": "CC BY 4.0",
+"titulo": "Emblema de la Fuerza Aérea Argentina"
+},
+"gendarmeria nacional": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Insignia_de_la_Gendarmer%C3%ADa_de_Argentina.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Insignia_de_la_Gendarmería_de_Argentina.svg",
+"autor": "Unknown author",
+"licencia": "CC BY 4.0",
+"titulo": "Insignia de Gendarmería Nacional Argentina"
+},
+"general antonio jose de sucre": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_Tovar_y_Tovar_12.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Martin_Tovar_y_Tovar_12.JPG",
+"autor": "Martín Tovar y Tovar",
+"licencia": "Public domain",
+"titulo": "Antonio José de Sucre"
+},
+"general jose antonio paez": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_Antonio_P%C3%A1ez_restored.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Jose_Antonio_Páez_restored.jpg",
+"autor": "Unidentified photographer / Wilfredor",
+"licencia": "Public domain",
+"titulo": "José Antonio Páez"
+},
+"general rafael de riego y nunez": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rafael_Riego.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Rafael_Riego.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Rafael del Riego"
 }
 }
