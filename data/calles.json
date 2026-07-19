@@ -17821,7 +17821,7 @@
   },
   {
     "nombre_original": "JUAN XXIII",
-    "nombre_busqueda": "Juan Xxiii",
+    "nombre_busqueda": "Juan XXIII",
     "clave": "juan xxiii",
     "id": "juan xxiii|plazoleta",
     "categoria": "PERSONA",
@@ -31438,5 +31438,15 @@
     "tipo": "plaza",
     "descripcion": "Juan Galo de Lavalle (1797-1841), militar; combate en Chacabuco, Cancha Rayada, Maipú, Pisco, Nazca, Cangallo, Jauja, Pasco, Riobamba y durante la guerra contra el Brasil; gobernador de Buenos Aires de 1828 a 1829; comanda la expedición que pretende derrocar a Rosas siendo vencido en Quebracho Herrado y Famaillá.",
     "letra": "L"
+  },
+  {
+    "nombre_original": "HERNÁNDEZ, JOSÉ (2)",
+    "nombre_busqueda": "José Hernández 2",
+    "clave": "jose hernandez 2",
+    "id": "jose hernandez 2|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "José Hernández (1834-1886), poeta; autor de El gaucho Martín Fierro.",
+    "letra": "H"
   }
 ]

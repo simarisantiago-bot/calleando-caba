@@ -3850,11 +3850,7 @@
 "sinFoto": true
 },
 "joaquin sanchez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Joaquin_2022_%28cropped%29.jpg/500px-Joaquin_2022_%28cropped%29.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_(footballer,_born_1981)",
-"autor": "Кирилл Венедиктов",
-"licencia": "CC BY-SA 3.0",
-"titulo": "Joaquín (footballer, born 1981)"
+"sinFoto": true
 },
 "jose barros pazos": {
 "sinFoto": true
@@ -3880,7 +3876,11 @@
 "titulo": "José Enrique Rodó"
 },
 "jose eusebio aguero": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/AEXCNBA_1934-1984_-_Colegio_Nacional_de_Buenos_Aires%2C_Sala_de_las_Banderas_y_retrato_del_rector_Ag%C3%BCero.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:AEXCNBA_1934-1984_-_Colegio_Nacional_de_Buenos_Aires,_Sala_de_las_Banderas_y_retrato_del_rector_Agüero.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "José Eusebio Agüero"
 },
 "jose de la quintana": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Jos%C3%A9_Luis_Quintana%2C_candidato_a_la_Alcald%C3%ADa_%285669812415%29_%28cropped%29.jpg/500px-Jos%C3%A9_Luis_Quintana%2C_candidato_a_la_Alcald%C3%ADa_%285669812415%29_%28cropped%29.jpg",
@@ -3890,11 +3890,11 @@
 "titulo": "José Luis Quintana (politician)"
 },
 "jose hernandez": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Jose_Hernandez_v2.jpg/500px-Jose_Hernandez_v2.jpg",
-"pageUrl": "https://en.wikipedia.org/wiki/Jos%C3%A9_M._Hern%C3%A1ndez",
-"autor": "NASA",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Hern%C3%A1ndez_restored.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:José_Hernández_restored.jpg",
+"autor": "Unknown",
 "licencia": "Public domain",
-"titulo": "José M. Hernández"
+"titulo": "José Hernández"
 },
 "jose maria rosa": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Pepe_Rosa.jpg",
@@ -7460,5 +7460,43 @@
 "autor": "José María Cao Luaces",
 "licencia": "Public domain",
 "titulo": "Joaquín Samuel de Anchorena"
+},
+"jose maria sagasta isla": {
+"sinFoto": true
+},
+"john malcolm": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Malcom_1769_1833_by_Samuel_Lane.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:John_Malcom_1769_1833_by_Samuel_Lane.jpg",
+"autor": "Samuel Lane",
+"licencia": "Public domain",
+"titulo": "John Malcolm"
+},
+"jose maria gatica": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/JM_Gatica.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:JM_Gatica.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "José María Gatica"
+},
+"jose razzano": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_razzano_compositor.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Jose_razzano_compositor.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "José Razzano"
+},
+"joseph kessel": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Kessel.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Kessel.jpg",
+"autor": "Hans Pinn",
+"licencia": "Public domain",
+"titulo": "Joseph Kessel"
+},
+"jose hernandez 2": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Hern%C3%A1ndez_restored.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:José_Hernández_restored.jpg",
+"autor": "Unknown",
+"licencia": "Public domain",
+"titulo": "José Hernández"
 }
 }
