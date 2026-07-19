@@ -7239,5 +7239,40 @@
 "autor": "DagosNavy",
 "licencia": "Public domain",
 "titulo": "Juan Carlos Castagnino"
+},
+"doctor carlos alberto pueyrredon": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_Alberto_Pueyrred%C3%B3n.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Alberto_Pueyrredón.jpg",
+"autor": "Theodiscus2",
+"licencia": "CC0",
+"titulo": "Carlos Alberto Pueyrredón"
+},
+"doctor carlos saavedra lamas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_Saavedra_Lamas.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Saavedra_Lamas.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Carlos Saavedra Lamas"
+},
+"doctor jose luis romero": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9LuisRomero.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:JoséLuisRomero.png",
+"autor": "jlromero.com.ar",
+"licencia": "CC BY-SA 4.0",
+"titulo": "José Luis Romero"
+},
+"doctor norberto pinero": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Norberto_Pi%C3%B1ero.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Norberto_Piñero.JPG",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Norberto Piñero"
+},
+"doctor onesimo leguizamon": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/On%C3%A9simo_Leguizam%C3%B3n.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Onésimo_Leguizamón.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Onésimo Leguizamón"
 }
 }
