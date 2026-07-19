@@ -12333,9 +12333,9 @@
     "nombre_original": "CARRIEGO, EVARISTO",
     "nombre_busqueda": "Evaristo Carriego",
     "clave": "evaristo carriego",
-    "id": "evaristo carriego|plazoleta",
+    "id": "evaristo carriego|boulevard",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "Evaristo Carriego (1883-1912), poeta; autor de Misas herejes, Íntimas y Los que pasan.",
     "letra": "C"
   },
@@ -31328,16 +31328,6 @@
     "tipo": "plaza",
     "descripcion": "José María Velasco Ibarra (1893-1979), abogado y político ecuatoriano; ejerció la presidencia de Ecuador en cinco ocasiones.",
     "letra": "V"
-  },
-  {
-    "nombre_original": "ESPAÑA",
-    "nombre_busqueda": "España",
-    "clave": "espana",
-    "id": "espana|plaza",
-    "categoria": "LUGAR",
-    "tipo": "plaza",
-    "descripcion": "España: país europeo. Capital: Madrid.",
-    "letra": "E"
   },
   {
     "nombre_original": "ISRAEL, ESTADO DE",
