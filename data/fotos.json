@@ -1217,24 +1217,20 @@
 },
 "hermana alice domon y hermana leonie duquet": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%A9onie_Duquet_y_Alice_Domon.png?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:L%C3%A9onie_Duquet_y_Alice_Domon.png",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Léonie_Duquet_y_Alice_Domon.png",
 "autor": "Unknown author",
 "licencia": "Public domain",
-"titulo": "Léonie Reneé Duquet"
+"titulo": "Alice Domon y Léonie Duquet"
 },
 "hector gagliardi": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A9ctor_Gagliardi.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:H%C3%A9ctor_Gagliardi.jpg",
-"autor": "AnonymousUnknown author",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Héctor_Gagliardi.jpg",
+"autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Héctor Gagliardi"
 },
 "herrera": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicol%C3%A1s_de_Herrera.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_de_Herrera.jpg",
-"autor": "Unknown author",
-"licencia": "Public domain",
-"titulo": "Nicolás Herrera"
+"sinFoto": true
 },
 "hernandarias": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Busto_de_Hernandarias_-_Villa_Hernandarias%2C_Entre_R%C3%ADos.jpg?width=480",
@@ -6989,7 +6985,11 @@
 "sinFoto": true
 },
 "glorias del automovilismo argentino": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Juan_Manuel_Fangio_%28circa_1952%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_(circa_1952).jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Juan Manuel Fangio"
 },
 "grito de asencio": {
 "sinFoto": true
@@ -6998,7 +6998,11 @@
 "sinFoto": true
 },
 "homenaje a las victimas del holocausto shoa": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-N0827-318%2C_KZ_Auschwitz%2C_Ankunft_ungarischer_Juden.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-N0827-318,_KZ_Auschwitz,_Ankunft_ungarischer_Juden.jpg",
+"autor": "Ernst Hofmann o Bernhard Walter",
+"licencia": "CC BY-SA 3.0 de",
+"titulo": "Llegada de judíos húngaros a Auschwitz"
 },
 "la galera": {
 "sinFoto": true
@@ -7397,5 +7401,29 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Rafael del Riego"
+},
+"basualdo": {
+"sinFoto": true
+},
+"guillermo divito": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Guillermo_Divito.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Guillermo_Divito.JPG",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Guillermo Divito"
+},
+"horacio rega molina": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Horacio_Rega_Molina.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Horacio_Rega_Molina.png",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Horacio Rega Molina"
+},
+"ignacio corsini": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ignacio_Corsini.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Ignacio_Corsini.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Ignacio Corsini"
 }
 }
