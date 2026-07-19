@@ -850,9 +850,9 @@
 "eduardo olivera": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/MonumentoEduardoOlivera.jpg?width=480",
 "pageUrl": "https://commons.wikimedia.org/wiki/File:MonumentoEduardoOlivera.jpg",
-"autor": "Émile Peynot, photograph by Ezarate",
+"autor": "Émile Peynot (foto: Ezarate)",
 "licencia": "CC BY-SA 4.0",
-"titulo": "Eduardo Olivera"
+"titulo": "Monumento a Eduardo Olivera"
 },
 "ejercito de los andes": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ejercito_de_los_Andes.jpg?width=480",
@@ -7295,5 +7295,12 @@
 "autor": "Own work",
 "licencia": "Public domain",
 "titulo": "Don Orione (Luis Orione)"
+},
+"edgardo donato": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edgardo_Donato.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Edgardo_Donato.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Edgardo Donato"
 }
 }
