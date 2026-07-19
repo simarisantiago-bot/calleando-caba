@@ -20733,9 +20733,9 @@
     "nombre_original": "MIGUEL, MARÍA ESTHER DE",
     "nombre_busqueda": "María Esther de Miguel",
     "clave": "maria esther de miguel",
-    "id": "maria esther de miguel|plazoleta",
+    "id": "maria esther de miguel|boulevard",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "María Esther de Miguel (1925-2003), escritora argentina.",
     "letra": "M"
   },
@@ -29010,13 +29010,13 @@
     "letra": "A"
   },
   {
-    "nombre_original": "LONARDI, TENIENTE GENERAL EDUARDO",
-    "nombre_busqueda": "Teniente General Eduardo Lonardi",
-    "clave": "teniente general eduardo lonardi",
-    "id": "teniente general eduardo lonardi|plaza",
-    "categoria": "PERSONA",
+    "nombre_original": "NUNCA MÁS",
+    "nombre_busqueda": "Nunca Más",
+    "clave": "nunca mas",
+    "id": "nunca mas|plaza",
+    "categoria": "CONCEPTO",
     "tipo": "plaza",
-    "descripcion": "Eduardo Lonardi (1896-1956), militar; dirige la revolución del 16 de septiembre de 1955 en Córdoba; presidente provisional de la República en ese año.",
+    "descripcion": "Nunca más: expresión utilizada en Argentina para repudiar el terrorismo de Estado, ocurrido durante la última Dictadura Cívico-Militar (1976-1983).",
     "letra": "L"
   },
   {
@@ -31448,5 +31448,25 @@
     "tipo": "calle",
     "descripcion": "José Hernández (1834-1886), poeta; autor de El gaucho Martín Fierro.",
     "letra": "H"
+  },
+  {
+    "nombre_original": "MUGICA, CARLOS",
+    "nombre_busqueda": "Carlos Mugica",
+    "clave": "carlos mugica",
+    "id": "carlos mugica|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Carlos Mugica (1930-1974), sacerdote; referente del Movimiento de Sacerdotes para el Tercer Mundo; asesinado el 11 de mayo de 1974.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "RIVERO, EDMUNDO",
+    "nombre_busqueda": "Edmundo Rivero",
+    "clave": "edmundo rivero",
+    "id": "edmundo rivero|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "Leonel Edmundo Rivero (1911-1986), cantor, guitarrista y compositor argentino de tango.",
+    "letra": "R"
   }
 ]

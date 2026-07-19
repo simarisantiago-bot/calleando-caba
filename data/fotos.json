@@ -1806,7 +1806,7 @@
 },
 "miguel calo": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Miguel_Cal%C3%B3.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Miguel_Cal%C3%B3.jpg",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Miguel_Caló.jpg",
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Miguel Caló"
@@ -2049,10 +2049,10 @@
 },
 "nini marshall": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nin%C3%AD_Marshall_en_1954_%28cropped%29.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Nin%C3%AD_Marshall_en_1954_%28cropped%29.jpg",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Niní_Marshall_en_1954_(cropped).jpg",
 "autor": "Asociación Nacional de Actores",
 "licencia": "Public domain",
-"titulo": "Marina Esther Traveso"
+"titulo": "Niní Marshall"
 },
 "norberto mendez": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tucho_mendez.jpg?width=480",
@@ -7498,5 +7498,54 @@
 "autor": "Unknown",
 "licencia": "Public domain",
 "titulo": "José Hernández"
+},
+"nunca mas": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dijimos_Nunca_M%C3%A1s_-_Graffitti-_Buenos_Aires_Oct_06.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Dijimos_Nunca_Más_-_Graffitti-_Buenos_Aires_Oct_06.jpg",
+"autor": "Pepe Robles",
+"licencia": "Public domain",
+"titulo": "Nunca Más"
+},
+"teniente de navio candido de lasala": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A1ndido_de_Lasala.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Cándido_de_Lasala.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Cándido de Lasala"
+},
+"tbilisi": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_sunset-6.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi_sunset-6.jpg",
+"autor": "Vladimer Shioshvili",
+"licencia": "CC BY-SA 2.0",
+"titulo": "Tiflis (Tbilisi)"
+},
+"simon wiesenthal": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr._Simon_Wiesenthal%2C_Bestanddeelnr_932-3671.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Dr._Simon_Wiesenthal,_Bestanddeelnr_932-3671.jpg",
+"autor": "Rob Bogaerts / Anefo",
+"licencia": "CC0",
+"titulo": "Simon Wiesenthal"
+},
+"edmundo rivero": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edmundo_rivero_portrait.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Edmundo_rivero_portrait.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Edmundo Rivero"
+},
+"mariscal jose pilsudski": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%B3zef_Pi%C5%82sudski_%28-1930%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Józef_Piłsudski_(-1930).jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Józef Piłsudski"
+},
+"maria esther de miguel": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mariaestherdemiguel.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Mariaestherdemiguel.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "María Esther de Miguel"
 }
 }
