@@ -7274,5 +7274,19 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Onésimo Leguizamón"
+},
+"doctor roberto koch": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Koch_BeW.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Robert_Koch_BeW.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Robert Koch"
+},
+"doctor vicente solano lima": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Solano_Lima_%28cropped%29.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Solano_Lima_(cropped).jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Vicente Solano Lima"
 }
 }
