@@ -9750,16 +9750,6 @@
     "letra": "E"
   },
   {
-    "nombre_original": "OCAMPO, DOCTOR GABRIEL",
-    "nombre_busqueda": "Doctor Gabriel Ocampo",
-    "clave": "doctor gabriel ocampo",
-    "id": "doctor gabriel ocampo|espacio público",
-    "categoria": "PERSONA",
-    "tipo": "espacio público",
-    "descripcion": "Gabriel Ocampo (1798-1882), jurisconsulto; ministro de Gobierno de La Rioja en 1820; diputado por Colchagua y secretario del Congreso Constituyente de Chile que sanciona la Constitución de 1823; redactor del Código de Comercio de Chile en 1865.",
-    "letra": "O"
-  },
-  {
     "nombre_original": "GIACOBINI, DOCTOR GENARO",
     "nombre_busqueda": "Doctor Genaro Giacobini",
     "clave": "doctor genaro giacobini",
@@ -20913,9 +20903,9 @@
     "nombre_original": "LELLIS, MARIO JORGE DE",
     "nombre_busqueda": "Mario Jorge de Lellis",
     "clave": "mario jorge de lellis",
-    "id": "mario jorge de lellis|espacio público",
+    "id": "mario jorge de lellis|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Mario Jorge de Lellis (1922-1967), poeta; escribe varios libros de poemas; entre sus obras figuran Flores del silencio, Litoral de la angustia y Ciudad sin tregua.",
     "letra": "L"
   },
@@ -28423,9 +28413,9 @@
     "nombre_original": "SKANDERBERG “JORGE CASTRIOTA”",
     "nombre_busqueda": "Skanderberg “jorge Castriota”",
     "clave": "skanderberg jorge castriota",
-    "id": "skanderberg jorge castriota|espacio público",
+    "id": "skanderberg jorge castriota|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Gjergj Kastrioti (1405-1468) su nombre se ha castellanizado como Jorge Castriota; conocido como Skanderberg (el señor o el líder, en turco) es el héroe nacional albanés. Célebre guerrero, por su valor es conocido también como “el diablo de Valaquia”. Proclamado príncipe, enfrenta a los otomanos formando una liga de príncipes albaneses con el apoyo de Venecia, Nápoles, Hungría y el Papado.",
     "letra": "S"
   },
@@ -28823,9 +28813,9 @@
     "nombre_original": "BORES, TATO",
     "nombre_busqueda": "Tato Bores",
     "clave": "tato bores",
-    "id": "tato bores|espacio público",
+    "id": "tato bores|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Mauricio Borensztein (1927-1996); actor conocido como Tato Bores. Inicia su carrera en la radio en la década de 1940 y en el cine en 1948. En la televisión se impone como un notable monologuista. Su personaje más destacado es el que, desde 1958, realiza los domingos en Tato y sus monólogos, Tato siempre en domingo, Por siempre Tato, Dígale sí a Tato, Déle crédito a Tato, Tato versus Tato, Tato de América y Good Show, entre otros títulos, donde aparece vestido de frac, peluca, lentes y habano. Su lucidez e ironía analizando la realidad política nacional le valieron el apoyo del público y también la atención de la censura.",
     "letra": "B"
   },
