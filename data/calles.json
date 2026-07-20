@@ -523,9 +523,9 @@
     "nombre_original": "HARILAOS DE OLMOS, ADELIA MARÍA",
     "nombre_busqueda": "Adelia María Harilaos de Olmos",
     "clave": "adelia maria harilaos de olmos",
-    "id": "adelia maria harilaos de olmos|espacio verde",
+    "id": "adelia maria harilaos de olmos|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Adelia María Harilaos de Olmos (1865-1949), filántropa y benefactora de la Iglesia católica y los pobres, gracias a su devoción y la cuantiosa fortuna en tierras heredada de su esposo -el gran comerciante y terrateniente Ambrosio Olmos- y que recibió los títulos nobiliarios pontificios de condesa pontificia y marquesa pontificia.",
     "letra": "H"
   },
@@ -1040,12 +1040,12 @@
     "letra": "A"
   },
   {
-    "nombre_original": "PEÑA, ALCIRA DE AL",
-    "nombre_busqueda": "Alcira de Al Peña",
-    "clave": "alcira de al pena",
-    "id": "alcira de al pena|espacio verde",
+    "nombre_original": "PEÑA, ALCIRA DE LA",
+    "nombre_busqueda": "Alcira de la Peña",
+    "clave": "alcira de la pena",
+    "id": "alcira de la pena|boulevard",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "boulevard",
     "descripcion": "Alcira de la Peña (1911-1998), médica y dirigente política argentina.",
     "letra": "P"
   },
@@ -9910,13 +9910,13 @@
     "letra": "R"
   },
   {
-    "nombre_original": "VELAZCO IBARRA, DOCTOR JOSÉ MARÍA",
-    "nombre_busqueda": "Doctor José María Velazco Ibarra",
-    "clave": "doctor jose maria velazco ibarra",
-    "id": "doctor jose maria velazco ibarra|espacio verde",
+    "nombre_original": "VELASCO IBARRA, DOCTOR JOSÉ MARÍA",
+    "nombre_busqueda": "Doctor José María Velasco Ibarra",
+    "clave": "doctor jose maria velasco ibarra",
+    "id": "doctor jose maria velasco ibarra|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
-    "descripcion": "José María Velazco Ibarra (1893-1979), político y escritor ecuatoriano; presidente de la República del Ecuador de 1934 a 1935, de 1944 a 1947, de 1952 a 1961 y de 1968 a 1972.",
+    "tipo": "plaza",
+    "descripcion": "José María Velasco Ibarra (1893-1979), político y escritor ecuatoriano; presidente de la República del Ecuador de 1934 a 1935, de 1944 a 1947, de 1952 a 1961 y de 1968 a 1972.",
     "letra": "V"
   },
   {
@@ -13810,16 +13810,6 @@
     "letra": "G"
   },
   {
-    "nombre_original": "JUSTO, GENERAL AGUSTÍN P.",
-    "nombre_busqueda": "General Agustín P. Justo",
-    "clave": "general agustin p justo",
-    "id": "general agustin p justo|espacio verde",
-    "categoria": "PERSONA",
-    "tipo": "espacio verde",
-    "descripcion": "Agustín Pedro Justo (1876-1945), militar y político; presidente de la República de 1932 a 1938.",
-    "letra": "J"
-  },
-  {
     "nombre_original": "SUCRE, GENERAL ANTONIO JOSÉ DE",
     "nombre_busqueda": "General Antonio José de Sucre",
     "clave": "general antonio jose de sucre",
@@ -17303,9 +17293,9 @@
     "nombre_original": "MARPONS, JOSEFINA",
     "nombre_busqueda": "Josefina Marpons",
     "clave": "josefina marpons",
-    "id": "josefina marpons|espacio verde",
+    "id": "josefina marpons|boulevard",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "boulevard",
     "descripcion": "Josefina Marpons (1910-1979), escritora, periodista, política y activista argentina; dedicó buena parte de su obra al estudio del rol de la mujer en el ámbito laboral.",
     "letra": "M"
   },
