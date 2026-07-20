@@ -2404,11 +2404,11 @@
 "titulo": "Río Cuarto"
 },
 "republica oriental del uruguay": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Uruguay_-_Location_Map_%282013%29_-_URY_-_UNOCHA.svg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Uruguay_-_Location_Map_%282013%29_-_URY_-_UNOCHA.svg",
-"autor": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-"licencia": "CC BY 3.0",
-"titulo": "Uruguay"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Uruguay.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Uruguay.svg",
+"autor": "",
+"licencia": "Public domain",
+"titulo": "Bandera de Uruguay"
 },
 "rio piedras": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Universidad_de_Puerto_Rico_%28R%C3%ADo_Piedras%29.jpg?width=480",
@@ -4313,11 +4313,11 @@
 "titulo": "Dominican Republic"
 },
 "republica socialista de vietnam": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Gran_Sello_de_la_Rep%C3%BAblica_del_Per%C3%BA.svg/500px-Gran_Sello_de_la_Rep%C3%BAblica_del_Per%C3%BA.svg.png",
-"pageUrl": "https://en.wikipedia.org/wiki/List_of_ambassadors_of_Peru_to_Vietnam",
-"autor": "User:Huhsunqu",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Vietnam.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Vietnam.svg",
+"autor": "",
 "licencia": "Public domain",
-"titulo": "List of ambassadors of Peru to Vietnam"
+"titulo": "Bandera de Vietnam"
 },
 "ricardo balbin": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Ricardo_Balb%C3%ADn_-_Gente_734_AG_1979.jpg/500px-Ricardo_Balb%C3%ADn_-_Gente_734_AG_1979.jpg",
@@ -7585,5 +7585,19 @@
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Roberto Firpo"
+},
+"ricardo tanturi": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ricardo_Tanturi.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Ricardo_Tanturi.jpg",
+"autor": "Unknown author",
+"licencia": "Public domain",
+"titulo": "Ricardo Tanturi"
+},
+"republica de montenegro": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Montenegro.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Montenegro.svg",
+"autor": "B1mbo, Froztbyte, Great Brightstar",
+"licencia": "Public domain",
+"titulo": "Bandera de Montenegro"
 }
 }
