@@ -31478,5 +31478,15 @@
     "tipo": "plazoleta",
     "descripcion": "Paraguay: país sudamericano. Capital: Asunción.",
     "letra": "P"
+  },
+  {
+    "nombre_original": "OLMOS, DE LOS",
+    "nombre_busqueda": "De Los Olmos",
+    "clave": "de los olmos",
+    "id": "de los olmos|plaza",
+    "categoria": "NATURALEZA",
+    "tipo": "plaza",
+    "descripcion": "Plaza ubicada junto a la estación Belgrano R, entre las calles Echeverría y Zapiola, diseñada por el arquitecto Julio Reinoso e inaugurada en 1999. Debe su nombre a los frondosos olmos que embellecen el paisaje del predio, que anteriormente ocupó un vivero durante más de 60 años.",
+    "letra": "O"
   }
 ]
