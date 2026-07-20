@@ -1360,32 +1360,6 @@ path.leaflet-interactive:focus {
     to   { opacity: 1; }
 }
 
-/* Crédito/atribución superpuesto en la base de la imagen */
-.popup-media-credit {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 12px 8px 4px;
-    font-size: 10px;
-    line-height: 1.3;
-    color: #fff;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.popup-media-credit a {
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.popup-media-credit a:hover {
-    text-decoration: underline;
-}
-
 /* Fallback elegante cuando no hay imagen: ícono teñido con el color de la categoría */
 .popup-media.es-fallback {
     background: color-mix(in srgb, var(--cat-color, #6b7280) 10%, #eceff1);

@@ -1376,35 +1376,6 @@
         c.innerHTML = `<div class="popup-media-fallback">${iconoFallback()}</div>`;
     }
 
-    // Commons a veces devuelve el campo Artist desprolijo: con prefijo de nombre
-    // de archivo ("Foo.jpg: ..."), o con el texto repetido ("Unknown authorUnknown
-    // author"). Lo normalizamos para que el crédito se vea limpio.
-    function sinDuplicado(s) {
-        s = String(s || "").trim();
-        s = s.replace(/^[^:]{1,80}\.(jpg|jpeg|png|gif|svg|tif|tiff|webp):\s*/i, "").trim();
-        s = s.replace(/(Unknown author)\s*(?:\1\s*)+/gi, "Unknown author").trim();
-        if (/^unknown author/i.test(s) && s.length > 18) s = "Unknown author";
-        const n = s.length;
-        if (n >= 4 && n % 2 === 0 && s.slice(0, n / 2) === s.slice(n / 2)) {
-            return s.slice(0, n / 2).trim();
-        }
-        return s;
-    }
-
-    function construirCredito(data) {
-        const partes = [];
-        // El campo Artist de Commons a veces es un párrafo entero; lo acotamos.
-        if (data.autor) {
-            let autor = sinDuplicado(data.autor);
-            if (autor.length > 55) autor = autor.slice(0, 55).trimEnd() + "…";
-            partes.push(escapeHtml(autor));
-        }
-        if (data.licencia) partes.push(escapeHtml(sinDuplicado(data.licencia)));
-        const meta = partes.join(" · ");
-        const link = `<a href="${escapeHtml(data.pageUrl)}" target="_blank" rel="noopener noreferrer">Wikipedia ↗</a>`;
-        return `<div class="popup-media-credit">${meta ? meta + " · " : ""}${link}</div>`;
-    }
-
     // Overrides manuales del término de búsqueda, por id de entrada. Útil cuando
     // el odónimo es ambiguo y Wikipedia trae una imagen incorrecta. Reusa todo el
     // pipeline (incluida la atribución). Ej.: "Independencia" traía la Declaración
@@ -1514,7 +1485,6 @@
                 bg.style.backgroundImage = `url("${data.thumbUrl}")`;
                 c.appendChild(bg);
                 c.appendChild(img);
-                c.insertAdjacentHTML("beforeend", construirCredito(data));
                 c.classList.add("cargada");
             };
             img.onerror = () => mostrarFallbackMedia(mediaId, color);
