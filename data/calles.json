@@ -3750,16 +3750,6 @@
     "letra": "B"
   },
   {
-    "nombre_original": "SEMIZA, BENIAMINO",
-    "nombre_busqueda": "Beniamino Semiza",
-    "clave": "beniamino semiza",
-    "id": "beniamino semiza|pasaje peatonal",
-    "categoria": "PERSONA",
-    "tipo": "pasaje peatonal",
-    "descripcion": "Beniamino Semiza (1902-1960) militante socialista; funda junto con José F. Penelón el Partido Concentración Obrera; militante de los sindicatos de obreros municipales y metalúrgicos; concejal de la ciudad de Buenos Aires de 1938 a 1941 y director de la caja de jubilaciones de los obreros municipales de 1938 a 1943.",
-    "letra": "S"
-  },
-  {
     "nombre_original": "JUÁREZ, BENITO",
     "nombre_busqueda": "Benito Juárez",
     "clave": "benito juarez",
@@ -9733,9 +9723,9 @@
     "nombre_original": "LICEAGA, DOCTOR FÉLIX",
     "nombre_busqueda": "Doctor Félix Liceaga",
     "clave": "doctor felix liceaga",
-    "id": "doctor felix liceaga|patio de recreación",
+    "id": "doctor felix liceaga|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "patio de recreación",
+    "tipo": "plazoleta",
     "descripcion": "Félix Juan Cruz Liceaga (1887-1963), médico pediatra; preside el Consejo Escolar XI y en 1929 es designado por el presidente Yrigoyen vocal del Consejo Nacional de Educación, del cual es vicepresidente; diputado nacional desde 1946 a 1950.",
     "letra": "L"
   },
