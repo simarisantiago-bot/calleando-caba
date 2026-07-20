@@ -23590,16 +23590,6 @@
     "letra": "P"
   },
   {
-    "nombre_original": "PALERMO VIEJO",
-    "nombre_busqueda": "Palermo Viejo",
-    "clave": "palermo viejo",
-    "id": "palermo viejo|plaza",
-    "categoria": "LUGAR",
-    "tipo": "plaza",
-    "descripcion": "Palermo Viejo: nombre con que se conoce actualmente al sector del barrio de Palermo limitado por la avenida Córdoba, Godoy Cruz, Charcas y Julián Álvarez; característico por sus actividades comerciales y culturales.",
-    "letra": "P"
-  },
-  {
     "nombre_original": "ESTADO DE PALESTINA",
     "nombre_busqueda": "Estado de Palestina",
     "clave": "estado de palestina",
@@ -31448,16 +31438,6 @@
     "tipo": "calle",
     "descripcion": "José Hernández (1834-1886), poeta; autor de El gaucho Martín Fierro.",
     "letra": "H"
-  },
-  {
-    "nombre_original": "MUGICA, CARLOS",
-    "nombre_busqueda": "Carlos Mugica",
-    "clave": "carlos mugica",
-    "id": "carlos mugica|parque",
-    "categoria": "PERSONA",
-    "tipo": "parque",
-    "descripcion": "Carlos Mugica (1930-1974), sacerdote; referente del Movimiento de Sacerdotes para el Tercer Mundo; asesinado el 11 de mayo de 1974.",
-    "letra": "M"
   },
   {
     "nombre_original": "RIVERO, EDMUNDO",

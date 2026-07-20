@@ -1954,10 +1954,10 @@
 "titulo": "Mozart"
 },
 "nicolas repetto": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Repetto_en_2019.png?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Repetto_en_2019.png",
-"autor": "Todo Noticias",
-"licencia": "CC BY 3.0",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas_repetto.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Nicolas_repetto.png",
+"autor": "Revista Caras y Caretas",
+"licencia": "Public domain",
 "titulo": "Nicolás Repetto"
 },
 "nevada": {
@@ -1968,11 +1968,11 @@
 "titulo": "Nevada"
 },
 "nicaragua": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BD%D0%B0%D0%B3%D1%83%D0%B0.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BD%D0%B0%D0%B3%D1%83%D0%B0.jpg",
-"autor": "Viktor Pinchuk / Виктор Пинчук",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Nicaragua"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Nicaragua.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nicaragua.svg",
+"autor": "C records",
+"licencia": "Public domain",
+"titulo": "Bandera de Nicaragua"
 },
 "nicolas descalzi": {
 "sinFoto": true
@@ -2006,11 +2006,11 @@
 "titulo": "Nogoyá"
 },
 "nigeria": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_City_Gate_of_Abuja.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:The_City_Gate_of_Abuja.jpg",
-"autor": "Wang-gp",
-"licencia": "CC BY-SA 4.0",
-"titulo": "Nigeria"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Nigeria.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg",
+"autor": "Jon Harald Søby",
+"licencia": "Public domain",
+"titulo": "Bandera de Nigeria"
 },
 "norma fontenla": {
 "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Norma_Fontenla_%281930-1971%29.jpg?width=480",
@@ -4186,11 +4186,11 @@
 "titulo": "Óscar Pareja"
 },
 "parques nacionales argentinos": {
-"thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Palacio_Haedo_%281%29.JPG/500px-Palacio_Haedo_%281%29.JPG",
-"pageUrl": "https://en.wikipedia.org/wiki/Administraci%C3%B3n_de_Parques_Nacionales",
-"autor": "Elsapucai (photo)Passeron y Brizuela (building)",
-"licencia": "Public domain",
-"titulo": "Administración de Parques Nacionales"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Llao_Llao_Peninsula.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Llao_Llao_Peninsula.jpg",
+"autor": "Fernando",
+"licencia": "CC BY-SA 4.0",
+"titulo": "Parque Nacional Nahuel Huapi"
 },
 "pavon": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Batalla_de_Pavon.jpg/500px-Batalla_de_Pavon.jpg",
@@ -7038,7 +7038,11 @@
 "sinFoto": true
 },
 "naciones unidas": {
-"sinFoto": true
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Nations.svg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Nations.svg",
+"autor": "Denelson83, Zscout370, Madden",
+"licencia": "Public domain",
+"titulo": "Bandera de las Naciones Unidas"
 },
 "organizacion estados americanos": {
 "sinFoto": true
