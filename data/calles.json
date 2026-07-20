@@ -1,15 +1,5 @@
 [
   {
-    "nombre_original": "1° DE AGOSTO. DÍA DE LA PACHAMAMA",
-    "nombre_busqueda": "1° de Agosto. Día de la Pachamama",
-    "clave": "1 de agosto dia de la pachamama",
-    "id": "1 de agosto dia de la pachamama|sendero",
-    "categoria": "FECHA",
-    "tipo": "sendero",
-    "descripcion": "1° de agosto: se celebra el Día de la Pachamama (Madre Tierra), una festividad ancestral de los pueblos andinos (quechua y aimara) en Argentina, Bolivia, Chile, Perú y Ecuador.",
-    "letra": "P"
-  },
-  {
     "nombre_original": "1° DE MAYO",
     "nombre_busqueda": "1° de Mayo",
     "clave": "1 de mayo",
@@ -2143,9 +2133,9 @@
     "nombre_original": "SAINT-EXUPÉRY, ANTOINE DE",
     "nombre_busqueda": "Antoine de Saint-exupéry",
     "clave": "antoine de saint exupery",
-    "id": "antoine de saint exupery|patio de recreación",
+    "id": "antoine de saint exupery|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "patio de recreación",
+    "tipo": "plazoleta",
     "descripcion": "Antoine Jean-Baptiste Marie Roger de Saint-Exupéry (1900-1944), escritor y aviador francés; comienza a volar en la Sociedad Aéropostale y continúa\nhaciéndolo en África y Sudamérica hasta el comienzo de la guerra. Durante la Segunda Guerra Mundial, su aeronave de reconocimiento, un Lockheed Lightning P-38 (conocido también como F-5), es derribado en el Mar Mediterráneo en lo que fue su última misión. Autor de El aviador, Tierra de hombre y El principito.",
     "letra": "S"
   },
@@ -18310,16 +18300,6 @@
     "letra": "G"
   },
   {
-    "nombre_original": "GARZA, LA",
-    "nombre_busqueda": "La Garza",
-    "clave": "la garza",
-    "id": "la garza|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Garza: nombre de varias aves ciconiformes de la familia de las Ardeidas que habitan en esteros y bañados.",
-    "letra": "G"
-  },
-  {
     "nombre_original": "GLORIA, LA",
     "nombre_busqueda": "La Gloria",
     "clave": "la gloria",
@@ -23400,12 +23380,12 @@
     "letra": "N"
   },
   {
-    "nombre_original": "MASSA, PADRE LORENZO",
-    "nombre_busqueda": "Padre Lorenzo Massa",
-    "clave": "padre lorenzo massa",
-    "id": "padre lorenzo massa|canteros centrales",
+    "nombre_original": "MASSA, PADRE LORENZO BARTOLOMÉ",
+    "nombre_busqueda": "Padre Lorenzo Bartolomé Massa",
+    "clave": "padre lorenzo bartolome massa",
+    "id": "padre lorenzo bartolome massa|calle",
     "categoria": "PERSONA",
-    "tipo": "canteros centrales",
+    "tipo": "calle",
     "descripcion": "Lorenzo Massa (1882-1949), sacerdote salesiano de vasta labor en la Patagonia, donde estudia el origen y las necesidades de los aborígenes; su dedicación a la elevación moral y física de la juventud lo lleva, desde su capilla San Antonio, a la fundación del Club San Lorenzo el 1º de abril de 1908.",
     "letra": "M"
   },
