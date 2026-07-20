@@ -10473,9 +10473,9 @@
     "nombre_original": "HARDOY, DR. EMILIO J.",
     "nombre_busqueda": "Dr. Emilio J. Hardoy",
     "clave": "dr emilio j hardoy",
-    "id": "dr emilio j hardoy|calle",
+    "id": "dr emilio j hardoy|paseo",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "paseo",
     "descripcion": "Emilio Julio Hardoy (1911-1992), abogado, político y periodista argentino; ocupó los cargos de senador provincial y diputado nacional por la provincia de Buenos Aires.",
     "letra": "H"
   },
@@ -14048,16 +14048,6 @@
     "tipo": "cantero central",
     "descripcion": "Juan José Valle (1904-1956), militar; General de División que el 9 de junio de 1956 encabezó el levantamiento militar contra el gobierno de la Revolución Libertadora, presidida por el vicepresidente provisional Isaac Rojas, siendo capturado y fusilado.",
     "letra": "V"
-  },
-  {
-    "nombre_original": "RUIZ MORENO, GENERAL JULIO",
-    "nombre_busqueda": "General Julio Ruiz Moreno",
-    "clave": "general julio ruiz moreno",
-    "id": "general julio ruiz moreno|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Julio Ruiz Moreno (1840-1914), militar; combate en la guerra contra el Paraguay; jefe de la Frontera Sur de San Luis; participa en la Revolución de 1890.",
-    "letra": "R"
   },
   {
     "nombre_original": "LAVALLE, GENERAL",
