@@ -6300,16 +6300,6 @@
     "letra": "C"
   },
   {
-    "nombre_original": "CHAÑAR",
-    "nombre_busqueda": "Chañar",
-    "clave": "chanar",
-    "id": "chanar|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Chañar: árbol nativo caducifolio de América del Sur (principalmente Argentina, Chile, Bolivia y Paraguay), famoso por su gran adaptación a climas áridos y desérticos; productor de frutos dulces y comestibles, ampliamente utilizados para elaborar arrope.",
-    "letra": "C"
-  },
-  {
     "nombre_original": "CHAPATÍN",
     "nombre_busqueda": "Chapatín",
     "clave": "chapatin",
@@ -6750,16 +6740,6 @@
     "letra": "O"
   },
   {
-    "nombre_original": "CLUBES DEL BARRIO",
-    "nombre_busqueda": "Clubes del Barrio",
-    "clave": "clubes del barrio",
-    "id": "clubes del barrio|plazoleta",
-    "categoria": "CONCEPTO",
-    "tipo": "plazoleta",
-    "descripcion": "Clubes de barrio: organizaciones civiles sin fines de lucro que funcionan como pilares comunitarios en Argentina, enfocados en el deporte, la recreación y la contención social. Son espacios de encuentro donde se fomentan valores, se imparte disciplina y se fortalece el tejido social, sirviendo como \"pulmón\" de la comunidad.",
-    "letra": "C"
-  },
-  {
     "nombre_original": "COBO",
     "nombre_busqueda": "Cobo",
     "clave": "cobo",
@@ -6810,10 +6790,10 @@
     "letra": "C"
   },
   {
-    "nombre_original": "COIHUE",
-    "nombre_busqueda": "Coihue",
-    "clave": "coihue",
-    "id": "coihue|calle",
+    "nombre_original": "COPIHUE",
+    "nombre_busqueda": "Copihue",
+    "clave": "copihue",
+    "id": "copihue|calle",
     "categoria": "NATURALEZA",
     "tipo": "calle",
     "descripcion": "Coihue: árbol nativo perenne de los bosques andino-patagónicos de Argentina y Chile, conocido como el \"gigante del bosque\" por alcanzar hasta 40-50 metros de altura y vivir más de 500 años; especie siempre verde con hojas pequeñas, corteza gris oscura y ramas aplanadas que forman copas frondosas, vital para el ecosistema.",
@@ -21390,16 +21370,6 @@
     "letra": "M"
   },
   {
-    "nombre_original": "ATENZO, MECÁNICO MILITAR LEOPOLDO",
-    "nombre_busqueda": "Mecánico Militar Leopoldo Atenzo",
-    "clave": "mecanico militar leopoldo atenzo",
-    "id": "mecanico militar leopoldo atenzo|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Leopoldo Atenzo (1896-1930), mecánico militar; falleció en un accidente de aviación durante la revolución del 6 de septiembre de 1930.",
-    "letra": "A"
-  },
-  {
     "nombre_original": "MÉDANOS",
     "nombre_busqueda": "Médanos",
     "clave": "medanos",
@@ -22768,16 +22738,6 @@
     "tipo": "plazoleta",
     "descripcion": "Norberto Doroteo Méndez (1923-1998), apodado Tucho, futbolista argentino; una de las grandes figuras del fútbol en los años 40. Con 17 tantos es junto a Zizinho el máximo goleador en la historia de la Copa América, trofeo que conquistó tres veces.",
     "letra": "M"
-  },
-  {
-    "nombre_original": "COLOMBATTO, NORMA",
-    "nombre_busqueda": "Norma Colombatto",
-    "clave": "norma colombatto",
-    "id": "norma colombatto|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Norma Colombatto (1941–2008), docente y referente social del sur de la Ciudad de Buenos Aires, cuya figura es fundamental para entender la educación en contextos de vulnerabilidad.",
-    "letra": "C"
   },
   {
     "nombre_original": "FONTENLA, NORMA",
