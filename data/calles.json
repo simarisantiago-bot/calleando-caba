@@ -31468,5 +31468,15 @@
     "tipo": "plazoleta",
     "descripcion": "Portugal: país europeo. Capital: Lisboa.",
     "letra": "P"
+  },
+  {
+    "nombre_original": "PARAGUAY, REPÚBLICA DEL",
+    "nombre_busqueda": "República del Paraguay",
+    "clave": "republica del paraguay",
+    "id": "republica del paraguay|plazoleta",
+    "categoria": "LUGAR",
+    "tipo": "plazoleta",
+    "descripcion": "Paraguay: país sudamericano. Capital: Asunción.",
+    "letra": "P"
   }
 ]
