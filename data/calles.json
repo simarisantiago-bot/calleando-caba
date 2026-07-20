@@ -24263,9 +24263,9 @@
     "nombre_original": "OBLIGADO, PEDRO MIGUEL",
     "nombre_busqueda": "Pedro Miguel Obligado",
     "clave": "pedro miguel obligado",
-    "id": "pedro miguel obligado|plazoleta",
+    "id": "pedro miguel obligado|veredón",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "veredón",
     "descripcion": "Pedro Miguel Obligado (1892-1967), jurisconsulto y escritor; autor de Gris, El ala de sombra, El hilo de oro, La tristeza de Sancho, El canto perdido, La isla de los cantos y Melancolía.",
     "letra": "O"
   },
@@ -25896,7 +25896,7 @@
     "id": "raquel forner|parque",
     "categoria": "PERSONA",
     "tipo": "parque",
-    "descripcion": "Raquel Forner (1902-1988), artista plástica; encara en su obra temas diversos, desde las series de la Guerra Civil Española y la Segunda Guerra Mundial hasta las series del Espacio, donde expresa su indagación sobre el cosmos; entre 1sus numerosas distinciones cabe destacar la medalla de oro en la Exposición Internacional de París (1937), el Primer Premio Nacional de Pintura en el XXXII salón Nacional de Bellas Artes (1942), el Premio Augusto Palanza otorgado por la Academia Nacional de Bellas Artes (1947) y el Gran Premio de Honor en el XLV Salón Nacional de Bellas Artes (1956). Casada con el escultor Alfredo Bigatti, en 1982 crea en su casa-taller de la calle Bethlem (ex Humberto I) 443, la Fundación Museo Forner-Bigatti. En ese mismo año su obra Origen de una nueva dimensión es destinada al edificio de la Organización de los Estados Americanos en la ciudad de Washington, EE.UU.",
+    "descripcion": "Raquel Forner (1902-1988), artista plástica; encara en su obra temas diversos, desde las series de la Guerra Civil Española y la Segunda Guerra Mundial hasta las series del Espacio, donde expresa su indagación sobre el cosmos; entre sus numerosas distinciones cabe destacar la medalla de oro en la Exposición Internacional de París (1937), el Primer Premio Nacional de Pintura en el XXXII salón Nacional de Bellas Artes (1942), el Premio Augusto Palanza otorgado por la Academia Nacional de Bellas Artes (1947) y el Gran Premio de Honor en el XLV Salón Nacional de Bellas Artes (1956). Casada con el escultor Alfredo Bigatti, en 1982 crea en su casa-taller de la calle Bethlem (ex Humberto I) 443, la Fundación Museo Forner-Bigatti. En ese mismo año su obra Origen de una nueva dimensión es destinada al edificio de la Organización de los Estados Americanos en la ciudad de Washington, EE.UU.",
     "letra": "F"
   },
   {
@@ -31478,5 +31478,15 @@
     "tipo": "parque",
     "descripcion": "Domingo Faustino Sarmiento (1811-1888), político y escritor; fundador de El Zonda; presidente de la República de 1868 a 1874; autor de Civilización y barbarie, Vida de Juan Facundo Quiroga y Recuerdos de provincia.",
     "letra": "S"
+  },
+  {
+    "nombre_original": "PORTUGAL",
+    "nombre_busqueda": "Portugal",
+    "clave": "portugal",
+    "id": "portugal|plazoleta",
+    "categoria": "LUGAR",
+    "tipo": "plazoleta",
+    "descripcion": "Portugal: país europeo. Capital: Lisboa.",
+    "letra": "P"
   }
 ]

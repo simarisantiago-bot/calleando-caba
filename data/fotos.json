@@ -2156,11 +2156,11 @@
 "titulo": "Batalla de Las Piedras (1811)"
 },
 "plaza del angel gris": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_del_%C3%81ngel_Gris%2C_Buenos_Aires.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:Plaza_del_%C3%81ngel_Gris%2C_Buenos_Aires.jpg",
-"autor": "Banfield",
-"licencia": "CC BY-SA 2.5 ar",
-"titulo": "Plaza del Ángel Gris"
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dolina2012.jpg?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Dolina2012.jpg",
+"autor": "Godelferrero",
+"licencia": "CC BY-SA 3.0",
+"titulo": "Alejandro Dolina"
 },
 "pichincha": {
 "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Batalladepichincha.jpg/500px-Batalladepichincha.jpg",
@@ -2352,8 +2352,8 @@
 "titulo": "Regimiento de Patricios"
 },
 "rafael hernandez": {
-"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/RafaelHD.jpg?width=480",
-"pageUrl": "https://commons.wikimedia.org/wiki/File:RafaelHD.jpg",
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rafael_Hern%C3%A1ndez.JPG?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:Rafael_Hernández.JPG",
 "autor": "Unknown author",
 "licencia": "Public domain",
 "titulo": "Rafael Hernández"
@@ -7599,5 +7599,12 @@
 "autor": "B1mbo, Froztbyte, Great Brightstar",
 "licencia": "Public domain",
 "titulo": "Bandera de Montenegro"
+},
+"policia federal argentina": {
+"thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/EscudoPFA.png?width=480",
+"pageUrl": "https://commons.wikimedia.org/wiki/File:EscudoPFA.png",
+"autor": "Unknown author",
+"licencia": "CC BY 4.0",
+"titulo": "Escudo de la Policía Federal Argentina"
 }
 }
