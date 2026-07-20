@@ -3040,16 +3040,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "ROGER, AVIADOR ENRIQUE ADRIÁN",
-    "nombre_busqueda": "Aviador Enrique Adrián Roger",
-    "clave": "aviador enrique adrian roger",
-    "id": "aviador enrique adrian roger|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Enrique Adrián Roger (1888-1960), deportista, aviador, precursor de la aviación argentina; se inició en el motociclismo y el automovilismo; fundó y dirigió la primera revista especializada llamada La Argentina Automovilística entre 1908 y 1912.",
-    "letra": "R"
-  },
-  {
     "nombre_original": "AVISO A.R.A. ALFÉREZ SOBRAL",
     "nombre_busqueda": "Aviso A.r.a. Alférez Sobral",
     "clave": "aviso a r a alferez sobral",
@@ -7900,16 +7890,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "CRISTIANÍA",
-    "nombre_busqueda": "Cristianía",
-    "clave": "cristiania",
-    "id": "cristiania|calle",
-    "categoria": "OTROS",
-    "tipo": "calle",
-    "descripcion": "¿?",
-    "letra": "C"
-  },
-  {
     "nombre_original": "HICKEN, CRISTÓBAL M.",
     "nombre_busqueda": "Cristóbal M. Hicken",
     "clave": "cristobal m hicken",
@@ -8107,16 +8087,6 @@
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Luis Jacobo Daguerre (1789-1851), pintor y físico francés; asociado con Niepce en 1829, anuncian diez años más tarde la invención del daguerrotipo.",
-    "letra": "D"
-  },
-  {
-    "nombre_original": "DAMA DE MONTE",
-    "nombre_busqueda": "Dama de Monte",
-    "clave": "dama de monte",
-    "id": "dama de monte|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Dama de Monte: planta trepadora nativa de Sudamérica, ideal para cercos, pérgolas y glorietas por su rápido crecimiento y abundante floración; caracterizada por sus flores en forma de trompeta color lila o rosado suave con venas púrpuras.",
     "letra": "D"
   },
   {
@@ -14620,16 +14590,6 @@
     "letra": "G"
   },
   {
-    "nombre_original": "GUABIRÁ",
-    "nombre_busqueda": "Guabirá",
-    "clave": "guabira",
-    "id": "guabira|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Guabirá: árbol nativo de Sudamérica conocido por su fruto comestible y alto valor medicinal; sus hojas se usan en infusiones para tratar inflamaciones y problemas respiratorios, mientras que su madera sirve como leña.",
-    "letra": "G"
-  },
-  {
     "nombre_original": "GUACAMAYO",
     "nombre_busqueda": "Guacamayo",
     "clave": "guacamayo",
@@ -14767,16 +14727,6 @@
     "categoria": "NATURALEZA",
     "tipo": "calle",
     "descripcion": "Guayaba: fruta tropical, considerada un superalimento, proveniente de un árbol nativo de América; destaca por su alto contenido en vitamina C, fibra y antioxidantes; es aromática, de sabor dulce, piel amarillenta/verde y pulpa blanca o rosada con pequeñas semillas.",
-    "letra": "G"
-  },
-  {
-    "nombre_original": "GUAYAIBÍ",
-    "nombre_busqueda": "Guayaibí",
-    "clave": "guayaibi",
-    "id": "guayaibi|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Guayaibí: árbol nativo de América del Sur, muy común en el noreste argentino (Misiones, Corrientes, Chaco, Formosa) y en el Paraguay; conocido por su madera extremadamente resistente y flexible.",
     "letra": "G"
   },
   {
@@ -20280,16 +20230,6 @@
     "letra": "E"
   },
   {
-    "nombre_original": "ESTÉVEZ, MANUEL",
-    "nombre_busqueda": "Manuel Estévez",
-    "clave": "manuel estevez",
-    "id": "manuel estevez|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Manuel Estévez (1824-1893), político de origen español; juez de Paz (1858, 1859 y 1880); presidente de la Comisión Municipal de Higiene (1867) de Barracas al Sur (hoy Avellaneda); intendente de Barracas al Sur (1889).",
-    "letra": "E"
-  },
-  {
     "nombre_original": "GÁLVEZ, MANUEL",
     "nombre_busqueda": "Manuel Gálvez",
     "clave": "manuel galvez",
@@ -20788,16 +20728,6 @@
     "tipo": "plaza",
     "descripcion": "Mariano Saavedra (1810-1883), político; miembro de la Municipalidad porteña desde su creación en 1856; diputado y miembro de la Convención en 1860; director y presidente del Banco de la Provincia de Buenos Aires; gobernador de Buenos Aires de 1862 a 1866; era hijo de don Cornelio de Saavedra.",
     "letra": "S"
-  },
-  {
-    "nombre_original": "LANGER, MARIE",
-    "nombre_busqueda": "Marie Langer",
-    "clave": "marie langer",
-    "id": "marie langer|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Marie Lisbeth Glas Hausser de Langer (1910-1987), médica psicoanalista austriaca; es una de las fundadoras de la Asociación Psicoanalítica Argentina en 1942 y de la Asociación Argentina de Psicología y Psicoterapia de Grupo en 1957, a las que preside en reiteradas ocasiones; preside también la Federación Argentina de Psiquiatras; es profesora de la Cátedra de Psicología Médica de la Facultad de Medicina; autora de Maternidad y Sexo, Fantasías eternas a la luz del psicoanálisis, Memoria, historia y diálogo psicoanalítico y Aspectos teóricos y clínicos.",
-    "letra": "L"
   },
   {
     "nombre_original": "BERNASCONI, MARIO",
