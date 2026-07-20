@@ -133,9 +133,9 @@
     "nombre_original": "18 DE DICIEMBRE DE 1872 “CREACIÓN DE LA ESTACIÓN LINIERS”",
     "nombre_busqueda": "18 de Diciembre de 1872 “creación de la Estación Liniers”",
     "clave": "18 de diciembre de 1872 creacion de la estacion liniers",
-    "id": "18 de diciembre de 1872 creacion de la estacion liniers|espacio verde",
+    "id": "18 de diciembre de 1872 creacion de la estacion liniers|plazoleta",
     "categoria": "FECHA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "18 de diciembre de 1872: fecha del acta del directorio del Ferrocarril de la provincia por el que se resuelve imponer el nombre de Liniers al apeadero que se había acordado construir y que se inaugurará finalmente en septiembre de 1876 (información proporcionada por el historiador del transporte Alberto Bernades).",
     "letra": "D"
   },
@@ -283,9 +283,9 @@
     "nombre_original": "29 DE DICIEMBRE DE 2001",
     "nombre_busqueda": "29 de Diciembre de 2001",
     "clave": "29 de diciembre de 2001",
-    "id": "29 de diciembre de 2001|espacio verde",
+    "id": "29 de diciembre de 2001|plaza",
     "categoria": "FECHA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "29 de diciembre de 2001: fecha en la que son muertos los jóvenes Adrián Matassa, Cristian Gómez y Maximiliano Tasca, en la esquina de Bahía Blanca\ny Gaona, en el barrio de Floresta, por un suboficial de la Policía Federal.",
     "letra": "V"
   },
@@ -9223,9 +9223,9 @@
     "nombre_original": "8 DE MARZO, DÍA INTERNACIONAL DE LA MUJER",
     "nombre_busqueda": "Día Internacional de la Mujer 8 de Marzo",
     "clave": "dia internacional de la mujer 8 de marzo",
-    "id": "dia internacional de la mujer 8 de marzo|espacio verde",
+    "id": "dia internacional de la mujer 8 de marzo|plazoleta",
     "categoria": "FECHA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "8 de Marzo Día Internacional de la Mujer: el Día Internacional de la Mujer es instituido, sin fecha fija, en la Conferencia Internacional de Mujeres Socialistas celebrada en Copenhague en 1910, a propuesta de la socialista alemana Clara Zetkin, quien toma como referencia para ello el antecedente del Día de la Mujer que las socialistas norteamericanas llevaban a cabo desde 1908 para reivindicar el sufragio femenino. En 1917, como reacción ante los millones de\nmuertos en la guerra, las mujeres rusas eligen el domingo 23 de febrero del calendario juliano (8 de marzo en el gregoriano) para declararse en huelga\nen demanda de “pan y paz”, tras lo que, una semana después, se produce la abdicación del zar Nicolás II, en lo que será uno de los hitos del camino que\nculminará en la Revolución Rusa, con lo que la fecha precisa del 8 de marzo adquiere una connotación destacada.",
     "letra": "O"
   },
@@ -10413,9 +10413,9 @@
     "nombre_original": "GANDULFO, DOÑA PETRONA C. DE",
     "nombre_busqueda": "Doña Petrona C. de Gandulfo",
     "clave": "dona petrona c de gandulfo",
-    "id": "dona petrona c de gandulfo|espacio verde",
+    "id": "dona petrona c de gandulfo|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Petrona Carrizo de Gandulfo (1896-1992), ecónoma; popularmente conocida como “Doña Petrona”, es la primera maestra de la gastronomía argentina; autora de El libro de Doña Petrona, que se convierte en una especie de biblia gastronómica en los países de habla castellana y de Las recetas económicas de Doña Petrona.",
     "letra": "G"
   },
@@ -12593,9 +12593,9 @@
     "nombre_original": "CHERTKOFF, FENIA",
     "nombre_busqueda": "Fenia Chertkoff",
     "clave": "fenia chertkoff",
-    "id": "fenia chertkoff|espacio verde",
+    "id": "fenia chertkoff|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Fenia Chertkoff de Repetto (1869-1928), feminista, educadora y escritora de origen ruso; impulsa el desarrollo de bibliotecas; funda el centro Socialista Femenino para la defensa de los derechos civiles y sociales de las mujeres en 1902 y crea la Asociación de Bibliotecas y recreos infantiles en 1913; esposa del dirigente socialista Nicolás Repetto.",
     "letra": "C"
   },
@@ -17438,16 +17438,6 @@
     "tipo": "calle",
     "descripcion": "Juan Bautista Prímoli (1673-1747), arquitecto y religioso jesuita; proyecta y dirige la construcción del Cabildo de Buenos Aires en 1719; con el jesuita\nAndrés Blanqui construye las iglesias de San Francisco, San Telmo, del Pilar y la Merced.",
     "letra": "P"
-  },
-  {
-    "nombre_original": "CASTAGNINO, JUAN CARLOS",
-    "nombre_busqueda": "Juan Carlos Castagnino",
-    "clave": "juan carlos castagnino",
-    "id": "juan carlos castagnino|espacio verde",
-    "categoria": "PERSONA",
-    "tipo": "espacio verde",
-    "descripcion": "Juan Carlos Castagnino (1908-1972), pintor y arquitecto; obtiene el primer Premio Nacional en 1948 por el óleo Hombre del río y el Premio de Honor del Salón Nacional de Artes Plásticas de 1956 por El Tango; ilustra la edición del Martín Fierro publicada por Eudeba en 1962; autor del mural La ofrenda de la nueva tierra de la Sociedad Hebraica Argentina y de los óleos Tierra adentro y Trabajadores de la curtiembre, entre otros.",
-    "letra": "C"
   },
   {
     "nombre_original": "COBIÁN, JUAN CARLOS",
@@ -25783,9 +25773,9 @@
     "nombre_original": "GASTIAZORO DE BRONTES, RAMONA ESTHER",
     "nombre_busqueda": "Ramona Esther Gastiazoro de Brontes",
     "clave": "ramona esther gastiazoro de brontes",
-    "id": "ramona esther gastiazoro de brontes|espacio verde",
+    "id": "ramona esther gastiazoro de brontes|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Ramona Esther Gastiazoro de Brontes (1927-1977); a raíz del secuestro de su hijo Carlos, producido el 13 de mayo de 1975, junto a otras familias de militantes desaparecidos se moviliza en la Comisión Permanente de Solidaridad con el fin de reclamar por la aparición de sus familiares. Es secuestrada en su domicilio el 9 de marzo de 1977. Está desaparecida.",
     "letra": "G"
   },
@@ -31438,5 +31428,15 @@
     "tipo": "plaza",
     "descripcion": "Plaza ubicada junto a la estación Belgrano R, entre las calles Echeverría y Zapiola, diseñada por el arquitecto Julio Reinoso e inaugurada en 1999. Debe su nombre a los frondosos olmos que embellecen el paisaje del predio, que anteriormente ocupó un vivero durante más de 60 años.",
     "letra": "O"
+  },
+  {
+    "nombre_original": "18 DE DICIEMBRE DE 2022",
+    "nombre_busqueda": "18 de Diciembre de 2022",
+    "clave": "18 de diciembre de 2022",
+    "id": "18 de diciembre de 2022|plaza",
+    "categoria": "FECHA",
+    "tipo": "plaza",
+    "descripcion": "Fecha de la victoria de la Selección Argentina de Fútbol ante Francia en la final de la Copa del Mundo Qatar 2022, consiguiendo así su tercer título del certamen.",
+    "letra": "1"
   }
 ]
