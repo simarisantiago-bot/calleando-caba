@@ -18183,9 +18183,9 @@
     "nombre_original": "JUVENILIA",
     "nombre_busqueda": "Juvenilia",
     "clave": "juvenilia",
-    "id": "juvenilia|plazoleta",
+    "id": "juvenilia|veredón",
     "categoria": "ARTE",
-    "tipo": "plazoleta",
+    "tipo": "veredón",
     "descripcion": "Juvenilia: libro de Miguel Cané publicado en 1884 donde relata los recuerdos de su vida escolar. Notas",
     "letra": "J"
   },
@@ -18990,10 +18990,10 @@
     "letra": "L"
   },
   {
-    "nombre_original": "LATINOAMÉRICA",
-    "nombre_busqueda": "Latinoamérica",
-    "clave": "latinoamerica",
-    "id": "latinoamerica|plazoleta",
+    "nombre_original": "LATINOAMERICANA",
+    "nombre_busqueda": "Latinoamericana",
+    "clave": "latinoamericana",
+    "id": "latinoamericana|plazoleta",
     "categoria": "CONCEPTO",
     "tipo": "plazoleta",
     "descripcion": "Latinoamérica: homenaje a las naciones de América cuya colonización fue realizada por países latinos, especialmente España y Portugal.",
