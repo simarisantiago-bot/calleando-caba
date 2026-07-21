@@ -7140,10 +7140,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "VIGIL, CONSTANCIO C.",
-    "nombre_busqueda": "Constancio C. Vigil",
-    "clave": "constancio c vigil",
-    "id": "constancio c vigil|calle",
+    "nombre_original": "VIGIL, CONSTANCIO C. 2",
+    "nombre_busqueda": "Constancio C. Vigil 2",
+    "clave": "constancio c vigil 2",
+    "id": "constancio c vigil 2|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Constancio C. Vigil (1876-1954), escritor y periodista; fundador en Montevideo de la revista Alborada; en Buenos Aires de Mundo Argentino con Alberto Haynes, y de la editorial Atlántida, donde nacen Billiken, Para Ti y La Chacra; autor de El Erial, Upa y Mangacha.",
@@ -29540,16 +29540,6 @@
     "letra": "U"
   },
   {
-    "nombre_original": "URIBURU",
-    "nombre_busqueda": "Uriburu",
-    "clave": "uriburu",
-    "id": "uriburu|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Evaristo de Uriburu (1796-1885), coronel; combate en las Piedras, Tucumán, Salta y Chacabuco; gobernador de Salta en 1831, 1838 y 1842.",
-    "letra": "U"
-  },
-  {
     "nombre_original": "URIÉN",
     "nombre_busqueda": "Urién",
     "clave": "urien",
@@ -31228,5 +31218,15 @@
     "tipo": "pasaje",
     "descripcion": "2 de abril de 1982: fecha de la recuperación de las Islas Malvinas, Georgias y Sandwich del Sur para el patrimonio nacional. El 14 de junio del mismo año las fuerzas invasoras usurparon nuevamente este pedazo de tierra argentina.",
     "letra": "D"
+  },
+  {
+    "nombre_original": "BERNARDO, PADRE",
+    "nombre_busqueda": "Padre Bernardo",
+    "clave": "padre bernardo",
+    "id": "padre bernardo|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Bernardo Hughes (1933-2017), sacerdote Pasionista; en el año 1966 asumió en la parroquia Santa Cruz, la dictadura impuesta en el año 1976 lo persiguió, forzándolo a exiliarse; llevó la bandera de los Derechos Humanos y de las Madres y Abuelas de Plaza de Mayo.",
+    "letra": "B"
   }
 ]
