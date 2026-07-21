@@ -28343,16 +28343,6 @@
     "nombre_original": "SUDAMÉRICA",
     "nombre_busqueda": "Sudamérica",
     "clave": "sudamerica",
-    "id": "sudamerica|calle",
-    "categoria": "LUGAR",
-    "tipo": "calle",
-    "descripcion": "Sudamérica: una de las tres regiones en que se divide al continente americano y que comprende a los siguientes países: Venezuela, Surinam, Guyana, Guayana, Colombia, Ecuador, Perú, Bolivia, Chile, Paraguay, Uruguay, Brasil y la Argentina.",
-    "letra": "S"
-  },
-  {
-    "nombre_original": "SUDAMÉRICA",
-    "nombre_busqueda": "Sudamérica",
-    "clave": "sudamerica",
     "id": "sudamerica|plaza",
     "categoria": "LUGAR",
     "tipo": "plaza",
