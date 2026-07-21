@@ -1850,16 +1850,6 @@
     "letra": "B"
   },
   {
-    "nombre_original": "BIANCHI, ANDRÉS",
-    "nombre_busqueda": "Andrés Bianchi",
-    "clave": "andres bianchi",
-    "id": "andres bianchi|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
-    "descripcion": "Andrés Bianchi (o Blanqui) (1677-1740), maestro mayor que, junto con el arquitecto Juan Bautista Prímoli, transformó el panorama arquitectónico del Buenos Aires de principios del siglo XVIII; construyen la fachada de la Catedral y los templos de la Merced, San Francisco, San Telmo y del Pilar.",
-    "letra": "B"
-  },
-  {
     "nombre_original": "CHAZARRETA, ANDRÉS",
     "nombre_busqueda": "Andrés Chazarreta",
     "clave": "andres chazarreta",
@@ -16533,9 +16523,9 @@
     "nombre_original": "CASAL, JORGE",
     "nombre_busqueda": "Jorge Casal",
     "clave": "jorge casal",
-    "id": "jorge casal|plazoleta",
+    "id": "jorge casal|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Salvador Carmelo Pappalardo, conocido popularmente como Jorge Casal (1924-1996), cantante y actor de tango argentino de larga trayectoria artística.",
     "letra": "C"
   },
@@ -22693,9 +22683,9 @@
     "nombre_original": "ANGELELLI, OBISPO ENRIQUE",
     "nombre_busqueda": "Obispo Enrique Angelelli",
     "clave": "obispo enrique angelelli",
-    "id": "obispo enrique angelelli|plazoleta",
+    "id": "obispo enrique angelelli|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Enrique Ángel Angelelli (1923-1976), sacerdote; obispo de Listra y de La Rioja; ejemplo de pastor y hombre comprometido con su gente; murió en un confuso accidente.",
     "letra": "A"
   },
@@ -23233,9 +23223,9 @@
     "nombre_original": "CAÑADA, PADRE GASPAR",
     "nombre_busqueda": "Padre Gaspar Cañada",
     "clave": "padre gaspar canada",
-    "id": "padre gaspar canada|plazoleta",
+    "id": "padre gaspar canada|cantero central",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "cantero central",
     "descripcion": "Gaspar Cañada (1892-1965), sacerdote; párroco de Santa Inés desde 1932, capellán del Hospital Alvear; procurador y vicario general de la Orden de los Camilos en Roma; autor de Vida popular de San Camilo de Lelis.",
     "letra": "C"
   },
@@ -23263,9 +23253,9 @@
     "nombre_original": "CHAMPAGNAT, PADRE MARCELINO",
     "nombre_busqueda": "Padre Marcelino Champagnat",
     "clave": "padre marcelino champagnat",
-    "id": "padre marcelino champagnat|plazoleta",
+    "id": "padre marcelino champagnat|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "José Benito Marcelino Champagnat (1789-1840), sacerdote y beato francés; fundador del Instituto de los Hermanos Maristas de la Enseñanza, en 1817.",
     "letra": "C"
   },
@@ -23413,9 +23403,9 @@
     "nombre_original": "BERNARDO, PAQUITA",
     "nombre_busqueda": "Paquita Bernardo",
     "clave": "paquita bernardo",
-    "id": "paquita bernardo|plazoleta",
+    "id": "paquita bernardo|cantero central",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "cantero central",
     "descripcion": "Paquita Bernardo (1900-1925), bandoneonista; es la primera mujer que se destaca en la ejecución de este instrumento; consigue trascendencia artística\ny una destacada actuación profesional interpretando obras como Floreal, Soñando, Cachito, Cerro Divino, y Villa Crespo, entre otras.",
     "letra": "B"
   },
