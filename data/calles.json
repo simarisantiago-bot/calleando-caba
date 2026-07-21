@@ -5113,9 +5113,9 @@
     "nombre_original": "CANTILO",
     "nombre_busqueda": "Cantilo",
     "clave": "cantilo",
-    "id": "cantilo|calle",
+    "id": "cantilo|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "José María Cantilo (1816-1872), químico y periodista; fundador de los periódicos El siglo, El correo del domingo y La verdad; diputado provincial de Buenos Aires y miembro de la Convención de esa provincia en 1860; miembro de la Comisión Sanitaria durante la guerra contra el Paraguay y organizador de la Comisión Popular en la epidemia de fiebre amarilla de 1871.",
     "letra": "C"
   },
