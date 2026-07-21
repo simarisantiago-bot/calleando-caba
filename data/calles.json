@@ -2720,16 +2720,6 @@
     "letra": "F"
   },
   {
-    "nombre_original": "FRONDIZI, ARTURO",
-    "nombre_busqueda": "Arturo Frondizi",
-    "clave": "arturo frondizi",
-    "id": "arturo frondizi|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
-    "descripcion": "Arturo Frondizi (1908-1995), político; líder de la Unión Cívica Radical Intransigente (UCRI). Asciende a la Presidencia de la Nación de 1958 a 1962, año en que es depuesto por un golpe militar y encarcelado. Liberado en 1963, prosigue su actividad política y funda con Rogelio Frigerio el Movimiento de Integración y Desarrollo (MID).",
-    "letra": "F"
-  },
-  {
     "nombre_original": "JAURETCHE, ARTURO",
     "nombre_busqueda": "Arturo Jauretche",
     "clave": "arturo jauretche",
@@ -10030,16 +10020,6 @@
     "letra": "F"
   },
   {
-    "nombre_original": "FINOCHIETTO, DOCTOR RICARDO",
-    "nombre_busqueda": "Doctor Ricardo Finochietto",
-    "clave": "doctor ricardo finochietto",
-    "id": "doctor ricardo finochietto|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
-    "descripcion": "Ricardo Finochietto (1888-1962), médico cirujano; dirige la Escuela Quirúrgica Municipal para graduados desde 1953; escribe importantes obras dentro de su especialidad; jefe de cirugía del Hospital Rawson.",
-    "letra": "F"
-  },
-  {
     "nombre_original": "LEVENE, DOCTOR RICARDO",
     "nombre_busqueda": "Doctor Ricardo Levene",
     "clave": "doctor ricardo levene",
@@ -15023,9 +15003,9 @@
     "nombre_original": "DUNANT, HENRY",
     "nombre_busqueda": "Henry Dunant",
     "clave": "henry dunant",
-    "id": "henry dunant|plazoleta",
+    "id": "henry dunant|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Henry Dunant (1828-1910), filántropo suizo; fundador de la Cruz Roja Internacional; comparte en 1901 el Premio Nobel de la Paz con Fréderic Passy.",
     "letra": "D"
   },
@@ -15723,9 +15703,9 @@
     "nombre_original": "DELLA PAOLERA, INGENIERO CARLOS MARÍA",
     "nombre_busqueda": "Ingeniero Carlos María Della Paolera",
     "clave": "ingeniero carlos maria della paolera",
-    "id": "ingeniero carlos maria della paolera|plazoleta",
+    "id": "ingeniero carlos maria della paolera|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Carlos María Della Paolera (1890-1960), ingeniero y urbanista; creador del Día Mundial del Urbanismo, primer director de la Dirección de Urbanismo de la Municipalidad de la Ciudad de Buenos Aires en 1932; promotor del proyecto de la Avenida 9 de Julio.",
     "letra": "D"
   },
