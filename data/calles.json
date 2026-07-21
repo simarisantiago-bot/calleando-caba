@@ -10560,10 +10560,10 @@
     "letra": "D"
   },
   {
-    "nombre_original": "DE AMICIS, EDMUNDO",
-    "nombre_busqueda": "Edmundo de Amicis",
-    "clave": "edmundo de amicis",
-    "id": "edmundo de amicis|calle",
+    "nombre_original": "D'AMICIS, EDMUNDO",
+    "nombre_busqueda": "Edmundo D'Amicis",
+    "clave": "edmundo d amicis",
+    "id": "edmundo d amicis|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Edmundo De Amicis (1846-1908), escritor italiano; autor de Corazón y Muertos y Vivos.",
@@ -28823,9 +28823,9 @@
     "nombre_original": "DELLEPIANE, TENIENTE GENERAL LUIS J.",
     "nombre_busqueda": "Teniente General Luis J. Dellepiane",
     "clave": "teniente general luis j dellepiane",
-    "id": "teniente general luis j dellepiane|avenida",
+    "id": "teniente general luis j dellepiane|autopista",
     "categoria": "PERSONA",
-    "tipo": "avenida",
+    "tipo": "autopista",
     "descripcion": "Luis J. Dellepiane (1865-1941), militar e ingeniero; director del Instituto Geográfico Militar; jefe de la Policía Federal de 1909 a 1919; ministro de Guerra en la segunda presidencia de Hipólito Yrigoyen.",
     "letra": "D"
   },
