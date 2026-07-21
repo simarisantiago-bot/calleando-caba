@@ -15880,16 +15880,6 @@
     "letra": "K"
   },
   {
-    "nombre_original": "INGLATERRA",
-    "nombre_busqueda": "Inglaterra",
-    "clave": "inglaterra",
-    "id": "inglaterra|calle",
-    "categoria": "LUGAR",
-    "tipo": "calle",
-    "descripcion": "Inglaterra: país situado en la isla de Gran Bretaña y con cuyo nombre se identifica popularmente a todo el Reino Unido. Capital: Londres.",
-    "letra": "I"
-  },
-  {
     "nombre_original": "ARMENIA, INMIGRANTES DE",
     "nombre_busqueda": "Inmigrantes de Armenia",
     "clave": "inmigrantes de armenia",
@@ -31248,5 +31238,15 @@
     "tipo": "plaza",
     "descripcion": "Fecha de la victoria de la Selección Argentina de Fútbol ante Francia en la final de la Copa del Mundo Qatar 2022, consiguiendo así su tercer título del certamen.",
     "letra": "1"
+  },
+  {
+    "nombre_original": "2 DE ABRIL DE 1982",
+    "nombre_busqueda": "2 de Abril de 1982",
+    "clave": "2 de abril de 1982",
+    "id": "2 de abril de 1982|pasaje",
+    "categoria": "FECHA",
+    "tipo": "pasaje",
+    "descripcion": "2 de abril de 1982: fecha de la recuperación de las Islas Malvinas, Georgias y Sandwich del Sur para el patrimonio nacional. El 14 de junio del mismo año las fuerzas invasoras usurparon nuevamente este pedazo de tierra argentina.",
+    "letra": "D"
   }
 ]
