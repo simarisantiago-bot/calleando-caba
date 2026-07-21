@@ -10903,9 +10903,9 @@
     "nombre_original": "LAZO, EL",
     "nombre_busqueda": "El Lazo",
     "clave": "el lazo",
-    "id": "el lazo|calle",
+    "id": "el lazo|sendero peatonal",
     "categoria": "OTROS",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Lazo: uno de los elementos más indispensables del recado del gaucho, cuya utilidad es fundamental en el manejo de las haciendas.",
     "letra": "L"
   },
