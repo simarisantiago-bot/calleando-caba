@@ -2800,16 +2800,6 @@
     "letra": "P"
   },
   {
-    "nombre_original": "PIAZZOLA, ASTOR",
-    "nombre_busqueda": "Astor Piazzola",
-    "clave": "astor piazzola",
-    "id": "astor piazzola|paseo",
-    "categoria": "PERSONA",
-    "tipo": "paseo",
-    "descripcion": "Astor Pantaleón Piazzolla (1921-1992), bandoneonista, compositor y director; es el artífice de la renovación vanguardista del tango, al que enriqueció con elementos clásicos y del jazz. Autor de Adiós nonino, Balada para un loco, Chiquilín de Bachín; la serie de las Estaciones (Verano Porteño, Otoño Porteño, Invierno Porteño y Primavera Porteña); la Serie del Ángel (Introducción al ángel, Milonga del ángel, Muerte del ángel y Resurrección del ángel); Revirado, Fracanapa, Calambre, Buenos Aires Hora Cero, Decarísimo, Michelangelo ´70, Fugata, Libertango y Suite Troilana, entre otros.",
-    "letra": "P"
-  },
-  {
     "nombre_original": "ASTURIAS",
     "nombre_busqueda": "Asturias",
     "clave": "asturias",
@@ -6913,9 +6903,9 @@
     "nombre_original": "PIRKER, COMISARIO GENERAL JUAN ÁNGEL",
     "nombre_busqueda": "Comisario General Juan Ángel Pirker",
     "clave": "comisario general juan angel pirker",
-    "id": "comisario general juan angel pirker|paseo",
+    "id": "comisario general juan angel pirker|boulevard",
     "categoria": "PERSONA",
-    "tipo": "paseo",
+    "tipo": "boulevard",
     "descripcion": "Juan Ángel Pirker (1934-1989), policía; jefe de la Policía Federal Argentina, desde 1986 hasta su sorpresivo fallecimiento; a lo largo de su carrera, recibe varias distinciones, entre ellas el premio a la conducta, en 1954, y la Orden de Caballero de San Martín de Tours, en 1988.",
     "letra": "P"
   },
@@ -8350,12 +8340,12 @@
     "letra": "T"
   },
   {
-    "nombre_original": "VIDA, DE LA",
-    "nombre_busqueda": "De la Vida",
-    "clave": "de la vida",
-    "id": "de la vida|paseo",
+    "nombre_original": "VIDA, PASEO DE LA - DR. RENÉ FAVALORO",
+    "nombre_busqueda": "Paseo de la Vida - Dr. René Favaloro",
+    "clave": "paseo de la vida dr rene favaloro",
+    "id": "paseo de la vida dr rene favaloro|plaza",
     "categoria": "CONCEPTO",
-    "tipo": "paseo",
+    "tipo": "plaza",
     "descripcion": "De la Vida: con este nombre se rinde homenaje al reconocido médico René Favaloro (1923-2000) por su aporte a la cardiología y a la cirugía cardiovascular, al crear el puente aortocoronario, más conocido como bypass.",
     "letra": "V"
   },
@@ -8403,9 +8393,9 @@
     "nombre_original": "ARTES LATINOAMERICANAS, DE LAS",
     "nombre_busqueda": "De las Artes Latinoamericanas",
     "clave": "de las artes latinoamericanas",
-    "id": "de las artes latinoamericanas|paseo",
+    "id": "de las artes latinoamericanas|cantero central",
     "categoria": "CONCEPTO",
-    "tipo": "paseo",
+    "tipo": "cantero central",
     "descripcion": "De las Artes Latinoamericanas: homenaje a los artistas y escritores latinoamericanos.",
     "letra": "A"
   },
