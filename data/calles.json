@@ -10423,9 +10423,9 @@
     "nombre_original": "GARDEL-RAZZANO, DÚO",
     "nombre_busqueda": "Dúo Gardel-razzano",
     "clave": "duo gardel razzano",
-    "id": "duo gardel razzano|espacio público",
+    "id": "duo gardel razzano|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plaza",
     "descripcion": "Dúo Gardel-Razzano: dúo formado por Carlos Gardel (1890-1935) y José Francisco Razzano (1887-1960) y que se presenta en 1913 en el célebre Armenonville de la avenida Alvear (Libertador) y Tagle. La primera grabación del dúo Gardel-Razzano se efectúa el 9 de abril de 1917. El dúo perdura hasta 1925, con un amplio repertorio de canciones populares.",
     "letra": "G"
   },
@@ -12043,9 +12043,9 @@
     "nombre_original": "BALLESTRINO DE CAREAGA, ESTHER",
     "nombre_busqueda": "Esther Ballestrino de Careaga",
     "clave": "esther ballestrino de careaga",
-    "id": "esther ballestrino de careaga|espacio público",
+    "id": "esther ballestrino de careaga|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Esther Ballestrino de Careaga (1918-1977), bioquímica y farmacéutica paraguaya; radicada en la Argentina desde 1947, es una de las fundadoras de Madres de Plaza de Mayo y participa desde el inicio en las rondas. El 8 de diciembre de 1977 es secuestrada en el operativo realizado en la Iglesia de la Santa Cruz. Sus restos fueron finalmente identificados por el Equipo Argentino de Antropología Forense, luego de haber sido encontrados en el cementerio de General Lavalle, cuando se exhuman siete cuerpos enterrados como NN que habían sido encontrados en las costas de San Bernardo y Santa Teresita entre diciembre de 1977 y enero de 1978. A través de análisis de ADN pudo confirmarse que tres de esos cadáveres eran los de Esther Ballestrino de Careaga, María Ponce de Bianco y Azucena Villaflor de De Vincenti.",
     "letra": "B"
   },
@@ -17583,9 +17583,9 @@
     "nombre_original": "TRONCONI, JUAN",
     "nombre_busqueda": "Juan Tronconi",
     "clave": "juan tronconi",
-    "id": "juan tronconi|espacio público",
+    "id": "juan tronconi|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Juan Tronconi (1841-?) empresario italiano y uno de los precursores del ramo de los chacinados; se establece en el barrio de Nueva Pompeya en el año de 1877; funda la empresa Tronconi-Gaudencio. Su familia dona al municipio este espacio público, con la finalidad de que el mismo lleve su nombre en homenaje a su memoria y a sus aportes para el desarrollo del barrio.",
     "letra": "T"
   },
@@ -22550,16 +22550,6 @@
     "letra": "L"
   },
   {
-    "nombre_original": "ROSARIO, NUESTRA SEÑORA DEL",
-    "nombre_busqueda": "Nuestra Señora del Rosario",
-    "clave": "nuestra senora del rosario",
-    "id": "nuestra senora del rosario|espacio público",
-    "categoria": "RELIGIÓN",
-    "tipo": "espacio público",
-    "descripcion": "Nuestra Señora del Rosario: Advocación de la Virgen del Rosario cuya festividad instituyó el papa Pío V, en agradecimiento por la victoria de Lepanto ocurrida el 7 de octubre de 1571.",
-    "letra": "R"
-  },
-  {
     "nombre_original": "POMPEYA, NUEVA",
     "nombre_busqueda": "Nueva Pompeya",
     "clave": "nueva pompeya",
@@ -25700,16 +25690,6 @@
     "letra": "R"
   },
   {
-    "nombre_original": "RECONQUISTA",
-    "nombre_busqueda": "Reconquista",
-    "clave": "reconquista",
-    "id": "reconquista|espacio público",
-    "categoria": "ACCIÓN MILITAR",
-    "tipo": "espacio público",
-    "descripcion": "Reconquista: recuerda la gloriosa Reconquista de Buenos Aires de la dominación británica llevada a cabo el 12 de agosto de 1806.",
-    "letra": "R"
-  },
-  {
     "nombre_original": "RECUERDOS DE PROVINCIA",
     "nombre_busqueda": "Recuerdos de Provincia",
     "clave": "recuerdos de provincia",
@@ -27753,9 +27733,9 @@
     "nombre_original": "CHIERICO, SANTIAGO JOSÉ",
     "nombre_busqueda": "Santiago José Chierico",
     "clave": "santiago jose chierico",
-    "id": "santiago jose chierico|espacio público",
+    "id": "santiago jose chierico|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Santiago José Chierico (1891-1974) escultor; obtiene el premio del Salón Nacional en 1935; el segundo Premio Municipal en 1940 y el primer premio de la Comisión Nacional de Cultura en 1942; entre sus obras se destacan los bustos de Castelar y Miguel Cané y los monumentos La Cautiva, La Madre y Florencio Sánchez.",
     "letra": "C"
   },
@@ -29033,9 +29013,9 @@
     "nombre_original": "DI TARANTO, TOMÁS",
     "nombre_busqueda": "Tomás Di Taranto",
     "clave": "tomas di taranto",
-    "id": "tomas di taranto|espacio público",
+    "id": "tomas di taranto|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Tomás Di Taranto (1904-1985), artista plástico de origen italiano; recibe varios premios entre ellos el Primer Premio en el Salón de Luján en 1946; medalla de oro en el Salón de Aeronáutica en 1954; autor de Iglesia del Socorro y Vendedores de La Quiaca.",
     "letra": "D"
   },
