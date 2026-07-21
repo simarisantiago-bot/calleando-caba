@@ -4460,10 +4460,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "RISSO PATRÓN, BUENAVENTURA",
-    "nombre_busqueda": "Buenaventura Risso Patrón",
-    "clave": "buenaventura risso patron",
-    "id": "buenaventura risso patron|calle",
+    "nombre_original": "RISSO PATRÓN, PRELADO DON BUENAVENTURA",
+    "nombre_busqueda": "Prelado Don Buenaventura Risso Patrón",
+    "clave": "prelado don buenaventura risso patron",
+    "id": "prelado don buenaventura risso patron|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Buenaventura Risso Patrón (1811-1884), sacerdote; obispo de Salta desde 1860; impulsa la difusión del catolicismo por medio de la prensa y surgen así El Creyente (Catamarca), La Esperanza (Salta), La Fe (Jujuy) y El Fiel Católico (Santiago del Estero).",
