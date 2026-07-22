@@ -4723,9 +4723,9 @@
     "nombre_original": "CALABRIA",
     "nombre_busqueda": "Calabria",
     "clave": "calabria",
-    "id": "calabria|cantero central",
+    "id": "calabria|plaza",
     "categoria": "LUGAR",
-    "tipo": "cantero central",
+    "tipo": "plaza",
     "descripcion": "Calabria: región del sudoeste de Italia que comprende las provincias de Cosenza, Reggio, Calabria y Catanzaro.",
     "letra": "C"
   },
@@ -24883,9 +24883,9 @@
     "nombre_original": "BUENOS AIRES, PROVINCIA DE",
     "nombre_busqueda": "Provincia de Buenos Aires",
     "clave": "provincia de buenos aires",
-    "id": "provincia de buenos aires|cantero central",
+    "id": "provincia de buenos aires|plazoleta",
     "categoria": "LUGAR",
-    "tipo": "cantero central",
+    "tipo": "plazoleta",
     "descripcion": "Buenos Aires: provincia de la República Argentina. Capital: La Plata.",
     "letra": "B"
   },
@@ -30958,16 +30958,6 @@
     "tipo": "calle",
     "descripcion": "Lola Mora: seudónimo de Dolores Mora de la Vega (1866-1936), escultora; autora de la Fuente de las Nereidas, los bajorrelieves de la Casa de Tucumán\ny del monumento a Nicolás Avellaneda en la ciudad del mismo nombre.",
     "letra": "M"
-  },
-  {
-    "nombre_original": "BALBÍN, RICARDO",
-    "nombre_busqueda": "Ricardo Balbín",
-    "clave": "ricardo balbin",
-    "id": "ricardo balbin|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
-    "descripcion": "Ricardo Balbín (1904-1981), político; diputado nacional de 1946 a 1949; candidato presidencial en 1952, 1958, 1973; presidente de la Unión Cívica Radical.",
-    "letra": "B"
   },
   {
     "nombre_original": "VERA PEÑALOZA, ROSARIO",
