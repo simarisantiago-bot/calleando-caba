@@ -15160,16 +15160,6 @@
     "letra": "Y"
   },
   {
-    "nombre_original": "YRIGOYEN, HIPÓLITO",
-    "nombre_busqueda": "Hipólito Yrigoyen",
-    "clave": "hipolito yrigoyen",
-    "id": "hipolito yrigoyen|plaza",
-    "categoria": "PERSONA",
-    "tipo": "plaza",
-    "descripcion": "Hipólito Yrigoyen (1852-1933), estadista; presidente de la República de 1916 a 1922 y de 1928 a 1930; fundador de la Unión Cívica Radical; fue el primer presidente elegido mediante el sistema del sufragio universal (masculino).",
-    "letra": "Y"
-  },
-  {
     "nombre_original": "HIROSHIMA",
     "nombre_busqueda": "Hiroshima",
     "clave": "hiroshima",
@@ -17157,16 +17147,6 @@
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Juan Agustín García (1862-1923), jurisconsulto y escritor; autor de La ciudad indiana.",
-    "letra": "G"
-  },
-  {
-    "nombre_original": "GARCÍA, JUAN AGUSTÍN",
-    "nombre_busqueda": "Juan Agustín García",
-    "clave": "juan agustin garcia",
-    "id": "juan agustin garcia|plaza",
-    "categoria": "PERSONA",
-    "tipo": "plaza",
-    "descripcion": "Juan Agustín García (1831-1907), jurisconsulto, padre del autor de La Ciudad Indiana; director del Banco Nacional en 1885 y poco después primer director del Banco Hipotecario Nacional.",
     "letra": "G"
   },
   {
@@ -19437,16 +19417,6 @@
     "categoria": "NATURALEZA",
     "tipo": "calle",
     "descripcion": "Olmo: árbol caducifolio de gran porte, caracterizado por su copa amplia y frondosa, corteza agrietada y hojas asimétricas con bordes aserrados. Es valorado por su madera resistente, uso ornamental y sombra.",
-    "letra": "O"
-  },
-  {
-    "nombre_original": "OLMOS, LOS",
-    "nombre_busqueda": "Los Olmos",
-    "clave": "los olmos",
-    "id": "los olmos|plaza",
-    "categoria": "NATURALEZA",
-    "tipo": "plaza",
-    "descripcion": "Olmo: árbol caducifolio de gran porte, caracterizado por su copa amplia y frondosa, corteza agrietada y hojas asimétricas con bordes aserrados. Es valorado por su madera resistente, uso ornamental y sombra. Pueblan este espacio verde.",
     "letra": "O"
   },
   {
@@ -24586,16 +24556,6 @@
     "id": "portugal|calle",
     "categoria": "LUGAR",
     "tipo": "calle",
-    "descripcion": "Portugal: país europeo. Capital: Lisboa.",
-    "letra": "P"
-  },
-  {
-    "nombre_original": "PORTUGAL",
-    "nombre_busqueda": "Portugal",
-    "clave": "portugal",
-    "id": "portugal|plaza",
-    "categoria": "LUGAR",
-    "tipo": "plaza",
     "descripcion": "Portugal: país europeo. Capital: Lisboa.",
     "letra": "P"
   },
@@ -31148,5 +31108,15 @@
     "tipo": "calle",
     "descripcion": "Bernardo Hughes (1933-2017), sacerdote Pasionista; en el año 1966 asumió en la parroquia Santa Cruz, la dictadura impuesta en el año 1976 lo persiguió, forzándolo a exiliarse; llevó la bandera de los Derechos Humanos y de las Madres y Abuelas de Plaza de Mayo.",
     "letra": "B"
+  },
+  {
+    "nombre_original": "FANGIO, JUAN MANUEL",
+    "nombre_busqueda": "Juan Manuel Fangio",
+    "clave": "juan manuel fangio",
+    "id": "juan manuel fangio|paseo",
+    "categoria": "PERSONA",
+    "tipo": "paseo",
+    "descripcion": "Juan Manuel Fangio (1911-1995), piloto de automovilismo argentino; es considerado por los especialistas como uno de los pilotos de automovilismo más destacados de todos los tiempos, por haber logrado cinco campeonatos mundiales de Fórmula 1 en 1951, 1954, 1955, 1956 y 1957, los subcampeonatos de 1950 y 1953, y ser ganador de las 12 Horas de Sebring en 1956 y 1957.",
+    "letra": "F"
   }
 ]
