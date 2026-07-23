@@ -43,41 +43,6 @@
       ]
     },
     {
-      "id": "mujeres-pioneras",
-      "titulo": "Pioneras y mujeres con historia",
-      "descripcion": "Hitos del trazado urbano dedicados a mujeres pioneras en distintos campos.",
-      "items": [
-        {
-          "id": "ana diaz|calle",
-          "nombre": "Ana Díaz",
-          "tipo": "calle",
-          "identidad": "Primera propietaria",
-          "curiosidad": "Primera mujer propietaria de un solar en Buenos Aires (1580). Su lote estaba en la esquina sudoeste de las actuales Florida y Corrientes."
-        },
-        {
-          "id": "amalia celia figueredo|sendero",
-          "nombre": "Amalia Celia Figueredo",
-          "tipo": "sendero",
-          "identidad": "Primera aviadora",
-          "curiosidad": "Primera mujer aviadora de Argentina y Latinoamérica. Obtuvo su licencia de piloto en 1895."
-        },
-        {
-          "id": "paquita bernardo|plazoleta",
-          "nombre": "Paquita Bernardo",
-          "tipo": "plazoleta",
-          "identidad": "Primera bandoneonista",
-          "curiosidad": "Primera mujer bandoneonista destacada profesionalmente, en una época en que el instrumento era casi exclusivo de hombres."
-        },
-        {
-          "id": "virginia bolten|parque",
-          "nombre": "Virginia Bolten",
-          "tipo": "parque",
-          "identidad": "Primera oradora obrera",
-          "curiosidad": "Primera oradora mujer en una concentración obrera en Argentina (1890). Militante anarquista y feminista. Lideró la primera publicación feminista del país, La Voz de la Mujer."
-        }
-      ]
-    },
-    {
       "id": "literatura",
       "titulo": "Calles literarias",
       "descripcion": "Arterias que no homenajean a una persona ni a un lugar real, sino a obras de ficción.",
@@ -106,41 +71,6 @@
       ]
     },
     {
-      "id": "cronologicos",
-      "titulo": "Extremos del callejero",
-      "descripcion": "Las vidas más largas y las más cortas que el callejero conmemora.",
-      "items": [
-        {
-          "id": "alicia moreau de justo|avenida",
-          "nombre": "Alicia Moreau de Justo",
-          "tipo": "avenida",
-          "identidad": "Más longeva: 101 años (1885-1986)",
-          "curiosidad": "Pionera de la medicina y los derechos cívicos femeninos. Cruzó tres siglos de historia argentina."
-        },
-        {
-          "id": "doctor esteban laureano maradona|plazoleta",
-          "nombre": "Doctor Esteban Laureano Maradona",
-          "tipo": "plazoleta",
-          "identidad": "Centenaria: 100 años (1895-1995)",
-          "curiosidad": "Conocido como el “médico de los pobres”, dedicado a la medicina comunitaria y rural."
-        },
-        {
-          "id": "paseo marcela brenda iglesias|paseo",
-          "nombre": "Paseo Marcela Brenda Iglesias",
-          "tipo": "paseo",
-          "identidad": "La más joven: 6 años (1990-1996)",
-          "curiosidad": "Niña fallecida tras la caída de una escultura en el Paseo de la Infanta. Su historia redefinió los controles de seguridad en CABA."
-        },
-        {
-          "id": "candela sol rodriguez|sendero",
-          "nombre": "Candela Sol Rodríguez",
-          "tipo": "sendero",
-          "identidad": "11 años (1999-2011)",
-          "curiosidad": "Homenaje a la niña cuyo caso causó conmoción nacional en 2011."
-        }
-      ]
-    },
-    {
       "id": "presidentes",
       "titulo": "Presidentes de la Nación en el callejero",
       "descripcion": "Eje cronológico de mandatarios con calles asignadas en CABA.",
@@ -153,6 +83,13 @@
           "curiosidad": "Bernardino Rivadavia, primer presidente."
         },
         {
+          "id": "vicente lopez y planes|plaza",
+          "nombre": "Vicente López y Planes",
+          "tipo": "plaza",
+          "identidad": "1827",
+          "curiosidad": "Presidente interino luego de la renuncia de Rivadavia."
+        },
+        {
           "id": "general urquiza|calle",
           "nombre": "General Urquiza",
           "tipo": "calle",
@@ -160,18 +97,18 @@
           "curiosidad": "Justo José de Urquiza, primer presidente de la Confederación."
         },
         {
-          "id": "pedernera|calle",
-          "nombre": "Pedernera",
-          "tipo": "calle",
-          "identidad": "1860",
-          "curiosidad": "Juan Esteban Pedernera, presidente interino."
-        },
-        {
           "id": "derqui|avenida",
           "nombre": "Derqui",
           "tipo": "avenida",
           "identidad": "1860-1861",
           "curiosidad": "Santiago Derqui, mandatario constitucional de la Confederación."
+        },
+        {
+          "id": "pedernera|calle",
+          "nombre": "Pedernera",
+          "tipo": "calle",
+          "identidad": "1861",
+          "curiosidad": "Juan Esteban Pedernera, presidente interino solo unos meses de 1861."
         },
         {
           "id": "bartolome mitre|calle",
@@ -265,16 +202,9 @@
           "curiosidad": "Presidente de la Nación entre 1922 y 1928."
         },
         {
-          "id": "general agustin p justo|espacio verde",
-          "nombre": "General Agustín P. Justo",
-          "tipo": "espacio verde",
-          "identidad": "1932-1938",
-          "curiosidad": "Mandatario en el período 1932-1938."
-        },
-        {
-          "id": "presidente roberto m ortiz|calle",
+          "id": "presidente roberto m ortiz|sendero peatonal",
           "nombre": "Presidente Roberto M. Ortiz",
-          "tipo": "calle",
+          "tipo": "sendero peatonal",
           "identidad": "1938-1940",
           "curiosidad": "Ejerció entre 1938 y 1940. Renunció por enfermedad."
         },
