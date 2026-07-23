@@ -41,6 +41,14 @@ python -m http.server 8080
 ### Deploy
 Push a `main` redeploya automáticamente en Vercel.
 
+### Verificar integridad de los datos
+Chequea ids duplicados en `calles.json` y entradas huérfanas en `geo_cache.json`/
+`fotos.json` (restos de renombres o eliminaciones). No modifica nada, solo informa.
+Conviene correrlo después de una tanda grande de ediciones manuales.
+```powershell
+python verificar_integridad.py
+```
+
 ## Convenciones
 
 - Las 27 hojas del Excel se organizan por letra inicial (A-Z + Ñ).
