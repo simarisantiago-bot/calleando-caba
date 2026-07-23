@@ -15833,9 +15833,9 @@
     "nombre_original": "CANTILO, INTENDENTE",
     "nombre_busqueda": "Intendente Cantilo",
     "clave": "intendente cantilo",
-    "id": "intendente cantilo|avenida",
+    "id": "intendente cantilo|autopista",
     "categoria": "PERSONA",
-    "tipo": "avenida",
+    "tipo": "autopista",
     "descripcion": "José Luis Cantilo (1871-1944), profesor, periodista y político radical; intendente municipal de Buenos Aires desde el 4 de diciembre de 1919 hasta el 25 de octubre de 1921 y del 14 de noviembre de 1928 al 6 de septiembre de 1930; gobernador de Buenos Aires de 1922 a 1926.",
     "letra": "C"
   },
@@ -31088,5 +31088,25 @@
     "tipo": "paseo",
     "descripcion": "Juan Manuel Fangio (1911-1995), piloto de automovilismo argentino; es considerado por los especialistas como uno de los pilotos de automovilismo más destacados de todos los tiempos, por haber logrado cinco campeonatos mundiales de Fórmula 1 en 1951, 1954, 1955, 1956 y 1957, los subcampeonatos de 1950 y 1953, y ser ganador de las 12 Horas de Sebring en 1956 y 1957.",
     "letra": "F"
+  },
+  {
+    "nombre_original": "MORENO, PERITO",
+    "nombre_busqueda": "Perito Moreno",
+    "clave": "perito moreno",
+    "id": "perito moreno|avenida",
+    "categoria": "PERSONA",
+    "tipo": "avenida",
+    "descripcion": "Francisco Pascasio Moreno (1852-1919), conocido como el Perito Moreno, científico, naturalista, conservacionista, político, botánico, explorador y geógrafo de la Generación del Ochenta de la Argentina.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "MORENO, PERITO",
+    "nombre_busqueda": "Perito Moreno",
+    "clave": "perito moreno",
+    "id": "perito moreno|autopista",
+    "categoria": "PERSONA",
+    "tipo": "autopista",
+    "descripcion": "Francisco Pascasio Moreno (1852-1919), conocido como el Perito Moreno, científico, naturalista, conservacionista, político, botánico, explorador y geógrafo de la Generación del Ochenta de la Argentina.",
+    "letra": "M"
   }
 ]
