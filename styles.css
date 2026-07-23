@@ -431,9 +431,9 @@ body.tema-oscuro .nearme-btn svg {
 }
 
 .categoria-filter {
-    /* Encima del filtro de barrios */
-    bottom: 62px;
-    right: 60px;
+    /* Margen inferior izquierdo, alineado con la caja de búsqueda */
+    bottom: 16px;
+    left: 16px;
 }
 
 #barrio-select,
@@ -615,11 +615,12 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     fill: currentColor;
 }
 
-/* -------- Botón "Acerca de" abajo a la izquierda -------- */
+/* -------- Botón "Acerca de" — encima del zoom, alineado con los otros
+   tres botones redondos (Cerca mío, tema, calle al azar) -------- */
 .about-btn {
     position: absolute;
-    bottom: 16px;
-    left: 16px;
+    bottom: 66px;
+    right: 16px;
     z-index: 1000;
     width: 44px;
     height: 44px;
@@ -1405,8 +1406,8 @@ path.leaflet-interactive:focus {
     }
 
     .categoria-filter {
-        bottom: 54px;
-        right: 56px;
+        bottom: 10px;
+        left: 8px;
     }
 
     #barrio-select,
@@ -1447,5 +1448,17 @@ path.leaflet-interactive:focus {
     .theme-toggle-btn {
         width: 40px;
         height: 40px;
+    }
+
+    .about-btn {
+        bottom: 66px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-btn svg {
+        width: 20px;
+        height: 20px;
     }
 }

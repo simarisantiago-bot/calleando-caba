@@ -473,6 +473,10 @@
     }
 
     function aplicarFiltroCategoria(valor) {
+        // Despinta la calle/marcador buscado y cierra su popup, además de
+        // limpiar los overlays de categoría/heatmap de la selección previa.
+        limpiarCapa();
+
         categoriaActiva = (valor || "").trim().toUpperCase();
         $categoriaSelect.classList.toggle("active-filter", !!categoriaActiva);
 
@@ -484,16 +488,6 @@
         } else {
             $categoriaSelect.style.color = "";
             $categoriaSelect.style.backgroundColor = "";
-        }
-
-        // Limpiar overlays previos (círculos + heatmap de la última categoría)
-        if (capaCategoria) {
-            mapa.removeLayer(capaCategoria);
-            capaCategoria = null;
-        }
-        if (capaHeatmap) {
-            mapa.removeLayer(capaHeatmap);
-            capaHeatmap = null;
         }
 
         if (!categoriaActiva) {
