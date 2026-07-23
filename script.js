@@ -300,6 +300,17 @@
 
         // Reposicionar el control de zoom para no chocar con la caja de búsqueda
         mapa.zoomControl.setPosition("bottomright");
+
+        // Al cerrar el popup (botón X, click afuera, Esc) se despinta también
+        // la calle/marcador resaltado. limpiarCapa() ya deja capaActual en
+        // null antes de cerrar su propio popup, así que no hay doble remoción.
+        mapa.on("popupclose", () => {
+            if (capaActual) {
+                mapa.removeLayer(capaActual);
+                capaActual = null;
+            }
+            popupActual = null;
+        });
     }
 
     // Capas de tiles disponibles
