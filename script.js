@@ -1244,6 +1244,13 @@
         popupActual = null;
     }
 
+    // Punto de anclaje del popup para polígonos/líneas: el borde norte de los
+    // bounds (centrado horizontalmente), no el centro. Así el popup se abre
+    // por encima de la forma en vez de taparla, y se ve el trazado completo.
+    function anclaSobreForma(bounds) {
+        return L.latLng(bounds.getNorth(), bounds.getCenter().lng);
+    }
+
     function dibujarResultado(entrada, resultado) {
         const mediaId = "popup-media-" + (++mediaSeq);
         const popupHtml = construirPopup(entrada, mediaId);
@@ -1266,12 +1273,10 @@
                 maxZoom: 15,
             });
 
-            // Popup en el centro (usamos center si está, sino bounds)
-            const centro = resultado.center
-                ? L.latLng(resultado.center[0], resultado.center[1])
-                : capaActual.getBounds().getCenter();
+            // Popup arriba de la forma, no en su centro, para no taparla.
+            const centro = anclaSobreForma(capaActual.getBounds());
             popupActual = L.popup({
-                offset: [0, -6],
+                offset: [0, -10],
                 autoPan: true,
                 className: "calleando-popup",
             })
@@ -1295,10 +1300,11 @@
                 maxZoom: 17,
             });
 
-            // Abrir popup en el centro del bounds
-            const centro = capaActual.getBounds().getCenter();
+            // Popup arriba del trazado, no en su centro, para que se vea
+            // la calle completa debajo sin quedar tapada.
+            const centro = anclaSobreForma(capaActual.getBounds());
             popupActual = L.popup({
-                offset: [0, -6],
+                offset: [0, -10],
                 autoPan: true,
                 className: "calleando-popup",
             })
