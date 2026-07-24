@@ -2743,9 +2743,9 @@
     "nombre_original": "TOSCANINI, ARTURO",
     "nombre_busqueda": "Arturo Toscanini",
     "clave": "arturo toscanini",
-    "id": "arturo toscanini|calle",
+    "id": "arturo toscanini|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Arturo Toscanini (1867-1957), músico italiano; director de la orquesta de la Scala de Milán, de la Opera Metropolitana de Nueva York y de la Filarmónica  de Nueva York; director invitado de la Orquesta de Filadelfia; visita Buenos Aires en 1901, 1903, 1904, 1906, 1912, 1940 y 1941 y actúa en el Teatro Colón.",
     "letra": "T"
   },
@@ -4200,10 +4200,10 @@
     "letra": "Z"
   },
   {
-    "nombre_original": "VERA PEÑALOZA, BOULEVARD ROSARIO",
-    "nombre_busqueda": "Boulevard Rosario Vera Peñaloza",
-    "clave": "boulevard rosario vera penaloza",
-    "id": "boulevard rosario vera penaloza|calle",
+    "nombre_original": "VERA PEÑALOZA, ROSARIO",
+    "nombre_busqueda": "Rosario Vera Peñaloza",
+    "clave": "rosario vera penaloza",
+    "id": "rosario vera penaloza|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Rosario Vera Peñaloza (1873-1950), educadora y escritora; directora de la Escuela Normal Provincial Alberdi, de Córdoba; de la Escuela Normal de Profesores N° 1 de Buenos Aires; fundadora y directora de la Escuela Argentina Modelo, junto con Carlos María Biedma; autora de La enseñanza práctica de la geometría y La casa histórica de Tucumán.",
@@ -4873,9 +4873,9 @@
     "nombre_original": "CAMINITO",
     "nombre_busqueda": "Caminito",
     "clave": "caminito",
-    "id": "caminito|calle",
+    "id": "caminito|sendero peatonal",
     "categoria": "ARTE",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Caminito: canción porteña con música de Juan de Dios Filiberto y letra de Gabino Coria Peñaloza, estrenada en 1924.",
     "letra": "C"
   },
@@ -30900,16 +30900,6 @@
     "letra": "M"
   },
   {
-    "nombre_original": "VERA PEÑALOZA, ROSARIO",
-    "nombre_busqueda": "Rosario Vera Peñaloza",
-    "clave": "rosario vera penaloza",
-    "id": "rosario vera penaloza|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Rosario Vera Peñaloza (1873-1950), educadora y escritora; directora de la Escuela Normal Provincial Alberdi, de Córdoba; de la Escuela Normal de Profesores N° 1 de Buenos Aires; fundadora y directora de la Escuela Argentina Modelo, junto con Carlos María Biedma; autora de La enseñanza práctica de la geometría y La casa histórica de Tucumán.",
-    "letra": "V"
-  },
-  {
     "nombre_original": "ALBERDI",
     "nombre_busqueda": "Alberdi",
     "clave": "alberdi",
@@ -31108,5 +31098,25 @@
     "tipo": "plaza",
     "descripcion": "Nuestra Señora de Montserrat: patrona de Cataluña que se venera en el santuario y monasterio benedictino de su nombre, donde se encuentra la imagen titular de esta virgen llamada La Moreneta. Se identifica a este barrio con su nombre desde 1769 cuando se crea la parroquia de Nuestra Señora de Montserrat.",
     "letra": "M"
+  },
+  {
+    "nombre_original": "HOLANDA, REINA DE",
+    "nombre_busqueda": "Reina de Holanda",
+    "clave": "reina de holanda",
+    "id": "reina de holanda|plaza",
+    "categoria": "CONCEPTO",
+    "tipo": "plaza",
+    "descripcion": "Homenaje a la Reina de Holanda.",
+    "letra": "H"
+  },
+  {
+    "nombre_original": "11 DE JUNIO DE 1580",
+    "nombre_busqueda": "11 de Junio de 1580",
+    "clave": "11 de junio de 1580",
+    "id": "11 de junio de 1580|plazoleta",
+    "categoria": "FECHA",
+    "tipo": "plazoleta",
+    "descripcion": "Segunda fundación de Buenos Aires: tuvo lugar el 11 de junio de 1580; fue realizada por el explorador español Juan de Garay, quien llegó acompañado por un grupo de pobladores desde Asunción.",
+    "letra": "1"
   }
 ]
