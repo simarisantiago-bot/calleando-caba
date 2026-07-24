@@ -31088,5 +31088,15 @@
     "tipo": "cantero central",
     "descripcion": "Tierra del Fuego, Antártida e Islas del Atlántico Sur: provincia de la República Argentina. Capital: Ushuaia.",
     "letra": "T"
+  },
+  {
+    "nombre_original": "CROMAÑÓN",
+    "nombre_busqueda": "Cromañón",
+    "clave": "cromanon",
+    "id": "cromanon|sendero peatonal",
+    "categoria": "OTROS",
+    "tipo": "sendero peatonal",
+    "descripcion": "La Tragedia de Cromañón fue un incendio en la noche del 30 de diciembre de 2004 en República Cromañón, local en el barrio de Once de la ciudad de Buenos Aires, en el marco de un recital de la banda de rock Callejeros. Es la peor tragedia mundial en la historia del rock y una de las mayores tragedias no naturales en Argentina, que dejó 194 muertos y 1432 heridos.",
+    "letra": "C"
   }
 ]
