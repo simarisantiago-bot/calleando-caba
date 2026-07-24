@@ -31098,5 +31098,15 @@
     "tipo": "sendero peatonal",
     "descripcion": "La Tragedia de Cromañón fue un incendio en la noche del 30 de diciembre de 2004 en República Cromañón, local en el barrio de Once de la ciudad de Buenos Aires, en el marco de un recital de la banda de rock Callejeros. Es la peor tragedia mundial en la historia del rock y una de las mayores tragedias no naturales en Argentina, que dejó 194 muertos y 1432 heridos.",
     "letra": "C"
+  },
+  {
+    "nombre_original": "MONSERRAT",
+    "nombre_busqueda": "Monserrat",
+    "clave": "montserrat",
+    "id": "montserrat|plaza",
+    "categoria": "RELIGIÓN",
+    "tipo": "plaza",
+    "descripcion": "Nuestra Señora de Montserrat: patrona de Cataluña que se venera en el santuario y monasterio benedictino de su nombre, donde se encuentra la imagen titular de esta virgen llamada La Moreneta. Se identifica a este barrio con su nombre desde 1769 cuando se crea la parroquia de Nuestra Señora de Montserrat.",
+    "letra": "M"
   }
 ]
