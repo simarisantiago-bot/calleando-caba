@@ -1242,6 +1242,14 @@ path.leaflet-interactive:focus {
     max-width: 320px !important;
 }
 
+/* La flechita de Leaflet siempre apunta hacia abajo desde el centro de la
+   caja: tiene sentido cuando el popup se abre arriba del trazado/punto,
+   pero no cuando se abre a un costado o abajo (script.js elige el lado
+   según hacia dónde corre la calle). En esos casos la ocultamos. */
+.popup-sin-flecha .leaflet-popup-tip-container {
+    display: none;
+}
+
 .popup-title {
     font-family: var(--font-brand);
     font-weight: 700;

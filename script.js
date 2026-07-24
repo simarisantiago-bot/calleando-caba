@@ -1238,39 +1238,139 @@
         popupActual = null;
     }
 
-    // Punto de anclaje del popup para polígonos/líneas: el borde norte de los
-    // bounds (centrado horizontalmente), no el centro. Así el popup se abre
-    // por encima de la forma en vez de taparla, y se ve el trazado completo.
-    function anclaSobreForma(bounds) {
-        return L.latLng(bounds.getNorth(), bounds.getCenter().lng);
+    // ---------- Posicionamiento del popup: pegado al trazado/punto ----------
+    //
+    // Calles y avenidas se muestran a un lado del trazado (no arriba tapándolo):
+    // si van más norte-sur, el popup se abre a la izquierda o derecha; si van
+    // más este-oeste, arriba o abajo. Los puntos (plazas, parques, etc.) llevan
+    // el popup pegado justo encima, como antes.
+    const POPUP_GAP = 14; // separación entre el trazado/punto y el popup
+    const POPUP_ANCHO_ESTIMADO = 340; // ancho aprox. de la caja (se re-mide después)
+    const POPUP_ALTO_ESTIMADO = 200; // alto aprox. inicial (varía mucho según contenido)
+
+    // ¿La forma es más "vertical" (norte-sur) u "horizontal" (este-oeste)?
+    // Se compara en metros, no en grados: en CABA un grado de longitud mide
+    // menos que uno de latitud, así que comparar grados directamente sesga
+    // el resultado hacia "horizontal".
+    function orientacionForma(bounds) {
+        const lat0 = bounds.getCenter().lat;
+        const metrosPorGradoLat = 111320;
+        const metrosPorGradoLon = 111320 * Math.cos((lat0 * Math.PI) / 180);
+        const altoM = (bounds.getNorth() - bounds.getSouth()) * metrosPorGradoLat;
+        const anchoM = (bounds.getEast() - bounds.getWest()) * metrosPorGradoLon;
+        return altoM >= anchoM ? "vertical" : "horizontal";
     }
 
-    const POPUP_AUTOPAN_TOPLEFT = [20, 110];
-    const POPUP_AUTOPAN_BOTTOMRIGHT = [20, 30];
+    // De qué lado abrir el popup: el que tenga más espacio REAL disponible
+    // (no solo "en qué mitad de la pantalla cae el ancla"), restando ya la
+    // extensión propia de la forma y, para "arriba", la caja de búsqueda.
+    // Sin esto, se puede elegir un lado que en teoría tiene más lugar pero
+    // en la práctica no alcanza para el popup, y la corrección de bordes
+    // termina empujándolo de vuelta a tapar el trazado.
+    function elegirDireccion(orientacion, bounds, anchorPx) {
+        const tam = mapa.getSize();
+        if (orientacion === "vertical") {
+            const espacioIzq = anchorPx.x - extensionFormaPx(bounds, "izquierda");
+            const espacioDer = tam.x - anchorPx.x - extensionFormaPx(bounds, "derecha");
+            return espacioDer >= espacioIzq ? "derecha" : "izquierda";
+        }
+        if (orientacion === "horizontal") {
+            const cajaBusqueda = document.querySelector(".search-box");
+            const altoCajaBusqueda = cajaBusqueda ? cajaBusqueda.getBoundingClientRect().bottom : 0;
+            const espacioArriba = anchorPx.y - extensionFormaPx(bounds, "arriba") - altoCajaBusqueda;
+            const espacioAbajo = tam.y - anchorPx.y - extensionFormaPx(bounds, "abajo");
+            return espacioAbajo >= espacioArriba ? "abajo" : "arriba";
+        }
+        return "arriba"; // puntos: pegado encima del pin
+    }
 
-    // Red de seguridad final, DESPUÉS de que el popup ya está renderizado:
-    // en avenidas muy largas (Corrientes, Rivadavia...) el mapa puede quedar
-    // pegado a su zoom mínimo y a maxBounds, así que ni el padding de
-    // fitBounds ni el autoPan de Leaflet alcanzan a hacerle lugar al popup.
-    // Como la altura del popup varía mucho según el contenido (con/sin foto,
-    // descripción larga/corta), no se puede adivinar un margen fijo de
-    // antemano: acá medimos el alto YA renderizado y, si queda tapado por la
-    // caja de búsqueda, corremos el popup hacia abajo vía su "offset" (no su
-    // posición geográfica: en popups atados a un marker, setLatLng no sirve
-    // porque Leaflet resincroniza la posición con el marker en el próximo
-    // update; el offset en cambio se respeta siempre).
-    function ajustarPopupSegunAltura(popup) {
+    // Medio ancho/alto EN PÍXELES de la forma (línea o polígono), en la
+    // pantalla actual. El ancla es el CENTRO de la forma, no un borde, así
+    // que para no invadirla hay que correr el popup, además del hueco y su
+    // propio tamaño, esta mitad de la forma.
+    function extensionFormaPx(bounds, direccion) {
+        if (!bounds) return 0;
+        const ne = mapa.latLngToContainerPoint(bounds.getNorthEast());
+        const sw = mapa.latLngToContainerPoint(bounds.getSouthWest());
+        if (direccion === "izquierda" || direccion === "derecha") {
+            return Math.abs(ne.x - sw.x) / 2;
+        }
+        if (direccion === "arriba" || direccion === "abajo") {
+            return Math.abs(sw.y - ne.y) / 2;
+        }
+        return 0;
+    }
+
+    // Leaflet siempre centra la caja horizontalmente en (ancla.x + offset.x)
+    // y la hace crecer HACIA ARRIBA desde (ancla.y + offset.y) — esa es la
+    // convención interna de L.Popup. A partir de eso, estas son las cuentas
+    // para que la caja quede pegada a cada lado del ancla sin taparla.
+    // "extension" es la mitad del ancho/alto de la forma en px (0 para
+    // puntos), para no terminar corriendo el popup desde el centro de la
+    // forma hacia adentro de ella misma.
+    function offsetParaDireccion(direccion, ancho, alto, extension) {
+        const g = POPUP_GAP;
+        const ext = extension || 0;
+        switch (direccion) {
+            case "derecha":
+                return L.point(ext + g + ancho / 2, alto / 2);
+            case "izquierda":
+                return L.point(-(ext + g + ancho / 2), alto / 2);
+            case "abajo":
+                return L.point(0, ext + g + alto);
+            case "arriba":
+            default:
+                return L.point(0, -(ext + g));
+        }
+    }
+
+    // Reacomoda el popup ya renderizado: primero recalcula el offset con su
+    // tamaño REAL (la altura sobre todo varía mucho según el contenido — con
+    // foto, sin foto, descripción larga o corta — así que la primera pasada
+    // solo usa un tamaño estimado). Si aun con eso se sale de la pantalla o
+    // queda tapado por la caja de búsqueda, lo corre lo justo y necesario.
+    function posicionarPopup(popup, direccion, extension) {
         const el = popup.getElement();
         if (!el) return;
-        const rect = el.getBoundingClientRect();
+        const wrapper = el.querySelector(".leaflet-popup-content-wrapper") || el;
+        let rect = wrapper.getBoundingClientRect();
+
+        popup.options.offset = offsetParaDireccion(direccion, rect.width, rect.height, extension);
+        popup.update();
+        rect = wrapper.getBoundingClientRect();
+
         const cajaBusqueda = document.querySelector(".search-box");
         const limiteSuperior = (cajaBusqueda ? cajaBusqueda.getBoundingClientRect().bottom : 0) + 10;
-        if (rect.top >= limiteSuperior) return; // ya entra bien
+        const limiteInferior = window.innerHeight - 10;
+        const limiteIzq = 10;
+        const limiteDer = window.innerWidth - 10;
 
-        const faltante = limiteSuperior - rect.top;
-        const offsetActual = L.point(popup.options.offset || [0, 0]);
-        popup.options.offset = L.point(offsetActual.x, offsetActual.y + faltante);
-        popup.update();
+        let dx = 0;
+        let dy = 0;
+        if (rect.left < limiteIzq) dx = limiteIzq - rect.left;
+        else if (rect.right > limiteDer) dx = limiteDer - rect.right;
+        if (rect.top < limiteSuperior) dy = limiteSuperior - rect.top;
+        else if (rect.bottom > limiteInferior) dy = limiteInferior - rect.bottom;
+
+        if (dx !== 0 || dy !== 0) {
+            const actual = L.point(popup.options.offset);
+            popup.options.offset = L.point(actual.x + dx, actual.y + dy);
+            popup.update();
+        }
+    }
+
+    // Arma el popup ya posicionado (dirección elegida + tamaño estimado) y
+    // lo abre. Común a los tres casos (área, línea, marker).
+    function abrirPopupPosicionado(latlng, popupHtml, direccion, extension) {
+        const claseExtra = direccion === "arriba" ? "" : " popup-sin-flecha";
+        return L.popup({
+            offset: offsetParaDireccion(direccion, POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, extension),
+            autoPan: false, // la posición final la calcula posicionarPopup()
+            className: "calleando-popup" + claseExtra,
+        })
+            .setLatLng(latlng)
+            .setContent(popupHtml)
+            .openOn(mapa);
     }
 
     function dibujarResultado(entrada, resultado) {
@@ -1291,28 +1391,17 @@
             }).addTo(mapa);
 
             mapa.fitBounds(capaActual.getBounds(), {
-                // Más margen arriba: ahí va a abrirse el popup (y la caja
-                // de búsqueda tapa esa franja), por eso el padding top es
-                // mayor que el resto.
-                paddingTopLeft: [40, 220],
-                paddingBottomRight: [40, 40],
+                padding: [40, 40],
                 maxZoom: 15,
                 animate: false,
             });
 
-            // Popup arriba de la forma, no en su centro, para no taparla.
-            const centro = anclaSobreForma(capaActual.getBounds());
-            popupActual = L.popup({
-                offset: [0, -10],
-                autoPan: true,
-                autoPanPaddingTopLeft: POPUP_AUTOPAN_TOPLEFT,
-                autoPanPaddingBottomRight: POPUP_AUTOPAN_BOTTOMRIGHT,
-                className: "calleando-popup",
-            })
-                .setLatLng(centro)
-                .setContent(popupHtml)
-                .openOn(mapa);
-            ajustarPopupSegunAltura(popupActual);
+            const bounds = capaActual.getBounds();
+            const centro = bounds.getCenter();
+            const direccion = elegirDireccion(orientacionForma(bounds), bounds, mapa.latLngToContainerPoint(centro));
+            const extension = extensionFormaPx(bounds, direccion);
+            popupActual = abrirPopupPosicionado(centro, popupHtml, direccion, extension);
+            posicionarPopup(popupActual, direccion, extension);
         } else if (resultado.tipo === "line") {
             // GeoJSON LineString/MultiLineString -> Polyline
             capaActual = L.geoJSON(resultado.geometry, {
@@ -1326,31 +1415,21 @@
             }).addTo(mapa);
 
             mapa.fitBounds(capaActual.getBounds(), {
-                // Más margen arriba: ahí va a abrirse el popup (y la caja
-                // de búsqueda tapa esa franja), por eso el padding top es
-                // mayor que el resto.
-                paddingTopLeft: [80, 260],
-                paddingBottomRight: [80, 80],
+                padding: [80, 80],
                 maxZoom: 17,
                 animate: false,
             });
 
-            // Popup arriba del trazado, no en su centro, para que se vea
-            // la calle completa debajo sin quedar tapada.
-            const centro = anclaSobreForma(capaActual.getBounds());
-            popupActual = L.popup({
-                offset: [0, -10],
-                autoPan: true,
-                autoPanPaddingTopLeft: POPUP_AUTOPAN_TOPLEFT,
-                autoPanPaddingBottomRight: POPUP_AUTOPAN_BOTTOMRIGHT,
-                className: "calleando-popup",
-            })
-                .setLatLng(centro)
-                .setContent(popupHtml)
-                .openOn(mapa);
-            ajustarPopupSegunAltura(popupActual);
+            // Popup pegado al trazado (al costado si es norte-sur, arriba o
+            // abajo si es este-oeste), no centrado tapándolo.
+            const bounds = capaActual.getBounds();
+            const centro = bounds.getCenter();
+            const direccion = elegirDireccion(orientacionForma(bounds), bounds, mapa.latLngToContainerPoint(centro));
+            const extension = extensionFormaPx(bounds, direccion);
+            popupActual = abrirPopupPosicionado(centro, popupHtml, direccion, extension);
+            posicionarPopup(popupActual, direccion, extension);
         } else {
-            // Marker para plazas, parques, etc.
+            // Marker para plazas, parques, plazoletas, canteros, paseos, etc.
             capaActual = L.marker(resultado.center, {
                 title: entrada.nombre_busqueda,
             }).addTo(mapa);
@@ -1366,16 +1445,21 @@
                 mapa.setView(resultado.center, 17, { animate: false });
             }
 
+            // Pegado al pin: arriba si hay lugar, si no abajo (misma cuenta
+            // de espacio disponible que usan las calles este-oeste, solo
+            // que un punto no tiene "extensión" propia que esquivar).
+            const anchorPxMarker = mapa.latLngToContainerPoint(capaActual.getLatLng());
+            const direccion = elegirDireccion("horizontal", null, anchorPxMarker);
+            const claseExtra = direccion === "arriba" ? "" : " popup-sin-flecha";
             capaActual.bindPopup(popupHtml, {
-                offset: [0, -10],
-                autoPanPaddingTopLeft: POPUP_AUTOPAN_TOPLEFT,
-                autoPanPaddingBottomRight: POPUP_AUTOPAN_BOTTOMRIGHT,
-                className: "calleando-popup",
+                offset: offsetParaDireccion(direccion, POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO),
+                autoPan: false,
+                className: "calleando-popup" + claseExtra,
             }).openPopup();
             // bindPopup()/openPopup() devuelven el marker (para encadenar),
             // no el popup: hay que pedirlo aparte para poder medirlo/ajustarlo.
             popupActual = capaActual.getPopup();
-            ajustarPopupSegunAltura(popupActual);
+            posicionarPopup(popupActual, direccion);
         }
 
         // El popup ya está en el DOM: cargamos la imagen de Wikipedia de forma
