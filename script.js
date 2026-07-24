@@ -1245,6 +1245,34 @@
         return L.latLng(bounds.getNorth(), bounds.getCenter().lng);
     }
 
+    const POPUP_AUTOPAN_TOPLEFT = [20, 110];
+    const POPUP_AUTOPAN_BOTTOMRIGHT = [20, 30];
+
+    // Red de seguridad final, DESPUÉS de que el popup ya está renderizado:
+    // en avenidas muy largas (Corrientes, Rivadavia...) el mapa puede quedar
+    // pegado a su zoom mínimo y a maxBounds, así que ni el padding de
+    // fitBounds ni el autoPan de Leaflet alcanzan a hacerle lugar al popup.
+    // Como la altura del popup varía mucho según el contenido (con/sin foto,
+    // descripción larga/corta), no se puede adivinar un margen fijo de
+    // antemano: acá medimos el alto YA renderizado y, si queda tapado por la
+    // caja de búsqueda, corremos el popup hacia abajo vía su "offset" (no su
+    // posición geográfica: en popups atados a un marker, setLatLng no sirve
+    // porque Leaflet resincroniza la posición con el marker en el próximo
+    // update; el offset en cambio se respeta siempre).
+    function ajustarPopupSegunAltura(popup) {
+        const el = popup.getElement();
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const cajaBusqueda = document.querySelector(".search-box");
+        const limiteSuperior = (cajaBusqueda ? cajaBusqueda.getBoundingClientRect().bottom : 0) + 10;
+        if (rect.top >= limiteSuperior) return; // ya entra bien
+
+        const faltante = limiteSuperior - rect.top;
+        const offsetActual = L.point(popup.options.offset || [0, 0]);
+        popup.options.offset = L.point(offsetActual.x, offsetActual.y + faltante);
+        popup.update();
+    }
+
     function dibujarResultado(entrada, resultado) {
         const mediaId = "popup-media-" + (++mediaSeq);
         const popupHtml = construirPopup(entrada, mediaId);
@@ -1263,8 +1291,13 @@
             }).addTo(mapa);
 
             mapa.fitBounds(capaActual.getBounds(), {
-                padding: [40, 40],
+                // Más margen arriba: ahí va a abrirse el popup (y la caja
+                // de búsqueda tapa esa franja), por eso el padding top es
+                // mayor que el resto.
+                paddingTopLeft: [40, 220],
+                paddingBottomRight: [40, 40],
                 maxZoom: 15,
+                animate: false,
             });
 
             // Popup arriba de la forma, no en su centro, para no taparla.
@@ -1272,11 +1305,14 @@
             popupActual = L.popup({
                 offset: [0, -10],
                 autoPan: true,
+                autoPanPaddingTopLeft: POPUP_AUTOPAN_TOPLEFT,
+                autoPanPaddingBottomRight: POPUP_AUTOPAN_BOTTOMRIGHT,
                 className: "calleando-popup",
             })
                 .setLatLng(centro)
                 .setContent(popupHtml)
                 .openOn(mapa);
+            ajustarPopupSegunAltura(popupActual);
         } else if (resultado.tipo === "line") {
             // GeoJSON LineString/MultiLineString -> Polyline
             capaActual = L.geoJSON(resultado.geometry, {
@@ -1290,8 +1326,13 @@
             }).addTo(mapa);
 
             mapa.fitBounds(capaActual.getBounds(), {
-                padding: [80, 80],
+                // Más margen arriba: ahí va a abrirse el popup (y la caja
+                // de búsqueda tapa esa franja), por eso el padding top es
+                // mayor que el resto.
+                paddingTopLeft: [80, 260],
+                paddingBottomRight: [80, 80],
                 maxZoom: 17,
+                animate: false,
             });
 
             // Popup arriba del trazado, no en su centro, para que se vea
@@ -1300,11 +1341,14 @@
             popupActual = L.popup({
                 offset: [0, -10],
                 autoPan: true,
+                autoPanPaddingTopLeft: POPUP_AUTOPAN_TOPLEFT,
+                autoPanPaddingBottomRight: POPUP_AUTOPAN_BOTTOMRIGHT,
                 className: "calleando-popup",
             })
                 .setLatLng(centro)
                 .setContent(popupHtml)
                 .openOn(mapa);
+            ajustarPopupSegunAltura(popupActual);
         } else {
             // Marker para plazas, parques, etc.
             capaActual = L.marker(resultado.center, {
@@ -1316,15 +1360,22 @@
                 mapa.fitBounds([[latMin, lonMin], [latMax, lonMax]], {
                     padding: [80, 80],
                     maxZoom: 17,
+                    animate: false,
                 });
             } else {
-                mapa.setView(resultado.center, 17);
+                mapa.setView(resultado.center, 17, { animate: false });
             }
 
-            popupActual = capaActual.bindPopup(popupHtml, {
+            capaActual.bindPopup(popupHtml, {
                 offset: [0, -10],
+                autoPanPaddingTopLeft: POPUP_AUTOPAN_TOPLEFT,
+                autoPanPaddingBottomRight: POPUP_AUTOPAN_BOTTOMRIGHT,
                 className: "calleando-popup",
             }).openPopup();
+            // bindPopup()/openPopup() devuelven el marker (para encadenar),
+            // no el popup: hay que pedirlo aparte para poder medirlo/ajustarlo.
+            popupActual = capaActual.getPopup();
+            ajustarPopupSegunAltura(popupActual);
         }
 
         // El popup ya está en el DOM: cargamos la imagen de Wikipedia de forma

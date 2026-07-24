@@ -1406,7 +1406,9 @@ path.leaflet-interactive:focus {
     }
 
     .categoria-filter {
-        bottom: 10px;
+        /* La barra de créditos ocupa casi todo el ancho en pantallas angostas;
+           subimos el filtro para que no se superponga con ella. */
+        bottom: 30px;
         left: 8px;
     }
 
