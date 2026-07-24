@@ -31118,5 +31118,25 @@
     "tipo": "plazoleta",
     "descripcion": "Segunda fundación de Buenos Aires: tuvo lugar el 11 de junio de 1580; fue realizada por el explorador español Juan de Garay, quien llegó acompañado por un grupo de pobladores desde Asunción.",
     "letra": "1"
+  },
+  {
+    "nombre_original": "MAIZANI, AZUCENA",
+    "nombre_busqueda": "Azucena Maizani",
+    "clave": "azucena maizani",
+    "id": "azucena maizani|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "Azucena Maizani (1902-1970), cantante y compositora argentina de tangos; actuó en radio y en teatro y además dejó grabadas más de 270 obras. Durante muchos años hacía sus presentaciones vestida con trajes masculinos o con atuendos criollos de gaucho por lo que era conocida con el apodo de La Ñata Gaucha.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "GORRITI, JUANA MANUELA",
+    "nombre_busqueda": "Juana Manuela Gorriti",
+    "clave": "juana manuela gorriti",
+    "id": "juana manuela gorriti|sendero peatonal",
+    "categoria": "PERSONA",
+    "tipo": "sendero peatonal",
+    "descripcion": "Juana Manuela Gorriti Zuviria (1818-1892), escritora y cronista argentina, considerada la primera mujer novelista de la literatura argentina. Autora de La tierra natal, Perfiles y Veladas literarias.",
+    "letra": "G"
   }
 ]
