@@ -6463,9 +6463,9 @@
     "nombre_original": "ORTIZ, CIRIACO",
     "nombre_busqueda": "Ciriaco Ortiz",
     "clave": "ciriaco ortiz",
-    "id": "ciriaco ortiz|veredón",
+    "id": "ciriaco ortiz|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "veredón",
+    "tipo": "plazoleta",
     "descripcion": "Ángel Ciriaco Ortiz Barrionuevo (1904-1970), bandoneonista, autor de Negrucha, Entre copa y copa, Nena, Cuando estés muy lejos y Soledad.",
     "letra": "O"
   },
@@ -25030,20 +25030,20 @@
     "letra": "T"
   },
   {
-    "nombre_original": "CHACO, PROVINCIA DEL",
-    "nombre_busqueda": "Provincia del Chaco",
-    "clave": "provincia del chaco",
-    "id": "provincia del chaco|cantero central",
+    "nombre_original": "CHACO, PROVINCIA DE",
+    "nombre_busqueda": "Provincia de Chaco",
+    "clave": "provincia de chaco",
+    "id": "provincia de chaco|cantero central",
     "categoria": "LUGAR",
     "tipo": "cantero central",
     "descripcion": "Chaco: provincia de la República Argentina. Capital: Resistencia.",
     "letra": "C"
   },
   {
-    "nombre_original": "CHUBUT, PROVINCIA DEL",
-    "nombre_busqueda": "Provincia del Chubut",
-    "clave": "provincia del chubut",
-    "id": "provincia del chubut|cantero central",
+    "nombre_original": "CHUBUT, PROVINCIA DE",
+    "nombre_busqueda": "Provincia de Chubut",
+    "clave": "provincia de chubut",
+    "id": "provincia de chubut|cantero central",
     "categoria": "LUGAR",
     "tipo": "cantero central",
     "descripcion": "Chubut: provincia de la República Argentina. Capital: Rawson.",
@@ -30246,7 +30246,7 @@
     "id": "virginia bolten|parque",
     "categoria": "PERSONA",
     "tipo": "parque",
-    "descripcion": "Virginia Bolten (¿-?), militante anarquista y feminista uruguaya; es la primera mujer oradora en una concentración realizada en la ciudad de Rosario el 1º de mayo de 1890; durante 1896 y 1897 está al frente de la primera publicación feminista La voz de la Mujer en Rosario; en 1904 se traslada a Buenos Aires e integra el Comité de Huelga Femenino que participa en las huelgas de los trabajadores del Mercado de Frutos y en la de Inquilinos de 1907; organizadora del Centro Femenino Anarquista; es deportada a su país natal.",
+    "descripcion": "Virginia Bolten (1876-1960), militante anarquista y feminista uruguaya; es la primera mujer oradora en una concentración realizada en la ciudad de Rosario el 1º de mayo de 1890; durante 1896 y 1897 está al frente de la primera publicación feminista La voz de la Mujer en Rosario; en 1904 se traslada a Buenos Aires e integra el Comité de Huelga Femenino que participa en las huelgas de los trabajadores del Mercado de Frutos y en la de Inquilinos de 1907; organizadora del Centro Femenino Anarquista; es deportada a su país natal.",
     "letra": "B"
   },
   {
@@ -31068,5 +31068,25 @@
     "tipo": "autopista",
     "descripcion": "Francisco Pascasio Moreno (1852-1919), conocido como el Perito Moreno, científico, naturalista, conservacionista, político, botánico, explorador y geógrafo de la Generación del Ochenta de la Argentina.",
     "letra": "M"
+  },
+  {
+    "nombre_original": "INMIGRANTES, PASEO DE LOS",
+    "nombre_busqueda": "Paseo de los Inmigrantes",
+    "clave": "paseo de los inmigrantes",
+    "id": "paseo de los inmigrantes|paseo",
+    "categoria": "CONCEPTO",
+    "tipo": "paseo",
+    "descripcion": "Homenaje a los millones de inmigrantes que poblaron y pueblan la República Argentina.",
+    "letra": "I"
+  },
+  {
+    "nombre_original": "TIERRA DEL FUEGO, PROVINCIA DE",
+    "nombre_busqueda": "Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+    "clave": "provincia de tierra del fuego antartida e islas del atlantico sur",
+    "id": "provincia de tierra del fuego antartida e islas del atlantico sur|cantero central",
+    "categoria": "LUGAR",
+    "tipo": "cantero central",
+    "descripcion": "Tierra del Fuego, Antártida e Islas del Atlántico Sur: provincia de la República Argentina. Capital: Ushuaia.",
+    "letra": "T"
   }
 ]
