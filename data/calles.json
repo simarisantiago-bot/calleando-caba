@@ -6100,10 +6100,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "ONZARI, CESÁRIO",
-    "nombre_busqueda": "Cesário Onzari",
-    "clave": "cesario onzari",
-    "id": "cesario onzari|cantero central",
+    "nombre_original": "ONZARI, CESÁREO",
+    "nombre_busqueda": "Cesáreo Onzari",
+    "clave": "cesareo onzari",
+    "id": "cesareo onzari|cantero central",
     "categoria": "PERSONA",
     "tipo": "cantero central",
     "descripcion": "Cesário Onzari (1903-1964), futbolista del club Huracán; autor del primer gol directo desde un tiro de esquina ocurrido el 1° de octubre de 1924, jugando para el seleccionado argentino, en la cancha del Club Sportivo Barracas, contra el seleccionado de Uruguay. El gol recibió el nombre de olímpico ya que la selección uruguaya había obtenido ese año el campeonato en los Juegos Olímpicos de Francia.",
@@ -6873,9 +6873,9 @@
     "nombre_original": "PIRKER, COMISARIO GENERAL JUAN ÁNGEL",
     "nombre_busqueda": "Comisario General Juan Ángel Pirker",
     "clave": "comisario general juan angel pirker",
-    "id": "comisario general juan angel pirker|boulevard",
+    "id": "comisario general juan angel pirker|paseo",
     "categoria": "PERSONA",
-    "tipo": "boulevard",
+    "tipo": "paseo",
     "descripcion": "Juan Ángel Pirker (1934-1989), policía; jefe de la Policía Federal Argentina, desde 1986 hasta su sorpresivo fallecimiento; a lo largo de su carrera, recibe varias distinciones, entre ellas el premio a la conducta, en 1954, y la Orden de Caballero de San Martín de Tours, en 1988.",
     "letra": "P"
   },
@@ -11671,7 +11671,7 @@
   },
   {
     "nombre_original": "GUEVARA, ERNESTO “CHE”",
-    "nombre_busqueda": "Ernesto “che” Guevara",
+    "nombre_busqueda": "Ernesto “Che” Guevara",
     "clave": "ernesto che guevara",
     "id": "ernesto che guevara|cantero central",
     "categoria": "PERSONA",
@@ -20876,7 +20876,7 @@
     "id": "mary teran de weiss|cantero central",
     "categoria": "PERSONA",
     "tipo": "cantero central",
-    "descripcion": "María Luisa Terán de Weiss (1934-1984), tenista; gana los campeonatos internacionales en singles y dobles de Uruguay, Brasil, Dinamarca, Suiza, Bélgica, Yugoslavia, Austria, Francia, España, Filipinas, Grecia, Turquía, Israel, Líbano, Pakistán, India, Egipto, Italia, Portugal y Nicosia.",
+    "descripcion": "María Luisa Beatriz Terán (1918-1984), conocida como Mary Terán de Weiss, tenista argentina, la primera de esta nacionalidad en alcanzar los primeros planos del tenis mundial.",
     "letra": "T"
   },
   {
@@ -31138,5 +31138,45 @@
     "tipo": "sendero peatonal",
     "descripcion": "Juana Manuela Gorriti Zuviria (1818-1892), escritora y cronista argentina, considerada la primera mujer novelista de la literatura argentina. Autora de La tierra natal, Perfiles y Veladas literarias.",
     "letra": "G"
+  },
+  {
+    "nombre_original": "VERA DE ANGUITA, MATILDE",
+    "nombre_busqueda": "Matilde Vera de Anguita",
+    "clave": "matilde vera de anguita",
+    "id": "matilde vera de anguita|plazoleta",
+    "categoria": "PERSONA",
+    "tipo": "plazoleta",
+    "descripcion": "Matilde Vera de Anguita (1926-1978), detenida-desaparecida durante la última dictadura cívico-militar de Argentina.",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "OBLIGADO, VUELTA DE",
+    "nombre_busqueda": "Vuelta de Obligado",
+    "clave": "vuelta de obligado",
+    "id": "vuelta de obligado|parque",
+    "categoria": "ACCIÓN MILITAR",
+    "tipo": "parque",
+    "descripcion": "Vuelta de Obligado: recodo que forma el río Paraná entre San Pedro y Ramallo, donde el 20 de noviembre de 1845 las fuerzas de la Confederación, al mando del general Lucio Norberto Mansilla se baten contra la escuadra anglo-francesa. El sitio fue declarado Lugar Histórico por Decreto N° 120.411 del 1 de mayo de 1942.",
+    "letra": "O"
+  },
+  {
+    "nombre_original": "FÁTIMA, NUESTRA SEÑORA DE",
+    "nombre_busqueda": "Nuestra Señora de Fátima",
+    "clave": "nuestra senora de fatima",
+    "id": "nuestra senora de fatima|plaza",
+    "categoria": "RELIGIÓN",
+    "tipo": "plaza",
+    "descripcion": "Virgen de Fátima, formalmente Nuestra Señora del Rosario de Fátima, es una advocación con que se venera en el catolicismo a la Virgen María.",
+    "letra": "F"
+  },
+  {
+    "nombre_original": "TORRIJOS, OMAR",
+    "nombre_busqueda": "Omar Torrijos",
+    "clave": "omar torrijos",
+    "id": "omar torrijos|cantero central",
+    "categoria": "PERSONA",
+    "tipo": "cantero central",
+    "descripcion": "Omar Torrijos (1921-1981), militar y político panameño; participa en el derrocamiento de Arnulfo Arias en 1968; nombrado Jefe de Gobierno en 1972 hasta 1981.",
+    "letra": "T"
   }
 ]
