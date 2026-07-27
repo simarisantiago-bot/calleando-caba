@@ -229,8 +229,14 @@ html, body {
     transition: background 0.12s;
 }
 
-.theme-menu li:hover {
+.theme-menu li:hover,
+.theme-menu li:focus-visible {
     background: #f1f3f4;
+}
+
+.theme-menu li:focus-visible {
+    outline: 2px solid #1a73e8;
+    outline-offset: -2px;
 }
 
 .theme-menu li.activo {
@@ -307,7 +313,8 @@ body.tema-oscuro .theme-menu li {
     color: #e8eaed;
 }
 
-body.tema-oscuro .theme-menu li:hover {
+body.tema-oscuro .theme-menu li:hover,
+body.tema-oscuro .theme-menu li:focus-visible {
     background: #3c4043;
 }
 

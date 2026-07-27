@@ -355,7 +355,9 @@
     function marcarTemaActivo() {
         if (!$themeMenu) return;
         for (const li of $themeMenu.querySelectorAll("li[data-tema]")) {
-            li.classList.toggle("activo", li.dataset.tema === temaActual);
+            const activo = li.dataset.tema === temaActual;
+            li.classList.toggle("activo", activo);
+            li.setAttribute("aria-checked", String(activo));
         }
     }
 
@@ -2009,6 +2011,22 @@
                 if (!li) return;
                 aplicarTema(li.dataset.tema);
                 $themeMenu.hidden = true;
+            });
+            // Navegación por teclado: Enter/Espacio elige, Escape cierra y
+            // devuelve el foco al botón (mismo patrón que brand-home).
+            $themeMenu.addEventListener("keydown", (e) => {
+                const li = e.target.closest("li[data-tema]");
+                if (!li) return;
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    aplicarTema(li.dataset.tema);
+                    $themeMenu.hidden = true;
+                    $btnTheme.focus();
+                } else if (e.key === "Escape") {
+                    e.preventDefault();
+                    $themeMenu.hidden = true;
+                    $btnTheme.focus();
+                }
             });
             // Click fuera cierra el menú
             document.addEventListener("click", (e) => {
