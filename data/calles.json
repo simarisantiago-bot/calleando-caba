@@ -31198,5 +31198,25 @@
     "tipo": "plazoleta",
     "descripcion": "Sara Vaamonde (¿-?), primera presidenta de AVEFA (Asociación Vecinal Florentino Ameghino), asociación encargada del cuidado de este espacio verde.",
     "letra": "V"
+  },
+  {
+    "nombre_original": "11 DE NOVIEMBRE DE 1859",
+    "nombre_busqueda": "11 de Noviembre de 1859",
+    "clave": "11 de noviembre de 1859",
+    "id": "11 de noviembre de 1859|plazoleta",
+    "categoria": "FECHA",
+    "tipo": "plazoleta",
+    "descripcion": "11 de Noviembre de 1859: fecha en que se firma el pacto de San José de Flores, por el cual Buenos Aires se declara \"parte integrante de la República Argentina\".",
+    "letra": "1"
+  },
+  {
+    "nombre_original": "DEL BUEN VECINO",
+    "nombre_busqueda": "Del Buen Vecino",
+    "clave": "del buen vecino",
+    "id": "del buen vecino|plazoleta",
+    "categoria": "CONCEPTO",
+    "tipo": "plazoleta",
+    "descripcion": "Homenaje a los vecinos del barrio.",
+    "letra": "B"
   }
 ]
