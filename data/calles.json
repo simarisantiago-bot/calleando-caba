@@ -9886,7 +9886,7 @@
     "id": "doctor norberto pinero|plazoleta",
     "categoria": "PERSONA",
     "tipo": "plazoleta",
-    "descripcion": "911. Norberto Piñero (1858-1938), jurisconsulto; promueve la creación de escuelas de educación técnica y crea la Sociedad de Educación Industrial; ministro de Hacienda de 1906 a 1910; funda el Colegio de Abogados de Buenos Aires; autor de Nociones de derecho general, civil y político y La enseñanza técnica.",
+    "descripcion": "Norberto Piñero (1858-1938), jurisconsulto; promueve la creación de escuelas de educación técnica y crea la Sociedad de Educación Industrial; ministro de Hacienda de 1906 a 1910; funda el Colegio de Abogados de Buenos Aires; autor de Nociones de derecho general, civil y político y La enseñanza técnica.",
     "letra": "P"
   },
   {
@@ -31218,5 +31218,25 @@
     "tipo": "plazoleta",
     "descripcion": "Homenaje a los vecinos del barrio.",
     "letra": "B"
+  },
+  {
+    "nombre_original": "DE LAS ESCUELAS",
+    "nombre_busqueda": "De las Escuelas",
+    "clave": "de las escuelas",
+    "id": "de las escuelas|plazoleta",
+    "categoria": "CONCEPTO",
+    "tipo": "plazoleta",
+    "descripcion": "Homenaje a las escuelas de nuestra ciudad.",
+    "letra": "E"
+  },
+  {
+    "nombre_original": "17 DE MAYO",
+    "nombre_busqueda": "17 de Mayo",
+    "clave": "17 de mayo",
+    "id": "17 de mayo|plazoleta",
+    "categoria": "FECHA",
+    "tipo": "plazoleta",
+    "descripcion": "17 de mayo, fecha en que fue inaugurada este espacio verde, gracias a las gestiones de la Sociedad de Fomento 17 de mayo.",
+    "letra": "1"
   }
 ]
