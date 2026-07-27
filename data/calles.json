@@ -31178,5 +31178,25 @@
     "tipo": "cantero central",
     "descripcion": "Omar Torrijos (1921-1981), militar y político panameño; participa en el derrocamiento de Arnulfo Arias en 1968; nombrado Jefe de Gobierno en 1972 hasta 1981.",
     "letra": "T"
+  },
+  {
+    "nombre_original": "AMAYA, MARIO",
+    "nombre_busqueda": "Mario Amaya",
+    "clave": "mario amaya",
+    "id": "mario amaya|plazoleta",
+    "categoria": "PERSONA",
+    "tipo": "plazoleta",
+    "descripcion": "Mario Abel Amaya (1935-1976), abogado y político argentino; activista reformista en la universidad y miembro de la Unión Cívica Radical; diputado nacional desde 1973 hasta 1976, cuando fue detenido-desaparecido por la última dictadura cívico-militar, muriendo como consecuencia de las torturas a las que fue sometido.",
+    "letra": "A"
+  },
+  {
+    "nombre_original": "VAAMONDE, SARA",
+    "nombre_busqueda": "Sara Vaamonde",
+    "clave": "sara vaamonde",
+    "id": "sara vaamonde|plazoleta",
+    "categoria": "PERSONA",
+    "tipo": "plazoleta",
+    "descripcion": "Sara Vaamonde (¿-?), primera presidenta de AVEFA (Asociación Vecinal Florentino Ameghino), asociación encargada del cuidado de este espacio verde.",
+    "letra": "V"
   }
 ]
