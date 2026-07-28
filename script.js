@@ -1088,30 +1088,47 @@
         mapa.flyTo([lat, lon], 17, { duration: 0.8 });
     }
 
-    /**
-     * Elige una entrada al azar entre las que tienen geometría cacheada
-     * y respeta el filtro de barrio/comuna activo. Si no hay ninguna que
-     * cumpla, lo intenta sin filtro como fallback.
-     */
-    function calleAlAzar() {
-        if (!Array.isArray(calles) || calles.length === 0) return;
+    /** Fecha de "hoy" en huso horario de Buenos Aires, como "YYYY-MM-DD".
+     *  Se usa como semilla fija del día: así la calle del día es la misma
+     *  para todos los visitantes sin importar el huso horario de cada uno. */
+    function fechaDeHoyBA() {
+        return new Intl.DateTimeFormat("en-CA", {
+            timeZone: "America/Argentina/Buenos_Aires",
+        }).format(new Date());
+    }
 
-        const tieneCache = (c) => {
-            const k = c.id || c.clave;
-            return !!geoCache[k];
-        };
-
-        // Primer intento: respeta filtro de barrio/comuna activo
-        let pool = calles.filter((c) => tieneCache(c) && entradaCoincideFiltro(c));
-        // Si el filtro deja vacío (ej. comuna sin nada), caer al universo
-        if (pool.length === 0) {
-            pool = calles.filter(tieneCache);
+    /** Hash determinístico simple (FNV-1a-like) de un string a un entero >= 0. */
+    function hashDeterministico(str) {
+        let h = 0;
+        for (let i = 0; i < str.length; i++) {
+            h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
         }
-        if (pool.length === 0) {
+        return Math.abs(h);
+    }
+
+    /**
+     * Elige la entrada "del día" entre las que tienen geometría cacheada,
+     * usando la fecha de hoy (en Buenos Aires) como semilla. No respeta el
+     * filtro de categoría/barrio activo: es un único valor fijo por día,
+     * igual para todos los visitantes.
+     */
+    function calleDelDia() {
+        if (!Array.isArray(calles) || calles.length === 0) return null;
+
+        const tieneCache = (c) => !!geoCache[c.id || c.clave];
+        const pool = calles.filter(tieneCache);
+        if (pool.length === 0) return null;
+
+        const indice = hashDeterministico(fechaDeHoyBA()) % pool.length;
+        return pool[indice];
+    }
+
+    function mostrarCalleDelDia() {
+        const elegida = calleDelDia();
+        if (!elegida) {
             mostrarToast("Todavía no hay calles cacheadas.", 3000);
             return;
         }
-        const elegida = pool[Math.floor(Math.random() * pool.length)];
         seleccionarEntrada(elegida);
     }
 
@@ -2037,9 +2054,9 @@
         // Botón buscar
         $btnBuscar.addEventListener("click", buscarPorTexto);
 
-        // Botón "calle al azar"
+        // Botón "calle del día"
         if ($btnRandom) {
-            $btnRandom.addEventListener("click", calleAlAzar);
+            $btnRandom.addEventListener("click", mostrarCalleDelDia);
         }
 
         // Botón "Cerca mío" (geolocalización)
