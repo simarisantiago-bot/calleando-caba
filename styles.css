@@ -1152,6 +1152,10 @@ body.tema-oscuro .stats-bar-track {
     background: #3c4043;
 }
 
+body.tema-oscuro .stats-bar-value {
+    color: #9aa0a6;
+}
+
 body.tema-oscuro .stats-close svg {
     fill: #9aa0a6;
 }
@@ -1164,7 +1168,7 @@ body.tema-oscuro .stats-btn {
 /* Responsive */
 @media (max-width: 480px) {
     .stats-btn {
-        top: 70px;  /* debajo del search box en mobile */
+        top: 105px;  /* debajo del search box en mobile (97px + margen) */
         right: 8px;
         height: 40px;
         padding: 0 14px 0 10px;
@@ -1389,6 +1393,55 @@ path.leaflet-interactive:focus {
     height: 100%;
     color: var(--cat-color, #9aa0a6);
     opacity: 0.7;
+}
+
+/* Modo oscuro del popup: por defecto quedaba blanco puro (Leaflet no lo
+   tiñe solo), un cartel brillante muy llamativo sobre el mapa oscuro. */
+body.tema-oscuro .leaflet-popup-content-wrapper,
+body.tema-oscuro .leaflet-popup-tip {
+    background: #2a2d34;
+}
+
+body.tema-oscuro .leaflet-popup-content {
+    color: #e8eaed;
+}
+
+body.tema-oscuro .popup-title {
+    color: #f1f3f4;
+}
+
+body.tema-oscuro .popup-sub {
+    color: #9aa0a6;
+}
+
+body.tema-oscuro .popup-desc {
+    color: #c7cad1;
+}
+
+body.tema-oscuro .popup-share-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+    border-color: #3c4043;
+}
+
+body.tema-oscuro .popup-share-btn:hover {
+    background: #3c4043;
+    border-color: #8ab4f8;
+}
+
+body.tema-oscuro .popup-share-btn.copiado {
+    color: #81c995;
+    border-color: #81c995;
+    background: #1e3a2a;
+}
+
+body.tema-oscuro .popup-media {
+    background: #3c4043;
+}
+
+body.tema-oscuro .popup-media-skeleton {
+    background: linear-gradient(100deg, #3c4043 30%, #4a4e57 50%, #3c4043 70%);
+    background-size: 200% 100%;
 }
 
 /* -------- Responsive -------- */

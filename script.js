@@ -49,6 +49,49 @@
         return COLORES_CATEGORIA[cat] || LINE_COLOR;
     }
 
+    // Versión oscurecida de algunos colores de COLORES_CATEGORIA, solo para
+    // usar como color de TEXTO sobre fondo blanco (chip .popup-cat, tema
+    // claro/Voyager). El color original de esas 5 categorías no llega al
+    // contraste mínimo de WCAG AA (4.5:1) en texto chico; el resto de la
+    // paleta ya lo cumple tal cual.
+    const COLORES_CATEGORIA_TEXTO = {
+        "FECHA":      "#9d6b03",
+        "NATURALEZA": "#12883e",
+        "ARTE":       "#cd4d0b",
+        "RÍO":        "#07819e",
+        "LUGAR":      "#0b8177",
+    };
+
+    // Versión aclarada de TODA la paleta, para usar como color de texto del
+    // mismo chip cuando el tema es Oscuro: sobre fondo oscuro los colores
+    // "de mapa" (pensados para líneas sobre un tile claro) no alcanzan 4.5:1.
+    const COLORES_CATEGORIA_TEXTO_OSCURO = {
+        "PERSONA":             "#7baef2",
+        "LUGAR":               "#11c3b3",
+        "NATURALEZA":          "#1bc75a",
+        "ACCIÓN MILITAR":      "#ee9494",
+        "CONCEPTO":            "#bd9cf6",
+        "OTROS":               "#a6abb5",
+        "ARTE":                "#f7905b",
+        "BARCO":               "#96abe8",
+        "FECHA":               "#e89e05",
+        "CUERPO MILITAR":      "#ec9494",
+        "PUEBLOS ORIGINARIOS": "#f4950b",
+        "RELIGIÓN":            "#c999f4",
+        "RÍO":                 "#0ab9e3",
+        "INSTITUCIÓN":         "#9facbe",
+        "LITERATURA":          "#ec90b9",
+    };
+
+    function colorTextoParaEntrada(entrada) {
+        if (!entrada) return LINE_COLOR;
+        const cat = (entrada.categoria || "").trim().toUpperCase();
+        if (document.body.classList.contains("tema-oscuro")) {
+            return COLORES_CATEGORIA_TEXTO_OSCURO[cat] || COLORES_CATEGORIA[cat] || LINE_COLOR;
+        }
+        return COLORES_CATEGORIA_TEXTO[cat] || COLORES_CATEGORIA[cat] || LINE_COLOR;
+    }
+
     // Tipos que se dibujan como línea (calles); el resto como marcador.
     const TIPOS_LINEA = new Set([
         "calle", "avenida", "pasaje peatonal", "autopista",
@@ -1473,11 +1516,16 @@
     function construirPopup(entrada, mediaId) {
         const subtitulo = (entrada.tipo || "").trim();
         const color = colorParaEntrada(entrada);
+        const colorTexto = colorTextoParaEntrada(entrada);
         const cat = (entrada.categoria || "").trim();
+        const enOscuro = document.body.classList.contains("tema-oscuro");
 
-        // Chip de categoría con su color
+        // Chip de categoría con su color. El fondo en tema Oscuro se fija a
+        // un gris sólido (en vez de una mezcla alfa sobre el color "de mapa",
+        // cuyo contraste real es impredecible); el texto usa la variante
+        // aclarada/oscurecida con contraste AA calculada arriba.
         const chip = cat
-            ? `<span class="popup-cat" style="background-color: ${color}1a; color: ${color};">${escapeHtml(cat.toLowerCase())}</span>`
+            ? `<span class="popup-cat" style="background-color: ${enOscuro ? "#3c4043" : color + "1a"}; color: ${colorTexto};">${escapeHtml(cat.toLowerCase())}</span>`
             : "";
 
         // Contenedor de imagen con skeleton; se rellena en montarMediaPopup().
@@ -1936,11 +1984,11 @@
             const li = document.createElement("li");
             li.className = "stats-bar";
             li.innerHTML = `
-                <span class="stats-bar-label" style="color: ${color};">${escapeHtml(cat.toLowerCase())}</span>
+                <span class="stats-bar-label">${escapeHtml(cat.toLowerCase())}</span>
                 <span class="stats-bar-track" style="background-color: ${color}40;">
                     <span class="stats-bar-fill" style="width: ${pct}%; background-color: ${color};"></span>
                 </span>
-                <span class="stats-bar-value" style="color: ${color};">${pct.toFixed(1)}% · ${n.toLocaleString("es-AR")}</span>
+                <span class="stats-bar-value">${pct.toFixed(1)}% · ${n.toLocaleString("es-AR")}</span>
             `;
             $statsCategorias.appendChild(li);
         }
