@@ -1306,9 +1306,21 @@
     // si van más norte-sur, el popup se abre a la izquierda o derecha; si van
     // más este-oeste, arriba o abajo. Los puntos (plazas, parques, etc.) llevan
     // el popup pegado justo encima, como antes.
-    const POPUP_GAP = 14; // separación entre el trazado/punto y el popup
+    // Separación entre el trazado/punto y el popup. "extensionFormaPx" mide
+    // el bounding box GEOMÉTRICO de la calle (el centro de la línea), pero
+    // el trazo dibujado tiene weight:8 (o 3 para áreas) y se renderiza
+    // centrado sobre esa línea, así que sobresale ~4px de cada lado del
+    // bounding box geométrico. El gap tiene que cubrir eso además del hueco
+    // visual real, si no el popup queda pegado justo encima del trazo.
+    const POPUP_GAP = 22;
     const POPUP_ANCHO_ESTIMADO = 340; // ancho aprox. de la caja (se re-mide después)
     const POPUP_ALTO_ESTIMADO = 200; // alto aprox. inicial (varía mucho según contenido)
+
+    // Tamaño del ícono default de Leaflet (25x41, anclado en la punta
+    // inferior): el cuerpo del pin sobresale esto por ENCIMA del punto
+    // geográfico. Si el popup se abre "arriba", tiene que esquivarlo (si se
+    // abre "abajo" no hace falta: el pin no tiene cuerpo por debajo de la punta).
+    const MARKER_ICON_ALTO = 41;
 
     // ¿La forma es más "vertical" (norte-sur) u "horizontal" (este-oeste)?
     // Se compara en metros, no en grados: en CABA un grado de longitud mide
@@ -1389,35 +1401,101 @@
     // Reacomoda el popup ya renderizado: primero recalcula el offset con su
     // tamaño REAL (la altura sobre todo varía mucho según el contenido — con
     // foto, sin foto, descripción larga o corta — así que la primera pasada
-    // solo usa un tamaño estimado). Si aun con eso se sale de la pantalla o
-    // queda tapado por la caja de búsqueda, lo corre lo justo y necesario.
+    // solo usa un tamaño estimado). Si con ese tamaño real el lado elegido
+    // no entra sin salirse de la pantalla (o sin quedar tapado por la caja
+    // de búsqueda), se prueba el lado OPUESTO antes de resignarse: puede que
+    // ahí sí entre limpio. Si NINGÚN lado entra completo verticalmente
+    // (calle este-oeste ancha + popup alto en una pantalla chica), en vez
+    // de terminar tapando el trazado se achica el contenido con scroll
+    // interno para que quepa justo en el espacio real disponible.
     function posicionarPopup(popup, direccion, extension) {
         const el = popup.getElement();
         if (!el) return;
         const wrapper = el.querySelector(".leaflet-popup-content-wrapper") || el;
-        let rect = wrapper.getBoundingClientRect();
+        const contenido = el.querySelector(".leaflet-popup-content");
+        if (contenido) {
+            contenido.style.maxHeight = "";
+            contenido.style.overflowY = "";
+        }
 
-        popup.options.offset = offsetParaDireccion(direccion, rect.width, rect.height, extension);
-        popup.update();
-        rect = wrapper.getBoundingClientRect();
+        function limites() {
+            const cajaBusqueda = document.querySelector(".search-box");
+            return {
+                arriba: (cajaBusqueda ? cajaBusqueda.getBoundingClientRect().bottom : 0) + 10,
+                abajo: window.innerHeight - 10,
+                izq: 10,
+                der: window.innerWidth - 10,
+            };
+        }
 
-        const cajaBusqueda = document.querySelector(".search-box");
-        const limiteSuperior = (cajaBusqueda ? cajaBusqueda.getBoundingClientRect().bottom : 0) + 10;
-        const limiteInferior = window.innerHeight - 10;
-        const limiteIzq = 10;
-        const limiteDer = window.innerWidth - 10;
+        function correccionPara(dir) {
+            const rect0 = wrapper.getBoundingClientRect();
+            popup.options.offset = offsetParaDireccion(dir, rect0.width, rect0.height, extension);
+            popup.update();
+            const rect = wrapper.getBoundingClientRect();
+            const lim = limites();
+            let dx = 0;
+            let dy = 0;
+            if (rect.left < lim.izq) dx = lim.izq - rect.left;
+            else if (rect.right > lim.der) dx = lim.der - rect.right;
+            if (rect.top < lim.arriba) dy = lim.arriba - rect.top;
+            else if (rect.bottom > lim.abajo) dy = lim.abajo - rect.bottom;
+            return { dx, dy };
+        }
 
-        let dx = 0;
-        let dy = 0;
-        if (rect.left < limiteIzq) dx = limiteIzq - rect.left;
-        else if (rect.right > limiteDer) dx = limiteDer - rect.right;
-        if (rect.top < limiteSuperior) dy = limiteSuperior - rect.top;
-        else if (rect.bottom > limiteInferior) dy = limiteInferior - rect.bottom;
+        const esVertical = direccion === "izquierda" || direccion === "derecha";
+        const opuesta = { arriba: "abajo", abajo: "arriba", izquierda: "derecha", derecha: "izquierda" }[direccion];
+
+        let final = direccion;
+        let { dx, dy } = correccionPara(direccion);
+        const invade = esVertical ? dx !== 0 : dy !== 0;
+
+        if (invade) {
+            const corrOpuesta = correccionPara(opuesta);
+            const opuestaInvade = esVertical ? corrOpuesta.dx !== 0 : corrOpuesta.dy !== 0;
+            const invasionActual = esVertical ? Math.abs(dx) : Math.abs(dy);
+            const invasionOpuesta = esVertical ? Math.abs(corrOpuesta.dx) : Math.abs(corrOpuesta.dy);
+            if (!opuestaInvade || invasionOpuesta < invasionActual) {
+                // El lado opuesto entra limpio (o invade menos): nos quedamos ahí.
+                final = opuesta;
+                dx = corrOpuesta.dx;
+                dy = corrOpuesta.dy;
+            } else {
+                // Nos quedamos con el original: hay que volver a aplicarlo,
+                // correccionPara(opuesta) dejó el offset puesto en el otro lado.
+                ({ dx, dy } = correccionPara(direccion));
+            }
+        }
+
+        // Ni el lado elegido (ya el "menos malo" de los dos) entra sin
+        // salirse verticalmente: hay que achicar el contenido, no tapar el
+        // trazado. "dy" ya es (casi) exactamente cuánto se pasa de alto, así
+        // que restándoselo a la altura actual el popup queda del tamaño
+        // justo que sí entra (con scroll interno para lo que no se vea de
+        // una). Se repite un par de veces por si el redondeo del primer
+        // achique deja un resto chico.
+        if (!esVertical && dy !== 0 && contenido) {
+            for (let intento = 0; intento < 3 && dy !== 0; intento++) {
+                const alturaActual = contenido.getBoundingClientRect().height;
+                const alturaNueva = Math.max(80, alturaActual - Math.abs(dy) - 1);
+                if (alturaNueva >= alturaActual) break; // ya no hay más para achicar
+                contenido.style.maxHeight = alturaNueva + "px";
+                contenido.style.overflowY = "auto";
+                ({ dx, dy } = correccionPara(final));
+            }
+        }
 
         if (dx !== 0 || dy !== 0) {
             const actual = L.point(popup.options.offset);
             popup.options.offset = L.point(actual.x + dx, actual.y + dy);
             popup.update();
+        }
+
+        // La flechita solo tiene sentido cuando el popup terminó "arriba"
+        // del trazado/punto (ver arriba); si el lado final cambió, hay que
+        // sincronizar la clase que la oculta.
+        if (final !== direccion) {
+            el.classList.toggle("popup-sin-flecha", final !== "arriba");
         }
     }
 
@@ -1496,6 +1574,16 @@
                 title: entrada.nombre_busqueda,
             }).addTo(mapa);
 
+            // El ícono default de Leaflet trae su propio "popupAnchor"
+            // ([1,-34]) que se SUMA a cualquier offset que le pasemos a
+            // bindPopup, descuadrando todas las cuentas de más abajo (están
+            // pensadas para que offset.y sea la única fuente de verdad). Se
+            // neutraliza para que el marker se comporte igual que un popup
+            // standalone (línea/área).
+            if (capaActual.options.icon && capaActual.options.icon.options) {
+                capaActual.options.icon.options.popupAnchor = [0, 0];
+            }
+
             if (resultado.bbox) {
                 const [latMin, latMax, lonMin, lonMax] = resultado.bbox.map(parseFloat);
                 mapa.fitBounds([[latMin, lonMin], [latMax, lonMax]], {
@@ -1507,21 +1595,24 @@
                 mapa.setView(resultado.center, 17, { animate: false });
             }
 
-            // Pegado al pin: arriba si hay lugar, si no abajo (misma cuenta
-            // de espacio disponible que usan las calles este-oeste, solo
-            // que un punto no tiene "extensión" propia que esquivar).
+            // Pegado al pin: arriba si hay lugar, si no abajo (mismo cálculo
+            // de espacio disponible que usan las calles este-oeste). "Arriba"
+            // tiene que esquivar el cuerpo del ícono, que sobresale por
+            // encima del punto geográfico; "abajo" no, ahí el pin no tiene
+            // nada por debajo de su punta.
             const anchorPxMarker = mapa.latLngToContainerPoint(capaActual.getLatLng());
             const direccion = elegirDireccion("horizontal", null, anchorPxMarker);
+            const extensionMarker = direccion === "arriba" ? MARKER_ICON_ALTO : 0;
             const claseExtra = direccion === "arriba" ? "" : " popup-sin-flecha";
             capaActual.bindPopup(popupHtml, {
-                offset: offsetParaDireccion(direccion, POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO),
+                offset: offsetParaDireccion(direccion, POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, extensionMarker),
                 autoPan: false,
                 className: "calleando-popup" + claseExtra,
             }).openPopup();
             // bindPopup()/openPopup() devuelven el marker (para encadenar),
             // no el popup: hay que pedirlo aparte para poder medirlo/ajustarlo.
             popupActual = capaActual.getPopup();
-            posicionarPopup(popupActual, direccion);
+            posicionarPopup(popupActual, direccion, extensionMarker);
         }
 
         // El popup ya está en el DOM: cargamos la imagen de Wikipedia de forma
