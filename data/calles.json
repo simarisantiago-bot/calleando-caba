@@ -20413,9 +20413,9 @@
     "nombre_original": "BEMBERG, MARÍA LUISA",
     "nombre_busqueda": "María Luisa Bemberg",
     "clave": "maria luisa bemberg",
-    "id": "maria luisa bemberg|calle",
+    "id": "maria luisa bemberg|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "María Luisa Bemberg Bengolea (1922-1995), directora de cine y guionista que se destacó como creadora de películas con temáticas referidas a la emancipación y reivindicación de la mujer. Su película Camila fue elegida para competir por el premio Óscar como mejor película extranjera, una de las siete películas que accedieron a una candidatura en la historia del cine argentino. Tenaz activista del feminismo y una de las fundadoras de la Unión Feminista Argentina, lo que la llevó a realizar un arte vinculado a la problemática de la mujer.",
     "letra": "B"
   },
@@ -31238,5 +31238,55 @@
     "tipo": "plazoleta",
     "descripcion": "17 de mayo, fecha en que fue inaugurada este espacio verde, gracias a las gestiones de la Sociedad de Fomento 17 de mayo.",
     "letra": "1"
+  },
+  {
+    "nombre_original": "ELEFANTE BLANCO",
+    "nombre_busqueda": "Elefante Blanco",
+    "clave": "elefante blanco",
+    "id": "elefante blanco|parque",
+    "categoria": "CONCEPTO",
+    "tipo": "parque",
+    "descripcion": "Elefante Blanco, nombre del edificio que se encontraba allí y fue demolido para dar lugar a este espacio verde.",
+    "letra": "E"
+  },
+  {
+    "nombre_original": "MALVINAS ARGENTINAS 2",
+    "nombre_busqueda": "Malvinas Argentinas 2",
+    "clave": "malvinas argentinas 2",
+    "id": "malvinas argentinas 2|calle",
+    "categoria": "LUGAR",
+    "tipo": "calle",
+    "descripcion": "Islas Malvinas: archipiélago situado en el océano Atlántico al este del estrecho de Magallanes. Ocupado por Gran Bretaña desde 1833, pertenecen por derecho a la República Argentina.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "JUAN XXIII",
+    "nombre_busqueda": "Juan XXIII",
+    "clave": "juan xxiii",
+    "id": "juan xxiii|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Ángelo Giuseppe Roncalli, Juan XXIII (1881-1963), sacerdote; Papa de la Iglesia Católica de 1958 a 1963; da a luz las encíclicas Mater et Magistra, Aeterna Dei Sapientia y Pacem in terris.",
+    "letra": "J"
+  },
+  {
+    "nombre_original": "JUAN XXIII",
+    "nombre_busqueda": "Juan XXIII",
+    "clave": "juan xxiii",
+    "id": "juan xxiii|sendero peatonal",
+    "categoria": "PERSONA",
+    "tipo": "sendero peatonal",
+    "descripcion": "Ángelo Giuseppe Roncalli, Juan XXIII (1881-1963), sacerdote; Papa de la Iglesia Católica de 1958 a 1963; da a luz las encíclicas Mater et Magistra, Aeterna Dei Sapientia y Pacem in terris.",
+    "letra": "J"
+  },
+  {
+    "nombre_original": "GUERRA GAUCHA",
+    "nombre_busqueda": "Guerra Gaucha",
+    "clave": "guerra gaucha",
+    "id": "guerra gaucha|calle",
+    "categoria": "ACCIÓN MILITAR",
+    "tipo": "calle",
+    "descripcion": "Guerra gaucha: lucha de milicias y guerrillas llevada adelante en el Noroeste argentino contra los ejércitos realistas durante la Guerra de Independencia de la Argentina (1810-1824), en la Provincia de Salta.",
+    "letra": "G"
   }
 ]
