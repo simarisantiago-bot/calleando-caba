@@ -31288,5 +31288,15 @@
     "tipo": "calle",
     "descripcion": "Guerra gaucha: lucha de milicias y guerrillas llevada adelante en el Noroeste argentino contra los ejércitos realistas durante la Guerra de Independencia de la Argentina (1810-1824), en la Provincia de Salta.",
     "letra": "G"
+  },
+  {
+    "nombre_original": "SUIZO",
+    "nombre_busqueda": "Suizo",
+    "clave": "suizo",
+    "id": "suizo|sendero peatonal",
+    "categoria": "CONCEPTO",
+    "tipo": "sendero peatonal",
+    "descripcion": "¿?",
+    "letra": "S"
   }
 ]
