@@ -1057,7 +1057,7 @@
         // Un círculo chico por cada calle cercana
         const markers = [];
         for (const item of cercanas) {
-            const color = colorParaCategoria(item.entrada.categoria);
+            const color = colorParaEntrada(item.entrada);
             const distTxt = item.dist < 100
                 ? `${Math.round(item.dist)} m`
                 : `${(item.dist / 1).toFixed(0)} m`;
