@@ -1250,7 +1250,10 @@ path.leaflet-interactive:focus {
     font-size: 14px;
     line-height: 1.5;
     color: #202124;
-    max-width: 320px !important;
+    /* El ancho lo controla script.js vía popup.options.maxWidth (Leaflet lo
+       aplica como estilo inline): más angosto al costado de una calle
+       norte-sur, más ancho arriba/abajo de una este-oeste o un punto, para
+       aprovechar el espacio horizontal libre y necesitar menos alto. */
 }
 
 /* La flechita de Leaflet siempre apunta hacia abajo desde el centro de la
