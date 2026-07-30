@@ -533,6 +533,7 @@
 
         categoriaActiva = (valor || "").trim().toUpperCase();
         $categoriaSelect.classList.toggle("active-filter", !!categoriaActiva);
+        actualizarURLCategoria(categoriaActiva);
 
         // El texto del select muestra el color de la categoría elegida
         const colorCat = COLORES_CATEGORIA[categoriaActiva];
@@ -928,12 +929,44 @@
     }
 
     // Al cargar: si la URL trae ?c=<id o clave>, seleccionar esa calle.
+    // Devuelve true si encontró y aplicó algo (para no pisarlo después con
+    // el filtro de categoría de seleccionarCategoriaDesdeURL, ver main()).
     function seleccionarDesdeURL() {
         const c = new URLSearchParams(location.search).get("c");
-        if (!c) return;
+        if (!c) return false;
         const entrada = calles.find((x) => x.id === c)
             || calles.find((x) => x.clave === c);
-        if (entrada) seleccionarEntrada(entrada);
+        if (!entrada) return false;
+        seleccionarEntrada(entrada);
+        return true;
+    }
+
+    // ---------- Links compartibles a una vista filtrada por categoría ----------
+    // Mismo mecanismo que actualizarURL/seleccionarDesdeURL pero para el
+    // filtro de categoría (?cat=PERSONA), para poder compartir por ejemplo
+    // "todas las plazas dedicadas a una fecha" en vez de solo una calle.
+    function actualizarURLCategoria(categoria) {
+        try {
+            if (categoria) {
+                history.replaceState(null, "",
+                    location.pathname + "?cat=" + encodeURIComponent(categoria));
+            } else {
+                limpiarURL();
+            }
+        } catch (_) { /* history no disponible: ignorar */ }
+    }
+
+    // Al cargar: si la URL trae ?cat=<categoría> (y no había ?c= que ya
+    // haya ganado la prioridad), aplicar ese filtro.
+    function seleccionarCategoriaDesdeURL() {
+        const cat = new URLSearchParams(location.search).get("cat");
+        if (!cat) return false;
+        const catNorm = cat.trim().toUpperCase();
+        const valida = Array.from($categoriaSelect.options).some((o) => o.value === catNorm);
+        if (!valida) return false;
+        $categoriaSelect.value = catNorm;
+        aplicarFiltroCategoria(catNorm);
+        return true;
     }
 
     // =================================================================
@@ -2356,7 +2389,11 @@
         await cargarDatos();
         dibujarCapaBase();
         conectarEventos();
-        seleccionarDesdeURL();
+        // ?c=<calle> tiene prioridad; si no hay ninguna (o no existe), se
+        // prueba ?cat=<categoría> para restaurar un filtro compartido.
+        if (!seleccionarDesdeURL()) {
+            seleccionarCategoriaDesdeURL();
+        }
     }
 
     document.addEventListener("DOMContentLoaded", main);
