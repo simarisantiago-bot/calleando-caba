@@ -1711,7 +1711,7 @@
     function mostrarFallbackMedia(mediaId, color) {
         const c = document.getElementById(mediaId);
         if (!c) return;
-        c.classList.add("cargada", "es-fallback");
+        c.classList.add("es-fallback");
         c.style.setProperty("--cat-color", color);
         c.innerHTML = `<div class="popup-media-fallback">${iconoFallback()}</div>`;
     }
@@ -1825,7 +1825,6 @@
                 bg.style.backgroundImage = `url("${data.thumbUrl}")`;
                 c.appendChild(bg);
                 c.appendChild(img);
-                c.classList.add("cargada");
             };
             img.onerror = () => mostrarFallbackMedia(mediaId, color);
             img.src = data.thumbUrl;

@@ -266,7 +266,6 @@ html, body {
 
 /* En modo oscuro: ajustar paneles flotantes */
 body.tema-oscuro .search-box,
-body.tema-oscuro .barrio-filter,
 body.tema-oscuro .categoria-filter,
 body.tema-oscuro .random-btn,
 body.tema-oscuro .theme-toggle-btn,
@@ -289,7 +288,6 @@ body.tema-oscuro #search-input::placeholder {
 
 body.tema-oscuro .search-icon,
 body.tema-oscuro .clear-btn svg,
-body.tema-oscuro #barrio-select,
 body.tema-oscuro #categoria-select {
     fill: #9aa0a6;
     color: #e8eaed;
@@ -417,8 +415,7 @@ body.tema-oscuro .nearme-btn svg {
     fill: #1a73e8;
 }
 
-/* -------- Filtro por barrio (flotante abajo-derecha) -------- */
-.barrio-filter,
+/* -------- Filtro por categoría (flotante abajo-izquierda) -------- */
 .categoria-filter {
     position: absolute;
     z-index: 1000;
@@ -428,22 +425,11 @@ body.tema-oscuro .nearme-btn svg {
         0 1px 3px rgba(0, 0, 0, 0.14),
         0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 0;
-}
-
-.barrio-filter {
-    /* El zoom control de Leaflet ocupa ~30px de ancho a la derecha y queda
-       en la esquina inferior. Lo posiciono a su izquierda. */
-    bottom: 16px;
-    right: 60px;
-}
-
-.categoria-filter {
     /* Margen inferior izquierdo, alineado con la caja de búsqueda */
     bottom: 16px;
     left: 16px;
 }
 
-#barrio-select,
 #categoria-select {
     border: 0;
     background: transparent;
@@ -464,12 +450,10 @@ body.tema-oscuro .nearme-btn svg {
     transition: background-color 0.15s;
 }
 
-#barrio-select:hover,
 #categoria-select:hover {
     background-color: #f1f3f4;
 }
 
-#barrio-select.active-filter,
 #categoria-select.active-filter {
     background-color: #e8f0fe;
     color: #1a73e8;
@@ -570,18 +554,6 @@ body.tema-oscuro .nearme-btn svg {
 body.tema-oscuro .suggestions .suggestion-snippet mark {
     background: #5c4d00;
     color: #fff3cd;
-}
-
-.suggestions .suggestion-empty {
-    padding: 14px;
-    color: #5f6368;
-    text-align: center;
-    font-style: italic;
-    cursor: default;
-}
-
-.suggestions .suggestion-empty:hover {
-    background: transparent;
 }
 
 /* -------- Botón "Estadísticas" arriba a la derecha -------- */
@@ -1471,11 +1443,6 @@ body.tema-oscuro .popup-media-skeleton {
         height: 120px;
     }
 
-    .barrio-filter {
-        bottom: 10px;
-        right: 56px;
-    }
-
     .categoria-filter {
         /* La barra de créditos ocupa casi todo el ancho en pantallas angostas;
            subimos el filtro para que no se superponga con ella. */
@@ -1483,7 +1450,6 @@ body.tema-oscuro .popup-media-skeleton {
         left: 8px;
     }
 
-    #barrio-select,
     #categoria-select {
         min-width: 140px;
         font-size: 12px;
