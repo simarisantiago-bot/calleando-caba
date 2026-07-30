@@ -2320,6 +2320,19 @@
             }
         });
 
+        // Botón "X" (propio de Leaflet) del popup: además de despintar la
+        // calle/marcador (ya lo hace el "popupclose" de inicializarMapa,
+        // que dispara para CUALQUIER cierre), borra lo que había en el
+        // buscador. Tiene que ir en fase de CAPTURA: el propio botón de
+        // Leaflet llama stopPropagation() en su handler, así que un
+        // listener normal (fase de burbuja) en document nunca lo vería.
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".leaflet-popup-close-button")) return;
+            $input.value = "";
+            $btnLimpiar.hidden = true;
+            limpiarURL();
+        }, true);
+
         // Cerrar sugerencias al click fuera
         document.addEventListener("click", (e) => {
             if (!e.target.closest(".search-box")) {
