@@ -116,6 +116,7 @@
     let capaActual = null;         // polyline o marker dibujado por la última búsqueda
     let popupActual = null;        // popup actual
     let indiceActivo = -1;         // sugerencia resaltada con teclado
+    let redibujandoPorZoom = false; // true mientras dibujarConMenosZoomSiHaceFalta() está probando distintos alejamientos (ver más abajo): evita que el "popupclose" de los cierres intermedios despinte la calle antes de tiempo
 
     // ---------- DOM ----------
     const $input = document.getElementById("search-input");
@@ -348,6 +349,10 @@
         // la calle/marcador resaltado. limpiarCapa() ya deja capaActual en
         // null antes de cerrar su propio popup, así que no hay doble remoción.
         mapa.on("popupclose", () => {
+            // Mientras se prueban distintos alejamientos (ver
+            // dibujarConMenosZoomSiHaceFalta) se cierra y reabre el popup
+            // varias veces a propósito; no hay que despintar nada todavía.
+            if (redibujandoPorZoom) return;
             if (capaActual) {
                 mapa.removeLayer(capaActual);
                 capaActual = null;
@@ -1550,6 +1555,14 @@
         // Reaplicar: el último intento del bucle puede haber dejado el
         // offset puesto en otro lado distinto al elegido.
         let { dx, dy } = correccionPara(final);
+        // Si hace falta achicar es porque, al zoom actual, el trazado/punto
+        // + el popup no entran los dos completos en la pantalla. El llamador
+        // (dibujarResultado) usa este dato para, en vez de resignarse acá,
+        // reintentar con el mapa más alejado (más zoom out = trazado más
+        // chico en pantalla = más lugar para el popup) antes de llegar a
+        // esta instancia. Solo si ya no se puede alejar más se termina
+        // usando el achique con scroll de acá abajo como último recurso.
+        const necesitoAchicar = dy !== 0;
 
         // Ni el mejor de los 4 lados entra sin salirse verticalmente (pasa
         // el tope o el piso de la pantalla) hay que achicar el contenido,
@@ -1581,6 +1594,8 @@
         // del trazado/punto (ver arriba); se resincroniza siempre porque el
         // lado final puede no coincidir con el usado al abrir el popup.
         el.classList.toggle("popup-sin-flecha", final !== "arriba");
+
+        return necesitoAchicar;
     }
 
     // Abre el popup en una posición inicial cualquiera (se recalcula del
@@ -1595,6 +1610,40 @@
             .setLatLng(latlng)
             .setContent(popupHtml)
             .openOn(mapa);
+    }
+
+    const MAX_INTENTOS_ZOOM = 5;
+    const INCREMENTO_PADDING_ZOOM = 55;
+
+    /**
+     * Repite `intento(padding)` con un padding cada vez mayor —lo que fuerza
+     * un zoom más alejado en el fitBounds interno— mientras posicionarPopup()
+     * siga necesitando achicar el contenido para entrar en pantalla. Así, en
+     * vez de resignarse al scroll interno apenas no entra, primero se prueba
+     * dejar más lugar en pantalla alejando el mapa (el trazado/punto ocupa
+     * menos píxeles, y con maxWidth el popup no cambia de tamaño real).
+     *
+     * `intento` debe devolver lo mismo que posicionarPopup(): true si hizo
+     * falta achicar (seguir probando), false si entró limpio.
+     *
+     * Se para en MAX_INTENTOS_ZOOM intentos o al llegar al zoom mínimo del
+     * mapa, lo que pase primero; ahí sí queda el achique con scroll interno
+     * del último intento como último recurso.
+     *
+     * Reabrir el popup en cada vuelta cierra el anterior (dispara
+     * "popupclose"); redibujandoPorZoom evita que ese cierre intermedio
+     * despinte la capa antes de que termine el bucle.
+     */
+    function dibujarConMenosZoomSiHaceFalta(paddingInicial, intento) {
+        redibujandoPorZoom = true;
+        let padding = paddingInicial;
+        for (let i = 0; i < MAX_INTENTOS_ZOOM; i++) {
+            const huboAchique = intento(padding);
+            const enElPiso = mapa.getZoom() <= mapa.getMinZoom();
+            if (!huboAchique || enElPiso) break;
+            padding += INCREMENTO_PADDING_ZOOM;
+        }
+        redibujandoPorZoom = false;
     }
 
     function dibujarResultado(entrada, resultado) {
@@ -1614,17 +1663,14 @@
                 },
             }).addTo(mapa);
 
-            mapa.fitBounds(capaActual.getBounds(), {
-                padding: [40, 40],
-                maxZoom: 15,
-                animate: false,
-            });
-
             const bounds = capaActual.getBounds();
             const centro = bounds.getCenter();
             const orientacion = orientacionForma(bounds);
-            popupActual = abrirPopupPosicionado(centro, popupHtml, orientacion === "vertical" ? "derecha" : "abajo");
-            posicionarPopup(popupActual, bounds, orientacion);
+            dibujarConMenosZoomSiHaceFalta(40, (padding) => {
+                mapa.fitBounds(bounds, { padding: [padding, padding], maxZoom: 15, animate: false });
+                popupActual = abrirPopupPosicionado(centro, popupHtml, orientacion === "vertical" ? "derecha" : "abajo");
+                return posicionarPopup(popupActual, bounds, orientacion);
+            });
         } else if (resultado.tipo === "line") {
             // GeoJSON LineString/MultiLineString -> Polyline
             capaActual = L.geoJSON(resultado.geometry, {
@@ -1637,19 +1683,16 @@
                 },
             }).addTo(mapa);
 
-            mapa.fitBounds(capaActual.getBounds(), {
-                padding: [80, 80],
-                maxZoom: 17,
-                animate: false,
-            });
-
             // Popup pegado al trazado (al costado si es norte-sur, arriba o
             // abajo si es este-oeste), no centrado tapándolo.
             const bounds = capaActual.getBounds();
             const centro = bounds.getCenter();
             const orientacion = orientacionForma(bounds);
-            popupActual = abrirPopupPosicionado(centro, popupHtml, orientacion === "vertical" ? "derecha" : "abajo");
-            posicionarPopup(popupActual, bounds, orientacion);
+            dibujarConMenosZoomSiHaceFalta(80, (padding) => {
+                mapa.fitBounds(bounds, { padding: [padding, padding], maxZoom: 17, animate: false });
+                popupActual = abrirPopupPosicionado(centro, popupHtml, orientacion === "vertical" ? "derecha" : "abajo");
+                return posicionarPopup(popupActual, bounds, orientacion);
+            });
         } else {
             // Marker para plazas, parques, plazoletas, canteros, paseos, etc.
             capaActual = L.marker(resultado.center, {
@@ -1673,24 +1716,33 @@
             if (resultado.bbox) {
                 const [latMin, latMax, lonMin, lonMax] = resultado.bbox.map(parseFloat);
                 boundsMarker = L.latLngBounds([[latMin, lonMin], [latMax, lonMax]]);
-                mapa.fitBounds(boundsMarker, {
-                    padding: [80, 80],
-                    maxZoom: 17,
-                    animate: false,
+                dibujarConMenosZoomSiHaceFalta(80, (padding) => {
+                    mapa.fitBounds(boundsMarker, { padding: [padding, padding], maxZoom: 17, animate: false });
+                    capaActual.bindPopup(popupHtml, {
+                        offset: offsetParaDireccion("abajo", POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, 0),
+                        autoPan: false,
+                        className: "calleando-popup popup-sin-flecha",
+                    }).openPopup();
+                    // bindPopup()/openPopup() devuelven el marker (para
+                    // encadenar), no el popup: hay que pedirlo aparte para
+                    // poder medirlo/ajustarlo.
+                    popupActual = capaActual.getPopup();
+                    return posicionarPopup(popupActual, boundsMarker, "horizontal", MARKER_ICON_ALTO);
                 });
             } else {
+                // Sin bbox no hay ninguna extensión geográfica que "encoger"
+                // al alejar el zoom: el pin ocupa el mismo tamaño en
+                // píxeles a cualquier zoom, así que reintentar con más zoom
+                // out no cambiaría nada — se resuelve en un solo intento.
                 mapa.setView(resultado.center, 17, { animate: false });
+                capaActual.bindPopup(popupHtml, {
+                    offset: offsetParaDireccion("abajo", POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, 0),
+                    autoPan: false,
+                    className: "calleando-popup popup-sin-flecha",
+                }).openPopup();
+                popupActual = capaActual.getPopup();
+                posicionarPopup(popupActual, boundsMarker, "horizontal", MARKER_ICON_ALTO);
             }
-
-            capaActual.bindPopup(popupHtml, {
-                offset: offsetParaDireccion("abajo", POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, 0),
-                autoPan: false,
-                className: "calleando-popup popup-sin-flecha",
-            }).openPopup();
-            // bindPopup()/openPopup() devuelven el marker (para encadenar),
-            // no el popup: hay que pedirlo aparte para poder medirlo/ajustarlo.
-            popupActual = capaActual.getPopup();
-            posicionarPopup(popupActual, boundsMarker, "horizontal", MARKER_ICON_ALTO);
         }
 
         // El popup ya está en el DOM: cargamos la imagen de Wikipedia de forma
