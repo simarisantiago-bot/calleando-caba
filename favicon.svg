@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Pin de mapa estilo Google Maps con bordes redondeados, en azul Calleando -->
+  <!-- Pin de mapa estilo Google Maps, en azul Calleando, con una grilla de
+       manzanas adentro en vez de un punto: representa el callejero
+       cuadriculado porteño en lugar de "una ubicación cualquiera". -->
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#4285f4"/>
@@ -10,5 +12,8 @@
     fill="url(#g)"
     d="M32 4C20.4 4 11 13.4 11 25c0 14 16 32 19.4 35.6a2.3 2.3 0 0 0 3.2 0C37 57 53 39 53 25 53 13.4 43.6 4 32 4z"
   />
-  <circle cx="32" cy="25" r="8" fill="#fff"/>
+  <rect x="27" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+  <rect x="32.7" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+  <rect x="27" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
+  <rect x="32.7" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
 </svg>
