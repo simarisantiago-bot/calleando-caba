@@ -411,7 +411,13 @@
     async function cargarDatos() {
         // Carga en paralelo: dataset, cache geo, barrios (heatmap), mapping y curiosidades.
         const [respCalles, respCache, respBarrios, respMap, respCuri, respFotos] = await Promise.all([
-            fetch("data/calles.json"),
+            // A diferencia de las demás, esta carga es indispensable: sin
+            // calles.json la app entera queda inutilizable (buscador y mapa
+            // sin nada que mostrar). El .catch() evita que un fallo de RED
+            // (no solo un 404/500, que ya maneja el "!respCalles.ok" de
+            // abajo) tire un unhandled rejection y deje todo roto en
+            // silencio, sin ningún aviso para quien está usando la página.
+            fetch("data/calles.json").catch(() => null),
             fetch("data/geo_cache.json").catch(() => null),
             fetch("data/barrios.geojson").catch(() => null),
             fetch("data/calle_barrios.json").catch(() => null),
@@ -421,7 +427,10 @@
 
         if (!respCalles || !respCalles.ok) {
             console.error("Error cargando calles.json");
-            mostrarToast("No se pudieron cargar los datos del Excel.", 6000);
+            // Sin esto no funciona nada (ni buscador ni mapa): el aviso
+            // queda fijo en vez de desaparecer solo, para que no pase
+            // desapercibido si quien lo ve mira la pantalla recién después.
+            mostrarToast("No se pudieron cargar los datos. Recargá la página para reintentar.", 24 * 60 * 60 * 1000);
             return;
         }
         calles = await respCalles.json();
