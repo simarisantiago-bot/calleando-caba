@@ -1751,6 +1751,22 @@
         montarMediaPopup(mediaId, entrada);
     }
 
+    // Dirección de contacto para el botón "Reportar error" de cada popup.
+    const EMAIL_CONTACTO = "simarisantiago@gmail.com";
+
+    // Arma un link mailto: con el asunto y cuerpo prellenados, incluyendo el
+    // id de la entrada al final para poder ubicarla rápido en calles.json
+    // sin depender de que quien reporta escriba bien el nombre.
+    function enlaceReportarError(entrada) {
+        const asunto = `Corrección en Calleando CABA: ${entrada.nombre_busqueda}`;
+        const cuerpo =
+            `Contame qué está mal en "${entrada.nombre_busqueda}" (${(entrada.tipo || "").trim()}):\n\n\n` +
+            `—\nNo borres esta línea, ayuda a ubicar el dato: ${entrada.id}`;
+        return `mailto:${EMAIL_CONTACTO}` +
+            `?subject=${encodeURIComponent(asunto)}` +
+            `&body=${encodeURIComponent(cuerpo)}`;
+    }
+
     function construirPopup(entrada, mediaId) {
         const subtitulo = (entrada.tipo || "").trim();
         const color = colorParaEntrada(entrada);
@@ -1777,14 +1793,24 @@
             ${subtitulo ? `<div class="popup-sub">${escapeHtml(subtitulo)}</div>` : ""}
             ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
-            <button class="popup-share-btn" type="button" data-id="${escapeHtml(entrada.id)}">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-                    <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>
-                </svg>
-                <span>Compartir</span>
-            </button>
+            <div class="popup-actions">
+                <button class="popup-share-btn" type="button" data-id="${escapeHtml(entrada.id)}">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                        <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>
+                    </svg>
+                    <span>Compartir</span>
+                </button>
+                <a class="popup-report-btn" href="${escapeHtml(enlaceReportarError(entrada))}">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                        <line x1="4" y1="22" x2="4" y2="3"/>
+                    </svg>
+                    <span>Reportar error</span>
+                </a>
+            </div>
         `;
     }
 

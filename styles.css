@@ -1272,12 +1272,19 @@ path.leaflet-interactive:focus {
     padding-right: 4px;
 }
 
-/* -------- Botón "compartir" del popup -------- */
-.popup-share-btn {
+/* -------- Acciones del popup: compartir / reportar error -------- */
+.popup-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.popup-share-btn,
+.popup-report-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 10px;
     padding: 6px 12px;
     border: 1px solid #dadce0;
     border-radius: 999px;
@@ -1285,10 +1292,12 @@ path.leaflet-interactive:focus {
     color: #1a73e8;
     font-size: 12.5px;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.15s, border-color 0.15s;
 }
-.popup-share-btn:hover {
+.popup-share-btn:hover,
+.popup-report-btn:hover {
     background: #f1f6ff;
     border-color: #1a73e8;
 }
@@ -1393,13 +1402,15 @@ body.tema-oscuro .popup-desc {
     color: #c7cad1;
 }
 
-body.tema-oscuro .popup-share-btn {
+body.tema-oscuro .popup-share-btn,
+body.tema-oscuro .popup-report-btn {
     background: #2a2d34;
     color: #8ab4f8;
     border-color: #3c4043;
 }
 
-body.tema-oscuro .popup-share-btn:hover {
+body.tema-oscuro .popup-share-btn:hover,
+body.tema-oscuro .popup-report-btn:hover {
     background: #3c4043;
     border-color: #8ab4f8;
 }
