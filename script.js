@@ -1752,7 +1752,7 @@
     }
 
     // Dirección de contacto para el botón "Reportar error" de cada popup.
-    const EMAIL_CONTACTO = "simarisantiago@gmail.com";
+    const EMAIL_CONTACTO = "calleandocaba@gmail.com";
 
     // Arma un link mailto: con el asunto y cuerpo prellenados, incluyendo el
     // id de la entrada al final para poder ubicarla rápido en calles.json
