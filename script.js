@@ -1754,16 +1754,22 @@
     // Dirección de contacto para el botón "Reportar error" de cada popup.
     const EMAIL_CONTACTO = "calleandocaba@gmail.com";
 
-    // Arma un link mailto: con el asunto y cuerpo prellenados, incluyendo el
-    // id de la entrada al final para poder ubicarla rápido en calles.json
-    // sin depender de que quien reporta escriba bien el nombre.
+    // Arma un link al compositor web de Gmail (no mailto:) con el asunto y
+    // cuerpo prellenados, incluyendo el id de la entrada al final para poder
+    // ubicarla rápido en calles.json sin depender de que quien reporta
+    // escriba bien el nombre. mailto: depende de que el navegador tenga un
+    // cliente de correo configurado como predeterminado -algo que en la
+    // práctica muchos usuarios no tienen, sobre todo en desktop- y ahí
+    // simplemente no pasa nada al hacer click; el link de Gmail abre en una
+    // pestaña nueva y funciona en cualquier navegador con sesión de Google.
     function enlaceReportarError(entrada) {
         const asunto = `Corrección en Calleando CABA: ${entrada.nombre_busqueda}`;
         const cuerpo =
             `Contame qué está mal en "${entrada.nombre_busqueda}" (${(entrada.tipo || "").trim()}):\n\n\n` +
             `—\nNo borres esta línea, ayuda a ubicar el dato: ${entrada.id}`;
-        return `mailto:${EMAIL_CONTACTO}` +
-            `?subject=${encodeURIComponent(asunto)}` +
+        return `https://mail.google.com/mail/?view=cm&fs=1` +
+            `&to=${encodeURIComponent(EMAIL_CONTACTO)}` +
+            `&su=${encodeURIComponent(asunto)}` +
             `&body=${encodeURIComponent(cuerpo)}`;
     }
 
@@ -1802,7 +1808,7 @@
                     </svg>
                     <span>Compartir</span>
                 </button>
-                <a class="popup-report-btn" href="${escapeHtml(enlaceReportarError(entrada))}">
+                <a class="popup-report-btn" href="${escapeHtml(enlaceReportarError(entrada))}" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
