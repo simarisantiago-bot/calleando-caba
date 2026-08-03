@@ -3310,16 +3310,6 @@
     "letra": "H"
   },
   {
-    "nombre_original": "BARRACA PEÑA",
-    "nombre_busqueda": "Barraca Peña",
-    "clave": "barraca pena",
-    "id": "barraca pena|puente",
-    "categoria": "PERSONA",
-    "tipo": "puente",
-    "descripcion": "Barraca Peña: histórico complejo de almacenamiento y comercio de lana y cueros establecido en 1774 por el comerciante gallego Francisco de la Peña Fernández a orillas del Riachuelo. Construido en 1913, el puente basculante servía para el transporte ferroviario de carga hacia dicha barraca, situada en La Boca.",
-    "letra": "B"
-  },
-  {
     "nombre_original": "BARRACAS",
     "nombre_busqueda": "Barracas",
     "clave": "barracas",
@@ -4017,6 +4007,16 @@
     "categoria": "CUERPO MILITAR",
     "tipo": "calle",
     "descripcion": "Blandengues: cuerpo creado en 1752 por el gobernador Andonaegui para contrarrestar las correrías de los indios con el nombre de Blandengues de la Frontera.",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "BUSTOS, CONCEJAL PEDRO",
+    "nombre_busqueda": "Concejal Pedro Bustos",
+    "clave": "concejal pedro bustos",
+    "id": "concejal pedro bustos|puente",
+    "categoria": "PERSONA",
+    "tipo": "puente",
+    "descripcion": "Pedro Bustos (1940-1984), concejal porteño que defendió la continuación de la calle Jorge Newbery a partir de la implementación del puente mencionado.",
     "letra": "B"
   },
   {
