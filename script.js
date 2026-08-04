@@ -1823,14 +1823,21 @@
     // ---------- Imagen del popup (Wikipedia) ----------
     let mediaSeq = 0;
 
-    // Ícono SVG genérico (pin de mapa) para el fallback, teñido con el color
-    // de la categoría vía la variable CSS --cat-color.
+    // Mismo isotipo que favicon.svg y el logo del header: pin con grilla de
+    // manzanas en vez de un ícono genérico, para reforzar la marca cuando
+    // no hay foto en vez de mostrar algo neutro. El fondo del contenedor
+    // (.popup-media.es-fallback) sí sigue tiñéndose con --cat-color; el
+    // ícono en sí usa el degradé fijo de la marca.
     function iconoFallback() {
-        return `<svg viewBox="0 0 24 24" width="40" height="40" fill="none"
-            stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 21s-7-6.6-7-11a7 7 0 0 1 14 0c0 4.4-7 11-7 11z"/>
-            <circle cx="12" cy="10" r="2.5"/>
+        return `<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+            <defs><linearGradient id="fallback-logo-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4285f4"/><stop offset="1" stop-color="#1a73e8"/>
+            </linearGradient></defs>
+            <path fill="url(#fallback-logo-grad)" d="M32 4C20.4 4 11 13.4 11 25c0 14 16 32 19.4 35.6a2.3 2.3 0 0 0 3.2 0C37 57 53 39 53 25 53 13.4 43.6 4 32 4z"/>
+            <rect x="27" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            <rect x="32.7" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            <rect x="27" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            <rect x="32.7" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
         </svg>`;
     }
 
