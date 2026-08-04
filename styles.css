@@ -415,6 +415,69 @@ body.tema-oscuro .nearme-btn svg {
     fill: #1a73e8;
 }
 
+/* -------- Botón "Un día como hoy" (efeméride) -------- */
+.efemeride-btn {
+    position: absolute;
+    bottom: 316px;
+    right: 16px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+    padding: 0;
+}
+
+.efemeride-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.efemeride-btn:active {
+    transform: scale(0.92);
+}
+
+.efemeride-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+/* Puntito que avisa "hoy hay algo" — el botón entero solo se muestra
+   cuando efectivamente hay una coincidencia, así que no necesita lógica
+   propia de visibilidad además de la del botón. */
+.efemeride-dot {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ea4335;
+    border: 1.5px solid #fff;
+}
+
+body.tema-oscuro .efemeride-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .efemeride-btn svg {
+    fill: #8ab4f8;
+}
+body.tema-oscuro .efemeride-dot {
+    border-color: #2a2d34;
+}
+
 /* -------- Filtro por categoría (flotante abajo-izquierda) -------- */
 .categoria-filter {
     position: absolute;
@@ -1498,6 +1561,18 @@ body.tema-oscuro .popup-media-skeleton {
     .theme-toggle-btn {
         width: 40px;
         height: 40px;
+    }
+
+    .efemeride-btn {
+        bottom: 316px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .efemeride-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     .about-btn {

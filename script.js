@@ -123,6 +123,7 @@
     const $btnBuscar = document.getElementById("search-btn");
     const $btnRandom = document.getElementById("random-btn");
     const $btnNearme = document.getElementById("nearme-btn");
+    const $btnEfemeride = document.getElementById("efemeride-btn");
     const $btnTheme = document.getElementById("theme-toggle-btn");
     const $themeMenu = document.getElementById("theme-menu");
     const $btnStats = document.getElementById("stats-btn");
@@ -1177,6 +1178,68 @@
             return;
         }
         seleccionarEntrada(elegida);
+    }
+
+    const MESES_ES = {
+        enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6,
+        julio: 7, agosto: 8, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12,
+    };
+
+    /**
+     * Busca, entre las entradas de categoría FECHA, la que tiene el mismo
+     * día y mes que hoy (el año no importa para el match). El día/mes/año
+     * se extraen de la propia descripción ("20 de febrero de 1813: ..."),
+     * que ya viene consistente para casi todas — no hace falta ningún
+     * campo nuevo en el Excel.
+     *
+     * Si hay más de una para el mismo día (raro pero posible), se elige
+     * siempre la misma —orden alfabético por clave— para que sea igual
+     * para todos los visitantes, mismo criterio que calleDelDia().
+     *
+     * Devuelve null la gran mayoría de los días: con ~45 entradas FECHA
+     * sobre 365 días no hay match casi 7 de cada 8 veces, y está bien que
+     * el botón simplemente no aparezca esos días en vez de forzar algo.
+     */
+    function efemerideDeHoy() {
+        if (!Array.isArray(calles) || calles.length === 0) return null;
+
+        const [anioActual, mesHoy, diaHoy] = fechaDeHoyBA().split("-").map(Number);
+
+        const candidatas = [];
+        for (const c of calles) {
+            if ((c.categoria || "").trim().toUpperCase() !== "FECHA") continue;
+            const m = /^(\d{1,2})\s+de\s+(\p{L}+)(?:\s+de\s+(\d{3,4}))?/iu.exec(c.descripcion || "");
+            if (!m) continue;
+            const dia = parseInt(m[1], 10);
+            const mes = MESES_ES[m[2].toLowerCase()];
+            if (mes === mesHoy && dia === diaHoy) {
+                candidatas.push({ entrada: c, anio: m[3] ? parseInt(m[3], 10) : null });
+            }
+        }
+        if (!candidatas.length) return null;
+
+        candidatas.sort((a, b) => a.entrada.clave.localeCompare(b.entrada.clave));
+        const elegida = candidatas[0];
+        return {
+            entrada: elegida.entrada,
+            aniosTranscurridos: elegida.anio ? anioActual - elegida.anio : null,
+        };
+    }
+
+    /** Muestra el botón "Un día como hoy" solo si hay una efeméride para
+     *  la fecha de hoy; si no hay ninguna, el botón queda oculto (su
+     *  estado por defecto en el HTML). */
+    function inicializarEfemeride() {
+        if (!$btnEfemeride) return;
+        const resultado = efemerideDeHoy();
+        if (!resultado) return;
+
+        const { entrada, aniosTranscurridos } = resultado;
+        $btnEfemeride.title = aniosTranscurridos != null
+            ? `Un día como hoy, hace ${aniosTranscurridos} años: ${entrada.nombre_busqueda}`
+            : `Un día como hoy: ${entrada.nombre_busqueda}`;
+        $btnEfemeride.hidden = false;
+        $btnEfemeride.addEventListener("click", () => seleccionarEntrada(entrada));
     }
 
     /** Busca por texto libre cuando el usuario aprieta el botón Buscar. */
@@ -2493,6 +2556,7 @@
         await cargarDatos();
         dibujarCapaBase();
         conectarEventos();
+        inicializarEfemeride();
         // ?c=<calle> tiene prioridad; si no hay ninguna (o no existe), se
         // prueba ?cat=<categoría> para restaurar un filtro compartido.
         if (!seleccionarDesdeURL()) {
