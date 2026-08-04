@@ -4010,6 +4010,16 @@
     "letra": "B"
   },
   {
+    "nombre_original": "BUSTOS, CARLOS ARMANDO",
+    "nombre_busqueda": "Carlos Armando Bustos",
+    "clave": "carlos armando bustos",
+    "id": "carlos armando bustos|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Carlos Armando Bustos Crostelli (1942-detenido desaparecido el 8 de abril de 1977), sacerdote capuchino; miembro de Movimiento de Sacerdotes para el Tercer Mundo, víctima de la última dictadura cívico militar de Argentina.",
+    "letra": "B"
+  },
+  {
     "nombre_original": "BUSTOS, CONCEJAL PEDRO",
     "nombre_busqueda": "Concejal Pedro Bustos",
     "clave": "concejal pedro bustos",
@@ -4018,6 +4028,46 @@
     "tipo": "puente",
     "descripcion": "Pedro Bustos (1940-1984), concejal porteño que defendió la continuación de la calle Jorge Newbery a partir de la implementación del puente mencionado.",
     "letra": "B"
+  },
+  {
+    "nombre_original": "CHANAPA, DANIEL BONIFACIO",
+    "nombre_busqueda": "Daniel Bonifacio Chanapa",
+    "clave": "daniel bonifacio chanapa",
+    "id": "daniel bonifacio chanapa|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Daniel Bonifacio Chanapa (1947-1978), militante del Movimiento Villero Peronista y empleado de Subterráneos de Buenos Aires, cesanteado en 1977 bajo la Ley de Prescindibilidad. El 17 de abril de 1978, a los 31 años, fue víctima de secuestro y desaparición forzada durante la última dictadura militar argentina.",
+    "letra": "C"
+  },
+  {
+    "nombre_original": "BUSTAMANTE, EL ELECTRICISTA NICASIO FEDERICO",
+    "nombre_busqueda": "El Electricista Nicasio Federico Bustamante",
+    "clave": "el electricista nicasio federico bustamante",
+    "id": "el electricista nicasio federico bustamante|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Nicasio Federico Bustamante (¿-?).",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "VEGA, EL FERROVIARIO ANTONIO R.",
+    "nombre_busqueda": "El Ferroviario Antonio R. Vega",
+    "clave": "el ferroviario antonio r vega",
+    "id": "el ferroviario antonio r vega|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Antonio R. Vega (¿-?).",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "CYMES, JUAN",
+    "nombre_busqueda": "Juan Cymes",
+    "clave": "juan cymes",
+    "id": "juan cymes|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Juan Cymes (1936-2003), militante social y dirigente villero argentino que dedicó más de tres décadas a la defensa de los derechos de los habitantes de los barrios populares.",
+    "letra": "C"
   },
   {
     "nombre_original": "LA BOCA",
@@ -4198,6 +4248,16 @@
     "tipo": "calle",
     "descripcion": "José Benjamín Zubiaur (1856-1921), educador argentino, promotor del deporte, la educación física, y el olimpismo moderno; uno de los doce integrantes originales del Comité Olímpico Internacional (COI); rector del Colegio de Concepción del Uruguay y director general de Escuelas de la Provincia de Corrientes; director de Instrucción Pública del Ministerio de Educación.",
     "letra": "Z"
+  },
+  {
+    "nombre_original": "GÓMEZ, OVIDIO",
+    "nombre_busqueda": "Ovidio Gómez",
+    "clave": "ovidio gomez",
+    "id": "ovidio gomez|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Ovidio Gómez (1933-1976), músico y cantante del popular trío mexicano Los Panchos, donde se desempeñó como primera voz de 1971 a 1976.",
+    "letra": "G"
   },
   {
     "nombre_original": "VERA PEÑALOZA, ROSARIO",
@@ -27968,6 +28028,16 @@
     "tipo": "calle",
     "descripcion": "Pablo Simbrón (¿-?), acompaña a Garay en la fundación de Buenos Aires en 1580.",
     "letra": "S"
+  },
+  {
+    "nombre_original": "GUERRERO, SIMÓN",
+    "nombre_busqueda": "Simón Guerrero",
+    "clave": "simon guerrero",
+    "id": "simon guerrero|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Simón Guerrero (¿-?).",
+    "letra": "G"
   },
   {
     "nombre_original": "LÁZARA, SIMÓN",
