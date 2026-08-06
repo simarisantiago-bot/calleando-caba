@@ -4040,6 +4040,16 @@
     "letra": "C"
   },
   {
+    "nombre_original": "DE LOS NIÑOS",
+    "nombre_busqueda": "De los Niños",
+    "clave": "de los ninos",
+    "id": "de los ninos|calle",
+    "categoria": "CONCEPTO",
+    "tipo": "calle",
+    "descripcion": "De los Niños: homenaje a las infancias de nuestro país.",
+    "letra": "N"
+  },
+  {
     "nombre_original": "BUSTAMANTE, EL ELECTRICISTA NICASIO FEDERICO",
     "nombre_busqueda": "El Electricista Nicasio Federico Bustamante",
     "clave": "el electricista nicasio federico bustamante",
@@ -4248,6 +4258,36 @@
     "tipo": "calle",
     "descripcion": "José Benjamín Zubiaur (1856-1921), educador argentino, promotor del deporte, la educación física, y el olimpismo moderno; uno de los doce integrantes originales del Comité Olímpico Internacional (COI); rector del Colegio de Concepción del Uruguay y director general de Escuelas de la Provincia de Corrientes; director de Instrucción Pública del Ministerio de Educación.",
     "letra": "Z"
+  },
+  {
+    "nombre_original": "MUJERES LUCHADORAS",
+    "nombre_busqueda": "Mujeres Luchadoras",
+    "clave": "mujeres luchadoras",
+    "id": "mujeres luchadoras|calle",
+    "categoria": "CONCEPTO",
+    "tipo": "calle",
+    "descripcion": "Mujeres Luchadoras: homenaje a la lucha de las mujeres de nuestro país.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "MUJERES VICTORIOSAS",
+    "nombre_busqueda": "Mujeres Victoriosas",
+    "clave": "mujeres victoriosas",
+    "id": "mujeres victoriosas|calle",
+    "categoria": "CONCEPTO",
+    "tipo": "calle",
+    "descripcion": "Mujeres Victoriosas: homenaje a las mujeres de nuestro país.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "NUESTRA SEÑORA DE CAACUPÉ",
+    "nombre_busqueda": "Nuestra Señora de Caacupé",
+    "clave": "nuestra senora de caacupe",
+    "id": "nuestra senora de caacupe|calle",
+    "categoria": "RELIGIÓN",
+    "tipo": "calle",
+    "descripcion": "Virgen de Caacupé o Virgen de los Milagros de Caacupé, variante de la advocación mariana de la Inmaculada venerada en la localidad homónima, donde tiene una basílica católica inaugurada el 8 de diciembre de 1765 que se ha convertido en un lugar de peregrinación de numerosos creyentes de Paraguay, país del que es patrona.",
+    "letra": "N"
   },
   {
     "nombre_original": "GÓMEZ, OVIDIO",
@@ -17511,7 +17551,7 @@
   },
   {
     "nombre_original": "JUAN PABLO II",
-    "nombre_busqueda": "Juan Pablo Ii",
+    "nombre_busqueda": "Juan Pablo II",
     "clave": "juan pablo ii",
     "id": "juan pablo ii|calle",
     "categoria": "PERSONA",
