@@ -170,10 +170,7 @@ html, body {
 
 /* -------- Botón de cambio de tema del mapa -------- */
 .theme-toggle {
-    position: absolute;
-    bottom: 208px;
-    right: 16px;
-    z-index: 1000;
+    position: relative;
 }
 
 .theme-toggle-btn {
@@ -208,8 +205,9 @@ html, body {
     margin: 0;
     padding: 6px 0;
     position: absolute;
-    bottom: 52px;
-    right: 0;
+    top: 0;
+    right: 100%;
+    margin-right: 8px;
     min-width: 140px;
     background: #fff;
     border-radius: 8px;
@@ -293,6 +291,10 @@ body.tema-oscuro #categoria-select {
     color: #e8eaed;
 }
 
+body.tema-oscuro .categoria-filter-icon {
+    fill: #8ab4f8;
+}
+
 body.tema-oscuro .suggestions li {
     color: #e8eaed;
     border-bottom-color: #3c4043;
@@ -323,10 +325,6 @@ body.tema-oscuro .credits {
 
 /* -------- Botón "Cerca mío" (geolocalización) -------- */
 .nearme-btn {
-    position: absolute;
-    bottom: 262px;
-    right: 16px;
-    z-index: 1000;
     width: 44px;
     height: 44px;
     border: 0;
@@ -376,12 +374,8 @@ body.tema-oscuro .nearme-btn svg {
     fill: #8ab4f8;
 }
 
-/* -------- Botón "calle al azar" (arriba del filtro de barrios) -------- */
+/* -------- Botón "calle al azar" -------- */
 .random-btn {
-    position: absolute;
-    bottom: 154px;
-    right: 16px;
-    z-index: 1000;
     width: 44px;
     height: 44px;
     border: 0;
@@ -417,10 +411,7 @@ body.tema-oscuro .nearme-btn svg {
 
 /* -------- Botón "Mis favoritas" -------- */
 .favoritos-btn {
-    position: absolute;
-    bottom: 370px;
-    right: 16px;
-    z-index: 1000;
+    position: relative;
     width: 44px;
     height: 44px;
     border: 0;
@@ -481,11 +472,17 @@ body.tema-oscuro .favoritos-count {
     border-color: #2a2d34;
 }
 
+/* Contenedor relativo: ancla el panel desplegable al botón */
+.favoritos-wrap {
+    position: relative;
+}
+
 /* Panel desplegable con la lista de favoritas */
 .favoritos-panel {
     position: absolute;
-    bottom: 370px;
-    right: 68px;
+    top: 0;
+    right: 100%;
+    margin-right: 8px;
     z-index: 1001;
     width: 300px;
     max-width: calc(100vw - 32px);
@@ -689,10 +686,7 @@ body.tema-oscuro .popup-fav-btn.es-favorito {
 
 /* -------- Botón "Un día como hoy" (efeméride) -------- */
 .efemeride-btn {
-    position: absolute;
-    bottom: 316px;
-    right: 16px;
-    z-index: 1000;
+    position: relative;
     width: 44px;
     height: 44px;
     border: 0;
@@ -750,49 +744,56 @@ body.tema-oscuro .efemeride-dot {
     border-color: #2a2d34;
 }
 
-/* -------- Filtro por categoría (flotante abajo-izquierda) -------- */
+/* -------- Filtro por categoría (misma forma que "Cerca mío") -------- */
 .categoria-filter {
-    position: absolute;
+    position: relative;
     z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     background: #fff;
-    border-radius: 6px;
     box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.14),
         0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: 0;
-    /* Margen inferior izquierdo, alineado con la caja de búsqueda */
-    bottom: 16px;
-    left: 16px;
-}
-
-#categoria-select {
-    border: 0;
-    background: transparent;
-    padding: 8px 30px 8px 12px;
-    font-size: 13px;
-    font-family: inherit;
-    color: #202124;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    outline: none;
-    min-width: 180px;
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235f6368'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 16px;
-    border-radius: 6px;
-    transition: background-color 0.15s;
+    transition: background-color 0.15s, box-shadow 0.15s;
 }
 
-#categoria-select:hover {
+.categoria-filter:hover {
     background-color: #f1f3f4;
 }
 
-#categoria-select.active-filter {
+.categoria-filter.active-filter {
     background-color: #e8f0fe;
-    color: #1a73e8;
-    font-weight: 500;
+}
+
+.categoria-filter-icon {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+    pointer-events: none;
+}
+
+/* El <select> real queda invisible pero clickeable, tapando todo el
+   círculo: mantiene el comportamiento nativo (teclado, accesibilidad)
+   mientras el ícono de arriba hace de cara visible del botón. */
+#categoria-select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    opacity: 0;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* Tooltip que aparece al pasar el mouse sobre un barrio en el overlay "todos" */
@@ -891,36 +892,27 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     color: #fff3cd;
 }
 
-/* -------- Botón "Estadísticas" arriba a la derecha -------- */
+/* -------- Botón "Datos y curiosidades" (misma forma que "Cerca mío") -------- */
 .stats-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    z-index: 1000;
-    height: 48px;
-    padding: 0 18px 0 14px;
+    width: 44px;
+    height: 44px;
     border: 0;
-    border-radius: 24px;
+    border-radius: 50%;
     background: #fff;
     color: #1a73e8;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.12),
-        0 4px 12px rgba(0, 0, 0, 0.08);
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
     transition: background 0.15s, box-shadow 0.15s;
+    padding: 0;
 }
 
 .stats-btn:hover {
     background: #f1f3f4;
-    box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.16),
-        0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .stats-btn svg {
@@ -929,13 +921,73 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     fill: currentColor;
 }
 
-/* -------- Botón "Acerca de" — encima del zoom, alineado con los otros
-   tres botones redondos (Cerca mío, tema, calle al azar) -------- */
-.about-btn {
+/* -------- Botón "Herramientas": agrupa categorías, calle del día, cerca
+   mío, favoritas, efeméride, tema y datos y curiosidades en un único
+   panel arriba a la derecha -------- */
+.tools-btn {
     position: absolute;
-    bottom: 100px;
+    top: 16px;
     right: 16px;
     z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, box-shadow 0.15s;
+    padding: 0;
+}
+
+.tools-btn:hover {
+    background: #f1f3f4;
+}
+
+.tools-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+.tools-panel {
+    position: absolute;
+    top: 68px;
+    right: 16px;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+body.tema-oscuro .tools-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .tools-btn svg {
+    fill: #8ab4f8;
+}
+body.tema-oscuro .tools-panel {
+    background: #2a2d34;
+}
+body.tema-oscuro .about-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+}
+
+/* -------- Botón "Acerca de" -------- */
+.about-btn {
     width: 44px;
     height: 44px;
     border: 0;
@@ -1474,19 +1526,6 @@ body.tema-oscuro .stats-btn {
 
 /* Responsive */
 @media (max-width: 480px) {
-    .stats-btn {
-        top: 105px;  /* debajo del search box en mobile (97px + margen) */
-        right: 8px;
-        height: 40px;
-        padding: 0 14px 0 10px;
-        font-size: 13px;
-    }
-
-    .stats-btn svg {
-        width: 18px;
-        height: 18px;
-    }
-
     .stats-bar {
         grid-template-columns: 100px 1fr 60px;
         font-size: 12px;
@@ -1765,6 +1804,178 @@ body.tema-oscuro .popup-media-skeleton {
     background-size: 200% 100%;
 }
 
+/* -------- Tutorial de bienvenida -------- */
+.tour-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+}
+
+/* El "recorte" se logra con un box-shadow enorme sobre un elemento del
+   tamaño exacto del control resaltado, en vez de superponer 4 franjas:
+   más simple y se anima solo con la transición de left/top/width/height. */
+.tour-spotlight {
+    position: fixed;
+    box-shadow: 0 0 0 9999px rgba(32, 33, 36, 0.6);
+    pointer-events: none;
+    transition: top 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, border-radius 0.25s ease;
+}
+
+.tour-card {
+    position: fixed;
+    z-index: 3001;
+    width: 300px;
+    max-width: calc(100vw - 32px);
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+    transition: top 0.25s ease, left 0.25s ease;
+}
+
+.tour-skip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+.tour-skip:hover {
+    background: rgba(60, 64, 67, 0.08);
+}
+.tour-skip svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.tour-step {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a73e8;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+}
+
+.tour-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #202124;
+    margin-bottom: 6px;
+    padding-right: 20px;
+}
+
+.tour-text {
+    font-size: 13.5px;
+    color: #5f6368;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.tour-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.tour-btn {
+    border: 0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+}
+
+.tour-btn-primary {
+    background: #1a73e8;
+    color: #fff;
+}
+.tour-btn-primary:hover {
+    background: #155ab6;
+}
+
+.tour-btn-secondary {
+    background: transparent;
+    color: #5f6368;
+}
+.tour-btn-secondary:hover {
+    background: rgba(60, 64, 67, 0.08);
+}
+.tour-btn-secondary:disabled {
+    opacity: 0.4;
+    cursor: default;
+    background: transparent;
+}
+
+body.tema-oscuro .tour-card {
+    background: #2a2d34;
+}
+body.tema-oscuro .tour-title {
+    color: #e8eaed;
+}
+body.tema-oscuro .tour-text {
+    color: #9aa0a6;
+}
+body.tema-oscuro .tour-skip {
+    color: #9aa0a6;
+}
+body.tema-oscuro .tour-skip:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+body.tema-oscuro .tour-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* -------- Botón "Volver a ver el tutorial" (modal Acerca de) -------- */
+.tour-replay-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 7px 14px;
+    border: 1px solid #dadce0;
+    border-radius: 999px;
+    background: #fff;
+    color: #1a73e8;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.tour-replay-btn:hover {
+    background: #f1f6ff;
+    border-color: #1a73e8;
+}
+.tour-replay-btn svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+}
+
+body.tema-oscuro .tour-replay-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+    border-color: #3c4043;
+}
+body.tema-oscuro .tour-replay-btn:hover {
+    background: #3c4043;
+    border-color: #8ab4f8;
+}
+
 /* -------- Responsive -------- */
 @media (max-width: 480px) {
     .search-box {
@@ -1789,91 +2000,36 @@ body.tema-oscuro .popup-media-skeleton {
         height: 120px;
     }
 
-    .categoria-filter {
-        /* La barra de créditos ocupa casi todo el ancho en pantallas angostas;
-           subimos el filtro para que no se superponga con ella. */
-        bottom: 30px;
-        left: 8px;
-    }
-
-    #categoria-select {
-        min-width: 140px;
-        font-size: 12px;
-    }
-
-    .random-btn {
-        bottom: 154px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .random-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .nearme-btn {
-        bottom: 208px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .nearme-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .theme-toggle {
-        bottom: 262px;
-        right: 12px;
-    }
-
-    .theme-toggle-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .efemeride-btn {
-        bottom: 316px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .efemeride-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .favoritos-btn {
-        bottom: 370px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .favoritos-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .favoritos-panel {
-        bottom: 370px;
+    .tools-btn {
+        top: 105px;  /* debajo del search box, que en mobile ocupa todo el ancho */
         right: 8px;
-        width: calc(100vw - 16px);
     }
 
-    .about-btn {
-        bottom: 100px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
+    .tools-panel {
+        top: 157px;
+        right: 8px;
     }
 
-    .about-btn svg {
-        width: 20px;
-        height: 20px;
+    .theme-menu,
+    .favoritos-panel {
+        position: fixed;
+        top: 157px;
+        right: 8px;
+        left: 8px;
+        margin: 0;
+        width: auto;
+        max-width: none;
+    }
+
+    /* En mobile la tarjeta del tutorial no persigue al botón resaltado
+       (suelen ser íconos de 40px pegados al borde): queda fija abajo,
+       como una hoja, mientras el recorte del spotlight sí sigue al
+       elemento correspondiente. */
+    .tour-card {
+        top: auto !important;
+        left: 8px !important;
+        bottom: 16px;
+        width: auto;
+        max-width: none;
     }
 }

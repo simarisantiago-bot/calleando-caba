@@ -20,6 +20,7 @@
     const VIEWBOX = "-58.531,-34.706,-58.335,-34.527"; // long/lat, long/lat
     const CACHE_KEY = "calleando_geocache_v1";
     const FAVORITOS_KEY = "calleando_favoritos_v1";
+    const TOUR_KEY = "calleando_tutorial_v1";
     const MAX_SUGGESTIONS = 8;
     const LINE_COLOR = "#1a73e8";
 
@@ -118,6 +119,8 @@
     let popupActual = null;        // popup actual
     let indiceActivo = -1;         // sugerencia resaltada con teclado
     let redibujandoPorZoom = false; // true mientras dibujarConMenosZoomSiHaceFalta() está probando distintos alejamientos (ver más abajo): evita que el "popupclose" de los cierres intermedios despinte la calle antes de tiempo
+    let tourPasos = [];             // pasos del tutorial de bienvenida, armados en construirPasosTour()
+    let tourPasoActual = 0;
 
     // ---------- DOM ----------
     const $input = document.getElementById("search-input");
@@ -146,10 +149,24 @@
     const $aboutModal = document.getElementById("about-modal");
     const $aboutClose = document.getElementById("about-close");
     const $aboutOverlay = document.getElementById("about-overlay");
+    const $tourReplayBtn = document.getElementById("tour-replay-btn");
+    const $tourOverlay = document.getElementById("tour-overlay");
+    const $tourSpotlight = document.getElementById("tour-spotlight");
+    const $tourCard = document.getElementById("tour-card");
+    const $tourStepCount = document.getElementById("tour-step-count");
+    const $tourTitle = document.getElementById("tour-title");
+    const $tourText = document.getElementById("tour-text");
+    const $tourPrev = document.getElementById("tour-prev");
+    const $tourNext = document.getElementById("tour-next");
+    const $tourSkip = document.getElementById("tour-skip");
     const $btnLimpiar = document.getElementById("clear-btn");
     const $suggestions = document.getElementById("suggestions");
     const $toast = document.getElementById("status-toast");
     const $categoriaSelect = document.getElementById("categoria-select");
+    const $categoriaFilterWrap = document.querySelector(".categoria-filter");
+    const $categoriaFilterIcon = document.querySelector(".categoria-filter-icon");
+    const $btnTools = document.getElementById("tools-btn");
+    const $toolsPanel = document.getElementById("tools-panel");
 
     // =================================================================
     // 1. UTILIDADES
@@ -545,17 +562,19 @@
         limpiarCapa();
 
         categoriaActiva = (valor || "").trim().toUpperCase();
-        $categoriaSelect.classList.toggle("active-filter", !!categoriaActiva);
+        if ($categoriaFilterWrap) {
+            $categoriaFilterWrap.classList.toggle("active-filter", !!categoriaActiva);
+        }
         actualizarURLCategoria(categoriaActiva);
 
-        // El texto del select muestra el color de la categoría elegida
+        // El círculo del filtro muestra el color de la categoría elegida
         const colorCat = COLORES_CATEGORIA[categoriaActiva];
         if (colorCat) {
-            $categoriaSelect.style.color = colorCat;
-            $categoriaSelect.style.backgroundColor = colorCat + "1a";
+            if ($categoriaFilterWrap) $categoriaFilterWrap.style.backgroundColor = colorCat + "1a";
+            if ($categoriaFilterIcon) $categoriaFilterIcon.style.fill = colorCat;
         } else {
-            $categoriaSelect.style.color = "";
-            $categoriaSelect.style.backgroundColor = "";
+            if ($categoriaFilterWrap) $categoriaFilterWrap.style.backgroundColor = "";
+            if ($categoriaFilterIcon) $categoriaFilterIcon.style.fill = "";
         }
 
         if (!categoriaActiva) {
@@ -2592,6 +2611,26 @@
             sincronizarBotonFavorito(btn, favorito);
         });
 
+        // Botón "Herramientas": abre/cierra el panel que agrupa los
+        // controles del mapa (categorías, accesos rápidos, tema, datos).
+        if ($btnTools && $toolsPanel) {
+            $btnTools.addEventListener("click", (e) => {
+                e.stopPropagation();
+                $toolsPanel.hidden = !$toolsPanel.hidden;
+                $btnTools.setAttribute("aria-expanded", String(!$toolsPanel.hidden));
+            });
+            document.addEventListener("click", (e) => {
+                if ($toolsPanel.hidden) return;
+                if (e.target.closest(".tools-panel") || e.target.closest(".tools-btn")) return;
+                // El tutorial abre/cierra el panel a medida que avanza los
+                // pasos: sus propios clicks (Siguiente/Anterior/Saltar) no
+                // deben contar como "click afuera" y volver a cerrarlo.
+                if (e.target.closest(".tour-card")) return;
+                $toolsPanel.hidden = true;
+                $btnTools.setAttribute("aria-expanded", "false");
+            });
+        }
+
         // Botón "Mis favoritas": abre/cierra el panel con la lista.
         if ($btnFavoritos && $favoritosPanel) {
             $btnFavoritos.addEventListener("click", () => {
@@ -2704,7 +2743,246 @@
     }
 
     // =================================================================
-    // 9. ARRANQUE
+    // 9. TUTORIAL DE BIENVENIDA
+    // =================================================================
+    // Recorrido guiado (spotlight + tarjeta) que se muestra solo en la
+    // primera visita real (sin ?c= ni ?cat= en la URL, y sin el flag de
+    // localStorage), y que además se puede volver a ver a mano desde el
+    // botón "Volver a ver el tutorial" del modal "Acerca de".
+
+    /**
+     * Arma la lista de pasos del tutorial. El paso de la efeméride ("Un
+     * día como hoy") solo se agrega si ese botón está visible hoy, porque
+     * no tiene sentido resaltar un elemento que no está en pantalla.
+     */
+    function construirPasosTour() {
+        const pasos = [
+            {
+                target: null,
+                titulo: "¡Bienvenido a Calleando CABA!",
+                texto: "Te mostramos rápido cómo explorar el callejero porteño.",
+            },
+            {
+                target: ".search-box",
+                titulo: "Buscador",
+                texto: "Buscá cualquier calle, plaza o avenida por nombre, tema o parte de su historia (ej: \"tango\", \"Malvinas\").",
+            },
+            {
+                target: "#tools-btn",
+                titulo: "Herramientas",
+                texto: "Acá están agrupados todos los accesos rápidos del mapa.",
+            },
+            {
+                target: "#random-btn",
+                titulo: "Odónimo del día",
+                texto: "Te muestra una calle distinta cada día, la misma para todos los visitantes.",
+                abrirPanel: true,
+            },
+            {
+                target: "#stats-btn",
+                titulo: "Datos y curiosidades",
+                texto: "Estadísticas del callejero y datos curiosos sobre Buenos Aires.",
+                abrirPanel: true,
+            },
+            {
+                target: "#theme-toggle-btn",
+                titulo: "Estilo del mapa",
+                texto: "Cambiá entre los mapas Voyager, Claro y Oscuro.",
+                abrirPanel: true,
+            },
+            {
+                target: ".categoria-filter",
+                titulo: "Filtros temáticos",
+                texto: "Filtrá el mapa por categoría: personas, lugares, fechas, naturaleza…",
+                abrirPanel: true,
+            },
+            {
+                target: "#favoritos-btn",
+                titulo: "Mis favoritas",
+                texto: "Guardá las calles que más te interesen para volver a verlas después.",
+                abrirPanel: true,
+            },
+            {
+                target: "#nearme-btn",
+                titulo: "Ubicación",
+                texto: "Mostrá las calles con historia más cercanas a donde estás parado.",
+                abrirPanel: true,
+            },
+        ];
+
+        if ($btnEfemeride && !$btnEfemeride.hidden) {
+            pasos.push({
+                target: "#efemeride-btn",
+                titulo: "Un día como hoy",
+                texto: "Hoy hay una efeméride para contar: tocá acá para verla.",
+                abrirPanel: true,
+            });
+        }
+
+        pasos.push({
+            target: "#about-btn",
+            titulo: "Acerca de",
+            texto: "Info del proyecto, fuentes de datos y este mismo tutorial, para volver a verlo cuando quieras.",
+            abrirPanel: true,
+        });
+
+        pasos.push({
+            target: null,
+            titulo: "¡Listo para explorar!",
+            texto: "¡A explorar el callejero porteño!",
+        });
+
+        return pasos;
+    }
+
+    /** Ubica el spotlight y la tarjeta según el elemento del paso actual
+     *  (o los centra en pantalla si el paso no apunta a nada). */
+    function posicionarTour(selector) {
+        if (!$tourSpotlight || !$tourCard) return;
+        const target = selector ? document.querySelector(selector) : null;
+        const esMobile = window.innerWidth <= 480;
+
+        if (!target) {
+            const cx = window.innerWidth / 2;
+            const cy = window.innerHeight / 2;
+            $tourSpotlight.style.cssText = `top:${cy}px; left:${cx}px; width:0; height:0; border-radius:50%;`;
+        } else {
+            const r = target.getBoundingClientRect();
+            const pad = 6;
+            const circular = Math.abs(r.width - r.height) < 4;
+            $tourSpotlight.style.cssText =
+                `top:${r.top - pad}px; left:${r.left - pad}px; ` +
+                `width:${r.width + pad * 2}px; height:${r.height + pad * 2}px; ` +
+                `border-radius:${circular ? "50%" : "10px"};`;
+        }
+
+        if (esMobile) {
+            // En mobile la tarjeta queda fija abajo (ver CSS), no hace
+            // falta calcular su posición.
+            $tourCard.style.top = "";
+            $tourCard.style.left = "";
+            $tourCard.style.transform = "";
+            return;
+        }
+
+        if (!target) {
+            $tourCard.style.top = "50%";
+            $tourCard.style.left = "50%";
+            $tourCard.style.transform = "translate(-50%, -50%)";
+            return;
+        }
+
+        $tourCard.style.transform = "";
+        const r = target.getBoundingClientRect();
+        const margen = 14;
+        const cardW = $tourCard.offsetWidth || 300;
+        const cardH = $tourCard.offsetHeight || 160;
+        let top, left;
+
+        if (r.right + margen + cardW < window.innerWidth) {
+            left = r.right + margen;
+            top = r.top + r.height / 2 - cardH / 2;
+        } else if (r.left - margen - cardW > 0) {
+            left = r.left - margen - cardW;
+            top = r.top + r.height / 2 - cardH / 2;
+        } else if (r.bottom + margen + cardH < window.innerHeight) {
+            top = r.bottom + margen;
+            left = r.left + r.width / 2 - cardW / 2;
+        } else {
+            top = r.top - margen - cardH;
+            left = r.left + r.width / 2 - cardW / 2;
+        }
+
+        top = Math.min(Math.max(top, margen), window.innerHeight - cardH - margen);
+        left = Math.min(Math.max(left, margen), window.innerWidth - cardW - margen);
+        $tourCard.style.top = `${top}px`;
+        $tourCard.style.left = `${left}px`;
+    }
+
+    function mostrarPasoTour(indice) {
+        if (indice < 0 || indice >= tourPasos.length) return;
+        tourPasoActual = indice;
+        const paso = tourPasos[indice];
+
+        if ($toolsPanel) {
+            $toolsPanel.hidden = !paso.abrirPanel;
+        }
+        if ($btnTools) {
+            $btnTools.setAttribute("aria-expanded", String(!!paso.abrirPanel));
+        }
+
+        if ($tourStepCount) $tourStepCount.textContent = `${indice + 1} / ${tourPasos.length}`;
+        if ($tourTitle) $tourTitle.textContent = paso.titulo;
+        if ($tourText) $tourText.textContent = paso.texto;
+        if ($tourPrev) $tourPrev.disabled = indice === 0;
+        if ($tourNext) $tourNext.textContent = indice === tourPasos.length - 1 ? "Entendido" : "Siguiente";
+
+        // Se posiciona en el mismo tick, sin esperar un frame: leer
+        // getBoundingClientRect()/offsetWidth ya fuerza el layout al
+        // vuelo, así que no hace falta requestAnimationFrame (que además
+        // no se dispara si la pestaña queda en segundo plano, dejando la
+        // tarjeta clavada en top:0;left:0 hasta que vuelva a primer plano).
+        posicionarTour(paso.target);
+    }
+
+    function avanzarTour() {
+        if (tourPasoActual >= tourPasos.length - 1) {
+            cerrarTour();
+            return;
+        }
+        mostrarPasoTour(tourPasoActual + 1);
+    }
+
+    function retrocederTour() {
+        if (tourPasoActual === 0) return;
+        mostrarPasoTour(tourPasoActual - 1);
+    }
+
+    function cerrarTour() {
+        if ($tourOverlay) $tourOverlay.hidden = true;
+        if ($toolsPanel) $toolsPanel.hidden = true;
+        if ($btnTools) $btnTools.setAttribute("aria-expanded", "false");
+        localStorage.setItem(TOUR_KEY, "1");
+    }
+
+    function iniciarTour() {
+        tourPasos = construirPasosTour();
+        if (tourPasos.length === 0 || !$tourOverlay) return;
+        $tourOverlay.hidden = false;
+        mostrarPasoTour(0);
+    }
+
+    function inicializarTour() {
+        if ($tourNext) $tourNext.addEventListener("click", avanzarTour);
+        if ($tourPrev) $tourPrev.addEventListener("click", retrocederTour);
+        if ($tourSkip) $tourSkip.addEventListener("click", cerrarTour);
+        if ($tourReplayBtn) {
+            $tourReplayBtn.addEventListener("click", () => {
+                if ($aboutModal) $aboutModal.hidden = true;
+                setTimeout(iniciarTour, 150);
+            });
+        }
+        document.addEventListener("keydown", (e) => {
+            if (!$tourOverlay || $tourOverlay.hidden) return;
+            if (e.key === "Escape") cerrarTour();
+            else if (e.key === "ArrowRight") avanzarTour();
+            else if (e.key === "ArrowLeft") retrocederTour();
+        });
+        window.addEventListener("resize", () => {
+            if (!$tourOverlay || $tourOverlay.hidden) return;
+            const paso = tourPasos[tourPasoActual];
+            if (paso) posicionarTour(paso.target);
+        });
+
+        // Primera visita real: sin flag guardado y sin ?c=/?cat= en la URL
+        // (un link compartido no debería interrumpirse con el tutorial).
+        if (!localStorage.getItem(TOUR_KEY) && !location.search) {
+            setTimeout(iniciarTour, 600);
+        }
+    }
+
+    // =================================================================
+    // 10. ARRANQUE
     // =================================================================
 
     async function main() {
@@ -2714,6 +2992,7 @@
         conectarEventos();
         inicializarEfemeride();
         actualizarBadgeFavoritos();
+        inicializarTour();
         // ?c=<calle> tiene prioridad; si no hay ninguna (o no existe), se
         // prueba ?cat=<categoría> para restaurar un filtro compartido.
         if (!seleccionarDesdeURL()) {

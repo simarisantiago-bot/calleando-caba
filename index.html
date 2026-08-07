@@ -88,121 +88,155 @@
         <ul id="suggestions" class="suggestions" role="listbox" hidden></ul>
     </div>
 
-    <!-- Filtro por categoría -->
-    <div class="categoria-filter">
-        <select id="categoria-select" aria-label="Filtrar por categoría">
-            <option value="">Todas las categorías</option>
-        </select>
-    </div>
-
-    <!-- Botón "calle del día" -->
+    <!-- Botón "Herramientas": agrupa categorías, accesos rápidos y datos
+         y curiosidades en un único panel arriba a la derecha. -->
     <button
-        id="random-btn"
-        class="random-btn"
+        id="tools-btn"
+        class="tools-btn"
         type="button"
-        aria-label="Mostrar la calle del día"
-        title="Calle del día"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-        </svg>
-    </button>
-
-    <!-- Botón "Cerca mío" — geolocalización -->
-    <button
-        id="nearme-btn"
-        class="nearme-btn"
-        type="button"
-        aria-label="Mostrar calles cerca de mí"
-        title="Cerca mío"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/>
-        </svg>
-    </button>
-
-    <!-- Botón "Favoritas": abre el panel con las calles guardadas -->
-    <button
-        id="favoritos-btn"
-        class="favoritos-btn"
-        type="button"
-        aria-label="Ver mis calles favoritas"
+        aria-label="Abrir herramientas del mapa"
         aria-expanded="false"
-        title="Mis favoritas"
+        title="Herramientas"
     >
         <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
         </svg>
-        <span class="favoritos-count" id="favoritos-count" hidden>0</span>
     </button>
 
-    <!-- Panel desplegable con la lista de favoritas -->
-    <div class="favoritos-panel" id="favoritos-panel" hidden>
-        <div class="favoritos-panel-header">
-            <span>Mis favoritas</span>
-            <button type="button" class="favoritos-panel-close" id="favoritos-panel-close" aria-label="Cerrar">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
-                </svg>
-            </button>
-        </div>
-        <ul class="favoritos-list" id="favoritos-list"></ul>
-        <p class="favoritos-empty" id="favoritos-empty" hidden>Todavía no marcaste ninguna calle como favorita. Tocá la estrella en el popup de una calle para guardarla acá.</p>
-    </div>
-
-    <!-- Botón "Un día como hoy" — efeméride del día, oculto salvo que haya
-         alguna entrada de categoría FECHA cuyo día/mes coincida con hoy. -->
-    <button
-        id="efemeride-btn"
-        class="efemeride-btn"
-        type="button"
-        aria-label="Ver la efeméride de hoy"
-        title="Un día como hoy"
-        hidden
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8z"/>
-        </svg>
-        <span class="efemeride-dot" aria-hidden="true"></span>
-    </button>
-
-    <!-- Botón de cambio de tema del mapa -->
-    <div class="theme-toggle" id="theme-toggle">
+    <div class="tools-panel" id="tools-panel" hidden>
+        <!-- Botón "odónimo del día" -->
         <button
-            class="theme-toggle-btn"
-            id="theme-toggle-btn"
+            id="random-btn"
+            class="random-btn"
             type="button"
-            aria-label="Cambiar estilo del mapa"
-            title="Cambiar estilo del mapa"
+            aria-label="Mostrar el odónimo del día"
+            title="Odónimo del día"
         >
             <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/>
-                <circle cx="6.5" cy="11.5" r="1.5"/>
-                <circle cx="9.5" cy="7.5" r="1.5"/>
-                <circle cx="14.5" cy="7.5" r="1.5"/>
-                <circle cx="17.5" cy="11.5" r="1.5"/>
+                <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
             </svg>
         </button>
-        <ul class="theme-menu" id="theme-menu" role="menu" aria-label="Estilo del mapa" hidden>
-            <li data-tema="voyager" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot voyager"></span>Voyager</li>
-            <li data-tema="claro" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot claro"></span>Claro</li>
-            <li data-tema="oscuro" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot oscuro"></span>Oscuro</li>
-        </ul>
-    </div>
 
-    <!-- Botón "datos y curiosidades" arriba a la derecha -->
-    <button
-        id="stats-btn"
-        class="stats-btn"
-        type="button"
-        aria-label="Ver datos y curiosidades del callejero"
-        title="Datos y curiosidades"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
-        </svg>
-        <span>Datos y curiosidades</span>
-    </button>
+        <!-- Botón "datos y curiosidades" -->
+        <button
+            id="stats-btn"
+            class="stats-btn"
+            type="button"
+            aria-label="Ver datos y curiosidades del callejero"
+            title="Datos y curiosidades"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+            </svg>
+        </button>
+
+        <!-- Botón de cambio de tema del mapa -->
+        <div class="theme-toggle" id="theme-toggle">
+            <button
+                class="theme-toggle-btn"
+                id="theme-toggle-btn"
+                type="button"
+                aria-label="Cambiar estilo del mapa"
+                title="Estilo del mapa"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/>
+                    <circle cx="6.5" cy="11.5" r="1.5"/>
+                    <circle cx="9.5" cy="7.5" r="1.5"/>
+                    <circle cx="14.5" cy="7.5" r="1.5"/>
+                    <circle cx="17.5" cy="11.5" r="1.5"/>
+                </svg>
+            </button>
+            <ul class="theme-menu" id="theme-menu" role="menu" aria-label="Estilo del mapa" hidden>
+                <li data-tema="voyager" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot voyager"></span>Voyager</li>
+                <li data-tema="claro" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot claro"></span>Claro</li>
+                <li data-tema="oscuro" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot oscuro"></span>Oscuro</li>
+            </ul>
+        </div>
+
+        <!-- Filtro por categoría -->
+        <div class="categoria-filter">
+            <svg class="categoria-filter-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+            </svg>
+            <select id="categoria-select" aria-label="Filtrar por categoría" title="Filtros temáticos">
+                <option value="">Todas las categorías</option>
+            </select>
+        </div>
+
+        <!-- Botón "Favoritas": abre el panel con las calles guardadas -->
+        <div class="favoritos-wrap">
+            <button
+                id="favoritos-btn"
+                class="favoritos-btn"
+                type="button"
+                aria-label="Ver mis calles favoritas"
+                aria-expanded="false"
+                title="Mis favoritas"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+                <span class="favoritos-count" id="favoritos-count" hidden>0</span>
+            </button>
+
+            <!-- Panel desplegable con la lista de favoritas -->
+            <div class="favoritos-panel" id="favoritos-panel" hidden>
+                <div class="favoritos-panel-header">
+                    <span>Mis favoritas</span>
+                    <button type="button" class="favoritos-panel-close" id="favoritos-panel-close" aria-label="Cerrar">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="favoritos-list" id="favoritos-list"></ul>
+                <p class="favoritos-empty" id="favoritos-empty" hidden>Todavía no marcaste ninguna calle como favorita. Tocá la estrella en el popup de una calle para guardarla acá.</p>
+            </div>
+        </div>
+
+        <!-- Botón "Cerca mío" — geolocalización -->
+        <button
+            id="nearme-btn"
+            class="nearme-btn"
+            type="button"
+            aria-label="Mostrar calles cerca de mí"
+            title="Ubicación"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/>
+            </svg>
+        </button>
+
+        <!-- Botón "Un día como hoy" — efeméride del día, oculto salvo que haya
+             alguna entrada de categoría FECHA cuyo día/mes coincida con hoy. -->
+        <button
+            id="efemeride-btn"
+            class="efemeride-btn"
+            type="button"
+            aria-label="Ver la efeméride de hoy"
+            title="Un día como hoy"
+            hidden
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8z"/>
+            </svg>
+            <span class="efemeride-dot" aria-hidden="true"></span>
+        </button>
+
+        <!-- Botón "Acerca de" -->
+        <button
+            id="about-btn"
+            class="about-btn"
+            type="button"
+            aria-label="Acerca de Calleando CABA"
+            title="Acerca de"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+        </button>
+    </div>
 
     <!-- Modal de estadísticas -->
     <div id="stats-modal" class="stats-modal" hidden>
@@ -271,19 +305,6 @@
         <span>Datos: calleando.xlsx · Mapa base © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
     </div>
 
-    <!-- Botón "Acerca de" en la esquina inferior derecha -->
-    <button
-        id="about-btn"
-        class="about-btn"
-        type="button"
-        aria-label="Acerca de Calleando CABA"
-        title="Acerca de"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-        </svg>
-    </button>
-
     <!-- Modal "Acerca de" -->
     <div id="about-modal" class="stats-modal" hidden>
         <div class="stats-overlay" id="about-overlay"></div>
@@ -296,6 +317,12 @@
             <header class="stats-header">
                 <h2 id="about-title">Acerca de Calleando CABA</h2>
                 <p class="stats-summary">Mapa interactivo del callejero porteño con la historia de cada calle.</p>
+                <button type="button" class="tour-replay-btn" id="tour-replay-btn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                    </svg>
+                    Volver a ver el tutorial
+                </button>
             </header>
 
             <section class="stats-section">
@@ -322,7 +349,7 @@
                     <li><strong>Trazado real en el mapa</strong>: Click en cualquier calle para ver su ficha, con foto e historia.</li>
                     <li><strong>Mapa de calor por barrio</strong>: Densidad de odónimos de una categoría sobre los 48 barrios.</li>
                     <li><strong>Análisis estadístico</strong>: Distribución por categoría y curiosidades del callejero.</li>
-                    <li><strong>Exploración guiada</strong>: Calle del día y búsqueda por geolocalización ("Cerca mío").</li>
+                    <li><strong>Exploración guiada</strong>: Odónimo del día y búsqueda por geolocalización ("Cerca mío").</li>
                     <li><strong>Múltiples temas visuales</strong>: Claro, oscuro y Voyager para diferentes contextos.</li>
                 </ul>
             </section>
@@ -380,6 +407,25 @@
                     Para reportar errores o sugerir mejoras, visitá el <a href="https://github.com/simarisantiago-bot/calleando-caba/issues" target="_blank" rel="noopener">repositorio del proyecto</a>.
                 </p>
             </section>
+        </div>
+    </div>
+
+    <!-- Tutorial de bienvenida (primera visita) -->
+    <div id="tour-overlay" class="tour-overlay" hidden>
+        <div class="tour-spotlight" id="tour-spotlight"></div>
+        <div class="tour-card" id="tour-card" role="dialog" aria-modal="true" aria-labelledby="tour-title">
+            <button type="button" class="tour-skip" id="tour-skip" aria-label="Saltar tutorial" title="Saltar tutorial">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                </svg>
+            </button>
+            <p class="tour-step" id="tour-step-count"></p>
+            <h3 class="tour-title" id="tour-title"></h3>
+            <p class="tour-text" id="tour-text"></p>
+            <div class="tour-actions">
+                <button type="button" class="tour-btn tour-btn-secondary" id="tour-prev">Anterior</button>
+                <button type="button" class="tour-btn tour-btn-primary" id="tour-next">Siguiente</button>
+            </div>
         </div>
     </div>
 
