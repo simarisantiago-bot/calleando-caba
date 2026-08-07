@@ -121,6 +121,35 @@
         </svg>
     </button>
 
+    <!-- Botón "Favoritas": abre el panel con las calles guardadas -->
+    <button
+        id="favoritos-btn"
+        class="favoritos-btn"
+        type="button"
+        aria-label="Ver mis calles favoritas"
+        aria-expanded="false"
+        title="Mis favoritas"
+    >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>
+        <span class="favoritos-count" id="favoritos-count" hidden>0</span>
+    </button>
+
+    <!-- Panel desplegable con la lista de favoritas -->
+    <div class="favoritos-panel" id="favoritos-panel" hidden>
+        <div class="favoritos-panel-header">
+            <span>Mis favoritas</span>
+            <button type="button" class="favoritos-panel-close" id="favoritos-panel-close" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="favoritos-list" id="favoritos-list"></ul>
+        <p class="favoritos-empty" id="favoritos-empty" hidden>Todavía no marcaste ninguna calle como favorita. Tocá la estrella en el popup de una calle para guardarla acá.</p>
+    </div>
+
     <!-- Botón "Un día como hoy" — efeméride del día, oculto salvo que haya
          alguna entrada de categoría FECHA cuyo día/mes coincida con hoy. -->
     <button

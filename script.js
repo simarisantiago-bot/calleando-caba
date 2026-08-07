@@ -19,6 +19,7 @@
     const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
     const VIEWBOX = "-58.531,-34.706,-58.335,-34.527"; // long/lat, long/lat
     const CACHE_KEY = "calleando_geocache_v1";
+    const FAVORITOS_KEY = "calleando_favoritos_v1";
     const MAX_SUGGESTIONS = 8;
     const LINE_COLOR = "#1a73e8";
 
@@ -124,6 +125,12 @@
     const $btnRandom = document.getElementById("random-btn");
     const $btnNearme = document.getElementById("nearme-btn");
     const $btnEfemeride = document.getElementById("efemeride-btn");
+    const $btnFavoritos = document.getElementById("favoritos-btn");
+    const $favoritosCount = document.getElementById("favoritos-count");
+    const $favoritosPanel = document.getElementById("favoritos-panel");
+    const $favoritosPanelClose = document.getElementById("favoritos-panel-close");
+    const $favoritosList = document.getElementById("favoritos-list");
+    const $favoritosEmpty = document.getElementById("favoritos-empty");
     const $btnTheme = document.getElementById("theme-toggle-btn");
     const $themeMenu = document.getElementById("theme-menu");
     const $btnStats = document.getElementById("stats-btn");
@@ -1242,6 +1249,103 @@
         $btnEfemeride.addEventListener("click", () => seleccionarEntrada(entrada));
     }
 
+    // =================================================================
+    // FAVORITOS — calles marcadas a mano por quien navega, persistentes
+    // en localStorage (a diferencia de la efeméride o "calle del día",
+    // que son iguales para todos los visitantes).
+    // =================================================================
+
+    function leerFavoritos() {
+        try {
+            const arr = JSON.parse(localStorage.getItem(FAVORITOS_KEY) || "[]");
+            return Array.isArray(arr) ? arr : [];
+        } catch (_) {
+            return [];
+        }
+    }
+
+    function guardarFavoritos(ids) {
+        try {
+            localStorage.setItem(FAVORITOS_KEY, JSON.stringify(ids));
+        } catch (_) {
+            // localStorage lleno o deshabilitado: no hay mucho más para
+            // hacer, la marca de favorito simplemente no persiste.
+        }
+    }
+
+    function esFavorito(id) {
+        return leerFavoritos().includes(id);
+    }
+
+    /** Agrega o saca `id` de favoritos y devuelve si quedó marcado. */
+    function alternarFavorito(id) {
+        const favoritos = leerFavoritos();
+        const idx = favoritos.indexOf(id);
+        if (idx === -1) {
+            favoritos.push(id);
+        } else {
+            favoritos.splice(idx, 1);
+        }
+        guardarFavoritos(favoritos);
+        actualizarBadgeFavoritos();
+        return idx === -1;
+    }
+
+    function actualizarBadgeFavoritos() {
+        if (!$favoritosCount) return;
+        const n = leerFavoritos().length;
+        $favoritosCount.textContent = String(n);
+        $favoritosCount.hidden = n === 0;
+    }
+
+    function renderFavoritosPanel() {
+        if (!$favoritosList || !$favoritosEmpty) return;
+        const ids = leerFavoritos();
+        // El orden de guardado es el de "marcado más reciente al final";
+        // se muestra al revés para que lo último marcado aparezca primero.
+        const entradas = ids
+            .slice()
+            .reverse()
+            .map((id) => calles.find((c) => c.id === id))
+            .filter(Boolean);
+
+        $favoritosEmpty.hidden = entradas.length > 0;
+        $favoritosList.innerHTML = entradas.map((entrada) => `
+            <li data-id="${escapeHtml(entrada.id)}">
+                <span class="favoritos-item-info">
+                    <span class="favoritos-item-title">${escapeHtml(entrada.nombre_busqueda)}</span>
+                    <span class="favoritos-item-sub">${escapeHtml((entrada.tipo || "").trim())}</span>
+                </span>
+                <button type="button" class="favoritos-item-remove" data-id="${escapeHtml(entrada.id)}" aria-label="Sacar de favoritas">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                </button>
+            </li>
+        `).join("");
+    }
+
+    function abrirPanelFavoritos() {
+        if (!$favoritosPanel || !$btnFavoritos) return;
+        renderFavoritosPanel();
+        $favoritosPanel.hidden = false;
+        $btnFavoritos.setAttribute("aria-expanded", "true");
+    }
+
+    function cerrarPanelFavoritos() {
+        if (!$favoritosPanel || !$btnFavoritos) return;
+        $favoritosPanel.hidden = true;
+        $btnFavoritos.setAttribute("aria-expanded", "false");
+    }
+
+    /** Refleja en un botón "★ favorita" del popup el estado actual. */
+    function sincronizarBotonFavorito(boton, favorito) {
+        boton.classList.toggle("es-favorito", favorito);
+        boton.setAttribute("aria-pressed", String(favorito));
+        const span = boton.querySelector("span");
+        if (span) span.textContent = favorito ? "En favoritas" : "Favorita";
+    }
+
     /** Busca por texto libre cuando el usuario aprieta el botón Buscar. */
     function buscarPorTexto() {
         const q = normalizar($input.value);
@@ -1863,6 +1967,12 @@
             ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
             <div class="popup-actions">
+                <button class="popup-fav-btn${esFavorito(entrada.id) ? " es-favorito" : ""}" type="button" data-id="${escapeHtml(entrada.id)}" aria-pressed="${esFavorito(entrada.id)}">
+                    <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+                        <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                    <span>${esFavorito(entrada.id) ? "En favoritas" : "Favorita"}</span>
+                </button>
                 <button class="popup-share-btn" type="button" data-id="${escapeHtml(entrada.id)}">
                     <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2474,6 +2584,52 @@
             }
         });
 
+        // Botón "★ favorita" del popup: marca/desmarca en localStorage.
+        document.addEventListener("click", (e) => {
+            const btn = e.target.closest(".popup-fav-btn");
+            if (!btn) return;
+            const favorito = alternarFavorito(btn.dataset.id);
+            sincronizarBotonFavorito(btn, favorito);
+        });
+
+        // Botón "Mis favoritas": abre/cierra el panel con la lista.
+        if ($btnFavoritos && $favoritosPanel) {
+            $btnFavoritos.addEventListener("click", () => {
+                if ($favoritosPanel.hidden) {
+                    abrirPanelFavoritos();
+                } else {
+                    cerrarPanelFavoritos();
+                }
+            });
+        }
+        if ($favoritosPanelClose) {
+            $favoritosPanelClose.addEventListener("click", cerrarPanelFavoritos);
+        }
+        // Click fuera del panel (y no en el botón que lo abre) lo cierra.
+        document.addEventListener("click", (e) => {
+            if (!$favoritosPanel || $favoritosPanel.hidden) return;
+            if (e.target.closest(".favoritos-panel") || e.target.closest(".favoritos-btn")) return;
+            cerrarPanelFavoritos();
+        });
+        // Sacar una entrada de favoritas desde el propio panel.
+        if ($favoritosList) {
+            $favoritosList.addEventListener("click", (e) => {
+                const quitar = e.target.closest(".favoritos-item-remove");
+                if (quitar) {
+                    alternarFavorito(quitar.dataset.id);
+                    renderFavoritosPanel();
+                    return;
+                }
+                const fila = e.target.closest("li[data-id]");
+                if (!fila) return;
+                const entrada = calles.find((c) => c.id === fila.dataset.id);
+                if (entrada) {
+                    cerrarPanelFavoritos();
+                    seleccionarEntrada(entrada);
+                }
+            });
+        }
+
         // Botón "X" (propio de Leaflet) del popup: además de despintar la
         // calle/marcador (ya lo hace el "popupclose" de inicializarMapa,
         // que dispara para CUALQUIER cierre), borra lo que había en el
@@ -2557,6 +2713,7 @@
         dibujarCapaBase();
         conectarEventos();
         inicializarEfemeride();
+        actualizarBadgeFavoritos();
         // ?c=<calle> tiene prioridad; si no hay ninguna (o no existe), se
         // prueba ?cat=<categoría> para restaurar un filtro compartido.
         if (!seleccionarDesdeURL()) {

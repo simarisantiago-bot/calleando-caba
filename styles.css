@@ -415,6 +415,278 @@ body.tema-oscuro .nearme-btn svg {
     fill: #1a73e8;
 }
 
+/* -------- Botón "Mis favoritas" -------- */
+.favoritos-btn {
+    position: absolute;
+    bottom: 370px;
+    right: 16px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+    padding: 0;
+}
+
+.favoritos-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.favoritos-btn:active {
+    transform: scale(0.92);
+}
+
+.favoritos-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+.favoritos-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    background: #ea4335;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    border: 1.5px solid #fff;
+}
+
+body.tema-oscuro .favoritos-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .favoritos-btn svg {
+    fill: #8ab4f8;
+}
+body.tema-oscuro .favoritos-count {
+    border-color: #2a2d34;
+}
+
+/* Panel desplegable con la lista de favoritas */
+.favoritos-panel {
+    position: absolute;
+    bottom: 370px;
+    right: 68px;
+    z-index: 1001;
+    width: 300px;
+    max-width: calc(100vw - 32px);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.favoritos-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #202124;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.favoritos-panel-close {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favoritos-panel-close:hover {
+    background: #f1f3f4;
+}
+.favoritos-panel-close svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.favoritos-list {
+    list-style: none;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.favoritos-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 8px 10px 16px;
+    border-bottom: 1px solid #f1f3f4;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+.favoritos-list li:last-child {
+    border-bottom: 0;
+}
+.favoritos-list li:hover {
+    background: #f1f3f4;
+}
+
+.favoritos-list .favoritos-item-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.favoritos-list .favoritos-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favoritos-list .favoritos-item-sub {
+    font-size: 12px;
+    color: #5f6368;
+}
+
+.favoritos-item-remove {
+    width: 26px;
+    height: 26px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.favoritos-item-remove:hover {
+    background: #e8eaed;
+    color: #d93025;
+}
+.favoritos-item-remove svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.favoritos-empty {
+    padding: 20px 16px;
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+    text-align: center;
+}
+
+body.tema-oscuro .favoritos-panel {
+    background: #2a2d34;
+}
+body.tema-oscuro .favoritos-panel-header {
+    color: #e8eaed;
+    border-bottom-color: #3c4043;
+}
+body.tema-oscuro .favoritos-panel-close {
+    color: #9aa0a6;
+}
+body.tema-oscuro .favoritos-panel-close:hover {
+    background: #3c4043;
+}
+body.tema-oscuro .favoritos-list li {
+    border-bottom-color: #3c4043;
+}
+body.tema-oscuro .favoritos-list li:hover {
+    background: #3c4043;
+}
+body.tema-oscuro .favoritos-item-title {
+    color: #e8eaed;
+}
+body.tema-oscuro .favoritos-item-sub {
+    color: #9aa0a6;
+}
+body.tema-oscuro .favoritos-item-remove {
+    color: #9aa0a6;
+}
+body.tema-oscuro .favoritos-item-remove:hover {
+    background: #4a4d54;
+    color: #f28b82;
+}
+body.tema-oscuro .favoritos-empty {
+    color: #9aa0a6;
+}
+
+/* -------- Botón de favorito ("estrella") en el popup -------- */
+.popup-fav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 999px;
+    background: #fff;
+    color: #1a73e8;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.popup-fav-btn svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+.popup-fav-btn:hover {
+    background: #f1f6ff;
+    border-color: #1a73e8;
+}
+.popup-fav-btn.es-favorito {
+    color: #f9ab00;
+    border-color: #f9ab00;
+    background: #fef7e0;
+}
+.popup-fav-btn.es-favorito svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+body.tema-oscuro .popup-fav-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+    border-color: #3c4043;
+}
+body.tema-oscuro .popup-fav-btn:hover {
+    background: #3c4043;
+    border-color: #8ab4f8;
+}
+body.tema-oscuro .popup-fav-btn.es-favorito {
+    color: #fdd663;
+    border-color: #fdd663;
+    background: #3c3623;
+}
+
 /* -------- Botón "Un día como hoy" (efeméride) -------- */
 .efemeride-btn {
     position: absolute;
@@ -1573,6 +1845,24 @@ body.tema-oscuro .popup-media-skeleton {
     .efemeride-btn svg {
         width: 20px;
         height: 20px;
+    }
+
+    .favoritos-btn {
+        bottom: 370px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .favoritos-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .favoritos-panel {
+        bottom: 370px;
+        right: 8px;
+        width: calc(100vw - 16px);
     }
 
     .about-btn {
