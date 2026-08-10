@@ -143,6 +143,9 @@
     const $statsSummary = document.getElementById("stats-summary");
     const $statsTitle = document.getElementById("stats-title");
     const $statsCategorias = document.getElementById("stats-categorias");
+    const $rankingBarrios = document.getElementById("stats-ranking-barrios");
+    const $rankingCategoriaSelect = document.getElementById("ranking-categoria-select");
+    const $rankingBarriosNota = document.getElementById("ranking-barrios-nota");
     const $statsCuriosidades = document.getElementById("stats-curiosidades");
     const $curiosidadesSecciones = document.getElementById("curiosidades-secciones");
     const $aboutBtn = document.getElementById("about-btn");
@@ -516,6 +519,7 @@
         }
 
         poblarDropdownCategorias();
+        poblarRankingCategoriaSelect();
     }
 
     // =================================================================
@@ -2407,6 +2411,82 @@
         }
     }
 
+    /** Pobla el select de categoría del ranking de barrios (una sola vez,
+     *  al cargar los datos), con el mismo criterio que poblarDropdownCategorias(). */
+    function poblarRankingCategoriaSelect() {
+        if (!$rankingCategoriaSelect) return;
+        const counts = new Map();
+        for (const c of calles) {
+            const cat = (c.categoria || "").trim().toUpperCase();
+            if (!cat) continue;
+            counts.set(cat, (counts.get(cat) || 0) + 1);
+        }
+        const ordenadas = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+        for (const [cat, n] of ordenadas) {
+            const opt = document.createElement("option");
+            opt.value = cat;
+            opt.textContent = `${cat.charAt(0) + cat.slice(1).toLowerCase()} (${n})`;
+            $rankingCategoriaSelect.appendChild(opt);
+        }
+    }
+
+    /**
+     * Ranking de barrios por cantidad de odónimos, opcionalmente filtrado
+     * por categoría. Arranca de los 48 barrios de barriosGeo (si están
+     * cargados) para que también se vean los que tienen 0 en una
+     * categoría puntual, no solo los que tienen al menos 1.
+     */
+    function construirRankingBarrios(categoriaFiltro) {
+        if (!$rankingBarrios) return;
+        const filtro = (categoriaFiltro || "").trim().toUpperCase();
+
+        const counts = new Map();
+        if (barriosGeo && Array.isArray(barriosGeo.features)) {
+            for (const f of barriosGeo.features) {
+                const nombre = f.properties && f.properties.nombre;
+                if (nombre) counts.set(nombre, 0);
+            }
+        }
+
+        let sinBarrio = 0;
+        for (const c of calles) {
+            if (filtro && (c.categoria || "").trim().toUpperCase() !== filtro) continue;
+            if (!c.barrio) { sinBarrio++; continue; }
+            counts.set(c.barrio, (counts.get(c.barrio) || 0) + 1);
+        }
+
+        const ordenados = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+        $rankingBarrios.innerHTML = "";
+
+        const max = ordenados.length > 0 ? ordenados[0][1] : 0;
+        const color = filtro ? (COLORES_CATEGORIA[filtro] || "#6b7280") : "#1a73e8";
+        ordenados.forEach(([barrio, n], i) => {
+            const pct = max > 0 ? (n / max) * 100 : 0;
+            const li = document.createElement("li");
+            li.className = "stats-bar ranking-barrio";
+            li.innerHTML = `
+                <span class="ranking-barrio-puesto">${i + 1}</span>
+                <span class="stats-bar-label">${escapeHtml(barrio)}</span>
+                <span class="stats-bar-track" style="background-color: ${color}40;">
+                    <span class="stats-bar-fill" style="width: ${pct}%; background-color: ${color};"></span>
+                </span>
+                <span class="stats-bar-value">${n.toLocaleString("es-AR")}</span>
+            `;
+            $rankingBarrios.appendChild(li);
+        });
+
+        if ($rankingBarriosNota) {
+            if (sinBarrio > 0) {
+                const plural = sinBarrio === 1 ? "" : "s";
+                $rankingBarriosNota.textContent =
+                    `${sinBarrio.toLocaleString("es-AR")} odónimo${plural} sin barrio asignado, no incluido${plural} en el ranking.`;
+                $rankingBarriosNota.hidden = false;
+            } else {
+                $rankingBarriosNota.hidden = true;
+            }
+        }
+    }
+
     function construirEstadisticas() {
         if (!Array.isArray(calles) || calles.length === 0) return;
 
@@ -2460,6 +2540,9 @@
             `;
             $statsCategorias.appendChild(li);
         }
+
+        // Ranking de barrios, según la categoría elegida en su propio select
+        construirRankingBarrios($rankingCategoriaSelect ? $rankingCategoriaSelect.value : "");
 
         // Sección "¿Sabías que…?" recibe el subset filtrado
         dibujarCuriosidades(sub, ambito);
@@ -2720,6 +2803,13 @@
                 const btn = e.target.closest(".stats-tab");
                 if (!btn || !btn.dataset.tab) return;
                 cambiarTabEstadisticas(btn.dataset.tab);
+            });
+        }
+
+        // Ranking de barrios: cambiar categoría re-dibuja solo esa sección
+        if ($rankingCategoriaSelect) {
+            $rankingCategoriaSelect.addEventListener("change", (e) => {
+                construirRankingBarrios(e.target.value);
             });
         }
 
