@@ -1491,9 +1491,11 @@ body.tema-oscuro .about-lista a {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
 }
 
 .about-autor-avatar {
@@ -1536,6 +1538,7 @@ body.tema-oscuro .about-lista a {
 
 body.tema-oscuro .about-autor {
     border-top-color: #3c4043;
+    border-bottom-color: #3c4043;
 }
 
 body.tema-oscuro .about-autor-nombre {
