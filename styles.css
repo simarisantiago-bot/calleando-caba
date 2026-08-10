@@ -1486,6 +1486,66 @@ body.tema-oscuro .about-lista a {
     color: #8ab4f8;
 }
 
+/* -------- Crédito del autor (pie del modal "Acerca de") -------- */
+.about-autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #ebebeb;
+}
+
+.about-autor-avatar {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(160deg, #4285f4, #1a73e8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.about-autor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.about-autor-label {
+    font-size: 11.5px;
+    color: #9aa0a6;
+}
+
+.about-autor-nombre {
+    font-size: 14px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.about-autor-handle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a73e8;
+}
+
+body.tema-oscuro .about-autor {
+    border-top-color: #3c4043;
+}
+
+body.tema-oscuro .about-autor-nombre {
+    color: #e8eaed;
+}
+
+body.tema-oscuro .about-autor-handle {
+    color: #8ab4f8;
+}
+
 .stats-bar-value {
     text-align: right;
     color: #5f6368;
