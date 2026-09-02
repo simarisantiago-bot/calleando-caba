@@ -389,21 +389,21 @@
         });
     }
 
-    // Capas de tiles disponibles
+    // Capas de tiles disponibles (OpenStreetMap, sin API key requerida)
     const TEMAS = {
         voyager: {
-            url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            subdomains: "abcd",
-            label: "Voyager",
+            url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            subdomains: "abc",
+            label: "Estándar",
         },
         claro: {
-            url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-            subdomains: "abcd",
+            url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            subdomains: "abc",
             label: "Claro",
         },
         oscuro: {
-            url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-            subdomains: "abcd",
+            url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            subdomains: "abc",
             label: "Oscuro",
         },
     };
