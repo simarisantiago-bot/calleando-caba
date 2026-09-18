@@ -77208,30 +77208,6 @@
     ],
     "source": "manual"
   },
-  "cesar milstein|plazoleta": {
-    "tipo": "line",
-    "geometry": {
-      "type": "LineString",
-      "coordinates": [
-        [
-          -58.5050002,
-          -34.5589474
-        ],
-        [
-          -58.505007521659834,
-          -34.55894488587122
-        ]
-      ]
-    },
-    "bbox": [
-      -34.5589474,
-      -34.55894488587122,
-      -58.505007521659834,
-      -58.5050002
-    ],
-    "source": "overpass-bulk",
-    "ways": 1
-  },
   "cesar vallejo|cantero central": {
     "tipo": "point",
     "center": [
