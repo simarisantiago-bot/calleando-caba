@@ -49,6 +49,20 @@ Conviene correrlo después de una tanda grande de ediciones manuales.
 python verificar_integridad.py
 ```
 
+### Verificar que las geometrías caigan dentro de CABA
+Valida cada coordenada de `geo_cache.json` contra el polígono administrativo real
+de la Ciudad (`data/limite_caba.json`, bajado de OSM). Existe porque hay calles
+homónimas en el Conurbano —cinco "Emilio Castro" distintas en el AMBA— y un bbox
+suelto no las distingue: la del partido equivocado cae en el mismo rectángulo.
+Correrlo junto con `verificar_integridad.py` antes de pushear.
+```powershell
+python verificar_caba.py
+```
+Para regenerar el límite desde OpenStreetMap (rara vez hace falta):
+```powershell
+python verificar_caba.py --actualizar-limite
+```
+
 ## Convenciones
 
 - Las 27 hojas del Excel se organizan por letra inicial (A-Z + Ñ).
