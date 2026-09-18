@@ -22,6 +22,7 @@ html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #202124;
     background: #f5f5f5;
+    --font-brand: "Narnoor", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* -------- Mapa fullscreen -------- */
@@ -54,6 +55,40 @@ html, body {
     box-shadow:
         0 2px 6px rgba(0, 0, 0, 0.16),
         0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* -------- Marca / branding dentro del buscador -------- */
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px 8px;
+    border-bottom: 1px solid #eef0f2;
+    cursor: pointer;
+    user-select: none;
+}
+.brand-header:hover .brand-name { color: #1a73e8; }
+.brand-logo {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+.brand-name {
+    font-family: var(--font-brand);
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.3px;
+    transition: color 0.15s;
+}
+.brand-name strong { color: #1a73e8; font-weight: 700; }
+.brand-tag {
+    margin-left: auto;
+    font-size: 11px;
+    color: #80868b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .search-input-wrap {
@@ -135,10 +170,7 @@ html, body {
 
 /* -------- Botón de cambio de tema del mapa -------- */
 .theme-toggle {
-    position: absolute;
-    bottom: 174px;
-    right: 16px;
-    z-index: 1000;
+    position: relative;
 }
 
 .theme-toggle-btn {
@@ -173,8 +205,9 @@ html, body {
     margin: 0;
     padding: 6px 0;
     position: absolute;
-    bottom: 52px;
-    right: 0;
+    top: 0;
+    right: 100%;
+    margin-right: 8px;
     min-width: 140px;
     background: #fff;
     border-radius: 8px;
@@ -194,8 +227,14 @@ html, body {
     transition: background 0.12s;
 }
 
-.theme-menu li:hover {
+.theme-menu li:hover,
+.theme-menu li:focus-visible {
     background: #f1f3f4;
+}
+
+.theme-menu li:focus-visible {
+    outline: 2px solid #1a73e8;
+    outline-offset: -2px;
 }
 
 .theme-menu li.activo {
@@ -225,7 +264,6 @@ html, body {
 
 /* En modo oscuro: ajustar paneles flotantes */
 body.tema-oscuro .search-box,
-body.tema-oscuro .barrio-filter,
 body.tema-oscuro .categoria-filter,
 body.tema-oscuro .random-btn,
 body.tema-oscuro .theme-toggle-btn,
@@ -238,16 +276,23 @@ body.tema-oscuro #search-input {
     color: #e8eaed;
 }
 
+body.tema-oscuro .brand-header { border-bottom-color: #3c4043; }
+body.tema-oscuro .brand-name { color: #e8eaed; }
+body.tema-oscuro .brand-tag { color: #9aa0a6; }
+
 body.tema-oscuro #search-input::placeholder {
     color: #9aa0a6;
 }
 
 body.tema-oscuro .search-icon,
 body.tema-oscuro .clear-btn svg,
-body.tema-oscuro #barrio-select,
 body.tema-oscuro #categoria-select {
     fill: #9aa0a6;
     color: #e8eaed;
+}
+
+body.tema-oscuro .categoria-filter-icon {
+    fill: #8ab4f8;
 }
 
 body.tema-oscuro .suggestions li {
@@ -268,7 +313,8 @@ body.tema-oscuro .theme-menu li {
     color: #e8eaed;
 }
 
-body.tema-oscuro .theme-menu li:hover {
+body.tema-oscuro .theme-menu li:hover,
+body.tema-oscuro .theme-menu li:focus-visible {
     background: #3c4043;
 }
 
@@ -279,10 +325,6 @@ body.tema-oscuro .credits {
 
 /* -------- Botón "Cerca mío" (geolocalización) -------- */
 .nearme-btn {
-    position: absolute;
-    bottom: 228px;
-    right: 16px;
-    z-index: 1000;
     width: 44px;
     height: 44px;
     border: 0;
@@ -332,12 +374,8 @@ body.tema-oscuro .nearme-btn svg {
     fill: #8ab4f8;
 }
 
-/* -------- Botón "calle al azar" (arriba del filtro de barrios) -------- */
+/* -------- Botón "calle al azar" -------- */
 .random-btn {
-    position: absolute;
-    bottom: 120px;
-    right: 16px;
-    z-index: 1000;
     width: 44px;
     height: 44px;
     border: 0;
@@ -371,63 +409,391 @@ body.tema-oscuro .nearme-btn svg {
     fill: #1a73e8;
 }
 
-/* -------- Filtro por barrio (flotante abajo-derecha) -------- */
-.barrio-filter,
-.categoria-filter {
-    position: absolute;
-    z-index: 1000;
+/* -------- Botón "Mis favoritas" -------- */
+.favoritos-btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
     background: #fff;
-    border-radius: 6px;
     box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.14),
         0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
     padding: 0;
 }
 
-.barrio-filter {
-    /* El zoom control de Leaflet ocupa ~30px de ancho a la derecha y queda
-       en la esquina inferior. Lo posiciono a su izquierda. */
-    bottom: 16px;
-    right: 60px;
+.favoritos-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.categoria-filter {
-    /* Encima del filtro de barrios */
-    bottom: 62px;
-    right: 60px;
+.favoritos-btn:active {
+    transform: scale(0.92);
 }
 
-#barrio-select,
-#categoria-select {
-    border: 0;
-    background: transparent;
-    padding: 8px 30px 8px 12px;
-    font-size: 13px;
-    font-family: inherit;
+.favoritos-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+.favoritos-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    background: #ea4335;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    border: 1.5px solid #fff;
+}
+
+body.tema-oscuro .favoritos-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .favoritos-btn svg {
+    fill: #8ab4f8;
+}
+body.tema-oscuro .favoritos-count {
+    border-color: #2a2d34;
+}
+
+/* Contenedor relativo: ancla el panel desplegable al botón */
+.favoritos-wrap {
+    position: relative;
+}
+
+/* Panel desplegable con la lista de favoritas */
+.favoritos-panel {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin-right: 8px;
+    z-index: 1001;
+    width: 300px;
+    max-width: calc(100vw - 32px);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.favoritos-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
     color: #202124;
-    cursor: pointer;
-    outline: none;
-    min-width: 180px;
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235f6368'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 16px;
-    border-radius: 6px;
-    transition: background-color 0.15s;
+    border-bottom: 1px solid #ebebeb;
 }
 
-#barrio-select:hover,
-#categoria-select:hover {
+.favoritos-panel-close {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favoritos-panel-close:hover {
+    background: #f1f3f4;
+}
+.favoritos-panel-close svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.favoritos-list {
+    list-style: none;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.favoritos-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 8px 10px 16px;
+    border-bottom: 1px solid #f1f3f4;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+.favoritos-list li:last-child {
+    border-bottom: 0;
+}
+.favoritos-list li:hover {
+    background: #f1f3f4;
+}
+
+.favoritos-list .favoritos-item-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.favoritos-list .favoritos-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favoritos-list .favoritos-item-sub {
+    font-size: 12px;
+    color: #5f6368;
+}
+
+.favoritos-item-remove {
+    width: 26px;
+    height: 26px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.favoritos-item-remove:hover {
+    background: #e8eaed;
+    color: #d93025;
+}
+.favoritos-item-remove svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.favoritos-empty {
+    padding: 20px 16px;
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+    text-align: center;
+}
+
+body.tema-oscuro .favoritos-panel {
+    background: #2a2d34;
+}
+body.tema-oscuro .favoritos-panel-header {
+    color: #e8eaed;
+    border-bottom-color: #3c4043;
+}
+body.tema-oscuro .favoritos-panel-close {
+    color: #9aa0a6;
+}
+body.tema-oscuro .favoritos-panel-close:hover {
+    background: #3c4043;
+}
+body.tema-oscuro .favoritos-list li {
+    border-bottom-color: #3c4043;
+}
+body.tema-oscuro .favoritos-list li:hover {
+    background: #3c4043;
+}
+body.tema-oscuro .favoritos-item-title {
+    color: #e8eaed;
+}
+body.tema-oscuro .favoritos-item-sub {
+    color: #9aa0a6;
+}
+body.tema-oscuro .favoritos-item-remove {
+    color: #9aa0a6;
+}
+body.tema-oscuro .favoritos-item-remove:hover {
+    background: #4a4d54;
+    color: #f28b82;
+}
+body.tema-oscuro .favoritos-empty {
+    color: #9aa0a6;
+}
+
+/* -------- Botón de favorito ("estrella") en el popup -------- */
+.popup-fav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 999px;
+    background: #fff;
+    color: #1a73e8;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.popup-fav-btn svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+.popup-fav-btn:hover {
+    background: #f1f6ff;
+    border-color: #1a73e8;
+}
+.popup-fav-btn.es-favorito {
+    color: #f9ab00;
+    border-color: #f9ab00;
+    background: #fef7e0;
+}
+.popup-fav-btn.es-favorito svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+body.tema-oscuro .popup-fav-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+    border-color: #3c4043;
+}
+body.tema-oscuro .popup-fav-btn:hover {
+    background: #3c4043;
+    border-color: #8ab4f8;
+}
+body.tema-oscuro .popup-fav-btn.es-favorito {
+    color: #fdd663;
+    border-color: #fdd663;
+    background: #3c3623;
+}
+
+/* -------- Botón "Un día como hoy" (efeméride) -------- */
+.efemeride-btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+    padding: 0;
+}
+
+.efemeride-btn:hover {
+    background: #f1f3f4;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.efemeride-btn:active {
+    transform: scale(0.92);
+}
+
+.efemeride-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+/* Puntito que avisa "hoy hay algo" — el botón entero solo se muestra
+   cuando efectivamente hay una coincidencia, así que no necesita lógica
+   propia de visibilidad además de la del botón. */
+.efemeride-dot {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ea4335;
+    border: 1.5px solid #fff;
+}
+
+body.tema-oscuro .efemeride-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .efemeride-btn svg {
+    fill: #8ab4f8;
+}
+body.tema-oscuro .efemeride-dot {
+    border-color: #2a2d34;
+}
+
+/* -------- Filtro por categoría (misma forma que "Cerca mío") -------- */
+.categoria-filter {
+    position: relative;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s, box-shadow 0.15s;
+}
+
+.categoria-filter:hover {
     background-color: #f1f3f4;
 }
 
-#barrio-select.active-filter,
-#categoria-select.active-filter {
+.categoria-filter.active-filter {
     background-color: #e8f0fe;
-    color: #1a73e8;
-    font-weight: 500;
+}
+
+.categoria-filter-icon {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+    pointer-events: none;
+}
+
+/* El <select> real queda invisible pero clickeable, tapando todo el
+   círculo: mantiene el comportamiento nativo (teclado, accesibilidad)
+   mientras el ícono de arriba hace de cara visible del botón. */
+#categoria-select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    opacity: 0;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* Tooltip que aparece al pasar el mouse sobre un barrio en el overlay "todos" */
@@ -526,48 +892,27 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     color: #fff3cd;
 }
 
-.suggestions .suggestion-empty {
-    padding: 14px;
-    color: #5f6368;
-    text-align: center;
-    font-style: italic;
-    cursor: default;
-}
-
-.suggestions .suggestion-empty:hover {
-    background: transparent;
-}
-
-/* -------- Botón "Estadísticas" arriba a la derecha -------- */
+/* -------- Botón "Datos y curiosidades" (misma forma que "Cerca mío") -------- */
 .stats-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    z-index: 1000;
-    height: 48px;
-    padding: 0 18px 0 14px;
+    width: 44px;
+    height: 44px;
     border: 0;
-    border-radius: 24px;
+    border-radius: 50%;
     background: #fff;
     color: #1a73e8;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.12),
-        0 4px 12px rgba(0, 0, 0, 0.08);
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
     transition: background 0.15s, box-shadow 0.15s;
+    padding: 0;
 }
 
 .stats-btn:hover {
     background: #f1f3f4;
-    box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.16),
-        0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .stats-btn svg {
@@ -576,12 +921,73 @@ body.tema-oscuro .suggestions .suggestion-snippet mark {
     fill: currentColor;
 }
 
-/* -------- Botón "Acerca de" abajo a la izquierda -------- */
-.about-btn {
+/* -------- Botón "Herramientas": agrupa categorías, calle del día, cerca
+   mío, favoritas, efeméride, tema y datos y curiosidades en un único
+   panel arriba a la derecha -------- */
+.tools-btn {
     position: absolute;
-    bottom: 16px;
-    left: 16px;
+    top: 16px;
+    right: 16px;
     z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, box-shadow 0.15s;
+    padding: 0;
+}
+
+.tools-btn:hover {
+    background: #f1f3f4;
+}
+
+.tools-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #1a73e8;
+}
+
+.tools-panel {
+    position: absolute;
+    top: 68px;
+    right: 16px;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+body.tema-oscuro .tools-btn {
+    background: #2a2d34;
+}
+body.tema-oscuro .tools-btn svg {
+    fill: #8ab4f8;
+}
+body.tema-oscuro .tools-panel {
+    background: #2a2d34;
+}
+body.tema-oscuro .about-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+}
+
+/* -------- Botón "Acerca de" -------- */
+.about-btn {
     width: 44px;
     height: 44px;
     border: 0;
@@ -1080,11 +1486,139 @@ body.tema-oscuro .about-lista a {
     color: #8ab4f8;
 }
 
+/* -------- Crédito del autor (pie del modal "Acerca de") -------- */
+.about-autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.about-autor-avatar {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(160deg, #4285f4, #1a73e8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.about-autor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.about-autor-label {
+    font-size: 11.5px;
+    color: #9aa0a6;
+}
+
+.about-autor-nombre {
+    font-size: 14px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.about-autor-handle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a73e8;
+}
+
+body.tema-oscuro .about-autor {
+    border-top-color: #3c4043;
+    border-bottom-color: #3c4043;
+}
+
+body.tema-oscuro .about-autor-nombre {
+    color: #e8eaed;
+}
+
+body.tema-oscuro .about-autor-handle {
+    color: #8ab4f8;
+}
+
 .stats-bar-value {
     text-align: right;
     color: #5f6368;
     font-variant-numeric: tabular-nums;
     font-size: 12px;
+}
+
+/* -------- Ranking de barrios -------- */
+.stats-ranking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.stats-ranking-header h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+#ranking-categoria-select {
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    background: #fff;
+    color: #202124;
+    font-family: inherit;
+    font-size: 12.5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    max-width: 55%;
+}
+
+.ranking-barrios {
+    max-height: 340px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.ranking-barrio {
+    grid-template-columns: 22px 120px 1fr 46px;
+}
+
+.ranking-barrio-puesto {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #9aa0a6;
+    font-variant-numeric: tabular-nums;
+}
+
+.ranking-barrios-nota {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #9aa0a6;
+}
+
+body.tema-oscuro #ranking-categoria-select {
+    background: #2a2d34;
+    color: #e8eaed;
+    border-color: #3c4043;
+}
+
+body.tema-oscuro .ranking-barrio-puesto {
+    color: #6b6f76;
+}
+
+body.tema-oscuro .ranking-barrios-nota {
+    color: #6b6f76;
 }
 
 /* Modo oscuro del modal */
@@ -1105,6 +1639,10 @@ body.tema-oscuro .stats-bar-track {
     background: #3c4043;
 }
 
+body.tema-oscuro .stats-bar-value {
+    color: #9aa0a6;
+}
+
 body.tema-oscuro .stats-close svg {
     fill: #9aa0a6;
 }
@@ -1116,19 +1654,6 @@ body.tema-oscuro .stats-btn {
 
 /* Responsive */
 @media (max-width: 480px) {
-    .stats-btn {
-        top: 70px;  /* debajo del search box en mobile */
-        right: 8px;
-        height: 40px;
-        padding: 0 14px 0 10px;
-        font-size: 13px;
-    }
-
-    .stats-btn svg {
-        width: 18px;
-        height: 18px;
-    }
-
     .stats-bar {
         grid-template-columns: 100px 1fr 60px;
         font-size: 12px;
@@ -1175,6 +1700,18 @@ body.tema-oscuro .stats-btn {
     text-decoration: underline;
 }
 
+/* -------- Quitar el rectángulo de foco del navegador sobre los SVG -------- */
+/* Al hacer click en un barrio/comuna (un <path> SVG de Leaflet), el navegador
+   dibuja un outline rectangular alrededor del bounding box del elemento. Eso
+   se veía como una "bounding box" sobre el barrio. Lo eliminamos para que solo
+   quede el contorno real del polígono. */
+.leaflet-interactive:focus,
+.leaflet-container svg:focus,
+.leaflet-container svg path:focus,
+path.leaflet-interactive:focus {
+    outline: none !important;
+}
+
 /* -------- Popup elegante -------- */
 .leaflet-popup-content-wrapper {
     border-radius: 10px;
@@ -1187,13 +1724,26 @@ body.tema-oscuro .stats-btn {
     font-size: 14px;
     line-height: 1.5;
     color: #202124;
-    max-width: 320px !important;
+    /* El ancho lo controla script.js vía popup.options.maxWidth (Leaflet lo
+       aplica como estilo inline): más angosto al costado de una calle
+       norte-sur, más ancho arriba/abajo de una este-oeste o un punto, para
+       aprovechar el espacio horizontal libre y necesitar menos alto. */
+}
+
+/* La flechita de Leaflet siempre apunta hacia abajo desde el centro de la
+   caja: tiene sentido cuando el popup se abre arriba del trazado/punto,
+   pero no cuando se abre a un costado o abajo (script.js elige el lado
+   según hacia dónde corre la calle). En esos casos la ocultamos. */
+.popup-sin-flecha .leaflet-popup-tip-container {
+    display: none;
 }
 
 .popup-title {
+    font-family: var(--font-brand);
     font-weight: 700;
     font-size: 16px;
-    color: #1a73e8;
+    color: #111827;
+    letter-spacing: -0.2px;
     margin-bottom: 2px;
     line-height: 1.3;
 }
@@ -1224,6 +1774,336 @@ body.tema-oscuro .stats-btn {
     padding-right: 4px;
 }
 
+/* -------- Acciones del popup: compartir / reportar error -------- */
+.popup-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.popup-share-btn,
+.popup-report-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 999px;
+    background: #fff;
+    color: #1a73e8;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.popup-share-btn:hover,
+.popup-report-btn:hover {
+    background: #f1f6ff;
+    border-color: #1a73e8;
+}
+.popup-share-btn.copiado {
+    color: #188038;
+    border-color: #188038;
+    background: #f0faf2;
+}
+
+/* -------- Imagen del popup (Wikipedia) -------- */
+.popup-media {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #eceff1;
+}
+
+/* Skeleton loader con shimmer mientras se pide la imagen */
+.popup-media-skeleton {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        #e6e9ec 30%,
+        #f3f5f7 50%,
+        #e6e9ec 70%
+    );
+    background-size: 200% 100%;
+    animation: popup-media-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes popup-media-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.popup-media-img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: popup-media-fade 0.3s ease;
+}
+
+/* Fondo: misma imagen escalada (cover) y desenfocada para rellenar el box
+   sin recortar al sujeto, que se muestra completo por delante (contain). */
+.popup-media-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(14px) brightness(0.85) saturate(1.1);
+    transform: scale(1.15);
+}
+
+@keyframes popup-media-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Fallback elegante cuando no hay imagen: ícono teñido con el color de la categoría */
+.popup-media.es-fallback {
+    background: color-mix(in srgb, var(--cat-color, #6b7280) 10%, #eceff1);
+}
+
+.popup-media-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--cat-color, #9aa0a6);
+    opacity: 0.7;
+}
+
+/* Modo oscuro del popup: por defecto quedaba blanco puro (Leaflet no lo
+   tiñe solo), un cartel brillante muy llamativo sobre el mapa oscuro. */
+body.tema-oscuro .leaflet-popup-content-wrapper,
+body.tema-oscuro .leaflet-popup-tip {
+    background: #2a2d34;
+}
+
+body.tema-oscuro .leaflet-popup-content {
+    color: #e8eaed;
+}
+
+body.tema-oscuro .popup-title {
+    color: #f1f3f4;
+}
+
+body.tema-oscuro .popup-sub {
+    color: #9aa0a6;
+}
+
+body.tema-oscuro .popup-desc {
+    color: #c7cad1;
+}
+
+body.tema-oscuro .popup-share-btn,
+body.tema-oscuro .popup-report-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+    border-color: #3c4043;
+}
+
+body.tema-oscuro .popup-share-btn:hover,
+body.tema-oscuro .popup-report-btn:hover {
+    background: #3c4043;
+    border-color: #8ab4f8;
+}
+
+body.tema-oscuro .popup-share-btn.copiado {
+    color: #81c995;
+    border-color: #81c995;
+    background: #1e3a2a;
+}
+
+body.tema-oscuro .popup-media {
+    background: #3c4043;
+}
+
+body.tema-oscuro .popup-media-skeleton {
+    background: linear-gradient(100deg, #3c4043 30%, #4a4e57 50%, #3c4043 70%);
+    background-size: 200% 100%;
+}
+
+/* -------- Tutorial de bienvenida -------- */
+.tour-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+}
+
+/* El "recorte" se logra con un box-shadow enorme sobre un elemento del
+   tamaño exacto del control resaltado, en vez de superponer 4 franjas:
+   más simple y se anima solo con la transición de left/top/width/height. */
+.tour-spotlight {
+    position: fixed;
+    box-shadow: 0 0 0 9999px rgba(32, 33, 36, 0.6);
+    pointer-events: none;
+    transition: top 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, border-radius 0.25s ease;
+}
+
+.tour-card {
+    position: fixed;
+    z-index: 3001;
+    width: 300px;
+    max-width: calc(100vw - 32px);
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+    transition: top 0.25s ease, left 0.25s ease;
+}
+
+.tour-skip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+.tour-skip:hover {
+    background: rgba(60, 64, 67, 0.08);
+}
+.tour-skip svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.tour-step {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a73e8;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+}
+
+.tour-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #202124;
+    margin-bottom: 6px;
+    padding-right: 20px;
+}
+
+.tour-text {
+    font-size: 13.5px;
+    color: #5f6368;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.tour-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.tour-btn {
+    border: 0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+}
+
+.tour-btn-primary {
+    background: #1a73e8;
+    color: #fff;
+}
+.tour-btn-primary:hover {
+    background: #155ab6;
+}
+
+.tour-btn-secondary {
+    background: transparent;
+    color: #5f6368;
+}
+.tour-btn-secondary:hover {
+    background: rgba(60, 64, 67, 0.08);
+}
+.tour-btn-secondary:disabled {
+    opacity: 0.4;
+    cursor: default;
+    background: transparent;
+}
+
+body.tema-oscuro .tour-card {
+    background: #2a2d34;
+}
+body.tema-oscuro .tour-title {
+    color: #e8eaed;
+}
+body.tema-oscuro .tour-text {
+    color: #9aa0a6;
+}
+body.tema-oscuro .tour-skip {
+    color: #9aa0a6;
+}
+body.tema-oscuro .tour-skip:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+body.tema-oscuro .tour-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* -------- Botón "Volver a ver el tutorial" (modal Acerca de) -------- */
+.tour-replay-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 7px 14px;
+    border: 1px solid #dadce0;
+    border-radius: 999px;
+    background: #fff;
+    color: #1a73e8;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.tour-replay-btn:hover {
+    background: #f1f6ff;
+    border-color: #1a73e8;
+}
+.tour-replay-btn svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+}
+
+body.tema-oscuro .tour-replay-btn {
+    background: #2a2d34;
+    color: #8ab4f8;
+    border-color: #3c4043;
+}
+body.tema-oscuro .tour-replay-btn:hover {
+    background: #3c4043;
+    border-color: #8ab4f8;
+}
+
 /* -------- Responsive -------- */
 @media (max-width: 480px) {
     .search-box {
@@ -1231,6 +2111,9 @@ body.tema-oscuro .stats-btn {
         left: 8px;
         width: calc(100vw - 16px);
     }
+
+    /* En pantallas chicas la tagline no entra: la ocultamos */
+    .brand-tag { display: none; }
 
     .search-btn {
         padding: 0 12px;
@@ -1241,53 +2124,40 @@ body.tema-oscuro .stats-btn {
         font-size: 10px;
     }
 
-    .barrio-filter {
-        bottom: 10px;
-        right: 56px;
+    .popup-media {
+        height: 120px;
     }
 
-    .categoria-filter {
-        bottom: 54px;
-        right: 56px;
+    .tools-btn {
+        top: 105px;  /* debajo del search box, que en mobile ocupa todo el ancho */
+        right: 8px;
     }
 
-    #barrio-select,
-    #categoria-select {
-        min-width: 140px;
-        font-size: 12px;
+    .tools-panel {
+        top: 157px;
+        right: 8px;
     }
 
-    .random-btn {
-        bottom: 120px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
+    .theme-menu,
+    .favoritos-panel {
+        position: fixed;
+        top: 157px;
+        right: 8px;
+        left: 8px;
+        margin: 0;
+        width: auto;
+        max-width: none;
     }
 
-    .random-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .nearme-btn {
-        bottom: 174px;
-        right: 12px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .nearme-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .theme-toggle {
-        bottom: 228px;
-        right: 12px;
-    }
-
-    .theme-toggle-btn {
-        width: 40px;
-        height: 40px;
+    /* En mobile la tarjeta del tutorial no persigue al botón resaltado
+       (suelen ser íconos de 40px pegados al borde): queda fija abajo,
+       como una hoja, mientras el recorte del spotlight sí sigue al
+       elemento correspondiente. */
+    .tour-card {
+        top: auto !important;
+        left: 8px !important;
+        bottom: 16px;
+        width: auto;
+        max-width: none;
     }
 }

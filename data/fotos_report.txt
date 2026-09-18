@@ -1,0 +1,1030 @@
+FOTOS — baseline (replica exacta de la app)
+Total odónimos: 2961
+Con foto: 1954 (66.0%)
+Sin foto: 1007 (34.0%)
+
+Por categoría:
+  PERSONA                1271/1865 (68%)
+  LUGAR                   348/510  (68%)
+  NATURALEZA               72/109  (66%)
+  ACCIÓN MILITAR           50/90   (56%)
+  CONCEPTO                 43/76   (57%)
+  OTROS                    46/74   (62%)
+  ARTE                     24/41   (59%)
+  BARCO                    18/41   (44%)
+  FECHA                    16/36   (44%)
+  PUEBLOS ORIGINARIOS      17/27   (63%)
+  CUERPO MILITAR           14/27   (52%)
+  RÍO                      10/21   (48%)
+  RELIGIÓN                 11/20   (55%)
+  INSTITUCIÓN              10/16   (62%)
+  LITERATURA                4/8    (50%)
+
+=== SIN FOTO (para curar) ===
+  [ACCIÓN MILITAR] Achupallas
+  [ACCIÓN MILITAR] Acoyte
+  [ACCIÓN MILITAR] Angaco
+  [ACCIÓN MILITAR] Boquerón
+  [ACCIÓN MILITAR] Carabobo
+  [ACCIÓN MILITAR] Cerrito
+  [ACCIÓN MILITAR] Chacabuco
+  [ACCIÓN MILITAR] Cochicó
+  [ACCIÓN MILITAR] Cucha Cucha
+  [ACCIÓN MILITAR] Curapaligüe
+  [ACCIÓN MILITAR] Curupaytí
+  [ACCIÓN MILITAR] De la Defensa
+  [ACCIÓN MILITAR] De las Malvinas
+  [ACCIÓN MILITAR] Defensa
+  [ACCIÓN MILITAR] Filiberto
+  [ACCIÓN MILITAR] Guardia Vieja
+  [ACCIÓN MILITAR] Ituzaingó
+  [ACCIÓN MILITAR] Juncal
+  [ACCIÓN MILITAR] Junín
+  [ACCIÓN MILITAR] La Fronda
+  [ACCIÓN MILITAR] Leones
+  [ACCIÓN MILITAR] Maipú
+  [ACCIÓN MILITAR] Martín García
+  [ACCIÓN MILITAR] Ombú
+  [ACCIÓN MILITAR] Palmar
+  [ACCIÓN MILITAR] Parral
+  [ACCIÓN MILITAR] Pavón
+  [ACCIÓN MILITAR] Pescadores
+  [ACCIÓN MILITAR] Pichincha
+  [ACCIÓN MILITAR] Piedras
+  [ACCIÓN MILITAR] Rincón
+  [ACCIÓN MILITAR] San José
+  [ACCIÓN MILITAR] San Lorenzo
+  [ACCIÓN MILITAR] San Mateo
+  [ACCIÓN MILITAR] San Pedrito
+  [ACCIÓN MILITAR] Suipacha
+  [ACCIÓN MILITAR] Tacuarí
+  [ACCIÓN MILITAR] Vuelta de Obligado
+  [ACCIÓN MILITAR] Yatay
+  [ACCIÓN MILITAR] Yerbal
+  [ARTE] Adán Buenosayres
+  [ARTE] Amalia
+  [ARTE] Chapatín
+  [ARTE] Clemente
+  [ARTE] De las Esculturas
+  [ARTE] El Alma Que Canta
+  [ARTE] El Nene
+  [ARTE] El Peregrino
+  [ARTE] Fecundidad
+  [ARTE] Juvenilia
+  [ARTE] La Casa del Ángel
+  [ARTE] La Guerra Gaucha
+  [ARTE] Plaza del Ángel Gris
+  [ARTE] Prisioneros de la Tierra
+  [ARTE] Prometeo
+  [ARTE] Tabaré
+  [ARTE] Verano Porteño
+  [BARCO] Balandra Carmen
+  [BARCO] Bergantín Congreso Nacional
+  [BARCO] Bergantín Echagüe
+  [BARCO] Bergantín General Belgrano
+  [BARCO] Bergantín Nancy
+  [BARCO] Bergantín Vigilante
+  [BARCO] Corbeta Agreable
+  [BARCO] Corbeta Belfast
+  [BARCO] Cuter Luisito
+  [BARCO] Falucho San Luis
+  [BARCO] Fragata 25 de Mayo
+  [BARCO] Fragata Céfiro
+  [BARCO] Fragata Halcón
+  [BARCO] Fragata Hércules
+  [BARCO] Fragata la Argentina
+  [BARCO] Goleta Fortuna
+  [BARCO] Goleta Invencible
+  [BARCO] Goleta Julia
+  [BARCO] Goleta Juliet
+  [BARCO] Goleta Maldonado
+  [BARCO] Pailebot Davison
+  [BARCO] Sumaca Itatí
+  [BARCO] Sumaca Santísima Trinidad
+  [CONCEPTO] Amigos de las Artes
+  [CONCEPTO] Caricancha
+  [CONCEPTO] Centenario
+  [CONCEPTO] Comunidad Organizada
+  [CONCEPTO] Cooperadoras Escolares
+  [CONCEPTO] De la Amistad
+  [CONCEPTO] De la Ciencia y la Cultura Árabes
+  [CONCEPTO] De la Lealtad
+  [CONCEPTO] De la Técnica
+  [CONCEPTO] De las Artes
+  [CONCEPTO] De las Victorias
+  [CONCEPTO] De los Artistas
+  [CONCEPTO] De los Colegiales
+  [CONCEPTO] De los Derechos Humanos
+  [CONCEPTO] De los Maestros
+  [CONCEPTO] De los Médicos
+  [CONCEPTO] De los Poetas
+  [CONCEPTO] De los Suspiros
+  [CONCEPTO] Del Buen Orden
+  [CONCEPTO] El Alfabeto
+  [CONCEPTO] El Artesano
+  [CONCEPTO] El Cardenal
+  [CONCEPTO] El Maestro
+  [CONCEPTO] Esperanza
+  [CONCEPTO] Fraternidad
+  [CONCEPTO] Igualdad
+  [CONCEPTO] La Blanqueada
+  [CONCEPTO] Libertad
+  [CONCEPTO] Los Amigos
+  [CONCEPTO] Mar Dulce
+  [CONCEPTO] Mutualismo
+  [CONCEPTO] Rincón Verde-kasú Mapún
+  [CONCEPTO] Unidad Nacional
+  [CUERPO MILITAR] Arribeños
+  [CUERPO MILITAR] Blandengues
+  [CUERPO MILITAR] Cazadores
+  [CUERPO MILITAR] De los Patricios
+  [CUERPO MILITAR] Dragones
+  [CUERPO MILITAR] Ejército de los Andes
+  [CUERPO MILITAR] Gallegos
+  [CUERPO MILITAR] Húsares
+  [CUERPO MILITAR] Miñones
+  [CUERPO MILITAR] Numancia
+  [CUERPO MILITAR] Prefectura Naval Argentina
+  [CUERPO MILITAR] Regimiento de Patricios
+  [CUERPO MILITAR] Reservistas Argentinos
+  [FECHA] 10 de Octubre de 1996
+  [FECHA] 12 de Octubre
+  [FECHA] 14 de Abril
+  [FECHA] 14 de Julio
+  [FECHA] 18 de Octubre de 1908
+  [FECHA] 1° de Mayo
+  [FECHA] 20 de Febrero
+  [FECHA] 20 de Junio
+  [FECHA] 20 de Septiembre
+  [FECHA] 23 de Agosto de 1997
+  [FECHA] 23 de Junio
+  [FECHA] 24 de Noviembre
+  [FECHA] 27 de Febrero
+  [FECHA] 28 de Junio 1645
+  [FECHA] 3 de Diciembre de 2009
+  [FECHA] 5 de Julio
+  [FECHA] 6 de Agosto
+  [FECHA] 8 de Diciembre
+  [FECHA] 8 de Marzo
+  [FECHA] 8 de Marzo de 1908
+  [INSTITUCIÓN] Cabildo
+  [INSTITUCIÓN] Convención
+  [INSTITUCIÓN] De los Constituyentes
+  [INSTITUCIÓN] La Comuna
+  [INSTITUCIÓN] Las Colonias
+  [INSTITUCIÓN] Primera Junta
+  [LITERATURA] Caras y Caretas
+  [LITERATURA] Don Fulgencio
+  [LITERATURA] El Chacho
+  [LITERATURA] La Cautiva
+  [LUGAR] Ancón
+  [LUGAR] Andalgalá
+  [LUGAR] Andalucía
+  [LUGAR] Andorra
+  [LUGAR] Atacama
+  [LUGAR] Barcelona
+  [LUGAR] Bariloche
+  [LUGAR] Barragán
+  [LUGAR] Barrancas de Belgrano
+  [LUGAR] Bella Vista
+  [LUGAR] Bethlem
+  [LUGAR] Beyrouth
+  [LUGAR] Biarritz
+  [LUGAR] Boca
+  [LUGAR] Bogotá
+  [LUGAR] Bolivia
+  [LUGAR] Bolonia
+  [LUGAR] Bombay
+  [LUGAR] Bomberos Voluntarios de la Boca
+  [LUGAR] Cachi
+  [LUGAR] Calilegua
+  [LUGAR] Camarones
+  [LUGAR] Candelaria
+  [LUGAR] Cangayé
+  [LUGAR] Caracas
+  [LUGAR] Carapachay
+  [LUGAR] Carhué
+  [LUGAR] Castañares
+  [LUGAR] Chaco
+  [LUGAR] Chajarí
+  [LUGAR] Charcas
+  [LUGAR] Chascomús
+  [LUGAR] Checoslovaquia
+  [LUGAR] Chicoana
+  [LUGAR] Chile
+  [LUGAR] Chilecito
+  [LUGAR] Chimborazo
+  [LUGAR] China
+  [LUGAR] Chirimay
+  [LUGAR] Chivilcoy
+  [LUGAR] Chubut
+  [LUGAR] Chumbicha
+  [LUGAR] Columbia
+  [LUGAR] Concordia
+  [LUGAR] Copahue
+  [LUGAR] Corrales
+  [LUGAR] Cotocollao
+  [LUGAR] De los Molfetteses
+  [LUGAR] Dolores
+  [LUGAR] Dublin
+  [LUGAR] El Cerro
+  [LUGAR] El Litoral
+  [LUGAR] Empedrado
+  [LUGAR] Eslovaquia
+  [LUGAR] Esmeralda
+  [LUGAR] España
+  [LUGAR] Finlandia
+  [LUGAR] Futaleufú
+  [LUGAR] Gibraltar
+  [LUGAR] Ginebra
+  [LUGAR] Hualfin
+  [LUGAR] Huaura
+  [LUGAR] Humahuaca
+  [LUGAR] Humaitá
+  [LUGAR] Hungría
+  [LUGAR] Iberá
+  [LUGAR] Icalma
+  [LUGAR] Jujuy
+  [LUGAR] La Constancia
+  [LUGAR] La Gloria
+  [LUGAR] Las Flores
+  [LUGAR] Lobos
+  [LUGAR] Los Pirineos
+  [LUGAR] Líbano
+  [LUGAR] Machu Picchu
+  [LUGAR] Magdalena
+  [LUGAR] Maitén
+  [LUGAR] Malasia
+  [LUGAR] Maldonado
+  [LUGAR] Managua
+  [LUGAR] Mandisobí
+  [LUGAR] Matanza
+  [LUGAR] Mercedes
+  [LUGAR] Metán
+  [LUGAR] Miraflores
+  [LUGAR] Miramar
+  [LUGAR] Mochica
+  [LUGAR] Monte
+  [LUGAR] Morón
+  [LUGAR] Moscú
+  [LUGAR] Munich
+  [LUGAR] Málaga
+  [LUGAR] Médanos
+  [LUGAR] México
+  [LUGAR] Natal
+  [LUGAR] Neuquén
+  [LUGAR] Nevada
+  [LUGAR] Nicaragua
+  [LUGAR] Nigeria
+  [LUGAR] Niza
+  [LUGAR] Nogoyá
+  [LUGAR] Noruega
+  [LUGAR] Nueva York
+  [LUGAR] Nueva Zelandia
+  [LUGAR] Parques Nacionales Argentinos
+  [LUGAR] Pehuajó
+  [LUGAR] Peiping
+  [LUGAR] Pila
+  [LUGAR] Portillo
+  [LUGAR] Porto Alegre
+  [LUGAR] Portugal
+  [LUGAR] Posta de Hornillos
+  [LUGAR] Potosí
+  [LUGAR] Praga
+  [LUGAR] Provincia de Córdoba
+  [LUGAR] Provincia de Jujuy
+  [LUGAR] Provincia de la Rioja
+  [LUGAR] Provincia del Chaco
+  [LUGAR] Provincia del Chubut
+  [LUGAR] Puente del Inca
+  [LUGAR] República Democrática del Congo
+  [LUGAR] República Dominicana
+  [LUGAR] República Federativa del Brasil
+  [LUGAR] República Islámica del Irán
+  [LUGAR] República Oriental del Uruguay
+  [LUGAR] República Socialista de Vietnam
+  [LUGAR] República del Líbano
+  [LUGAR] Retiro
+  [LUGAR] Rosario
+  [LUGAR] Rufino
+  [LUGAR] Río Cuarto
+  [LUGAR] Río Piedras
+  [LUGAR] Saladillo
+  [LUGAR] Salto
+  [LUGAR] San Antonio
+  [LUGAR] San Antonio de Areco
+  [LUGAR] San Blas
+  [LUGAR] San Ignacio
+  [LUGAR] San Isidro
+  [LUGAR] San Pedro
+  [LUGAR] San Pedro de Jujuy
+  [LUGAR] San Sebastián
+  [LUGAR] Sanlúcar de Barrameda
+  [LUGAR] Santa Catalina
+  [LUGAR] Santa Elena
+  [LUGAR] Santo Tomé
+  [LUGAR] Tafí
+  [LUGAR] Talavera
+  [LUGAR] Totoral
+  [LUGAR] Trinidad
+  [LUGAR] Trujillo
+  [LUGAR] Tuyú
+  [LUGAR] Ulla Ulla
+  [LUGAR] Uspallata
+  [LUGAR] Uyuni
+  [LUGAR] Valderrama
+  [LUGAR] Valencia
+  [LUGAR] Venezuela
+  [LUGAR] Ventana
+  [LUGAR] Veracruz
+  [LUGAR] Versalles
+  [LUGAR] Vinchina
+  [NATURALEZA] Achira
+  [NATURALEZA] Aguaribay
+  [NATURALEZA] Alerce
+  [NATURALEZA] Algarrobo
+  [NATURALEZA] Amancay
+  [NATURALEZA] Aromo
+  [NATURALEZA] Caraguatá
+  [NATURALEZA] Caranday
+  [NATURALEZA] Carqueja
+  [NATURALEZA] Caña
+  [NATURALEZA] Chilca
+  [NATURALEZA] Churqui
+  [NATURALEZA] Ciervo de las Pampas
+  [NATURALEZA] Cina Cina
+  [NATURALEZA] Dama de Monte
+  [NATURALEZA] De los Ombúes
+  [NATURALEZA] El Carpintero
+  [NATURALEZA] El Ceibo
+  [NATURALEZA] El Mirasol
+  [NATURALEZA] Espadaña
+  [NATURALEZA] Espinillo
+  [NATURALEZA] Flor de Irupé
+  [NATURALEZA] Flor de Otoño
+  [NATURALEZA] Flor del Aire
+  [NATURALEZA] Huemul
+  [NATURALEZA] Jarilla
+  [NATURALEZA] La Cachila
+  [NATURALEZA] La Calandria
+  [NATURALEZA] La Espiga
+  [NATURALEZA] Lapacho
+  [NATURALEZA] Lapacho Rosado
+  [NATURALEZA] Mburucuyá
+  [NATURALEZA] Milenrama
+  [NATURALEZA] Quebracho
+  [NATURALEZA] Regaliz
+  [NATURALEZA] Totora
+  [NATURALEZA] Urunday
+  [OTROS] Barca Cabo de Hornos
+  [OTROS] Barracas
+  [OTROS] Cerrillos
+  [OTROS] Chacarita de los Colegiales
+  [OTROS] Chonino
+  [OTROS] Corrales Viejos
+  [OTROS] De la Bandera
+  [OTROS] De las Nereidas
+  [OTROS] De los Corrales
+  [OTROS] De los Italianos
+  [OTROS] De los Mataderos
+  [OTROS] De los Vecinos Sensibles
+  [OTROS] El Método
+  [OTROS] El Rancho
+  [OTROS] Escuela la Banderita
+  [OTROS] Ferrocarril
+  [OTROS] Floresta
+  [OTROS] Glorias del Automovilismo Argentino
+  [OTROS] Guardavidas Argentinos
+  [OTROS] Hidroavión Buenos Aires
+  [OTROS] Huracán
+  [OTROS] La Huella
+  [OTROS] Lancheros del Plata
+  [OTROS] Mataderos
+  [OTROS] Mujeres Argentinas
+  [OTROS] Mujeres de Fraga
+  [OTROS] Plus Ultra
+  [OTROS] Posta
+  [PERSONA] Abanderada de los Humildes
+  [PERSONA] Abraham J. Luppi
+  [PERSONA] Acevedo
+  [PERSONA] Achega
+  [PERSONA] Aguilar
+  [PERSONA] Agustín Méndez
+  [PERSONA] Agustín Rivero Astengo
+  [PERSONA] Aizpurúa
+  [PERSONA] Alagón
+  [PERSONA] Alberto Castillo
+  [PERSONA] Alberto Vacarezza
+  [PERSONA] Alberto Williams
+  [PERSONA] Alberto Zorrilla
+  [PERSONA] Alcaraz
+  [PERSONA] Alcira de Al Peña
+  [PERSONA] Alejandra Pizarnik
+  [PERSONA] Alejandro Dumas
+  [PERSONA] Alejandro Magariños Cervantes
+  [PERSONA] Alejo Carpentier
+  [PERSONA] Alfredo Gramajo Gutiérrez
+  [PERSONA] Alfredo Zitarrosa
+  [PERSONA] Allende
+  [PERSONA] Amalia Celia Figueredo
+  [PERSONA] Amancio Alcorta
+  [PERSONA] Ana Díaz
+  [PERSONA] Anasagasti
+  [PERSONA] Anchoris
+  [PERSONA] Andonaegui
+  [PERSONA] Andrés Arguibel
+  [PERSONA] Andrés Bello
+  [PERSONA] Andrés Bianchi
+  [PERSONA] Andrés Ferreyra
+  [PERSONA] Andrés Lamas
+  [PERSONA] Anselmo Sáenz Valiente
+  [PERSONA] Antezana
+  [PERSONA] Antonio Abraham Zinny
+  [PERSONA] Antonio Millán
+  [PERSONA] Araujo
+  [PERSONA] Arengreen
+  [PERSONA] Arquitecto Alberto Prebisch
+  [PERSONA] Arquitecto Alejandro Bustillo
+  [PERSONA] Arquitecto Amancio Williams
+  [PERSONA] Arquitecto Arturo J. Dubourg
+  [PERSONA] Arquitecto Héctor Greslebin
+  [PERSONA] Arquitecto Juan Kurchan
+  [PERSONA] Arquitecto Wladimiro Acosta
+  [PERSONA] Arquímedes
+  [PERSONA] Arregui
+  [PERSONA] Arturo Beruti
+  [PERSONA] Avelino Díaz
+  [PERSONA] Añasco
+  [PERSONA] Baigorria
+  [PERSONA] Balbastro
+  [PERSONA] Baltasar de Unquera
+  [PERSONA] Barcala
+  [PERSONA] Barraca Peña
+  [PERSONA] Bartolomé Hidalgo
+  [PERSONA] Bartolomé Mitre
+  [PERSONA] Barón Mauricio de Hirsch
+  [PERSONA] Bauness
+  [PERSONA] Bazurco
+  [PERSONA] Benjamín Vicuña Mackena
+  [PERSONA] Bernaldes
+  [PERSONA] Bertrés
+  [PERSONA] Besares
+  [PERSONA] Bialet Massé
+  [PERSONA] Billinghurst
+  [PERSONA] Blanco Encalada
+  [PERSONA] Boedo
+  [PERSONA] Bogado
+  [PERSONA] Bolaños
+  [PERSONA] Bollini
+  [PERSONA] Bolívar
+  [PERSONA] Bonpland
+  [PERSONA] Bruix
+  [PERSONA] Calfucurá
+  [PERSONA] Candela Sol Rodríguez
+  [PERSONA] Capdevila
+  [PERSONA] Capitan Samuel Spiro
+  [PERSONA] Capitán Aviador Vicente Almandos Almonacid
+  [PERSONA] Carbajal
+  [PERSONA] Carlos Antonio López
+  [PERSONA] Carlos Calvo
+  [PERSONA] Carlos Carranza
+  [PERSONA] Carlos E. Zuberbühler
+  [PERSONA] Carlos Javier Benielli
+  [PERSONA] Carlos Molina Arrotea
+  [PERSONA] Carlos Norberto Vergara
+  [PERSONA] Carlos Ortiz
+  [PERSONA] Carlos Santiago Nino
+  [PERSONA] Carrasco
+  [PERSONA] Casacuberta
+  [PERSONA] Casares
+  [PERSONA] Castex
+  [PERSONA] Ceretti
+  [PERSONA] Cesáreo Bernaldo de Quirós
+  [PERSONA] Cesário Onzari
+  [PERSONA] Chabuca Granda
+  [PERSONA] Charlone
+  [PERSONA] Chiclana
+  [PERSONA] Chorroarín
+  [PERSONA] Clemente Diez de Medina
+  [PERSONA] Coliqueo
+  [PERSONA] Comisario General Juan Ángel Pirker
+  [PERSONA] Comodoro Ceferino Ramírez
+  [PERSONA] Comodoro Clodomiro Urtubey
+  [PERSONA] Concepción Leyes de Chaves
+  [PERSONA] Constantino Gaito
+  [PERSONA] Coronel Cárdenas
+  [PERSONA] Coronel Esteban Bonorino
+  [PERSONA] Coronel José Olegario Gordillo
+  [PERSONA] Coronel Juan Amadeo de Baldrich
+  [PERSONA] Coronel Juan F. Czetz
+  [PERSONA] Coronel Luis Jorge Fontana
+  [PERSONA] Coronel Manuel José Olascoaga
+  [PERSONA] Coronel Marcelino E. Freyre
+  [PERSONA] Coronel Niceto Vega
+  [PERSONA] Coronel Rohde
+  [PERSONA] Correa
+  [PERSONA] Craig
+  [PERSONA] Crisóstomo Álvarez
+  [PERSONA] Cándido López
+  [PERSONA] César Iglesias Paz
+  [PERSONA] César Milstein
+  [PERSONA] César Tiempo
+  [PERSONA] César Vallejo
+  [PERSONA] Céspedes
+  [PERSONA] Dante A. Linyera
+  [PERSONA] Darregueyra
+  [PERSONA] De la Cárcova
+  [PERSONA] Dekay
+  [PERSONA] Del Barco Centenera
+  [PERSONA] Delgado
+  [PERSONA] Delia Avilés de Elizalde
+  [PERSONA] Derico A. J.
+  [PERSONA] Diego de Olavarrieta
+  [PERSONA] Diógenes Taborda
+  [PERSONA] Doctor Enrique T. Susini
+  [PERSONA] Doctor Esteban Laureano Maradona
+  [PERSONA] Doctor Florencio Escardó
+  [PERSONA] Doctor Gerardo Armauer Hansen
+  [PERSONA] Doctor Gregorio Aráoz Alfaro
+  [PERSONA] Doctor Guillermo Correa
+  [PERSONA] Doctor Hilario de Almeira
+  [PERSONA] Doctor Honorio Leguizamón
+  [PERSONA] Doctor Isidoro Ruiz Moreno
+  [PERSONA] Doctor Juan Madera
+  [PERSONA] Doctor Juan Ángel Golfarini
+  [PERSONA] Doctor Osvaldo Eguía
+  [PERSONA] Doctor Pedro Escudero
+  [PERSONA] Doctor Rafael Bielsa
+  [PERSONA] Doctor Ricardo Finochietto
+  [PERSONA] Doctor Rodolfo Rivarola
+  [PERSONA] Doctor Teodoro Aubain
+  [PERSONA] Domingo Romero
+  [PERSONA] Domingo de Azcuénaga
+  [PERSONA] Donizetti
+  [PERSONA] Dora Acosta
+  [PERSONA] Dora del Grande
+  [PERSONA] Dr. Arturo Oñativia
+  [PERSONA] Dr. Carlos Arturo Gianantonio
+  [PERSONA] Dr. Emilio J. Hardoy
+  [PERSONA] Dr. Samuel Bender
+  [PERSONA] Drumond
+  [PERSONA] Dávila
+  [PERSONA] Echenagucía
+  [PERSONA] Echeverría
+  [PERSONA] Eduardo Acevedo
+  [PERSONA] Eduardo Colombo Leoni
+  [PERSONA] Eduardo Costa
+  [PERSONA] Eduardo Gutiérrez
+  [PERSONA] Eduardo Juan Couture
+  [PERSONA] Eduardo Madero
+  [PERSONA] Eduardo Olivera
+  [PERSONA] Eduardo Rovira
+  [PERSONA] Eduardo Schiaffino
+  [PERSONA] Eduardo Sívori
+  [PERSONA] Eduardo Wilde
+  [PERSONA] Eleodoro Marenco
+  [PERSONA] Elías Bedoya
+  [PERSONA] Emilio Mitre
+  [PERSONA] Enrique Gustavino
+  [PERSONA] Enrique Prins
+  [PERSONA] Enrique Udaondo
+  [PERSONA] Enrique de Vedia
+  [PERSONA] Ernesto Jaimovich
+  [PERSONA] Escobar
+  [PERSONA] Esnaola
+  [PERSONA] Espartaco
+  [PERSONA] Esparza
+  [PERSONA] Espinosa
+  [PERSONA] Esteves Saguí
+  [PERSONA] Eugenio Ramírez
+  [PERSONA] Eustaquio Cambieses
+  [PERSONA] Evaristo Carriego
+  [PERSONA] Ezequiel Demonty
+  [PERSONA] Ezequiel Soria
+  [PERSONA] Fabre
+  [PERSONA] Fernando Fader
+  [PERSONA] Fernando Ghio
+  [PERSONA] Fernando de Montalvo
+  [PERSONA] Ferrari
+  [PERSONA] Ferré
+  [PERSONA] Fitz Roy
+  [PERSONA] Florencio Balcarce
+  [PERSONA] Fonrouge
+  [PERSONA] Forest
+  [PERSONA] Fournier
+  [PERSONA] Francisco A. Sicardi
+  [PERSONA] Francisco Acuña de Figueroa
+  [PERSONA] Francisco Alejandro Mohr
+  [PERSONA] Francisco Antonio Maciel
+  [PERSONA] Francisco Antonio Rizzuto
+  [PERSONA] Francisco Bauzá
+  [PERSONA] Francisco Beiró
+  [PERSONA] Francisco Bilbao
+  [PERSONA] Francisco Cafferata
+  [PERSONA] Francisco Camet
+  [PERSONA] Francisco Canaro
+  [PERSONA] Francisco Cúneo
+  [PERSONA] Francisco Fiorentino
+  [PERSONA] Francisco Gil
+  [PERSONA] Francisco J. Ortiz
+  [PERSONA] Francisco Lomuto
+  [PERSONA] Francisco López Merino
+  [PERSONA] Francisco López Torres
+  [PERSONA] Francisco Maderna
+  [PERSONA] Francisco Mura
+  [PERSONA] Francisco Pizarro
+  [PERSONA] Francisco Pracánico
+  [PERSONA] Francisco Romero
+  [PERSONA] Francisco de Caro
+  [PERSONA] Francisco de Uzal
+  [PERSONA] Francisco de Viedma
+  [PERSONA] Francisco de Vittoria
+  [PERSONA] Franco
+  [PERSONA] Fray Luis Beltrán
+  [PERSONA] Félix Lora
+  [PERSONA] Gallardo
+  [PERSONA] Galván
+  [PERSONA] Gana
+  [PERSONA] García de Cossio
+  [PERSONA] Garmendia
+  [PERSONA] Garro
+  [PERSONA] Gaspar Xuárez
+  [PERSONA] General Francisco Ramírez
+  [PERSONA] Germán Abdala
+  [PERSONA] Gerónimo Cortés
+  [PERSONA] Gibson
+  [PERSONA] Gilardo Gilardi
+  [PERSONA] Giordano Bruno
+  [PERSONA] Giácomo Matteoti
+  [PERSONA] Giácomo Puccini
+  [PERSONA] Gregoria Matorras de San Martín
+  [PERSONA] Gregoria Pérez
+  [PERSONA] Griveo
+  [PERSONA] Guillermo Enrique Granville
+  [PERSONA] Gustavo Riccio
+  [PERSONA] Guzmán
+  [PERSONA] Gándara
+  [PERSONA] Gómez de Fonseca
+  [PERSONA] Haroldo Conti
+  [PERSONA] Helguera
+  [PERSONA] Heredia
+  [PERSONA] Hermana Alice Domon y Hermana Léonie Duquet
+  [PERSONA] Hermanas Mirabal
+  [PERSONA] Herminia C. Brumana
+  [PERSONA] Herminio Masantonio
+  [PERSONA] Hernandarias
+  [PERSONA] Herrera
+  [PERSONA] Hidalgo
+  [PERSONA] Hortiguera
+  [PERSONA] Hubac
+  [PERSONA] Hudson
+  [PERSONA] Huergo
+  [PERSONA] Hugo Ricardo Corradi
+  [PERSONA] Hugo del Carril
+  [PERSONA] Humberto I
+  [PERSONA] Humberto Selvetti
+  [PERSONA] Humboldt
+  [PERSONA] Héctor Félix Arata
+  [PERSONA] Héctor Gagliardi
+  [PERSONA] Ibáñez
+  [PERSONA] Ignacio Fermín Rodríguez
+  [PERSONA] Ingeniero José Luis Delpini
+  [PERSONA] Ingeniero José N. Quartino
+  [PERSONA] Ingeniero Julio Krause
+  [PERSONA] Irma Carrica
+  [PERSONA] Ismael Chukri
+  [PERSONA] Iturri
+  [PERSONA] Jacinto Oddone
+  [PERSONA] Jaramillo
+  [PERSONA] Joaquín Sánchez
+  [PERSONA] Jorge Bermúdez
+  [PERSONA] Josefina Marpons
+  [PERSONA] José Amalfitani
+  [PERSONA] José Antonio Cabrera
+  [PERSONA] José Barros Pazos
+  [PERSONA] José Borches
+  [PERSONA] José Celedonio Balbín
+  [PERSONA] José Cubas
+  [PERSONA] José Dames
+  [PERSONA] José E. Carballido
+  [PERSONA] José Enrique Rodó
+  [PERSONA] José Eusebio Agüero
+  [PERSONA] José Evaristo Uriburu
+  [PERSONA] José Fagnano
+  [PERSONA] José Gola
+  [PERSONA] José Hernández
+  [PERSONA] José Ignacio Rucci
+  [PERSONA] José Ingenieros
+  [PERSONA] José León Cabezón
+  [PERSONA] José María Rosa
+  [PERSONA] José Neglia
+  [PERSONA] José Pazos
+  [PERSONA] José Pío Mujica
+  [PERSONA] José Varas
+  [PERSONA] José de Maturana
+  [PERSONA] José de la Quintana
+  [PERSONA] Juan Antonio Bibiloni
+  [PERSONA] Juan Bautista Prímoli
+  [PERSONA] Juan Francisco Olmos
+  [PERSONA] Juan Francisco Seguí
+  [PERSONA] Juan Gálvez
+  [PERSONA] Juan del Castillo
+  [PERSONA] Juana Azurduy
+  [PERSONA] Juana María de Lara
+  [PERSONA] Juana Moro
+  [PERSONA] Juana Rouco Buela
+  [PERSONA] Juana de Arco
+  [PERSONA] Juez Estrada
+  [PERSONA] Juez Magnaud
+  [PERSONA] Juez Tedín
+  [PERSONA] Julio Argentino Noble
+  [PERSONA] Julio Cortázar
+  [PERSONA] Julio Cruciani
+  [PERSONA] Julio César Fumarola
+  [PERSONA] Julio Dimilta
+  [PERSONA] Julio Jorge Nelson
+  [PERSONA] Julio S. Dantas
+  [PERSONA] Julio Sosa
+  [PERSONA] Julio Troxler
+  [PERSONA] Julio Víctor González
+  [PERSONA] Julio de Caro
+  [PERSONA] Julián Aguirre
+  [PERSONA] Julián Centeya
+  [PERSONA] Justo Antonio Suárez
+  [PERSONA] Justo Suárez
+  [PERSONA] King
+  [PERSONA] Lacarra
+  [PERSONA] Ladines
+  [PERSONA] Lafuente
+  [PERSONA] Lambaré
+  [PERSONA] Larsen
+  [PERSONA] Leonardo Pereyra
+  [PERSONA] Leonie Mathis
+  [PERSONA] Leopardi
+  [PERSONA] Leopoldo Basavilbaso
+  [PERSONA] Leopoldo Lugones
+  [PERSONA] Leopoldo Marechal
+  [PERSONA] Leopoldo Torre Nilson
+  [PERSONA] Lerma
+  [PERSONA] Lezama
+  [PERSONA] Lezica
+  [PERSONA] Libertad Lamarque
+  [PERSONA] Licenciado Carlos Campelo
+  [PERSONA] Llorente
+  [PERSONA] Lucila Yaconis
+  [PERSONA] Luis Lagos García
+  [PERSONA] Luján
+  [PERSONA] Lynch
+  [PERSONA] Macacha Güemes
+  [PERSONA] Macedonio Fernández
+  [PERSONA] Machain
+  [PERSONA] Madariaga
+  [PERSONA] Madero
+  [PERSONA] Mahatma Gandhi
+  [PERSONA] Malabia
+  [PERSONA] Manco Cápac
+  [PERSONA] Manuel A. Montes de Oca
+  [PERSONA] Manuel Arce
+  [PERSONA] Manuel Artigas
+  [PERSONA] Manuel Eguía
+  [PERSONA] Manuel Estévez
+  [PERSONA] Manuel García
+  [PERSONA] Manuel Gálvez
+  [PERSONA] Manuel Gómez Carrillo
+  [PERSONA] Manuel Mujica Láinez
+  [PERSONA] Manuel Nicolás Savio
+  [PERSONA] Manuel Obarrio
+  [PERSONA] Manuel Padilla
+  [PERSONA] Manuel Porcel de Peralta
+  [PERSONA] Manuel Ugarte
+  [PERSONA] Manuel de San Ginés
+  [PERSONA] Manuel de Sarratea
+  [PERSONA] Manuel Álvarez Prado
+  [PERSONA] Marcos Seguín
+  [PERSONA] Martín Coronado
+  [PERSONA] María Catalina Marchi
+  [PERSONA] María Raggio de Battini
+  [PERSONA] María Teresa Arbeletche
+  [PERSONA] Mason
+  [PERSONA] Mayor Bernardo Alberte
+  [PERSONA] Mecánico Militar Leopoldo Atenzo
+  [PERSONA] Mencia Calderón
+  [PERSONA] Mercedes Sosa
+  [PERSONA] Micaela Bastidas
+  [PERSONA] Michel Borowsky
+  [PERSONA] Miguel A. Camino
+  [PERSONA] Miguel B. Sánchez
+  [PERSONA] Miguel Caló
+  [PERSONA] Miguel Cané
+  [PERSONA] Miguel Carlos Victorica
+  [PERSONA] Miguel Skennon
+  [PERSONA] Milton
+  [PERSONA] Miralla
+  [PERSONA] Miserere
+  [PERSONA] Mitre
+  [PERSONA] Molina
+  [PERSONA] Mom
+  [PERSONA] Monroe
+  [PERSONA] Monseñor Hermenegildo Fazio
+  [PERSONA] Moreto
+  [PERSONA] Morlote
+  [PERSONA] Morse
+  [PERSONA] Mozart
+  [PERSONA] Murguiondo
+  [PERSONA] Muñecas
+  [PERSONA] Muñiz
+  [PERSONA] Méndez
+  [PERSONA] Navarro
+  [PERSONA] Nazarre
+  [PERSONA] Nelly Nistal
+  [PERSONA] Nepper
+  [PERSONA] Newton
+  [PERSONA] Nicanor Méndez
+  [PERSONA] Nicasio Oroño
+  [PERSONA] Nicolás Descalzi
+  [PERSONA] Nicolás E. Videla
+  [PERSONA] Nicolás Granada
+  [PERSONA] Nicolás Guillén
+  [PERSONA] Nicolás Repetto
+  [PERSONA] Nicolás Vila
+  [PERSONA] Niní Marshall
+  [PERSONA] Norberto Méndez
+  [PERSONA] Norma Colombatto
+  [PERSONA] Norma Fontenla
+  [PERSONA] Orma
+  [PERSONA] Osvaldo Cruz
+  [PERSONA] Pablo Podestá
+  [PERSONA] Pacífico Víctor Lambertucci
+  [PERSONA] Padre Fernando Endorcia
+  [PERSONA] Pantaleón Rivarola
+  [PERSONA] Pareja
+  [PERSONA] Parker
+  [PERSONA] Patrón
+  [PERSONA] Pedro Echagüe
+  [PERSONA] Pedro Laurenz
+  [PERSONA] Pedro Lozano
+  [PERSONA] Pedro López Anaut
+  [PERSONA] Pedro Maffia
+  [PERSONA] Pedro Miguel Obligado
+  [PERSONA] Pedro Morán
+  [PERSONA] Pedro N. Arata
+  [PERSONA] Pedro Velarde
+  [PERSONA] Pedro Zonza Briano
+  [PERSONA] Perrault
+  [PERSONA] Peña
+  [PERSONA] Pinedo
+  [PERSONA] Plácido Martínez
+  [PERSONA] Poeta Ricardo E. Lleras
+  [PERSONA] Policarpo Mom
+  [PERSONA] Posadas
+  [PERSONA] Presbítero Doctor Antonio Sáenz
+  [PERSONA] Presbítero Virgilio Filipo
+  [PERSONA] Presidente Doctor Arturo Umberto Illia
+  [PERSONA] Presidente Eduardo Víctor Haedo
+  [PERSONA] Presidente Figueroa Alcorta
+  [PERSONA] Presidente Héctor J. Cámpora
+  [PERSONA] Presidente José Evaristo Uriburu
+  [PERSONA] Presidente Luis Sáenz Peña
+  [PERSONA] Presidente Nicolás Avellaneda
+  [PERSONA] Presidente Pedro Montt
+  [PERSONA] Presidente Quintana
+  [PERSONA] Presidente Ramón S. Castillo
+  [PERSONA] Presidente Roberto M. Ortiz
+  [PERSONA] Presidente Torres y Tenorio
+  [PERSONA] Prilidiano Pueyrredón
+  [PERSONA] Profesor Ernesto Nelson
+  [PERSONA] Práctico Poliza
+  [PERSONA] Quesada
+  [PERSONA] Rafael Hernández
+  [PERSONA] Ramallo
+  [PERSONA] Ramona Esther Gastiazoro de Brontes
+  [PERSONA] Ramsay
+  [PERSONA] Ramón Vázquez
+  [PERSONA] Raulet
+  [PERSONA] Regís Martínez
+  [PERSONA] Renque Curá
+  [PERSONA] Ricardo Balbín
+  [PERSONA] Ricardo Gutiérrez
+  [PERSONA] Ricardo Güiraldes
+  [PERSONA] Ricardo José Calichio
+  [PERSONA] Ricardo Monner Sans
+  [PERSONA] Roberto Jorge Santoro
+  [PERSONA] Robertson
+  [PERSONA] Rodrigo Ortiz de Zárate
+  [PERSONA] Rodrigo de Ibarrola
+  [PERSONA] Rojas
+  [PERSONA] Romeo Raffo Bontá
+  [PERSONA] Rosa Lamorte de Lombardo
+  [PERSONA] Rosa Pavlovsky
+  [PERSONA] Russel
+  [PERSONA] Ruy Díaz de Guzmán
+  [PERSONA] Rómulo Zabala
+  [PERSONA] Salas
+  [PERSONA] Salcedo
+  [PERSONA] Salom
+  [PERSONA] Salvador Allende
+  [PERSONA] Salvador Benedit
+  [PERSONA] Salvador María del Carril
+  [PERSONA] San Cayetano de Liniers
+  [PERSONA] San Cristóbal
+  [PERSONA] San Francisco Javier
+  [PERSONA] San Francisco de Asís
+  [PERSONA] San Ireneo
+  [PERSONA] San José de Calasanz
+  [PERSONA] San Juan Bautista de la Salle
+  [PERSONA] San Miguel Garicoits
+  [PERSONA] San Nicolás
+  [PERSONA] San Ricardo
+  [PERSONA] San Roque González de Santa Cruz
+  [PERSONA] San Vicente de Paul
+  [PERSONA] Santiago de las Carreras
+  [PERSONA] Sara Beatriz Fernández
+  [PERSONA] Saravia
+  [PERSONA] Sargento Eduardo Romero
+  [PERSONA] Saráchaga
+  [PERSONA] Sayos
+  [PERSONA] Segundo Iñigo Carrera
+  [PERSONA] Subcomisario Severino José Cirigliano
+  [PERSONA] Superí
+  [PERSONA] Sáenz
+  [PERSONA] Sánchez de Bustamante
+  [PERSONA] Teniente General Eustoquio Frías
+  [PERSONA] Teniente General Juan Domingo Perón
+  [PERSONA] Teniente General Luis J. Dellepiane
+  [PERSONA] Teniente General Nicolás Levalle
+  [PERSONA] Teniente General Pablo Riccheri
+  [PERSONA] Teniente Manuel Félix Origone
+  [PERSONA] Teniente Manuel Silvestre Prudán
+  [PERSONA] Teodoro García
+  [PERSONA] Teodoro Pablo Fels
+  [PERSONA] Terrero
+  [PERSONA] Thames
+  [PERSONA] Timoteo Gordillo
+  [PERSONA] Tomás Katari
+  [PERSONA] Uriburu
+  [PERSONA] Urién
+  [PERSONA] Valdenegro
+  [PERSONA] Valentín Alsina
+  [PERSONA] Valentín Virasoro
+  [PERSONA] Vallejos
+  [PERSONA] Varela
+  [PERSONA] Vedia
+  [PERSONA] Venialvo
+  [PERSONA] Ventura Bosch
+  [PERSONA] Ventura de la Vega
+  [PERSONA] Vera
+  [PERSONA] Vernet
+  [PERSONA] Vespucio
+  [PERSONA] Viamonte
+  [PERSONA] Vicente Anastasio de Echevarría
+  [PERSONA] Vicente Bellini
+  [PERSONA] Vicente Fidel López
+  [PERSONA] Vicente López
+  [PERSONA] Vicente López y Planes
+  [PERSONA] Vicente Pérez Rosales
+  [PERSONA] Vicente de Simone
+  [PERSONA] Vidal
+  [PERSONA] Videla Castillo
+  [PERSONA] Vilela
+  [PERSONA] Villanueva
+  [PERSONA] Villarino
+  [PERSONA] Víctor Hugo
+  [PERSONA] Víctor Jara
+  [PERSONA] Víctor Martínez
+  [PERSONA] Wenceslao Villafañe
+  [PERSONA] Zado
+  [PERSONA] Zapata
+  [PERSONA] Zavaleta
+  [PERSONA] Zinny
+  [PERSONA] Ángel Robbiani
+  [PERSONA] Ítalo Masuelli
+  [PUEBLOS ORIGINARIOS] Charrúa
+  [PUEBLOS ORIGINARIOS] Chiriguanos
+  [PUEBLOS ORIGINARIOS] De los Incas
+  [PUEBLOS ORIGINARIOS] El Araucano
+  [PUEBLOS ORIGINARIOS] Guaraní
+  [PUEBLOS ORIGINARIOS] Huarí
+  [PUEBLOS ORIGINARIOS] Indio
+  [PUEBLOS ORIGINARIOS] Kolla
+  [PUEBLOS ORIGINARIOS] Maká
+  [PUEBLOS ORIGINARIOS] Tacuara
+  [RELIGIÓN] De la Asunción
+  [RELIGIÓN] La Milagrosa
+  [RELIGIÓN] Nuestra Señora de Luján
+  [RELIGIÓN] Nuestra Señora de las Nieves
+  [RELIGIÓN] Nuestra Señora del Rosario
+  [RELIGIÓN] Recoleta
+  [RELIGIÓN] Remedios
+  [RELIGIÓN] Resurrección
+  [RELIGIÓN] San Benito de Palermo
+  [RÍO] Atuel
+  [RÍO] Bermejo
+  [RÍO] Desaguadero
+  [RÍO] Deseado
+  [RÍO] Iguazú
+  [RÍO] Juramento
+  [RÍO] Mocoretá
+  [RÍO] Paraná
+  [RÍO] Río Salado
+  [RÍO] Traful
+  [RÍO] Uruguay

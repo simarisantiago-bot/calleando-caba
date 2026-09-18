@@ -1,22 +1,12 @@
 [
   {
-    "nombre_original": "1° DE AGOSTO. DÍA DE LA PACHAMAMA",
-    "nombre_busqueda": "1° de Agosto. Día de la Pachamama",
-    "clave": "1 de agosto dia de la pachamama",
-    "id": "1 de agosto dia de la pachamama|sendero",
-    "categoria": "FECHA",
-    "tipo": "sendero",
-    "descripcion": "1° de agosto: se celebra el Día de la Pachamama (Madre Tierra), una festividad ancestral de los pueblos andinos (quechua y aimara) en Argentina, Bolivia, Chile, Perú y Ecuador.",
-    "letra": "P"
-  },
-  {
     "nombre_original": "1° DE MAYO",
     "nombre_busqueda": "1° de Mayo",
     "clave": "1 de mayo",
     "id": "1 de mayo|calle",
     "categoria": "FECHA",
     "tipo": "calle",
-    "descripcion": "1° de Mayo: homenaje al Día Internacional del Trabajo y a la fecha en que se firma la Constitución Argentina de 1853.",
+    "descripcion": "1 de Mayo: homenaje al Día Internacional del Trabajo y a la fecha en que se firma la Constitución Argentina de 1853.",
     "letra": "P"
   },
   {
@@ -26,7 +16,7 @@
     "id": "1 de mayo|plaza",
     "categoria": "FECHA",
     "tipo": "plaza",
-    "descripcion": "1° de Mayo: homenaje al Día Internacional del Trabajo.",
+    "descripcion": "1 de Mayo: homenaje al Día Internacional del Trabajo.",
     "letra": "P"
   },
   {
@@ -133,9 +123,9 @@
     "nombre_original": "18 DE DICIEMBRE DE 1872 “CREACIÓN DE LA ESTACIÓN LINIERS”",
     "nombre_busqueda": "18 de Diciembre de 1872 “creación de la Estación Liniers”",
     "clave": "18 de diciembre de 1872 creacion de la estacion liniers",
-    "id": "18 de diciembre de 1872 creacion de la estacion liniers|espacio verde",
+    "id": "18 de diciembre de 1872 creacion de la estacion liniers|plazoleta",
     "categoria": "FECHA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "18 de diciembre de 1872: fecha del acta del directorio del Ferrocarril de la provincia por el que se resuelve imponer el nombre de Liniers al apeadero que se había acordado construir y que se inaugurará finalmente en septiembre de 1876 (información proporcionada por el historiador del transporte Alberto Bernades).",
     "letra": "D"
   },
@@ -283,9 +273,9 @@
     "nombre_original": "29 DE DICIEMBRE DE 2001",
     "nombre_busqueda": "29 de Diciembre de 2001",
     "clave": "29 de diciembre de 2001",
-    "id": "29 de diciembre de 2001|espacio verde",
+    "id": "29 de diciembre de 2001|plaza",
     "categoria": "FECHA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "29 de diciembre de 2001: fecha en la que son muertos los jóvenes Adrián Matassa, Cristian Gómez y Maximiliano Tasca, en la esquina de Bahía Blanca\ny Gaona, en el barrio de Floresta, por un suboficial de la Policía Federal.",
     "letra": "V"
   },
@@ -500,16 +490,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "BUENOSAYRES, ADÁN",
-    "nombre_busqueda": "Adán Buenosayres",
-    "clave": "adan buenosayres",
-    "id": "adan buenosayres|puente",
-    "categoria": "ARTE",
-    "tipo": "puente",
-    "descripcion": "Adán Buenosayres: novela de Leopoldo Marechal.",
-    "letra": "B"
-  },
-  {
     "nombre_original": "QUIROGA, ADÁN",
     "nombre_busqueda": "Adán Quiroga",
     "clave": "adan quiroga",
@@ -523,9 +503,9 @@
     "nombre_original": "HARILAOS DE OLMOS, ADELIA MARÍA",
     "nombre_busqueda": "Adelia María Harilaos de Olmos",
     "clave": "adelia maria harilaos de olmos",
-    "id": "adelia maria harilaos de olmos|espacio verde",
+    "id": "adelia maria harilaos de olmos|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Adelia María Harilaos de Olmos (1865-1949), filántropa y benefactora de la Iglesia católica y los pobres, gracias a su devoción y la cuantiosa fortuna en tierras heredada de su esposo -el gran comerciante y terrateniente Ambrosio Olmos- y que recibió los títulos nobiliarios pontificios de condesa pontificia y marquesa pontificia.",
     "letra": "H"
   },
@@ -588,16 +568,6 @@
     "tipo": "calle",
     "descripcion": "Adolfo Saldías (1849-1914), historiador y periodista; vicegobernador de la provincia de Buenos Aires; interventor federal en La Rioja en 1910; director del diario La Argentina; autor de Historia de Rosas y su época, Historia de la Confederación Argentina y Cervantes y el Quijote.",
     "letra": "S"
-  },
-  {
-    "nombre_original": "AEROLÍNEAS ARGENTINAS",
-    "nombre_busqueda": "Aerolíneas Argentinas",
-    "clave": "aerolineas argentinas",
-    "id": "aerolineas argentinas|calle",
-    "categoria": "OTROS",
-    "tipo": "calle",
-    "descripcion": "Aerolíneas Argentinas: empresa argentina de navegación aérea creada por Decreto del 3 de mayo de 1949 a raíz de la fusión de las empresas Aeroposta Argentina, Sociedad Mixta Flota Aéreo Mercante (FAMA), Sociedad Mixta Zonas Oeste y Norte (ZONDA) y Sociedad Mixta de Aviación Territorial Fluvial Argentina (ALFA).",
-    "letra": "A"
   },
   {
     "nombre_original": "AERONÁUTICA ARGENTINA",
@@ -1040,12 +1010,12 @@
     "letra": "A"
   },
   {
-    "nombre_original": "PEÑA, ALCIRA DE AL",
-    "nombre_busqueda": "Alcira de Al Peña",
-    "clave": "alcira de al pena",
-    "id": "alcira de al pena|espacio verde",
+    "nombre_original": "PEÑA, ALCIRA DE LA",
+    "nombre_busqueda": "Alcira de la Peña",
+    "clave": "alcira de la pena",
+    "id": "alcira de la pena|boulevard",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "boulevard",
     "descripcion": "Alcira de la Peña (1911-1998), médica y dirigente política argentina.",
     "letra": "P"
   },
@@ -1448,16 +1418,6 @@
     "tipo": "calle",
     "descripcion": "Francisco José Seguí (1794-1877), marino; comandante de la cañonera Americana en 1814; combate en el sitio de Montevideo y en la guerra contra el Brasil; capitán del puerto de Buenos Aires en 1855.",
     "letra": "S"
-  },
-  {
-    "nombre_original": "BROWN, ALMIRANTE GUILLERMO",
-    "nombre_busqueda": "Almirante Guillermo Brown",
-    "clave": "almirante guillermo brown",
-    "id": "almirante guillermo brown|parque",
-    "categoria": "PERSONA",
-    "tipo": "parque",
-    "descripcion": "Guillermo Brown (1777-1857), marino de origen irlandés; vencedor en Martín García, Los Pozos, Juncal y Quilmes; gobernador delegado de la provincia de Buenos Aires en 1828.",
-    "letra": "B"
   },
   {
     "nombre_original": "SÁENZ VALIENTE, ALMIRANTE JUAN PABLO",
@@ -1890,16 +1850,6 @@
     "letra": "B"
   },
   {
-    "nombre_original": "BIANCHI, ANDRÉS",
-    "nombre_busqueda": "Andrés Bianchi",
-    "clave": "andres bianchi",
-    "id": "andres bianchi|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
-    "descripcion": "Andrés Bianchi (o Blanqui) (1677-1740), maestro mayor que, junto con el arquitecto Juan Bautista Prímoli, transformó el panorama arquitectónico del Buenos Aires de principios del siglo XVIII; construyen la fachada de la Catedral y los templos de la Merced, San Francisco, San Telmo y del Pilar.",
-    "letra": "B"
-  },
-  {
     "nombre_original": "CHAZARRETA, ANDRÉS",
     "nombre_busqueda": "Andrés Chazarreta",
     "clave": "andres chazarreta",
@@ -2143,9 +2093,9 @@
     "nombre_original": "SAINT-EXUPÉRY, ANTOINE DE",
     "nombre_busqueda": "Antoine de Saint-exupéry",
     "clave": "antoine de saint exupery",
-    "id": "antoine de saint exupery|patio de recreación",
+    "id": "antoine de saint exupery|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "patio de recreación",
+    "tipo": "plazoleta",
     "descripcion": "Antoine Jean-Baptiste Marie Roger de Saint-Exupéry (1900-1944), escritor y aviador francés; comienza a volar en la Sociedad Aéropostale y continúa\nhaciéndolo en África y Sudamérica hasta el comienzo de la guerra. Durante la Segunda Guerra Mundial, su aeronave de reconocimiento, un Lockheed Lightning P-38 (conocido también como F-5), es derribado en el Mar Mediterráneo en lo que fue su última misión. Autor de El aviador, Tierra de hombre y El principito.",
     "letra": "S"
   },
@@ -2336,7 +2286,7 @@
     "id": "arce|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Esteban Arce (?-1815), coronel; vencedor en Aroma y Chayanta; presidente provisorio de la Junta Provincial de Cochabamba en 1811.",
+    "descripcion": "Esteban Mariano Arze Alba y Uriona (1765-1815), militar; vencedor en Aroma y Chayanta; presidente provisorio de la Junta Provincial de Cochabamba en 1811.",
     "letra": "A"
   },
   {
@@ -2770,16 +2720,6 @@
     "letra": "F"
   },
   {
-    "nombre_original": "FRONDIZI, ARTURO",
-    "nombre_busqueda": "Arturo Frondizi",
-    "clave": "arturo frondizi",
-    "id": "arturo frondizi|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
-    "descripcion": "Arturo Frondizi (1908-1995), político; líder de la Unión Cívica Radical Intransigente (UCRI). Asciende a la Presidencia de la Nación de 1958 a 1962, año en que es depuesto por un golpe militar y encarcelado. Liberado en 1963, prosigue su actividad política y funda con Rogelio Frigerio el Movimiento de Integración y Desarrollo (MID).",
-    "letra": "F"
-  },
-  {
     "nombre_original": "JAURETCHE, ARTURO",
     "nombre_busqueda": "Arturo Jauretche",
     "clave": "arturo jauretche",
@@ -2803,9 +2743,9 @@
     "nombre_original": "TOSCANINI, ARTURO",
     "nombre_busqueda": "Arturo Toscanini",
     "clave": "arturo toscanini",
-    "id": "arturo toscanini|calle",
+    "id": "arturo toscanini|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Arturo Toscanini (1867-1957), músico italiano; director de la orquesta de la Scala de Milán, de la Opera Metropolitana de Nueva York y de la Filarmónica  de Nueva York; director invitado de la Orquesta de Filadelfia; visita Buenos Aires en 1901, 1903, 1904, 1906, 1912, 1940 y 1941 y actúa en el Teatro Colón.",
     "letra": "T"
   },
@@ -2856,16 +2796,6 @@
     "id": "astor piazzola|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Astor Pantaleón Piazzolla (1921-1992), bandoneonista, compositor y director; es el artífice de la renovación vanguardista del tango, al que enriqueció con elementos clásicos y del jazz. Autor de Adiós nonino, Balada para un loco, Chiquilín de Bachín; la serie de las Estaciones (Verano Porteño, Otoño Porteño, Invierno Porteño y Primavera Porteña); la Serie del Ángel (Introducción al ángel, Milonga del ángel, Muerte del ángel y Resurrección del ángel); Revirado, Fracanapa, Calambre, Buenos Aires Hora Cero, Decarísimo, Michelangelo ´70, Fugata, Libertango y Suite Troilana, entre otros.",
-    "letra": "P"
-  },
-  {
-    "nombre_original": "PIAZZOLA, ASTOR",
-    "nombre_busqueda": "Astor Piazzola",
-    "clave": "astor piazzola",
-    "id": "astor piazzola|paseo",
-    "categoria": "PERSONA",
-    "tipo": "paseo",
     "descripcion": "Astor Pantaleón Piazzolla (1921-1992), bandoneonista, compositor y director; es el artífice de la renovación vanguardista del tango, al que enriqueció con elementos clásicos y del jazz. Autor de Adiós nonino, Balada para un loco, Chiquilín de Bachín; la serie de las Estaciones (Verano Porteño, Otoño Porteño, Invierno Porteño y Primavera Porteña); la Serie del Ángel (Introducción al ángel, Milonga del ángel, Muerte del ángel y Resurrección del ángel); Revirado, Fracanapa, Calambre, Buenos Aires Hora Cero, Decarísimo, Michelangelo ´70, Fugata, Libertango y Suite Troilana, entre otros.",
     "letra": "P"
   },
@@ -3048,16 +2978,6 @@
     "tipo": "puente",
     "descripcion": "Nicolás Avellaneda (1836-1885), jurisconsulto; presidente de la República de 1874 a 1880.",
     "letra": "A"
-  },
-  {
-    "nombre_original": "ROGER, AVIADOR ENRIQUE ADRIÁN",
-    "nombre_busqueda": "Aviador Enrique Adrián Roger",
-    "clave": "aviador enrique adrian roger",
-    "id": "aviador enrique adrian roger|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Enrique Adrián Roger (1888-1960), deportista, aviador, precursor de la aviación argentina; se inició en el motociclismo y el automovilismo; fundó y dirigió la primera revista especializada llamada La Argentina Automovilística entre 1908 y 1912.",
-    "letra": "R"
   },
   {
     "nombre_original": "AVISO A.R.A. ALFÉREZ SOBRAL",
@@ -3388,16 +3308,6 @@
     "tipo": "plazoleta",
     "descripcion": "Mauricio de Hirsch (1831-1896), filántropo alemán; fundador de diversas instituciones de beneficencia; contribuye en 1891 a la fundación de la Jowish Colonization Association, la que fomenta el establecimiento de colonias judías en la Argentina.",
     "letra": "H"
-  },
-  {
-    "nombre_original": "BARRACA PEÑA",
-    "nombre_busqueda": "Barraca Peña",
-    "clave": "barraca pena",
-    "id": "barraca pena|puente",
-    "categoria": "PERSONA",
-    "tipo": "puente",
-    "descripcion": "Barraca Peña: histórico complejo de almacenamiento y comercio de lana y cueros establecido en 1774 por el comerciante gallego Francisco de la Peña Fernández a orillas del Riachuelo. Construido en 1913, el puente basculante servía para el transporte ferroviario de carga hacia dicha barraca, situada en La Boca.",
-    "letra": "B"
   },
   {
     "nombre_original": "BARRACAS",
@@ -3750,16 +3660,6 @@
     "letra": "B"
   },
   {
-    "nombre_original": "SEMIZA, BENIAMINO",
-    "nombre_busqueda": "Beniamino Semiza",
-    "clave": "beniamino semiza",
-    "id": "beniamino semiza|pasaje peatonal",
-    "categoria": "PERSONA",
-    "tipo": "pasaje peatonal",
-    "descripcion": "Beniamino Semiza (1902-1960) militante socialista; funda junto con José F. Penelón el Partido Concentración Obrera; militante de los sindicatos de obreros municipales y metalúrgicos; concejal de la ciudad de Buenos Aires de 1938 a 1941 y director de la caja de jubilaciones de los obreros municipales de 1938 a 1943.",
-    "letra": "S"
-  },
-  {
     "nombre_original": "JUÁREZ, BENITO",
     "nombre_busqueda": "Benito Juárez",
     "clave": "benito juarez",
@@ -4110,10 +4010,80 @@
     "letra": "B"
   },
   {
-    "nombre_original": "BOCA",
-    "nombre_busqueda": "Boca",
-    "clave": "boca",
-    "id": "boca|barrio",
+    "nombre_original": "BUSTOS, CARLOS ARMANDO",
+    "nombre_busqueda": "Carlos Armando Bustos",
+    "clave": "carlos armando bustos",
+    "id": "carlos armando bustos|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Carlos Armando Bustos Crostelli (1942-detenido desaparecido el 8 de abril de 1977), sacerdote capuchino; miembro de Movimiento de Sacerdotes para el Tercer Mundo, víctima de la última dictadura cívico militar de Argentina.",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "BUSTOS, CONCEJAL PEDRO",
+    "nombre_busqueda": "Concejal Pedro Bustos",
+    "clave": "concejal pedro bustos",
+    "id": "concejal pedro bustos|puente",
+    "categoria": "PERSONA",
+    "tipo": "puente",
+    "descripcion": "Pedro Bustos (1940-1984), concejal porteño que defendió la continuación de la calle Jorge Newbery a partir de la implementación del puente mencionado.",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "CHANAPA, DANIEL BONIFACIO",
+    "nombre_busqueda": "Daniel Bonifacio Chanapa",
+    "clave": "daniel bonifacio chanapa",
+    "id": "daniel bonifacio chanapa|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Daniel Bonifacio Chanapa (1947-1978), militante del Movimiento Villero Peronista y empleado de Subterráneos de Buenos Aires, cesanteado en 1977 bajo la Ley de Prescindibilidad. El 17 de abril de 1978, a los 31 años, fue víctima de secuestro y desaparición forzada durante la última dictadura militar argentina.",
+    "letra": "C"
+  },
+  {
+    "nombre_original": "DE LOS NIÑOS",
+    "nombre_busqueda": "De los Niños",
+    "clave": "de los ninos",
+    "id": "de los ninos|calle",
+    "categoria": "CONCEPTO",
+    "tipo": "calle",
+    "descripcion": "De los Niños: homenaje a las infancias de nuestro país.",
+    "letra": "N"
+  },
+  {
+    "nombre_original": "BUSTAMANTE, EL ELECTRICISTA NICASIO FEDERICO",
+    "nombre_busqueda": "El Electricista Nicasio Federico Bustamante",
+    "clave": "el electricista nicasio federico bustamante",
+    "id": "el electricista nicasio federico bustamante|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Nicasio Federico Bustamante (¿-?).",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "VEGA, EL FERROVIARIO ANTONIO R.",
+    "nombre_busqueda": "El Ferroviario Antonio R. Vega",
+    "clave": "el ferroviario antonio r vega",
+    "id": "el ferroviario antonio r vega|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Antonio R. Vega (¿-?).",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "CYMES, JUAN",
+    "nombre_busqueda": "Juan Cymes",
+    "clave": "juan cymes",
+    "id": "juan cymes|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Juan Cymes (1936-2003), militante social y dirigente villero argentino que dedicó más de tres décadas a la defensa de los derechos de los habitantes de los barrios populares.",
+    "letra": "C"
+  },
+  {
+    "nombre_original": "LA BOCA",
+    "nombre_busqueda": "La Boca",
+    "clave": "la boca",
+    "id": "la boca|barrio",
     "categoria": "LUGAR",
     "tipo": "barrio",
     "descripcion": "Boca del Riachuelo: denominación usual proveniente de la boca mediante la cual desembocan en el Río de la Plata las aguas del Riachuelo, y con la cual se conoce a esta zona desde los orígenes de la ciudad.",
@@ -4290,10 +4260,50 @@
     "letra": "Z"
   },
   {
-    "nombre_original": "VERA PEÑALOZA, BOULEVARD ROSARIO",
-    "nombre_busqueda": "Boulevard Rosario Vera Peñaloza",
-    "clave": "boulevard rosario vera penaloza",
-    "id": "boulevard rosario vera penaloza|calle",
+    "nombre_original": "MUJERES LUCHADORAS",
+    "nombre_busqueda": "Mujeres Luchadoras",
+    "clave": "mujeres luchadoras",
+    "id": "mujeres luchadoras|calle",
+    "categoria": "CONCEPTO",
+    "tipo": "calle",
+    "descripcion": "Mujeres Luchadoras: homenaje a la lucha de las mujeres de nuestro país.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "MUJERES VICTORIOSAS",
+    "nombre_busqueda": "Mujeres Victoriosas",
+    "clave": "mujeres victoriosas",
+    "id": "mujeres victoriosas|calle",
+    "categoria": "CONCEPTO",
+    "tipo": "calle",
+    "descripcion": "Mujeres Victoriosas: homenaje a las mujeres de nuestro país.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "NUESTRA SEÑORA DE CAACUPÉ",
+    "nombre_busqueda": "Nuestra Señora de Caacupé",
+    "clave": "nuestra senora de caacupe",
+    "id": "nuestra senora de caacupe|calle",
+    "categoria": "RELIGIÓN",
+    "tipo": "calle",
+    "descripcion": "Virgen de Caacupé o Virgen de los Milagros de Caacupé, variante de la advocación mariana de la Inmaculada venerada en la localidad homónima, donde tiene una basílica católica inaugurada el 8 de diciembre de 1765 que se ha convertido en un lugar de peregrinación de numerosos creyentes de Paraguay, país del que es patrona.",
+    "letra": "N"
+  },
+  {
+    "nombre_original": "GÓMEZ, OVIDIO",
+    "nombre_busqueda": "Ovidio Gómez",
+    "clave": "ovidio gomez",
+    "id": "ovidio gomez|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Ovidio Gómez (1933-1976), músico y cantante del popular trío mexicano Los Panchos, donde se desempeñó como primera voz de 1971 a 1976.",
+    "letra": "G"
+  },
+  {
+    "nombre_original": "VERA PEÑALOZA, ROSARIO",
+    "nombre_busqueda": "Rosario Vera Peñaloza",
+    "clave": "rosario vera penaloza",
+    "id": "rosario vera penaloza|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Rosario Vera Peñaloza (1873-1950), educadora y escritora; directora de la Escuela Normal Provincial Alberdi, de Córdoba; de la Escuela Normal de Profesores N° 1 de Buenos Aires; fundadora y directora de la Escuela Argentina Modelo, junto con Carlos María Biedma; autora de La enseñanza práctica de la geometría y La casa histórica de Tucumán.",
@@ -4500,10 +4510,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "RISSO PATRÓN, BUENAVENTURA",
-    "nombre_busqueda": "Buenaventura Risso Patrón",
-    "clave": "buenaventura risso patron",
-    "id": "buenaventura risso patron|calle",
+    "nombre_original": "RISSO PATRÓN, PRELADO DON BUENAVENTURA",
+    "nombre_busqueda": "Prelado Don Buenaventura Risso Patrón",
+    "clave": "prelado don buenaventura risso patron",
+    "id": "prelado don buenaventura risso patron|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Buenaventura Risso Patrón (1811-1884), sacerdote; obispo de Salta desde 1860; impulsa la difusión del catolicismo por medio de la prensa y surgen así El Creyente (Catamarca), La Esperanza (Salta), La Fe (Jujuy) y El Fiel Católico (Santiago del Estero).",
@@ -4543,9 +4553,9 @@
     "nombre_original": "PRINCIPESSA MAFALDA, BUQUE",
     "nombre_busqueda": "Buque Principessa Mafalda",
     "clave": "buque principessa mafalda",
-    "id": "buque principessa mafalda|espacio verde",
+    "id": "buque principessa mafalda|plazoleta",
     "categoria": "BARCO",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Buque Principessa Mafalda: transatlántico italiano de la Navigazione Generale Italiana, famoso por conectar Génova y Buenos Aires en solo 14 días desde 1909. Conocido como el \"Titanic del Atlántico Sur\", se hundió el 25 de octubre de 1927 frente a Brasil tras una falla catastrófica en su hélice, provocando la muerte de más de 300 personas.",
     "letra": "P"
   },
@@ -4750,24 +4760,14 @@
     "letra": "C"
   },
   {
-    "nombre_original": "LARGUÍA, CADETE CARLOS",
-    "nombre_busqueda": "Cadete Carlos Larguía",
-    "clave": "cadete carlos larguia",
-    "id": "cadete carlos larguia|calle",
+    "nombre_original": "VIGIL, CONSTANCIO CECILIO",
+    "nombre_busqueda": "Constancio Cecilio Vigil",
+    "clave": "constancio cecilio vigil",
+    "id": "constancio cecilio vigil|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Carlos Larguía (1910-1930), militar; cursaba el tercer año en el Colegio Militar cuando muere en un enfrentamiento en la zona de Congreso durante la revolución del 6 de septiembre de 1930.",
-    "letra": "L"
-  },
-  {
-    "nombre_original": "GÜEMES TORINO, CADETE JORGE",
-    "nombre_busqueda": "Cadete Jorge Güemes Torino",
-    "clave": "cadete jorge guemes torino",
-    "id": "cadete jorge guemes torino|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Jorge Güemes Torino (?-1930), militar; cursa el tercer año en el Colegio Militar y participa en la revolución del 6 de septiembre de 1930, donde muere en un enfrentamiento en la zona de Congreso.",
-    "letra": "G"
+    "descripcion": "Constancio C. Vigil (1876-1954), escritor y periodista; fundador en Montevideo de la revista Alborada; en Buenos Aires de Mundo Argentino con Alberto Haynes, y de la editorial Atlántida, donde nacen Billiken, Para Ti y La Chacra; autor de El Erial, Upa y Mangacha.",
+    "letra": "V"
   },
   {
     "nombre_original": "CÁDIZ",
@@ -4823,9 +4823,9 @@
     "nombre_original": "CALABRIA",
     "nombre_busqueda": "Calabria",
     "clave": "calabria",
-    "id": "calabria|cantero central",
+    "id": "calabria|plaza",
     "categoria": "LUGAR",
-    "tipo": "cantero central",
+    "tipo": "plaza",
     "descripcion": "Calabria: región del sudoeste de Italia que comprende las provincias de Cosenza, Reggio, Calabria y Catanzaro.",
     "letra": "C"
   },
@@ -4973,9 +4973,9 @@
     "nombre_original": "CAMINITO",
     "nombre_busqueda": "Caminito",
     "clave": "caminito",
-    "id": "caminito|calle",
+    "id": "caminito|sendero peatonal",
     "categoria": "ARTE",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Caminito: canción porteña con música de Juan de Dios Filiberto y letra de Gabino Coria Peñaloza, estrenada en 1924.",
     "letra": "C"
   },
@@ -5163,9 +5163,9 @@
     "nombre_original": "CANTILO",
     "nombre_busqueda": "Cantilo",
     "clave": "cantilo",
-    "id": "cantilo|calle",
+    "id": "cantilo|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "José María Cantilo (1816-1872), químico y periodista; fundador de los periódicos El siglo, El correo del domingo y La verdad; diputado provincial de Buenos Aires y miembro de la Convención de esa provincia en 1860; miembro de la Comisión Sanitaria durante la guerra contra el Paraguay y organizador de la Comisión Popular en la epidemia de fiebre amarilla de 1871.",
     "letra": "C"
   },
@@ -5248,16 +5248,6 @@
     "tipo": "plaza",
     "descripcion": "Domingo Fidel Sarmiento (1845-1866), capitán; hijo adoptivo de Domingo Faustino Sarmiento, es conocido como Dominguito; combate en la guerra contra el Paraguay, donde muere en el asalto de Curupaytí.",
     "letra": "S"
-  },
-  {
-    "nombre_original": "URQUIZA, CAPITÁN GENERAL JUSTO JOSÉ DE URQUIZA",
-    "nombre_busqueda": "Capitán General Justo José de Urquiza Urquiza",
-    "clave": "capitan general justo jose de urquiza urquiza",
-    "id": "capitan general justo jose de urquiza urquiza|plaza",
-    "categoria": "PERSONA",
-    "tipo": "plaza",
-    "descripcion": "Justo José de Urquiza (1801-1870), militar; gobernador de Entre Ríos; vencedor en Caseros y Cepeda; gobernador de Buenos Aires en 1852; director provisorio de la Confederación en 1852 y 1853 y presidente de la Confederación\nArgentina de 1854 a 1860.",
-    "letra": "U"
   },
   {
     "nombre_original": "FREIRE, CAPITÁN GENERAL RAMÓN",
@@ -5473,9 +5463,9 @@
     "nombre_original": "DI SARLI, CARLOS",
     "nombre_busqueda": "Carlos Di Sarli",
     "clave": "carlos di sarli",
-    "id": "carlos di sarli|plazoleta",
+    "id": "carlos di sarli|vereda",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "vereda",
     "descripcion": "Cayetano Di Sarli (1903-1960), pianista; director y compositor de Milonguero viejo, Bahía Blanca y Nido gaucho.",
     "letra": "D"
   },
@@ -5950,16 +5940,6 @@
     "letra": "C"
   },
   {
-    "nombre_original": "CATALINAS SUR",
-    "nombre_busqueda": "Catalinas Sur",
-    "clave": "catalinas sur",
-    "id": "catalinas sur|espacio verde",
-    "categoria": "OTROS",
-    "tipo": "espacio verde",
-    "descripcion": "Catalinas Sur: nombre con que se conoció el actual barrio Alfredo Palacios y que se origina en la denominación con la que se identificaba a los galpones y depósitos portuarios de la empresa Muelles y Depósitos de las Catalinas en esta zona de La Boca. El agregado de la palabra “Sur”, los distinguía de los depósitos del “Norte”, ubicados en la cercanía del Convento de Santa Catalina de Siena.",
-    "letra": "C"
-  },
-  {
     "nombre_original": "CATAMARCA",
     "nombre_busqueda": "Catamarca",
     "clave": "catamarca",
@@ -6220,10 +6200,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "ONZARI, CESÁRIO",
-    "nombre_busqueda": "Cesário Onzari",
-    "clave": "cesario onzari",
-    "id": "cesario onzari|cantero central",
+    "nombre_original": "ONZARI, CESÁREO",
+    "nombre_busqueda": "Cesáreo Onzari",
+    "clave": "cesareo onzari",
+    "id": "cesareo onzari|cantero central",
     "categoria": "PERSONA",
     "tipo": "cantero central",
     "descripcion": "Cesário Onzari (1903-1964), futbolista del club Huracán; autor del primer gol directo desde un tiro de esquina ocurrido el 1° de octubre de 1924, jugando para el seleccionado argentino, en la cancha del Club Sportivo Barracas, contra el seleccionado de Uruguay. El gol recibió el nombre de olímpico ya que la selección uruguaya había obtenido ese año el campeonato en los Juegos Olímpicos de Francia.",
@@ -6248,16 +6228,6 @@
     "tipo": "calle",
     "descripcion": "María Isabel Granda y Larco (1920-1983), conocida como Chabuca Granda, cantautora, folclorista, productora discográfica, guionista de cine y dramaturga peruana; compuso y escribió un gran número de canciones de música criolla y afroperuana, así como poesías y guiones teatrales y cinematográficos.",
     "letra": "C"
-  },
-  {
-    "nombre_original": "GRANDA, CHABUCA",
-    "nombre_busqueda": "Chabuca Granda",
-    "clave": "chabuca granda",
-    "id": "chabuca granda|paseo",
-    "categoria": "PERSONA",
-    "tipo": "paseo",
-    "descripcion": "Isabel Granda y Larco (1920-1983), poetisa y cantante peruana; autora de La flor de canela y Misa criolla.",
-    "letra": "G"
   },
   {
     "nombre_original": "CHACABUCO",
@@ -6327,16 +6297,6 @@
     "categoria": "LUGAR",
     "tipo": "calle",
     "descripcion": "Chamical: lugar de la provincia de Salta donde tuvieron lugar algunos combates de los gauchos de Güemes, y donde se encuentra la capilla de San Francisco de Chamical, en cuyo cementerio adyacente fue sepultado el caudillo norteño en 1821, permaneciendo allí hasta que en 1823 fue trasladado a la Catedral de Salta.",
-    "letra": "C"
-  },
-  {
-    "nombre_original": "CHAÑAR",
-    "nombre_busqueda": "Chañar",
-    "clave": "chanar",
-    "id": "chanar|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Chañar: árbol nativo caducifolio de América del Sur (principalmente Argentina, Chile, Bolivia y Paraguay), famoso por su gran adaptación a climas áridos y desérticos; productor de frutos dulces y comestibles, ampliamente utilizados para elaborar arrope.",
     "letra": "C"
   },
   {
@@ -6466,16 +6426,6 @@
     "id": "china|calle",
     "categoria": "LUGAR",
     "tipo": "calle",
-    "descripcion": "República Popular China: país asiático. Capital: Pekín.",
-    "letra": "C"
-  },
-  {
-    "nombre_original": "CHINA",
-    "nombre_busqueda": "China",
-    "clave": "china",
-    "id": "china|canteros centrales",
-    "categoria": "LUGAR",
-    "tipo": "canteros centrales",
     "descripcion": "República Popular China: país asiático. Capital: Pekín.",
     "letra": "C"
   },
@@ -6780,16 +6730,6 @@
     "letra": "O"
   },
   {
-    "nombre_original": "CLUBES DEL BARRIO",
-    "nombre_busqueda": "Clubes del Barrio",
-    "clave": "clubes del barrio",
-    "id": "clubes del barrio|plazoleta",
-    "categoria": "CONCEPTO",
-    "tipo": "plazoleta",
-    "descripcion": "Clubes de barrio: organizaciones civiles sin fines de lucro que funcionan como pilares comunitarios en Argentina, enfocados en el deporte, la recreación y la contención social. Son espacios de encuentro donde se fomentan valores, se imparte disciplina y se fortalece el tejido social, sirviendo como \"pulmón\" de la comunidad.",
-    "letra": "C"
-  },
-  {
     "nombre_original": "COBO",
     "nombre_busqueda": "Cobo",
     "clave": "cobo",
@@ -6837,16 +6777,6 @@
     "categoria": "PERSONA",
     "tipo": "barrio",
     "descripcion": "Juan M. Coghlan (1824-1890), ingeniero irlandés; presta servicios a la Municipalidad de Buenos Aires con un proyecto de entubamiento para lugares céntricos de la ciudad; proyecta en 1859 un puerto en la desembocadura del Riachuelo; proyecta las primeras instalaciones de aguas corrientes en 1868,\nampliadas luego por el ingeniero Bateman; presidente del Ferrocarril del Sud; director del Ferrocarril a Campana y de la Oficina de Puertos y Caminos de la\nProvincia de Buenos Aires; vinculado al Ferrocarril Central Argentino (Bartolomé Mitre) se le da su nombre a la estación inaugurada el 14 de febrero de 1891, y cuya denominación identificará al barrio desde entonces.",
-    "letra": "C"
-  },
-  {
-    "nombre_original": "COIHUE",
-    "nombre_busqueda": "Coihue",
-    "clave": "coihue",
-    "id": "coihue|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Coihue: árbol nativo perenne de los bosques andino-patagónicos de Argentina y Chile, conocido como el \"gigante del bosque\" por alcanzar hasta 40-50 metros de altura y vivir más de 500 años; especie siempre verde con hojas pequeñas, corteza gris oscura y ramas aplanadas que forman copas frondosas, vital para el ecosistema.",
     "letra": "C"
   },
   {
@@ -6943,9 +6873,9 @@
     "nombre_original": "COLONIA ESPERANZA",
     "nombre_busqueda": "Colonia Esperanza",
     "clave": "colonia esperanza",
-    "id": "colonia esperanza|espacio verde",
+    "id": "colonia esperanza|plazoleta",
     "categoria": "LUGAR",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Colonia Esperanza: nombre del pueblo y primera colonia agrícola fundada en la República, en la provincia de Santa Fe, por don Aarón Castellanos, quien firma el contrato con el gobierno provincial el 15 de junio de 1853. Los trabajos de mensura y las instalaciones de la colonia se iniciaron el 5 de septiembre de 1855, y los primeros pobladores llegaron el 27 de enero de 1856.",
     "letra": "C"
   },
@@ -7230,10 +7160,10 @@
     "letra": "B"
   },
   {
-    "nombre_original": "VIGIL, CONSTANCIO C.",
-    "nombre_busqueda": "Constancio C. Vigil",
-    "clave": "constancio c vigil",
-    "id": "constancio c vigil|calle",
+    "nombre_original": "VIGIL, CONSTANCIO C. 2",
+    "nombre_busqueda": "Constancio C. Vigil 2",
+    "clave": "constancio c vigil 2",
+    "id": "constancio c vigil 2|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Constancio C. Vigil (1876-1954), escritor y periodista; fundador en Montevideo de la revista Alborada; en Buenos Aires de Mundo Argentino con Alberto Haynes, y de la editorial Atlántida, donde nacen Billiken, Para Ti y La Chacra; autor de El Erial, Upa y Mangacha.",
@@ -7970,16 +7900,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "CRISTIANÍA",
-    "nombre_busqueda": "Cristianía",
-    "clave": "cristiania",
-    "id": "cristiania|calle",
-    "categoria": "OTROS",
-    "tipo": "calle",
-    "descripcion": "¿?",
-    "letra": "C"
-  },
-  {
     "nombre_original": "HICKEN, CRISTÓBAL M.",
     "nombre_busqueda": "Cristóbal M. Hicken",
     "clave": "cristobal m hicken",
@@ -8180,16 +8100,6 @@
     "letra": "D"
   },
   {
-    "nombre_original": "DAMA DE MONTE",
-    "nombre_busqueda": "Dama de Monte",
-    "clave": "dama de monte",
-    "id": "dama de monte|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Dama de Monte: planta trepadora nativa de Sudamérica, ideal para cercos, pérgolas y glorietas por su rápido crecimiento y abundante floración; caracterizada por sus flores en forma de trompeta color lila o rosado suave con venas púrpuras.",
-    "letra": "D"
-  },
-  {
     "nombre_original": "LARRAÑAGA, DÁMASO",
     "nombre_busqueda": "Dámaso Larrañaga",
     "clave": "damaso larranaga",
@@ -8340,10 +8250,10 @@
     "letra": "A"
   },
   {
-    "nombre_original": "ASUNCIÓN, DE LA",
-    "nombre_busqueda": "De la Asunción",
-    "clave": "de la asuncion",
-    "id": "de la asuncion|plaza",
+    "nombre_original": "ASUNCIÓN, NUESTRA SEÑORA DE LA",
+    "nombre_busqueda": "Nuestra Señora de la Asunción",
+    "clave": "nuestra senora de la asuncion",
+    "id": "nuestra senora de la asuncion|plaza",
     "categoria": "RELIGIÓN",
     "tipo": "plaza",
     "descripcion": "Asunción de la Virgen: solemnidad de la Iglesia católica que conmemora la elevación de la Santísima Virgen a los cielos. Este misterio se celebra el 15 de agosto por disposición del emperador Mauricio (539-602).",
@@ -8380,20 +8290,20 @@
     "letra": "A"
   },
   {
-    "nombre_original": "CONSTITUCIÓN, DE LA",
-    "nombre_busqueda": "De la Constitución",
-    "clave": "de la constitucion",
-    "id": "de la constitucion|plaza",
+    "nombre_original": "CONSTITUCIÓN",
+    "nombre_busqueda": "Constitución",
+    "clave": "constitucion",
+    "id": "constitucion|plaza",
     "categoria": "CONCEPTO",
     "tipo": "plaza",
     "descripcion": "Constitución: si bien por la fecha de aparición de este nombre en lo que\nhace a la plaza y al barrio, es presumible que el mismo rindiera homenaje a la\nConstitución del segregado Estado de Buenos Aires, sancionada en abril de\n1854; en la actualidad esta nomenclatura recuerda a la Carta Fundamental\nque rige a la República, aprobada por el Congreso Constituyente de Santa Fe\nel 1° de mayo de 1853 y promulgada el 25 del mismo mes.",
     "letra": "C"
   },
   {
-    "nombre_original": "DEFENSA, DE LA",
-    "nombre_busqueda": "De la Defensa",
-    "clave": "de la defensa",
-    "id": "de la defensa|plaza",
+    "nombre_original": "DEFENSA",
+    "nombre_busqueda": "Defensa",
+    "clave": "defensa",
+    "id": "defensa|plaza",
     "categoria": "ACCIÓN MILITAR",
     "tipo": "plaza",
     "descripcion": "Defensa: en recuerdo de la heroica Defensa de la ciudad de Buenos Aires en julio de 1807 contra la segunda invasión inglesa.",
@@ -8480,10 +8390,10 @@
     "letra": "N"
   },
   {
-    "nombre_original": "REPÚBLlCA, DE LA",
-    "nombre_busqueda": "De la Repúbllca",
-    "clave": "de la republlca",
-    "id": "de la republlca|plaza",
+    "nombre_original": "REPÚBLICA, DE LA",
+    "nombre_busqueda": "De la República",
+    "clave": "de la republica",
+    "id": "de la republica|plaza",
     "categoria": "CONCEPTO",
     "tipo": "plaza",
     "descripcion": "República: en conmemoración de la unidad de la República consagrada con la federalización de Buenos Aires el 21 de septiembre de 1880.",
@@ -8500,12 +8410,12 @@
     "letra": "T"
   },
   {
-    "nombre_original": "VIDA, DE LA",
-    "nombre_busqueda": "De la Vida",
-    "clave": "de la vida",
-    "id": "de la vida|paseo",
+    "nombre_original": "VIDA, PASEO DE LA - DR. RENÉ FAVALORO",
+    "nombre_busqueda": "Paseo de la Vida - Dr. René Favaloro",
+    "clave": "paseo de la vida dr rene favaloro",
+    "id": "paseo de la vida dr rene favaloro|plaza",
     "categoria": "CONCEPTO",
-    "tipo": "paseo",
+    "tipo": "plaza",
     "descripcion": "De la Vida: con este nombre se rinde homenaje al reconocido médico René Favaloro (1923-2000) por su aporte a la cardiología y a la cirugía cardiovascular, al crear el puente aortocoronario, más conocido como bypass.",
     "letra": "V"
   },
@@ -8523,9 +8433,9 @@
     "nombre_original": "AMÉRICAS, DE LAS",
     "nombre_busqueda": "De las Américas",
     "clave": "de las americas",
-    "id": "de las americas|plazoleta",
+    "id": "de las americas|parque",
     "categoria": "LUGAR",
-    "tipo": "plazoleta",
+    "tipo": "parque",
     "descripcion": "América: homenaje al continente americano y a sus distintas naciones.",
     "letra": "A"
   },
@@ -8553,9 +8463,9 @@
     "nombre_original": "ARTES LATINOAMERICANAS, DE LAS",
     "nombre_busqueda": "De las Artes Latinoamericanas",
     "clave": "de las artes latinoamericanas",
-    "id": "de las artes latinoamericanas|paseo",
+    "id": "de las artes latinoamericanas|cantero central",
     "categoria": "CONCEPTO",
-    "tipo": "paseo",
+    "tipo": "cantero central",
     "descripcion": "De las Artes Latinoamericanas: homenaje a los artistas y escritores latinoamericanos.",
     "letra": "A"
   },
@@ -8840,34 +8750,34 @@
     "letra": "M"
   },
   {
-    "nombre_original": "PAKISTÁN, DE",
-    "nombre_busqueda": "De Pakistán",
-    "clave": "de pakistan",
-    "id": "de pakistan|plaza",
+    "nombre_original": "PAKISTÁN, REPÚBLICA DE",
+    "nombre_busqueda": "República de Pakistán",
+    "clave": "republica de pakistan",
+    "id": "republica de pakistan|plaza",
     "categoria": "LUGAR",
     "tipo": "plaza",
     "descripcion": "Pakistán: estado del Asia. Capital: Islamabad.",
     "letra": "P"
   },
   {
-    "nombre_original": "SAN BENITO, DE",
-    "nombre_busqueda": "De San Benito",
-    "clave": "de san benito",
-    "id": "de san benito|parque",
+    "nombre_original": "SAN BENITO",
+    "nombre_busqueda": "San Benito",
+    "clave": "san benito",
+    "id": "san benito|parque",
     "categoria": "RELIGIÓN",
     "tipo": "parque",
     "descripcion": "San Benito de Palermo: nombre tradicional con que se conocía al barrio de Palermo y que se origina en la existencia de un oratorio en el que se veneraba la imagen de San Benito.",
     "letra": "S"
   },
   {
-    "nombre_original": "SAN TELMO, DE",
-    "nombre_busqueda": "De San Telmo",
-    "clave": "de san telmo",
-    "id": "de san telmo|plazoleta",
+    "nombre_original": "CASTAGNINO, JUAN CARLOS",
+    "nombre_busqueda": "Juan Carlos Castagnino",
+    "clave": "juan carlos castagnino",
+    "id": "juan carlos castagnino|plazoleta",
     "categoria": "PERSONA",
     "tipo": "plazoleta",
-    "descripcion": "San Pedro González Telmo de Frómista (?-1246), sacerdote dominico proclamado Patrono de los navegantes y abogado de las tormentas. En 1806 se creó la parroquia de este nombre designándose a la iglesia de Nuestra Señora de Belén como sede de la misma.",
-    "letra": "S"
+    "descripcion": "Juan Carlos Castagnino (1908-1972), pintor y arquitecto; obtiene el primer Premio Nacional en 1948 por el óleo Hombre del río y el Premio de Honor del Salón Nacional de Artes Plásticas de 1956 por El Tango; ilustra la edición del Martín Fierro publicada por Eudeba en 1962; autor del mural La ofrenda de la nueva tierra de la Sociedad Hebraica Argentina y de los óleos Tierra adentro y Trabajadores de la curtiembre, entre otros.",
+    "letra": "C"
   },
   {
     "nombre_original": "VERSALLES, DE",
@@ -9126,7 +9036,7 @@
     "id": "del tigre|calle",
     "categoria": "ACCIÓN MILITAR",
     "tipo": "calle",
-    "descripcion": "Cabeza del Tigre: lugar próximo a la posta de Cruz Alta, en la provincia de Córdoba, donde son fusilados Santiago de Liniers, el coronel Santiago Allende, el tesorero Victoriano Rodríguez, el contador Joaquín Moreno y el ex gobernador Juan Gutiérrez de la Concha, el 26 de agosto de 1810. Eran los cabecillas de un movimiento opositor a la Primera Junta. Si bien las obras de Carranza señalan que es éste un nombre tradicional, y Udaondo menciona como razón tradicional de este nombre a un delincuente que merodeaba la zona disfrazado con una piel de tigre, creemos que no cabe, en este caso,",
+    "descripcion": "Cabeza del Tigre: lugar próximo a la posta de Cruz Alta, en la provincia de Córdoba, donde son fusilados Santiago de Liniers, el coronel Santiago Allende, el tesorero Victoriano Rodríguez, el contador Joaquín Moreno y el ex gobernador Juan Gutiérrez de la Concha, el 26 de agosto de 1810. Eran los cabecillas de un movimiento opositor a la Primera Junta.",
     "letra": "T"
   },
   {
@@ -9150,10 +9060,10 @@
     "letra": "G"
   },
   {
-    "nombre_original": "CABRERAR, DELFO",
-    "nombre_busqueda": "Delfo Cabrerar",
-    "clave": "delfo cabrerar",
-    "id": "delfo cabrerar|calle",
+    "nombre_original": "CABRERA, DELFO",
+    "nombre_busqueda": "Delfo Cabrera",
+    "clave": "delfo cabrera",
+    "id": "delfo cabrera|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Delfo Cabrera (1919-1981), atleta argentino especializado en pruebas de larga distancia. Su mayor logro lo consiguió en la prueba de maratón, ganando la medalla de oro en los Juegos Olímpicos de Londres 1948. Cuatro años después, fue el abanderado de la delegación argentina en la ceremonia de inauguración de los Juegos Olímpicos de Helsinki 1952. Además, fue campeón panamericano al obtener la medalla de oro en los Juegos Panamericanos de 1951 que se realizaron en Buenos Aires",
@@ -9230,16 +9140,6 @@
     "letra": "D"
   },
   {
-    "nombre_original": "DERICO A. J.",
-    "nombre_busqueda": "Derico A. J.",
-    "clave": "derico a j",
-    "id": "derico a j|jardín",
-    "categoria": "PERSONA",
-    "tipo": "jardín",
-    "descripcion": "Hernán Carlos Pita (?-1990), militar; segundo jefe del Regimiento de Infantería I Patricios. Federico Alberto José Pedernera (?-1990), militar; jefe de operaciones del Regimiento de Infantería I Patricios. Homenaje conjunto a quienes pierden la vida durante los acontecimientos del 3 de diciembre de 1990, al intentar recuperar el Regimiento que había sido copado por un grupo de militares sublevados.",
-    "letra": "P"
-  },
-  {
     "nombre_original": "DERQUI",
     "nombre_busqueda": "Derqui",
     "clave": "derqui",
@@ -9273,9 +9173,9 @@
     "nombre_original": "8 DE MARZO, DÍA INTERNACIONAL DE LA MUJER",
     "nombre_busqueda": "Día Internacional de la Mujer 8 de Marzo",
     "clave": "dia internacional de la mujer 8 de marzo",
-    "id": "dia internacional de la mujer 8 de marzo|espacio verde",
+    "id": "dia internacional de la mujer 8 de marzo|plazoleta",
     "categoria": "FECHA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "8 de Marzo Día Internacional de la Mujer: el Día Internacional de la Mujer es instituido, sin fecha fija, en la Conferencia Internacional de Mujeres Socialistas celebrada en Copenhague en 1910, a propuesta de la socialista alemana Clara Zetkin, quien toma como referencia para ello el antecedente del Día de la Mujer que las socialistas norteamericanas llevaban a cabo desde 1908 para reivindicar el sufragio femenino. En 1917, como reacción ante los millones de\nmuertos en la guerra, las mujeres rusas eligen el domingo 23 de febrero del calendario juliano (8 de marzo en el gregoriano) para declararse en huelga\nen demanda de “pan y paz”, tras lo que, una semana después, se produce la abdicación del zar Nicolás II, en lo que será uno de los hitos del camino que\nculminará en la Revolución Rusa, con lo que la fecha precisa del 8 de marzo adquiere una connotación destacada.",
     "letra": "O"
   },
@@ -9783,9 +9683,9 @@
     "nombre_original": "LICEAGA, DOCTOR FÉLIX",
     "nombre_busqueda": "Doctor Félix Liceaga",
     "clave": "doctor felix liceaga",
-    "id": "doctor felix liceaga|patio de recreación",
+    "id": "doctor felix liceaga|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "patio de recreación",
+    "tipo": "plazoleta",
     "descripcion": "Félix Juan Cruz Liceaga (1887-1963), médico pediatra; preside el Consejo Escolar XI y en 1929 es designado por el presidente Yrigoyen vocal del Consejo Nacional de Educación, del cual es vicepresidente; diputado nacional desde 1946 a 1950.",
     "letra": "L"
   },
@@ -9798,16 +9698,6 @@
     "tipo": "espacio verde",
     "descripcion": "Florencio Escardó (1904-1992); médico pediatra y escritor; titular de la cátedra de Pediatría en 1957; decano de la Facultad de Medicina en 1958 y vicerrector de la UBA. Su labor más importante transcurre en el Hospital de Niños Ricardo Gutiérrez, donde por 45 años ocupa diversos puestos. Concreta allí una reforma trascendental, que es la de internar a las madres con los pacientes. Hasta entonces las madres podían visitar a los hijos internados de día, entre las 17 y las 19, y luego los niños eran alimentados con mamaderas que colgaban de soportes metálicos sobre las cunas. Periodista de los diarios Crítica, Clarín, El Mundo y La Nación, firma sus columnas con los seudónimos de “Piolín de Macramé” y “Juan de Garay”. Escribe numerosos libros de pediatría y además, poemas, ensayos y tangos.",
     "letra": "E"
-  },
-  {
-    "nombre_original": "OCAMPO, DOCTOR GABRIEL",
-    "nombre_busqueda": "Doctor Gabriel Ocampo",
-    "clave": "doctor gabriel ocampo",
-    "id": "doctor gabriel ocampo|espacio público",
-    "categoria": "PERSONA",
-    "tipo": "espacio público",
-    "descripcion": "Gabriel Ocampo (1798-1882), jurisconsulto; ministro de Gobierno de La Rioja en 1820; diputado por Colchagua y secretario del Congreso Constituyente de Chile que sanciona la Constitución de 1823; redactor del Código de Comercio de Chile en 1865.",
-    "letra": "O"
   },
   {
     "nombre_original": "GIACOBINI, DOCTOR GENARO",
@@ -9913,9 +9803,9 @@
     "nombre_original": "ZABALA, DOCTOR JOAQUÍN",
     "nombre_busqueda": "Doctor Joaquín Zabala",
     "clave": "doctor joaquin zabala",
-    "id": "doctor joaquin zabala|patio de recreación",
+    "id": "doctor joaquin zabala|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "patio de recreación",
+    "tipo": "plazoleta",
     "descripcion": "Joaquín Zabala (1872-1919), veterinario y bacteriólogo; primer médico veterinario que integra la Academia Nacional de Agricultura y Veterinaria y el Consejo Superior de la Universidad de Buenos Aires; en 1894 es comisionado, junto con los doctores Carlos Malbrán y Juan N. Murtagh, para aplicar la tuberculina al ganado. Inicia la formación del Museo de Parasitología y de Anatomía Patológica de los Mataderos de Liniers. Describe junto a Otto Voges, por primera vez en nuestro medio, la queratitis infecciosa bovina; socio fundador de la Sociedad de Medicina y Veterinaria, de la que fue su presidente de 1899 a 1900 y de 1904 a 1905.",
     "letra": "Z"
   },
@@ -9970,13 +9860,13 @@
     "letra": "R"
   },
   {
-    "nombre_original": "VELAZCO IBARRA, DOCTOR JOSÉ MARÍA",
-    "nombre_busqueda": "Doctor José María Velazco Ibarra",
-    "clave": "doctor jose maria velazco ibarra",
-    "id": "doctor jose maria velazco ibarra|espacio verde",
+    "nombre_original": "VELASCO IBARRA, DOCTOR JOSÉ MARÍA",
+    "nombre_busqueda": "Doctor José María Velasco Ibarra",
+    "clave": "doctor jose maria velasco ibarra",
+    "id": "doctor jose maria velasco ibarra|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
-    "descripcion": "José María Velazco Ibarra (1893-1979), político y escritor ecuatoriano; presidente de la República del Ecuador de 1934 a 1935, de 1944 a 1947, de 1952 a 1961 y de 1968 a 1972.",
+    "tipo": "plaza",
+    "descripcion": "José María Velasco Ibarra (1893-1979), político y escritor ecuatoriano; presidente de la República del Ecuador de 1934 a 1935, de 1944 a 1947, de 1952 a 1961 y de 1968 a 1972.",
     "letra": "V"
   },
   {
@@ -10053,9 +9943,9 @@
     "nombre_original": "LELOIR, DOCTOR LUIS FEDERICO",
     "nombre_busqueda": "Doctor Luis Federico Leloir",
     "clave": "doctor luis federico leloir",
-    "id": "doctor luis federico leloir|espacio verde",
+    "id": "doctor luis federico leloir|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Luis Federico Leloir (1906-1987), bioquímico de origen francés; se destaca por sus estudios de enzimología y, en particular, sobre las función de las glándulas suprarrenales; director del Instituto de Investigaciones Bioquímicas de la Fundación Campomar y del Departamento de Bioquímica de la Universidad de Buenos Aires; recibe el Premio Nobel de Química en 1970 por su contribución al estudio de la acción de las enzimas.",
     "letra": "L"
   },
@@ -10096,7 +9986,7 @@
     "id": "doctor norberto pinero|plazoleta",
     "categoria": "PERSONA",
     "tipo": "plazoleta",
-    "descripcion": "911. Norberto Piñero (1858-1938), jurisconsulto; promueve la creación de escuelas de educación técnica y crea la Sociedad de Educación Industrial; ministro de Hacienda de 1906 a 1910; funda el Colegio de Abogados de Buenos Aires; autor de Nociones de derecho general, civil y político y La enseñanza técnica.",
+    "descripcion": "Norberto Piñero (1858-1938), jurisconsulto; promueve la creación de escuelas de educación técnica y crea la Sociedad de Educación Industrial; ministro de Hacienda de 1906 a 1910; funda el Colegio de Abogados de Buenos Aires; autor de Nociones de derecho general, civil y político y La enseñanza técnica.",
     "letra": "P"
   },
   {
@@ -10186,16 +10076,6 @@
     "id": "doctor ricardo finochietto|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Ricardo Finochietto (1888-1962), médico cirujano; dirige la Escuela Quirúrgica Municipal para graduados desde 1953; escribe importantes obras dentro de su especialidad; jefe de cirugía del Hospital Rawson.",
-    "letra": "F"
-  },
-  {
-    "nombre_original": "FINOCHIETTO, DOCTOR RICARDO",
-    "nombre_busqueda": "Doctor Ricardo Finochietto",
-    "clave": "doctor ricardo finochietto",
-    "id": "doctor ricardo finochietto|plazoleta",
-    "categoria": "PERSONA",
-    "tipo": "plazoleta",
     "descripcion": "Ricardo Finochietto (1888-1962), médico cirujano; dirige la Escuela Quirúrgica Municipal para graduados desde 1953; escribe importantes obras dentro de su especialidad; jefe de cirugía del Hospital Rawson.",
     "letra": "F"
   },
@@ -10450,16 +10330,6 @@
     "letra": "M"
   },
   {
-    "nombre_original": "DON PEPE",
-    "nombre_busqueda": "Don Pepe",
-    "clave": "don pepe",
-    "id": "don pepe|plaza",
-    "categoria": "PERSONA",
-    "tipo": "plaza",
-    "descripcion": "José Sciarrotta (1905-1998), filántropo; conocido en el barrio de Barracas por “Don Pepe”; colabora en la construcción de esta plaza y se hizo estimado por su noble gesto de entregar juguetes y golosinas a los niños.",
-    "letra": "D"
-  },
-  {
     "nombre_original": "DON SEGUNDO SOMBRA",
     "nombre_busqueda": "Don Segundo Sombra",
     "clave": "don segundo sombra",
@@ -10483,9 +10353,9 @@
     "nombre_original": "GANDULFO, DOÑA PETRONA C. DE",
     "nombre_busqueda": "Doña Petrona C. de Gandulfo",
     "clave": "dona petrona c de gandulfo",
-    "id": "dona petrona c de gandulfo|espacio verde",
+    "id": "dona petrona c de gandulfo|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Petrona Carrizo de Gandulfo (1896-1992), ecónoma; popularmente conocida como “Doña Petrona”, es la primera maestra de la gastronomía argentina; autora de El libro de Doña Petrona, que se convierte en una especie de biblia gastronómica en los países de habla castellana y de Las recetas económicas de Doña Petrona.",
     "letra": "G"
   },
@@ -10563,9 +10433,9 @@
     "nombre_original": "HARDOY, DR. EMILIO J.",
     "nombre_busqueda": "Dr. Emilio J. Hardoy",
     "clave": "dr emilio j hardoy",
-    "id": "dr emilio j hardoy|calle",
+    "id": "dr emilio j hardoy|paseo",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "paseo",
     "descripcion": "Emilio Julio Hardoy (1911-1992), abogado, político y periodista argentino; ocupó los cargos de senador provincial y diputado nacional por la provincia de Buenos Aires.",
     "letra": "H"
   },
@@ -10573,9 +10443,9 @@
     "nombre_original": "BENDER, DR. SAMUEL",
     "nombre_busqueda": "Dr. Samuel Bender",
     "clave": "dr samuel bender",
-    "id": "dr samuel bender|espacio verde",
+    "id": "dr samuel bender|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Samuel Bender (1923-2000), médico, se desempeñó en el servicio de Ginecología y Obstetricia del Hospital Salaverry y en el servicio de Obstetricia del Hospital Santojanni.",
     "letra": "B"
   },
@@ -10613,9 +10483,9 @@
     "nombre_original": "GARDEL-RAZZANO, DÚO",
     "nombre_busqueda": "Dúo Gardel-razzano",
     "clave": "duo gardel razzano",
-    "id": "duo gardel razzano|espacio público",
+    "id": "duo gardel razzano|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plaza",
     "descripcion": "Dúo Gardel-Razzano: dúo formado por Carlos Gardel (1890-1935) y José Francisco Razzano (1887-1960) y que se presenta en 1913 en el célebre Armenonville de la avenida Alvear (Libertador) y Tagle. La primera grabación del dúo Gardel-Razzano se efectúa el 9 de abril de 1917. El dúo perdura hasta 1925, con un amplio repertorio de canciones populares.",
     "letra": "G"
   },
@@ -10700,10 +10570,10 @@
     "letra": "D"
   },
   {
-    "nombre_original": "DE AMICIS, EDMUNDO",
-    "nombre_busqueda": "Edmundo de Amicis",
-    "clave": "edmundo de amicis",
-    "id": "edmundo de amicis|calle",
+    "nombre_original": "D'AMICIS, EDMUNDO",
+    "nombre_busqueda": "Edmundo D'Amicis",
+    "clave": "edmundo d amicis",
+    "id": "edmundo d amicis|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Edmundo De Amicis (1846-1908), escritor italiano; autor de Corazón y Muertos y Vivos.",
@@ -10873,9 +10743,9 @@
     "nombre_original": "ALMA QUE CANTA, EL",
     "nombre_busqueda": "El Alma Que Canta",
     "clave": "el alma que canta",
-    "id": "el alma que canta|plazoleta",
+    "id": "el alma que canta|boulevard",
     "categoria": "ARTE",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "El Alma que Canta: revista fundada en 1916 por Vicente Buchieri dedicada a la música popular; por sus páginas desfilaron las obras de famosos poetas y las canciones de numerosos autores de tango, fox trot, milonga, chacarera y otros ritmos.",
     "letra": "A"
   },
@@ -10904,7 +10774,7 @@
     "nombre_busqueda": "El Cardenal",
     "clave": "el cardenal",
     "id": "el cardenal|calle",
-    "categoria": "CONCEPTO",
+    "categoria": "NATURALEZA",
     "tipo": "calle",
     "descripcion": "Cardenal: nombre vulgar con el que se designa a distintas especies de pájaros.",
     "letra": "C"
@@ -11043,9 +10913,9 @@
     "nombre_original": "LAZO, EL",
     "nombre_busqueda": "El Lazo",
     "clave": "el lazo",
-    "id": "el lazo|calle",
+    "id": "el lazo|sendero peatonal",
     "categoria": "OTROS",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Lazo: uno de los elementos más indispensables del recado del gaucho, cuya utilidad es fundamental en el manejo de las haciendas.",
     "letra": "L"
   },
@@ -11128,16 +10998,6 @@
     "tipo": "calle",
     "descripcion": "El nene: libro de lectura publicado por el profesor Andrés Ferreyra que supera a la Cartilla de Marcos Sastre y con el que aprenden a leer varias generaciones de argentinos.",
     "letra": "N"
-  },
-  {
-    "nombre_original": "PAMPERO, EL",
-    "nombre_busqueda": "El Pampero",
-    "clave": "el pampero",
-    "id": "el pampero|cantero central",
-    "categoria": "OTROS",
-    "tipo": "cantero central",
-    "descripcion": "El Pampero: nombre del globo aerostático en el que desaparecieron, perdidos en el mar durante un vuelo, Eduardo Newbery y Eduardo Romero el 17 de\noctubre de 1908.",
-    "letra": "P"
   },
   {
     "nombre_original": "PAMPERO, EL",
@@ -11233,9 +11093,9 @@
     "nombre_original": "ROSEDAL, EL",
     "nombre_busqueda": "El Rosedal",
     "clave": "el rosedal",
-    "id": "el rosedal|plaza",
+    "id": "el rosedal|parque",
     "categoria": "OTROS",
-    "tipo": "plaza",
+    "tipo": "parque",
     "descripcion": "El Rosedal: nombre popular del Jardín de las Rosas en los lagos de Palermo; es diagramado por el paisajista Benito Carrasco e inaugurado el 2 de noviembre de 1914; allí se encuentran el Patio Andaluz, la Glorieta y el Puente Blanco.",
     "letra": "R"
   },
@@ -11253,9 +11113,9 @@
     "nombre_original": "EL SALVADOR",
     "nombre_busqueda": "El Salvador",
     "clave": "el salvador",
-    "id": "el salvador|plazoleta",
+    "id": "el salvador|parque",
     "categoria": "LUGAR",
-    "tipo": "plazoleta",
+    "tipo": "parque",
     "descripcion": "El Salvador: país centroamericano. Capital: San Salvador.",
     "letra": "E"
   },
@@ -11314,7 +11174,7 @@
     "nombre_busqueda": "El Zonda",
     "clave": "el zonda",
     "id": "el zonda|calle",
-    "categoria": "NATURALEZA",
+    "categoria": "LITERATURA",
     "tipo": "calle",
     "descripcion": "El Zonda: nombre de un viento característico de la provincia de San Juan con cuyo nombre Sarmiento bautizó su periódico fundado en 1839 y cuyo primer número apareció el 20 de julio.",
     "letra": "Z"
@@ -11911,7 +11771,7 @@
   },
   {
     "nombre_original": "GUEVARA, ERNESTO “CHE”",
-    "nombre_busqueda": "Ernesto “che” Guevara",
+    "nombre_busqueda": "Ernesto “Che” Guevara",
     "clave": "ernesto che guevara",
     "id": "ernesto che guevara|cantero central",
     "categoria": "PERSONA",
@@ -12003,9 +11863,9 @@
     "nombre_original": "ESLOVAQUIA",
     "nombre_busqueda": "Eslovaquia",
     "clave": "eslovaquia",
-    "id": "eslovaquia|espacio verde",
+    "id": "eslovaquia|plaza",
     "categoria": "LUGAR",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "República de Eslovaquia: país europeo. Capital: Bratislava.",
     "letra": "E"
   },
@@ -12243,9 +12103,9 @@
     "nombre_original": "BALLESTRINO DE CAREAGA, ESTHER",
     "nombre_busqueda": "Esther Ballestrino de Careaga",
     "clave": "esther ballestrino de careaga",
-    "id": "esther ballestrino de careaga|espacio público",
+    "id": "esther ballestrino de careaga|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Esther Ballestrino de Careaga (1918-1977), bioquímica y farmacéutica paraguaya; radicada en la Argentina desde 1947, es una de las fundadoras de Madres de Plaza de Mayo y participa desde el inicio en las rondas. El 8 de diciembre de 1977 es secuestrada en el operativo realizado en la Iglesia de la Santa Cruz. Sus restos fueron finalmente identificados por el Equipo Argentino de Antropología Forense, luego de haber sido encontrados en el cementerio de General Lavalle, cuando se exhuman siete cuerpos enterrados como NN que habían sido encontrados en las costas de San Bernardo y Santa Teresita entre diciembre de 1977 y enero de 1978. A través de análisis de ADN pudo confirmarse que tres de esos cadáveres eran los de Esther Ballestrino de Careaga, María Ponce de Bianco y Azucena Villaflor de De Vincenti.",
     "letra": "B"
   },
@@ -12383,9 +12243,9 @@
     "nombre_original": "CARRIEGO, EVARISTO",
     "nombre_busqueda": "Evaristo Carriego",
     "clave": "evaristo carriego",
-    "id": "evaristo carriego|plazoleta",
+    "id": "evaristo carriego|boulevard",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "Evaristo Carriego (1883-1912), poeta; autor de Misas herejes, Íntimas y Los que pasan.",
     "letra": "C"
   },
@@ -12673,9 +12533,9 @@
     "nombre_original": "CHERTKOFF, FENIA",
     "nombre_busqueda": "Fenia Chertkoff",
     "clave": "fenia chertkoff",
-    "id": "fenia chertkoff|espacio verde",
+    "id": "fenia chertkoff|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Fenia Chertkoff de Repetto (1869-1928), feminista, educadora y escritora de origen ruso; impulsa el desarrollo de bibliotecas; funda el centro Socialista Femenino para la defensa de los derechos civiles y sociales de las mujeres en 1902 y crea la Asociación de Bibliotecas y recreos infantiles en 1913; esposa del dirigente socialista Nicolás Repetto.",
     "letra": "C"
   },
@@ -13286,7 +13146,7 @@
     "id": "francisco gil|cantero central",
     "categoria": "PERSONA",
     "tipo": "cantero central",
-    "descripcion": "Francisco Gil (1915-1997), librero de origen español. Desarrolla una intensa actividad en la librería El Ateneo y en la Sociedad Argentina de Escritores; promueve en el barrio de Nueva Pompeya peñas culturales, muestras artísticas",
+    "descripcion": "Francisco Gil (1915-1997), librero de origen español. Desarrolla una intensa actividad en la librería El Ateneo y en la Sociedad Argentina de Escritores; promueve en el barrio de Nueva Pompeya peñas culturales y muestras artísticas.",
     "letra": "G"
   },
   {
@@ -13883,21 +13743,11 @@
     "nombre_original": "GENDARMERÍA NACIONAL",
     "nombre_busqueda": "Gendarmería Nacional",
     "clave": "gendarmeria nacional",
-    "id": "gendarmeria nacional|plazoleta",
+    "id": "gendarmeria nacional|boulevard",
     "categoria": "CUERPO MILITAR",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "Gendarmería Nacional: cuerpo policiaco militarizado creado por Ley N° 12.367 promulgada el 28 de julio de 1938, cuyas misiones fundamentales son el velar por el mantenimiento y el resguardo de las fronteras y el mantenimiento del orden y de la seguridad pública.",
     "letra": "G"
-  },
-  {
-    "nombre_original": "JUSTO, GENERAL AGUSTÍN P.",
-    "nombre_busqueda": "General Agustín P. Justo",
-    "clave": "general agustin p justo",
-    "id": "general agustin p justo|espacio verde",
-    "categoria": "PERSONA",
-    "tipo": "espacio verde",
-    "descripcion": "Agustín Pedro Justo (1876-1945), militar y político; presidente de la República de 1932 a 1938.",
-    "letra": "J"
   },
   {
     "nombre_original": "SUCRE, GENERAL ANTONIO JOSÉ DE",
@@ -14033,9 +13883,9 @@
     "nombre_original": "RAMÍREZ, GENERAL FRANCISCO",
     "nombre_busqueda": "General Francisco Ramírez",
     "clave": "general francisco ramirez",
-    "id": "general francisco ramirez|plazoleta",
+    "id": "general francisco ramirez|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "José Francisco Ramírez (1786-1821), militar y político; vencedor en Cepeda; jefe supremo de la República de Entre Ríos desde 1820.",
     "letra": "R"
   },
@@ -14158,16 +14008,6 @@
     "tipo": "cantero central",
     "descripcion": "Juan José Valle (1904-1956), militar; General de División que el 9 de junio de 1956 encabezó el levantamiento militar contra el gobierno de la Revolución Libertadora, presidida por el vicepresidente provisional Isaac Rojas, siendo capturado y fusilado.",
     "letra": "V"
-  },
-  {
-    "nombre_original": "RUIZ MORENO, GENERAL JULIO",
-    "nombre_busqueda": "General Julio Ruiz Moreno",
-    "clave": "general julio ruiz moreno",
-    "id": "general julio ruiz moreno|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Julio Ruiz Moreno (1840-1914), militar; combate en la guerra contra el Paraguay; jefe de la Frontera Sur de San Luis; participa en la Revolución de 1890.",
-    "letra": "R"
   },
   {
     "nombre_original": "LAVALLE, GENERAL",
@@ -14740,16 +14580,6 @@
     "letra": "G"
   },
   {
-    "nombre_original": "GUABIRÁ",
-    "nombre_busqueda": "Guabirá",
-    "clave": "guabira",
-    "id": "guabira|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Guabirá: árbol nativo de Sudamérica conocido por su fruto comestible y alto valor medicinal; sus hojas se usan en infusiones para tratar inflamaciones y problemas respiratorios, mientras que su madera sirve como leña.",
-    "letra": "G"
-  },
-  {
     "nombre_original": "GUACAMAYO",
     "nombre_busqueda": "Guacamayo",
     "clave": "guacamayo",
@@ -14873,9 +14703,9 @@
     "nombre_original": "GUATEMALA",
     "nombre_busqueda": "Guatemala",
     "clave": "guatemala",
-    "id": "guatemala|plaza",
+    "id": "guatemala|plazoleta",
     "categoria": "LUGAR",
-    "tipo": "plaza",
+    "tipo": "plazoleta",
     "descripcion": "Guatemala: república de América Central. Capital: Guatemala.",
     "letra": "G"
   },
@@ -14887,16 +14717,6 @@
     "categoria": "NATURALEZA",
     "tipo": "calle",
     "descripcion": "Guayaba: fruta tropical, considerada un superalimento, proveniente de un árbol nativo de América; destaca por su alto contenido en vitamina C, fibra y antioxidantes; es aromática, de sabor dulce, piel amarillenta/verde y pulpa blanca o rosada con pequeñas semillas.",
-    "letra": "G"
-  },
-  {
-    "nombre_original": "GUAYAIBÍ",
-    "nombre_busqueda": "Guayaibí",
-    "clave": "guayaibi",
-    "id": "guayaibi|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Guayaibí: árbol nativo de América del Sur, muy común en el noreste argentino (Misiones, Corrientes, Chaco, Formosa) y en el Paraguay; conocido por su madera extremadamente resistente y flexible.",
     "letra": "G"
   },
   {
@@ -15003,9 +14823,9 @@
     "nombre_original": "GRANVILLE, GUILLERMO ENRIQUE",
     "nombre_busqueda": "Guillermo Enrique Granville",
     "clave": "guillermo enrique granville",
-    "id": "guillermo enrique granville|calle",
+    "id": "guillermo enrique granville|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Guillermo Enrique Granville (1793-1836), marino de origen inglés; combate durante la guerra contra el Brasil, donde comanda la goleta Guanaco, el bergantín República y la goleta La Argentina.",
     "letra": "G"
   },
@@ -15053,9 +14873,9 @@
     "nombre_original": "BARBIERI, GUILLERMO Y ALFREDO",
     "nombre_busqueda": "Guillermo y Alfredo Barbieri",
     "clave": "guillermo y alfredo barbieri",
-    "id": "guillermo y alfredo barbieri|espacio verde",
+    "id": "guillermo y alfredo barbieri|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Guillermo Desiderio Barbieri (1894-1935), músico, guitarrista de Carlos Gardel, muere en el accidente de avión de Medellín; compositor de Anclao en París, Viejo smoking y Barrio viejo. Alfredo Barbieri (1923-1985), actor de teatro, cine y televisión; se destaca como humorista; integra un recordado dúo con Don Pelele. Como se desprende de sus denominaciones, el cantero central rinde homenaje solamente a Guillermo, en tanto el espacio verde rinde homenaje conjunto a padre e hijo.",
     "letra": "B"
   },
@@ -15083,9 +14903,9 @@
     "nombre_original": "GONZÁLEZ, GUMERSINDO",
     "nombre_busqueda": "Gumersindo González",
     "clave": "gumersindo gonzalez",
-    "id": "gumersindo gonzalez|espacio verde",
+    "id": "gumersindo gonzalez|parque",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "parque",
     "descripcion": "Gumersindo González (1914-1959), deportista y entrenador de atletismo; entre las décadas de 1930 y 1950 prepara a grandes deportistas en esa especialidad, entre ellos a Osvaldo Suárez y Noemí Simonetto.",
     "letra": "G"
   },
@@ -15173,9 +14993,9 @@
     "nombre_original": "CONTI, HAROLDO",
     "nombre_busqueda": "Haroldo Conti",
     "clave": "haroldo conti",
-    "id": "haroldo conti|plazoleta",
+    "id": "haroldo conti|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Haroldo Conti (1925-1976), escritor; autor de Con otra gente, Sudeste y Mascaro; desaparecido el 5 de mayo de 1976 durante la última dictadura militar.",
     "letra": "C"
   },
@@ -15213,9 +15033,9 @@
     "nombre_original": "OESTERHELD, HÉCTOR",
     "nombre_busqueda": "Héctor Oesterheld",
     "clave": "hector oesterheld",
-    "id": "hector oesterheld|espacio verde",
+    "id": "hector oesterheld|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Héctor Germán Oesterheld (1919-1977), escritor de ciencia ficción y guionista; creador de la historieta El Eternauta; guionista de las revistas Rayo Rojo, Cinemisterio y Misterix; entre sus historietas figuran El sargento Kirk, Ermil Pike, La guerra de los Antartes y Bull Rocket; en 1977 es detenido. Está desaparecido.",
     "letra": "O"
   },
@@ -15406,16 +15226,6 @@
     "id": "hipolito yrigoyen|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Hipólito Yrigoyen (1852-1933), estadista; presidente de la República de 1916 a 1922 y de 1928 a 1930; fundador de la Unión Cívica Radical; fue el primer presidente elegido mediante el sistema del sufragio universal (masculino).",
-    "letra": "Y"
-  },
-  {
-    "nombre_original": "YRIGOYEN, HIPÓLITO",
-    "nombre_busqueda": "Hipólito Yrigoyen",
-    "clave": "hipolito yrigoyen",
-    "id": "hipolito yrigoyen|plaza",
-    "categoria": "PERSONA",
-    "tipo": "plaza",
     "descripcion": "Hipólito Yrigoyen (1852-1933), estadista; presidente de la República de 1916 a 1922 y de 1928 a 1930; fundador de la Unión Cívica Radical; fue el primer presidente elegido mediante el sistema del sufragio universal (masculino).",
     "letra": "Y"
   },
@@ -15703,20 +15513,10 @@
     "nombre_original": "HUNGRÍA",
     "nombre_busqueda": "Hungría",
     "clave": "hungria",
-    "id": "hungria|espacio verde",
+    "id": "hungria|plaza",
     "categoria": "LUGAR",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Hungría: país europeo. Capital: Budapest.",
-    "letra": "H"
-  },
-  {
-    "nombre_original": "HURACÁN",
-    "nombre_busqueda": "Huracán",
-    "clave": "huracan",
-    "id": "huracan|cantero central",
-    "categoria": "OTROS",
-    "tipo": "cantero central",
-    "descripcion": "Huracán: nombre del globo aerostático con el cual Jorge Newbery bate el récord sudamericano de duración y distancia, al unir Belgrano con la localidad brasileña de Bagé en Rio Grande do Sul (Brasil) el 27 de diciembre de 1909.",
     "letra": "H"
   },
   {
@@ -15930,16 +15730,6 @@
     "letra": "V"
   },
   {
-    "nombre_original": "BUNGE, INGENIERO ARQUITECTO JORGE",
-    "nombre_busqueda": "Ingeniero Arquitecto Jorge Bunge",
-    "clave": "ingeniero arquitecto jorge bunge",
-    "id": "ingeniero arquitecto jorge bunge|cantero central",
-    "categoria": "PERSONA",
-    "tipo": "cantero central",
-    "descripcion": "Jorge Bunge (1893-1962), ingeniero y arquitecto; realizó varias obras entre ellas el Edificio del Banco Francés del Río de la Plata y el Museo Nacional de Bellas Artes; proyectista, creador y fundador de la ciudad balnearia de Pinamar (1940).",
-    "letra": "B"
-  },
-  {
     "nombre_original": "ECHAGÜE, INGENIERO CARLOS",
     "nombre_busqueda": "Ingeniero Carlos Echagüe",
     "clave": "ingeniero carlos echague",
@@ -15953,9 +15743,9 @@
     "nombre_original": "DELLA PAOLERA, INGENIERO CARLOS MARÍA",
     "nombre_busqueda": "Ingeniero Carlos María Della Paolera",
     "clave": "ingeniero carlos maria della paolera",
-    "id": "ingeniero carlos maria della paolera|plazoleta",
+    "id": "ingeniero carlos maria della paolera|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Carlos María Della Paolera (1890-1960), ingeniero y urbanista; creador del Día Mundial del Urbanismo, primer director de la Dirección de Urbanismo de la Municipalidad de la Ciudad de Buenos Aires en 1932; promotor del proyecto de la Avenida 9 de Julio.",
     "letra": "D"
   },
@@ -16080,16 +15870,6 @@
     "letra": "K"
   },
   {
-    "nombre_original": "INGLATERRA",
-    "nombre_busqueda": "Inglaterra",
-    "clave": "inglaterra",
-    "id": "inglaterra|calle",
-    "categoria": "LUGAR",
-    "tipo": "calle",
-    "descripcion": "Inglaterra: país situado en la isla de Gran Bretaña y con cuyo nombre se identifica popularmente a todo el Reino Unido. Capital: Londres.",
-    "letra": "I"
-  },
-  {
     "nombre_original": "ARMENIA, INMIGRANTES DE",
     "nombre_busqueda": "Inmigrantes de Armenia",
     "clave": "inmigrantes de armenia",
@@ -16123,9 +15903,9 @@
     "nombre_original": "CANTILO, INTENDENTE",
     "nombre_busqueda": "Intendente Cantilo",
     "clave": "intendente cantilo",
-    "id": "intendente cantilo|avenida",
+    "id": "intendente cantilo|autopista",
     "categoria": "PERSONA",
-    "tipo": "avenida",
+    "tipo": "autopista",
     "descripcion": "José Luis Cantilo (1871-1944), profesor, periodista y político radical; intendente municipal de Buenos Aires desde el 4 de diciembre de 1919 hasta el 25 de octubre de 1921 y del 14 de noviembre de 1928 al 6 de septiembre de 1930; gobernador de Buenos Aires de 1922 a 1926.",
     "letra": "C"
   },
@@ -16158,16 +15938,6 @@
     "tipo": "avenida",
     "descripcion": "Francisco Rabanal (1906-1982), político; intendente de Buenos Aires de 1963 a 1966.",
     "letra": "R"
-  },
-  {
-    "nombre_original": "GUERRICO, INTENDENTE",
-    "nombre_busqueda": "Intendente Guerrico",
-    "clave": "intendente guerrico",
-    "id": "intendente guerrico|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "José Guerrico (1863-1933), comerciante y funcionario; intendente municipal de Buenos Aires del 8 de septiembre de 1930 al 20 de febrero de 1932.",
-    "letra": "G"
   },
   {
     "nombre_original": "GÜIRALDES, INTENDENTE",
@@ -16216,16 +15986,6 @@
     "id": "intendente seeber|plaza",
     "categoria": "PERSONA",
     "tipo": "plaza",
-    "descripcion": "Francisco Seeber (1841-1913), comerciante, militar y funcionario; combate en la guerra contra el Paraguay; presidente del Ferrocarril del Oeste; intendente municipal de Buenos Aires desde el 10 de mayo de 1889 hasta el 4 de junio de 1890.",
-    "letra": "S"
-  },
-  {
-    "nombre_original": "SEEBER, INTENDENTE",
-    "nombre_busqueda": "Intendente Seeber",
-    "clave": "intendente seeber",
-    "id": "intendente seeber|túnel",
-    "categoria": "PERSONA",
-    "tipo": "túnel",
     "descripcion": "Francisco Seeber (1841-1913), comerciante, militar y funcionario; combate en la guerra contra el Paraguay; presidente del Ferrocarril del Oeste; intendente municipal de Buenos Aires desde el 10 de mayo de 1889 hasta el 4 de junio de 1890.",
     "letra": "S"
   },
@@ -16440,16 +16200,6 @@
     "letra": "C"
   },
   {
-    "nombre_original": "ISRAEÑ",
-    "nombre_busqueda": "Israeñ",
-    "clave": "israen",
-    "id": "israen|plaza",
-    "categoria": "LUGAR",
-    "tipo": "plaza",
-    "descripcion": "Israel: país asiático. Capital: Jerusalén.",
-    "letra": "I"
-  },
-  {
     "nombre_original": "ITALIA",
     "nombre_busqueda": "Italia",
     "clave": "italia",
@@ -16583,9 +16333,9 @@
     "nombre_original": "YANKELEVICH, JAIME",
     "nombre_busqueda": "Jaime Yankelevich",
     "clave": "jaime yankelevich",
-    "id": "jaime yankelevich|espacio verde",
+    "id": "jaime yankelevich|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Jaime Yankelevich (1894-1952), empresario radial y televisivo de origen búlgaro; pionero de la radiofonía local; creador, fundador y director de Radio Belgrano en 1927; director de Radio Cultura, Mitre y Porteña; crea la Asociación de Radiodifusoras Argentinas; en 1951 deja constituida para Radio Belgrano la primera estación de televisión de Buenos Aires, cuya primera imagen, el rostro de Eva Perón, se emite el 17 de octubre de ese año.",
     "letra": "Y"
   },
@@ -16783,9 +16533,9 @@
     "nombre_original": "CASAL, JORGE",
     "nombre_busqueda": "Jorge Casal",
     "clave": "jorge casal",
-    "id": "jorge casal|plazoleta",
+    "id": "jorge casal|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Salvador Carmelo Pappalardo, conocido popularmente como Jorge Casal (1924-1996), cantante y actor de tango argentino de larga trayectoria artística.",
     "letra": "C"
   },
@@ -16813,9 +16563,9 @@
     "nombre_original": "DI PASCUALE, JORGE",
     "nombre_busqueda": "Jorge Di Pascuale",
     "clave": "jorge di pascuale",
-    "id": "jorge di pascuale|espacio verde",
+    "id": "jorge di pascuale|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Jorge Di Pascuale (1931-1976), dirigente gremial peronista; secretario general del Sindicato de Farmacia desde 1957 y secretario adjunto de la CGT. Por su militancia sufre persecución y exilio; es secuestrado el 29 de diciembre de 1976. Está desaparecido.",
     "letra": "D"
   },
@@ -16833,9 +16583,9 @@
     "nombre_original": "BORGES, JORGE LUIS",
     "nombre_busqueda": "Jorge Luis Borges",
     "clave": "jorge luis borges",
-    "id": "jorge luis borges|espacio verde",
+    "id": "jorge luis borges|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Jorge Luis Borges (1899-1986), escritor y poeta; autor de Fervor de Buenos Aires, La luna de enfrente, Historia universal de la infamia y El Aleph.",
     "letra": "B"
   },
@@ -17403,9 +17153,9 @@
     "nombre_original": "MARPONS, JOSEFINA",
     "nombre_busqueda": "Josefina Marpons",
     "clave": "josefina marpons",
-    "id": "josefina marpons|espacio verde",
+    "id": "josefina marpons|boulevard",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "boulevard",
     "descripcion": "Josefina Marpons (1910-1979), escritora, periodista, política y activista argentina; dedicó buena parte de su obra al estudio del rol de la mujer en el ámbito laboral.",
     "letra": "M"
   },
@@ -17447,16 +17197,6 @@
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Juan Agustín García (1862-1923), jurisconsulto y escritor; autor de La ciudad indiana.",
-    "letra": "G"
-  },
-  {
-    "nombre_original": "GARCÍA, JUAN AGUSTÍN",
-    "nombre_busqueda": "Juan Agustín García",
-    "clave": "juan agustin garcia",
-    "id": "juan agustin garcia|plaza",
-    "categoria": "PERSONA",
-    "tipo": "plaza",
-    "descripcion": "Juan Agustín García (1831-1907), jurisconsulto, padre del autor de La Ciudad Indiana; director del Banco Nacional en 1885 y poco después primer director del Banco Hipotecario Nacional.",
     "letra": "G"
   },
   {
@@ -17538,16 +17278,6 @@
     "tipo": "calle",
     "descripcion": "Juan Bautista Prímoli (1673-1747), arquitecto y religioso jesuita; proyecta y dirige la construcción del Cabildo de Buenos Aires en 1719; con el jesuita\nAndrés Blanqui construye las iglesias de San Francisco, San Telmo, del Pilar y la Merced.",
     "letra": "P"
-  },
-  {
-    "nombre_original": "CASTAGNINO, JUAN CARLOS",
-    "nombre_busqueda": "Juan Carlos Castagnino",
-    "clave": "juan carlos castagnino",
-    "id": "juan carlos castagnino|espacio verde",
-    "categoria": "PERSONA",
-    "tipo": "espacio verde",
-    "descripcion": "Juan Carlos Castagnino (1908-1972), pintor y arquitecto; obtiene el primer Premio Nacional en 1948 por el óleo Hombre del río y el Premio de Honor del Salón Nacional de Artes Plásticas de 1956 por El Tango; ilustra la edición del Martín Fierro publicada por Eudeba en 1962; autor del mural La ofrenda de la nueva tierra de la Sociedad Hebraica Argentina y de los óleos Tierra adentro y Trabajadores de la curtiembre, entre otros.",
-    "letra": "C"
   },
   {
     "nombre_original": "COBIÁN, JUAN CARLOS",
@@ -17831,7 +17561,7 @@
   },
   {
     "nombre_original": "JUAN PABLO II",
-    "nombre_busqueda": "Juan Pablo Ii",
+    "nombre_busqueda": "Juan Pablo II",
     "clave": "juan pablo ii",
     "id": "juan pablo ii|calle",
     "categoria": "PERSONA",
@@ -17873,9 +17603,9 @@
     "nombre_original": "TRONCONI, JUAN",
     "nombre_busqueda": "Juan Tronconi",
     "clave": "juan tronconi",
-    "id": "juan tronconi|espacio público",
+    "id": "juan tronconi|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Juan Tronconi (1841-?) empresario italiano y uno de los precursores del ramo de los chacinados; se establece en el barrio de Nueva Pompeya en el año de 1877; funda la empresa Tronconi-Gaudencio. Su familia dona al municipio este espacio público, con la finalidad de que el mismo lleve su nombre en homenaje a su memoria y a sus aportes para el desarrollo del barrio.",
     "letra": "T"
   },
@@ -17891,7 +17621,7 @@
   },
   {
     "nombre_original": "JUAN XXIII",
-    "nombre_busqueda": "Juan Xxiii",
+    "nombre_busqueda": "Juan XXIII",
     "clave": "juan xxiii",
     "id": "juan xxiii|plazoleta",
     "categoria": "PERSONA",
@@ -18253,9 +17983,9 @@
     "nombre_original": "JUVENILIA",
     "nombre_busqueda": "Juvenilia",
     "clave": "juvenilia",
-    "id": "juvenilia|plazoleta",
+    "id": "juvenilia|veredón",
     "categoria": "ARTE",
-    "tipo": "plazoleta",
+    "tipo": "veredón",
     "descripcion": "Juvenilia: libro de Miguel Cané publicado en 1884 donde relata los recuerdos de su vida escolar. Notas",
     "letra": "J"
   },
@@ -18450,16 +18180,6 @@
     "letra": "G"
   },
   {
-    "nombre_original": "GARZA, LA",
-    "nombre_busqueda": "La Garza",
-    "clave": "la garza",
-    "id": "la garza|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Garza: nombre de varias aves ciconiformes de la familia de las Ardeidas que habitan en esteros y bañados.",
-    "letra": "G"
-  },
-  {
     "nombre_original": "GLORIA, LA",
     "nombre_busqueda": "La Gloria",
     "clave": "la gloria",
@@ -18523,9 +18243,9 @@
     "nombre_original": "PATERNAL, LA ISLA DE LA",
     "nombre_busqueda": "La Isla de la Paternal",
     "clave": "la isla de la paternal",
-    "id": "la isla de la paternal|espacio verde",
+    "id": "la isla de la paternal|parque",
     "categoria": "LUGAR",
-    "tipo": "espacio verde",
+    "tipo": "parque",
     "descripcion": "La Isla de la Paternal: se denomina así por encontrarse en el barrio del mismo nombre y por las características aisladas de este lugar, donde se encontraba el llamado Albergue Warnes.",
     "letra": "P"
   },
@@ -19060,10 +18780,10 @@
     "letra": "L"
   },
   {
-    "nombre_original": "LATINOAMÉRICA",
-    "nombre_busqueda": "Latinoamérica",
-    "clave": "latinoamerica",
-    "id": "latinoamerica|plazoleta",
+    "nombre_original": "LATINOAMERICANA",
+    "nombre_busqueda": "Latinoamericana",
+    "clave": "latinoamericana",
+    "id": "latinoamericana|plazoleta",
     "categoria": "CONCEPTO",
     "tipo": "plazoleta",
     "descripcion": "Latinoamérica: homenaje a las naciones de América cuya colonización fue realizada por países latinos, especialmente España y Portugal.",
@@ -19453,9 +19173,9 @@
     "nombre_original": "CAMPELO, LICENCIADO CARLOS",
     "nombre_busqueda": "Licenciado Carlos Campelo",
     "clave": "licenciado carlos campelo",
-    "id": "licenciado carlos campelo|espacio verde",
+    "id": "licenciado carlos campelo|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Carlos Campelo (1942-1997) psicólogo; pionero en la promoción de experiencias comunitarias de salud mental; creador del Programa de Salud Mental Barrial del Hospital Pirovano.",
     "letra": "C"
   },
@@ -19750,16 +19470,6 @@
     "letra": "O"
   },
   {
-    "nombre_original": "OLMOS, LOS",
-    "nombre_busqueda": "Los Olmos",
-    "clave": "los olmos",
-    "id": "los olmos|plaza",
-    "categoria": "NATURALEZA",
-    "tipo": "plaza",
-    "descripcion": "Olmo: árbol caducifolio de gran porte, caracterizado por su copa amplia y frondosa, corteza agrietada y hojas asimétricas con bordes aserrados. Es valorado por su madera resistente, uso ornamental y sombra. Pueblan este espacio verde.",
-    "letra": "O"
-  },
-  {
     "nombre_original": "PATOS, LOS",
     "nombre_busqueda": "Los Patos",
     "clave": "los patos",
@@ -19873,9 +19583,9 @@
     "nombre_original": "YACONIS, LUCILA",
     "nombre_busqueda": "Lucila Yaconis",
     "clave": "lucila yaconis",
-    "id": "lucila yaconis|espacio verde",
+    "id": "lucila yaconis|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Lucila Yaconis (1987-2003), adolescente que el 21 de abril de 2003, mientras regresaba de la casa de su abuela, fue interceptada por un hombre que intentó violarla en las inmediaciones de las vías del tren Mitre; Lucila se resistió con todas sus fuerzas para evitar el abuso pero el atacante la asfixió durante el forcejeo y falleció.",
     "letra": "Y"
   },
@@ -20023,9 +19733,9 @@
     "nombre_original": "PERLOTTI, LUIS",
     "nombre_busqueda": "Luis Perlotti",
     "clave": "luis perlotti",
-    "id": "luis perlotti|espacio verde",
+    "id": "luis perlotti|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Luis Perlotti (1890-1969), escultor y docente de origen uruguayo; trabaja diversos materiales como madera, cerámica, yeso, bronce, mármol. Entre su vasta obra figuran las tituladas El tambor de Tacuarí, Monumento a los Libres del Sur, La tejedoras, Alfonsina Storni. En su casa-taller funciona el museo de esculturas que lleva su nombre.",
     "letra": "P"
   },
@@ -20073,9 +19783,9 @@
     "nombre_original": "LUNA DE ENFRENTE",
     "nombre_busqueda": "Luna de Enfrente",
     "clave": "luna de enfrente",
-    "id": "luna de enfrente|espacio verde",
+    "id": "luna de enfrente|plazoleta",
     "categoria": "ARTE",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Luna de Enfrente: libro de Jorge Luis Borges, publicado en 1925.",
     "letra": "L"
   },
@@ -20173,9 +19883,9 @@
     "nombre_original": "TERESA DE CALCUTA, MADRE",
     "nombre_busqueda": "Madre Teresa de Calcuta",
     "clave": "madre teresa de calcuta",
-    "id": "madre teresa de calcuta|espacio verde",
+    "id": "madre teresa de calcuta|parque",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "parque",
     "descripcion": "Agnes Gonxha Bajaxhiu (1910-1997), religiosa albanesa; inicia su noviciado en el año 1928 al ingresar a la Orden de las Hermanas de Loreto en la ciudad de Dublín y recibe el nombre de Teresa por el de Santa Teresa de Lisleux. En 1929 llega a la India donde enseña geografía en la escuela de un convento en Calcuta; en 1936 hace votos de pobreza, castidad y obediencia; en 1949 funda la Orden Religiosa de las Misioneras de la Caridad; en 1979 recibe el Premio Nobel de la Paz por su trabajo con los desamparados y moribundos del mundo.",
     "letra": "T"
   },
@@ -20447,16 +20157,6 @@
     "categoria": "PERSONA",
     "tipo": "calle",
     "descripcion": "Manuel Eguía (?-1880), agrimensor; miembro del Departamento Topográfico en 1852; efectúa observaciones meteorológicas en Buenos Aires desde 1856 hasta 1875; profesor de la Facultad de Ciencias Físico-Matemáticas en 1874.",
-    "letra": "E"
-  },
-  {
-    "nombre_original": "ESTÉVEZ, MANUEL",
-    "nombre_busqueda": "Manuel Estévez",
-    "clave": "manuel estevez",
-    "id": "manuel estevez|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Manuel Estévez (1824-1893), político de origen español; juez de Paz (1858, 1859 y 1880); presidente de la Comisión Municipal de Higiene (1867) de Barracas al Sur (hoy Avellaneda); intendente de Barracas al Sur (1889).",
     "letra": "E"
   },
   {
@@ -20753,9 +20453,9 @@
     "nombre_original": "PAZ Y FIGUEROA, MARÍA ANTONIA",
     "nombre_busqueda": "María Antonia Paz y Figueroa",
     "clave": "maria antonia paz y figueroa",
-    "id": "maria antonia paz y figueroa|espacio verde",
+    "id": "maria antonia paz y figueroa|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "María Antonia de la Paz y Figueroa (1730-1799), religiosa; beata fundadora de la Santa Casa de Ejercicios de Buenos Aires en 1793.",
     "letra": "P"
   },
@@ -20803,9 +20503,9 @@
     "nombre_original": "MIGUEL, MARÍA ESTHER DE",
     "nombre_busqueda": "María Esther de Miguel",
     "clave": "maria esther de miguel",
-    "id": "maria esther de miguel|plazoleta",
+    "id": "maria esther de miguel|boulevard",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "boulevard",
     "descripcion": "María Esther de Miguel (1925-2003), escritora argentina.",
     "letra": "M"
   },
@@ -20813,9 +20513,9 @@
     "nombre_original": "BEMBERG, MARÍA LUISA",
     "nombre_busqueda": "María Luisa Bemberg",
     "clave": "maria luisa bemberg",
-    "id": "maria luisa bemberg|calle",
+    "id": "maria luisa bemberg|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "María Luisa Bemberg Bengolea (1922-1995), directora de cine y guionista que se destacó como creadora de películas con temáticas referidas a la emancipación y reivindicación de la mujer. Su película Camila fue elegida para competir por el premio Óscar como mejor película extranjera, una de las siete películas que accedieron a una candidatura en la historia del cine argentino. Tenaz activista del feminismo y una de las fundadoras de la Unión Feminista Argentina, lo que la llevó a realizar un arte vinculado a la problemática de la mujer.",
     "letra": "B"
   },
@@ -20868,16 +20568,6 @@
     "tipo": "calle",
     "descripcion": "María Remedios del Valle (?-1847), sargento mayor del Ejército; heroína de la Independencia, de raza negra, asiste a los combates de Tucumán, Salta, Vilcapugio y Ayohuma, donde cae prisionera.",
     "letra": "V"
-  },
-  {
-    "nombre_original": "ROBOTTI DE BULZANI, MARÍA",
-    "nombre_busqueda": "María Robotti de Bulzani",
-    "clave": "maria robotti de bulzani",
-    "id": "maria robotti de bulzani|canteros centrales",
-    "categoria": "PERSONA",
-    "tipo": "canteros centrales",
-    "descripcion": "María Robotti (¿?), inmigrante italiana; militante y figura central del \"Grito de Alcorta\" de 1912, la histórica rebelión de los chacareros (pequeños arrendatarios) en la provincia de Santa Fe, que dio origen a la Federación Agraria Argentina.",
-    "letra": "R"
   },
   {
     "nombre_original": "RUANOVA, MARÍA",
@@ -20970,16 +20660,6 @@
     "letra": "S"
   },
   {
-    "nombre_original": "LANGER, MARIE",
-    "nombre_busqueda": "Marie Langer",
-    "clave": "marie langer",
-    "id": "marie langer|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Marie Lisbeth Glas Hausser de Langer (1910-1987), médica psicoanalista austriaca; es una de las fundadoras de la Asociación Psicoanalítica Argentina en 1942 y de la Asociación Argentina de Psicología y Psicoterapia de Grupo en 1957, a las que preside en reiteradas ocasiones; preside también la Federación Argentina de Psiquiatras; es profesora de la Cátedra de Psicología Médica de la Facultad de Medicina; autora de Maternidad y Sexo, Fantasías eternas a la luz del psicoanálisis, Memoria, historia y diálogo psicoanalítico y Aspectos teóricos y clínicos.",
-    "letra": "L"
-  },
-  {
     "nombre_original": "BERNASCONI, MARIO",
     "nombre_busqueda": "Mario Bernasconi",
     "clave": "mario bernasconi",
@@ -21003,9 +20683,9 @@
     "nombre_original": "LELLIS, MARIO JORGE DE",
     "nombre_busqueda": "Mario Jorge de Lellis",
     "clave": "mario jorge de lellis",
-    "id": "mario jorge de lellis|espacio público",
+    "id": "mario jorge de lellis|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Mario Jorge de Lellis (1922-1967), poeta; escribe varios libros de poemas; entre sus obras figuran Flores del silencio, Litoral de la angustia y Ciudad sin tregua.",
     "letra": "L"
   },
@@ -21296,7 +20976,7 @@
     "id": "mary teran de weiss|cantero central",
     "categoria": "PERSONA",
     "tipo": "cantero central",
-    "descripcion": "María Luisa Terán de Weiss (1934-1984), tenista; gana los campeonatos internacionales en singles y dobles de Uruguay, Brasil, Dinamarca, Suiza, Bélgica, Yugoslavia, Austria, Francia, España, Filipinas, Grecia, Turquía, Israel, Líbano, Pakistán, India, Egipto, Italia, Portugal y Nicosia.",
+    "descripcion": "María Luisa Beatriz Terán (1918-1984), conocida como Mary Terán de Weiss, tenista argentina, la primera de esta nacionalidad en alcanzar los primeros planos del tenis mundial.",
     "letra": "T"
   },
   {
@@ -21460,16 +21140,6 @@
     "letra": "M"
   },
   {
-    "nombre_original": "ATENZO, MECÁNICO MILITAR LEOPOLDO",
-    "nombre_busqueda": "Mecánico Militar Leopoldo Atenzo",
-    "clave": "mecanico militar leopoldo atenzo",
-    "id": "mecanico militar leopoldo atenzo|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Leopoldo Atenzo (1896-1930), mecánico militar; falleció en un accidente de aviación durante la revolución del 6 de septiembre de 1930.",
-    "letra": "A"
-  },
-  {
     "nombre_original": "MÉDANOS",
     "nombre_busqueda": "Médanos",
     "clave": "medanos",
@@ -21576,7 +21246,7 @@
     "id": "mendez|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Juan Antonio Méndez (¿-?), coronel; combate durante la guerra contra el Brasil, en Navarro, Don Cristóbal, Sauce Grande y Quebracho Herrado.8",
+    "descripcion": "Juan Antonio Méndez (¿-?), coronel; combate durante la guerra contra el Brasil, en Navarro, Don Cristóbal, Sauce Grande y Quebracho Herrado.",
     "letra": "M"
   },
   {
@@ -22596,7 +22266,7 @@
     "id": "necochea|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Ingeniero A. Aymes en 1866. Mariano Necochea (1792-1849), general; combate en San Lorenzo, del Tejar, Venta y Media, Sipe-Sipe, Chacabuco, Talcahuano, Cancha Rayada y Maipú; gobernador de Lima en 1824; combate en Junín; director de la Casa de Moneda del Perú en tres oportunidades.",
+    "descripcion": "Mariano Necochea (1792-1849), general; combate en San Lorenzo, del Tejar, Venta y Media, Sipe-Sipe, Chacabuco, Talcahuano, Cancha Rayada y Maipú; gobernador de Lima en 1824; combate en Junín; director de la Casa de Moneda del Perú en tres oportunidades.",
     "letra": "N"
   },
   {
@@ -22613,9 +22283,9 @@
     "nombre_original": "NISTAL, NELLY",
     "nombre_busqueda": "Nelly Nistal",
     "clave": "nelly nistal",
-    "id": "nelly nistal|calle",
+    "id": "nelly nistal|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "plazoleta",
     "descripcion": "Nelly Nistal (?-2017), referente y fundadora de la Mesa de Gestión y Planeamiento de la Villa 20. Pelea por la urbanización y organiza a los vecinos para exigir servicios básicos (luz, agua, cloacas) y, sobre todo, el derecho a la propiedad de sus viviendas.",
     "letra": "N"
   },
@@ -22746,7 +22416,7 @@
     "id": "nicolas granada|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "625. Nicolás Granada (1840-1915), escritor y periodista; fundador de la revista literario-musical La Lira en 1860; escribe en diarios de nuestro país y del Uruguay; autor de Atahualpa y ¡Al campo!",
+    "descripcion": "Nicolás Granada (1840-1915), escritor y periodista; fundador de la revista literario-musical La Lira en 1860; escribe en diarios de nuestro país y del Uruguay; autor de Atahualpa y ¡Al campo!",
     "letra": "G"
   },
   {
@@ -22840,16 +22510,6 @@
     "letra": "M"
   },
   {
-    "nombre_original": "COLOMBATTO, NORMA",
-    "nombre_busqueda": "Norma Colombatto",
-    "clave": "norma colombatto",
-    "id": "norma colombatto|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Norma Colombatto (1941–2008), docente y referente social del sur de la Ciudad de Buenos Aires, cuya figura es fundamental para entender la educación en contextos de vulnerabilidad.",
-    "letra": "C"
-  },
-  {
     "nombre_original": "FONTENLA, NORMA",
     "nombre_busqueda": "Norma Fontenla",
     "clave": "norma fontenla",
@@ -22898,16 +22558,6 @@
     "tipo": "plazoleta",
     "descripcion": "Nuestra Señora de Luján: advocación de la Virgen María, declarada Patrona de la República Argentina, Paraguay y Uruguay en 1887, y cuya catedral, ubicada en la provincia de Buenos Aires, es uno de los más importantes centros de peregrinación de la República.",
     "letra": "L"
-  },
-  {
-    "nombre_original": "ROSARIO, NUESTRA SEÑORA DEL",
-    "nombre_busqueda": "Nuestra Señora del Rosario",
-    "clave": "nuestra senora del rosario",
-    "id": "nuestra senora del rosario|espacio público",
-    "categoria": "RELIGIÓN",
-    "tipo": "espacio público",
-    "descripcion": "Nuestra Señora del Rosario: Advocación de la Virgen del Rosario cuya festividad instituyó el papa Pío V, en agradecimiento por la victoria de Lepanto ocurrida el 7 de octubre de 1571.",
-    "letra": "R"
   },
   {
     "nombre_original": "POMPEYA, NUEVA",
@@ -23013,9 +22663,9 @@
     "nombre_original": "ANGELELLI, OBISPO ENRIQUE",
     "nombre_busqueda": "Obispo Enrique Angelelli",
     "clave": "obispo enrique angelelli",
-    "id": "obispo enrique angelelli|plazoleta",
+    "id": "obispo enrique angelelli|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "Enrique Ángel Angelelli (1923-1976), sacerdote; obispo de Listra y de La Rioja; ejemplo de pastor y hombre comprometido con su gente; murió en un confuso accidente.",
     "letra": "A"
   },
@@ -23240,16 +22890,6 @@
     "letra": "O"
   },
   {
-    "nombre_original": "ORQUÍDEAS",
-    "nombre_busqueda": "Orquídeas",
-    "clave": "orquideas",
-    "id": "orquideas|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Orquídeas: plantas monocotiledóneas, distinguidas por la complejidad de sus flores y por sus interacciones ecológicas con los agentes polinizadores y con los hongos; con flor abundante, destacando por su uso ornamental, símbolo de elegancia y, en tiempos históricos, medicinal.",
-    "letra": "O"
-  },
-  {
     "nombre_original": "ORTEGA",
     "nombre_busqueda": "Ortega",
     "clave": "ortega",
@@ -23363,9 +23003,9 @@
     "nombre_original": "FRESEDO, OSVALDO",
     "nombre_busqueda": "Osvaldo Fresedo",
     "clave": "osvaldo fresedo",
-    "id": "osvaldo fresedo|espacio verde",
+    "id": "osvaldo fresedo|boulevard",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "boulevard",
     "descripcion": "Osvaldo Fresedo (1897-1984), músico y compositor; conocido como “el Pibe de la Paternal”, se destaca como bandoneonísta. Forma su primer conjunto en 1918 con José María Rizzuti (piano), Julio de Caro y Rafael Rinaldi (violines); participa en 1933 en los filmes Tango y Los tres berretines. Graba con el trompetista Dizzy Gillespie el Preludio Nº 3. Entre sus composiciones se destacan: Vida Mía, El once, Siempre es carnaval, Si de mi te has olvidado, entre otros.",
     "letra": "F"
   },
@@ -23563,9 +23203,9 @@
     "nombre_original": "CAÑADA, PADRE GASPAR",
     "nombre_busqueda": "Padre Gaspar Cañada",
     "clave": "padre gaspar canada",
-    "id": "padre gaspar canada|plazoleta",
+    "id": "padre gaspar canada|cantero central",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "cantero central",
     "descripcion": "Gaspar Cañada (1892-1965), sacerdote; párroco de Santa Inés desde 1932, capellán del Hospital Alvear; procurador y vicario general de la Orden de los Camilos en Roma; autor de Vida popular de San Camilo de Lelis.",
     "letra": "C"
   },
@@ -23580,12 +23220,12 @@
     "letra": "N"
   },
   {
-    "nombre_original": "MASSA, PADRE LORENZO",
-    "nombre_busqueda": "Padre Lorenzo Massa",
-    "clave": "padre lorenzo massa",
-    "id": "padre lorenzo massa|canteros centrales",
+    "nombre_original": "MASSA, PADRE LORENZO BARTOLOMÉ",
+    "nombre_busqueda": "Padre Lorenzo Bartolomé Massa",
+    "clave": "padre lorenzo bartolome massa",
+    "id": "padre lorenzo bartolome massa|calle",
     "categoria": "PERSONA",
-    "tipo": "canteros centrales",
+    "tipo": "calle",
     "descripcion": "Lorenzo Massa (1882-1949), sacerdote salesiano de vasta labor en la Patagonia, donde estudia el origen y las necesidades de los aborígenes; su dedicación a la elevación moral y física de la juventud lo lleva, desde su capilla San Antonio, a la fundación del Club San Lorenzo el 1º de abril de 1908.",
     "letra": "M"
   },
@@ -23593,9 +23233,9 @@
     "nombre_original": "CHAMPAGNAT, PADRE MARCELINO",
     "nombre_busqueda": "Padre Marcelino Champagnat",
     "clave": "padre marcelino champagnat",
-    "id": "padre marcelino champagnat|plazoleta",
+    "id": "padre marcelino champagnat|plaza",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "plaza",
     "descripcion": "José Benito Marcelino Champagnat (1789-1840), sacerdote y beato francés; fundador del Instituto de los Hermanos Maristas de la Enseñanza, en 1817.",
     "letra": "C"
   },
@@ -23670,20 +23310,10 @@
     "letra": "P"
   },
   {
-    "nombre_original": "PALERMO VIEJO",
-    "nombre_busqueda": "Palermo Viejo",
-    "clave": "palermo viejo",
-    "id": "palermo viejo|plaza",
-    "categoria": "LUGAR",
-    "tipo": "plaza",
-    "descripcion": "Palermo Viejo: nombre con que se conoce actualmente al sector del barrio de Palermo limitado por la avenida Córdoba, Godoy Cruz, Charcas y Julián Álvarez; característico por sus actividades comerciales y culturales.",
-    "letra": "P"
-  },
-  {
-    "nombre_original": "PALESTINA",
-    "nombre_busqueda": "Palestina",
-    "clave": "palestina",
-    "id": "palestina|calle",
+    "nombre_original": "ESTADO DE PALESTINA",
+    "nombre_busqueda": "Estado de Palestina",
+    "clave": "estado de palestina",
+    "id": "estado de palestina|calle",
     "categoria": "LUGAR",
     "tipo": "calle",
     "descripcion": "Palestina: país de Asia, en el extremo Oriental del Mediterráneo.",
@@ -23753,9 +23383,9 @@
     "nombre_original": "BERNARDO, PAQUITA",
     "nombre_busqueda": "Paquita Bernardo",
     "clave": "paquita bernardo",
-    "id": "paquita bernardo|plazoleta",
+    "id": "paquita bernardo|cantero central",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "cantero central",
     "descripcion": "Paquita Bernardo (1900-1925), bandoneonista; es la primera mujer que se destaca en la ejecución de este instrumento; consigue trascendencia artística\ny una destacada actuación profesional interpretando obras como Floreal, Soñando, Cachito, Cerro Divino, y Villa Crespo, entre otras.",
     "letra": "B"
   },
@@ -23980,26 +23610,6 @@
     "letra": "V"
   },
   {
-    "nombre_original": "GRANADEROS, PASEO DE LOS",
-    "nombre_busqueda": "Paseo de los Granaderos",
-    "clave": "paseo de los granaderos",
-    "id": "paseo de los granaderos|paseo",
-    "categoria": "CUERPO MILITAR",
-    "tipo": "paseo",
-    "descripcion": "Granaderos: escuadrón de Granaderos a Caballo creado por el Triunvirato por despacho del 16 de marzo de 1812 y destinado al mando del entonces teniente coronel don José de San Martín. En lo que respecta a la calle, cabe señalar que si bien con el nombre de Granaderos de Fernando VII existió una fuerza militar que se creó durante la Segunda Invasión Inglesa, la nomenclatura de esta arteria recuerda al regimiento sanmartiniano, ya que así lo establece el informe de la Comisión Especial que redacta la Ordenanza del 27-11-1893, cuando dice: “al proyectar los nombres hemos tenido en vista armonizarlos en lo posible, entre sí y con los nombres antiguos”. Es necesario aclarar por ello, que el nombre anterior de esta calle era “San Martín”, lo que aclara el sentido de la actual denominación.",
-    "letra": "G"
-  },
-  {
-    "nombre_original": "OMBÚES, PASEO DE LOS",
-    "nombre_busqueda": "Paseo de los Ombúes",
-    "clave": "paseo de los ombues",
-    "id": "paseo de los ombues|paseo",
-    "categoria": "NATURALEZA",
-    "tipo": "paseo",
-    "descripcion": "Ombú: arbusto de América meridional de la familia de las Fitolacáceas.",
-    "letra": "O"
-  },
-  {
     "nombre_original": "ALFONSÍN, PASEO DEL BAJO RAÚL",
     "nombre_busqueda": "Paseo del Bajo Raúl Alfonsín",
     "clave": "paseo del bajo raul alfonsin",
@@ -24026,7 +23636,7 @@
     "id": "paseo del cine|canteros centrales",
     "categoria": "ARTE",
     "tipo": "canteros centrales",
-    "descripcion": "Cine: término popular con el que se conoce al medio de comunicación social que se basa en la representación de imágenes en movimiento, mediante la técnica del cinematógrafo. Homenaje general a los creadores y a las crea-",
+    "descripcion": "Cine: término popular con el que se conoce al medio de comunicación social que se basa en la representación de imágenes en movimiento, mediante la técnica del cinematógrafo. Homenaje general a los creadores y a las creaciones de la cinematografía argentina.",
     "letra": "C"
   },
   {
@@ -24860,16 +24470,6 @@
     "letra": "A"
   },
   {
-    "nombre_original": "JACARANDÁ, PLAZA DEL",
-    "nombre_busqueda": "Plaza del Jacarandá",
-    "clave": "plaza del jacaranda",
-    "id": "plaza del jacaranda|plaza",
-    "categoria": "NATURALEZA",
-    "tipo": "plaza",
-    "descripcion": "Jacarandá: árbol de la familia de las bignoniáceas que crece en el Chaco y Formosa y cuyos ejemplares adornan muchas calles y plazas de la ciudad de Buenos Aires.",
-    "letra": "J"
-  },
-  {
     "nombre_original": "PLUMERILLO",
     "nombre_busqueda": "Plumerillo",
     "clave": "plumerillo",
@@ -24913,9 +24513,9 @@
     "nombre_original": "LLERAS, POETA RICARDO E.",
     "nombre_busqueda": "Poeta Ricardo E. Lleras",
     "clave": "poeta ricardo e lleras",
-    "id": "poeta ricardo e lleras|espacio verde",
+    "id": "poeta ricardo e lleras|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Ricardo Enrique Lleras (1913-1969), poeta, escritor, periodista y crítico de arte; autor de las obras de teatro Novios por mensualidades; Médico para enamorados y El hombre que dijo ¡no!; sus poesías están compiladas en el libro titulado Final.",
     "letra": "L"
   },
@@ -24970,16 +24570,6 @@
     "letra": "P"
   },
   {
-    "nombre_original": "PONTEDERIA",
-    "nombre_busqueda": "Pontederia",
-    "clave": "pontederia",
-    "id": "pontederia|calle",
-    "categoria": "NATURALEZA",
-    "tipo": "calle",
-    "descripcion": "Pontederia: género de plantas acuáticas perennes, nativas de América (desde Canadá hasta Argentina), caracterizadas por sus hojas en forma de corazón y espigas de flores violetas o azuladas.",
-    "letra": "P"
-  },
-  {
     "nombre_original": "PORTELA",
     "nombre_busqueda": "Portela",
     "clave": "portela",
@@ -25016,16 +24606,6 @@
     "id": "portugal|calle",
     "categoria": "LUGAR",
     "tipo": "calle",
-    "descripcion": "Portugal: país europeo. Capital: Lisboa.",
-    "letra": "P"
-  },
-  {
-    "nombre_original": "PORTUGAL",
-    "nombre_busqueda": "Portugal",
-    "clave": "portugal",
-    "id": "portugal|plaza",
-    "categoria": "LUGAR",
-    "tipo": "plaza",
     "descripcion": "Portugal: país europeo. Capital: Lisboa.",
     "letra": "P"
   },
@@ -25243,9 +24823,9 @@
     "nombre_original": "ORTIZ, PRESIDENTE ROBERTO M.",
     "nombre_busqueda": "Presidente Roberto M. Ortiz",
     "clave": "presidente roberto m ortiz",
-    "id": "presidente roberto m ortiz|calle",
+    "id": "presidente roberto m ortiz|sendero peatonal",
     "categoria": "PERSONA",
-    "tipo": "calle",
+    "tipo": "sendero peatonal",
     "descripcion": "Roberto M. Ortiz (1886-1942), jurisconsulto; presidente de la República de 1938 a 1940, cuando renuncia por motivos de salud.",
     "letra": "O"
   },
@@ -25340,16 +24920,6 @@
     "letra": "N"
   },
   {
-    "nombre_original": "RAVIOLI, PROFESORA MARINA MARGARITA",
-    "nombre_busqueda": "Profesora Marina Margarita Ravioli",
-    "clave": "profesora marina margarita ravioli",
-    "id": "profesora marina margarita ravioli|cantero central",
-    "categoria": "PERSONA",
-    "tipo": "cantero central",
-    "descripcion": "Marina Margarita Ravioli (1901-1977), educadora; maestra normal nacional y profesora Superior en Letras; directora desde 1937 del Instituto de Formación Docente para Maestras Jardineras de la Argentina (actual ISPEI Sara Chamberlain de Eccleston).",
-    "letra": "R"
-  },
-  {
     "nombre_original": "PROMETEO",
     "nombre_busqueda": "Prometeo",
     "clave": "prometeo",
@@ -25363,9 +24933,9 @@
     "nombre_original": "BUENOS AIRES, PROVINCIA DE",
     "nombre_busqueda": "Provincia de Buenos Aires",
     "clave": "provincia de buenos aires",
-    "id": "provincia de buenos aires|cantero central",
+    "id": "provincia de buenos aires|plazoleta",
     "categoria": "LUGAR",
-    "tipo": "cantero central",
+    "tipo": "plazoleta",
     "descripcion": "Buenos Aires: provincia de la República Argentina. Capital: La Plata.",
     "letra": "B"
   },
@@ -25560,20 +25130,20 @@
     "letra": "T"
   },
   {
-    "nombre_original": "CHACO, PROVINCIA DEL",
-    "nombre_busqueda": "Provincia del Chaco",
-    "clave": "provincia del chaco",
-    "id": "provincia del chaco|cantero central",
+    "nombre_original": "CHACO, PROVINCIA DE",
+    "nombre_busqueda": "Provincia de Chaco",
+    "clave": "provincia de chaco",
+    "id": "provincia de chaco|cantero central",
     "categoria": "LUGAR",
     "tipo": "cantero central",
     "descripcion": "Chaco: provincia de la República Argentina. Capital: Resistencia.",
     "letra": "C"
   },
   {
-    "nombre_original": "CHUBUT, PROVINCIA DEL",
-    "nombre_busqueda": "Provincia del Chubut",
-    "clave": "provincia del chubut",
-    "id": "provincia del chubut|cantero central",
+    "nombre_original": "CHUBUT, PROVINCIA DE",
+    "nombre_busqueda": "Provincia de Chubut",
+    "clave": "provincia de chubut",
+    "id": "provincia de chubut|cantero central",
     "categoria": "LUGAR",
     "tipo": "cantero central",
     "descripcion": "Chubut: provincia de la República Argentina. Capital: Rawson.",
@@ -25853,9 +25423,9 @@
     "nombre_original": "MEYER, RABINO MARSHALL",
     "nombre_busqueda": "Rabino Marshall Meyer",
     "clave": "rabino marshall meyer",
-    "id": "rabino marshall meyer|espacio verde",
+    "id": "rabino marshall meyer|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Marshall T. Meyer (1930-1993), rabino de origen norteamericano; funda en 1962 el Seminario Rabínico Latinoamericano. En 1983 funda el Movimiento Judío por los Derechos Humanos y es miembro de la CONADEP (Comisión Nacional sobre la Desaparición de Personas). El documento final elaborado por esta comisión se llama Nunca más, nombre propuesto por el rabino Meyer en memoria del grito enarbolado durante el levantamiento del Ghetto de Varsovia. La Argentina le otorga la medalla de la Orden del Libertador General San Martín, máxima condecoración que se entrega a un extranjero.",
     "letra": "M"
   },
@@ -25953,9 +25523,9 @@
     "nombre_original": "GASTIAZORO DE BRONTES, RAMONA ESTHER",
     "nombre_busqueda": "Ramona Esther Gastiazoro de Brontes",
     "clave": "ramona esther gastiazoro de brontes",
-    "id": "ramona esther gastiazoro de brontes|espacio verde",
+    "id": "ramona esther gastiazoro de brontes|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Ramona Esther Gastiazoro de Brontes (1927-1977); a raíz del secuestro de su hijo Carlos, producido el 13 de mayo de 1975, junto a otras familias de militantes desaparecidos se moviliza en la Comisión Permanente de Solidaridad con el fin de reclamar por la aparición de sus familiares. Es secuestrada en su domicilio el 9 de marzo de 1977. Está desaparecida.",
     "letra": "G"
   },
@@ -26006,7 +25576,7 @@
     "id": "raquel forner|parque",
     "categoria": "PERSONA",
     "tipo": "parque",
-    "descripcion": "Raquel Forner (1902-1988), artista plástica; encara en su obra temas diversos, desde las series de la Guerra Civil Española y la Segunda Guerra Mundial hasta las series del Espacio, donde expresa su indagación sobre el cosmos; entre 1sus numerosas distinciones cabe destacar la medalla de oro en la Exposición Internacional de París (1937), el Primer Premio Nacional de Pintura en el XXXII salón Nacional de Bellas Artes (1942), el Premio Augusto Palanza otorgado por la Academia Nacional de Bellas Artes (1947) y el Gran Premio de Honor en el XLV Salón Nacional de Bellas Artes (1956). Casada con el escultor Alfredo Bigatti, en 1982 crea en su casa-taller de la calle Bethlem (ex Humberto I) 443, la Fundación Museo Forner-Bigatti. En ese mismo año su obra Origen de una nueva dimensión es destinada al edificio de la Organización de los Estados Americanos en la ciudad de Washington, EE.UU.",
+    "descripcion": "Raquel Forner (1902-1988), artista plástica; encara en su obra temas diversos, desde las series de la Guerra Civil Española y la Segunda Guerra Mundial hasta las series del Espacio, donde expresa su indagación sobre el cosmos; entre sus numerosas distinciones cabe destacar la medalla de oro en la Exposición Internacional de París (1937), el Primer Premio Nacional de Pintura en el XXXII salón Nacional de Bellas Artes (1942), el Premio Augusto Palanza otorgado por la Academia Nacional de Bellas Artes (1947) y el Gran Premio de Honor en el XLV Salón Nacional de Bellas Artes (1956). Casada con el escultor Alfredo Bigatti, en 1982 crea en su casa-taller de la calle Bethlem (ex Humberto I) 443, la Fundación Museo Forner-Bigatti. En ese mismo año su obra Origen de una nueva dimensión es destinada al edificio de la Organización de los Estados Americanos en la ciudad de Washington, EE.UU.",
     "letra": "F"
   },
   {
@@ -26116,16 +25686,6 @@
     "id": "reconquista|calle",
     "categoria": "ACCIÓN MILITAR",
     "tipo": "calle",
-    "descripcion": "Reconquista: recuerda la gloriosa Reconquista de Buenos Aires de la dominación británica llevada a cabo el 12 de agosto de 1806.",
-    "letra": "R"
-  },
-  {
-    "nombre_original": "RECONQUISTA",
-    "nombre_busqueda": "Reconquista",
-    "clave": "reconquista",
-    "id": "reconquista|espacio público",
-    "categoria": "ACCIÓN MILITAR",
-    "tipo": "espacio público",
     "descripcion": "Reconquista: recuerda la gloriosa Reconquista de Buenos Aires de la dominación británica llevada a cabo el 12 de agosto de 1806.",
     "letra": "R"
   },
@@ -26443,9 +26003,9 @@
     "nombre_original": "SERBIA, REPÚBLICA DE",
     "nombre_busqueda": "República de Serbia",
     "clave": "republica de serbia",
-    "id": "republica de serbia|espacio verde",
+    "id": "republica de serbia|plaza",
     "categoria": "LUGAR",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "República de Serbia: país europeo. Capital: Belgrado.",
     "letra": "S"
   },
@@ -26540,10 +26100,10 @@
     "letra": "V"
   },
   {
-    "nombre_original": "REPÚBLlCA",
-    "nombre_busqueda": "Repúbllca",
-    "clave": "republlca",
-    "id": "republlca|calle",
+    "nombre_original": "REPÚBLICA",
+    "nombre_busqueda": "República",
+    "clave": "republica",
+    "id": "republica|calle",
     "categoria": "CONCEPTO",
     "tipo": "calle",
     "descripcion": "República: forma de gobierno representativo en la que el poder reside en el pueblo, personificado éste en un presidente no hereditario. Se refiere a la forma de gobierno de nuestro país.",
@@ -27183,9 +26743,9 @@
     "nombre_original": "LAMORTE DE LOMBARDO, ROSA",
     "nombre_busqueda": "Rosa Lamorte de Lombardo",
     "clave": "rosa lamorte de lombardo",
-    "id": "rosa lamorte de lombardo|espacio verde",
+    "id": "rosa lamorte de lombardo|plaza",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plaza",
     "descripcion": "Rosa Lamorte de Lombardo (1952-1977) militante peronista; dictaba clases de actividades prácticas a niños carecientes en el Club Social y Deportivo Corrales; es secuestrada el 28 de abril de 1977, a pocos metros de su casa. Está desaparecida.",
     "letra": "L"
   },
@@ -27198,16 +26758,6 @@
     "tipo": "cantero central",
     "descripcion": "Rosa Pavlovsky de Rosemberg (1863-1936); médica de origen ruso; participa como enfermera en los servicios médicos creados para enfrentar en Mendoza la epidemia de cólera de 1886. Se dedica a la pediatría en su consultorio privado y en el Hospital Francés, donde es designada jefa del Servicio de Pediatría; miembro de varias academias científicas del país y el extranjero. Es condecorada por el gobierno francés con la Legión de Honor.",
     "letra": "P"
-  },
-  {
-    "nombre_original": "ROSALES",
-    "nombre_busqueda": "Rosales",
-    "clave": "rosales",
-    "id": "rosales|avenida",
-    "categoria": "PERSONA",
-    "tipo": "avenida",
-    "descripcion": "Leonardo Rosales (1792-1836), coronel de marina; combate durante la guerra contra el Brasil como comandante del bergantín Belgrano y de la goleta 8 de Febrero.",
-    "letra": "R"
   },
   {
     "nombre_original": "CASTRO, ROSALÍA DE",
@@ -27263,9 +26813,9 @@
     "nombre_original": "QUIROGA, ROSITA",
     "nombre_busqueda": "Rosita Quiroga",
     "clave": "rosita quiroga",
-    "id": "rosita quiroga|plazoleta",
+    "id": "rosita quiroga|veredón",
     "categoria": "PERSONA",
-    "tipo": "plazoleta",
+    "tipo": "veredón",
     "descripcion": "Rosa Rodríguez Quiroga de Capiello (1901-1984), cantante y compositora; son suyos los tangos De estirpe criolla y Carta brava. Heredera directa del payador, se expresa en su canto con la misma cadencia arrabalera con la que hablaba.",
     "letra": "Q"
   },
@@ -27460,16 +27010,6 @@
     "letra": "S"
   },
   {
-    "nombre_original": "SAAVEDRA",
-    "nombre_busqueda": "Saavedra",
-    "clave": "saavedra",
-    "id": "saavedra|puente",
-    "categoria": "PERSONA",
-    "tipo": "puente",
-    "descripcion": "Cornelio de Saavedra (1759-1829), militar; presidente de la Primera Junta de Gobierno de 1810.",
-    "letra": "S"
-  },
-  {
     "nombre_original": "SÁENZ",
     "nombre_busqueda": "Sáenz",
     "clave": "saenz",
@@ -27643,9 +27183,9 @@
     "nombre_original": "SAN CAYETANO DE LINIERS",
     "nombre_busqueda": "San Cayetano de Liniers",
     "clave": "san cayetano de liniers",
-    "id": "san cayetano de liniers|espacio verde",
+    "id": "san cayetano de liniers|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "San Cayetano (1480-1547), eclesiástico italiano; fundador de la Orden de los Clérigos Regulares que después toman el nombre de Teatinos. Canonizado el 12 de abril de 1671. Los días 7 de cada mes y, en especial el 7 de agosto, la Parroquia de San Cayetano en el barrio de Liniers recibe a miles de fieles que lo reverencian como “Patrono del Pan y del Trabajo”.",
     "letra": "S"
   },
@@ -27686,16 +27226,6 @@
     "id": "san francisco de asis|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "San Francisco de Asís (1182-1226), sacerdote italiano; fundador de la Orden de los Hermanos Menores que luego llevará su nombre; autor del Cántico de las criaturas o Cántico del Hermano Sol.",
-    "letra": "S"
-  },
-  {
-    "nombre_original": "SAN FRANCISCO DE ASÍS",
-    "nombre_busqueda": "San Francisco de Asís",
-    "clave": "san francisco de asis",
-    "id": "san francisco de asis|cantero central",
-    "categoria": "PERSONA",
-    "tipo": "cantero central",
     "descripcion": "San Francisco de Asís (1182-1226), sacerdote italiano; fundador de la Orden de los Hermanos Menores que luego llevará su nombre; autor del Cántico de las criaturas o Cántico del Hermano Sol.",
     "letra": "S"
   },
@@ -27836,7 +27366,7 @@
     "id": "san mateo|calle",
     "categoria": "ACCIÓN MILITAR",
     "tipo": "calle",
-    "descripcion": "San Mateo: batalla librada por las fuerzas de Bolívar y las del general español Boves el 25 de marzo de 1814 en el campo de San Mateo, al oriente del lago de Valencia (Venezuela), en la que el oficial colombiano Antonio Ricaurte, en acción heroica muere al hacer estallar el polvorín que estaba a su cargo para evitar que cayese en manos enemigas. Con ello muere gran parte de los realistas y el resto huye. La acción de Ricaurte está inmortalizada en el himno nacional colombiano, que dice: “Ricaurte en San Mateo –en átomos volando. ‘Deber antes que vida’– con llamas escribió”.14",
+    "descripcion": "San Mateo: batalla librada por las fuerzas de Bolívar y las del general español Boves el 25 de marzo de 1814 en el campo de San Mateo, al oriente del lago de Valencia (Venezuela), en la que el oficial colombiano Antonio Ricaurte, en acción heroica muere al hacer estallar el polvorín que estaba a su cargo para evitar que cayese en manos enemigas.",
     "letra": "S"
   },
   {
@@ -28053,9 +27583,9 @@
     "nombre_original": "CABRINI, SANTA FRANCISCA JAVIER",
     "nombre_busqueda": "Santa Francisca Javier Cabrini",
     "clave": "santa francisca javier cabrini",
-    "id": "santa francisca javier cabrini|espacio verde",
+    "id": "santa francisca javier cabrini|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio verde",
+    "tipo": "plazoleta",
     "descripcion": "Francisca Javier Cabrini (1850-1917), religiosa y educadora de origen italiano; funda en 1880 el Instituto de las Misioneras del Sagrado Corazón de Jesús; canonizada por Pío XII en 1946, es declarada en 1950 Patrona Universal de los Emigrantes.",
     "letra": "C"
   },
@@ -28193,9 +27723,9 @@
     "nombre_original": "CHIERICO, SANTIAGO JOSÉ",
     "nombre_busqueda": "Santiago José Chierico",
     "clave": "santiago jose chierico",
-    "id": "santiago jose chierico|espacio público",
+    "id": "santiago jose chierico|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Santiago José Chierico (1891-1974) escultor; obtiene el premio del Salón Nacional en 1935; el segundo Premio Municipal en 1940 y el primer premio de la Comisión Nacional de Cultura en 1942; entre sus obras se destacan los bustos de Castelar y Miguel Cané y los monumentos La Cautiva, La Madre y Florencio Sánchez.",
     "letra": "C"
   },
@@ -28550,6 +28080,16 @@
     "letra": "S"
   },
   {
+    "nombre_original": "GUERRERO, SIMÓN",
+    "nombre_busqueda": "Simón Guerrero",
+    "clave": "simon guerrero",
+    "id": "simon guerrero|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Simón Guerrero (¿-?).",
+    "letra": "G"
+  },
+  {
     "nombre_original": "LÁZARA, SIMÓN",
     "nombre_busqueda": "Simón Lázara",
     "clave": "simon lazara",
@@ -28593,9 +28133,9 @@
     "nombre_original": "SKANDERBERG “JORGE CASTRIOTA”",
     "nombre_busqueda": "Skanderberg “jorge Castriota”",
     "clave": "skanderberg jorge castriota",
-    "id": "skanderberg jorge castriota|espacio público",
+    "id": "skanderberg jorge castriota|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Gjergj Kastrioti (1405-1468) su nombre se ha castellanizado como Jorge Castriota; conocido como Skanderberg (el señor o el líder, en turco) es el héroe nacional albanés. Célebre guerrero, por su valor es conocido también como “el diablo de Valaquia”. Proclamado príncipe, enfrenta a los otomanos formando una liga de príncipes albaneses con el apoyo de Venecia, Nápoles, Hungría y el Papado.",
     "letra": "S"
   },
@@ -28617,16 +28157,6 @@
     "categoria": "LUGAR",
     "tipo": "calle",
     "descripcion": "Sofía: ciudad capital de Bulgaria y de los distritos de su nombre.",
-    "letra": "S"
-  },
-  {
-    "nombre_original": "SANTI, SOLDADO ARCHIVISTA MIGUEL",
-    "nombre_busqueda": "Soldado Archivista Miguel Santi",
-    "clave": "soldado archivista miguel santi",
-    "id": "soldado archivista miguel santi|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Miguel Santi (?-1930), soldado artillero que muere durante los sucesos revolucionarios del 6 de septiembre de 1930.",
     "letra": "S"
   },
   {
@@ -28738,16 +28268,6 @@
     "tipo": "plazoleta",
     "descripcion": "Severino José Cirigliano (1882-1967), policía; subcomisario de la Seccional a 39; defensor de la Constitución Nacional en los hechos ocurridos el 6 de septiembre de 1930 que culminan con el derrocamiento de Hipólito Yrigoyen.",
     "letra": "C"
-  },
-  {
-    "nombre_original": "SUDAMÉRICA",
-    "nombre_busqueda": "Sudamérica",
-    "clave": "sudamerica",
-    "id": "sudamerica|calle",
-    "categoria": "LUGAR",
-    "tipo": "calle",
-    "descripcion": "Sudamérica: una de las tres regiones en que se divide al continente americano y que comprende a los siguientes países: Venezuela, Surinam, Guyana, Guayana, Colombia, Ecuador, Perú, Bolivia, Chile, Paraguay, Uruguay, Brasil y la Argentina.",
-    "letra": "S"
   },
   {
     "nombre_original": "SUDAMÉRICA",
@@ -29003,9 +28523,9 @@
     "nombre_original": "BORES, TATO",
     "nombre_busqueda": "Tato Bores",
     "clave": "tato bores",
-    "id": "tato bores|espacio público",
+    "id": "tato bores|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Mauricio Borensztein (1927-1996); actor conocido como Tato Bores. Inicia su carrera en la radio en la década de 1940 y en el cine en 1948. En la televisión se impone como un notable monologuista. Su personaje más destacado es el que, desde 1958, realiza los domingos en Tato y sus monólogos, Tato siempre en domingo, Por siempre Tato, Dígale sí a Tato, Déle crédito a Tato, Tato versus Tato, Tato de América y Good Show, entre otros títulos, donde aparece vestido de frac, peluca, lentes y habano. Su lucidez e ironía analizando la realidad política nacional le valieron el apoyo del público y también la atención de la censura.",
     "letra": "B"
   },
@@ -29103,16 +28623,6 @@
     "nombre_original": "LASALA, TENIENTE DE NAVÍO CÁNDIDO DE",
     "nombre_busqueda": "Teniente de Navío Cándido de Lasala",
     "clave": "teniente de navio candido de lasala",
-    "id": "teniente de navio candido de lasala|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Cándido Francisco José de Lasala (1770-1807), marino; combate durante las Invasiones Inglesas y fallece el 5 de julio de 1807 en la Defensa de Buenos Aires. Es éste un nombre tradicional de la ciudad, pues entre 1808 y 1822 se denominaron “Lasala” las actuales Chacabuco y Maipú.",
-    "letra": "L"
-  },
-  {
-    "nombre_original": "LASALA, TENIENTE DE NAVÍO CÁNDIDO DE",
-    "nombre_busqueda": "Teniente de Navío Cándido de Lasala",
-    "clave": "teniente de navio candido de lasala",
     "id": "teniente de navio candido de lasala|plazoleta",
     "categoria": "PERSONA",
     "tipo": "plazoleta",
@@ -29140,13 +28650,13 @@
     "letra": "A"
   },
   {
-    "nombre_original": "LONARDI, TENIENTE GENERAL EDUARDO",
-    "nombre_busqueda": "Teniente General Eduardo Lonardi",
-    "clave": "teniente general eduardo lonardi",
-    "id": "teniente general eduardo lonardi|plaza",
-    "categoria": "PERSONA",
+    "nombre_original": "NUNCA MÁS",
+    "nombre_busqueda": "Nunca Más",
+    "clave": "nunca mas",
+    "id": "nunca mas|plaza",
+    "categoria": "CONCEPTO",
     "tipo": "plaza",
-    "descripcion": "Eduardo Lonardi (1896-1956), militar; dirige la revolución del 16 de septiembre de 1955 en Córdoba; presidente provisional de la República en ese año.",
+    "descripcion": "Nunca más: expresión utilizada en Argentina para repudiar el terrorismo de Estado, ocurrido durante la última Dictadura Cívico-Militar (1976-1983).",
     "letra": "L"
   },
   {
@@ -29213,9 +28723,9 @@
     "nombre_original": "DELLEPIANE, TENIENTE GENERAL LUIS J.",
     "nombre_busqueda": "Teniente General Luis J. Dellepiane",
     "clave": "teniente general luis j dellepiane",
-    "id": "teniente general luis j dellepiane|avenida",
+    "id": "teniente general luis j dellepiane|autopista",
     "categoria": "PERSONA",
-    "tipo": "avenida",
+    "tipo": "autopista",
     "descripcion": "Luis J. Dellepiane (1865-1941), militar e ingeniero; director del Instituto Geográfico Militar; jefe de la Policía Federal de 1909 a 1919; ministro de Guerra en la segunda presidencia de Hipólito Yrigoyen.",
     "letra": "D"
   },
@@ -29503,9 +29013,9 @@
     "nombre_original": "DI TARANTO, TOMÁS",
     "nombre_busqueda": "Tomás Di Taranto",
     "clave": "tomas di taranto",
-    "id": "tomas di taranto|espacio público",
+    "id": "tomas di taranto|plazoleta",
     "categoria": "PERSONA",
-    "tipo": "espacio público",
+    "tipo": "plazoleta",
     "descripcion": "Tomás Di Taranto (1904-1985), artista plástico de origen italiano; recibe varios premios entre ellos el Primer Premio en el Salón de Luján en 1946; medalla de oro en el Salón de Aeronáutica en 1954; autor de Iglesia del Socorro y Vendedores de La Quiaca.",
     "letra": "D"
   },
@@ -29956,17 +29466,7 @@
     "id": "uriarte|calle",
     "categoria": "PERSONA",
     "tipo": "calle",
-    "descripcion": "Pedro Francisco de Uriarte (1758-1839), sacerdote; diputado por Santiago del Estero en el Congreso de Tucumán.1",
-    "letra": "U"
-  },
-  {
-    "nombre_original": "URIBURU",
-    "nombre_busqueda": "Uriburu",
-    "clave": "uriburu",
-    "id": "uriburu|calle",
-    "categoria": "PERSONA",
-    "tipo": "calle",
-    "descripcion": "Evaristo de Uriburu (1796-1885), coronel; combate en las Piedras, Tucumán, Salta y Chacabuco; gobernador de Salta en 1831, 1838 y 1842.",
+    "descripcion": "Pedro Francisco de Uriarte (1758-1839), sacerdote; diputado por Santiago del Estero en el Congreso de Tucumán.",
     "letra": "U"
   },
   {
@@ -30856,7 +30356,7 @@
     "id": "virginia bolten|parque",
     "categoria": "PERSONA",
     "tipo": "parque",
-    "descripcion": "Virginia Bolten (¿-?), militante anarquista y feminista uruguaya; es la primera mujer oradora en una concentración realizada en la ciudad de Rosario el 1º de mayo de 1890; durante 1896 y 1897 está al frente de la primera publicación feminista La voz de la Mujer en Rosario; en 1904 se traslada a Buenos Aires e integra el Comité de Huelga Femenino que participa en las huelgas de los trabajadores del Mercado de Frutos y en la de Inquilinos de 1907; organizadora del Centro Femenino Anarquista; es deportada a su país natal.",
+    "descripcion": "Virginia Bolten (1876-1960), militante anarquista y feminista uruguaya; es la primera mujer oradora en una concentración realizada en la ciudad de Rosario el 1º de mayo de 1890; durante 1896 y 1897 está al frente de la primera publicación feminista La voz de la Mujer en Rosario; en 1904 se traslada a Buenos Aires e integra el Comité de Huelga Femenino que participa en las huelgas de los trabajadores del Mercado de Frutos y en la de Inquilinos de 1907; organizadora del Centro Femenino Anarquista; es deportada a su país natal.",
     "letra": "B"
   },
   {
@@ -31418,5 +30918,495 @@
     "tipo": "calle",
     "descripcion": "Facundo de Zuviría (1793-1861), jurisconsulto; gobernador de Salta; diputado y presidente del Congreso Constituyente de 1853; ministro de Justicia, Culto e Instrucción Pública de 1853 a 1855.",
     "letra": "Z"
+  },
+  {
+    "nombre_original": "15 DE NOVIEMBRE DE 1889",
+    "nombre_busqueda": "15 de Noviembre de 1889",
+    "clave": "15 de noviembre de 1889",
+    "id": "15 de noviembre de 1889|calle",
+    "categoria": "FECHA",
+    "tipo": "calle",
+    "descripcion": "15 de noviembre de 1889: fecha en que fue proclamada la República del Brasil, constituyéndose un gobierno provisorio presidido por el mariscal Deodoro da Fonseca, acompañado por Quintino Bocayuva, Floriano Peixoto y Ruy Barbosa.",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "SERRANO",
+    "nombre_busqueda": "Serrano",
+    "clave": "serrano",
+    "id": "serrano|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "José Mariano Serrano (1788-1851), jurisconsulto; diputado por Chuquisaca en la Asamblea de 1813 y por Charcas en el Congreso de Tucumán.",
+    "letra": "S"
+  },
+  {
+    "nombre_original": "VELASCO IBARRA",
+    "nombre_busqueda": "Velasco Ibarra",
+    "clave": "velasco ibarra",
+    "id": "velasco ibarra|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "José María Velasco Ibarra (1893-1979), abogado y político ecuatoriano; ejerció la presidencia de Ecuador en cinco ocasiones.",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "ISRAEL, ESTADO DE",
+    "nombre_busqueda": "Estado de Israel",
+    "clave": "estado de israel",
+    "id": "estado de israel|plaza",
+    "categoria": "LUGAR",
+    "tipo": "plaza",
+    "descripcion": "Israel: país asiático. Capital: Jerusalén.",
+    "letra": "I"
+  },
+  {
+    "nombre_original": "SAAVEDRA",
+    "nombre_busqueda": "Saavedra",
+    "clave": "saavedra",
+    "id": "saavedra|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Cornelio de Saavedra (1759-1829), militar; presidente de la Primera Junta de Gobierno de 1810.",
+    "letra": "S"
+  },
+  {
+    "nombre_original": "REPÚBLICA",
+    "nombre_busqueda": "República",
+    "clave": "republica",
+    "id": "republica|plaza",
+    "categoria": "CONCEPTO",
+    "tipo": "plaza",
+    "descripcion": "República: forma de gobierno representativo en la que el poder reside en el pueblo, personificado éste en un presidente no hereditario. Se refiere a la forma de gobierno de nuestro país.",
+    "letra": "R"
+  },
+  {
+    "nombre_original": "REAL, VILLA",
+    "nombre_busqueda": "Villa Real",
+    "clave": "villa real",
+    "id": "villa real|plaza",
+    "categoria": "LUGAR",
+    "tipo": "plaza",
+    "descripcion": "Villa Real: esta denominación es impuesta por el ferrocarril Buenos Aires al Pacífico (luego San Martín), por Decreto del 18 de marzo de 1909, a la estación ubicada en Irigoyen y Tinogasta, demolida en 1995. Sobre el motivo por el cual se elige el nombre de Real, la Dirección General de Vías de Comunicación del Ministerio de Obras Públicas señala que es “el de una conocida quinta existente en sus cercanías”. Se trata de “la casa del Virrey”, como se denominaba a la propiedad de Juan Pedro de Córdova donde se albergó el virrey Sobremonte al producirse la Invasión Inglesa de 1806, antes de dirigirse hacia Córdoba. La casa es la misma que poseyera anteriormente don Pedro Fernández de Castro, cuyo nombre se perpetúa en el vecino barrio de Monte Castro. En la edición anterior de este libro mencionamos una nueva hipótesis relacionada con la fábrica de cigarrillos Amministrazione Autónoma del Monopolio di Tabacchi que debe ser descartada por anacrónica.",
+    "letra": "R"
+  },
+  {
+    "nombre_original": "MOGAS, MADRE MARÍA ANA",
+    "nombre_busqueda": "Madre María Ana Mogas",
+    "clave": "madre maria ana mogas",
+    "id": "madre maria ana mogas|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "María Ana Mogas Fontcuberta (1827-1886), religiosa; fundadora de las Franciscanas Misioneras de la Madre del Divino Pastor; se la venera como beata por la Iglesia católica.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "MORA, LOLA",
+    "nombre_busqueda": "Lola Mora",
+    "clave": "lola mora",
+    "id": "lola mora|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Lola Mora: seudónimo de Dolores Mora de la Vega (1866-1936), escultora; autora de la Fuente de las Nereidas, los bajorrelieves de la Casa de Tucumán\ny del monumento a Nicolás Avellaneda en la ciudad del mismo nombre.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "ALBERDI",
+    "nombre_busqueda": "Alberdi",
+    "clave": "alberdi",
+    "id": "alberdi|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Juan Bautista Alberdi (1810-1884), jurisconsulto y escritor; autor de Bases y puntos de partida para la organización política de la República Argentina.",
+    "letra": "A"
+  },
+  {
+    "nombre_original": "GARCÍA, CHARLY",
+    "nombre_busqueda": "Charly García",
+    "clave": "charly garcia",
+    "id": "charly garcia|esquina",
+    "categoria": "PERSONA",
+    "tipo": "esquina",
+    "descripcion": "Carlos Alberto García Moreno (1951- act.), conocido por su nombre artístico Charly García, músico, cantautor, multinstrumentista, compositor y productor discográfico argentino; considerado una de las figuras más importantes de la música popular argentina, latinoamericana y del rock en español.",
+    "letra": "G"
+  },
+  {
+    "nombre_original": "MATADEROS, DE LOS",
+    "nombre_busqueda": "De los Mataderos",
+    "clave": "de los mataderos",
+    "id": "de los mataderos|parque",
+    "categoria": "OTROS",
+    "tipo": "parque",
+    "descripcion": "Mataderos: el barrio comienza a denominarse así desde 1889 cuando el 14 de abril se coloca la piedra fundamental de los nuevos mataderos que se inauguran en 1901. La plaza perpetúa también este nombre tradicional.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "LAVALLE",
+    "nombre_busqueda": "Lavalle",
+    "clave": "lavalle",
+    "id": "lavalle|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "Juan Galo de Lavalle (1797-1841), militar; combate en Chacabuco, Cancha Rayada, Maipú, Pisco, Nazca, Cangallo, Jauja, Pasco, Riobamba y durante la guerra contra el Brasil; gobernador de Buenos Aires de 1828 a 1829; comanda la expedición que pretende derrocar a Rosas siendo vencido en Quebracho Herrado y Famaillá.",
+    "letra": "L"
+  },
+  {
+    "nombre_original": "HERNÁNDEZ, JOSÉ (2)",
+    "nombre_busqueda": "José Hernández 2",
+    "clave": "jose hernandez 2",
+    "id": "jose hernandez 2|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "José Hernández (1834-1886), poeta; autor de El gaucho Martín Fierro.",
+    "letra": "H"
+  },
+  {
+    "nombre_original": "RIVERO, EDMUNDO",
+    "nombre_busqueda": "Edmundo Rivero",
+    "clave": "edmundo rivero",
+    "id": "edmundo rivero|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "Leonel Edmundo Rivero (1911-1986), cantor, guitarrista y compositor argentino de tango.",
+    "letra": "R"
+  },
+  {
+    "nombre_original": "SARMIENTO",
+    "nombre_busqueda": "Sarmiento",
+    "clave": "sarmiento",
+    "id": "sarmiento|parque",
+    "categoria": "PERSONA",
+    "tipo": "parque",
+    "descripcion": "Domingo Faustino Sarmiento (1811-1888), político y escritor; fundador de El Zonda; presidente de la República de 1868 a 1874; autor de Civilización y barbarie, Vida de Juan Facundo Quiroga y Recuerdos de provincia.",
+    "letra": "S"
+  },
+  {
+    "nombre_original": "PORTUGAL",
+    "nombre_busqueda": "Portugal",
+    "clave": "portugal",
+    "id": "portugal|plazoleta",
+    "categoria": "LUGAR",
+    "tipo": "plazoleta",
+    "descripcion": "Portugal: país europeo. Capital: Lisboa.",
+    "letra": "P"
+  },
+  {
+    "nombre_original": "PARAGUAY, REPÚBLICA DEL",
+    "nombre_busqueda": "República del Paraguay",
+    "clave": "republica del paraguay",
+    "id": "republica del paraguay|plazoleta",
+    "categoria": "LUGAR",
+    "tipo": "plazoleta",
+    "descripcion": "Paraguay: país sudamericano. Capital: Asunción.",
+    "letra": "P"
+  },
+  {
+    "nombre_original": "OLMOS, DE LOS",
+    "nombre_busqueda": "De Los Olmos",
+    "clave": "de los olmos",
+    "id": "de los olmos|plaza",
+    "categoria": "NATURALEZA",
+    "tipo": "plaza",
+    "descripcion": "Plaza ubicada junto a la estación Belgrano R, entre las calles Echeverría y Zapiola, diseñada por el arquitecto Julio Reinoso e inaugurada en 1999. Debe su nombre a los frondosos olmos que embellecen el paisaje del predio, que anteriormente ocupó un vivero durante más de 60 años.",
+    "letra": "O"
+  },
+  {
+    "nombre_original": "18 DE DICIEMBRE DE 2022",
+    "nombre_busqueda": "18 de Diciembre de 2022",
+    "clave": "18 de diciembre de 2022",
+    "id": "18 de diciembre de 2022|plaza",
+    "categoria": "FECHA",
+    "tipo": "plaza",
+    "descripcion": "18 de diciembre de 2022: fecha de la victoria de la Selección Argentina de Fútbol ante Francia en la final de la Copa del Mundo Qatar 2022, consiguiendo así su tercer título del certamen.",
+    "letra": "1"
+  },
+  {
+    "nombre_original": "2 DE ABRIL DE 1982",
+    "nombre_busqueda": "2 de Abril de 1982",
+    "clave": "2 de abril de 1982",
+    "id": "2 de abril de 1982|pasaje",
+    "categoria": "FECHA",
+    "tipo": "pasaje",
+    "descripcion": "2 de abril de 1982: fecha de la recuperación de las Islas Malvinas, Georgias y Sandwich del Sur para el patrimonio nacional. El 14 de junio del mismo año las fuerzas invasoras usurparon nuevamente este pedazo de tierra argentina.",
+    "letra": "D"
+  },
+  {
+    "nombre_original": "BERNARDO, PADRE",
+    "nombre_busqueda": "Padre Bernardo",
+    "clave": "padre bernardo",
+    "id": "padre bernardo|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Bernardo Hughes (1933-2017), sacerdote Pasionista; en el año 1966 asumió en la parroquia Santa Cruz, la dictadura impuesta en el año 1976 lo persiguió, forzándolo a exiliarse; llevó la bandera de los Derechos Humanos y de las Madres y Abuelas de Plaza de Mayo.",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "FANGIO, JUAN MANUEL",
+    "nombre_busqueda": "Juan Manuel Fangio",
+    "clave": "juan manuel fangio",
+    "id": "juan manuel fangio|paseo",
+    "categoria": "PERSONA",
+    "tipo": "paseo",
+    "descripcion": "Juan Manuel Fangio (1911-1995), piloto de automovilismo argentino; es considerado por los especialistas como uno de los pilotos de automovilismo más destacados de todos los tiempos, por haber logrado cinco campeonatos mundiales de Fórmula 1 en 1951, 1954, 1955, 1956 y 1957, los subcampeonatos de 1950 y 1953, y ser ganador de las 12 Horas de Sebring en 1956 y 1957.",
+    "letra": "F"
+  },
+  {
+    "nombre_original": "MORENO, PERITO",
+    "nombre_busqueda": "Perito Moreno",
+    "clave": "perito moreno",
+    "id": "perito moreno|avenida",
+    "categoria": "PERSONA",
+    "tipo": "avenida",
+    "descripcion": "Francisco Pascasio Moreno (1852-1919), conocido como el Perito Moreno, científico, naturalista, conservacionista, político, botánico, explorador y geógrafo de la Generación del Ochenta de la Argentina.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "MORENO, PERITO",
+    "nombre_busqueda": "Perito Moreno",
+    "clave": "perito moreno",
+    "id": "perito moreno|autopista",
+    "categoria": "PERSONA",
+    "tipo": "autopista",
+    "descripcion": "Francisco Pascasio Moreno (1852-1919), conocido como el Perito Moreno, científico, naturalista, conservacionista, político, botánico, explorador y geógrafo de la Generación del Ochenta de la Argentina.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "INMIGRANTES, PASEO DE LOS",
+    "nombre_busqueda": "Paseo de los Inmigrantes",
+    "clave": "paseo de los inmigrantes",
+    "id": "paseo de los inmigrantes|paseo",
+    "categoria": "CONCEPTO",
+    "tipo": "paseo",
+    "descripcion": "Homenaje a los millones de inmigrantes que poblaron y pueblan la República Argentina.",
+    "letra": "I"
+  },
+  {
+    "nombre_original": "TIERRA DEL FUEGO, PROVINCIA DE",
+    "nombre_busqueda": "Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+    "clave": "provincia de tierra del fuego antartida e islas del atlantico sur",
+    "id": "provincia de tierra del fuego antartida e islas del atlantico sur|cantero central",
+    "categoria": "LUGAR",
+    "tipo": "cantero central",
+    "descripcion": "Tierra del Fuego, Antártida e Islas del Atlántico Sur: provincia de la República Argentina. Capital: Ushuaia.",
+    "letra": "T"
+  },
+  {
+    "nombre_original": "CROMAÑÓN",
+    "nombre_busqueda": "Cromañón",
+    "clave": "cromanon",
+    "id": "cromanon|sendero peatonal",
+    "categoria": "OTROS",
+    "tipo": "sendero peatonal",
+    "descripcion": "La Tragedia de Cromañón fue un incendio en la noche del 30 de diciembre de 2004 en República Cromañón, local en el barrio de Once de la ciudad de Buenos Aires, en el marco de un recital de la banda de rock Callejeros. Es la peor tragedia mundial en la historia del rock y una de las mayores tragedias no naturales en Argentina, que dejó 194 muertos y 1432 heridos.",
+    "letra": "C"
+  },
+  {
+    "nombre_original": "MONTSERRAT",
+    "nombre_busqueda": "Montserrat",
+    "clave": "montserrat",
+    "id": "montserrat|plaza",
+    "categoria": "RELIGIÓN",
+    "tipo": "plaza",
+    "descripcion": "Nuestra Señora de Montserrat: patrona de Cataluña que se venera en el santuario y monasterio benedictino de su nombre, donde se encuentra la imagen titular de esta virgen llamada La Moreneta. Se identifica a este barrio con su nombre desde 1769 cuando se crea la parroquia de Nuestra Señora de Montserrat.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "HOLANDA, REINA DE",
+    "nombre_busqueda": "Reina de Holanda",
+    "clave": "reina de holanda",
+    "id": "reina de holanda|plaza",
+    "categoria": "CONCEPTO",
+    "tipo": "plaza",
+    "descripcion": "Homenaje a la Reina de Holanda.",
+    "letra": "H"
+  },
+  {
+    "nombre_original": "11 DE JUNIO DE 1580",
+    "nombre_busqueda": "11 de Junio de 1580",
+    "clave": "11 de junio de 1580",
+    "id": "11 de junio de 1580|plazoleta",
+    "categoria": "FECHA",
+    "tipo": "plazoleta",
+    "descripcion": "11 de junio de 1580: segunda fundación de Buenos Aires, realizada por el explorador español Juan de Garay, quien llegó acompañado por un grupo de pobladores desde Asunción.",
+    "letra": "1"
+  },
+  {
+    "nombre_original": "MAIZANI, AZUCENA",
+    "nombre_busqueda": "Azucena Maizani",
+    "clave": "azucena maizani",
+    "id": "azucena maizani|plaza",
+    "categoria": "PERSONA",
+    "tipo": "plaza",
+    "descripcion": "Azucena Maizani (1902-1970), cantante y compositora argentina de tangos; actuó en radio y en teatro y además dejó grabadas más de 270 obras. Durante muchos años hacía sus presentaciones vestida con trajes masculinos o con atuendos criollos de gaucho por lo que era conocida con el apodo de La Ñata Gaucha.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "GORRITI, JUANA MANUELA",
+    "nombre_busqueda": "Juana Manuela Gorriti",
+    "clave": "juana manuela gorriti",
+    "id": "juana manuela gorriti|sendero peatonal",
+    "categoria": "PERSONA",
+    "tipo": "sendero peatonal",
+    "descripcion": "Juana Manuela Gorriti Zuviria (1818-1892), escritora y cronista argentina, considerada la primera mujer novelista de la literatura argentina. Autora de La tierra natal, Perfiles y Veladas literarias.",
+    "letra": "G"
+  },
+  {
+    "nombre_original": "VERA DE ANGUITA, MATILDE",
+    "nombre_busqueda": "Matilde Vera de Anguita",
+    "clave": "matilde vera de anguita",
+    "id": "matilde vera de anguita|plazoleta",
+    "categoria": "PERSONA",
+    "tipo": "plazoleta",
+    "descripcion": "Matilde Vera de Anguita (1926-1978), detenida-desaparecida durante la última dictadura cívico-militar de Argentina.",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "OBLIGADO, VUELTA DE",
+    "nombre_busqueda": "Vuelta de Obligado",
+    "clave": "vuelta de obligado",
+    "id": "vuelta de obligado|parque",
+    "categoria": "ACCIÓN MILITAR",
+    "tipo": "parque",
+    "descripcion": "Vuelta de Obligado: recodo que forma el río Paraná entre San Pedro y Ramallo, donde el 20 de noviembre de 1845 las fuerzas de la Confederación, al mando del general Lucio Norberto Mansilla se baten contra la escuadra anglo-francesa. El sitio fue declarado Lugar Histórico por Decreto N° 120.411 del 1 de mayo de 1942.",
+    "letra": "O"
+  },
+  {
+    "nombre_original": "FÁTIMA, NUESTRA SEÑORA DE",
+    "nombre_busqueda": "Nuestra Señora de Fátima",
+    "clave": "nuestra senora de fatima",
+    "id": "nuestra senora de fatima|plaza",
+    "categoria": "RELIGIÓN",
+    "tipo": "plaza",
+    "descripcion": "Virgen de Fátima, formalmente Nuestra Señora del Rosario de Fátima, es una advocación con que se venera en el catolicismo a la Virgen María.",
+    "letra": "F"
+  },
+  {
+    "nombre_original": "TORRIJOS, OMAR",
+    "nombre_busqueda": "Omar Torrijos",
+    "clave": "omar torrijos",
+    "id": "omar torrijos|cantero central",
+    "categoria": "PERSONA",
+    "tipo": "cantero central",
+    "descripcion": "Omar Torrijos (1921-1981), militar y político panameño; participa en el derrocamiento de Arnulfo Arias en 1968; nombrado Jefe de Gobierno en 1972 hasta 1981.",
+    "letra": "T"
+  },
+  {
+    "nombre_original": "AMAYA, MARIO",
+    "nombre_busqueda": "Mario Amaya",
+    "clave": "mario amaya",
+    "id": "mario amaya|plazoleta",
+    "categoria": "PERSONA",
+    "tipo": "plazoleta",
+    "descripcion": "Mario Abel Amaya (1935-1976), abogado y político argentino; activista reformista en la universidad y miembro de la Unión Cívica Radical; diputado nacional desde 1973 hasta 1976, cuando fue detenido-desaparecido por la última dictadura cívico-militar, muriendo como consecuencia de las torturas a las que fue sometido.",
+    "letra": "A"
+  },
+  {
+    "nombre_original": "VAAMONDE, SARA",
+    "nombre_busqueda": "Sara Vaamonde",
+    "clave": "sara vaamonde",
+    "id": "sara vaamonde|plazoleta",
+    "categoria": "PERSONA",
+    "tipo": "plazoleta",
+    "descripcion": "Sara Vaamonde (¿-?), primera presidenta de AVEFA (Asociación Vecinal Florentino Ameghino), asociación encargada del cuidado de este espacio verde.",
+    "letra": "V"
+  },
+  {
+    "nombre_original": "11 DE NOVIEMBRE DE 1859",
+    "nombre_busqueda": "11 de Noviembre de 1859",
+    "clave": "11 de noviembre de 1859",
+    "id": "11 de noviembre de 1859|plazoleta",
+    "categoria": "FECHA",
+    "tipo": "plazoleta",
+    "descripcion": "11 de Noviembre de 1859: fecha en que se firma el pacto de San José de Flores, por el cual Buenos Aires se declara \"parte integrante de la República Argentina\".",
+    "letra": "1"
+  },
+  {
+    "nombre_original": "DEL BUEN VECINO",
+    "nombre_busqueda": "Del Buen Vecino",
+    "clave": "del buen vecino",
+    "id": "del buen vecino|plazoleta",
+    "categoria": "CONCEPTO",
+    "tipo": "plazoleta",
+    "descripcion": "Homenaje a los vecinos del barrio.",
+    "letra": "B"
+  },
+  {
+    "nombre_original": "DE LAS ESCUELAS",
+    "nombre_busqueda": "De las Escuelas",
+    "clave": "de las escuelas",
+    "id": "de las escuelas|plazoleta",
+    "categoria": "CONCEPTO",
+    "tipo": "plazoleta",
+    "descripcion": "Homenaje a las escuelas de nuestra ciudad.",
+    "letra": "E"
+  },
+  {
+    "nombre_original": "17 DE MAYO",
+    "nombre_busqueda": "17 de Mayo",
+    "clave": "17 de mayo",
+    "id": "17 de mayo|plazoleta",
+    "categoria": "FECHA",
+    "tipo": "plazoleta",
+    "descripcion": "17 de mayo, fecha en que fue inaugurada este espacio verde, gracias a las gestiones de la Sociedad de Fomento 17 de mayo.",
+    "letra": "1"
+  },
+  {
+    "nombre_original": "ELEFANTE BLANCO",
+    "nombre_busqueda": "Elefante Blanco",
+    "clave": "elefante blanco",
+    "id": "elefante blanco|parque",
+    "categoria": "CONCEPTO",
+    "tipo": "parque",
+    "descripcion": "Elefante Blanco, nombre del edificio que se encontraba allí y fue demolido para dar lugar a este espacio verde.",
+    "letra": "E"
+  },
+  {
+    "nombre_original": "MALVINAS ARGENTINAS 2",
+    "nombre_busqueda": "Malvinas Argentinas 2",
+    "clave": "malvinas argentinas 2",
+    "id": "malvinas argentinas 2|calle",
+    "categoria": "LUGAR",
+    "tipo": "calle",
+    "descripcion": "Islas Malvinas: archipiélago situado en el océano Atlántico al este del estrecho de Magallanes. Ocupado por Gran Bretaña desde 1833, pertenecen por derecho a la República Argentina.",
+    "letra": "M"
+  },
+  {
+    "nombre_original": "JUAN XXIII",
+    "nombre_busqueda": "Juan XXIII",
+    "clave": "juan xxiii",
+    "id": "juan xxiii|calle",
+    "categoria": "PERSONA",
+    "tipo": "calle",
+    "descripcion": "Ángelo Giuseppe Roncalli, Juan XXIII (1881-1963), sacerdote; Papa de la Iglesia Católica de 1958 a 1963; da a luz las encíclicas Mater et Magistra, Aeterna Dei Sapientia y Pacem in terris.",
+    "letra": "J"
+  },
+  {
+    "nombre_original": "JUAN XXIII",
+    "nombre_busqueda": "Juan XXIII",
+    "clave": "juan xxiii",
+    "id": "juan xxiii|sendero peatonal",
+    "categoria": "PERSONA",
+    "tipo": "sendero peatonal",
+    "descripcion": "Ángelo Giuseppe Roncalli, Juan XXIII (1881-1963), sacerdote; Papa de la Iglesia Católica de 1958 a 1963; da a luz las encíclicas Mater et Magistra, Aeterna Dei Sapientia y Pacem in terris.",
+    "letra": "J"
+  },
+  {
+    "nombre_original": "GUERRA GAUCHA",
+    "nombre_busqueda": "Guerra Gaucha",
+    "clave": "guerra gaucha",
+    "id": "guerra gaucha|calle",
+    "categoria": "ACCIÓN MILITAR",
+    "tipo": "calle",
+    "descripcion": "Guerra gaucha: lucha de milicias y guerrillas llevada adelante en el Noroeste argentino contra los ejércitos realistas durante la Guerra de Independencia de la Argentina (1810-1824), en la Provincia de Salta.",
+    "letra": "G"
+  },
+  {
+    "nombre_original": "SUIZO",
+    "nombre_busqueda": "Suizo",
+    "clave": "suizo",
+    "id": "suizo|sendero peatonal",
+    "categoria": "CONCEPTO",
+    "tipo": "sendero peatonal",
+    "descripcion": "¿?",
+    "letra": "S"
   }
 ]

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calleando CABA · Mapa interactivo</title>
 
-    <meta name="description" content="Mapa interactivo del callejero de Buenos Aires: calles, plazas y avenidas con la historia de a quién o qué homenajean. 2.964 odónimos con filtros por barrio, comuna y categoría." />
+    <meta name="description" content="Mapa interactivo del callejero de Buenos Aires: calles, plazas y avenidas con la historia de a quién o qué homenajean. 3.129 odónimos, con búsqueda instantánea y filtro por categoría." />
     <meta name="theme-color" content="#1a73e8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="alternate icon" href="favicon.svg" />
@@ -13,7 +13,7 @@
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Calleando CABA — Mapa interactivo del callejero porteño" />
-    <meta property="og:description" content="Buscá cualquier calle, plaza o avenida de CABA y conocé a quién o qué homenajea. Con filtros por barrio, comuna y categoría." />
+    <meta property="og:description" content="Buscá cualquier calle, plaza o avenida de CABA y conocé a quién o qué homenajea. Con búsqueda instantánea y filtro por categoría." />
     <meta property="og:image" content="favicon.svg" />
     <meta property="og:site_name" content="Calleando CABA" />
     <meta property="og:locale" content="es_AR" />
@@ -21,7 +21,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Calleando CABA — Mapa interactivo" />
-    <meta name="twitter:description" content="Mapa del callejero porteño con la historia de cada calle. 2.964 odónimos, filtros por barrio y categoría." />
+    <meta name="twitter:description" content="Mapa del callejero porteño con la historia de cada calle. 3.129 odónimos, con búsqueda y filtro por categoría." />
     <meta name="twitter:image" content="favicon.svg" />
 
     <!-- Leaflet (mapa) -->
@@ -32,6 +32,14 @@
         crossorigin=""
     />
 
+    <!-- Tipografía de marca (branding + títulos de popup) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Narnoor:wght@600;700&display=swap"
+        rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -40,6 +48,20 @@
 
     <!-- Caja de búsqueda flotante (estilo Google Maps) -->
     <div id="search-box" class="search-box">
+        <div class="brand-header" id="brand-home" role="button" tabindex="0" title="Volver al inicio">
+            <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+                <defs><linearGradient id="brandg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#4285f4"/><stop offset="1" stop-color="#1a73e8"/>
+                </linearGradient></defs>
+                <path fill="url(#brandg)" d="M32 4C20.4 4 11 13.4 11 25c0 14 16 32 19.4 35.6a2.3 2.3 0 0 0 3.2 0C37 57 53 39 53 25 53 13.4 43.6 4 32 4z"/>
+                <rect x="27" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+                <rect x="32.7" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+                <rect x="27" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
+                <rect x="32.7" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            </svg>
+            <span class="brand-name">Calleando <strong>CABA</strong></span>
+            <span class="brand-tag">El callejero porteño y su historia</span>
+        </div>
         <div class="search-input-wrap">
             <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -66,76 +88,155 @@
         <ul id="suggestions" class="suggestions" role="listbox" hidden></ul>
     </div>
 
-    <!-- Filtro por categoría -->
-    <div class="categoria-filter">
-        <select id="categoria-select" aria-label="Filtrar por categoría">
-            <option value="">Todas las categorías</option>
-        </select>
-    </div>
-
-    <!-- Botón "calle al azar" -->
+    <!-- Botón "Herramientas": agrupa categorías, accesos rápidos y datos
+         y curiosidades en un único panel arriba a la derecha. -->
     <button
-        id="random-btn"
-        class="random-btn"
+        id="tools-btn"
+        class="tools-btn"
         type="button"
-        aria-label="Mostrar una calle al azar"
-        title="Calle al azar"
+        aria-label="Abrir herramientas del mapa"
+        aria-expanded="false"
+        title="Herramientas"
     >
         <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7.5 8c.83 0 1.5.67 1.5 1.5S8.33 11 7.5 11 6 10.33 6 9.5 6.67 8 7.5 8zm9 8c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-4.5-4c-.83 0-1.5-.67-1.5-1.5S11.17 9 12 9s1.5.67 1.5 1.5S12.83 12 12 12zm4.5-4c-.83 0-1.5-.67-1.5-1.5S15.67 5 16.5 5 18 5.67 18 6.5 17.33 8 16.5 8zM7.5 18c-.83 0-1.5-.67-1.5-1.5S6.67 15 7.5 15 9 15.67 9 16.5 8.33 18 7.5 18z"/>
+            <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
         </svg>
     </button>
 
-    <!-- Botón "Cerca mío" — geolocalización -->
-    <button
-        id="nearme-btn"
-        class="nearme-btn"
-        type="button"
-        aria-label="Mostrar calles cerca de mí"
-        title="Cerca mío"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/>
-        </svg>
-    </button>
-
-    <!-- Botón de cambio de tema del mapa -->
-    <div class="theme-toggle" id="theme-toggle">
+    <div class="tools-panel" id="tools-panel" hidden>
+        <!-- Botón "odónimo del día" -->
         <button
-            class="theme-toggle-btn"
-            id="theme-toggle-btn"
+            id="random-btn"
+            class="random-btn"
             type="button"
-            aria-label="Cambiar estilo del mapa"
-            title="Cambiar estilo del mapa"
+            aria-label="Mostrar el odónimo del día"
+            title="Odónimo del día"
         >
             <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/>
-                <circle cx="6.5" cy="11.5" r="1.5"/>
-                <circle cx="9.5" cy="7.5" r="1.5"/>
-                <circle cx="14.5" cy="7.5" r="1.5"/>
-                <circle cx="17.5" cy="11.5" r="1.5"/>
+                <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
             </svg>
         </button>
-        <ul class="theme-menu" id="theme-menu" hidden>
-            <li data-tema="voyager"><span class="theme-dot voyager"></span>Voyager</li>
-            <li data-tema="claro"><span class="theme-dot claro"></span>Claro</li>
-            <li data-tema="oscuro"><span class="theme-dot oscuro"></span>Oscuro</li>
-        </ul>
-    </div>
 
-    <!-- Botón "datos y curiosidades" arriba a la derecha -->
-    <button
-        id="stats-btn"
-        class="stats-btn"
-        type="button"
-        aria-label="Ver datos y curiosidades del callejero"
-        title="Datos y curiosidades"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
-        </svg>
-        <span>Datos y curiosidades</span>
-    </button>
+        <!-- Botón "datos y curiosidades" -->
+        <button
+            id="stats-btn"
+            class="stats-btn"
+            type="button"
+            aria-label="Ver datos y curiosidades del callejero"
+            title="Datos y curiosidades"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+            </svg>
+        </button>
+
+        <!-- Botón de cambio de tema del mapa -->
+        <div class="theme-toggle" id="theme-toggle">
+            <button
+                class="theme-toggle-btn"
+                id="theme-toggle-btn"
+                type="button"
+                aria-label="Cambiar estilo del mapa"
+                title="Estilo del mapa"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/>
+                    <circle cx="6.5" cy="11.5" r="1.5"/>
+                    <circle cx="9.5" cy="7.5" r="1.5"/>
+                    <circle cx="14.5" cy="7.5" r="1.5"/>
+                    <circle cx="17.5" cy="11.5" r="1.5"/>
+                </svg>
+            </button>
+            <ul class="theme-menu" id="theme-menu" role="menu" aria-label="Estilo del mapa" hidden>
+                <li data-tema="voyager" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot voyager"></span>Voyager</li>
+                <li data-tema="claro" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot claro"></span>Claro</li>
+                <li data-tema="oscuro" role="menuitemradio" tabindex="0" aria-checked="false"><span class="theme-dot oscuro"></span>Oscuro</li>
+            </ul>
+        </div>
+
+        <!-- Filtro por categoría -->
+        <div class="categoria-filter">
+            <svg class="categoria-filter-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+            </svg>
+            <select id="categoria-select" aria-label="Filtrar por categoría" title="Filtros temáticos">
+                <option value="">Todas las categorías</option>
+            </select>
+        </div>
+
+        <!-- Botón "Favoritas": abre el panel con las calles guardadas -->
+        <div class="favoritos-wrap">
+            <button
+                id="favoritos-btn"
+                class="favoritos-btn"
+                type="button"
+                aria-label="Ver mis calles favoritas"
+                aria-expanded="false"
+                title="Mis favoritas"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+                <span class="favoritos-count" id="favoritos-count" hidden>0</span>
+            </button>
+
+            <!-- Panel desplegable con la lista de favoritas -->
+            <div class="favoritos-panel" id="favoritos-panel" hidden>
+                <div class="favoritos-panel-header">
+                    <span>Mis favoritas</span>
+                    <button type="button" class="favoritos-panel-close" id="favoritos-panel-close" aria-label="Cerrar">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="favoritos-list" id="favoritos-list"></ul>
+                <p class="favoritos-empty" id="favoritos-empty" hidden>Todavía no marcaste ninguna calle como favorita. Tocá la estrella en el popup de una calle para guardarla acá.</p>
+            </div>
+        </div>
+
+        <!-- Botón "Cerca mío" — geolocalización -->
+        <button
+            id="nearme-btn"
+            class="nearme-btn"
+            type="button"
+            aria-label="Mostrar calles cerca de mí"
+            title="Ubicación"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/>
+            </svg>
+        </button>
+
+        <!-- Botón "Un día como hoy" — efeméride del día, oculto salvo que haya
+             alguna entrada de categoría FECHA cuyo día/mes coincida con hoy. -->
+        <button
+            id="efemeride-btn"
+            class="efemeride-btn"
+            type="button"
+            aria-label="Ver la efeméride de hoy"
+            title="Un día como hoy"
+            hidden
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8z"/>
+            </svg>
+            <span class="efemeride-dot" aria-hidden="true"></span>
+        </button>
+
+        <!-- Botón "Acerca de" -->
+        <button
+            id="about-btn"
+            class="about-btn"
+            type="button"
+            aria-label="Acerca de Calleando CABA"
+            title="Acerca de"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+        </button>
+    </div>
 
     <!-- Modal de estadísticas -->
     <div id="stats-modal" class="stats-modal" hidden>
@@ -182,6 +283,17 @@
                 </section>
 
                 <section class="stats-section">
+                    <div class="stats-ranking-header">
+                        <h3>Ranking de barrios</h3>
+                        <select id="ranking-categoria-select" aria-label="Filtrar ranking por categoría">
+                            <option value="">Todas las categorías</option>
+                        </select>
+                    </div>
+                    <ol id="stats-ranking-barrios" class="stats-bars ranking-barrios"></ol>
+                    <p id="ranking-barrios-nota" class="ranking-barrios-nota" hidden></p>
+                </section>
+
+                <section class="stats-section">
                     <h3>¿Sabías que…?</h3>
                     <ul id="stats-curiosidades" class="curiosidades"></ul>
                 </section>
@@ -204,19 +316,6 @@
         <span>Datos: calleando.xlsx · Mapa base © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
     </div>
 
-    <!-- Botón "Acerca de" en la esquina inferior derecha -->
-    <button
-        id="about-btn"
-        class="about-btn"
-        type="button"
-        aria-label="Acerca de Calleando CABA"
-        title="Acerca de"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-        </svg>
-    </button>
-
     <!-- Modal "Acerca de" -->
     <div id="about-modal" class="stats-modal" hidden>
         <div class="stats-overlay" id="about-overlay"></div>
@@ -229,7 +328,21 @@
             <header class="stats-header">
                 <h2 id="about-title">Acerca de Calleando CABA</h2>
                 <p class="stats-summary">Mapa interactivo del callejero porteño con la historia de cada calle.</p>
+                <button type="button" class="tour-replay-btn" id="tour-replay-btn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                    </svg>
+                    Volver a ver el tutorial
+                </button>
             </header>
+
+            <section class="about-autor">
+                <div class="about-autor-avatar" aria-hidden="true">SS</div>
+                <div class="about-autor-info">
+                    <span class="about-autor-label">Creado por</span>
+                    <span class="about-autor-nombre">Santiago Simari <span class="about-autor-handle">@santisimari</span></span>
+                </div>
+            </section>
 
             <section class="stats-section">
                 <h3>¿Qué es?</h3>
@@ -237,13 +350,13 @@
                     <strong>Calleando CABA</strong> es una herramienta digital de datos abiertos que centraliza y visualiza de forma accesible el <strong>nomenclátor oficial de la Ciudad de Buenos Aires</strong>. Incluye:
                 </p>
                 <ul class="about-lista">
-                    <li><strong>2.964 odónimos</strong> (calles, avenidas, plazas, pasajes, puentes y espacios públicos)</li>
+                    <li><strong>3.129 odónimos</strong> (calles, avenidas, plazas, pasajes, puentes y espacios públicos)</li>
                     <li><strong>Historia completa</strong> de a quién o qué homenajea cada lugar</li>
                     <li><strong>Clasificación por categoría</strong>: personas, lugares, fechas y otros</li>
                     <li><strong>Georreferenciación precisa</strong> en los 48 barrios y 15 comunas</li>
                 </ul>
                 <p class="about-parrafo">
-                    Permite búsqueda avanzada, filtrado por zona, análisis estadístico y exploración temática del patrimonio urbano de la ciudad.
+                    Permite búsqueda instantánea, filtro por categoría, análisis estadístico y exploración temática del patrimonio urbano, con click directo en el mapa para ver la ficha de cada odónimo.
                 </p>
             </section>
 
@@ -251,11 +364,11 @@
                 <h3>Capacidades principales</h3>
                 <ul class="about-lista">
                     <li><strong>Búsqueda inteligente</strong>: Por nombre, descripción o tema (ej: "Malvinas", "tango", "científicos").</li>
-                    <li><strong>Filtrado multidimensional</strong>: Por barrio, comuna y categoría para análisis temático.</li>
-                    <li><strong>Visualización geográfica</strong>: Mapa interactivo con codificación por color según tipo de odónimo.</li>
-                    <li><strong>Overlays administrativos</strong>: Divisiones de 48 barrios y 15 comunas para contexto geopolítico.</li>
-                    <li><strong>Análisis estadístico</strong>: Distribución de odónimos por barrio, categoría y año.</li>
-                    <li><strong>Exploración guiada</strong>: Modo aleatorio y búsqueda por geolocalización ("Cerca mío").</li>
+                    <li><strong>Filtro por categoría</strong>: personas, lugares, fechas, naturaleza y más.</li>
+                    <li><strong>Trazado real en el mapa</strong>: Click en cualquier calle para ver su ficha, con foto e historia.</li>
+                    <li><strong>Mapa de calor por barrio</strong>: Densidad de odónimos de una categoría sobre los 48 barrios.</li>
+                    <li><strong>Análisis estadístico</strong>: Distribución por categoría y curiosidades del callejero.</li>
+                    <li><strong>Exploración guiada</strong>: Odónimo del día y búsqueda por geolocalización ("Cerca mío").</li>
                     <li><strong>Múltiples temas visuales</strong>: Claro, oscuro y Voyager para diferentes contextos.</li>
                 </ul>
             </section>
@@ -265,11 +378,11 @@
                 <ul class="about-lista">
                     <li><strong>Nomenclátor oficial</strong>: Datos del callejero de CABA con validación y deduplicación por nombre + tipo.</li>
                     <li><strong>Georreferenciación precisa</strong>: Integración con OpenStreetMap (Nominatim y Overpass API) para geometría de calles y ubicación exacta.</li>
-                    <li><strong>Límites administrativos</strong>: Polígonos oficiales de los 48 barrios y 15 comunas del Gobierno de la Ciudad.</li>
+                    <li><strong>Límites administrativos</strong>: Polígonos oficiales de los 48 barrios del Gobierno de la Ciudad (usados para el mapa de calor).</li>
                     <li><strong>Cartografía base</strong>: CartoDB (Positron / Voyager / Dark Matter) con tiles de OpenStreetMap, bajo licencia abierta.</li>
                 </ul>
                 <p class="about-parrafo" style="margin-top: 12px; font-size: 13px; color: #5f6368;">
-                    <em>Cobertura esperada: ~70% del nomenclátor con geometría. Los odónimos restantes se encuentran listados pero sin localización de geometría debido a variaciones de nombres o referencias históricas.</em>
+                    <em>Cobertura actual: 100% del nomenclátor con geometría verificada manualmente.</em>
                 </p>
             </section>
 
@@ -281,7 +394,7 @@
                     <li><strong>Datos abiertos</strong>: Exposición del nomenclátor de la ciudad en formato accesible y descargable.</li>
                     <li><strong>Patrimonio cultural</strong>: Registro visual de homenajes, personajes y lugares significativos.</li>
                     <li><strong>Turismo</strong>: Herramienta de exploración temática para visitantes.</li>
-                    <li><strong>Investigación académica</strong>: API de datos y análisis estadístico de nomenclatura urbana.</li>
+                    <li><strong>Investigación académica</strong>: Dataset abierto y análisis estadístico de la nomenclatura urbana.</li>
                 </ul>
             </section>
 
@@ -307,12 +420,31 @@
                 <ul class="about-lista">
                     <li><strong>Datos de nomenclátor</strong>: Disponibles para descarga y reutilización en sistemas municipales.</li>
                     <li><strong>Código fuente</strong>: Completamente replicable y personalizable para diferentes jurisdicciones.</li>
-                    <li><strong>Integración</strong>: API de datos JSON para integración en sistemas municipales existentes.</li>
+                    <li><strong>Datos abiertos</strong>: Dataset en formato JSON, descargable y reutilizable.</li>
                 </ul>
                 <p class="about-parrafo" style="margin-top: 12px;">
                     Para reportar errores o sugerir mejoras, visitá el <a href="https://github.com/simarisantiago-bot/calleando-caba/issues" target="_blank" rel="noopener">repositorio del proyecto</a>.
                 </p>
             </section>
+        </div>
+    </div>
+
+    <!-- Tutorial de bienvenida (primera visita) -->
+    <div id="tour-overlay" class="tour-overlay" hidden>
+        <div class="tour-spotlight" id="tour-spotlight"></div>
+        <div class="tour-card" id="tour-card" role="dialog" aria-modal="true" aria-labelledby="tour-title">
+            <button type="button" class="tour-skip" id="tour-skip" aria-label="Saltar tutorial" title="Saltar tutorial">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                </svg>
+            </button>
+            <p class="tour-step" id="tour-step-count"></p>
+            <h3 class="tour-title" id="tour-title"></h3>
+            <p class="tour-text" id="tour-text"></p>
+            <div class="tour-actions">
+                <button type="button" class="tour-btn tour-btn-secondary" id="tour-prev">Anterior</button>
+                <button type="button" class="tour-btn tour-btn-primary" id="tour-next">Siguiente</button>
+            </div>
         </div>
     </div>
 

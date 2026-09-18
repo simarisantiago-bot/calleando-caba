@@ -13,6 +13,14 @@ Para cada override, intenta resolver la GEOMETRÍA COMPLETA de la calle:
   4. Los combina como MultiLineString -> la calle entera se dibuja como línea azul.
   5. Si algo falla, fallback a marker (punto) en las coords originales.
 
+El resultado se escribe en el cache bajo el `id` de cada entrada (clave|tipo),
+que es como lo indexa la app (geoCache[entrada.id]). Una clave puede mapear a
+varias entradas (distintos tipos): se escriben todas.
+
+Seguridad: si la resolución cae a pin (p. ej. por un error de red) pero ya
+existía una LÍNEA en el cache para ese id, se conserva la línea previa en vez
+de degradarla. Así re-correr el script es idempotente y no destructivo.
+
 Uso:
     python apply_overrides.py
 """
@@ -48,19 +56,33 @@ def _norm(s):
     return s.lower().strip()
 
 
-def overpass(query):
-    try:
-        r = requests.post(
-            OVERPASS_URL,
-            data={"data": query},
-            timeout=45,
-            headers={"User-Agent": USER_AGENT},
-        )
-        if r.status_code != 200:
+def overpass(query, reintentos=3):
+    """POST a Overpass con reintentos y backoff ante rate limit (429/504) o
+    errores transitorios de red. Devuelve dict o None."""
+    espera = 5
+    for intento in range(reintentos):
+        try:
+            r = requests.post(
+                OVERPASS_URL,
+                data={"data": query},
+                timeout=60,
+                headers={"User-Agent": USER_AGENT},
+            )
+            if r.status_code == 200:
+                return r.json()
+            # 429 (Too Many Requests) / 504 (timeout del servidor): reintentar.
+            if r.status_code in (429, 504) and intento < reintentos - 1:
+                time.sleep(espera)
+                espera *= 2
+                continue
             return None
-        return r.json()
-    except (requests.RequestException, ValueError):
-        return None
+        except (requests.RequestException, ValueError):
+            if intento < reintentos - 1:
+                time.sleep(espera)
+                espera *= 2
+                continue
+            return None
+    return None
 
 
 def way_mas_cercano(lat, lon, radio_m=RADIO_METROS):
@@ -89,6 +111,17 @@ def way_mas_cercano(lat, lon, radio_m=RADIO_METROS):
 
     ways.sort(key=dist2_min)
     return ways[0]
+
+
+def way_por_id(way_id):
+    """Trae un way específico por su OSM id (para calles sin nombre o mal
+    etiquetadas en OSM). Devuelve el elemento way o None."""
+    data = overpass(f'[out:json][timeout:25];way({int(way_id)});out geom;')
+    if not data:
+        return None
+    ways = [el for el in data.get("elements", [])
+            if el.get("type") == "way" and el.get("geometry")]
+    return ways[0] if ways else None
 
 
 def todos_los_ways_con_nombre(name):
@@ -145,12 +178,35 @@ def punto_fallback(lat, lon):
     }
 
 
-def resolver_override(clave_excel, lat, lon):
+def resolver_override(clave_excel, lat, lon, osm_name=None, way_id=None):
     """
     Intenta resolver geometría completa. Aplica check de similitud entre
     nombre del Excel y nombre OSM del way más cercano. Si no se parece,
     devuelve pin + sugerencia del nombre OSM encontrado para revisión manual.
+
+    Si se pasa `way_id`, se usa ese way de OSM directamente (para calles que
+    OSM tiene SIN nombre o mal etiquetadas, donde ni el punto ni el nombre
+    alcanzan). Si se pasa `osm_name` (calles renombradas), se saltea el
+    chequeo de similitud y se trae la línea completa por ese nombre.
     """
+    if way_id:
+        w = way_por_id(way_id)
+        time.sleep(1.1)
+        if w:
+            geo = ways_a_linea([w])
+            if geo:
+                return geo, f"línea por way_id: {way_id} ({geo['ways']} ways)", None
+        # No se pudo traer el way: cae al flujo normal.
+
+    if osm_name:
+        todos = todos_los_ways_con_nombre(osm_name)
+        time.sleep(1.1)
+        if todos:
+            geo = ways_a_linea(todos)
+            if geo:
+                return geo, f"línea por osm_name: '{osm_name}' ({geo['ways']} ways)", None
+        # No encontró nada con ese nombre: cae al flujo normal por punto.
+
     near = way_mas_cercano(lat, lon)
     time.sleep(1.1)
     if not near:
@@ -193,10 +249,15 @@ def main():
     with OVERRIDES.open(encoding="utf-8") as f:
         overrides = json.load(f)
 
-    claves_validas = {c["clave"] for c in calles}
+    # Mapa clave -> [(id, tipo, nombre_busqueda)]. La app indexa por id (clave|tipo),
+    # así que una clave puede corresponder a varias entradas (distintos tipos).
+    clave_a_entradas = {}
+    for c in calles:
+        clave_a_entradas.setdefault(c["clave"], []).append(c)
 
     aplicados = 0
     fallback_punto = 0
+    conservados = 0
     sugerencias = []  # [(clave_excel, nombre_osm_cercano)]
     invalidos = []
 
@@ -205,9 +266,32 @@ def main():
     print()
 
     for i, (clave, coords) in enumerate(overrides.items(), 1):
-        if clave not in claves_validas:
+        entradas = clave_a_entradas.get(clave)
+        if not entradas:
             invalidos.append(clave)
             continue
+
+        # Línea manual: lista de puntos [[lat, lon], ...] dibujados a mano
+        # (calles que OSM no tiene, p. ej. Villa 31 / barrio Padre Mugica).
+        if isinstance(coords, dict) and coords.get("line"):
+            pts = coords["line"]
+            lats = [p[0] for p in pts]
+            lons = [p[1] for p in pts]
+            geo = {
+                "tipo": "line",
+                "geometry": {"type": "LineString",
+                             "coordinates": [[lon, lat] for lat, lon in pts]},
+                "bbox": [min(lats), max(lats), min(lons), max(lons)],
+                "source": "manual-line",
+                "ways": 1,
+            }
+            for c in entradas:
+                cache[c["id"]] = geo
+            aplicados += 1
+            print(f"  [{i:2d}/{len(overrides)}] LIN {entradas[0]['nombre_busqueda'][:34]:34s}"
+                  f" -> {len(pts)} puntos manuales")
+            continue
+
         try:
             lat = float(coords["lat"])
             lon = float(coords["lon"])
@@ -216,10 +300,23 @@ def main():
             continue
 
         # Para comparar similitud uso el nombre legible del Excel, no la clave
-        nombre_excel = next((c["nombre_busqueda"] for c in calles if c["clave"] == clave), clave)
+        nombre_excel = entradas[0]["nombre_busqueda"]
+        osm_name = coords.get("osm_name") if isinstance(coords, dict) else None
+        way_id = coords.get("way_id") if isinstance(coords, dict) else None
 
-        geo, mensaje, sugerencia = resolver_override(nombre_excel, lat, lon)
-        cache[clave] = geo
+        geo, mensaje, sugerencia = resolver_override(
+            nombre_excel, lat, lon, osm_name, way_id)
+
+        # Escribir bajo el id de cada entrada con esa clave.
+        for c in entradas:
+            id_ = c["id"]
+            previo = cache.get(id_)
+            # No degradar una línea existente a pin por un fallo de red.
+            if geo["tipo"] == "point" and previo and previo.get("tipo") == "line":
+                conservados += 1
+                continue
+            cache[id_] = geo
+
         if geo["tipo"] == "point":
             fallback_punto += 1
             if sugerencia:
@@ -227,7 +324,8 @@ def main():
         aplicados += 1
 
         marca = "LIN" if geo["tipo"] == "line" else "PIN"
-        print(f"  [{i:2d}/{len(overrides)}] {marca} {nombre_excel[:38]:38s} | {mensaje}")
+        ids_txt = ", ".join(c["id"] for c in entradas)
+        print(f"  [{i:2d}/{len(overrides)}] {marca} {nombre_excel[:34]:34s} -> {ids_txt} | {mensaje}")
 
     # Guardar
     tmp = GEO_CACHE.with_suffix(".json.tmp")
@@ -239,6 +337,8 @@ def main():
     print(f"Total overrides aplicados: {aplicados}")
     print(f"  Con línea completa: {aplicados - fallback_punto}")
     print(f"  Como pin (fallback): {fallback_punto}")
+    if conservados:
+        print(f"  Líneas previas conservadas (no degradadas a pin): {conservados}")
     if sugerencias:
         print()
         print(f"CANDIDATOS DE OSM (calles cercanas al pin, distinto nombre):")

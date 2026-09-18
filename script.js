@@ -19,6 +19,8 @@
     const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
     const VIEWBOX = "-58.531,-34.706,-58.335,-34.527"; // long/lat, long/lat
     const CACHE_KEY = "calleando_geocache_v1";
+    const FAVORITOS_KEY = "calleando_favoritos_v1";
+    const TOUR_KEY = "calleando_tutorial_v1";
     const MAX_SUGGESTIONS = 8;
     const LINE_COLOR = "#1a73e8";
 
@@ -49,6 +51,49 @@
         return COLORES_CATEGORIA[cat] || LINE_COLOR;
     }
 
+    // Versión oscurecida de algunos colores de COLORES_CATEGORIA, solo para
+    // usar como color de TEXTO sobre fondo blanco (chip .popup-cat, tema
+    // claro/Voyager). El color original de esas 5 categorías no llega al
+    // contraste mínimo de WCAG AA (4.5:1) en texto chico; el resto de la
+    // paleta ya lo cumple tal cual.
+    const COLORES_CATEGORIA_TEXTO = {
+        "FECHA":      "#9d6b03",
+        "NATURALEZA": "#12883e",
+        "ARTE":       "#cd4d0b",
+        "RÍO":        "#07819e",
+        "LUGAR":      "#0b8177",
+    };
+
+    // Versión aclarada de TODA la paleta, para usar como color de texto del
+    // mismo chip cuando el tema es Oscuro: sobre fondo oscuro los colores
+    // "de mapa" (pensados para líneas sobre un tile claro) no alcanzan 4.5:1.
+    const COLORES_CATEGORIA_TEXTO_OSCURO = {
+        "PERSONA":             "#7baef2",
+        "LUGAR":               "#11c3b3",
+        "NATURALEZA":          "#1bc75a",
+        "ACCIÓN MILITAR":      "#ee9494",
+        "CONCEPTO":            "#bd9cf6",
+        "OTROS":               "#a6abb5",
+        "ARTE":                "#f7905b",
+        "BARCO":               "#96abe8",
+        "FECHA":               "#e89e05",
+        "CUERPO MILITAR":      "#ec9494",
+        "PUEBLOS ORIGINARIOS": "#f4950b",
+        "RELIGIÓN":            "#c999f4",
+        "RÍO":                 "#0ab9e3",
+        "INSTITUCIÓN":         "#9facbe",
+        "LITERATURA":          "#ec90b9",
+    };
+
+    function colorTextoParaEntrada(entrada) {
+        if (!entrada) return LINE_COLOR;
+        const cat = (entrada.categoria || "").trim().toUpperCase();
+        if (document.body.classList.contains("tema-oscuro")) {
+            return COLORES_CATEGORIA_TEXTO_OSCURO[cat] || COLORES_CATEGORIA[cat] || LINE_COLOR;
+        }
+        return COLORES_CATEGORIA_TEXTO[cat] || COLORES_CATEGORIA[cat] || LINE_COLOR;
+    }
+
     // Tipos que se dibujan como línea (calles); el resto como marcador.
     const TIPOS_LINEA = new Set([
         "calle", "avenida", "pasaje peatonal", "autopista",
@@ -60,14 +105,11 @@
     let calles = [];               // array cargado desde calles.json
     let geoCache = {};             // {clave: {tipo, geometry, bbox, ...}} pre-geocodificado
     let calleBarrios = {};         // {clave: nombreBarrio} mapping
-    let barriosGeo = null;         // FeatureCollection de los 48 barrios
-    let comunasGeo = null;         // FeatureCollection de las 15 comunas
+    let barriosGeo = null;         // FeatureCollection de los 48 barrios (heatmap)
     let curiosidades = null;       // datos de curiosidades.json (5 secciones temáticas)
-    let barrioActivo = "";         // filtro activo: "" = todos
+    let fotosManual = {};          // {clave: {thumbUrl, pageUrl, autor, licencia}} precomputado
     let categoriaActiva = "";      // filtro de categoría: "" = todas
-    let capaBarrio = null;         // overlay del contorno del barrio activo
-    let capaOverlayTodos = null;   // overlay con los 48 barrios simultáneos
-    let capaOverlayComunas = null; // overlay con las 15 comunas simultáneas
+    let capaBase = null;           // capa base: TODAS las calles clickeables (canvas)
     let capaCategoria = null;      // overlay con todas las calles de la categoría
     let capaHeatmap = null;        // heatmap de barrios por densidad de categoría
     let capaCercaMio = null;       // overlay con las calles cercanas al usuario
@@ -76,12 +118,22 @@
     let capaActual = null;         // polyline o marker dibujado por la última búsqueda
     let popupActual = null;        // popup actual
     let indiceActivo = -1;         // sugerencia resaltada con teclado
+    let redibujandoPorZoom = false; // true mientras dibujarConMenosZoomSiHaceFalta() está probando distintos alejamientos (ver más abajo): evita que el "popupclose" de los cierres intermedios despinte la calle antes de tiempo
+    let tourPasos = [];             // pasos del tutorial de bienvenida, armados en construirPasosTour()
+    let tourPasoActual = 0;
 
     // ---------- DOM ----------
     const $input = document.getElementById("search-input");
     const $btnBuscar = document.getElementById("search-btn");
     const $btnRandom = document.getElementById("random-btn");
     const $btnNearme = document.getElementById("nearme-btn");
+    const $btnEfemeride = document.getElementById("efemeride-btn");
+    const $btnFavoritos = document.getElementById("favoritos-btn");
+    const $favoritosCount = document.getElementById("favoritos-count");
+    const $favoritosPanel = document.getElementById("favoritos-panel");
+    const $favoritosPanelClose = document.getElementById("favoritos-panel-close");
+    const $favoritosList = document.getElementById("favoritos-list");
+    const $favoritosEmpty = document.getElementById("favoritos-empty");
     const $btnTheme = document.getElementById("theme-toggle-btn");
     const $themeMenu = document.getElementById("theme-menu");
     const $btnStats = document.getElementById("stats-btn");
@@ -91,16 +143,33 @@
     const $statsSummary = document.getElementById("stats-summary");
     const $statsTitle = document.getElementById("stats-title");
     const $statsCategorias = document.getElementById("stats-categorias");
+    const $rankingBarrios = document.getElementById("stats-ranking-barrios");
+    const $rankingCategoriaSelect = document.getElementById("ranking-categoria-select");
+    const $rankingBarriosNota = document.getElementById("ranking-barrios-nota");
     const $statsCuriosidades = document.getElementById("stats-curiosidades");
     const $curiosidadesSecciones = document.getElementById("curiosidades-secciones");
     const $aboutBtn = document.getElementById("about-btn");
     const $aboutModal = document.getElementById("about-modal");
     const $aboutClose = document.getElementById("about-close");
     const $aboutOverlay = document.getElementById("about-overlay");
+    const $tourReplayBtn = document.getElementById("tour-replay-btn");
+    const $tourOverlay = document.getElementById("tour-overlay");
+    const $tourSpotlight = document.getElementById("tour-spotlight");
+    const $tourCard = document.getElementById("tour-card");
+    const $tourStepCount = document.getElementById("tour-step-count");
+    const $tourTitle = document.getElementById("tour-title");
+    const $tourText = document.getElementById("tour-text");
+    const $tourPrev = document.getElementById("tour-prev");
+    const $tourNext = document.getElementById("tour-next");
+    const $tourSkip = document.getElementById("tour-skip");
     const $btnLimpiar = document.getElementById("clear-btn");
     const $suggestions = document.getElementById("suggestions");
     const $toast = document.getElementById("status-toast");
     const $categoriaSelect = document.getElementById("categoria-select");
+    const $categoriaFilterWrap = document.querySelector(".categoria-filter");
+    const $categoriaFilterIcon = document.querySelector(".categoria-filter-icon");
+    const $btnTools = document.getElementById("tools-btn");
+    const $toolsPanel = document.getElementById("tools-panel");
 
     // =================================================================
     // 1. UTILIDADES
@@ -135,6 +204,123 @@
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;");
+    }
+
+    // =================================================================
+    // 1b. IMÁGENES DE WIKIPEDIA (pageimages) + cache en sessionStorage
+    // =================================================================
+    //
+    // Para no almacenar imágenes localmente, pedimos en vivo la imagen
+    // principal del artículo de Wikipedia que mejor matchea el nombre de
+    // la calle. La respuesta (URL del thumbnail + autor/licencia) se cachea
+    // por término en memoria y en sessionStorage para no repetir requests.
+
+    const WIKI_API = "https://es.wikipedia.org/w/api.php";
+    const WIKI_CACHE_KEY = "calleando_wikimg_v1";
+    const wikiMem = {}; // cache en memoria de la sesión
+
+    function leerWikiCache() {
+        try {
+            return JSON.parse(sessionStorage.getItem(WIKI_CACHE_KEY) || "{}");
+        } catch (_) {
+            return {};
+        }
+    }
+
+    function guardarWikiCache(key, data) {
+        wikiMem[key] = data;
+        try {
+            const c = leerWikiCache();
+            c[key] = data;
+            sessionStorage.setItem(WIKI_CACHE_KEY, JSON.stringify(c));
+        } catch (_) {
+            /* sessionStorage lleno o no disponible: seguimos solo en memoria */
+        }
+    }
+
+    // Convierte un fragmento HTML (como el campo Artist de Commons) en texto plano.
+    // Commons suele incluir texto oculto (display:none) que no queremos mostrar.
+    function quitarHtml(s) {
+        const tmp = document.createElement("div");
+        tmp.innerHTML = String(s || "");
+        tmp.querySelectorAll('[style*="display:none"], [style*="display: none"]')
+            .forEach((el) => el.remove());
+        return (tmp.textContent || tmp.innerText || "").replace(/\s+/g, " ").trim();
+    }
+
+    // Segunda llamada (best-effort): autor + licencia del archivo en Commons.
+    async function obtenerAtribucion(fileTitle) {
+        try {
+            const params = new URLSearchParams({
+                action: "query", format: "json", origin: "*",
+                prop: "imageinfo", iiprop: "extmetadata",
+                titles: "File:" + fileTitle,
+            });
+            const resp = await fetch(`${WIKI_API}?${params.toString()}`);
+            if (!resp.ok) return null;
+            const json = await resp.json();
+            const pages = (json && json.query && json.query.pages) || {};
+            const page = Object.values(pages)[0];
+            const meta = (page && page.imageinfo && page.imageinfo[0] &&
+                          page.imageinfo[0].extmetadata) || {};
+            return {
+                autor: meta.Artist ? quitarHtml(meta.Artist.value) : "",
+                licencia: meta.LicenseShortName ? quitarHtml(meta.LicenseShortName.value) : "",
+            };
+        } catch (_) {
+            return null;
+        }
+    }
+
+    // Busca la imagen principal de Wikipedia para un término de búsqueda.
+    // Devuelve {thumbUrl, pageUrl, titulo, autor, licencia} o null si no hay.
+    async function fetchStreetImage(searchTerm) {
+        const term = (searchTerm || "").trim();
+        if (!term) return null;
+        const key = term.toLowerCase();
+
+        // Cache: memoria -> sessionStorage (incluye misses para no repetir).
+        if (key in wikiMem) return wikiMem[key];
+        const disk = leerWikiCache();
+        if (key in disk) { wikiMem[key] = disk[key]; return disk[key]; }
+
+        try {
+            const params = new URLSearchParams({
+                action: "query", format: "json", origin: "*",
+                generator: "search", gsrsearch: term, gsrlimit: "1",
+                gsrnamespace: "0",
+                prop: "pageimages|info|pageprops", piprop: "thumbnail|name",
+                pithumbsize: "480", ppprop: "disambiguation", inprop: "url",
+            });
+            const resp = await fetch(`${WIKI_API}?${params.toString()}`);
+            if (!resp.ok) { guardarWikiCache(key, null); return null; }
+            const json = await resp.json();
+            const pages = json && json.query && json.query.pages;
+            const page = pages && Object.values(pages)[0];
+            const thumb = page && page.thumbnail && page.thumbnail.source;
+            // Páginas de desambiguación: no son la entidad buscada -> tratamos
+            // como miss para que el llamador pruebe el término de fallback.
+            const esDesambiguacion = page && page.pageprops &&
+                "disambiguation" in page.pageprops;
+            if (!thumb || esDesambiguacion) { guardarWikiCache(key, null); return null; }
+
+            const data = {
+                thumbUrl: thumb,
+                pageUrl: page.fullurl || `https://es.wikipedia.org/?curid=${page.pageid}`,
+                titulo: page.title || term,
+                autor: "",
+                licencia: "",
+            };
+            // Atribución (best-effort: si falla, mostramos igual con crédito genérico).
+            if (page.pageimage) {
+                const atr = await obtenerAtribucion(page.pageimage);
+                if (atr) { data.autor = atr.autor; data.licencia = atr.licencia; }
+            }
+            guardarWikiCache(key, data);
+            return data;
+        } catch (_) {
+            return null; // error de red: no cacheamos para poder reintentar
+        }
     }
 
     // =================================================================
@@ -186,23 +372,38 @@
 
         // Reposicionar el control de zoom para no chocar con la caja de búsqueda
         mapa.zoomControl.setPosition("bottomright");
+
+        // Al cerrar el popup (botón X, click afuera, Esc) se despinta también
+        // la calle/marcador resaltado. limpiarCapa() ya deja capaActual en
+        // null antes de cerrar su propio popup, así que no hay doble remoción.
+        mapa.on("popupclose", () => {
+            // Mientras se prueban distintos alejamientos (ver
+            // dibujarConMenosZoomSiHaceFalta) se cierra y reabre el popup
+            // varias veces a propósito; no hay que despintar nada todavía.
+            if (redibujandoPorZoom) return;
+            if (capaActual) {
+                mapa.removeLayer(capaActual);
+                capaActual = null;
+            }
+            popupActual = null;
+        });
     }
 
-    // Capas de tiles disponibles
+    // Capas de tiles disponibles (OpenStreetMap, sin API key requerida)
     const TEMAS = {
         voyager: {
-            url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            subdomains: "abcd",
-            label: "Voyager",
+            url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            subdomains: "abc",
+            label: "Estándar",
         },
         claro: {
-            url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-            subdomains: "abcd",
+            url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            subdomains: "abc",
             label: "Claro",
         },
         oscuro: {
-            url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-            subdomains: "abcd",
+            url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            subdomains: "abc",
             label: "Oscuro",
         },
     };
@@ -230,7 +431,9 @@
     function marcarTemaActivo() {
         if (!$themeMenu) return;
         for (const li of $themeMenu.querySelectorAll("li[data-tema]")) {
-            li.classList.toggle("activo", li.dataset.tema === temaActual);
+            const activo = li.dataset.tema === temaActual;
+            li.classList.toggle("activo", activo);
+            li.setAttribute("aria-checked", String(activo));
         }
     }
 
@@ -239,19 +442,28 @@
     // =================================================================
 
     async function cargarDatos() {
-        // Carga en paralelo: dataset, cache geo, barrios, comunas, mapping y curiosidades.
-        const [respCalles, respCache, respBarrios, respComunas, respMap, respCuri] = await Promise.all([
-            fetch("data/calles.json"),
+        // Carga en paralelo: dataset, cache geo, barrios (heatmap), mapping y curiosidades.
+        const [respCalles, respCache, respBarrios, respMap, respCuri, respFotos] = await Promise.all([
+            // A diferencia de las demás, esta carga es indispensable: sin
+            // calles.json la app entera queda inutilizable (buscador y mapa
+            // sin nada que mostrar). El .catch() evita que un fallo de RED
+            // (no solo un 404/500, que ya maneja el "!respCalles.ok" de
+            // abajo) tire un unhandled rejection y deje todo roto en
+            // silencio, sin ningún aviso para quien está usando la página.
+            fetch("data/calles.json").catch(() => null),
             fetch("data/geo_cache.json").catch(() => null),
             fetch("data/barrios.geojson").catch(() => null),
-            fetch("data/comunas.geojson").catch(() => null),
             fetch("data/calle_barrios.json").catch(() => null),
             fetch("data/curiosidades.json").catch(() => null),
+            fetch("data/fotos.json").catch(() => null),
         ]);
 
         if (!respCalles || !respCalles.ok) {
             console.error("Error cargando calles.json");
-            mostrarToast("No se pudieron cargar los datos del Excel.", 6000);
+            // Sin esto no funciona nada (ni buscador ni mapa): el aviso
+            // queda fijo en vez de desaparecer solo, para que no pase
+            // desapercibido si quien lo ve mira la pantalla recién después.
+            mostrarToast("No se pudieron cargar los datos. Recargá la página para reintentar.", 24 * 60 * 60 * 1000);
             return;
         }
         calles = await respCalles.json();
@@ -282,12 +494,6 @@
                 console.log(`Barrios cargados: ${barriosGeo.features.length}`);
             } catch (_) { barriosGeo = null; }
         }
-        if (respComunas && respComunas.ok) {
-            try {
-                comunasGeo = await respComunas.json();
-                console.log(`Comunas cargadas: ${comunasGeo.features.length}`);
-            } catch (_) { comunasGeo = null; }
-        }
         if (respMap && respMap.ok) {
             try {
                 calleBarrios = await respMap.json();
@@ -300,6 +506,12 @@
                 console.log(`Curiosidades cargadas: ${curiosidades.secciones.length} secciones`);
             } catch (_) { curiosidades = null; }
         }
+        if (respFotos && respFotos.ok) {
+            try {
+                fotosManual = await respFotos.json();
+                console.log(`Fotos precomputadas: ${Object.keys(fotosManual).length}`);
+            } catch (_) { fotosManual = {}; }
+        }
 
         // Vincular cada entrada a su barrio para uso en autocomplete
         for (const c of calles) {
@@ -307,6 +519,7 @@
         }
 
         poblarDropdownCategorias();
+        poblarRankingCategoriaSelect();
     }
 
     // =================================================================
@@ -314,16 +527,11 @@
     // =================================================================
 
     function entradaCoincideFiltro(entrada) {
-        // Filtro de categoría (combinable con el de barrio)
+        // Filtro de categoría activo
         if (categoriaActiva) {
             const cat = (entrada.categoria || "").trim().toUpperCase();
             if (cat !== categoriaActiva) return false;
         }
-        // barrioActivo puede ser: "" (sin filtro), un string (barrio único)
-        // o un Set (todos los barrios de una comuna).
-        if (!barrioActivo) return true;
-        if (typeof barrioActivo === "string") return entrada.barrio === barrioActivo;
-        if (barrioActivo instanceof Set) return barrioActivo.has(entrada.barrio);
         return true;
     }
 
@@ -353,27 +561,24 @@
     }
 
     function aplicarFiltroCategoria(valor) {
-        categoriaActiva = (valor || "").trim().toUpperCase();
-        $categoriaSelect.classList.toggle("active-filter", !!categoriaActiva);
+        // Despinta la calle/marcador buscado y cierra su popup, además de
+        // limpiar los overlays de categoría/heatmap de la selección previa.
+        limpiarCapa();
 
-        // El texto del select muestra el color de la categoría elegida
+        categoriaActiva = (valor || "").trim().toUpperCase();
+        if ($categoriaFilterWrap) {
+            $categoriaFilterWrap.classList.toggle("active-filter", !!categoriaActiva);
+        }
+        actualizarURLCategoria(categoriaActiva);
+
+        // El círculo del filtro muestra el color de la categoría elegida
         const colorCat = COLORES_CATEGORIA[categoriaActiva];
         if (colorCat) {
-            $categoriaSelect.style.color = colorCat;
-            $categoriaSelect.style.backgroundColor = colorCat + "1a";
+            if ($categoriaFilterWrap) $categoriaFilterWrap.style.backgroundColor = colorCat + "1a";
+            if ($categoriaFilterIcon) $categoriaFilterIcon.style.fill = colorCat;
         } else {
-            $categoriaSelect.style.color = "";
-            $categoriaSelect.style.backgroundColor = "";
-        }
-
-        // Limpiar overlays previos (círculos + heatmap de la última categoría)
-        if (capaCategoria) {
-            mapa.removeLayer(capaCategoria);
-            capaCategoria = null;
-        }
-        if (capaHeatmap) {
-            mapa.removeLayer(capaHeatmap);
-            capaHeatmap = null;
+            if ($categoriaFilterWrap) $categoriaFilterWrap.style.backgroundColor = "";
+            if ($categoriaFilterIcon) $categoriaFilterIcon.style.fill = "";
         }
 
         if (!categoriaActiva) {
@@ -451,6 +656,79 @@
 
         // El heatmap va POR DEBAJO de los círculos individuales
         capaHeatmap.bringToBack();
+    }
+
+    /**
+     * Capa base: dibuja TODAS las calles/plazas cacheadas, tenues y siempre
+     * visibles, para que se pueda hacer click en cualquiera y ver su popup
+     * (sin depender de la búsqueda ni del filtro de categoría).
+     *
+     * Se renderiza con canvas (L.canvas) en un pane inferior propio para que
+     * aguante ~2.900 geometrías sin lag y quede por debajo de la selección,
+     * el overlay de categoría y el heatmap. limpiarCapa() NO la toca.
+     */
+    function dibujarCapaBase() {
+        if (capaBase) {
+            mapa.removeLayer(capaBase);
+            capaBase = null;
+        }
+        if (!mapa.getPane("baseCalles")) {
+            mapa.createPane("baseCalles");
+            // overlayPane usa zIndex 400; dejamos la base por debajo.
+            mapa.getPane("baseCalles").style.zIndex = 350;
+        }
+        const renderer = L.canvas({ pane: "baseCalles" });
+        const capas = [];
+
+        // La capa es INVISIBLE (opacity 0): el mapa se ve igual que antes.
+        // Solo sirve para captar el click. El `weight`/`radius` define el área
+        // de click alrededor de cada calle (no se dibuja nada visible).
+        for (const c of calles) {
+            const geo = geoCache[c.id || c.clave];
+            if (!geo) continue;
+
+            if (geo.tipo === "line" && geo.geometry) {
+                const layer = L.geoJSON(geo.geometry, {
+                    renderer,
+                    pane: "baseCalles",
+                    interactive: true,
+                    style: {
+                        stroke: true,
+                        weight: 7,     // área de click generosa
+                        opacity: 0,    // invisible
+                    },
+                });
+                layer.bindTooltip(c.nombre_busqueda, {
+                    sticky: true,
+                    direction: "top",
+                    className: "barrio-tooltip",
+                });
+                layer.on("click", () => seleccionarEntrada(c));
+                capas.push(layer);
+            } else {
+                const latlng = centroideDeGeo(geo);
+                if (!latlng) continue;
+                const marker = L.circleMarker(latlng, {
+                    renderer,
+                    pane: "baseCalles",
+                    interactive: true,
+                    radius: 8,         // área de click
+                    stroke: false,
+                    opacity: 0,        // invisible
+                    fillOpacity: 0,
+                });
+                marker.bindTooltip(c.nombre_busqueda, {
+                    direction: "top",
+                    offset: [0, -4],
+                    className: "barrio-tooltip",
+                });
+                marker.on("click", () => seleccionarEntrada(c));
+                capas.push(marker);
+            }
+        }
+
+        capaBase = L.layerGroup(capas).addTo(mapa);
+        console.log(`Capa base clickeable: ${capas.length} odónimos`);
     }
 
     /**
@@ -555,15 +833,28 @@
             if (c.clave.startsWith(q)) {
                 empiezan.push(c);
             } else if (c.clave.includes(q)) {
-                contienen.push(c);
+                if (contienen.length < MAX_SUGGESTIONS) contienen.push(c);
             } else if (c.desc_clave && c.desc_clave.includes(q)) {
                 // Match en historia/descripción. Marcamos con flag para que
                 // el render muestre el snippet.
-                enDescripcion.push({ ...c, _matchDesc: q });
+                if (enDescripcion.length < MAX_SUGGESTIONS) {
+                    enDescripcion.push({ ...c, _matchDesc: q });
+                }
             }
-            // Cortamos temprano si ya hay muchos por nombre
-            if (empiezan.length >= MAX_SUGGESTIONS) break;
         }
+
+        // Dentro de "empiezan con": el match EXACTO va primero, luego los
+        // nombres más cortos (más cercanos a la consulta) y alfabético. Así
+        // "República" gana a "República Árabe Siria" al tipear "republica".
+        empiezan.sort((a, b) => {
+            const exA = a.clave === q ? 0 : 1;
+            const exB = b.clave === q ? 0 : 1;
+            if (exA !== exB) return exA - exB;
+            if (a.clave.length !== b.clave.length) {
+                return a.clave.length - b.clave.length;
+            }
+            return a.clave.localeCompare(b.clave);
+        });
 
         // Combinamos manteniendo prioridad
         return empiezan
@@ -651,7 +942,67 @@
         $input.value = entrada.nombre_busqueda;
         $suggestions.hidden = true;
         $btnLimpiar.hidden = false;
+        actualizarURL(entrada);
         ubicarEnMapa(entrada);
+    }
+
+    // ---------- Links compartibles a una calle ----------
+    // Refleja la calle seleccionada en la URL (?c=<id>) sin recargar, para
+    // poder compartir un link directo. La app la abre al cargar (ver main()).
+    function actualizarURL(entrada) {
+        try {
+            history.replaceState(null, "",
+                location.pathname + "?c=" + encodeURIComponent(entrada.id));
+        } catch (_) { /* history no disponible: ignorar */ }
+    }
+
+    function limpiarURL() {
+        try { history.replaceState(null, "", location.pathname); } catch (_) {}
+    }
+
+    function linkDeEntrada(id) {
+        return location.origin + location.pathname + "?c=" + encodeURIComponent(id);
+    }
+
+    // Al cargar: si la URL trae ?c=<id o clave>, seleccionar esa calle.
+    // Devuelve true si encontró y aplicó algo (para no pisarlo después con
+    // el filtro de categoría de seleccionarCategoriaDesdeURL, ver main()).
+    function seleccionarDesdeURL() {
+        const c = new URLSearchParams(location.search).get("c");
+        if (!c) return false;
+        const entrada = calles.find((x) => x.id === c)
+            || calles.find((x) => x.clave === c);
+        if (!entrada) return false;
+        seleccionarEntrada(entrada);
+        return true;
+    }
+
+    // ---------- Links compartibles a una vista filtrada por categoría ----------
+    // Mismo mecanismo que actualizarURL/seleccionarDesdeURL pero para el
+    // filtro de categoría (?cat=PERSONA), para poder compartir por ejemplo
+    // "todas las plazas dedicadas a una fecha" en vez de solo una calle.
+    function actualizarURLCategoria(categoria) {
+        try {
+            if (categoria) {
+                history.replaceState(null, "",
+                    location.pathname + "?cat=" + encodeURIComponent(categoria));
+            } else {
+                limpiarURL();
+            }
+        } catch (_) { /* history no disponible: ignorar */ }
+    }
+
+    // Al cargar: si la URL trae ?cat=<categoría> (y no había ?c= que ya
+    // haya ganado la prioridad), aplicar ese filtro.
+    function seleccionarCategoriaDesdeURL() {
+        const cat = new URLSearchParams(location.search).get("cat");
+        if (!cat) return false;
+        const catNorm = cat.trim().toUpperCase();
+        const valida = Array.from($categoriaSelect.options).some((o) => o.value === catNorm);
+        if (!valida) return false;
+        $categoriaSelect.value = catNorm;
+        aplicarFiltroCategoria(catNorm);
+        return true;
     }
 
     // =================================================================
@@ -784,7 +1135,7 @@
         // Un círculo chico por cada calle cercana
         const markers = [];
         for (const item of cercanas) {
-            const color = colorParaCategoria(item.entrada.categoria);
+            const color = colorParaEntrada(item.entrada);
             const distTxt = item.dist < 100
                 ? `${Math.round(item.dist)} m`
                 : `${(item.dist / 1).toFixed(0)} m`;
@@ -815,31 +1166,207 @@
         mapa.flyTo([lat, lon], 17, { duration: 0.8 });
     }
 
-    /**
-     * Elige una entrada al azar entre las que tienen geometría cacheada
-     * y respeta el filtro de barrio/comuna activo. Si no hay ninguna que
-     * cumpla, lo intenta sin filtro como fallback.
-     */
-    function calleAlAzar() {
-        if (!Array.isArray(calles) || calles.length === 0) return;
+    /** Fecha de "hoy" en huso horario de Buenos Aires, como "YYYY-MM-DD".
+     *  Se usa como semilla fija del día: así la calle del día es la misma
+     *  para todos los visitantes sin importar el huso horario de cada uno. */
+    function fechaDeHoyBA() {
+        return new Intl.DateTimeFormat("en-CA", {
+            timeZone: "America/Argentina/Buenos_Aires",
+        }).format(new Date());
+    }
 
-        const tieneCache = (c) => {
-            const k = c.id || c.clave;
-            return !!geoCache[k];
-        };
-
-        // Primer intento: respeta filtro de barrio/comuna activo
-        let pool = calles.filter((c) => tieneCache(c) && entradaCoincideFiltro(c));
-        // Si el filtro deja vacío (ej. comuna sin nada), caer al universo
-        if (pool.length === 0) {
-            pool = calles.filter(tieneCache);
+    /** Hash determinístico simple (FNV-1a-like) de un string a un entero >= 0. */
+    function hashDeterministico(str) {
+        let h = 0;
+        for (let i = 0; i < str.length; i++) {
+            h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
         }
-        if (pool.length === 0) {
+        return Math.abs(h);
+    }
+
+    /**
+     * Elige la entrada "del día" entre las que tienen geometría cacheada,
+     * usando la fecha de hoy (en Buenos Aires) como semilla. No respeta el
+     * filtro de categoría/barrio activo: es un único valor fijo por día,
+     * igual para todos los visitantes.
+     */
+    function calleDelDia() {
+        if (!Array.isArray(calles) || calles.length === 0) return null;
+
+        const tieneCache = (c) => !!geoCache[c.id || c.clave];
+        const pool = calles.filter(tieneCache);
+        if (pool.length === 0) return null;
+
+        const indice = hashDeterministico(fechaDeHoyBA()) % pool.length;
+        return pool[indice];
+    }
+
+    function mostrarCalleDelDia() {
+        const elegida = calleDelDia();
+        if (!elegida) {
             mostrarToast("Todavía no hay calles cacheadas.", 3000);
             return;
         }
-        const elegida = pool[Math.floor(Math.random() * pool.length)];
         seleccionarEntrada(elegida);
+    }
+
+    const MESES_ES = {
+        enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6,
+        julio: 7, agosto: 8, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12,
+    };
+
+    /**
+     * Busca, entre las entradas de categoría FECHA, la que tiene el mismo
+     * día y mes que hoy (el año no importa para el match). El día/mes/año
+     * se extraen de la propia descripción ("20 de febrero de 1813: ..."),
+     * que ya viene consistente para casi todas — no hace falta ningún
+     * campo nuevo en el Excel.
+     *
+     * Si hay más de una para el mismo día (raro pero posible), se elige
+     * siempre la misma —orden alfabético por clave— para que sea igual
+     * para todos los visitantes, mismo criterio que calleDelDia().
+     *
+     * Devuelve null la gran mayoría de los días: con ~45 entradas FECHA
+     * sobre 365 días no hay match casi 7 de cada 8 veces, y está bien que
+     * el botón simplemente no aparezca esos días en vez de forzar algo.
+     */
+    function efemerideDeHoy() {
+        if (!Array.isArray(calles) || calles.length === 0) return null;
+
+        const [anioActual, mesHoy, diaHoy] = fechaDeHoyBA().split("-").map(Number);
+
+        const candidatas = [];
+        for (const c of calles) {
+            if ((c.categoria || "").trim().toUpperCase() !== "FECHA") continue;
+            const m = /^(\d{1,2})\s+de\s+(\p{L}+)(?:\s+de\s+(\d{3,4}))?/iu.exec(c.descripcion || "");
+            if (!m) continue;
+            const dia = parseInt(m[1], 10);
+            const mes = MESES_ES[m[2].toLowerCase()];
+            if (mes === mesHoy && dia === diaHoy) {
+                candidatas.push({ entrada: c, anio: m[3] ? parseInt(m[3], 10) : null });
+            }
+        }
+        if (!candidatas.length) return null;
+
+        candidatas.sort((a, b) => a.entrada.clave.localeCompare(b.entrada.clave));
+        const elegida = candidatas[0];
+        return {
+            entrada: elegida.entrada,
+            aniosTranscurridos: elegida.anio ? anioActual - elegida.anio : null,
+        };
+    }
+
+    /** Muestra el botón "Un día como hoy" solo si hay una efeméride para
+     *  la fecha de hoy; si no hay ninguna, el botón queda oculto (su
+     *  estado por defecto en el HTML). */
+    function inicializarEfemeride() {
+        if (!$btnEfemeride) return;
+        const resultado = efemerideDeHoy();
+        if (!resultado) return;
+
+        const { entrada, aniosTranscurridos } = resultado;
+        $btnEfemeride.title = aniosTranscurridos != null
+            ? `Un día como hoy, hace ${aniosTranscurridos} años: ${entrada.nombre_busqueda}`
+            : `Un día como hoy: ${entrada.nombre_busqueda}`;
+        $btnEfemeride.hidden = false;
+        $btnEfemeride.addEventListener("click", () => seleccionarEntrada(entrada));
+    }
+
+    // =================================================================
+    // FAVORITOS — calles marcadas a mano por quien navega, persistentes
+    // en localStorage (a diferencia de la efeméride o "calle del día",
+    // que son iguales para todos los visitantes).
+    // =================================================================
+
+    function leerFavoritos() {
+        try {
+            const arr = JSON.parse(localStorage.getItem(FAVORITOS_KEY) || "[]");
+            return Array.isArray(arr) ? arr : [];
+        } catch (_) {
+            return [];
+        }
+    }
+
+    function guardarFavoritos(ids) {
+        try {
+            localStorage.setItem(FAVORITOS_KEY, JSON.stringify(ids));
+        } catch (_) {
+            // localStorage lleno o deshabilitado: no hay mucho más para
+            // hacer, la marca de favorito simplemente no persiste.
+        }
+    }
+
+    function esFavorito(id) {
+        return leerFavoritos().includes(id);
+    }
+
+    /** Agrega o saca `id` de favoritos y devuelve si quedó marcado. */
+    function alternarFavorito(id) {
+        const favoritos = leerFavoritos();
+        const idx = favoritos.indexOf(id);
+        if (idx === -1) {
+            favoritos.push(id);
+        } else {
+            favoritos.splice(idx, 1);
+        }
+        guardarFavoritos(favoritos);
+        actualizarBadgeFavoritos();
+        return idx === -1;
+    }
+
+    function actualizarBadgeFavoritos() {
+        if (!$favoritosCount) return;
+        const n = leerFavoritos().length;
+        $favoritosCount.textContent = String(n);
+        $favoritosCount.hidden = n === 0;
+    }
+
+    function renderFavoritosPanel() {
+        if (!$favoritosList || !$favoritosEmpty) return;
+        const ids = leerFavoritos();
+        // El orden de guardado es el de "marcado más reciente al final";
+        // se muestra al revés para que lo último marcado aparezca primero.
+        const entradas = ids
+            .slice()
+            .reverse()
+            .map((id) => calles.find((c) => c.id === id))
+            .filter(Boolean);
+
+        $favoritosEmpty.hidden = entradas.length > 0;
+        $favoritosList.innerHTML = entradas.map((entrada) => `
+            <li data-id="${escapeHtml(entrada.id)}">
+                <span class="favoritos-item-info">
+                    <span class="favoritos-item-title">${escapeHtml(entrada.nombre_busqueda)}</span>
+                    <span class="favoritos-item-sub">${escapeHtml((entrada.tipo || "").trim())}</span>
+                </span>
+                <button type="button" class="favoritos-item-remove" data-id="${escapeHtml(entrada.id)}" aria-label="Sacar de favoritas">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                </button>
+            </li>
+        `).join("");
+    }
+
+    function abrirPanelFavoritos() {
+        if (!$favoritosPanel || !$btnFavoritos) return;
+        renderFavoritosPanel();
+        $favoritosPanel.hidden = false;
+        $btnFavoritos.setAttribute("aria-expanded", "true");
+    }
+
+    function cerrarPanelFavoritos() {
+        if (!$favoritosPanel || !$btnFavoritos) return;
+        $favoritosPanel.hidden = true;
+        $btnFavoritos.setAttribute("aria-expanded", "false");
+    }
+
+    /** Refleja en un botón "★ favorita" del popup el estado actual. */
+    function sincronizarBotonFavorito(boton, favorito) {
+        boton.classList.toggle("es-favorito", favorito);
+        boton.setAttribute("aria-pressed", String(favorito));
+        const span = boton.querySelector("span");
+        if (span) span.textContent = favorito ? "En favoritas" : "Favorita";
     }
 
     /** Busca por texto libre cuando el usuario aprieta el botón Buscar. */
@@ -995,107 +1522,7 @@
             mapa.removeLayer(capaActual);
             capaActual = null;
         }
-        // closePopup() sin argumentos cierra cualquier popup abierto; evita
-        // pasarle un objeto que podría ser un marker (no un popup) y crashear.
-        mapa.closePopup();
-        popupActual = null;
-    }
-
-    // =================================================================
-    // 7b. FILTRO POR BARRIO
-    // =================================================================
-
-    function quitarOverlays() {
-        for (const capa of [capaBarrio, capaOverlayTodos, capaOverlayComunas]) {
-            if (capa) mapa.removeLayer(capa);
-        }
-        capaBarrio = null;
-        capaOverlayTodos = null;
-        capaOverlayComunas = null;
-    }
-
-    /** Dibuja una FeatureCollection como overlay con tooltips y click->filtrar. */
-    function dibujarOverlay(featureCollection, onClickValor) {
-        const capa = L.geoJSON(featureCollection, {
-            style: {
-                color: "#1a73e8",
-                weight: 1.3,
-                opacity: 0.75,
-                fillColor: "#1a73e8",
-                fillOpacity: 0.05,
-            },
-            onEachFeature: (feature, layer) => {
-                const nombre = feature.properties.nombre;
-                layer.bindTooltip(nombre, {
-                    sticky: true,
-                    direction: "top",
-                    className: "barrio-tooltip",
-                });
-                layer.on("mouseover", () => {
-                    layer.setStyle({ weight: 2.8, fillOpacity: 0.18 });
-                });
-                layer.on("mouseout", () => {
-                    capa.resetStyle(layer);
-                });
-                layer.on("click", () => {
-                    const valor = onClickValor(feature);
-                    aplicarFiltroBarrio(valor);
-                });
-            },
-        }).addTo(mapa);
-        const bounds = capa.getBounds();
-        mapa.flyTo(bounds.getCenter(), 12, {
-            duration: 0.6,
-        });
-        return capa;
-    }
-
-    function dibujarContornoUnico(feature, maxZoom = 15) {
-        const capa = L.geoJSON(feature, {
-            style: {
-                color: "#1a73e8",
-                weight: 2,
-                opacity: 0.7,
-                dashArray: "5, 3",
-                fillColor: "none",
-                fillOpacity: 0,
-            },
-            interactive: false,
-        }).addTo(mapa);
-
-        const bounds = capa.getBounds();
-        const center = bounds.getCenter();
-
-        // Calcular zoom basado en el área del bounds
-        const latDiff = bounds.getNorth() - bounds.getSouth();
-        const lngDiff = bounds.getEast() - bounds.getWest();
-        const maxDiff = Math.max(latDiff, lngDiff);
-
-        let zoom = 13;
-        if (maxDiff < 0.02) zoom = 16;
-        else if (maxDiff < 0.05) zoom = 15;
-        else if (maxDiff < 0.1) zoom = 14;
-        else if (maxDiff < 0.2) zoom = 13;
-        else zoom = 12;
-
-        zoom = Math.min(zoom, maxZoom);
-
-        mapa.flyTo(center, zoom, {
-            duration: 0.7,
-        });
-        return capa;
-    }
-
-    /** Devuelve el conjunto de barrios pertenecientes a una comuna. */
-    function barriosDeComuna(numero) {
-        if (!comunasGeo) return new Set();
-        const f = comunasGeo.features.find((x) => x.properties.comuna === numero);
-        return new Set((f && f.properties.barrios) || []);
-    }
-
-    function aplicarFiltroBarrio(valor) {
-        quitarOverlays();
-        limpiarCapa();
+        // Limpiar categoría y heatmap cuando se selecciona una calle
         if (capaCategoria) {
             mapa.removeLayer(capaCategoria);
             capaCategoria = null;
@@ -1104,65 +1531,314 @@
             mapa.removeLayer(capaHeatmap);
             capaHeatmap = null;
         }
-        barrioActivo = "";
+        // closePopup() sin argumentos cierra cualquier popup abierto; evita
+        // pasarle un objeto que podría ser un marker (no un popup) y crashear.
+        mapa.closePopup();
+        popupActual = null;
+    }
 
-        const isOverlay = valor === "__overlay_barrios__" || valor === "__overlay_comunas__";
-        const isBarrio = valor && valor.startsWith("barrio:");
-        const isComuna = valor && valor.startsWith("comuna:");
+    // ---------- Posicionamiento del popup: pegado al trazado/punto ----------
+    //
+    // Preferencia visual: calles/avenidas norte-sur muestran el popup al
+    // costado (no tapando el trazado); este-oeste, arriba o abajo. Los
+    // puntos (plazas, parques, etc.) van arriba/abajo del pin, igual que
+    // una calle este-oeste. Pero esa preferencia es solo el PRIMER intento:
+    // si ninguno de esos dos lados entra completo en la pantalla (por
+    // ejemplo, una calle este-oeste ancha con el popup más alto de lo que
+    // hay lugar arriba/abajo), se prueba también el par PERPENDICULAR antes
+    // de resignarse a achicar el contenido — importa que se vea completo el
+    // popup Y el trazado/espacio, no en qué lado específico termina cayendo.
+    //
+    // Separación entre el trazado/punto y el popup. "extensionFormaPx" mide
+    // el bounding box GEOMÉTRICO de la calle (el centro de la línea), pero
+    // el trazo dibujado tiene weight:8 (o 3 para áreas) y se renderiza
+    // centrado sobre esa línea, así que sobresale ~4px de cada lado del
+    // bounding box geométrico. El gap tiene que cubrir eso además del hueco
+    // visual real, si no el popup queda pegado justo encima del trazo.
+    const POPUP_GAP = 22;
+    const POPUP_ALTO_ESTIMADO = 200; // alto aprox. inicial (varía mucho según contenido)
 
-        // Vista general
-        if (!valor) {
-            mapa.flyTo(CABA_CENTER, 13, { duration: 0.6 });
-            return;
+    // Ancho del popup según el lado. Al costado de una calle norte-sur el
+    // ancho "de siempre" (320px) ya se ve bien porque el alto disponible es
+    // generoso (todo el largo de la pantalla). Arriba/abajo de una calle
+    // este-oeste (o de un punto) el alto disponible es más chico —lo come
+    // el propio trazado/espacio y los bordes de la pantalla—, así que ahí
+    // conviene un popup más ANCHO: mismo texto en menos líneas, menos alto
+    // total, aprovechando el espacio horizontal libre que sí sobra.
+    const POPUP_ANCHO_NORMAL = 320;
+    const POPUP_ANCHO_ESTIMADO = POPUP_ANCHO_NORMAL; // para abrirPopupPosicionado, antes de saber el lado real
+    function anchoParaDireccion(dir) {
+        if (dir === "izquierda" || dir === "derecha") return POPUP_ANCHO_NORMAL;
+        // -20 de margen mínimo a cada lado de la pantalla (ver "limites") y
+        // -36 del "chrome" propio del popup (padding del wrapper + margin
+        // del content) que se suma AFUERA de este ancho: sin restarlo, en
+        // pantallas chicas el wrapper terminaba más ancho de lo que entra.
+        return Math.min(520, window.innerWidth - 20 - 36);
+    }
+
+    // Tamaño del ícono default de Leaflet (25x41, anclado en la punta
+    // inferior): el cuerpo del pin sobresale esto por ENCIMA del punto
+    // geográfico, aunque el bbox del lugar sea chico o no haya bbox. Si el
+    // popup se abre "arriba" tiene que esquivarlo (si se abre "abajo" no
+    // hace falta: el pin no tiene cuerpo por debajo de la punta).
+    const MARKER_ICON_ALTO = 41;
+
+    // ¿La forma es más "vertical" (norte-sur) u "horizontal" (este-oeste)?
+    // Se compara en metros, no en grados: en CABA un grado de longitud mide
+    // menos que uno de latitud, así que comparar grados directamente sesga
+    // el resultado hacia "horizontal".
+    function orientacionForma(bounds) {
+        const lat0 = bounds.getCenter().lat;
+        const metrosPorGradoLat = 111320;
+        const metrosPorGradoLon = 111320 * Math.cos((lat0 * Math.PI) / 180);
+        const altoM = (bounds.getNorth() - bounds.getSouth()) * metrosPorGradoLat;
+        const anchoM = (bounds.getEast() - bounds.getWest()) * metrosPorGradoLon;
+        return altoM >= anchoM ? "vertical" : "horizontal";
+    }
+
+    // Medio ancho/alto EN PÍXELES de la forma (línea, polígono o bbox de un
+    // punto), en la pantalla actual. El ancla es el CENTRO de la forma, no
+    // un borde, así que para no invadirla hay que correr el popup, además
+    // del hueco y su propio tamaño, esta mitad de la forma.
+    function extensionFormaPx(bounds, direccion) {
+        if (!bounds) return 0;
+        const ne = mapa.latLngToContainerPoint(bounds.getNorthEast());
+        const sw = mapa.latLngToContainerPoint(bounds.getSouthWest());
+        if (direccion === "izquierda" || direccion === "derecha") {
+            return Math.abs(ne.x - sw.x) / 2;
         }
-
-        // Overlay: todos los barrios
-        if (valor === "__overlay_barrios__") {
-            capaOverlayTodos = dibujarOverlay(barriosGeo, (f) => `barrio:${f.properties.nombre}`);
-            return;
+        if (direccion === "arriba" || direccion === "abajo") {
+            return Math.abs(sw.y - ne.y) / 2;
         }
+        return 0;
+    }
 
-        // Overlay: todas las comunas
-        if (valor === "__overlay_comunas__") {
-            capaOverlayComunas = dibujarOverlay(comunasGeo, (f) => `comuna:${f.properties.comuna}`);
-            return;
-        }
-
-        // Filtro por barrio individual
-        if (isBarrio) {
-            const nombre = valor.slice("barrio:".length);
-            const feature = barriosGeo && barriosGeo.features.find(
-                (f) => f.properties.nombre === nombre
-            );
-            if (!feature) return;
-            barrioActivo = nombre;
-            capaBarrio = dibujarContornoUnico(feature, 15);
-            if ($input.value.length >= 2) {
-                renderSugerencias(buscarSugerencias($input.value));
-            }
-            return;
-        }
-
-        // Filtro por comuna individual
-        if (isComuna) {
-            const numero = parseInt(valor.slice("comuna:".length), 10);
-            const feature = comunasGeo && comunasGeo.features.find(
-                (f) => f.properties.comuna === numero
-            );
-            if (!feature) return;
-            // Marcamos barrioActivo como un SET de barrios para que el filtro
-            // del autocomplete pueda usarlo.
-            barrioActivo = barriosDeComuna(numero);
-            capaBarrio = dibujarContornoUnico(feature, 14);
-            if ($input.value.length >= 2) {
-                renderSugerencias(buscarSugerencias($input.value));
-            }
-            return;
+    // Leaflet siempre centra la caja horizontalmente en (ancla.x + offset.x)
+    // y la hace crecer HACIA ARRIBA desde (ancla.y + offset.y) — esa es la
+    // convención interna de L.Popup. A partir de eso, estas son las cuentas
+    // para que la caja quede pegada a cada lado del ancla sin taparla.
+    // "extension" es la mitad del ancho/alto de la forma en px (0 para
+    // puntos sin bbox), para no terminar corriendo el popup desde el centro
+    // de la forma hacia adentro de ella misma.
+    function offsetParaDireccion(direccion, ancho, alto, extension) {
+        const g = POPUP_GAP;
+        const ext = extension || 0;
+        switch (direccion) {
+            case "derecha":
+                return L.point(ext + g + ancho / 2, alto / 2);
+            case "izquierda":
+                return L.point(-(ext + g + ancho / 2), alto / 2);
+            case "abajo":
+                return L.point(0, ext + g + alto);
+            case "arriba":
+            default:
+                return L.point(0, -(ext + g));
         }
     }
 
+    /**
+     * Ubica el popup ya renderizado probando, en orden, el par de lados
+     * "natural" para la orientación de la forma y — si ninguno de esos dos
+     * entra sin salirse de la pantalla — el par perpendicular. Se queda con
+     * el primero que entre limpio; si ninguno entra limpio, con el que
+     * menos se pase, y solo ahí achica el contenido (con scroll interno)
+     * como último recurso.
+     *
+     * @param bounds LatLngBounds real de la forma (línea/área, o bbox del
+     *   punto) para esquivarla, o null si no hay ninguna extensión propia.
+     * @param orientacion "vertical" (calle norte-sur: prefiere izquierda/
+     *   derecha) u "horizontal" (calle este-oeste o punto: prefiere arriba/
+     *   abajo).
+     * @param extensionMinArriba piso mínimo para la extensión "arriba" —
+     *   el alto del ícono del marker (MARKER_ICON_ALTO), que sobresale
+     *   aunque el bbox sea chico o no haya bbox. Opcional.
+     */
+    function posicionarPopup(popup, bounds, orientacion, extensionMinArriba) {
+        const el = popup.getElement();
+        if (!el) return;
+        const wrapper = el.querySelector(".leaflet-popup-content-wrapper") || el;
+        const contenido = el.querySelector(".leaflet-popup-content");
+        if (contenido) {
+            contenido.style.maxHeight = "";
+            contenido.style.overflowY = "";
+        }
+
+        function extensionPara(dir) {
+            let ext = extensionFormaPx(bounds, dir);
+            if (dir === "arriba" && extensionMinArriba) ext = Math.max(ext, extensionMinArriba);
+            return ext;
+        }
+
+        // El límite superior solo hace falta respetarlo si el popup cae
+        // horizontalmente sobre la caja de búsqueda; si termina más a la
+        // derecha, no hay conflicto y puede usar hasta el borde real de la
+        // pantalla (más alto disponible = menos casos de tener que achicar).
+        function limites(rect) {
+            const cajaBusqueda = document.querySelector(".search-box");
+            let arriba = 10;
+            if (cajaBusqueda) {
+                const cb = cajaBusqueda.getBoundingClientRect();
+                const solapa = !rect || (rect.left < cb.right && rect.right > cb.left);
+                if (solapa) arriba = cb.bottom + 10;
+            }
+            return { arriba, abajo: window.innerHeight - 10, izq: 10, der: window.innerWidth - 10 };
+        }
+
+        function correccionPara(dir) {
+            const ext = extensionPara(dir);
+            popup.options.maxWidth = anchoParaDireccion(dir);
+            const rect0 = wrapper.getBoundingClientRect();
+            popup.options.offset = offsetParaDireccion(dir, rect0.width, rect0.height, ext);
+            popup.update();
+            const rect = wrapper.getBoundingClientRect();
+            const lim = limites(rect);
+            let dx = 0;
+            let dy = 0;
+            if (rect.left < lim.izq) dx = lim.izq - rect.left;
+            else if (rect.right > lim.der) dx = lim.der - rect.right;
+            if (rect.top < lim.arriba) dy = lim.arriba - rect.top;
+            else if (rect.bottom > lim.abajo) dy = lim.abajo - rect.bottom;
+            return { dx, dy };
+        }
+
+        // Cuánto se pasa de los límites, contando SIEMPRE los dos ejes: al
+        // comparar direcciones del mismo par (arriba vs abajo) el eje que no
+        // corresponde da siempre igual en las dos, así que no cambia la
+        // comparación — pero al comparar contra el par PERPENDICULAR sí hace
+        // falta, si no un lado que entra horizontalmente pero se sale por
+        // arriba/abajo (o viceversa) se cuenta como "entra limpio" por error.
+        function invasionDe(corr) {
+            return Math.abs(corr.dx) + Math.abs(corr.dy);
+        }
+
+        const parPreferido = orientacion === "vertical" ? ["izquierda", "derecha"] : ["arriba", "abajo"];
+        const parPerpendicular = orientacion === "vertical" ? ["arriba", "abajo"] : ["izquierda", "derecha"];
+
+        let mejor = null;
+        for (const dir of parPreferido) {
+            const corr = correccionPara(dir);
+            const inv = invasionDe(corr);
+            if (!mejor || inv < mejor.inv) mejor = { dir, inv };
+            if (inv === 0) break;
+        }
+        if (mejor.inv > 0) {
+            // Ninguno del par "natural" entra limpio: probamos el par
+            // perpendicular, pero solo lo adoptamos si entra PERFECTAMENTE
+            // limpio. La invasión vertical (dy) se puede corregir del todo
+            // achicando el alto con scroll (ver abajo), pero no hay forma
+            // equivalente de achicar el ancho sin reflowear el texto — así
+            // que un lado perpendicular que también invade (aunque invada
+            // "menos" en píxeles) no es mejor alternativa: se queda tapando
+            // el trazado sin remedio, mientras que el par natural con
+            // invasión vertical sí se termina resolviendo.
+            for (const dir of parPerpendicular) {
+                const corr = correccionPara(dir);
+                const inv = invasionDe(corr);
+                if (inv === 0) {
+                    mejor = { dir, inv };
+                    break;
+                }
+            }
+        }
+
+        const final = mejor.dir;
+        // Reaplicar: el último intento del bucle puede haber dejado el
+        // offset puesto en otro lado distinto al elegido.
+        let { dx, dy } = correccionPara(final);
+        // Si hace falta achicar es porque, al zoom actual, el trazado/punto
+        // + el popup no entran los dos completos en la pantalla. El llamador
+        // (dibujarResultado) usa este dato para, en vez de resignarse acá,
+        // reintentar con el mapa más alejado (más zoom out = trazado más
+        // chico en pantalla = más lugar para el popup) antes de llegar a
+        // esta instancia. Solo si ya no se puede alejar más se termina
+        // usando el achique con scroll de acá abajo como último recurso.
+        const necesitoAchicar = dy !== 0;
+
+        // Ni el mejor de los 4 lados entra sin salirse verticalmente (pasa
+        // el tope o el piso de la pantalla) hay que achicar el contenido,
+        // no tapar el trazado/espacio — vale para cualquier lado final, no
+        // solo arriba/abajo: un popup a los costados también puede salirse
+        // por arriba o abajo si es muy alto. "dy" ya es (casi) exactamente
+        // cuánto se pasa, así que restándoselo a la altura actual el popup
+        // queda del tamaño justo que sí entra (con scroll interno para lo
+        // que no se vea de una). Se repite un par de veces por si el
+        // redondeo del primer achique deja un resto.
+        if (dy !== 0 && contenido) {
+            for (let intento = 0; intento < 3 && dy !== 0; intento++) {
+                const alturaActual = contenido.getBoundingClientRect().height;
+                const alturaNueva = Math.max(80, alturaActual - Math.abs(dy) - 1);
+                if (alturaNueva >= alturaActual) break; // ya no hay más para achicar
+                contenido.style.maxHeight = alturaNueva + "px";
+                contenido.style.overflowY = "auto";
+                ({ dx, dy } = correccionPara(final));
+            }
+        }
+
+        if (dx !== 0 || dy !== 0) {
+            const actual = L.point(popup.options.offset);
+            popup.options.offset = L.point(actual.x + dx, actual.y + dy);
+            popup.update();
+        }
+
+        // La flechita solo tiene sentido cuando el popup terminó "arriba"
+        // del trazado/punto (ver arriba); se resincroniza siempre porque el
+        // lado final puede no coincidir con el usado al abrir el popup.
+        el.classList.toggle("popup-sin-flecha", final !== "arriba");
+
+        return necesitoAchicar;
+    }
+
+    // Abre el popup en una posición inicial cualquiera (se recalcula del
+    // todo en posicionarPopup, una vez que hay tamaño real para medir).
+    // Común a los tres casos (área, línea, marker).
+    function abrirPopupPosicionado(latlng, popupHtml, direccionInicial) {
+        return L.popup({
+            offset: offsetParaDireccion(direccionInicial, POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, 0),
+            autoPan: false, // la posición final la calcula posicionarPopup()
+            className: "calleando-popup popup-sin-flecha",
+        })
+            .setLatLng(latlng)
+            .setContent(popupHtml)
+            .openOn(mapa);
+    }
+
+    const MAX_INTENTOS_ZOOM = 5;
+    const INCREMENTO_PADDING_ZOOM = 55;
+
+    /**
+     * Repite `intento(padding)` con un padding cada vez mayor —lo que fuerza
+     * un zoom más alejado en el fitBounds interno— mientras posicionarPopup()
+     * siga necesitando achicar el contenido para entrar en pantalla. Así, en
+     * vez de resignarse al scroll interno apenas no entra, primero se prueba
+     * dejar más lugar en pantalla alejando el mapa (el trazado/punto ocupa
+     * menos píxeles, y con maxWidth el popup no cambia de tamaño real).
+     *
+     * `intento` debe devolver lo mismo que posicionarPopup(): true si hizo
+     * falta achicar (seguir probando), false si entró limpio.
+     *
+     * Se para en MAX_INTENTOS_ZOOM intentos o al llegar al zoom mínimo del
+     * mapa, lo que pase primero; ahí sí queda el achique con scroll interno
+     * del último intento como último recurso.
+     *
+     * Reabrir el popup en cada vuelta cierra el anterior (dispara
+     * "popupclose"); redibujandoPorZoom evita que ese cierre intermedio
+     * despinte la capa antes de que termine el bucle.
+     */
+    function dibujarConMenosZoomSiHaceFalta(paddingInicial, intento) {
+        redibujandoPorZoom = true;
+        let padding = paddingInicial;
+        for (let i = 0; i < MAX_INTENTOS_ZOOM; i++) {
+            const huboAchique = intento(padding);
+            const enElPiso = mapa.getZoom() <= mapa.getMinZoom();
+            if (!huboAchique || enElPiso) break;
+            padding += INCREMENTO_PADDING_ZOOM;
+        }
+        redibujandoPorZoom = false;
+    }
+
     function dibujarResultado(entrada, resultado) {
-        const popupHtml = construirPopup(entrada);
+        const mediaId = "popup-media-" + (++mediaSeq);
+        const popupHtml = construirPopup(entrada, mediaId);
         const color = colorParaEntrada(entrada);
 
         if (resultado.tipo === "area") {
@@ -1177,23 +1853,14 @@
                 },
             }).addTo(mapa);
 
-            mapa.fitBounds(capaActual.getBounds(), {
-                padding: [40, 40],
-                maxZoom: 15,
+            const bounds = capaActual.getBounds();
+            const centro = bounds.getCenter();
+            const orientacion = orientacionForma(bounds);
+            dibujarConMenosZoomSiHaceFalta(40, (padding) => {
+                mapa.fitBounds(bounds, { padding: [padding, padding], maxZoom: 15, animate: false });
+                popupActual = abrirPopupPosicionado(centro, popupHtml, orientacion === "vertical" ? "derecha" : "abajo");
+                return posicionarPopup(popupActual, bounds, orientacion);
             });
-
-            // Popup en el centro (usamos center si está, sino bounds)
-            const centro = resultado.center
-                ? L.latLng(resultado.center[0], resultado.center[1])
-                : capaActual.getBounds().getCenter();
-            popupActual = L.popup({
-                offset: [0, -6],
-                autoPan: true,
-                className: "calleando-popup",
-            })
-                .setLatLng(centro)
-                .setContent(popupHtml)
-                .openOn(mapa);
         } else if (resultado.tipo === "line") {
             // GeoJSON LineString/MultiLineString -> Polyline
             capaActual = L.geoJSON(resultado.geometry, {
@@ -1206,60 +1873,293 @@
                 },
             }).addTo(mapa);
 
-            mapa.fitBounds(capaActual.getBounds(), {
-                padding: [80, 80],
-                maxZoom: 17,
+            // Popup pegado al trazado (al costado si es norte-sur, arriba o
+            // abajo si es este-oeste), no centrado tapándolo.
+            const bounds = capaActual.getBounds();
+            const centro = bounds.getCenter();
+            const orientacion = orientacionForma(bounds);
+            dibujarConMenosZoomSiHaceFalta(80, (padding) => {
+                mapa.fitBounds(bounds, { padding: [padding, padding], maxZoom: 17, animate: false });
+                popupActual = abrirPopupPosicionado(centro, popupHtml, orientacion === "vertical" ? "derecha" : "abajo");
+                return posicionarPopup(popupActual, bounds, orientacion);
             });
-
-            // Abrir popup en el centro del bounds
-            const centro = capaActual.getBounds().getCenter();
-            popupActual = L.popup({
-                offset: [0, -6],
-                autoPan: true,
-                className: "calleando-popup",
-            })
-                .setLatLng(centro)
-                .setContent(popupHtml)
-                .openOn(mapa);
         } else {
-            // Marker para plazas, parques, etc.
+            // Marker para plazas, parques, plazoletas, canteros, paseos, etc.
             capaActual = L.marker(resultado.center, {
                 title: entrada.nombre_busqueda,
             }).addTo(mapa);
 
-            if (resultado.bbox) {
-                const [latMin, latMax, lonMin, lonMax] = resultado.bbox.map(parseFloat);
-                mapa.fitBounds([[latMin, lonMin], [latMax, lonMax]], {
-                    padding: [80, 80],
-                    maxZoom: 17,
-                });
-            } else {
-                mapa.setView(resultado.center, 17);
+            // El ícono default de Leaflet trae su propio "popupAnchor"
+            // ([1,-34]) que se SUMA a cualquier offset que le pasemos a
+            // bindPopup, descuadrando todas las cuentas de más abajo (están
+            // pensadas para que offset.y sea la única fuente de verdad). Se
+            // neutraliza para que el marker se comporte igual que un popup
+            // standalone (línea/área).
+            if (capaActual.options.icon && capaActual.options.icon.options) {
+                capaActual.options.icon.options.popupAnchor = [0, 0];
             }
 
-            popupActual = capaActual.bindPopup(popupHtml, {
-                offset: [0, -10],
-                className: "calleando-popup",
-            }).openPopup();
+            // El bbox (cuando existe) es el contorno real del lugar —una
+            // plaza, un parque— y no un simple punto: el popup tiene que
+            // esquivar ESE espacio, no solo el pin, para no taparlo.
+            let boundsMarker = null;
+            if (resultado.bbox) {
+                const [latMin, latMax, lonMin, lonMax] = resultado.bbox.map(parseFloat);
+                boundsMarker = L.latLngBounds([[latMin, lonMin], [latMax, lonMax]]);
+                dibujarConMenosZoomSiHaceFalta(80, (padding) => {
+                    mapa.fitBounds(boundsMarker, { padding: [padding, padding], maxZoom: 17, animate: false });
+                    capaActual.bindPopup(popupHtml, {
+                        offset: offsetParaDireccion("abajo", POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, 0),
+                        autoPan: false,
+                        className: "calleando-popup popup-sin-flecha",
+                    }).openPopup();
+                    // bindPopup()/openPopup() devuelven el marker (para
+                    // encadenar), no el popup: hay que pedirlo aparte para
+                    // poder medirlo/ajustarlo.
+                    popupActual = capaActual.getPopup();
+                    return posicionarPopup(popupActual, boundsMarker, "horizontal", MARKER_ICON_ALTO);
+                });
+            } else {
+                // Sin bbox no hay ninguna extensión geográfica que "encoger"
+                // al alejar el zoom: el pin ocupa el mismo tamaño en
+                // píxeles a cualquier zoom, así que reintentar con más zoom
+                // out no cambiaría nada — se resuelve en un solo intento.
+                mapa.setView(resultado.center, 17, { animate: false });
+                capaActual.bindPopup(popupHtml, {
+                    offset: offsetParaDireccion("abajo", POPUP_ANCHO_ESTIMADO, POPUP_ALTO_ESTIMADO, 0),
+                    autoPan: false,
+                    className: "calleando-popup popup-sin-flecha",
+                }).openPopup();
+                popupActual = capaActual.getPopup();
+                posicionarPopup(popupActual, boundsMarker, "horizontal", MARKER_ICON_ALTO);
+            }
         }
+
+        // El popup ya está en el DOM: cargamos la imagen de Wikipedia de forma
+        // asíncrona. El contenedor tiene altura fija, así que mutamos su DOM sin
+        // tocar popup.update() (eso re-renderiza el string y borraría la imagen).
+        montarMediaPopup(mediaId, entrada);
     }
 
-    function construirPopup(entrada) {
+    // Dirección de contacto para el botón "Reportar error" de cada popup.
+    const EMAIL_CONTACTO = "calleandocaba@gmail.com";
+
+    // Arma un link al compositor web de Gmail (no mailto:) con el asunto y
+    // cuerpo prellenados, incluyendo el id de la entrada al final para poder
+    // ubicarla rápido en calles.json sin depender de que quien reporta
+    // escriba bien el nombre. mailto: depende de que el navegador tenga un
+    // cliente de correo configurado como predeterminado -algo que en la
+    // práctica muchos usuarios no tienen, sobre todo en desktop- y ahí
+    // simplemente no pasa nada al hacer click; el link de Gmail abre en una
+    // pestaña nueva y funciona en cualquier navegador con sesión de Google.
+    function enlaceReportarError(entrada) {
+        const asunto = `Corrección en Calleando CABA: ${entrada.nombre_busqueda}`;
+        const cuerpo =
+            `Contame qué está mal en "${entrada.nombre_busqueda}" (${(entrada.tipo || "").trim()}):\n\n\n` +
+            `—\nNo borres esta línea, ayuda a ubicar el dato: ${entrada.id}`;
+        return `https://mail.google.com/mail/?view=cm&fs=1` +
+            `&to=${encodeURIComponent(EMAIL_CONTACTO)}` +
+            `&su=${encodeURIComponent(asunto)}` +
+            `&body=${encodeURIComponent(cuerpo)}`;
+    }
+
+    function construirPopup(entrada, mediaId) {
         const subtitulo = (entrada.tipo || "").trim();
         const color = colorParaEntrada(entrada);
+        const colorTexto = colorTextoParaEntrada(entrada);
         const cat = (entrada.categoria || "").trim();
+        const enOscuro = document.body.classList.contains("tema-oscuro");
 
-        // Chip de categoría con su color
+        // Chip de categoría con su color. El fondo en tema Oscuro se fija a
+        // un gris sólido (en vez de una mezcla alfa sobre el color "de mapa",
+        // cuyo contraste real es impredecible); el texto usa la variante
+        // aclarada/oscurecida con contraste AA calculada arriba.
         const chip = cat
-            ? `<span class="popup-cat" style="background-color: ${color}1a; color: ${color};">${escapeHtml(cat.toLowerCase())}</span>`
+            ? `<span class="popup-cat" style="background-color: ${enOscuro ? "#3c4043" : color + "1a"}; color: ${colorTexto};">${escapeHtml(cat.toLowerCase())}</span>`
+            : "";
+
+        // Contenedor de imagen con skeleton; se rellena en montarMediaPopup().
+        const media = mediaId
+            ? `<div class="popup-media" id="${mediaId}"><div class="popup-media-skeleton"></div></div>`
             : "";
 
         return `
-            <div class="popup-title" style="color: ${color};">${escapeHtml(entrada.nombre_busqueda)}</div>
+            ${media}
+            <div class="popup-title">${escapeHtml(entrada.nombre_busqueda)}</div>
             ${subtitulo ? `<div class="popup-sub">${escapeHtml(subtitulo)}</div>` : ""}
             ${chip}
             ${entrada.descripcion ? `<div class="popup-desc">${escapeHtml(entrada.descripcion)}</div>` : ""}
+            <div class="popup-actions">
+                <button class="popup-fav-btn${esFavorito(entrada.id) ? " es-favorito" : ""}" type="button" data-id="${escapeHtml(entrada.id)}" aria-pressed="${esFavorito(entrada.id)}">
+                    <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+                        <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                    <span>${esFavorito(entrada.id) ? "En favoritas" : "Favorita"}</span>
+                </button>
+                <button class="popup-share-btn" type="button" data-id="${escapeHtml(entrada.id)}">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                        <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>
+                    </svg>
+                    <span>Compartir</span>
+                </button>
+                <a class="popup-report-btn" href="${escapeHtml(enlaceReportarError(entrada))}" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                        <line x1="4" y1="22" x2="4" y2="3"/>
+                    </svg>
+                    <span>Reportar error</span>
+                </a>
+            </div>
         `;
+    }
+
+    // ---------- Imagen del popup (Wikipedia) ----------
+    let mediaSeq = 0;
+
+    // Mismo isotipo que favicon.svg y el logo del header: pin con grilla de
+    // manzanas en vez de un ícono genérico, para reforzar la marca cuando
+    // no hay foto en vez de mostrar algo neutro. El fondo del contenedor
+    // (.popup-media.es-fallback) sí sigue tiñéndose con --cat-color; el
+    // ícono en sí usa el degradé fijo de la marca.
+    function iconoFallback() {
+        return `<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+            <defs><linearGradient id="fallback-logo-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4285f4"/><stop offset="1" stop-color="#1a73e8"/>
+            </linearGradient></defs>
+            <path fill="url(#fallback-logo-grad)" d="M32 4C20.4 4 11 13.4 11 25c0 14 16 32 19.4 35.6a2.3 2.3 0 0 0 3.2 0C37 57 53 39 53 25 53 13.4 43.6 4 32 4z"/>
+            <rect x="27" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            <rect x="32.7" y="20" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            <rect x="27" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
+            <rect x="32.7" y="25.7" width="4.5" height="4.5" rx="1" fill="#fff"/>
+        </svg>`;
+    }
+
+    function mostrarFallbackMedia(mediaId, color) {
+        const c = document.getElementById(mediaId);
+        if (!c) return;
+        c.classList.add("es-fallback");
+        c.style.setProperty("--cat-color", color);
+        c.innerHTML = `<div class="popup-media-fallback">${iconoFallback()}</div>`;
+    }
+
+    // Overrides manuales del término de búsqueda, por id de entrada. Útil cuando
+    // el odónimo es ambiguo y Wikipedia trae una imagen incorrecta. Reusa todo el
+    // pipeline (incluida la atribución). Ej.: "Independencia" traía la Declaración
+    // de EE.UU.; la redirigimos al Congreso de Tucumán de 1816.
+    const BUSQUEDA_OVERRIDES = {
+        "independencia|avenida": "Congreso de Tucumán",
+
+        // Provincias argentinas: el odónimo solo ("Córdoba", "Santa Fe", "La
+        // Rioja") es ambiguo en Wikipedia (provincia española, ciudad o página
+        // de desambiguación), así que apuntamos al artículo de la provincia.
+        "catamarca|calle": "Provincia de Catamarca",
+        "chaco|calle": "Provincia del Chaco",
+        "chubut|calle": "Provincia del Chubut",
+        "cordoba|avenida": "Provincia de Córdoba (Argentina)",
+        "corrientes|avenida": "Provincia de Corrientes",
+        "entre rios|avenida": "Provincia de Entre Ríos",
+        "formosa|calle": "Provincia de Formosa",
+        "jujuy|calle": "Provincia de Jujuy",
+        "la pampa|calle": "Provincia de La Pampa",
+        "la rioja|calle": "Provincia de La Rioja (Argentina)",
+        "mendoza|calle": "Provincia de Mendoza",
+        "misiones|calle": "Provincia de Misiones",
+        "neuquen|calle": "Provincia del Neuquén",
+        "rio negro|calle": "Provincia de Río Negro",
+        "salta|calle": "Provincia de Salta",
+        "san juan|avenida": "Provincia de San Juan",
+        "san luis|calle": "Provincia de San Luis",
+        "santa cruz|calle": "Provincia de Santa Cruz",
+        "santa fe|avenida": "Provincia de Santa Fe",
+        "santiago del estero|calle": "Provincia de Santiago del Estero",
+        "tierra del fuego|calle": "Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "tucuman|calle": "Provincia de Tucumán",
+    };
+
+    // Extrae el nombre completo del comienzo de la descripción. Las entradas de
+    // PERSONA arrancan con "Nombre Completo (años), rol...", y buscar ese nombre
+    // completo en Wikipedia acierta mucho más que el odónimo corto (que suele
+    // caer en páginas de desambiguación). Medido: PERSONA pasa de ~52% a ~84%.
+    function nombreDesdeDescripcion(desc) {
+        if (!desc) return "";
+        let n = desc.split("(")[0];           // corta en las fechas "(1770-1820)"
+        if (n === desc) n = desc.split(/[:;,]/)[0]; // sin paréntesis: corta en : ; ,
+        return n.replace(/\s+/g, " ").replace(/[\s:;,]+$/, "").trim();
+    }
+
+    // Términos de búsqueda ordenados por probabilidad de acierto, con fallback.
+    function terminosBusqueda(entrada) {
+        const nombre = (entrada.nombre_busqueda || entrada.nombre_original || "").trim();
+        const cat = (entrada.categoria || "").trim().toUpperCase();
+        const desc = nombreDesdeDescripcion(entrada.descripcion);
+        const override = BUSQUEDA_OVERRIDES[entrada.id];
+        // El override (si existe) manda; después caen los términos automáticos.
+        // Para PERSONA priorizamos el nombre completo; para el resto el odónimo.
+        const orden = override
+            ? [override, nombre]
+            : cat.startsWith("PERSONA") ? [desc, nombre] : [nombre, desc];
+        const vistos = new Set();
+        return orden.filter((t) => {
+            const k = (t || "").toLowerCase();
+            if (!k || vistos.has(k)) return false;
+            vistos.add(k);
+            return true;
+        });
+    }
+
+    async function montarMediaPopup(mediaId, entrada) {
+        if (!document.getElementById(mediaId)) return;
+        const color = colorParaEntrada(entrada);
+
+        // 1) Foto precomputada (data/fotos.json — recuperadas vía Wikidata/Commons
+        //    o curadas a mano). Tiene prioridad sobre la búsqueda en vivo.
+        //    Se busca primero por id completo (clave|tipo), para permitir fotos
+        //    distintas cuando dos odónimos distintos comparten la misma clave
+        //    (ej. "El Pampero" calle = viento, cantero = globo aerostático).
+        let data = fotosManual[entrada.id] || fotosManual[entrada.clave] || null;
+
+        // 1b) Marca "sinFoto": el odónimo no tiene retrato adecuado y la búsqueda
+        //     en vivo traía una imagen incorrecta -> forzamos el ícono de categoría.
+        if (data && data.sinFoto) {
+            mostrarFallbackMedia(mediaId, color);
+            return;
+        }
+
+        // 2) Si no hay precomputada, probamos los términos en Wikipedia en vivo.
+        if (!data || !data.thumbUrl) {
+            const terminos = terminosBusqueda(entrada);
+            for (const t of terminos) {
+                data = await fetchStreetImage(t);
+                if (!document.getElementById(mediaId)) return; // popup cerrado
+                if (data && data.thumbUrl) break;
+            }
+        }
+
+        if (data && data.thumbUrl) {
+            const img = new Image();
+            img.className = "popup-media-img";
+            img.alt = data.titulo || entrada.nombre_busqueda || "";
+            img.referrerPolicy = "no-referrer";
+            img.onload = () => {
+                const c = document.getElementById(mediaId);
+                if (!c) return;
+                c.innerHTML = "";
+                // Fondo borroso de la misma imagen para rellenar el box sin
+                // recortar al sujeto (la imagen va por delante con object-fit:contain).
+                const bg = document.createElement("div");
+                bg.className = "popup-media-bg";
+                bg.style.backgroundImage = `url("${data.thumbUrl}")`;
+                c.appendChild(bg);
+                c.appendChild(img);
+            };
+            img.onerror = () => mostrarFallbackMedia(mediaId, color);
+            img.src = data.thumbUrl;
+        } else {
+            mostrarFallbackMedia(mediaId, color);
+        }
     }
 
     // =================================================================
@@ -1511,42 +2411,87 @@
         }
     }
 
-    /**
-     * Subconjunto de `calles` que aplica según el filtro de barrio activo.
-     * - Sin filtro: devuelve `calles` completo.
-     * - Barrio individual (string): solo calles de ese barrio.
-     * - Comuna (Set): solo calles cuyo barrio está en el Set.
-     */
-    function callesActivasParaStats() {
-        if (!barrioActivo) return calles;
-        if (typeof barrioActivo === "string") {
-            return calles.filter((c) => c.barrio === barrioActivo);
+    /** Pobla el select de categoría del ranking de barrios (una sola vez,
+     *  al cargar los datos), con el mismo criterio que poblarDropdownCategorias(). */
+    function poblarRankingCategoriaSelect() {
+        if (!$rankingCategoriaSelect) return;
+        const counts = new Map();
+        for (const c of calles) {
+            const cat = (c.categoria || "").trim().toUpperCase();
+            if (!cat) continue;
+            counts.set(cat, (counts.get(cat) || 0) + 1);
         }
-        if (barrioActivo instanceof Set) {
-            return calles.filter((c) => barrioActivo.has(c.barrio));
+        const ordenadas = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+        for (const [cat, n] of ordenadas) {
+            const opt = document.createElement("option");
+            opt.value = cat;
+            opt.textContent = `${cat.charAt(0) + cat.slice(1).toLowerCase()} (${n})`;
+            $rankingCategoriaSelect.appendChild(opt);
         }
-        return calles;
     }
 
-    /** Etiqueta amigable del ámbito activo: "CABA", "Palermo", "Comuna 1" */
-    function etiquetaAmbito() {
-        if (!barrioActivo) return "CABA";
-        if (typeof barrioActivo === "string") return barrioActivo;
-        // Set de barrios = comuna. Identificamos el número buscándolo.
-        if (comunasGeo) {
-            const match = comunasGeo.features.find((f) =>
-                f.properties.barrios && barrioActivo.has(f.properties.barrios[0])
-            );
-            if (match) return match.properties.nombre;
+    /**
+     * Ranking de barrios por cantidad de odónimos, opcionalmente filtrado
+     * por categoría. Arranca de los 48 barrios de barriosGeo (si están
+     * cargados) para que también se vean los que tienen 0 en una
+     * categoría puntual, no solo los que tienen al menos 1.
+     */
+    function construirRankingBarrios(categoriaFiltro) {
+        if (!$rankingBarrios) return;
+        const filtro = (categoriaFiltro || "").trim().toUpperCase();
+
+        const counts = new Map();
+        if (barriosGeo && Array.isArray(barriosGeo.features)) {
+            for (const f of barriosGeo.features) {
+                const nombre = f.properties && f.properties.nombre;
+                if (nombre) counts.set(nombre, 0);
+            }
         }
-        return "selección";
+
+        let sinBarrio = 0;
+        for (const c of calles) {
+            if (filtro && (c.categoria || "").trim().toUpperCase() !== filtro) continue;
+            if (!c.barrio) { sinBarrio++; continue; }
+            counts.set(c.barrio, (counts.get(c.barrio) || 0) + 1);
+        }
+
+        const ordenados = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+        $rankingBarrios.innerHTML = "";
+
+        const max = ordenados.length > 0 ? ordenados[0][1] : 0;
+        const color = filtro ? (COLORES_CATEGORIA[filtro] || "#6b7280") : "#1a73e8";
+        ordenados.forEach(([barrio, n], i) => {
+            const pct = max > 0 ? (n / max) * 100 : 0;
+            const li = document.createElement("li");
+            li.className = "stats-bar ranking-barrio";
+            li.innerHTML = `
+                <span class="ranking-barrio-puesto">${i + 1}</span>
+                <span class="stats-bar-label">${escapeHtml(barrio)}</span>
+                <span class="stats-bar-track" style="background-color: ${color}40;">
+                    <span class="stats-bar-fill" style="width: ${pct}%; background-color: ${color};"></span>
+                </span>
+                <span class="stats-bar-value">${n.toLocaleString("es-AR")}</span>
+            `;
+            $rankingBarrios.appendChild(li);
+        });
+
+        if ($rankingBarriosNota) {
+            if (sinBarrio > 0) {
+                const plural = sinBarrio === 1 ? "" : "s";
+                $rankingBarriosNota.textContent =
+                    `${sinBarrio.toLocaleString("es-AR")} odónimo${plural} sin barrio asignado, no incluido${plural} en el ranking.`;
+                $rankingBarriosNota.hidden = false;
+            } else {
+                $rankingBarriosNota.hidden = true;
+            }
+        }
     }
 
     function construirEstadisticas() {
         if (!Array.isArray(calles) || calles.length === 0) return;
 
-        const sub = callesActivasParaStats();
-        const ambito = etiquetaAmbito();
+        const sub = calles;
+        const ambito = "CABA";
         const total = sub.length;
 
         // Título dinámico
@@ -1587,14 +2532,17 @@
             const li = document.createElement("li");
             li.className = "stats-bar";
             li.innerHTML = `
-                <span class="stats-bar-label" style="color: ${color};">${escapeHtml(cat.toLowerCase())}</span>
+                <span class="stats-bar-label">${escapeHtml(cat.toLowerCase())}</span>
                 <span class="stats-bar-track" style="background-color: ${color}40;">
                     <span class="stats-bar-fill" style="width: ${pct}%; background-color: ${color};"></span>
                 </span>
-                <span class="stats-bar-value" style="color: ${color};">${pct.toFixed(1)}% · ${n.toLocaleString("es-AR")}</span>
+                <span class="stats-bar-value">${pct.toFixed(1)}% · ${n.toLocaleString("es-AR")}</span>
             `;
             $statsCategorias.appendChild(li);
         }
+
+        // Ranking de barrios, según la categoría elegida en su propio select
+        construirRankingBarrios($rankingCategoriaSelect ? $rankingCategoriaSelect.value : "");
 
         // Sección "¿Sabías que…?" recibe el subset filtrado
         dibujarCuriosidades(sub, ambito);
@@ -1640,9 +2588,9 @@
         // Botón buscar
         $btnBuscar.addEventListener("click", buscarPorTexto);
 
-        // Botón "calle al azar"
+        // Botón "calle del día"
         if ($btnRandom) {
-            $btnRandom.addEventListener("click", calleAlAzar);
+            $btnRandom.addEventListener("click", mostrarCalleDelDia);
         }
 
         // Botón "Cerca mío" (geolocalización)
@@ -1663,6 +2611,22 @@
                 aplicarTema(li.dataset.tema);
                 $themeMenu.hidden = true;
             });
+            // Navegación por teclado: Enter/Espacio elige, Escape cierra y
+            // devuelve el foco al botón (mismo patrón que brand-home).
+            $themeMenu.addEventListener("keydown", (e) => {
+                const li = e.target.closest("li[data-tema]");
+                if (!li) return;
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    aplicarTema(li.dataset.tema);
+                    $themeMenu.hidden = true;
+                    $btnTheme.focus();
+                } else if (e.key === "Escape") {
+                    e.preventDefault();
+                    $themeMenu.hidden = true;
+                    $btnTheme.focus();
+                }
+            });
             // Click fuera cierra el menú
             document.addEventListener("click", (e) => {
                 if (!e.target.closest(".theme-toggle")) {
@@ -1671,15 +2635,135 @@
             });
         }
 
-        // Botón limpiar (cruz)
-        $btnLimpiar.addEventListener("click", () => {
+        // Volver al inicio (limpia búsqueda, capa y URL, y recentra el mapa).
+        function volverAlInicio() {
             $input.value = "";
             $btnLimpiar.hidden = true;
             $suggestions.hidden = true;
             limpiarCapa();
+            limpiarURL();
             mapa.flyTo(CABA_CENTER, 13, { duration: 0.6 });
+        }
+
+        // Botón limpiar (cruz)
+        $btnLimpiar.addEventListener("click", () => {
+            volverAlInicio();
             $input.focus();
         });
+
+        // Marca "Calleando CABA": vuelve al inicio.
+        const $brandHome = document.getElementById("brand-home");
+        if ($brandHome) {
+            $brandHome.addEventListener("click", volverAlInicio);
+            $brandHome.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    volverAlInicio();
+                }
+            });
+        }
+
+        // Botón "compartir" del popup: copia el link directo a la calle.
+        document.addEventListener("click", (e) => {
+            const btn = e.target.closest(".popup-share-btn");
+            if (!btn) return;
+            const url = linkDeEntrada(btn.dataset.id);
+            const ok = () => {
+                const span = btn.querySelector("span");
+                const prev = span ? span.textContent : "";
+                if (span) span.textContent = "¡Link copiado!";
+                btn.classList.add("copiado");
+                setTimeout(() => {
+                    if (span) span.textContent = prev || "Compartir";
+                    btn.classList.remove("copiado");
+                }, 1800);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(ok).catch(
+                    () => mostrarToast("Copiá el link: " + url, 6000));
+            } else {
+                mostrarToast("Copiá el link: " + url, 6000);
+            }
+        });
+
+        // Botón "★ favorita" del popup: marca/desmarca en localStorage.
+        document.addEventListener("click", (e) => {
+            const btn = e.target.closest(".popup-fav-btn");
+            if (!btn) return;
+            const favorito = alternarFavorito(btn.dataset.id);
+            sincronizarBotonFavorito(btn, favorito);
+        });
+
+        // Botón "Herramientas": abre/cierra el panel que agrupa los
+        // controles del mapa (categorías, accesos rápidos, tema, datos).
+        if ($btnTools && $toolsPanel) {
+            $btnTools.addEventListener("click", (e) => {
+                e.stopPropagation();
+                $toolsPanel.hidden = !$toolsPanel.hidden;
+                $btnTools.setAttribute("aria-expanded", String(!$toolsPanel.hidden));
+            });
+            document.addEventListener("click", (e) => {
+                if ($toolsPanel.hidden) return;
+                if (e.target.closest(".tools-panel") || e.target.closest(".tools-btn")) return;
+                // El tutorial abre/cierra el panel a medida que avanza los
+                // pasos: sus propios clicks (Siguiente/Anterior/Saltar) no
+                // deben contar como "click afuera" y volver a cerrarlo.
+                if (e.target.closest(".tour-card")) return;
+                $toolsPanel.hidden = true;
+                $btnTools.setAttribute("aria-expanded", "false");
+            });
+        }
+
+        // Botón "Mis favoritas": abre/cierra el panel con la lista.
+        if ($btnFavoritos && $favoritosPanel) {
+            $btnFavoritos.addEventListener("click", () => {
+                if ($favoritosPanel.hidden) {
+                    abrirPanelFavoritos();
+                } else {
+                    cerrarPanelFavoritos();
+                }
+            });
+        }
+        if ($favoritosPanelClose) {
+            $favoritosPanelClose.addEventListener("click", cerrarPanelFavoritos);
+        }
+        // Click fuera del panel (y no en el botón que lo abre) lo cierra.
+        document.addEventListener("click", (e) => {
+            if (!$favoritosPanel || $favoritosPanel.hidden) return;
+            if (e.target.closest(".favoritos-panel") || e.target.closest(".favoritos-btn")) return;
+            cerrarPanelFavoritos();
+        });
+        // Sacar una entrada de favoritas desde el propio panel.
+        if ($favoritosList) {
+            $favoritosList.addEventListener("click", (e) => {
+                const quitar = e.target.closest(".favoritos-item-remove");
+                if (quitar) {
+                    alternarFavorito(quitar.dataset.id);
+                    renderFavoritosPanel();
+                    return;
+                }
+                const fila = e.target.closest("li[data-id]");
+                if (!fila) return;
+                const entrada = calles.find((c) => c.id === fila.dataset.id);
+                if (entrada) {
+                    cerrarPanelFavoritos();
+                    seleccionarEntrada(entrada);
+                }
+            });
+        }
+
+        // Botón "X" (propio de Leaflet) del popup: además de despintar la
+        // calle/marcador (ya lo hace el "popupclose" de inicializarMapa,
+        // que dispara para CUALQUIER cierre), borra lo que había en el
+        // buscador. Tiene que ir en fase de CAPTURA: el propio botón de
+        // Leaflet llama stopPropagation() en su handler, así que un
+        // listener normal (fase de burbuja) en document nunca lo vería.
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".leaflet-popup-close-button")) return;
+            $input.value = "";
+            $btnLimpiar.hidden = true;
+            limpiarURL();
+        }, true);
 
         // Cerrar sugerencias al click fuera
         document.addEventListener("click", (e) => {
@@ -1722,6 +2806,13 @@
             });
         }
 
+        // Ranking de barrios: cambiar categoría re-dibuja solo esa sección
+        if ($rankingCategoriaSelect) {
+            $rankingCategoriaSelect.addEventListener("change", (e) => {
+                construirRankingBarrios(e.target.value);
+            });
+        }
+
         // Modal "Acerca de"
         if ($aboutBtn) {
             $aboutBtn.addEventListener("click", (e) => {
@@ -1742,13 +2833,261 @@
     }
 
     // =================================================================
-    // 9. ARRANQUE
+    // 9. TUTORIAL DE BIENVENIDA
+    // =================================================================
+    // Recorrido guiado (spotlight + tarjeta) que se muestra solo en la
+    // primera visita real (sin ?c= ni ?cat= en la URL, y sin el flag de
+    // localStorage), y que además se puede volver a ver a mano desde el
+    // botón "Volver a ver el tutorial" del modal "Acerca de".
+
+    /**
+     * Arma la lista de pasos del tutorial. El paso de la efeméride ("Un
+     * día como hoy") solo se agrega si ese botón está visible hoy, porque
+     * no tiene sentido resaltar un elemento que no está en pantalla.
+     */
+    function construirPasosTour() {
+        const pasos = [
+            {
+                target: null,
+                titulo: "¡Bienvenido a Calleando CABA!",
+                texto: "Te mostramos rápido cómo explorar el callejero porteño.",
+            },
+            {
+                target: ".search-box",
+                titulo: "Buscador",
+                texto: "Buscá cualquier calle, plaza o avenida por nombre, tema o parte de su historia (ej: \"tango\", \"Malvinas\").",
+            },
+            {
+                target: "#tools-btn",
+                titulo: "Herramientas",
+                texto: "Acá están agrupados todos los accesos rápidos del mapa.",
+            },
+            {
+                target: "#random-btn",
+                titulo: "Odónimo del día",
+                texto: "Te muestra una calle distinta cada día, la misma para todos los visitantes.",
+                abrirPanel: true,
+            },
+            {
+                target: "#stats-btn",
+                titulo: "Datos y curiosidades",
+                texto: "Estadísticas del callejero y datos curiosos sobre Buenos Aires.",
+                abrirPanel: true,
+            },
+            {
+                target: "#theme-toggle-btn",
+                titulo: "Estilo del mapa",
+                texto: "Cambiá entre los mapas Voyager, Claro y Oscuro.",
+                abrirPanel: true,
+            },
+            {
+                target: ".categoria-filter",
+                titulo: "Filtros temáticos",
+                texto: "Filtrá el mapa por categoría: personas, lugares, fechas, naturaleza…",
+                abrirPanel: true,
+            },
+            {
+                target: "#favoritos-btn",
+                titulo: "Mis favoritas",
+                texto: "Guardá las calles que más te interesen para volver a verlas después.",
+                abrirPanel: true,
+            },
+            {
+                target: "#nearme-btn",
+                titulo: "Ubicación",
+                texto: "Mostrá las calles con historia más cercanas a donde estás parado.",
+                abrirPanel: true,
+            },
+        ];
+
+        if ($btnEfemeride && !$btnEfemeride.hidden) {
+            pasos.push({
+                target: "#efemeride-btn",
+                titulo: "Un día como hoy",
+                texto: "Hoy hay una efeméride para contar: tocá acá para verla.",
+                abrirPanel: true,
+            });
+        }
+
+        pasos.push({
+            target: "#about-btn",
+            titulo: "Acerca de",
+            texto: "Info del proyecto, fuentes de datos y este mismo tutorial, para volver a verlo cuando quieras.",
+            abrirPanel: true,
+        });
+
+        pasos.push({
+            target: null,
+            titulo: "¡Listo para explorar!",
+            texto: "¡A explorar el callejero porteño!",
+        });
+
+        return pasos;
+    }
+
+    /** Ubica el spotlight y la tarjeta según el elemento del paso actual
+     *  (o los centra en pantalla si el paso no apunta a nada). */
+    function posicionarTour(selector) {
+        if (!$tourSpotlight || !$tourCard) return;
+        const target = selector ? document.querySelector(selector) : null;
+        const esMobile = window.innerWidth <= 480;
+
+        if (!target) {
+            const cx = window.innerWidth / 2;
+            const cy = window.innerHeight / 2;
+            $tourSpotlight.style.cssText = `top:${cy}px; left:${cx}px; width:0; height:0; border-radius:50%;`;
+        } else {
+            const r = target.getBoundingClientRect();
+            const pad = 6;
+            const circular = Math.abs(r.width - r.height) < 4;
+            $tourSpotlight.style.cssText =
+                `top:${r.top - pad}px; left:${r.left - pad}px; ` +
+                `width:${r.width + pad * 2}px; height:${r.height + pad * 2}px; ` +
+                `border-radius:${circular ? "50%" : "10px"};`;
+        }
+
+        if (esMobile) {
+            // En mobile la tarjeta queda fija abajo (ver CSS), no hace
+            // falta calcular su posición.
+            $tourCard.style.top = "";
+            $tourCard.style.left = "";
+            $tourCard.style.transform = "";
+            return;
+        }
+
+        if (!target) {
+            $tourCard.style.top = "50%";
+            $tourCard.style.left = "50%";
+            $tourCard.style.transform = "translate(-50%, -50%)";
+            return;
+        }
+
+        $tourCard.style.transform = "";
+        const r = target.getBoundingClientRect();
+        const margen = 14;
+        const cardW = $tourCard.offsetWidth || 300;
+        const cardH = $tourCard.offsetHeight || 160;
+        let top, left;
+
+        if (r.right + margen + cardW < window.innerWidth) {
+            left = r.right + margen;
+            top = r.top + r.height / 2 - cardH / 2;
+        } else if (r.left - margen - cardW > 0) {
+            left = r.left - margen - cardW;
+            top = r.top + r.height / 2 - cardH / 2;
+        } else if (r.bottom + margen + cardH < window.innerHeight) {
+            top = r.bottom + margen;
+            left = r.left + r.width / 2 - cardW / 2;
+        } else {
+            top = r.top - margen - cardH;
+            left = r.left + r.width / 2 - cardW / 2;
+        }
+
+        top = Math.min(Math.max(top, margen), window.innerHeight - cardH - margen);
+        left = Math.min(Math.max(left, margen), window.innerWidth - cardW - margen);
+        $tourCard.style.top = `${top}px`;
+        $tourCard.style.left = `${left}px`;
+    }
+
+    function mostrarPasoTour(indice) {
+        if (indice < 0 || indice >= tourPasos.length) return;
+        tourPasoActual = indice;
+        const paso = tourPasos[indice];
+
+        if ($toolsPanel) {
+            $toolsPanel.hidden = !paso.abrirPanel;
+        }
+        if ($btnTools) {
+            $btnTools.setAttribute("aria-expanded", String(!!paso.abrirPanel));
+        }
+
+        if ($tourStepCount) $tourStepCount.textContent = `${indice + 1} / ${tourPasos.length}`;
+        if ($tourTitle) $tourTitle.textContent = paso.titulo;
+        if ($tourText) $tourText.textContent = paso.texto;
+        if ($tourPrev) $tourPrev.disabled = indice === 0;
+        if ($tourNext) $tourNext.textContent = indice === tourPasos.length - 1 ? "Entendido" : "Siguiente";
+
+        // Se posiciona en el mismo tick, sin esperar un frame: leer
+        // getBoundingClientRect()/offsetWidth ya fuerza el layout al
+        // vuelo, así que no hace falta requestAnimationFrame (que además
+        // no se dispara si la pestaña queda en segundo plano, dejando la
+        // tarjeta clavada en top:0;left:0 hasta que vuelva a primer plano).
+        posicionarTour(paso.target);
+    }
+
+    function avanzarTour() {
+        if (tourPasoActual >= tourPasos.length - 1) {
+            cerrarTour();
+            return;
+        }
+        mostrarPasoTour(tourPasoActual + 1);
+    }
+
+    function retrocederTour() {
+        if (tourPasoActual === 0) return;
+        mostrarPasoTour(tourPasoActual - 1);
+    }
+
+    function cerrarTour() {
+        if ($tourOverlay) $tourOverlay.hidden = true;
+        if ($toolsPanel) $toolsPanel.hidden = true;
+        if ($btnTools) $btnTools.setAttribute("aria-expanded", "false");
+        localStorage.setItem(TOUR_KEY, "1");
+    }
+
+    function iniciarTour() {
+        tourPasos = construirPasosTour();
+        if (tourPasos.length === 0 || !$tourOverlay) return;
+        $tourOverlay.hidden = false;
+        mostrarPasoTour(0);
+    }
+
+    function inicializarTour() {
+        if ($tourNext) $tourNext.addEventListener("click", avanzarTour);
+        if ($tourPrev) $tourPrev.addEventListener("click", retrocederTour);
+        if ($tourSkip) $tourSkip.addEventListener("click", cerrarTour);
+        if ($tourReplayBtn) {
+            $tourReplayBtn.addEventListener("click", () => {
+                if ($aboutModal) $aboutModal.hidden = true;
+                setTimeout(iniciarTour, 150);
+            });
+        }
+        document.addEventListener("keydown", (e) => {
+            if (!$tourOverlay || $tourOverlay.hidden) return;
+            if (e.key === "Escape") cerrarTour();
+            else if (e.key === "ArrowRight") avanzarTour();
+            else if (e.key === "ArrowLeft") retrocederTour();
+        });
+        window.addEventListener("resize", () => {
+            if (!$tourOverlay || $tourOverlay.hidden) return;
+            const paso = tourPasos[tourPasoActual];
+            if (paso) posicionarTour(paso.target);
+        });
+
+        // Primera visita real: sin flag guardado y sin ?c=/?cat= en la URL
+        // (un link compartido no debería interrumpirse con el tutorial).
+        if (!localStorage.getItem(TOUR_KEY) && !location.search) {
+            setTimeout(iniciarTour, 600);
+        }
+    }
+
+    // =================================================================
+    // 10. ARRANQUE
     // =================================================================
 
     async function main() {
         inicializarMapa();
         await cargarDatos();
+        dibujarCapaBase();
         conectarEventos();
+        inicializarEfemeride();
+        actualizarBadgeFavoritos();
+        inicializarTour();
+        // ?c=<calle> tiene prioridad; si no hay ninguna (o no existe), se
+        // prueba ?cat=<categoría> para restaurar un filtro compartido.
+        if (!seleccionarDesdeURL()) {
+            seleccionarCategoriaDesdeURL();
+        }
     }
 
     document.addEventListener("DOMContentLoaded", main);

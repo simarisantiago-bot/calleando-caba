@@ -1,18 +1,462 @@
 {
-    "alerce":                              {"lat": -34.58226421126572, "lon": -58.38160943246296},
-    "alferez de navio francisco pareja":   {"lat": -34.62224007823923, "lon": -58.35588024914821},
-    "aljaba magallanica":                  {"lat": -34.58203190454091, "lon": -58.38225872892398},
-    "almirante f j segui":                 {"lat": -34.60989242204391, "lon": -58.45918453567554},
-    "benjamin j lavaysse":                 {"lat": -34.62449442751439, "lon": -58.35359167799332},
-    "bergantin vigilante":                 {"lat": -34.687823735436076, "lon": -58.46688190680871},
-    "cabo 1 julio omar benitez":           {"lat": -34.66254241971467, "lon": -58.468435249160315},
-    "cabo 2 jorge eduardo lopez":          {"lat": -34.66282332029614, "lon": -58.469168533786345},
-    "canonigo miguel calixto del corro":   {"lat": -34.63384554316769, "lon": -58.49717830680418},
-    "capitan claudio h rosales":           {"lat": -34.64463229338206, "lon": -58.52532087030425},
-    "carlos h perette":                    {"lat": -34.58249388506487, "lon": -58.37852862214186},
-    "carlos maria della paolera":          {"lat": -34.595194238920136, "lon": -58.37169289515871},
-    "cayetano a silva":                    {"lat": -34.65575253096101, "lon": -58.52502505104651},
-    "chilca":                              {"lat": -34.580535624948496, "lon": -58.38390157221059},
-    "clemente diez de medina":             {"lat": -34.6427529192167, "lon": -58.434423577983246},
-    "carlos e pellegrini":                 {"lat": -34.564440, "lon": -58.504912}
+    "alerce": {
+        "lat": -34.58226421126572,
+        "lon": -58.38160943246296
+    },
+    "alferez de navio francisco pareja": {
+        "lat": -34.62224007823923,
+        "lon": -58.35588024914821
+    },
+    "aljaba magallanica": {
+        "lat": -34.58203190454091,
+        "lon": -58.38225872892398
+    },
+    "almirante f j segui": {
+        "lat": -34.60989242204391,
+        "lon": -58.45918453567554
+    },
+    "benjamin j lavaysse": {
+        "lat": -34.62449442751439,
+        "lon": -58.35359167799332
+    },
+    "bergantin vigilante": {
+        "lat": -34.687823735436076,
+        "lon": -58.46688190680871
+    },
+    "cabo 1 julio omar benitez": {
+        "lat": -34.66254241971467,
+        "lon": -58.468435249160315
+    },
+    "cabo 2 jorge eduardo lopez": {
+        "lat": -34.66282332029614,
+        "lon": -58.469168533786345
+    },
+    "canonigo miguel calixto del corro": {
+        "lat": -34.63384554316769,
+        "lon": -58.49717830680418
+    },
+    "capitan claudio h rosales": {
+        "lat": -34.64463229338206,
+        "lon": -58.52532087030425
+    },
+    "carlos h perette": {
+        "lat": -34.58249388506487,
+        "lon": -58.37852862214186
+    },
+    "carlos maria della paolera": {
+        "lat": -34.595194238920136,
+        "lon": -58.37169289515871
+    },
+    "cayetano a silva": {
+        "lat": -34.6553867,
+        "lon": -58.5257398
+    },
+    "chilca": {
+        "lat": -34.580535624948496,
+        "lon": -58.38390157221059
+    },
+    "clemente diez de medina": {
+        "lat": -34.6428558,
+        "lon": -58.4344479
+    },
+    "carlos e pellegrini": {
+        "lat": -34.5636772,
+        "lon": -58.5033658
+    },
+    "jujuy": {
+        "lat": -34.6232936,
+        "lon": -58.4022904
+    },
+    "capitan de fragata pedro edgardo giachino": {
+        "lat": -34.6481581218881,
+        "lon": -58.434863176348536
+    },
+    "carolina muzzili": {
+        "lat": -34.64818521357323,
+        "lon": -58.502027990240016
+    },
+    "comodoro pedro l zanni": {
+        "lat": -34.58349455483456,
+        "lon": -58.37162416055853
+    },
+    "coronel carlos tomas sourigues": {
+        "lat": -34.55062376300445,
+        "lon": -58.449734210287694,
+        "osm_name": "Coronel Carlos Sourigues"
+    },
+    "constancio cecilio vigil": {
+        "lat": -34.64520040862716,
+        "lon": -58.5264108170929,
+        "osm_name": "Constancio Cecilio Vigil"
+    },
+    "comisario joaquin valentin perez": {
+        "lat": -34.66232046137851,
+        "lon": -58.44760827874202,
+        "osm_name": "Comisario J. V. Pérez"
+    },
+    "coronel luis jorge fontana": {
+        "lat": -34.612148942981,
+        "lon": -58.506582161581214,
+        "osm_name": "Coronel Jorge Luis Fontana"
+    },
+    "coronel pedro andres garcia": {
+        "lat": -34.68343505921627,
+        "lon": -58.46805590396712,
+        "osm_name": "Coronel Pedro A. García"
+    },
+    "coronel rohde": {
+        "lat": -34.61044227332985,
+        "lon": -58.49285813148816,
+        "osm_name": "Pasaje Coronel Rhode"
+    },
+    "cesar h bacle": {
+        "lat": -34.63680140582328,
+        "lon": -58.48006403147165,
+        "osm_name": "César Bacle"
+    },
+    "diputado nacional osvaldo ernesto benedetti": {
+        "lat": -34.63491826616558,
+        "lon": -58.48315202052146,
+        "osm_name": "Diputado Osvaldo Benedetti"
+    },
+    "doctor adolfo dickmann": {
+        "lat": -34.59790021549319,
+        "lon": -58.46277123169503,
+        "osm_name": "Doctor Adolfo Dickman"
+    },
+    "coronel jose olegario gordillo": {
+        "lat": -34.63984895198831,
+        "lon": -58.51620815054623,
+        "osm_name": "José Carballido"
+    },
+    "doctor enzo bordabehere": {
+        "lat": -34.60000971574166,
+        "lon": -58.480771314096096,
+        "osm_name": "Enzo Bordabehere"
+    },
+    "doctor jose de paula y rodriguez alves": {
+        "lat": -34.64820793335812,
+        "lon": -58.52652140464768,
+        "osm_name": "José de Paula y Rodríguez Alves"
+    },
+    "doctor jose modesto giuffra": {
+        "lat": -34.617832149350036,
+        "lon": -58.37101959547911,
+        "osm_name": "Doctor José M. Giuffra"
+    },
+    "doctor norberto quirno costa": {
+        "lat": -34.59507630036976,
+        "lon": -58.40547582116379
+    },
+    "doctor roberto levillier": {
+        "lat": -34.57027082128633,
+        "lon": -58.41314336589813,
+        "osm_name": "Roberto Leviller"
+    },
+    "doctor tomas manuel de anchorena": {
+        "lat": -34.600088098351186,
+        "lon": -58.40902714205449,
+        "osm_name": "Tomás Manuel de Anchorena"
+    },
+    "doctor hilario de almeira": {
+        "lat": -34.62028537602555,
+        "lon": -58.50979710036093,
+        "osm_name": "Hilario de Almeira"
+    },
+    "doctor marcelo j fitte": {
+        "lat": -34.56865054019497,
+        "lon": -58.45983224080558,
+        "osm_name": "Doctor Marcelo Fitte"
+    },
+    "doctor angel h roffo": {
+        "lat": -34.6388645272577,
+        "lon": -58.52852295729052,
+        "osm_name": "Doctor Ángel Honorio Roffo"
+    },
+    "doctor osvaldo eguia": {
+        "lat": -34.6733779620585,
+        "lon": -58.49772845307801,
+        "way_id": 22569630
+    },
+    "eduardo juan couture": {
+        "lat": -34.581831707174246,
+        "lon": -58.39176446164377,
+        "osm_name": "Eduardo J. Couture"
+    },
+    "emilio becher": {
+        "lat": -34.6598053787533,
+        "lon": -58.48507697459184,
+        "osm_name": "Emilio Escher"
+    },
+    "enrique del valle iberlucea": {
+        "lat": -34.63569064237606,
+        "lon": -58.36391506719018
+    },
+    "estanislao s zeballos": {
+        "lat": -34.587885340612196,
+        "lon": -58.50808544659927,
+        "osm_name": "Estanislao Zeballos"
+    },
+    "francisco antonio maciel": {
+        "lat": -34.61080338142315,
+        "lon": -58.444565305148714,
+        "osm_name": "Francisco A. Maciel"
+    },
+    "felix o fouiller": {
+        "lat": -34.581177530574024,
+        "lon": -58.4918472512506,
+        "osm_name": "Félix O. Foullier"
+    },
+    "emeric e vidal": {
+        "lat": -34.62028825870936,
+        "lon": -58.52955123412996,
+        "osm_name": "Emeric Vidal"
+    },
+    "francisco j ortiz": {
+        "lat": -34.64877018808847,
+        "lon": -58.52152673279558,
+        "osm_name": "Francisco Ortiz"
+    },
+    "general conrado excelso villegas": {
+        "lat": -34.681556443421655,
+        "lon": -58.46569335793971,
+        "osm_name": "General Conrado Villegas"
+    },
+    "general jose maria bustillo": {
+        "lat": -34.64109431655824,
+        "lon": -58.4647123346072
+    },
+    "ingeniero julio krause": {
+        "lat": -34.666163065014146,
+        "lon": -58.48376150537753
+    },
+    "j f bateman": {
+        "lat": -34.606714613241614,
+        "lon": -58.50341381191594
+    },
+    "gaspar melchor de jovellanos": {
+        "lat": -34.639816072868506,
+        "lon": -58.372044842574084,
+        "osm_name": "Gaspar Melchor Jovellanos"
+    },
+    "isla de galapagos": {
+        "lat": -34.58242487471019,
+        "lon": -58.37939126029395,
+        "osm_name": "Islas Galápagos"
+    },
+    "jarilla": {
+        "lat": -34.581852039731444,
+        "lon": -58.38514565979427,
+        "osm_name": "Jarillo"
+    },
+    "jose j podesta": {
+        "lat": -34.614714293629646,
+        "lon": -58.52747520272873,
+        "osm_name": "José Podestá"
+    },
+    "jose ortega y gasset": {
+        "lat": -34.56956215741046,
+        "lon": -58.43213378590926,
+        "osm_name": "Ortega y Gasset"
+    },
+    "jose p tamborini": {
+        "lat": -34.56015826162201,
+        "lon": -58.47918723280395
+    },
+    "juan antonio bibiloni": {
+        "lat": -34.58201662273818,
+        "lon": -58.39257046324129,
+        "osm_name": "Juan A. Bibiloni"
+    },
+    "juan m thome": {
+        "lat": -34.656573986975715,
+        "lon": -58.417624304484356,
+        "osm_name": "Juan Thome"
+    },
+    "juan ramirez de velazco": {
+        "lat": -34.59531164962616,
+        "lon": -58.43942368354808,
+        "osm_name": "Juan Ramírez de Velasco"
+    },
+    "luis alberto herrera": {
+        "lat": -34.671951955757514,
+        "lon": -58.48909569150584
+    },
+    "martin a malharro": {
+        "lat": -34.54158231720911,
+        "lon": -58.47547250197251,
+        "osm_name": "Martín Malharro"
+    },
+    "mayor arturo pedro luisoni": {
+        "lat": -34.58433233668173,
+        "lon": -58.37110558595415,
+        "osm_name": "Mayor Arturo Luisoni"
+    },
+    "jose julian perez": {
+        "lat": -34.61814490790109,
+        "lon": -58.41908322404725,
+        "osm_name": "José J. Pérez"
+    },
+    "jose r baltore": {
+        "lat": -34.648482400424754,
+        "lon": -58.52181190196567,
+        "osm_name": "José Baltore"
+    },
+    "juan francisco de la robla": {
+        "lat": -34.621877106973145,
+        "lon": -58.47458929214033,
+        "osm_name": "Pasaje Juan F. De La Robla"
+    },
+    "juan p calou": {
+        "lat": -34.675739141751265,
+        "lon": -58.4714069449447,
+        "osm_name": "Juan Calou"
+    },
+    "miguel a camino": {
+        "lat": -34.5647283593259,
+        "lon": -58.50121694255809,
+        "osm_name": "Miguel Andrés Camino"
+    },
+    "padre juan bautista neumann": {
+        "lat": -34.55013368845073,
+        "lon": -58.45248978421747,
+        "osm_name": "Padre Juan B. Neumann"
+    },
+    "teniente general eustoquio frias": {
+        "lat": -34.60271344281108,
+        "lon": -58.43508829278962
+    },
+    "teniente general pablo riccheri": {
+        "lat": -34.548485343754095,
+        "lon": -58.452462014266914,
+        "osm_name": "Teniente General Pablo Ricchieri"
+    },
+    "victoriano e montes": {
+        "lat": -34.548738548039054,
+        "lon": -58.49376192382632
+    },
+    "presidente doctor arturo umberto illia": {
+        "lat": -34.57416430099331,
+        "lon": -58.39265681589334,
+        "osm_name": "Autopista Arturo Illia"
+    },
+    "santiago costamagna": {
+        "lat": -34.687342057640606,
+        "lon": -58.46327519749437,
+        "osm_name": "Santiago Costamanga"
+    },
+    "vicente anastasio de echevarria": {
+        "lat": -34.61410731157485,
+        "lon": -58.528738882246856,
+        "osm_name": "Vicente A. de Echevarría"
+    },
+    "angel m gimenez": {
+        "lat": -34.61928296242782,
+        "lon": -58.4375963902925,
+        "osm_name": "Ángel María Giménez"
+    },
+    "presidente hector j campora": {
+        "lat": -34.663306978296475,
+        "lon": -58.45203326163955,
+        "osm_name": "Autopista Presidente Héctor José Cámpora"
+    },
+    "guatambu": {
+        "line": [
+            [
+                -34.579618377065906,
+                -58.38971697917966
+            ],
+            [
+                -34.58007644046865,
+                -58.389929936682016
+            ]
+        ]
+    },
+    "guayaba": {
+        "line": [
+            [
+                -34.579130953325205,
+                -58.389947140865395
+            ],
+            [
+                -34.57892557388408,
+                -58.389763409554405
+            ]
+        ]
+    },
+    "jazmin del paraguay": {
+        "line": [
+            [
+                -34.57893933122365,
+                -58.38413463413385
+            ],
+            [
+                -34.57879136939969,
+                -58.38408970713374
+            ]
+        ]
+    },
+    "mochica": {
+        "line": [
+            [
+                -34.5821324191906,
+                -58.38353242854552
+            ],
+            [
+                -34.5819425052935,
+                -58.383893185643885
+            ]
+        ]
+    },
+    "sauco": {
+        "line": [
+            [
+                -34.58317304725994,
+                -58.38036911600087
+            ],
+            [
+                -34.58277675378348,
+                -58.38000096678866
+            ]
+        ]
+    },
+    "nandubay": {
+        "line": [
+            [
+                -34.57890011997805,
+                -58.38531530069174
+            ],
+            [
+                -34.579500767741514,
+                -58.38501591006138
+            ]
+        ]
+    },
+    "kolla": {
+        "lat": -34.57872078531587,
+        "lon": -58.390324799011296,
+        "osm_name": "Kollas"
+    },
+    "15 de noviembre de 1889": {
+        "lat": -34.63073341361836,
+        "lon": -58.381479267641836,
+        "osm_name": "15 de Noviembre de 1889"
+    },
+    "velez sarsfield": {
+        "lat": -34.63428625804655,
+        "lon": -58.3903739353765,
+        "osm_name": "Avenida Vélez Sársfield"
+    },
+    "paico": {
+        "line": [
+            [
+                -34.58585793940046,
+                -58.378255255316084
+            ],
+            [
+                -34.5855730811624,
+                -58.37870318422446
+            ]
+        ]
+    }
 }
