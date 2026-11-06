@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revisar fotos · Calleando CABA</title>
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="revisar_fotos.css">
+</head>
+<body>
+
+<header class="barra">
+    <div class="barra-izq">
+        <strong>Revisar fotos</strong>
+        <span class="sutil" id="subtitulo">cargando…</span>
+    </div>
+
+    <div class="progreso" title="Entradas con decisión tomada">
+        <div class="progreso-rail"><div class="progreso-fill" id="progresoFill"></div></div>
+        <span class="progreso-txt" id="progresoTxt">0 / 0</span>
+    </div>
+
+    <div class="barra-der">
+        <label class="filtro">
+            <span>Ver</span>
+            <select id="filtro">
+                <option value="sospechosas">Sospechosas primero</option>
+                <option value="solo-sospechosas">Solo sospechosas</option>
+                <option value="pendientes">Solo pendientes</option>
+                <option value="marcadas">Solo marcadas</option>
+                <option value="todas">Todas, por categoría</option>
+            </select>
+        </label>
+        <button id="btnExportar" class="btn btn-primario">Exportar decisiones</button>
+        <button id="btnReset" class="btn btn-fantasma" title="Borra las marcas guardadas en este navegador">Reiniciar</button>
+    </div>
+</header>
+
+<div class="ayuda" id="ayuda">
+    <p>
+        <strong>Todo arranca como pendiente.</strong> Hacé click en una foto que esté
+        <em>mal</em> para marcarla; volvé a hacer click si tenés dudas; un tercer
+        click la devuelve a pendiente. Cuando un bloque esté revisado, confirmalo
+        con el botón del final y las pendientes quedan como correctas.
+    </p>
+    <p class="sutil">
+        Las marcas se guardan solas en este navegador. Al terminar, <em>Exportar
+        decisiones</em> baja un JSON que aplica <code>aplicar_revision.py</code>.
+    </p>
+    <button class="btn btn-fantasma" id="btnCerrarAyuda">Entendido</button>
+</div>
+
+<main id="contenido"></main>
+
+<div class="pie" id="pie"></div>
+
+<script src="revisar_fotos.js"></script>
+</body>
+</html>

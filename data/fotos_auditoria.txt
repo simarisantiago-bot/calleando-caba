@@ -1,0 +1,259 @@
+AUDITORÍA DE FOTOS — entradas que la app resuelve por búsqueda en vivo
+
+Auditadas            : 1505
+  de categoría PERSONA: 1061
+Marcadas sospechosas : 57
+No auditadas (término elegido a mano en script.js): 18
+
+Por bandera (sólo las sospechosas):
+  LUGAR_SIN_LUGAR    26
+  OTRA_PERSONA       25
+  NO_ES_PERSONA      12
+  NO_DEBERIA_SER_LUGAR    1
+
+========================================================================
+SOSPECHOSAS (revisar primero)
+========================================================================
+  Abraham J. Luppi  [PERSONA]
+       esperaba : Abraham J. Luppi
+       la foto sale de: Avenida Intendente Francisco Rabanal  (avenida)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Eduardo Colombo Leoni  [PERSONA]
+       esperaba : Eduardo Colombo Leoni
+       la foto sale de: Megacausa ESMA  (proceso judicial, juicios por delitos de lesa humanidad en Argentina)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Manuel de San Ginés  [PERSONA]
+       esperaba : Manuel Saturnino de San Ginés
+       la foto sale de: Albacete  (municipio de España)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Miguel Ángel  [PERSONA]
+       esperaba : Miguel Ángel Buonarotti
+       la foto sale de: Línea 749 (José C. Paz)  (línea de autobús)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Nelly Nistal  [PERSONA]
+       esperaba : Nelly Nistal
+       la foto sale de: Avenida Sáenz  (avenida)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Presbítero Virgilio Filipo  [PERSONA]
+       esperaba : Virgilio Filipo
+       la foto sale de: Bucólicas  (obra literaria)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Venialvo  [PERSONA]
+       esperaba : Lázaro de Venialvo
+       la foto sale de: Venialbo  (municipio de España)
+       banderas : NO_ES_PERSONA, OTRA_PERSONA
+  Patio de la Identidad y la Memoria  [CONCEPTO]
+       esperaba : Identidad y Memoria: ambos conceptos representan un compromiso social y político central para revisar el pasado reciente, especialmente la dictadura cívico-militar
+       la foto sale de: Patio 29  (cementerio)
+       banderas : NO_DEBERIA_SER_LUGAR
+  Ancaste  [LUGAR]
+       esperaba : Sierra de Ancaste
+       la foto sale de: Ancasta  (deidad celta)
+       banderas : LUGAR_SIN_LUGAR
+  Azul  [LUGAR]
+       esperaba : Azul
+       la foto sale de: Azul  (color primario, HTML4 named color, color espectral)
+       banderas : LUGAR_SIN_LUGAR
+  Bahía  [LUGAR]
+       esperaba : Bahía
+       la foto sale de: Bahía  (tipo de característica)
+       banderas : LUGAR_SIN_LUGAR
+  Cisne  [LUGAR]
+       esperaba : El Cisne
+       la foto sale de: Cisne  (clase de organismos conocidos por un nombre común particular)
+       banderas : LUGAR_SIN_LUGAR
+  Ciudad de Salamanca  [LUGAR]
+       esperaba : Salamanca
+       la foto sale de: Ciudad de Salamanca  (transbordador)
+       banderas : LUGAR_SIN_LUGAR
+  Ciudadela  [LUGAR]
+       esperaba : Ciudadela
+       la foto sale de: Ciudadela  (tipo de edificio)
+       banderas : LUGAR_SIN_LUGAR
+  De las Américas  [LUGAR]
+       esperaba : América
+       la foto sale de: Día de las Américas  (día internacional)
+       banderas : LUGAR_SIN_LUGAR
+  De las Américas  [LUGAR]
+       esperaba : América
+       la foto sale de: Día de las Américas  (día internacional)
+       banderas : LUGAR_SIN_LUGAR
+  Del Parque  [LUGAR]
+       esperaba : Del Parque
+       la foto sale de: Parque de atracciones  (tipo de parque)
+       banderas : LUGAR_SIN_LUGAR
+  Ensenada  [LUGAR]
+       esperaba : Ensenada
+       la foto sale de: Ensenada
+       banderas : LUGAR_SIN_LUGAR
+  Esquina  [LUGAR]
+       esperaba : Esquina
+       la foto sale de: Esquina
+       banderas : LUGAR_SIN_LUGAR
+  Goya  [LUGAR]
+       esperaba : Goya
+       la foto sale de: Francisco de Goya  (ser humano)
+       banderas : LUGAR_SIN_LUGAR
+  Guayrá  [LUGAR]
+       esperaba : Gobernación del Guayrá
+       la foto sale de: Guayrá  (construcción)
+       banderas : LUGAR_SIN_LUGAR
+  Hinojo  [LUGAR]
+       esperaba : Hinojo
+       la foto sale de: Foeniculum vulgare  (taxón)
+       banderas : LUGAR_SIN_LUGAR
+  Hipólito Bouchard  [LUGAR]
+       esperaba : Hipólito Bouchard
+       la foto sale de: Hipólito Bouchard  (ser humano)
+       banderas : LUGAR_SIN_LUGAR
+  Hipólito Bouchard  [LUGAR]
+       esperaba : Hipólito Bouchard
+       la foto sale de: Hipólito Bouchard  (ser humano)
+       banderas : LUGAR_SIN_LUGAR
+  La Capital  [LUGAR]
+       esperaba : Capital Federal
+       la foto sale de: Distrito federal  (tipo de división administrativa)
+       banderas : LUGAR_SIN_LUGAR
+  Las Provincias  [LUGAR]
+       esperaba : Provincias
+       la foto sale de: Provincia  (tipo de división administrativa)
+       banderas : LUGAR_SIN_LUGAR
+  Pergamino  [LUGAR]
+       esperaba : Pergamino
+       la foto sale de: Pergamino
+       banderas : LUGAR_SIN_LUGAR
+  Peribebuy  [LUGAR]
+       esperaba : Peribebuy
+       la foto sale de: Línea 49 (Buenos Aires)  (línea de autobús)
+       banderas : LUGAR_SIN_LUGAR
+  Pilar  [LUGAR]
+       esperaba : Pilar
+       la foto sale de: Pilar
+       banderas : LUGAR_SIN_LUGAR
+  Plumerillo  [LUGAR]
+       esperaba : Plumerillo
+       la foto sale de: Calliandra  (taxón)
+       banderas : LUGAR_SIN_LUGAR
+  Puna  [LUGAR]
+       esperaba : Puna
+       la foto sale de: Puna  (ecorregión)
+       banderas : LUGAR_SIN_LUGAR
+  República de Bolivia  [LUGAR]
+       esperaba : Bolivia
+       la foto sale de: República de Bolivia
+       banderas : LUGAR_SIN_LUGAR
+  República de Paraguay  [LUGAR]
+       esperaba : Paraguay
+       la foto sale de: Presidente de Paraguay  (cargo público)
+       banderas : LUGAR_SIN_LUGAR
+  Timbó  [LUGAR]
+       esperaba : Timbó
+       la foto sale de: Enterolobium contortisiliquum  (taxón)
+       banderas : LUGAR_SIN_LUGAR
+  Alejandro María de Aguado  [PERSONA]
+       esperaba : Alejandro María de Aguado, Marqués de las Marismas del Guadalquivir
+       la foto sale de: Marquesado de las Marismas del Guadalquivir  (marquesado jurisdiccional)
+       banderas : NO_ES_PERSONA
+  Arcamendia  [PERSONA]
+       esperaba : Domingo de Arcamendia
+       la foto sale de: Julio Troxler  (ser humano)
+       banderas : OTRA_PERSONA
+  Arnaldo D´espósito  [PERSONA]
+       esperaba : Arnaldo D´Espósito
+       la foto sale de: Jorge de Lalewicz  (ser humano)
+       banderas : OTRA_PERSONA
+  Arquitecto René Karman  [PERSONA]
+       esperaba : René Karman
+       la foto sale de: Carlos Morra  (ser humano)
+       banderas : OTRA_PERSONA
+  Baigorria  [PERSONA]
+       esperaba : Juan Bautista Baigorria
+       la foto sale de: Granadero Baigorria (Santa Fe)  (municipio, ciudad)
+       banderas : NO_ES_PERSONA
+  Bolaños  [PERSONA]
+       esperaba : José Bonifacio Bolaños
+       la foto sale de: Bolaños  (localidad de México)
+       banderas : NO_ES_PERSONA
+  Capitán Domingo Alejo Millán  [PERSONA]
+       esperaba : Domingo Alejo Millán
+       la foto sale de: Benjamín Jarnés  (ser humano)
+       banderas : OTRA_PERSONA
+  Carolina Muzzili  [PERSONA]
+       esperaba : Carolina Muzzili
+       la foto sale de: Alicia Moreau de Justo  (ser humano)
+       banderas : OTRA_PERSONA
+  Doctor Bernardo Vélez  [PERSONA]
+       esperaba : Bernardo Vélez
+       la foto sale de: Avenida Vélez Sársfield (Munro)  (carretera)
+       banderas : NO_ES_PERSONA
+  Doctor Rodolfo Erausquin  [PERSONA]
+       esperaba : Rodolfo Tomás Erausquin
+       la foto sale de: Valentín Grondona  (ser humano)
+       banderas : OTRA_PERSONA
+  Ernesto Urfeig  [PERSONA]
+       esperaba : Ernesto Urfeig
+       la foto sale de: Mirtha Legrand  (ser humano)
+       banderas : OTRA_PERSONA
+  Ibarrola  [PERSONA]
+       esperaba : Amadeo Ibarrola
+       la foto sale de: Francisca Silveira  (ser humano)
+       banderas : OTRA_PERSONA
+  Juan Bautista Jantín  [PERSONA]
+       esperaba : Juan Bautista Fantín
+       la foto sale de: Hipólito Mordeille  (ser humano)
+       banderas : OTRA_PERSONA
+  Juan P. Calou  [PERSONA]
+       esperaba : Juan Pedro Calou
+       la foto sale de: Andrés Chabrillón  (ser humano)
+       banderas : OTRA_PERSONA
+  Juez Magnaud  [PERSONA]
+       esperaba : Pablo Magnaud
+       la foto sale de: Bernardo Beiderman  (ser humano)
+       banderas : OTRA_PERSONA
+  Medeyros  [PERSONA]
+       esperaba : Juan Medeyros
+       la foto sale de: Alejandro Heredia  (ser humano)
+       banderas : OTRA_PERSONA
+  Padre Gaspar Cañada  [PERSONA]
+       esperaba : Gaspar Cañada
+       la foto sale de: Cañada (Alicante)  (municipio de España, municipio de la Comunidad Valenciana)
+       banderas : NO_ES_PERSONA
+  Paloma Efrón  [PERSONA]
+       esperaba : Paloma Efrón
+       la foto sale de: Blackie  (ser humano)
+       banderas : OTRA_PERSONA
+  Pedro Agote  [PERSONA]
+       esperaba : Pedro Agote
+       la foto sale de: Ernesto Bunge  (ser humano)
+       banderas : OTRA_PERSONA
+  Pieres  [PERSONA]
+       esperaba : José Antonio Pieres
+       la foto sale de: Piero  (ser humano)
+       banderas : OTRA_PERSONA
+  Prelado Don Buenaventura Risso Patrón  [PERSONA]
+       esperaba : Buenaventura Risso Patrón
+       la foto sale de: Pascual Arze y Zelarayán  (ser humano)
+       banderas : OTRA_PERSONA
+  Sebastián Borro  [PERSONA]
+       esperaba : Sebastián Borro
+       la foto sale de: Nicolás Borrás  (ser humano)
+       banderas : OTRA_PERSONA
+  Soria  [PERSONA]
+       esperaba : Pablo Soria
+       la foto sale de: Don Pelele  (ser humano)
+       banderas : OTRA_PERSONA
+
+========================================================================
+EL RESTO, POR CATEGORÍA (sin chequeo automático confiable)
+========================================================================
+  PERSONA                 1031
+  LUGAR                    321
+  NATURALEZA                38
+  ARTE                      14
+  CONCEPTO                  12
+  PUEBLOS ORIGINARIOS       11
+  ACCIÓN MILITAR             9
+  LITERATURA                 5
+  CUERPO MILITAR             4
+  FECHA                      2
+  RÍO                        1

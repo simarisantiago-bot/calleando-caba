@@ -28,7 +28,11 @@ OUT_TXT = BASE / "data" / "fotos_report.txt"
 
 WIKI_API = "https://es.wikipedia.org/w/api.php"
 UA = "calleando-caba/1.0 (simarisantiago@gmail.com) foto-baseline"
-WORKERS = 8
+# La cuota de Wikimedia es por IP y la comparten es.wikipedia y Wikidata.
+# Con 8 hilos la corrida del 6/11/2026 se comio 287 respuestas con HTTP 429
+# que quedaron registradas como "sin foto": al reintentarlas de a una, 12 de
+# 12 tenian foto. Tres hilos tardan mas pero no mienten.
+WORKERS = 3
 
 # Copiado 1:1 de script.js (BUSQUEDA_OVERRIDES).
 BUSQUEDA_OVERRIDES = {
@@ -93,8 +97,17 @@ _session = requests.Session()
 _session.headers.update({"User-Agent": UA})
 
 
+# Centinela: la consulta no se pudo completar (429 / red). NO es lo mismo que
+# "el articulo no tiene imagen", y confundirlos es como se arruina un baseline.
+FALLO = {"__fallo__": True}
+
+
 def fetch_image(term):
-    """Replica fetchStreetImage: generator=search, thumbnail, sin desambiguación."""
+    """Replica fetchStreetImage: generator=search, thumbnail, sin desambiguación.
+
+    Devuelve dict si encontro imagen, None si el articulo no tiene, y FALLO si
+    no se pudo consultar. Un FALLO nunca se cachea.
+    """
     key = term.strip().lower()
     if not key:
         return None
@@ -108,7 +121,9 @@ def fetch_image(term):
         "pithumbsize": "480", "ppprop": "disambiguation", "inprop": "url",
     }
     res = None
-    for intento in range(3):
+    respondio = False
+    espera = 5
+    for intento in range(5):
         try:
             r = _session.get(WIKI_API, params=params, timeout=30)
             if r.status_code == 200:
@@ -119,20 +134,36 @@ def fetch_image(term):
                 desamb = page and "disambiguation" in (page.get("pageprops") or {})
                 if thumb and not desamb:
                     res = {"thumb": thumb, "titulo": page.get("title", term)}
+                respondio = True
                 break
-            time.sleep(1 + intento)
+            if r.status_code == 429:
+                time.sleep(espera)
+                espera = min(espera * 2, 120)
+                continue
+            time.sleep(2 + intento)
         except Exception:
-            time.sleep(1 + intento)
+            time.sleep(2 + intento)
+    if not respondio:
+        return FALLO
     with _cache_lock:
         _term_cache[key] = res
     return res
 
 
 def resolver(entrada, override):
+    hubo_fallo = False
     for t in terminos_busqueda(entrada, override):
         data = fetch_image(t)
+        if data is FALLO:
+            hubo_fallo = True
+            continue
         if data:
             return {"tiene_foto": True, "termino_ok": t, **data}
+    if hubo_fallo:
+        # Ningun termino dio imagen PERO al menos uno no se pudo consultar:
+        # no sabemos si tiene foto. Se reintenta al final, sin concurrencia.
+        return {"tiene_foto": None, "termino_ok": None, "thumb": None,
+                "titulo": None, "fallo": True}
     return {"tiene_foto": False, "termino_ok": None, "thumb": None, "titulo": None}
 
 
@@ -150,14 +181,15 @@ def main():
     resultados = {}
     done = [0]
 
+    def override_de(ids):
+        for i in ids:
+            if i in BUSQUEDA_OVERRIDES:
+                return BUSQUEDA_OVERRIDES[i]
+        return None
+
     def trabajo(item):
         clave, info = item
-        override = None
-        for i in info["ids"]:
-            if i in BUSQUEDA_OVERRIDES:
-                override = BUSQUEDA_OVERRIDES[i]
-                break
-        r = resolver(info["rep"], override)
+        r = resolver(info["rep"], override_de(info["ids"]))
         r["categoria"] = info["cat"]
         r["nombre"] = info["rep"].get("nombre_busqueda")
         resultados[clave] = r
@@ -170,20 +202,48 @@ def main():
     with ThreadPoolExecutor(max_workers=WORKERS) as ex:
         list(ex.map(trabajo, claves))
 
+    # Segunda pasada para las que se quedaron sin respuesta por cuota: de a
+    # una y con pausa. Es lento pero son pocas, y la alternativa es anotarlas
+    # como "sin foto" cuando en realidad nunca se las llego a preguntar.
+    pendientes = [k for k, r in resultados.items() if r.get("fallo")]
+    if pendientes:
+        print()
+        print(f"{len(pendientes)} sin respuesta por cuota; reintentando de a una...")
+        for n, clave in enumerate(pendientes, 1):
+            info = por_clave[clave]
+            r = resolver(info["rep"], override_de(info["ids"]))
+            r["categoria"] = info["cat"]
+            r["nombre"] = info["rep"].get("nombre_busqueda")
+            resultados[clave] = r
+            if n % 25 == 0:
+                print(f"  reintento {n}/{len(pendientes)}", flush=True)
+            time.sleep(1.5)
+
+    irresueltas = [k for k, r in resultados.items() if r.get("fallo")]
+    if irresueltas:
+        print()
+        print(f"[AVISO] {len(irresueltas)} quedaron sin resolver: van con "
+              f"tiene_foto=null, NO como 'sin foto'.")
+
     json.dump(resultados, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False)
 
     # Reporte
     from collections import Counter
     total = len(resultados)
-    con = sum(1 for r in resultados.values() if r["tiene_foto"])
+    con = sum(1 for r in resultados.values() if r["tiene_foto"] is True)
+    sin_foto = sum(1 for r in resultados.values() if r["tiene_foto"] is False)
+    desconocidas = sum(1 for r in resultados.values() if r["tiene_foto"] is None)
     por_cat_total = Counter(r["categoria"] for r in resultados.values())
-    por_cat_con = Counter(r["categoria"] for r in resultados.values() if r["tiene_foto"])
+    por_cat_con = Counter(r["categoria"] for r in resultados.values()
+                          if r["tiene_foto"] is True)
 
     lines = []
     lines.append(f"FOTOS — baseline (replica exacta de la app)")
     lines.append(f"Total odónimos: {total}")
     lines.append(f"Con foto: {con} ({100*con/total:.1f}%)")
-    lines.append(f"Sin foto: {total-con} ({100*(total-con)/total:.1f}%)")
+    lines.append(f"Sin foto: {sin_foto} ({100*sin_foto/total:.1f}%)")
+    if desconocidas:
+        lines.append(f"Sin resolver (cuota agotada): {desconocidas}")
     lines.append("")
     lines.append("Por categoría:")
     for cat, n in por_cat_total.most_common():
@@ -191,7 +251,8 @@ def main():
         lines.append(f"  {cat:22s} {c:4d}/{n:<4d} ({100*c/n:.0f}%)")
     lines.append("")
     lines.append("=== SIN FOTO (para curar) ===")
-    sin = [(r["categoria"], r["nombre"]) for r in resultados.values() if not r["tiene_foto"]]
+    sin = [(r["categoria"], r["nombre"]) for r in resultados.values()
+           if r["tiene_foto"] is False]
     for cat, nombre in sorted(sin):
         lines.append(f"  [{cat}] {nombre}")
 

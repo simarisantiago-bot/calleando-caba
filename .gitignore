@@ -38,3 +38,6 @@ data/_pendientes_map.json
 _diag_*.py
 
 
+
+# Cache de consultas a Wikidata (regenerable: lo rehace auditar_fotos.py)
+data/_wikidata_cache.json

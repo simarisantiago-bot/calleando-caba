@@ -41,6 +41,43 @@ python -m http.server 8080
 ### Deploy
 Push a `main` redeploya automáticamente en Vercel.
 
+### Revisar las fotos sin verificar
+
+Las entradas que no están en `data/fotos.json` resuelven su foto buscando en
+Wikipedia en vivo, y nadie verificó que esa foto sea la correcta. El flujo para
+revisarlas, de punta a punta:
+
+```powershell
+python medir_fotos.py       # qué foto resuelve hoy cada odónimo (~20 min)
+python auditar_fotos.py     # marca las sospechosas (instantáneo con caché)
+python -m http.server 8080  # abrir http://localhost:8080/revisar_fotos.html
+# revisar, y exportar revision_fotos.json desde la página
+python aplicar_revision.py revision_fotos.json            # informe
+python aplicar_revision.py revision_fotos.json --aplicar  # escribe
+```
+
+`medir_fotos.py` replica exactamente la lógica de búsqueda de `script.js`, así
+que su salida es lo que la app muestra de verdad. **Ojo con la concurrencia**:
+la cuota de Wikimedia es por IP y la comparten es.wikipedia y Wikidata, así que
+no conviene subir `WORKERS` ni correr dos de estos scripts a la vez. Están
+hechos para distinguir "no hay imagen" de "no pude preguntar" y abortar antes
+que escribir datos a medias.
+
+`auditar_fotos.py` chequea coherencia entre la entrada y el artículo del que
+sale la foto: que una PERSONA sea una persona (`P31 = Q5`), que sea *esa*
+persona (nombre esperado contra título del artículo) y que una entrada de LUGAR
+dé un lugar y una que no lo es, no. Cachea Wikidata en
+`data/_wikidata_cache.json` (ignorado por git, regenerable).
+
+`revisar_fotos.html` es una hoja de contactos: todo arranca pendiente, se
+marcan solo las que están mal y al confirmar un bloque de 24 las pendientes
+pasan a correctas. Las marcas se guardan en `localStorage`.
+
+Confirmar una foto como correcta la **congela** en `fotos.json` con su
+atribución de Commons. Vale la pena aunque ya se vea bien: la búsqueda en vivo
+no es determinista —dos corridas del mismo día dan artículos distintos para un
+puñado de entradas— y además cada visitante la repite contra Wikipedia.
+
 ### Verificar integridad de los datos
 Chequea ids duplicados en `calles.json` y entradas huérfanas en `geo_cache.json`/
 `fotos.json` (restos de renombres o eliminaciones). No modifica nada, solo informa.
