@@ -1979,9 +1979,20 @@
             : "";
 
         // Contenedor de imagen con skeleton; se rellena en montarMediaPopup().
-        const media = mediaId
-            ? `<div class="popup-media" id="${mediaId}"><div class="popup-media-skeleton"></div></div>`
-            : "";
+        //
+        // Excepción: si la entrada está marcada "sinFoto", el isotipo va YA en
+        // este string en vez de pintarse despues desde montarMediaPopup().
+        // posicionarPopup() llama varias veces a popup.update(), que re-renderiza
+        // el popup a partir de este mismo HTML y descarta cualquier mutación
+        // previa sobre el DOM. La foto gana esa carrera porque llega por red
+        // (siempre después del último update), pero el fallback era síncrono y
+        // la perdia: quedaba el skeleton gris fijo para siempre.
+        const curada = fotoCurada(entrada);
+        const media = !mediaId
+            ? ""
+            : curada && curada.sinFoto
+                ? `<div class="popup-media es-fallback" id="${mediaId}" style="--cat-color: ${color};"><div class="popup-media-fallback">${iconoFallback()}</div></div>`
+                : `<div class="popup-media" id="${mediaId}"><div class="popup-media-skeleton"></div></div>`;
 
         return `
             ${media}
@@ -2018,6 +2029,16 @@
 
     // ---------- Imagen del popup (Wikipedia) ----------
     let mediaSeq = 0;
+
+    // Resuelve la foto curada de una entrada en data/fotos.json. Se busca
+    // primero por id completo (clave|tipo), para permitir fotos distintas
+    // cuando dos odónimos distintos comparten la misma clave (ej. "El
+    // Pampero" calle = viento, cantero = globo aerostático).
+    // La usan construirPopup() (para resolver "sinFoto" antes de armar el
+    // HTML) y montarMediaPopup() (para la foto en sí).
+    function fotoCurada(entrada) {
+        return fotosManual[entrada.id] || fotosManual[entrada.clave] || null;
+    }
 
     // Mismo isotipo que favicon.svg y el logo del header: pin con grilla de
     // manzanas en vez de un ícono genérico, para reforzar la marca cuando
@@ -2116,17 +2137,14 @@
 
         // 1) Foto precomputada (data/fotos.json — recuperadas vía Wikidata/Commons
         //    o curadas a mano). Tiene prioridad sobre la búsqueda en vivo.
-        //    Se busca primero por id completo (clave|tipo), para permitir fotos
-        //    distintas cuando dos odónimos distintos comparten la misma clave
-        //    (ej. "El Pampero" calle = viento, cantero = globo aerostático).
-        let data = fotosManual[entrada.id] || fotosManual[entrada.clave] || null;
+        let data = fotoCurada(entrada);
 
         // 1b) Marca "sinFoto": el odónimo no tiene retrato adecuado y la búsqueda
-        //     en vivo traía una imagen incorrecta -> forzamos el ícono de categoría.
-        if (data && data.sinFoto) {
-            mostrarFallbackMedia(mediaId, color);
-            return;
-        }
+        //     en vivo traía una imagen incorrecta -> va el ícono de marca. Ya lo
+        //     dejó puesto construirPopup() dentro del HTML del popup (ver el
+        //     comentario allá: pintarlo acá lo borraba el popup.update()
+        //     siguiente), así que acá sólo hay que no hacer nada.
+        if (data && data.sinFoto) return;
 
         // 2) Si no hay precomputada, probamos los términos en Wikipedia en vivo.
         if (!data || !data.thumbUrl) {

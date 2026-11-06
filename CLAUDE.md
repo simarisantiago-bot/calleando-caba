@@ -74,6 +74,31 @@ python verificar_caba.py --actualizar-limite
 - El resto (plaza, plazoleta, parque, jardín, barrio, cantero, espacio verde…)
   se dibuja como marcador (pin).
 
+### Fotos (`data/fotos.json`)
+
+Archivo **curado a mano**: ~930 fotos elegidas una por una + ~470 marcas
+`sinFoto`, sobre un padrón de 3139 entradas. No lo genera ningún script de
+forma completa. Los conteos exactos los imprime `verificar_integridad.py`.
+
+- Clave: la `clave` de la entrada, o `clave|tipo` cuando dos odónimos con el
+  mismo nombre necesitan fotos distintas (`el pampero|calle` = el viento,
+  `el pampero|cantero` = el globo aerostático). `script.js` busca primero por
+  id completo y después por clave.
+- `{"sinFoto": true}` significa "esta entrada no tiene retrato adecuado y la
+  búsqueda en vivo traía una imagen equivocada": se muestra el isotipo de
+  marca. Borrarlas no es neutro: hace reaparecer fotos de personas que no
+  son (el detector `detectar_fotos_no_persona.py` encontró 305 casos así).
+- Las entradas que no están en el archivo (~1665) caen en la búsqueda en vivo
+  de Wikipedia, con los overrides de `BUSQUEDA_OVERRIDES` en `script.js`.
+
+**Nunca reescribir el archivo entero.** Para agregar o corregir una foto hay
+que cargar el JSON, tocar la clave y volver a escribirlo completo — nunca
+armar un diccionario nuevo desde cero. En septiembre de 2026 se perdieron
+1399 entradas justamente así, al regenerarlo para agregar una sola foto; como
+el JSON estaba minificado en una línea, el diff mostró `1 insertion(+),
+1 deletion(-)` y nadie lo vio. Por eso ahora va pretty-printed con una clave
+por línea: un borrado masivo salta a la vista en el diff.
+
 ## Limitaciones conocidas
 
 - Nominatim tiene rate limit (~1 req/seg). Si el sitio tiene mucho tráfico
