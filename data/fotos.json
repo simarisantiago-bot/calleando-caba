@@ -231,6 +231,9 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ATEM_grupo_feminista-_D%C3%ADa_Internacional_de_la_Mujer.jpg?width=480",
     "titulo": "Grupo feminista ATEM, Día Internacional de la Mujer"
   },
+  "abraham j luppi": {
+    "sinFoto": true
+  },
   "achega": {
     "sinFoto": true
   },
@@ -344,6 +347,9 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alejandro_Magari%C3%B1os_Cervantes.gif?width=480",
     "titulo": "Alejandro Magariños Cervantes"
   },
+  "alejandro maria de aguado": {
+    "sinFoto": true
+  },
   "alejandro petion": {
     "autor": "Unknown author",
     "licencia": "Public domain",
@@ -439,6 +445,9 @@
     "sinFoto": true
   },
   "anasco": {
+    "sinFoto": true
+  },
+  "ancaste": {
     "sinFoto": true
   },
   "anchoris": {
@@ -551,6 +560,9 @@
   "aquino": {
     "sinFoto": true
   },
+  "arcamendia": {
+    "sinFoto": true
+  },
   "arce": {
     "autor": "Correos de Bolivia, escaneado por colnect",
     "licencia": "Public domain",
@@ -562,6 +574,9 @@
     "sinFoto": true
   },
   "arjonilla": {
+    "sinFoto": true
+  },
+  "arnaldo d esposito": {
     "sinFoto": true
   },
   "aroma": {
@@ -615,6 +630,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Juan_Kurchan_%289c82b6%29.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Juan_Kurchan_%289c82b6%29.jpg?width=480",
     "titulo": "Juan Kurchan"
+  },
+  "arquitecto rene karman": {
+    "sinFoto": true
   },
   "arribenos": {
     "autor": "Justo Doldan",
@@ -705,10 +723,19 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nectandra_saligna.jpg?width=480",
     "titulo": "Ayuí (Nectandra megapotamica)"
   },
+  "azul": {
+    "sinFoto": true
+  },
   "bacacay": {
     "sinFoto": true
   },
+  "bahia": {
+    "sinFoto": true
+  },
   "baigorri": {
+    "sinFoto": true
+  },
+  "baigorria": {
     "sinFoto": true
   },
   "balandra carmen": {
@@ -956,6 +983,9 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Centro_internacional.JPG?width=480",
     "titulo": "Bogotá"
   },
+  "bolanos": {
+    "sinFoto": true
+  },
   "bolivar": {
     "autor": "Ricardo Acevedo Bernal",
     "licencia": "Public domain",
@@ -1195,6 +1225,9 @@
   "capitan claudio h rosales": {
     "sinFoto": true
   },
+  "capitan domingo alejo millan": {
+    "sinFoto": true
+  },
   "capitan samuel spiro": {
     "sinFoto": true
   },
@@ -1288,6 +1321,9 @@
     "sinFoto": true
   },
   "carlos norberto vergara": {
+    "sinFoto": true
+  },
+  "carolina muzzili": {
     "sinFoto": true
   },
   "carqueja": {
@@ -1612,12 +1648,21 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyrus_II_%28The_Great%29_%28cropped%29.jpg?width=480",
     "titulo": "Ciro el Grande"
   },
+  "cisne": {
+    "sinFoto": true
+  },
   "ciudad de guadix": {
     "autor": "Paul Taylor",
     "licencia": "CC BY-SA 3.0",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_-_Guadix_-_Spain_-_20110808.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_-_Guadix_-_Spain_-_20110808.jpg?width=480",
     "titulo": "Guadix, España"
+  },
+  "ciudad de salamanca": {
+    "sinFoto": true
+  },
+  "ciudadela": {
+    "sinFoto": true
   },
   "claudia falcone": {
     "autor": "Gelpgim22",
@@ -2020,6 +2065,13 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/OLIN_MOSS%2C_INSTRUMENT_TECHNICIAN_ON_AIR_SANITATION_CALIBRATING_HYDROCARBON_ANALYZERS._SMOG_-_NARA_-_542765.tif?width=480",
     "titulo": "Técnica"
   },
+  "de las americas": {
+    "autor": "Martin23230",
+    "licencia": "CC BY-SA 3.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Americas_%28orthographic_projection%29.svg",
+    "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Americas_%28orthographic_projection%29.svg/500px-Americas_%28orthographic_projection%29.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "titulo": "Día de las Américas"
+  },
   "de las artes": {
     "autor": "Sebastiano Ricci",
     "licencia": "Public domain",
@@ -2292,6 +2344,9 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulnesia_sarmientoi_%28_Palo_Santo%29.jpg?width=480",
     "titulo": "Palo Santo (Bulnesia sarmientoi)"
   },
+  "del parque": {
+    "sinFoto": true
+  },
   "del tango": {
     "autor": "Unknown author",
     "licencia": "Public domain",
@@ -2394,6 +2449,9 @@
     "sinFoto": true
   },
   "doctor alfredo rivas": {
+    "sinFoto": true
+  },
+  "doctor bernardo velez": {
     "sinFoto": true
   },
   "doctor carlos alberto erro": {
@@ -2521,6 +2579,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Robert_Koch_BeW.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Koch_BeW.jpg?width=480",
     "titulo": "Robert Koch"
+  },
+  "doctor rodolfo erausquin": {
+    "sinFoto": true
   },
   "doctor rodolfo rivarola": {
     "sinFoto": true
@@ -2650,6 +2711,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Eduardo_Acevedo_D%C3%ADaz_%281894%29.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduardo_Acevedo_D%C3%ADaz_%281894%29.jpg?width=480",
     "titulo": "Eduardo Acevedo"
+  },
+  "eduardo colombo leoni": {
+    "sinFoto": true
   },
   "eduardo costa": {
     "autor": "Skillo Videos",
@@ -3042,6 +3106,9 @@
   "enrique udaondo": {
     "sinFoto": true
   },
+  "ensenada": {
+    "sinFoto": true
+  },
   "erezcano": {
     "sinFoto": true
   },
@@ -3051,6 +3118,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Ernesto_Padilla.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ernesto_Padilla.jpg?width=480",
     "titulo": "Ernesto Padilla"
+  },
+  "ernesto urfeig": {
+    "sinFoto": true
   },
   "escuela la banderita": {
     "autor": "Banfield",
@@ -3116,6 +3186,9 @@
     "titulo": "Espinillo"
   },
   "espinosa": {
+    "sinFoto": true
+  },
+  "esquina": {
     "sinFoto": true
   },
   "esteban crovara": {
@@ -3760,6 +3833,9 @@
   "gonzalez catan": {
     "sinFoto": true
   },
+  "goya": {
+    "sinFoto": true
+  },
   "grand bourg": {
     "autor": "sanmartiniano.gov.ar",
     "licencia": "Public domain",
@@ -3807,6 +3883,9 @@
     "titulo": "Guayaba (Psidium guajava)"
   },
   "guayquiraro": {
+    "sinFoto": true
+  },
+  "guayra": {
     "sinFoto": true
   },
   "guerra gaucha": {
@@ -3925,6 +4004,16 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Higinio_D._Caz%C3%B3n.jpg?width=480",
     "titulo": "Higinio Cazón"
   },
+  "hinojo": {
+    "sinFoto": true
+  },
+  "hipolito bouchard": {
+    "autor": "José Gil de Castro",
+    "licencia": "Public domain",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Hip%C3%B3lito_Bouchard.jpg",
+    "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Hip%C3%B3lito_Bouchard.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "titulo": "Hipólito Bouchard"
+  },
   "holanda": {
     "autor": "Zscout370",
     "licencia": "Public domain",
@@ -4042,6 +4131,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:HusaresPueyrredon.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HusaresPueyrredon.jpg?width=480",
     "titulo": "Húsares de Pueyrredón"
+  },
+  "ibarrola": {
+    "sinFoto": true
   },
   "ibera": {
     "autor": "Evelyn Proimos",
@@ -4383,6 +4475,9 @@
   "juan a boeri": {
     "sinFoto": true
   },
+  "juan bautista jantin": {
+    "sinFoto": true
+  },
   "juan bautista primoli": {
     "sinFoto": true
   },
@@ -4439,6 +4534,9 @@
   "juan maffioli": {
     "sinFoto": true
   },
+  "juan p calou": {
+    "sinFoto": true
+  },
   "juan tronconi": {
     "sinFoto": true
   },
@@ -4481,6 +4579,9 @@
     "titulo": "Juana Rouco Buela"
   },
   "juez estrada": {
+    "sinFoto": true
+  },
+  "juez magnaud": {
     "sinFoto": true
   },
   "juez tedin": {
@@ -4619,6 +4720,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Mimus_saturninus_-Piraju,_Brasil-8.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mimus_saturninus_-Piraju%2C_Brasil-8.jpg?width=480",
     "titulo": "Calandria (Mimus saturninus)"
+  },
+  "la capital": {
+    "sinFoto": true
   },
   "la casa del angel": {
     "autor": "AnonymousUnknown author",
@@ -4858,6 +4962,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Parana_de_las_Palmas.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Parana_de_las_Palmas.jpg?width=480",
     "titulo": "Río Paraná de las Palmas"
+  },
+  "las provincias": {
+    "sinFoto": true
   },
   "las tunas": {
     "autor": "Diego Delso",
@@ -5215,6 +5322,9 @@
     "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Manuel_Artigas.png",
     "titulo": "Manuel Artigas"
   },
+  "manuel de san gines": {
+    "sinFoto": true
+  },
   "manuel de sarratea": {
     "autor": "Unknown author",
     "licencia": "Public domain",
@@ -5432,6 +5542,9 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Municipalidad_Villarino.jpg?width=480",
     "titulo": "Médanos"
   },
+  "medeyros": {
+    "sinFoto": true
+  },
   "medina": {
     "sinFoto": true
   },
@@ -5483,6 +5596,9 @@
     "sinFoto": true
   },
   "miguel a camino": {
+    "sinFoto": true
+  },
+  "miguel angel": {
     "sinFoto": true
   },
   "miguel b sanchez": {
@@ -5747,6 +5863,9 @@
   "necochea": {
     "sinFoto": true
   },
+  "nelly nistal": {
+    "sinFoto": true
+  },
   "neuquen": {
     "autor": "miroab",
     "licencia": "CC BY-SA 2.0",
@@ -6007,6 +6126,9 @@
   "padre enrique contardi": {
     "sinFoto": true
   },
+  "padre gaspar canada": {
+    "sinFoto": true
+  },
   "padre mario luis migone": {
     "sinFoto": true
   },
@@ -6025,6 +6147,9 @@
     "titulo": "Pailebot"
   },
   "palmar": {
+    "sinFoto": true
+  },
+  "paloma efron": {
     "sinFoto": true
   },
   "palos": {
@@ -6133,6 +6258,9 @@
   "paternal": {
     "sinFoto": true
   },
+  "patio de la identidad y la memoria": {
+    "sinFoto": true
+  },
   "patoruzu": {
     "autor": "Roberto Fiadone",
     "licencia": "CC BY-SA 4.0",
@@ -6162,6 +6290,9 @@
     "pageUrl": "https://es.wikipedia.org/wiki/Batalla_de_Pav%C3%B3n",
     "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Batalla_de_Pavon.jpg/500px-Batalla_de_Pavon.jpg",
     "titulo": "Batalla de Pavón"
+  },
+  "pedro agote": {
+    "sinFoto": true
   },
   "pedro de jerez": {
     "sinFoto": true
@@ -6238,6 +6369,12 @@
   "pereyra": {
     "sinFoto": true
   },
+  "pergamino": {
+    "sinFoto": true
+  },
+  "peribebuy": {
+    "sinFoto": true
+  },
   "perito moreno": {
     "autor": "Malena Blanco",
     "licencia": "Public domain",
@@ -6268,12 +6405,18 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Batalla_de_Las_Piedras_%2817381935558%29.jpg?width=480",
     "titulo": "Batalla de Las Piedras (1811)"
   },
+  "pieres": {
+    "sinFoto": true
+  },
   "pila": {
     "autor": "Marcelo Campos",
     "licencia": "CC BY-SA 4.0",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Pila.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia%20de%20Pila.jpg?width=480",
     "titulo": "Iglesia de Pila"
+  },
+  "pilar": {
+    "sinFoto": true
   },
   "pilcomayo": {
     "autor": "Coordenação-Geral de Observação da Terra/INPE",
@@ -6334,6 +6477,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Dolina2012.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dolina2012.jpg?width=480",
     "titulo": "Alejandro Dolina"
+  },
+  "plumerillo": {
+    "sinFoto": true
   },
   "plus ultra": {
     "autor": "Unknown author",
@@ -6408,12 +6554,18 @@
     "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Logo_de_la_Prefectura_Naval_Argentina.svg/500px-Logo_de_la_Prefectura_Naval_Argentina.svg.png",
     "titulo": "Argentine Naval Prefecture"
   },
+  "prelado don buenaventura risso patron": {
+    "sinFoto": true
+  },
   "presbitero doctor antonio saenz": {
     "autor": "",
     "licencia": "Public domain",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:AntonioSaenz.jpg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/AntonioSaenz.jpg?width=480",
     "titulo": "Antonio María Norberto Sáenz"
+  },
+  "presbitero virgilio filipo": {
+    "sinFoto": true
   },
   "presidente doctor arturo umberto illia": {
     "autor": "Government House of Argentina",
@@ -6589,6 +6741,13 @@
     "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Eduardo_Madero.jpg/500px-Eduardo_Madero.jpg",
     "titulo": "Eduardo Madero"
   },
+  "puna": {
+    "autor": "Maurice Chédel",
+    "licencia": "Public domain",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Altiplano_Peru.JPG",
+    "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Altiplano_Peru.JPG/500px-Altiplano_Peru.JPG?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "titulo": "Puna"
+  },
   "punta arenas": {
     "autor": "Tamtam90",
     "licencia": "CC BY-SA 4.0",
@@ -6715,12 +6874,22 @@
   "republica": {
     "sinFoto": true
   },
+  "republica de bolivia": {
+    "autor": "See file history' below for details.",
+    "licencia": "Public domain",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bolivia.svg",
+    "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/500px-Flag_of_Bolivia.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "titulo": "República de Bolivia"
+  },
   "republica de montenegro": {
     "autor": "B1mbo, Froztbyte, Great Brightstar",
     "licencia": "Public domain",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Montenegro.svg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Montenegro.svg?width=480",
     "titulo": "Bandera de Montenegro"
+  },
+  "republica de paraguay": {
+    "sinFoto": true
   },
   "republica del libano": {
     "autor": "Henri Pharaon",
@@ -7270,6 +7439,9 @@
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SholemAleichem.jpg?width=480",
     "titulo": "Sholem Aleijem"
   },
+  "sebastian borro": {
+    "sinFoto": true
+  },
   "segundo inigo carrera": {
     "autor": "Giovanni Batista Rodriguez from San Sebastian-Donostia, España",
     "licencia": "CC BY-SA 2.0",
@@ -7304,6 +7476,9 @@
     "sinFoto": true
   },
   "soldado de la independencia": {
+    "sinFoto": true
+  },
+  "soria": {
     "sinFoto": true
   },
   "suarez": {
@@ -7468,6 +7643,13 @@
   },
   "thames": {
     "sinFoto": true
+  },
+  "timbo": {
+    "autor": "Bageense",
+    "licencia": "CC BY 4.0",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Muda_de_timbo%C3%BAva_%28do_tupi_%2Atimbo%27yba%29%2C_Enterolobium_contortisiliquum_01.jpg",
+    "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Muda_de_timbo%C3%BAva_%28do_tupi_%2Atimbo%27yba%29%2C_Enterolobium_contortisiliquum_01.jpg/500px-Muda_de_timbo%C3%BAva_%28do_tupi_%2Atimbo%27yba%29%2C_Enterolobium_contortisiliquum_01.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "titulo": "Enterolobium contortisiliquum"
   },
   "timbues": {
     "sinFoto": true
@@ -7664,6 +7846,9 @@
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela.svg",
     "thumbUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Venezuela.svg?width=480",
     "titulo": "Bandera de Venezuela"
+  },
+  "venialvo": {
+    "sinFoto": true
   },
   "ventana": {
     "autor": "Dietmar Rabich",

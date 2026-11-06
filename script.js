@@ -1978,21 +1978,31 @@
             ? `<span class="popup-cat" style="background-color: ${enOscuro ? "#3c4043" : color + "1a"}; color: ${colorTexto};">${escapeHtml(cat.toLowerCase())}</span>`
             : "";
 
-        // Contenedor de imagen con skeleton; se rellena en montarMediaPopup().
+        // Contenedor de imagen. Todo lo que ya se sabe al armar el popup va en
+        // ESTE string, no se pinta después desde montarMediaPopup().
         //
-        // Excepción: si la entrada está marcada "sinFoto", el isotipo va YA en
-        // este string en vez de pintarse despues desde montarMediaPopup().
         // posicionarPopup() llama varias veces a popup.update(), que re-renderiza
         // el popup a partir de este mismo HTML y descarta cualquier mutación
-        // previa sobre el DOM. La foto gana esa carrera porque llega por red
-        // (siempre después del último update), pero el fallback era síncrono y
-        // la perdia: quedaba el skeleton gris fijo para siempre.
+        // previa sobre el DOM. Lo que se escriba antes de ese último update se
+        // pierde. Medido: pintado en t+122ms, borrado en t+249ms.
+        //
+        // Por eso van acá los dos casos que se resuelven sin red: la marca
+        // "sinFoto" (va el isotipo) y la foto curada de data/fotos.json (va la
+        // imagen). El caso de la foto no se notaba mientras eran pocas y la
+        // imagen llegaba siempre por red —tardaba lo suficiente como para
+        // llegar DESPUÉS del update y sobrevivir—, pero con la imagen en caché
+        // el orden se invierte y el popup quedaba en el skeleton gris.
+        //
+        // Sólo la búsqueda en vivo sigue mutando el DOM desde montarMediaPopup:
+        // es inherentemente asíncrona y siempre llega tarde.
         const curada = fotoCurada(entrada);
         const media = !mediaId
             ? ""
             : curada && curada.sinFoto
                 ? `<div class="popup-media es-fallback" id="${mediaId}" style="--cat-color: ${color};"><div class="popup-media-fallback">${iconoFallback()}</div></div>`
-                : `<div class="popup-media" id="${mediaId}"><div class="popup-media-skeleton"></div></div>`;
+                : curada && curada.thumbUrl
+                    ? `<div class="popup-media" id="${mediaId}">${imagenHtml(curada, entrada)}</div>`
+                    : `<div class="popup-media" id="${mediaId}"><div class="popup-media-skeleton"></div></div>`;
 
         return `
             ${media}
@@ -2038,6 +2048,34 @@
     // HTML) y montarMediaPopup() (para la foto en sí).
     function fotoCurada(entrada) {
         return fotosManual[entrada.id] || fotosManual[entrada.clave] || null;
+    }
+
+    // Markup de una foto ya conocida: el fondo borroso que rellena el box sin
+    // recortar al sujeto, y la imagen por delante con object-fit:contain.
+    // Es el mismo resultado que arma montarMediaPopup() mutando el DOM, pero
+    // como string, para que sobreviva a los popup.update() de posicionarPopup().
+    function imagenHtml(datos, entrada) {
+        const url = escapeHtml(datos.thumbUrl);
+        const alt = escapeHtml(datos.titulo || entrada.nombre_busqueda || "");
+        return `<div class="popup-media-bg" style="background-image: url(&quot;${url}&quot;)"></div>` +
+               `<img class="popup-media-img" src="${url}" alt="${alt}" referrerpolicy="no-referrer">`;
+    }
+
+    // La imagen curada ya está en el DOM (la puso construirPopup). Acá sólo se
+    // vigila que cargue: si el archivo desapareció de Commons, cae al isotipo.
+    // Contempla que el error haya ocurrido ANTES de llegar acá —imagen rota ya
+    // cacheada—, caso en que la imagen figura "completa" pero con ancho 0.
+    // Ese reemplazo se difiere un tick para que caiga después de los
+    // popup.update() de posicionarPopup(), que si no lo borrarían.
+    function vigilarImagen(mediaId, color) {
+        const c = document.getElementById(mediaId);
+        const img = c && c.querySelector(".popup-media-img");
+        if (!img) return;
+        if (img.complete) {
+            if (!img.naturalWidth) setTimeout(() => mostrarFallbackMedia(mediaId, color), 0);
+            return;
+        }
+        img.addEventListener("error", () => mostrarFallbackMedia(mediaId, color));
     }
 
     // Mismo isotipo que favicon.svg y el logo del header: pin con grilla de
@@ -2145,6 +2183,13 @@
         //     comentario allá: pintarlo acá lo borraba el popup.update()
         //     siguiente), así que acá sólo hay que no hacer nada.
         if (data && data.sinFoto) return;
+
+        // 1c) Foto curada: construirPopup() ya la dejó puesta en el HTML, por
+        //     la misma razón. Queda vigilar que la imagen cargue de verdad.
+        if (data && data.thumbUrl) {
+            vigilarImagen(mediaId, color);
+            return;
+        }
 
         // 2) Si no hay precomputada, probamos los términos en Wikipedia en vivo.
         if (!data || !data.thumbUrl) {
