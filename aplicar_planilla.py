@@ -123,7 +123,21 @@ def resolver(veredicto):
 # --------------------------------------------------------------------------
 
 def sin_html(s):
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s or "")).strip()
+    """Texto plano de un campo de Commons (Artist, LicenseShortName).
+
+    Los tags se reemplazan por un ESPACIO y no por nada: varios archivos traen
+    el autor en dos elementos seguidos y, pegandolos, salia
+    "Unknown authorUnknown author". Si despues de limpiar el texto resulta ser
+    la misma frase repetida dos veces, se deja una sola.
+    """
+    txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s or "")).strip()
+    mitad = len(txt) // 2
+    if txt and len(txt) % 2 == 0 and txt[:mitad].strip() == txt[mitad:].strip():
+        txt = txt[:mitad].strip()
+    partes = txt.split()
+    if len(partes) % 2 == 0 and partes[:len(partes)//2] == partes[len(partes)//2:]:
+        txt = " ".join(partes[:len(partes)//2])
+    return txt
 
 
 def atribucion(filenames):
