@@ -78,6 +78,35 @@ atribución de Commons. Vale la pena aunque ya se vea bien: la búsqueda en vivo
 no es determinista —dos corridas del mismo día dan artículos distintos para un
 puñado de entradas— y además cada visitante la repite contra Wikipedia.
 
+#### La misma revisión, en Excel
+
+Para quien prefiera planilla antes que clickear miniaturas, hay un camino
+equivalente que termina en el mismo `fotos.json`:
+
+```powershell
+python generar_planillas.py          # un .xlsx por comuna, en planillas/
+python generar_planillas.py 1 4      # o solo algunas
+# completar la columna VEREDICTO
+python aplicar_planilla.py planillas/comuna_01.xlsx            # informe
+python aplicar_planilla.py planillas/comuna_01.xlsx --aplicar  # escribe
+```
+
+Cada fila trae la miniatura embebida y la columna **ID**, que es la clave de
+cruce con `calles.json` y **no hay que tocar**. Por eso la planilla la genera
+el script en vez de armarse a mano: los nombres tienen demasiadas variantes
+para tipearlos (`Piazzola`/`Piazzolla`, el formato `"APELLIDO, NOMBRE"`,
+acentos, y homónimos que se distinguen solo por el tipo —`Lola Mora` es plaza
+y también calle—), y cada nombre que no matchee exacto sería una fila
+imposible de aplicar.
+
+En VEREDICTO vale `ok` (congela la foto actual), `sin foto` (isotipo), un link
+a Commons, un link a un artículo de Wikipedia, o vacío para no decidir. Links
+de otros dominios se rechazan: `fotos.json` guarda autor y licencia, y fuera
+de Wikimedia no se pueden verificar.
+
+`planillas/` está ignorada por git —son artefactos regenerables de varios MB—
+y las miniaturas se cachean en `planillas/_thumbs/`, así regenerar es barato.
+
 ### Verificar integridad de los datos
 Chequea ids duplicados en `calles.json` y entradas huérfanas en `geo_cache.json`/
 `fotos.json` (restos de renombres o eliminaciones). No modifica nada, solo informa.
