@@ -1,7 +1,7 @@
 AUDITORÍA DE FOTOS — entradas que la app resuelve por búsqueda en vivo
 
-Auditadas            : 1448
-  de categoría PERSONA: 1031
+Auditadas            : 1447
+  de categoría PERSONA: 1030
 Marcadas sospechosas : 0
 No auditadas (término elegido a mano en script.js): 18
 
@@ -14,7 +14,7 @@ SOSPECHOSAS (revisar primero)
 ========================================================================
 EL RESTO, POR CATEGORÍA (sin chequeo automático confiable)
 ========================================================================
-  PERSONA                 1031
+  PERSONA                 1030
   LUGAR                    321
   NATURALEZA                38
   ARTE                      14

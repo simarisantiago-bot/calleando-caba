@@ -7,7 +7,13 @@ Para cada entrada en geo_cache.json:
 Hace point-in-polygon contra los 48 polígonos de barrios.
 
 Salida:
-  data/calle_barrios.json    { "clave": "Palermo", "otra clave": "Recoleta", ... }
+  data/calle_barrios.json    { "id": "Palermo", "otro id": "Recoleta", ... }
+
+OJO con la clave del mapa: recorre geo_cache.json, que esta indexado por id
+completo ("palermo|calle") desde que lo migro migrar_cache_a_ids.py, no por
+clave. El archivo commiteado antes de 2026-11-13 todavia venia por clave, de
+una corrida anterior a esa migracion; script.js busca por id y cae a clave
+para seguir leyendo los dos formatos.
 """
 
 import json

@@ -73,6 +73,22 @@
         var sosp = datos.filter(function (r) { return r.sospecha > 0; });
         var resto = datos.filter(function (r) { return r.sospecha === 0; });
 
+        // Por comuna: recorrer la ciudad por zona en vez de por categoria.
+        // Cada comuna son entre ~40 y ~180 entradas, una tanda razonable, y
+        // mirar seguido odonimos del mismo lugar ayuda a reconocer los
+        // homenajeados locales -que son justo los que Wikipedia resuelve mal-.
+        if (modo === "comuna") {
+            return agrupar(datos, function (r) {
+                return r.comuna ? "Comuna " + r.comuna : "Sin comuna";
+            }, function (a, b) {
+                var na = parseInt(a.replace(/\D/g, ""), 10);
+                var nb = parseInt(b.replace(/\D/g, ""), 10);
+                if (isNaN(na)) return 1;
+                if (isNaN(nb)) return -1;
+                return na - nb;
+            });
+        }
+
         if (modo === "solo-sospechosas") {
             return [{
                 titulo: "Sospechosas (" + sosp.length + ")",
@@ -107,17 +123,34 @@
         }].concat(porCategoria);
     }
 
-    function agrupar(lista) {
+    /* Agrupa en secciones. Por defecto, por categoria y de mayor a menor;
+       `claveDe` y `ordenar` permiten otro criterio (p. ej. por comuna, en
+       orden numerico). */
+    function agrupar(lista, claveDe, ordenar) {
+        claveDe = claveDe || function (r) { return r.categoria || "SIN CATEGORIA"; };
         var mapa = {};
         lista.forEach(function (r) {
-            var c = r.categoria || "SIN CATEGORIA";
-            (mapa[c] = mapa[c] || []).push(r);
+            var k = claveDe(r);
+            (mapa[k] = mapa[k] || []).push(r);
         });
         return Object.keys(mapa)
-            .sort(function (a, b) { return mapa[b].length - mapa[a].length; })
-            .map(function (c) {
-                return { titulo: c + " (" + mapa[c].length + ")", bajada: "", items: mapa[c] };
+            .sort(ordenar || function (a, b) { return mapa[b].length - mapa[a].length; })
+            .map(function (k) {
+                return {
+                    titulo: k + " (" + mapa[k].length + ")",
+                    bajada: barriosDe(mapa[k]),
+                    items: mapa[k]
+                };
             });
+    }
+
+    // Lista los barrios presentes en una seccion, para ubicarse al revisar
+    // por comuna. Vacio si la seccion no tiene barrios cargados.
+    function barriosDe(items) {
+        var vistos = {};
+        items.forEach(function (r) { if (r.barrio) vistos[r.barrio] = 1; });
+        var lista = Object.keys(vistos).sort();
+        return lista.length ? lista.join(" · ") : "";
     }
 
     // ---------- render ----------
@@ -142,6 +175,7 @@
                    '<div class="tarjeta-nombre">' + esc(r.nombre) + "</div>" +
                    '<div class="tarjeta-meta">' + esc(tipoDe(r)) +
                        (r.categoria ? " · " + esc(r.categoria.toLowerCase()) : "") +
+                       (r.barrio ? " · " + esc(r.barrio) : "") +
                    "</div>" +
                    '<div class="tarjeta-art">foto de: <b>' + esc(r.titulo) + "</b>" +
                        (tipos ? " (" + esc(tipos) + ")" : "") + "</div>" +

@@ -104,7 +104,7 @@
     // ---------- Estado ----------
     let calles = [];               // array cargado desde calles.json
     let geoCache = {};             // {clave: {tipo, geometry, bbox, ...}} pre-geocodificado
-    let calleBarrios = {};         // {clave: nombreBarrio} mapping
+    let calleBarrios = {};         // {id (o clave, si es viejo): nombreBarrio}
     let barriosGeo = null;         // FeatureCollection de los 48 barrios (heatmap)
     let curiosidades = null;       // datos de curiosidades.json (5 secciones temáticas)
     let fotosManual = {};          // {clave: {thumbUrl, pageUrl, autor, licencia}} precomputado
@@ -513,9 +513,15 @@
             } catch (_) { fotosManual = {}; }
         }
 
-        // Vincular cada entrada a su barrio para uso en autocomplete
+        // Vincular cada entrada a su barrio para uso en autocomplete.
+        // Se busca primero por id completo y después por clave: asignar_barrios.py
+        // recorre geo_cache.json, que está indexado por id desde que lo migró
+        // migrar_cache_a_ids.py, así que el mapa nuevo viene con esa forma. El
+        // fallback por clave mantiene andando un calle_barrios.json viejo, que
+        // además es menos preciso: dos odónimos homónimos de distinto tipo
+        // pueden estar en barrios distintos y compartir clave.
         for (const c of calles) {
-            c.barrio = calleBarrios[c.clave] || null;
+            c.barrio = calleBarrios[c.id] || calleBarrios[c.clave] || null;
         }
 
         poblarDropdownCategorias();

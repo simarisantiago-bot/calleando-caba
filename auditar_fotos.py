@@ -254,10 +254,31 @@ def etiquetas(qids):
 
 # --------------------------------------------------------------------------
 
+def mapa_comunas():
+    """{barrio normalizado -> número de comuna}. CABA son 48 barrios en 15.
+
+    Los nombres vienen sin acentos en comunas.geojson ("Constitucion") y con
+    acentos en calle_barrios.json ("Constitución"), así que se comparan
+    normalizados.
+    """
+    geo = json.load(open(DATA / "comunas.geojson", encoding="utf-8"))
+    out = {}
+    for f in geo["features"]:
+        p = f["properties"]
+        for b in p["barrios"]:
+            out[sin_acentos(b).strip()] = p["comuna"]
+    return out
+
+
 def main():
     calles = json.load(open(DATA / "calles.json", encoding="utf-8"))
     fotos = json.load(open(DATA / "fotos.json", encoding="utf-8"))
     baseline = json.load(open(DATA / "fotos_baseline.json", encoding="utf-8"))
+    # Barrio y comuna de cada entrada, para poder revisar por zona en vez de
+    # por categoría. calle_barrios.json está indexado por id (ver
+    # asignar_barrios.py); el fallback por clave aguanta un archivo viejo.
+    barrios = json.load(open(DATA / "calle_barrios.json", encoding="utf-8"))
+    b2comuna = mapa_comunas()
 
     def base_de(c):
         return baseline.get(c.get("id")) or baseline.get(c.get("clave")) or {}
@@ -358,11 +379,15 @@ def main():
         if qid is None:
             banderas.append("SIN_WIKIDATA")
 
+        barrio = barrios.get(c.get("id")) or barrios.get(c.get("clave"))
+
         registros.append({
             "id": c.get("id"),
             "clave": c.get("clave"),
             "nombre": c.get("nombre_busqueda"),
             "categoria": c.get("categoria"),
+            "barrio": barrio,
+            "comuna": b2comuna.get(sin_acentos(barrio or "").strip()),
             "descripcion": c.get("descripcion"),
             "thumb": b.get("thumb"),
             "titulo": titulo,
