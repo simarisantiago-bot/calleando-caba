@@ -41,3 +41,6 @@ _diag_*.py
 
 # Cache de consultas a Wikidata (regenerable: lo rehace auditar_fotos.py)
 data/_wikidata_cache.json
+
+# Planillas de revision y sus miniaturas (regenerables con generar_planillas.py)
+planillas/
